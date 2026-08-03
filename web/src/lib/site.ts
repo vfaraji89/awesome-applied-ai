@@ -7,6 +7,6 @@ export const site = {
     name: "Vahid Faraji",
     site: "https://vfaraji89.github.io",
     github: "https://github.com/vfaraji89",
-    linkedin: "https://www.linkedin.com/in/vfaraji89/",
+    linkedin: "https://www.linkedin.com/in/vahid-faraji-jobehdar/",
   },
 } as const;
