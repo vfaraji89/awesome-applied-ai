@@ -5,7 +5,7 @@ export const site = {
   repo: "https://github.com/vfaraji89/awesome-applied-ai",
   author: {
     name: "Vahid Faraji",
-    site: "https://vfaraji89.github.io/vfaraji89/",
+    site: "https://vfaraji89.github.io/",
     github: "https://github.com/vfaraji89",
     linkedin: "https://www.linkedin.com/in/vahid-faraji-jobehdar/",
   },
