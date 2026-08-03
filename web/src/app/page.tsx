@@ -15,6 +15,7 @@ import { Reveal } from "@/components/motion";
 import { tagCounts } from "@/lib/search";
 import { instruments } from "@/lib/instruments";
 import { skills } from "@/lib/skills";
+import { site } from "@/lib/site";
 
 const formulaCount = layers.reduce((n, l) => n + l.formulas.length, 0);
 
@@ -113,6 +114,47 @@ export default function Home() {
               </div>
             ))}
           </dl>
+        </Reveal>
+      </section>
+
+      <section className="pt-12">
+        <Reveal>
+          <div className="relative overflow-hidden rounded-lg border border-line bg-panel p-8 sm:p-10">
+            <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(560px_160px_at_88%_0%,var(--accent-bg),transparent)]" />
+            <div className="relative">
+              <p className="text-tag font-medium uppercase tracking-[0.14em] text-accent">
+                The author · July 2026
+              </p>
+              <h2 className="mt-4 max-w-2xl font-serif text-h3 font-semibold leading-snug tracking-tight text-ink">
+                Built by an Applied AI Specialist shipping agent systems in
+                production
+              </h2>
+              <p className="mt-3 max-w-2xl text-meta leading-relaxed text-ink-dim">
+                Vahid Faraji is a Senior Applied AI Specialist at Kariyer.net
+                (ilab group). The map above comes from the same notes as his
+                context engineering toolkit and the multi-agent systems he runs
+                at enterprise scale.
+              </p>
+              <div className="mt-6 flex flex-wrap gap-2.5">
+                <a
+                  href={site.author.site}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-md bg-ink px-5 py-2.5 text-meta font-medium text-bg transition-colors hover:opacity-85"
+                >
+                  Visit the portfolio →
+                </a>
+                <a
+                  href={site.author.linkedin}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center justify-center gap-2 rounded-md border border-line-bright px-5 py-2.5 text-meta font-medium text-ink transition-colors hover:border-ink"
+                >
+                  LinkedIn
+                </a>
+              </div>
+            </div>
+          </div>
         </Reveal>
       </section>
 
@@ -261,15 +303,16 @@ export default function Home() {
                       {s.name}
                     </p>
                   </div>
-                  <dl className="grid grid-cols-3 gap-4 self-center">
+                  <dl className="self-center space-y-2.5">
                     {s.numbers.slice(0, 3).map((m) => (
-                      <div key={m.label}>
-                        <dd className="mono-data text-h3 tabular-nums text-ink">
+                      <div
+                        key={m.label}
+                        className="flex items-baseline justify-between gap-4"
+                      >
+                        <dt className="text-meta text-ink-dim">{m.label}</dt>
+                        <dd className="mono-data text-meta tabular-nums text-right text-ink">
                           {m.value}
                         </dd>
-                        <dt className="mono-data mt-1 text-tag leading-tight text-ink-faint">
-                          {m.label}
-                        </dt>
                       </div>
                     ))}
                   </dl>

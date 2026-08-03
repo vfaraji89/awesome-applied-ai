@@ -9,17 +9,10 @@ import { site } from "@/lib/site";
 import "katex/dist/katex.min.css";
 import "./globals.css";
 
-const recursive = localFont({
-  src: "./fonts/Recursive_VF.woff2",
-  weight: "300 1000",
-  variable: "--font-recursive",
-  display: "swap",
-});
-
-const newsreader = localFont({
-  src: "./fonts/Newsreader.woff2",
-  weight: "200 800",
-  variable: "--font-newsreader",
+const sora = localFont({
+  src: "./fonts/Sora.woff2",
+  weight: "100 800",
+  variable: "--font-sora",
   display: "swap",
 });
 
@@ -70,7 +63,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`h-full antialiased ${recursive.variable} ${newsreader.variable}`}
+      className={`h-full antialiased ${sora.variable}`}
       suppressHydrationWarning
     >
       <head>

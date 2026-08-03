@@ -74,9 +74,9 @@
   --text-h1: 3.06rem;
   --text-display: 4.24rem;
 
-  --font-sans: var(--font-recursive), ui-monospace, monospace;
-  --font-serif: var(--font-newsreader), Georgia, serif;
-  --font-mono: var(--font-recursive), ui-monospace, monospace;
+  --font-sans: var(--font-sora), ui-monospace, monospace;
+  --font-serif: var(--font-sora), ui-monospace, monospace;
+  --font-mono: var(--font-sora), ui-monospace, monospace;
 }
 
 html {

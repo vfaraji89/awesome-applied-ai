@@ -76,7 +76,7 @@ export default function ShippedPage() {
                     className="flex items-baseline justify-between gap-4 py-2"
                   >
                     <dt className="text-meta text-ink-dim">{m.label}</dt>
-                    <dd className="mono-data shrink-0 text-meta tabular-nums text-ink">
+                    <dd className="mono-data text-meta tabular-nums text-right text-ink">
                       {m.value}
                     </dd>
                   </div>
