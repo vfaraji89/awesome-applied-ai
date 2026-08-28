@@ -1264,7 +1264,7 @@ export const tools: Tool[] = [
     model: "oss",
     kind: "spec",
     maturity: "production-common",
-    note: "Donated by Anthropic to the Linux Foundation in December 2025, removing single-vendor risk. Tool poisoning remains an OWASP-catalogued attack class.",
+    note: "Donated by Anthropic to the Linux Foundation in December 2025, removing single-vendor risk. Revision 2026-07-28 made the core stateless and introduced the Extensions framework. Tool poisoning remains an OWASP-catalogued attack class.",
     url: "https://modelcontextprotocol.io",
     tags: ["protocol", "won-the-layer", "security-caveat"],
   },
