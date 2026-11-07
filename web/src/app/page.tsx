@@ -1,29 +1,39 @@
 import Link from "next/link";
 import { LearnPath } from "@/components/learn-path";
 import { RequestFlow } from "@/components/request-flow";
-import { WordCycler } from "@/components/word-cycler";
-import { tools } from "@/data/tools";
-import { terms } from "@/data/dictionary";
-import { problems } from "@/data/problems";
-import { layers } from "@/data/layers";
-import { fRoles } from "@/data/framework";
-import { courses } from "@/data/courses";
-import { stack } from "@/data/stack";
-import { StackRows } from "@/components/stack-rows";
-import { CourseCover } from "@/components/course-cover";
+import { DocCover } from "@/components/doc-cover";
+import { structure, type Section } from "@/lib/structure";
+import { fRoles, skills, education } from "@/data/framework";
+import { docs } from "@/data/docs";
+import { site } from "@/lib/site";
+import market from "@/data/market.json";
 
-const START = [
-  { href: "/learn/", t: "Learn", d: "Animated courses: Claude Code, Claude Platform, LangChain and Deep Agents, Vercel AI SDK.", n: `${courses.length} courses` },
-  { href: "/jargon/", t: "Jargon", d: "The words people use in AI, in plain language.", n: `${terms.length} terms` },
-  { href: "/architecture/", t: "Architecture", d: "Six layers every AI-native system is built from.", n: `${layers.length} layers` },
-  { href: "/tools/", t: "Tools", d: "The 30 tools I use every day, and the wider map.", n: `30 + ${tools.length} tools` },
-  { href: "/roles/", t: "Roles & skills", d: "Titles, tasks, skills, stacks and education for eight AI roles.", n: `${fRoles.length} roles · 12 skills` },
-  { href: "/problems/", t: "Problems", d: "What breaks in real projects, and the fix.", n: `${problems.length} problems` },
-];
+function Band({ s, alt, children }: { s: Section; alt?: boolean; children: React.ReactNode }) {
+  return (
+    <section id={s.id} className="section band" style={alt ? { background: "var(--paper)" } : undefined}>
+      <div className="wrap band-grid">
+        <div className="band-head">
+          <span className="band-n">{s.n}</span>
+          <h2>{s.title}<span className="dot">.</span></h2>
+          <p className="lead">{s.line}</p>
+          <ul className="band-pages">
+            {s.pages.map((p) => (
+              <li key={p.href}><Link href={p.href}><b>{p.label}</b><span className="muted">{p.note}</span>{p.soon ? <span className="soon">soon</span> : <span className="band-go">→</span>}</Link></li>
+            ))}
+          </ul>
+        </div>
+        <div className="band-show">{children}</div>
+      </div>
+    </section>
+  );
+}
 
 export default function Home() {
-  const picks = terms.filter((t) => ["token", "context-window", "embedding", "rag", "kv-cache", "mcp", "hallucination", "eval", "agent"].includes(t.id));
-  const words = (picks.length >= 5 ? picks : terms.slice(0, 9)).map(({ id, term, short }) => ({ id, term, short }));
+  const [mk, rs, ar, ce, dc, co] = structure;
+  const roleName = Object.fromEntries(fRoles.map((r) => [r.id, r.name]));
+  const topRoles = market.roles.slice(0, 4);
+  const max = topRoles[0]?.n ?? 1;
+  const providers = education.filter((e) => e.kind !== "Degree");
   return (
     <>
       <section className="section">
@@ -31,87 +41,94 @@ export default function Home() {
           <span className="kicker rise">awesome-applied-ai</span>
           <h1 className="rise" style={{ ["--i" as string]: 1, marginTop: 14 }}>Applied AI, <mark>mapped</mark><span className="dot">.</span></h1>
           <p className="lead rise" style={{ ["--i" as string]: 2, marginTop: 18 }}>
-            Learn how AI systems really work, one animation at a time: the words, the layers, the tools, the jobs and the problems you will meet.
+            From what the market asks for to the docs you need to build it: six steps, in order.
           </p>
           <div className="rise" style={{ ["--i" as string]: 3, display: "flex", gap: 10, flexWrap: "wrap", marginTop: 26 }}>
-            <Link href="/learn/" className="btn">Start learning →</Link>
-            <Link href="/tools/" className="btn ghost">See the stack</Link>
+            <Link href="#market" className="btn">Start with the market →</Link>
+            <Link href="/docs/" className="btn ghost">Read the docs</Link>
           </div>
           <LearnPath />
         </div>
       </section>
 
-      <section className="section" style={{ background: "var(--paper)" }}>
-        <div className="wrap">
-          <div className="section-head">
-            <div>
-              <span className="kicker">Watch it work</span>
-              <h2 style={{ marginTop: 10 }}>One request, six layers<span className="dot">.</span></h2>
-              <p className="lead">Follow a single question through an AI system and back. Tap any layer to stop on it.</p>
-            </div>
-            <Link href="/architecture/" className="chip">The architecture →</Link>
+      <Band s={mk} alt>
+        <div className="frame show-market">
+          <div className="sm-stats">
+            <div><b>{market.totals.allTime.toLocaleString("en")}</b><span className="muted">technical AI roles tracked</span></div>
+            <div><b>{market.totals.remoteShare}%</b><span className="muted">remote</span></div>
+            <div><b>{market.sources.reduce((a, x) => a + x.boards, 0)}</b><span className="muted">public boards</span></div>
           </div>
-          <RequestFlow />
+          <span className="kicker" style={{ display: "block", marginTop: 20 }}>Most asked-for roles</span>
+          <ul className="sm-bars">
+            {topRoles.map((r) => <li key={r.id}><span>{roleName[r.id] ?? r.id}</span><i style={{ width: `${(r.n / max) * 100}%` }} /><span className="count">{r.n}</span></li>)}
+          </ul>
         </div>
-      </section>
+      </Band>
 
-      <section className="section">
-        <div className="wrap">
-          <div className="section-head">
-            <div>
-              <span className="kicker">Where to start</span>
-              <h2 style={{ marginTop: 10 }}>Pick a door<span className="dot">.</span></h2>
-            </div>
-          </div>
-          <div className="grid grid-3">
-            {START.map((s, i) => (
-              <Link key={s.href} href={s.href} className="frame rise" style={{ ["--i" as string]: i, paddingBottom: 38 }}>
-                <span className="count">{s.n}</span>
-                <h3 style={{ fontSize: "1.6rem", fontWeight: 800, marginTop: 8 }}>{s.t}<span className="dot">.</span></h3>
-                <p className="muted" style={{ marginTop: 8 }}>{s.d}</p>
-                <span className="rod" />
-              </Link>
-            ))}
-          </div>
+      <Band s={rs}>
+        <div className="frame">
+          <span className="kicker">{fRoles.length} role families · {skills.length} skills</span>
+          <div className="chips-wrap">{fRoles.map((r) => <Link key={r.id} href="/roles/" className={`chip${r.id === "ai-native-architect" ? " on" : ""}`}>{r.name}</Link>)}</div>
+          <span className="kicker" style={{ display: "block", marginTop: 20 }}>Skills</span>
+          <div className="chips-wrap">{skills.map((k) => <span key={k.id} className="chip">{k.name}</span>)}</div>
         </div>
-      </section>
+      </Band>
 
-      <section className="section" style={{ background: "var(--paper)" }}>
-        <div className="wrap">
-          <div className="section-head">
-            <div>
-              <span className="kicker">Built with, every day</span>
-              <h2 style={{ marginTop: 10 }}>The stack behind it<span className="dot">.</span></h2>
-              <p className="lead">The tools I know and use, strung on three rods. Tap one.</p>
-            </div>
-            <Link href="/tools/" className="chip">All tools →</Link>
-          </div>
-          <StackRows groups={stack} />
-        </div>
-      </section>
+      <Band s={ar} alt>
+        <RequestFlow />
+      </Band>
 
-      <section className="section">
-        <div className="wrap">
-          <div className="section-head">
-            <div>
-              <span className="kicker">Courses</span>
-              <h2 style={{ marginTop: 10 }}>Fully animated, one lesson at a time<span className="dot">.</span></h2>
+      <Band s={ce}>
+        <div className="grid grid-2">
+          {providers.map((e) => (
+            <div key={e.kind} className="frame">
+              <span className="kicker">{e.kind}</span>
+              <p className="muted" style={{ marginTop: 6, fontSize: ".92rem" }}>{e.items[0]}</p>
             </div>
-            <Link href="/learn/" className="chip">All courses →</Link>
-          </div>
-          <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 240px), 1fr))" }}>
-            {courses.map((c, ci) => (
-              <Link key={c.id} href={c.href ?? `/learn/#${c.id}`} className="frame" style={{ padding: "12px 14px 20px" }}>
-                <CourseCover course={c} index={ci} />
-                <div style={{ padding: "12px 6px 0", display: "flex", justifyContent: "space-between", gap: 8, alignItems: "center" }}>
-                  {c.status === "live" ? <span className="chip on">Live · free</span> : <span className="soon">Coming soon</span>}
-                  <span className="count">{c.lessons.length} lessons</span>
-                </div>
-              </Link>
-            ))}
-                      </div>
+          ))}
         </div>
-      </section>
+      </Band>
+
+      <Band s={dc} alt>
+        <div className="grid grid-2">
+          {docs.map((d, i) => (
+            <Link key={d.id} href={d.href ?? `/docs/#${d.id}`} className="frame" style={{ padding: 10 }}>
+              <DocCover course={d} index={i} />
+            </Link>
+          ))}
+        </div>
+      </Band>
+
+      <Band s={co}>
+        <div className="frame show-co">
+          <p className="lead" style={{ color: "var(--ink)" }}>Found a mistake, a missing tool or a company we should track?</p>
+          <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 18 }}>
+            <a href={`${site.repo}/issues/new`} target="_blank" rel="noopener" className="btn">Open an issue</a>
+            <Link href="/contribute/" className="btn ghost">How to contribute</Link>
+          </div>
+        </div>
+      </Band>
+
+      <style>{`
+        .band-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; align-items: start; }
+        @media (max-width: 960px) { .band-grid { grid-template-columns: 1fr; gap: 28px; } }
+        .band-n { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--ink); color: #fff; font-family: var(--font-mono), monospace; font-size: .95rem; }
+        .band-head h2 { margin-top: 16px; }
+        .band-head .lead { margin-top: 12px; }
+        .band-pages { list-style: none; margin: 22px 0 0; padding: 0; border-top: 1px solid var(--line); }
+        .band-pages a { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: baseline; padding: 12px 2px; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); transition: padding .3s var(--ease); }
+        .band-pages a:hover { padding-left: 10px; } .band-pages a:hover b { color: var(--rust-deep); }
+        .band-pages .muted { font-size: .88rem; }
+        .band-go { color: var(--rust); }
+        .sm-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+        .sm-stats div { display: flex; flex-direction: column; } .sm-stats b { font-size: clamp(1.6rem, 3.4vw, 2.4rem); font-weight: 800; letter-spacing: -.04em; }
+        .sm-stats .muted { font-size: .82rem; }
+        .sm-bars { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 10px; }
+        .sm-bars li { display: grid; grid-template-columns: 190px 1fr 44px; gap: 12px; align-items: center; font-size: .9rem; }
+        .sm-bars i { height: 10px; border-radius: 6px; background: linear-gradient(90deg, #e0301e, #ff8f80); }
+        @media (max-width: 560px) { .sm-bars li { grid-template-columns: 1fr 44px; } .sm-bars i { grid-column: 1 / -1; grid-row: 2; } }
+        .chips-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+      `}</style>
     </>
   );
 }

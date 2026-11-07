@@ -270,7 +270,7 @@ export function ClaudeApiCourse() {
   }, { scope: root });
   return (
     <div className="cc" ref={root}>
-      <nav className="cc-list" aria-label="Lessons">
+      <nav className="cc-list" aria-label="Pages">
         {LESSONS.map((x, k) => (
           <button key={x.title} type="button" className={`cc-item${k === i ? " on" : ""}${x.ready ? "" : " later"}`} onClick={() => go(k)} aria-current={k === i ? "step" : undefined}>
             <span className={`bead${x.ready && k <= i ? "" : " white"}`} />
@@ -279,14 +279,14 @@ export function ClaudeApiCourse() {
             {!x.ready && <span className="cc-soon">soon</span>}
           </button>
         ))}
-        <p className="count" style={{ margin: "14px 0 0" }}>All {LESSONS.length} lessons free · open to everyone</p>
+        <p className="count" style={{ margin: "14px 0 0" }}>{LESSONS.length} pages · free, open to everyone</p>
       </nav>
 
       <article key={i} className="cc-panel frame">
         {l.ready && b ? (
           <>
             <div className="cc-step cc-open"><LessonCardPlayer n={i + 1} total={LESSONS.length} title={b.h} analogy={l.teaser} /></div>
-            <h2 className="sr-only">Lesson {i + 1}: {b.h}</h2>
+            <h2 className="sr-only">Page {i + 1}: {b.h}</h2>
             <div className="cc-step cc-box analogy"><span className="cc-ico" aria-hidden="true">≈</span><div><span className="kicker">Think of it like this</span><p>{b.analogy}</p></div></div>
             <div className="cc-step cc-anim">{b.anim}</div>
             {b.p.map((t) => <p key={t} className="cc-step cc-p">{t}</p>)}

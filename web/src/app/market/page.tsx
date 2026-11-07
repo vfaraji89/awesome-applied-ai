@@ -1,3 +1,4 @@
+import { Crumb } from "@/components/section-intro";
 import type { Metadata } from "next";
 import Link from "next/link";
 import market from "@/data/market.json";
@@ -34,7 +35,7 @@ export default function Market() {
     <>
       <section className="section">
         <div className="wrap">
-          <span className="kicker">Market pulse</span>
+          <Crumb id="market" page="Market pulse" />
           <h1 style={{ marginTop: 12 }}>What the market asks for<span className="dot">.</span></h1>
           <p className="lead" style={{ marginTop: 16 }}>Every day, public job boards are read and only the AI roles are kept. Each posting is reduced to its role, level, skills and tools; nothing is republished. This is the gist.</p>
           {ready ? (

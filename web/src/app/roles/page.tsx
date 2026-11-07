@@ -1,25 +1,25 @@
+import { SectionIntro } from "@/components/section-intro";
+import Link from "next/link";
 import type { Metadata } from "next";
 import { SkillsExplorer } from "@/components/skills-explorer";
-import { fRoles, skills, LEVELS, education, SOURCES } from "@/data/framework";
+import { fRoles, skills, LEVELS, SOURCES } from "@/data/framework";
 import { stack } from "@/data/stack";
 import { layers } from "@/data/layers";
 
-export const metadata: Metadata = { title: "Roles and skills", description: "A framework for AI-native developers, forward deployed engineers, applied AI and product engineering roles: titles, tasks, skills, stacks, education." };
+export const metadata: Metadata = { title: "Roles and skills", description: "A framework for AI-native developers, forward deployed engineers, applied AI and product engineering roles: titles, tasks, skills, stacks." };
 
 export default function Roles() {
   const layerNames = Object.fromEntries(layers.map((l) => [l.id, l.name]));
   return (
     <>
-      <section className="section">
+      <section className="section" id="families">
         <div className="wrap">
-          <span className="kicker">Roles and skills framework</span>
-          <h1 style={{ marginTop: 12 }}>Who builds it, and what they need<span className="dot">.</span></h1>
-          <p className="lead" style={{ marginTop: 16 }}>Eight role families across AI-native development, forward deployment, applied AI and product engineering. For each: the job titles you will see, the tasks, the stack, and twelve skills scored from aware to expert by what you can actually do.</p>
+          <SectionIntro id="roles" h1="Who builds it, and what they need" lead={"Eight role families across AI-native development, forward deployment, applied AI and product engineering. For each: the job titles you will see, the tasks, the stack, and twelve skills scored from aware to expert by what you can actually do."} />
           <div style={{ marginTop: 32 }}><SkillsExplorer roles={fRoles} stack={stack} layerNames={layerNames} /></div>
         </div>
       </section>
 
-      <section className="section">
+      <section className="section" id="matrix">
         <div className="wrap">
           <span className="kicker">The whole matrix</span>
           <h2 style={{ marginTop: 10 }}>Eight roles, twelve skills<span className="dot">.</span></h2>
@@ -43,19 +43,20 @@ export default function Roles() {
         </div>
       </section>
 
-      <section className="section" style={{ background: "var(--paper)" }}>
+      <section className="section" id="tasks" style={{ background: "var(--paper)" }}>
         <div className="wrap">
-          <span className="kicker">Education and credentials</span>
-          <h2 style={{ marginTop: 10 }}>What shows up in hiring<span className="dot">.</span></h2>
-          <p className="lead" style={{ marginTop: 12 }}>Degrees open the door; certifications show you have used a specific stack. Exam names and tiers change often, so check each provider before you book.</p>
-          <div className="grid grid-3" style={{ marginTop: 26 }}>
-            {education.map((e) => (
-              <div key={e.kind} className="frame">
-                <span className="kicker">{e.kind}</span>
-                <ul className="ed">{e.items.map((i) => <li key={i}><span className="bead white" />{i}</li>)}</ul>
+          <span className="kicker">Tasks</span>
+          <h2 style={{ marginTop: 10 }}>What each role does all day<span className="dot">.</span></h2>
+          <div className="grid grid-2" style={{ marginTop: 26 }}>
+            {fRoles.map((r) => (
+              <div key={r.id} className="frame">
+                <span className="count">{r.family}</span>
+                <h3 style={{ fontSize: "1.25rem", fontWeight: 800, marginTop: 6 }}>{r.name}<span className="dot">.</span></h3>
+                <ul className="ed">{r.tasks.map((t) => <li key={t}><span className="bead" />{t}</li>)}</ul>
               </div>
             ))}
           </div>
+          <p className="count" style={{ marginTop: 22 }}>Certificates and degrees now live on <Link href="/certificates/">Certificates</Link>.</p>
         </div>
       </section>
 

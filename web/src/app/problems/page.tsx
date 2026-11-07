@@ -1,3 +1,4 @@
+import { Crumb } from "@/components/section-intro";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { problems } from "@/data/problems";
@@ -9,7 +10,7 @@ export default function Problems() {
   return (
     <section className="section">
       <div className="wrap">
-        <span className="kicker">Common problems</span>
+        <Crumb id="architect" page="Problems" />
         <h1 style={{ marginTop: 12 }}>What breaks, and the fix<span className="dot">.</span></h1>
         <p className="lead" style={{ marginTop: 16 }}>{problems.length} problems from real AI systems, each asked the way a team would ask it, with a worked answer.</p>
         {layers.filter((l) => problems.some((p) => p.layer === l.id)).map((l) => (

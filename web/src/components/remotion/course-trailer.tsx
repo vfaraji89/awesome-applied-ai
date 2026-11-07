@@ -53,7 +53,7 @@ export function CourseTrailer({ title, lessons }: { title: string; lessons: stri
       <Rod y={520} beads={[{ x: 90, c: "ink" }, { x: 130, c: "white" }, { x: span + 100, c: "white" }]} />
       <div style={{ position: "absolute", left: 110, right: 110, top: 170, opacity: titleIn, transform: `translateY(${(1 - titleIn) * 30}px)` }}>
         <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: 22, letterSpacing: ".12em", textTransform: "uppercase", color: RUST_DEEP }}>
-          {end ? "Free · open to everyone" : idx < 0 ? `${lessons.length} lessons` : `Lesson ${String(idx + 1).padStart(2, "0")} of ${lessons.length}`}
+          {end ? "Technical docs, in motion" : idx < 0 ? `${lessons.length} pages` : `Page ${String(idx + 1).padStart(2, "0")} of ${lessons.length}`}
         </div>
         <div style={{ fontSize: 76, fontWeight: 800, letterSpacing: "-.04em", lineHeight: 1.02, color: INK, marginTop: 14 }}>
           {title}<span style={{ color: RUST }}>.</span>
@@ -83,7 +83,7 @@ export function LessonCard({ n, total, title, analogy }: { n: number; total: num
     <Frame>
       <Rod y={70} beads={beads} />
       <div style={{ position: "absolute", left: 110, right: 110, top: 130 }}>
-        <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: 24, letterSpacing: ".12em", textTransform: "uppercase", color: RUST_DEEP, opacity: a }}>Lesson {String(n).padStart(2, "0")} of {total}</div>
+        <div style={{ fontFamily: "var(--font-mono), monospace", fontSize: 24, letterSpacing: ".12em", textTransform: "uppercase", color: RUST_DEEP, opacity: a }}>Page {String(n).padStart(2, "0")} of {total}</div>
         <div style={{ fontSize: 68, fontWeight: 800, letterSpacing: "-.04em", lineHeight: 1.04, color: INK, marginTop: 10, opacity: a, transform: `translateY(${(1 - a) * 26}px)` }}>{title}<span style={{ color: RUST }}>.</span></div>
         <div style={{ display: "flex", gap: 16, alignItems: "flex-start", marginTop: 26, opacity: b }}>
           <div style={{ fontSize: 38, fontWeight: 600, letterSpacing: "-.02em", lineHeight: 1.4, color: "#55555a", maxWidth: 980 }}>
