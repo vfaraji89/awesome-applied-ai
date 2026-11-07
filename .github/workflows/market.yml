@@ -1,0 +1,37 @@
+name: Track job market
+
+# Reads public job boards once a day, keeps only AI roles, and updates the market summary.
+# Not a job board: only role, level, skills, tools and dates are kept.
+on:
+  schedule:
+    - cron: "17 5 * * *"
+  workflow_dispatch:
+  push:
+    branches-ignore: [main]
+    paths: ["pipeline/**", ".github/workflows/market.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market
+  cancel-in-progress: false
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: 1.4.4
+      - name: Read the boards and update the summary
+        run: bun pipeline/run.ts
+      - name: Commit the new numbers
+        run: |
+          git config user.name "market-tracker"
+          git config user.email "market-tracker@users.noreply.github.com"
+          git add market/jobs.json web/src/data/market.json
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git commit -m "Market: $(date -u +%Y-%m-%d) update"
+          git push

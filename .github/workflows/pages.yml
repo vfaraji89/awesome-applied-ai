@@ -5,6 +5,11 @@ on:
     branches: [main]
     paths: ["web/**", "system-design.md", ".github/workflows/pages.yml"]
   workflow_dispatch:
+  # the market tracker commits with the workflow token, which does not trigger push workflows
+  workflow_run:
+    workflows: ["Track job market"]
+    types: [completed]
+    branches: [main]
 
 permissions:
   contents: read

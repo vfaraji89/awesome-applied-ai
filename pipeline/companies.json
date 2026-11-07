@@ -1,0 +1,6 @@
+{
+  "_note": "Company job boards to watch. Slugs are the name in the board's public URL. Wrong or moved slugs are reported in the run log and skipped.",
+  "greenhouse": ["anthropic", "scaleai", "databricks", "figma", "airtable", "gitlab", "samsara", "cloudflare", "elastic", "datadog"],
+  "lever": ["palantir", "mistral", "spotify", "plaid"],
+  "ashby": ["openai", "cohere", "elevenlabs", "langchain", "perplexity", "anysphere", "notion", "replit", "vercel", "linear"]
+}

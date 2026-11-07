@@ -1,0 +1,86 @@
+import type { RawJob } from "./types";
+
+const UA = { "User-Agent": "awesome-applied-ai job-market collector (+https://github.com/vfaraji89/awesome-applied-ai)" };
+
+export const strip = (html: string) =>
+  (html || "")
+    .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;|&#x27;/g, "'").replace(/&amp;/g, "&")
+    .replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
+
+const day = (d: string | number | undefined) => {
+  if (d === undefined || d === null || d === "") return new Date().toISOString().slice(0, 10);
+  const t = typeof d === "number" ? new Date(d < 1e12 ? d * 1000 : d) : new Date(d);
+  return isNaN(t.getTime()) ? new Date().toISOString().slice(0, 10) : t.toISOString().slice(0, 10);
+};
+
+async function getJSON(url: string): Promise<any> {
+  const r = await fetch(url, { headers: UA });
+  if (!r.ok) throw new Error(`${r.status} ${url}`);
+  return r.json();
+}
+
+export async function greenhouse(slug: string): Promise<RawJob[]> {
+  const d = await getJSON(`https://boards-api.greenhouse.io/v1/boards/${slug}/jobs?content=true`);
+  return (d.jobs ?? []).map((j: any) => ({
+    source: "greenhouse", id: String(j.id), company: slug, title: j.title ?? "", location: j.location?.name ?? "",
+    remote: /remote/i.test(j.location?.name ?? ""), posted: day(j.first_published ?? j.updated_at), url: j.absolute_url ?? "", text: strip(j.content ?? ""),
+  }));
+}
+
+export async function lever(slug: string): Promise<RawJob[]> {
+  const d = await getJSON(`https://api.lever.co/v0/postings/${slug}?mode=json`);
+  return (Array.isArray(d) ? d : []).map((j: any) => ({
+    source: "lever", id: String(j.id), company: slug, title: j.text ?? "", location: j.categories?.location ?? "",
+    remote: j.workplaceType === "remote" || /remote/i.test(j.categories?.location ?? ""), posted: day(j.createdAt), url: j.hostedUrl ?? "",
+    text: [j.descriptionPlain, ...(j.lists ?? []).map((l: any) => `${l.text} ${strip(l.content)}`), j.additionalPlain].join(" "),
+  }));
+}
+
+export async function ashby(slug: string): Promise<RawJob[]> {
+  const d = await getJSON(`https://api.ashbyhq.com/posting-api/job-board/${slug}`);
+  return (d.jobs ?? []).map((j: any) => ({
+    source: "ashby", id: String(j.id), company: slug, title: j.title ?? "", location: j.location ?? "",
+    remote: !!j.isRemote, posted: day(j.publishedAt), url: j.jobUrl ?? "", text: j.descriptionPlain ?? strip(j.descriptionHtml ?? ""),
+  }));
+}
+
+/** Remotive asks for a link back and at most a few calls a day; this makes one call per search term, once a day. */
+export async function remotive(): Promise<RawJob[]> {
+  const out: RawJob[] = [];
+  for (const q of ["AI", "machine learning", "LLM"]) {
+    const d = await getJSON(`https://remotive.com/api/remote-jobs?search=${encodeURIComponent(q)}`);
+    for (const j of d.jobs ?? [])
+      out.push({ source: "remotive", id: String(j.id), company: j.company_name ?? "", title: j.title ?? "", location: j.candidate_required_location ?? "Remote",
+        remote: true, posted: day(j.publication_date), url: j.url ?? "", text: strip(j.description ?? "") + " " + (j.tags ?? []).join(" ") });
+  }
+  return out;
+}
+
+export async function arbeitnow(pages = 5): Promise<RawJob[]> {
+  const out: RawJob[] = [];
+  for (let p = 1; p <= pages; p++) {
+    const d = await getJSON(`https://www.arbeitnow.com/api/job-board-api?page=${p}`);
+    for (const j of d.data ?? [])
+      out.push({ source: "arbeitnow", id: String(j.slug), company: j.company_name ?? "", title: j.title ?? "", location: j.location ?? "",
+        remote: !!j.remote, posted: day(j.created_at), url: j.url ?? "", text: strip(j.description ?? "") + " " + (j.tags ?? []).join(" ") });
+    if (!d.links?.next) break;
+  }
+  return out;
+}
+
+/** The latest Hacker News "Ask HN: Who is hiring?" thread. Each top-level comment is one posting: "Company | Role | Location | ...". */
+export async function hackerNews(): Promise<RawJob[]> {
+  const s = await getJSON("https://hn.algolia.com/api/v1/search_by_date?tags=story,author_whoishiring&query=hiring&hitsPerPage=5");
+  const story = (s.hits ?? []).find((h: any) => /who is hiring/i.test(h.title ?? ""));
+  if (!story) return [];
+  const t = await getJSON(`https://hn.algolia.com/api/v1/items/${story.objectID}`);
+  return (t.children ?? []).filter((c: any) => c.text).map((c: any) => {
+    const text = strip(c.text);
+    const head = text.split(/\s{2,}|\n/)[0].slice(0, 220);
+    const parts = head.split("|").map((x: string) => x.trim());
+    const company = parts[0]?.slice(0, 60) ?? "";
+    const title = parts.find((x: string, i: number) => i > 0 && /engineer|developer|scientist|architect|lead|manager|research/i.test(x)) ?? parts[1] ?? head;
+    return { source: "hackernews", id: String(c.id), company, title: title.slice(0, 120), location: parts.find((x: string) => /remote|onsite|hybrid|[A-Z][a-z]+, [A-Z]/.test(x)) ?? "",
+      remote: /remote/i.test(head), posted: day(c.created_at), url: `https://news.ycombinator.com/item?id=${c.id}`, text };
+  });
+}

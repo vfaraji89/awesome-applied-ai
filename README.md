@@ -12,6 +12,7 @@
 | **Tools** | 133 tools per layer, with licence and production maturity |
 | **Roles** | Six applied AI roles: what each owns, the layers it works on, the tools it reaches for |
 | **Problems** | 20 common problems, asked the way a team would ask them, with worked answers |
+| **Market** | What the applied AI job market asks for: roles, levels, titles, skills and tools, tracked daily |
 
 ## Run it
 
@@ -24,5 +25,9 @@ bun run build    # static export in web/out
 
 Problems are written in `system-design.md` and compiled into `web/src/data/` on every build.
 Tools, jargon, roles and courses live in `web/src/data/*.ts`.
+
+## The market tracker
+
+`pipeline/` reads public job boards once a day (company boards on Greenhouse, Lever and Ashby, listed in `pipeline/companies.json`; Remotive; Arbeitnow; Hacker News "Who is hiring?"), keeps the AI roles and reduces each to its role, level, skills and tools. It is not a job board: no posting, link, description or company is stored or shown. `bun pipeline/run.ts --dry` reports without writing.
 
 Curated by [Vahid Faraji](https://vfaraji89.github.io/).
