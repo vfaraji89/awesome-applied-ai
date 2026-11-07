@@ -110,3 +110,9 @@ a.chip:hover { border-color: var(--rust); color: var(--rust-deep); }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
 }
+
+/* ---- the mark: the bead runs the loop ---- */
+.mk .mk-loop { transform-origin: 17.6px 6.4px; transform-box: view-box; }
+.mk-spin .mk-loop, a:hover > .mk .mk-loop, a:focus-visible > .mk .mk-loop { animation: mk-loop 2.4s linear infinite; }
+@keyframes mk-loop { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .mk .mk-loop { animation: none !important; } }

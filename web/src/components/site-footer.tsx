@@ -78,7 +78,7 @@ export function SiteFooter() {
       <div className="wrap ft-inner">
         <div className="ft-top">
           <Link href="/" className="ft-brand" aria-label="Applied AI, home">
-            <Mark size={30} />
+            <Mark size={30} spin />
             <span className="ft-name">Applied AI<b>.</b></span>
             <span className="ft-role">awesome-applied-ai</span>
           </Link>
