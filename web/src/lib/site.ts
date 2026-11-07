@@ -1,3 +1,4 @@
+import { structure } from "./structure";
 export const site = {
   name: "awesome-applied-ai",
   title: "Applied AI, mapped",
@@ -11,12 +12,4 @@ export const site = {
   },
 } as const;
 
-export const nav = [
-  { href: "/learn/", label: "Learn" },
-  { href: "/jargon/", label: "Jargon" },
-  { href: "/architecture/", label: "Architecture" },
-  { href: "/tools/", label: "Tools" },
-  { href: "/roles/", label: "Roles & skills" },
-  { href: "/problems/", label: "Problems" },
-  { href: "/market/", label: "Market" },
-] as const;
+export const nav = structure.map((s) => ({ href: s.href, label: s.label, match: s.match }));

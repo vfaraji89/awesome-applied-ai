@@ -16,7 +16,7 @@ export function SiteHeader() {
         </Link>
         <nav className="nav" aria-label="Sections">
           {nav.map((n) => (
-            <Link key={n.href} href={n.href} aria-current={path.startsWith(n.href) ? "page" : undefined}>
+            <Link key={n.href} href={n.href} aria-current={n.match.some((m) => path.startsWith(m)) ? "page" : undefined}>
               {n.label}
             </Link>
           ))}

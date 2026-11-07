@@ -1,3 +1,4 @@
+import { Crumb } from "@/components/section-intro";
 import type { Metadata } from "next";
 import { ToolIndex } from "@/components/tool-index";
 import { tools } from "@/data/tools";
@@ -12,7 +13,7 @@ export default function Tools() {
   return (
     <section className="section">
       <div className="wrap">
-        <span className="kicker">Tools</span>
+        <Crumb id="architect" page="Tools" />
         <h1 style={{ marginTop: 12 }}>The stack I use, every day<span className="dot">.</span></h1>
         <p className="lead" style={{ marginTop: 16 }}>Thirty tools in three groups: applied AI, data and retrieval, product engineering. Tap a bead to see what it is and where I use it.</p>
         <div style={{ marginTop: 30 }}><StackRows groups={stack} /></div>

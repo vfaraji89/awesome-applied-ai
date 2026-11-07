@@ -1,3 +1,4 @@
+import { Crumb } from "@/components/section-intro";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { layers } from "@/data/layers";
@@ -21,7 +22,7 @@ export default function Architecture() {
     <>
       <section className="section">
         <div className="wrap">
-          <span className="kicker">AI-native architecture</span>
+          <Crumb id="architect" page="Architecture" />
           <h1 style={{ marginTop: 12 }}>Six layers, one system<span className="dot">.</span></h1>
           <p className="lead" style={{ marginTop: 16 }}>An AI-native system is designed around the model from day one. These are the six layers it is built from, top to bottom, and the agent harness that runs across them.</p>
           <div style={{ marginTop: 40 }}><RequestFlow /></div>

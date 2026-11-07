@@ -1,24 +1,25 @@
-import type { Course } from "@/data/courses";
+import type { Doc } from "@/data/docs";
 import { stack } from "@/data/stack";
 
 /* A course cover from the brand kit only: paper and dot grid, wooden posts and rods,
    red and white beads, the tool's logo on a white bead, Vahid Sora and Geist Mono.
-   The red beads count the lessons that are ready; on hover they slide along the rod. */
-export function CourseCover({ course, index }: { course: Course; index: number }) {
+   The red beads count the pages that are written; on hover they slide along the rod. */
+export function DocCover({ course, index }: { course: Doc; index: number }) {
   const logo = stack.flatMap((g) => g.tools).find((t) => t.name === course.logo);
-  const total = course.lessons.length;
+  const total = course.pages.length || 6;
+  const ready = course.status === "live" ? course.pages.length : 0;
   return (
     <div className="cv" aria-hidden="true">
       <span className="cv-post l" /><span className="cv-post r" />
       <div className="cv-rod top">
-        {Array.from({ length: course.ready }).map((_, i) => <span key={`r${i}`} className="cv-b red" style={{ ["--k" as string]: i }} />)}
+        {Array.from({ length: ready }).map((_, i) => <span key={`r${i}`} className="cv-b red" style={{ ["--k" as string]: i }} />)}
         <span className="cv-gap" />
-        {Array.from({ length: Math.max(0, total - course.ready) }).map((_, i) => <span key={`w${i}`} className="cv-b white" style={{ ["--k" as string]: i }} />)}
+        {Array.from({ length: Math.max(0, total - ready) }).map((_, i) => <span key={`w${i}`} className="cv-b white" style={{ ["--k" as string]: i }} />)}
       </div>
       <div className="cv-mid">
         <span className="cv-logo" dangerouslySetInnerHTML={{ __html: logo?.svg ?? "" }} />
         <div>
-          <span className="cv-k">Course {String(index + 1).padStart(2, "0")} · {total} lessons</span>
+          <span className="cv-k">Doc {String(index + 1).padStart(2, "0")} · {course.status === "live" ? `${total} pages` : "coming soon"}</span>
           <b className="cv-t">{course.name}<span className="dot">.</span></b>
         </div>
       </div>
