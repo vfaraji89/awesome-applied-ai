@@ -126,6 +126,8 @@ export interface Term {
   also?: string[];
   /** The form it takes when someone asks about it. */
   asked?: string;
+  /** Where to read more, such as a benchmark's own site. */
+  link?: { label: string; href: string };
   tags: string[];
 }
 

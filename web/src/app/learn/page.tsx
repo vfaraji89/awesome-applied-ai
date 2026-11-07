@@ -1,40 +1,53 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { courses } from "@/data/courses";
+import { CourseCover } from "@/components/course-cover";
 
-export const metadata: Metadata = { title: "Learn", description: "Animated courses on applied AI, data problems and the AI stack." };
+export const metadata: Metadata = { title: "Courses", description: "Animated courses on Claude Code, the Claude Platform, LangChain and Deep Agents, and the Vercel AI SDK." };
 
 export default function Learn() {
   return (
     <section className="section">
       <div className="wrap">
-        <span className="kicker">Learn</span>
-        <h1 style={{ marginTop: 12 }}>Courses you watch<span className="dot">.</span></h1>
-        <p className="lead" style={{ marginTop: 16 }}>Every lesson is a short animation with one idea in it. The Claude API course is live; the others go live one lesson at a time. Some lessons belong to the paid course and show as locked. Until then, start with the <Link href="/jargon/">jargon</Link> and the <Link href="/architecture/">architecture</Link>.</p>
-        <div className="grid" style={{ marginTop: 36, gap: 22 }}>
-          {courses.map((c, ci) => (
-            <article key={c.id} id={c.id} className="frame rise" style={{ ["--i" as string]: ci }}>
-              <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
-                <span className="kicker">Course {String(ci + 1).padStart(2, "0")}</span>
-                {c.status === "live" ? <span className="chip on">Live · {c.free} free lessons</span> : <span className="soon">Coming soon</span>}
-              </div>
-              <h2 style={{ marginTop: 10 }}>{c.name}<span className="dot">.</span></h2>
-              <p className="muted" style={{ marginTop: 8 }}>{c.oneLine}</p>
-              <ol className="lessons">
-                {c.lessons.map((l, i) => {
-                  const locked = c.free !== undefined && i >= c.free;
-                  return <li key={l}><span className={`bead${locked || c.status !== "live" ? " white" : ""}`} /><span className="mono count">{String(i + 1).padStart(2, "0")}</span><span className={locked ? "muted" : ""}>{l}</span>{locked && <span className="count">· paid</span>}</li>;
-                })}
-              </ol>
-              {c.href && <Link href={c.href} className="btn" style={{ marginTop: 20 }}>Start the course →</Link>}
-            </article>
-          ))}
+        <span className="kicker">Courses</span>
+        <h1 style={{ marginTop: 12 }}>Learn the tools, one animation at a time<span className="dot">.</span></h1>
+        <p className="lead" style={{ marginTop: 16 }}>Four courses, in plain language, all free. Every lesson is one idea, one everyday comparison and one short animation.</p>
+        <div className="catalogue">
+          {courses.map((c, ci) => {
+            const card = (
+              <>
+                <CourseCover course={c} index={ci} />
+                <div className="cat-body">
+                  <div className="cat-top">
+                    {c.status === "live" ? <span className="chip on">Live</span> : <span className="soon">Coming soon</span>}
+                    <span className="count">Free · {c.lessons.length} lessons</span>
+                  </div>
+                  <p className="muted" style={{ marginTop: 10 }}>{c.oneLine}</p>
+                  <ol className="lessons">
+                    {c.lessons.map((l, i) => {
+                      const later = i >= c.ready;
+                      return <li key={l}><span className={`bead${later ? " white" : ""}`} /><span className="mono count">{String(i + 1).padStart(2, "0")}</span><span className={later ? "muted" : ""}>{l}</span>{later && c.ready > 0 && <span className="count">· soon</span>}</li>;
+                    })}
+                  </ol>
+                  {c.href && <span className="btn" style={{ marginTop: 18 }}>Start the course →</span>}
+                </div>
+              </>
+            );
+            return c.href
+              ? <Link key={c.id} id={c.id} href={c.href} className="frame cat rise" style={{ ["--i" as string]: ci }}>{card}</Link>
+              : <article key={c.id} id={c.id} className="frame cat rise" style={{ ["--i" as string]: ci }}>{card}</article>;
+          })}
         </div>
       </div>
       <style>{`
-        .lessons { list-style: none; margin: 18px 0 0; padding: 0; position: relative; display: grid; gap: 10px; }
+        .catalogue { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr)); gap: 22px; margin-top: 36px; }
+        .cat { padding: 14px 18px 22px; display: flex; flex-direction: column; }
+        .cat-body { padding: 16px 8px 0; display: flex; flex-direction: column; }
+        .cat-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+        .lessons { list-style: none; margin: 16px 0 0; padding: 0; position: relative; display: grid; gap: 8px; }
         .lessons::before { content: ""; position: absolute; left: 5px; top: 8px; bottom: 8px; width: 4px; border-radius: 4px; background: var(--rod); }
-        .lessons li { position: relative; display: flex; align-items: center; gap: 12px; }
+        .lessons li { position: relative; display: flex; align-items: center; gap: 12px; font-size: .95rem; }
+        .cat .btn { align-self: flex-start; }
       `}</style>
     </section>
   );

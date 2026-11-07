@@ -70,11 +70,6 @@ p { margin: 0; }
   .nav { margin-left: -8px; width: calc(100% + 16px); }
   .brand small { display: none; }
 }
-.site-footer { border-top: 1px solid var(--line); padding: 40px 0 56px; color: var(--sec); font-size: 0.9rem; }
-.site-footer .wrap { display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: space-between; }
-.site-footer nav { display: flex; gap: 16px; flex-wrap: wrap; }
-.site-footer a { text-decoration: none; }
-.site-footer a:hover { color: var(--rust-deep); }
 
 /* ---- the abacus frame: wooden dowels at the sides, a rod that fills on hover ---- */
 .frame {

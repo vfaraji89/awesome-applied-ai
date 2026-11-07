@@ -10,9 +10,10 @@ import { fRoles } from "@/data/framework";
 import { courses } from "@/data/courses";
 import { stack } from "@/data/stack";
 import { StackRows } from "@/components/stack-rows";
+import { CourseCover } from "@/components/course-cover";
 
 const START = [
-  { href: "/learn/", t: "Learn", d: "Animated courses: applied AI, data problems, the stack.", n: `${courses.length} courses` },
+  { href: "/learn/", t: "Learn", d: "Animated courses: Claude Code, Claude Platform, LangChain and Deep Agents, Vercel AI SDK.", n: `${courses.length} courses` },
   { href: "/jargon/", t: "Jargon", d: "The words people use in AI, in plain language.", n: `${terms.length} terms` },
   { href: "/architecture/", t: "Architecture", d: "Six layers every AI-native system is built from.", n: `${layers.length} layers` },
   { href: "/tools/", t: "Tools", d: "The 30 tools I use every day, and the wider map.", n: `30 + ${tools.length} tools` },
@@ -99,17 +100,16 @@ export default function Home() {
             <Link href="/learn/" className="chip">All courses →</Link>
           </div>
           <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 240px), 1fr))" }}>
-            {courses.map((c) => (
-              <Link key={c.id} href={c.href ?? `/learn/#${c.id}`} className="frame" style={{ paddingBottom: 38 }}>
-                {c.status === "live" ? <span className="chip on">Live · {c.free} free</span> : <span className="soon">Coming soon</span>}
-                <h3 style={{ marginTop: 12 }}>{c.name}</h3>
-                <p className="muted" style={{ marginTop: 6 }}>{c.oneLine}</p>
-                <span className="count" style={{ display: "block", marginTop: 12 }}>{c.lessons.length} lessons</span>
-                <span className="rod" />
+            {courses.map((c, ci) => (
+              <Link key={c.id} href={c.href ?? `/learn/#${c.id}`} className="frame" style={{ padding: "12px 14px 20px" }}>
+                <CourseCover course={c} index={ci} />
+                <div style={{ padding: "12px 6px 0", display: "flex", justifyContent: "space-between", gap: 8, alignItems: "center" }}>
+                  {c.status === "live" ? <span className="chip on">Live · free</span> : <span className="soon">Coming soon</span>}
+                  <span className="count">{c.lessons.length} lessons</span>
+                </div>
               </Link>
             ))}
-            <WordCycler terms={words} />
-          </div>
+                      </div>
         </div>
       </section>
     </>
