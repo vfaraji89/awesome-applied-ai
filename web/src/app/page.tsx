@@ -8,12 +8,14 @@ import { problems } from "@/data/problems";
 import { layers } from "@/data/layers";
 import { roles } from "@/data/roles";
 import { courses } from "@/data/courses";
+import { stack } from "@/data/stack";
+import { StackRows } from "@/components/stack-rows";
 
 const START = [
   { href: "/learn/", t: "Learn", d: "Animated courses: applied AI, data problems, the stack.", n: `${courses.length} courses` },
   { href: "/jargon/", t: "Jargon", d: "The words people use in AI, in plain language.", n: `${terms.length} terms` },
   { href: "/architecture/", t: "Architecture", d: "Six layers every AI-native system is built from.", n: `${layers.length} layers` },
-  { href: "/tools/", t: "Tools", d: "The main tools per layer, with licence and maturity.", n: `${tools.length} tools` },
+  { href: "/tools/", t: "Tools", d: "The 30 tools I use every day, and the wider map.", n: `30 + ${tools.length} tools` },
   { href: "/roles/", t: "Roles", d: "Applied AI jobs: what each one owns and uses.", n: `${roles.length} roles` },
   { href: "/problems/", t: "Problems", d: "What breaks in real projects, and the fix.", n: `${problems.length} problems` },
 ];
@@ -32,7 +34,7 @@ export default function Home() {
           </p>
           <div className="rise" style={{ ["--i" as string]: 3, display: "flex", gap: 10, flexWrap: "wrap", marginTop: 26 }}>
             <Link href="/learn/" className="btn">Start learning →</Link>
-            <Link href="/tools/" className="btn ghost">Browse {tools.length} tools</Link>
+            <Link href="/tools/" className="btn ghost">See the stack</Link>
           </div>
           <LearnPath />
         </div>
@@ -70,6 +72,20 @@ export default function Home() {
               </Link>
             ))}
           </div>
+        </div>
+      </section>
+
+      <section className="section" style={{ background: "var(--paper)" }}>
+        <div className="wrap">
+          <div className="section-head">
+            <div>
+              <span className="kicker">Built with, every day</span>
+              <h2 style={{ marginTop: 10 }}>The stack behind it<span className="dot">.</span></h2>
+              <p className="lead">The tools I know and use, strung on three rods. Tap one.</p>
+            </div>
+            <Link href="/tools/" className="chip">All tools →</Link>
+          </div>
+          <StackRows groups={stack} />
         </div>
       </section>
 
