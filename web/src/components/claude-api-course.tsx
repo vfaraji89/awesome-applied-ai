@@ -1,5 +1,10 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import { LessonCardPlayer } from "./remotion/players";
+
+gsap.registerPlugin(useGSAP);
 
 /* How your app talks to Claude: the Claude Platform course, animated. Free and open to everyone.
    Facts come from the official Claude API overview; every lesson has an everyday comparison, an animation and a hint. */
@@ -247,9 +252,24 @@ export function ClaudeApiCourse() {
   const go = (n: number) => { setI(n); history.replaceState(null, "", `#lesson-${n + 1}`); };
   const l = LESSONS[i];
   const b = BODY[i];
-  const readyCount = LESSONS.filter((x) => x.ready).length;
+  const root = useRef<HTMLDivElement>(null);
+  useGSAP(() => {
+    const mm = gsap.matchMedia();
+    mm.add("(prefers-reduced-motion: no-preference)", () => {
+      gsap.timeline({ defaults: { ease: "power3.out" } })
+        .from(".cc-panel", { y: 24, autoAlpha: 0, duration: .5 })
+        .from(".cc-panel .cc-step", { y: 22, autoAlpha: 0, duration: .55, stagger: .09 }, "-=.25")
+        .from(".cc-item.on .bead", { scale: 0, duration: .6, ease: "back.out(3)" }, 0);
+    });
+    return () => mm.revert();
+  }, { scope: root, dependencies: [i] });
+  useGSAP(() => {
+    gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
+      gsap.from(".cc-item", { x: -16, autoAlpha: 0, stagger: .05, duration: .45, ease: "power2.out" });
+    });
+  }, { scope: root });
   return (
-    <div className="cc">
+    <div className="cc" ref={root}>
       <nav className="cc-list" aria-label="Lessons">
         {LESSONS.map((x, k) => (
           <button key={x.title} type="button" className={`cc-item${k === i ? " on" : ""}${x.ready ? "" : " later"}`} onClick={() => go(k)} aria-current={k === i ? "step" : undefined}>
@@ -259,18 +279,18 @@ export function ClaudeApiCourse() {
             {!x.ready && <span className="cc-soon">soon</span>}
           </button>
         ))}
-        <p className="count" style={{ margin: "14px 0 0" }}>All free · {readyCount} ready, {LESSONS.length - readyCount} on the way</p>
+        <p className="count" style={{ margin: "14px 0 0" }}>All {LESSONS.length} lessons free · open to everyone</p>
       </nav>
 
       <article key={i} className="cc-panel frame">
-        <span className="kicker">Lesson {String(i + 1).padStart(2, "0")} · {l.title}</span>
         {l.ready && b ? (
           <>
-            <h2 style={{ marginTop: 10 }}>{b.h}<span className="dot">.</span></h2>
-            <div className="cc-box analogy"><span className="cc-ico" aria-hidden="true">≈</span><div><span className="kicker">Think of it like this</span><p>{b.analogy}</p></div></div>
-            <div className="cc-anim">{b.anim}</div>
-            {b.p.map((t) => <p key={t} className="cc-p">{t}</p>)}
-            <div className="cc-box hint"><span className="cc-ico" aria-hidden="true">✦</span><div><span className="kicker">Useful hint</span><p>{b.hint}</p></div></div>
+            <div className="cc-step cc-open"><LessonCardPlayer n={i + 1} total={LESSONS.length} title={b.h} analogy={l.teaser} /></div>
+            <h2 className="sr-only">Lesson {i + 1}: {b.h}</h2>
+            <div className="cc-step cc-box analogy"><span className="cc-ico" aria-hidden="true">≈</span><div><span className="kicker">Think of it like this</span><p>{b.analogy}</p></div></div>
+            <div className="cc-step cc-anim">{b.anim}</div>
+            {b.p.map((t) => <p key={t} className="cc-step cc-p">{t}</p>)}
+            <div className="cc-step cc-box hint"><span className="cc-ico" aria-hidden="true">✦</span><div><span className="kicker">Useful hint</span><p>{b.hint}</p></div></div>
           </>
         ) : (
           <div className="cc-later">
@@ -295,7 +315,7 @@ export function ClaudeApiCourse() {
         .cc-item.later .cc-t { color: var(--muted); }
         .cc-item:focus-visible { outline: 2px solid var(--rust); }
         .cc-soon { margin-left: auto; font-family: var(--font-mono), monospace; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
-        .cc-panel { min-height: 520px; animation: rise .5s var(--ease) both; display: flex; flex-direction: column; }
+        .cc-panel { min-height: 520px; display: flex; flex-direction: column; }
         .cc-anim { margin: 26px 0; padding: 26px; border-radius: 14px; background: var(--paper); min-height: 220px; display: flex; align-items: center; }
         .cc-anim > * { width: 100%; }
         .cc-p { color: var(--sec); font-size: 1.08rem; margin-top: 10px; max-width: 64ch; line-height: 1.6; }
@@ -307,6 +327,8 @@ export function ClaudeApiCourse() {
         .cc-box.analogy .cc-ico { background: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); }
         .cc-nav { display: flex; justify-content: space-between; margin-top: auto; padding-top: 28px; }
         .cc-nav .chip { cursor: pointer; font: inherit; font-size: .85rem; } .cc-nav .chip:disabled { opacity: .35; cursor: default; }
+        .cc-open { margin: -6px -6px 6px; box-shadow: 0 18px 30px -24px rgba(60,30,10,.5); border-radius: 14px; }
+        .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
         .cc-later { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin: 40px 0; }
 
         .rt { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 14px; align-items: center; }

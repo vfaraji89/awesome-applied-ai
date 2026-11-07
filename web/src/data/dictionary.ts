@@ -463,6 +463,19 @@ export const terms: Term[] = [
     tags: ["architecture", "grounding"],
   },
   {
+    id: "text-to-sql",
+    term: "Text-to-SQL",
+    field: "retrieval",
+    short:
+      "A model turns a plain-language question into a SQL query, runs it on your database, and answers from the rows that come back.",
+    detail:
+      "The hard part is rarely the SQL itself. It is knowing the schema: which table holds the number, what a column really means, and which values are dirty. Give the model table and column descriptions and a few worked examples, run the query on a read-only role, and check the result before showing it. Measure it by running the query and comparing results, not by comparing the SQL text.",
+    also: ["NL2SQL", "natural language to SQL"],
+    asked: "How would you let business users ask questions of the data warehouse?",
+    link: { label: "BIRD, the text-to-SQL benchmark", href: "https://bird-bench.github.io/" },
+    tags: ["data", "agents", "sql"],
+  },
+  {
     id: "chunking",
     term: "Chunking",
     field: "retrieval",
@@ -867,6 +880,19 @@ export const terms: Term[] = [
   },
 
   // ------------------------------------------------------------------ evaluation
+  {
+    id: "bird-bench",
+    term: "BIRD benchmark",
+    field: "evaluation",
+    short:
+      "A text-to-SQL benchmark on large, messy, real databases: 12,751 questions with their SQL over 95 databases (33.4 GB) from 37 professional fields.",
+    detail:
+      "Older benchmarks used small, clean schemas. BIRD adds dirty values, large tables and questions that need outside knowledge, closer to a real warehouse. The main score is execution accuracy: run the predicted query and the reference query and check the results match. It also scores how efficient the query is. Its human baseline is about 93% execution accuracy, a useful ceiling when you read leaderboard numbers.",
+    also: ["BIRD", "BIRD-SQL"],
+    asked: "How would you evaluate a text-to-SQL agent?",
+    link: { label: "bird-bench.github.io", href: "https://bird-bench.github.io/" },
+    tags: ["benchmark", "sql", "data"],
+  },
   {
     id: "golden-set",
     term: "Golden set",

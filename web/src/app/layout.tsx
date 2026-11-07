@@ -25,7 +25,12 @@ export const metadata: Metadata = {
   title: { default: `${site.title} · awesome-applied-ai`, template: `%s · awesome-applied-ai` },
   description: "Learn applied AI with animations: the jargon, the architecture, the tools, the roles and the problems that come up in real projects. Curated by Vahid Faraji.",
   authors: [{ name: site.author.name, url: site.author.site }],
-  icons: { icon: `${basePath}/icon.png` },
+  icons: {
+    icon: [{ url: `${basePath}/icon.svg`, type: "image/svg+xml" }, { url: `${basePath}/icon.png`, sizes: "64x64" }],
+    apple: `${basePath}/apple-icon.png`,
+  },
+  openGraph: { type: "website", siteName: "awesome-applied-ai", images: [{ url: `${basePath}/og.png`, width: 1200, height: 630, alt: "Applied AI: learn applied AI, one animation at a time" }] },
+  twitter: { card: "summary_large_image", images: [`${basePath}/og.png`] },
 };
 
 export const viewport: Viewport = {

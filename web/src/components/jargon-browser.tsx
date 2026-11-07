@@ -42,6 +42,7 @@ export function JargonBrowser({ terms, fields }: { terms: Term[]; fields: Field[
                   <span className="kicker">Go deeper</span>
                   <span>{t.detail}</span>
                   {t.asked && <span className="jb-asked"><span className="count">Asked as</span> “{t.asked}”</span>}
+                  {t.link && <span className="jb-link" role="link" tabIndex={0} onClick={(e) => { e.stopPropagation(); window.open(t.link!.href, "_blank", "noopener"); }} onKeyDown={(e) => { if (e.key === "Enter") { e.stopPropagation(); e.preventDefault(); window.open(t.link!.href, "_blank", "noopener"); } }}>{t.link.label} ↗</span>}
                 </span>
               </span>
             </button>
@@ -59,6 +60,7 @@ export function JargonBrowser({ terms, fields }: { terms: Term[]; fields: Field[
         .jb-back { transform: rotateY(180deg); background-color: var(--paper); }
         .jb-term { font-size: 1.45rem; font-weight: 800; letter-spacing: -.03em; }
         .jb-asked { font-style: italic; color: var(--ink); }
+         .jb-link { cursor: pointer; font-family: var(--font-mono), monospace; font-size: .78rem; color: var(--rust-deep); text-decoration: none; } .jb-link:hover { text-decoration: underline; }
         @media (max-width: 640px) { .jb-bar { top: 96px; } }
       `}</style>
     </div>
