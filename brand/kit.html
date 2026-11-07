@@ -35,8 +35,9 @@ html,body{background:transparent}
 </style></head><body>
 <div id="root"></div>
 <script>
-/* The Applied AI mark: Vahid Faraji's abacus mark, with the beads climbing from bottom left to a red bead at top right. */
-const MARK=(s,ink='#1c1c1e',bg='#fff6f4')=>`<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none"><rect x="1" y="1" width="22" height="22" rx="5" fill="${bg}" stroke="${ink}" stroke-width="1.5"/><path d="M5 8h14M5 12h14M5 16h14" stroke="${ink}" stroke-opacity=".22" stroke-width="1"/><circle cx="7.5" cy="16" r="1.9" fill="${ink}"/><circle cx="12" cy="12" r="1.9" fill="${ink}"/><circle cx="16.5" cy="8" r="2.2" fill="#e0301e"/></svg>`;
+/* The Applied AI mark: the harness (the frame), the model inside it (the red bead), and a tool call (one line out through the wall to a tool). */
+let G=0;
+const MARK=(s,ink='#1c1c1e',bg='#fff6f4')=>{const id='bd'+(G++);return `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none"><defs><radialGradient id="${id}" cx=".34" cy=".3" r=".75"><stop offset="0" stop-color="#ff9d8f"/><stop offset=".45" stop-color="#e0301e"/><stop offset="1" stop-color="#9e1a0c"/></radialGradient></defs><rect x="1.6" y="3.6" width="15.4" height="16.8" rx="4.6" fill="${bg}" stroke="${ink}" stroke-width="1.8"/><path d="M12.4 12h7.4" stroke="${ink}" stroke-width="1.8" stroke-linecap="round"/><rect x="19.2" y="9.6" width="4.2" height="4.8" rx="1.3" fill="${ink}"/><circle cx="9.3" cy="12" r="3.3" fill="url(#${id})"/></svg>`};
 const WORD=(fs,ink='var(--ink)')=>`<span style="font-weight:800;letter-spacing:-.035em;font-size:${fs}px;color:${ink}">Applied AI<b style="color:var(--red)">.</b></span>`;
 function abacus(x,y,w,h,rows,bead){
   const n=rows.length, post=22, gap=h/(n+1);
@@ -92,10 +93,10 @@ x:{w:1500,h:500,cls:'dots',html:`
   </div>
   ${abacus(1160,110,280,280,CLIMB,40)}
   <div class="url" style="position:absolute;right:60px;bottom:34px;font-size:17px">vfaraji89.github.io/awesome-applied-ai</div>`},
-sheet:{w:1600,h:780,html:`
+sheet:{w:1600,h:800,html:`
   <div style="position:absolute;left:80px;top:70px;right:80px">
     <div class="k" style="font-size:18px">Brand kit · awesome-applied-ai</div>
-    <div style="display:flex;align-items:center;gap:40px;margin-top:30px">${MARK(180)}${MARK(180,'#f4efe9','#141312')}<div>${WORD(96)}<div class="sub" style="font-size:22px;margin-top:12px;max-width:600px">The mark is Vahid Faraji's abacus, with the beads climbing to a red bead at the top: count, then apply.</div></div></div>
+    <div style="display:flex;align-items:center;gap:40px;margin-top:30px">${MARK(180)}${MARK(180,'#f4efe9','#141312')}<div>${WORD(96)}<div class="sub" style="font-size:22px;margin-top:12px;max-width:600px">The frame is the harness, the red bead is the model inside it, and one line out through the wall is a tool call. Nothing else.</div></div></div>
     <div style="display:flex;gap:22px;margin-top:56px">
       <div class="sw"><i style="background:#fff6f4"></i>Paper #fff6f4</div>
       <div class="sw"><i style="background:#1c1c1e"></i>Ink #1c1c1e</div>
@@ -111,7 +112,7 @@ sheet:{w:1600,h:780,html:`
       <div><div class="k" style="font-size:15px">Body · Vahid Sora 400</div><div class="sub" style="font-size:22px;margin-top:14px;max-width:360px">Plain words, one everyday comparison, one short animation.</div></div>
     </div>
   </div>
-  ${abacus(1270,400,260,300,CLIMB,38)}`},
+  ${abacus(1310,470,240,280,CLIMB,36)}`},
 };
 const k=new URLSearchParams(location.search).get('k'); const d=K[k];
 document.getElementById('root').innerHTML=`<div class="c ${d.cls||''}" style="width:${d.w}px;height:${d.h}px;${d.bg?'background:'+d.bg:''}">${d.html}</div>`;
