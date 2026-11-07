@@ -1,12 +1,506 @@
 {
- "generatedAt": null,
- "totals": { "allTime": 0, "openNow": 0, "newToday": 0, "remoteShare": 0 },
- "sources": [],
- "failed": 0,
- "roles": [],
- "seniority": [],
- "titles": [],
- "skills": [],
- "tools": [],
- "byMonth": []
+ "generatedAt": "2026-11-07T08:52:22.819Z",
+ "totals": {
+  "allTime": 1115,
+  "openNow": 1115,
+  "newToday": 1115,
+  "remoteShare": 28
+ },
+ "sources": [
+  {
+   "id": "greenhouse",
+   "boards": 10,
+   "ai": 546
+  },
+  {
+   "id": "ashby",
+   "boards": 9,
+   "ai": 315
+  },
+  {
+   "id": "lever",
+   "boards": 2,
+   "ai": 97
+  },
+  {
+   "id": "remotive",
+   "boards": 1,
+   "ai": 6
+  },
+  {
+   "id": "hackernews",
+   "boards": 1,
+   "ai": 45
+  },
+  {
+   "id": "arbeitnow",
+   "boards": 1,
+   "ai": 110
+  }
+ ],
+ "failed": 3,
+ "roles": [
+  {
+   "id": "forward-deployed-engineer",
+   "n": 281
+  },
+  {
+   "id": "other-ai",
+   "n": 197
+  },
+  {
+   "id": "rd-researcher",
+   "n": 146
+  },
+  {
+   "id": "agentic-ai-engineer",
+   "n": 113
+  },
+  {
+   "id": "applied-ai-engineer",
+   "n": 105
+  },
+  {
+   "id": "ai-platform-engineer",
+   "n": 103
+  },
+  {
+   "id": "ai-native-architect",
+   "n": 78
+  },
+  {
+   "id": "ai-native-developer",
+   "n": 61
+  },
+  {
+   "id": "ai-solutions-architect",
+   "n": 31
+  }
+ ],
+ "seniority": [
+  {
+   "id": "Mid",
+   "n": 566
+  },
+  {
+   "id": "Lead",
+   "n": 179
+  },
+  {
+   "id": "Senior",
+   "n": 177
+  },
+  {
+   "id": "Staff",
+   "n": 108
+  },
+  {
+   "id": "Intern",
+   "n": 39
+  },
+  {
+   "id": "Principal",
+   "n": 23
+  },
+  {
+   "id": "Head",
+   "n": 13
+  },
+  {
+   "id": "Junior",
+   "n": 10
+  }
+ ],
+ "titles": [
+  {
+   "title": "Forward Deployed Engineer",
+   "n": 69
+  },
+  {
+   "title": "Sr. Forward Deployed Engineer",
+   "n": 63
+  },
+  {
+   "title": "Applied AI Architect",
+   "n": 52
+  },
+  {
+   "title": "Applied AI Engineer",
+   "n": 52
+  },
+  {
+   "title": "Forward Deployed Software Engineer",
+   "n": 50
+  },
+  {
+   "title": "Manager",
+   "n": 35
+  },
+  {
+   "title": "Software Engineer",
+   "n": 35
+  },
+  {
+   "title": "Research Engineer",
+   "n": 32
+  },
+  {
+   "title": "Data Scientist",
+   "n": 22
+  },
+  {
+   "title": "Member of Technical Staff",
+   "n": 21
+  },
+  {
+   "title": "Research Scientist",
+   "n": 14
+  },
+  {
+   "title": "AI Support Engineer",
+   "n": 14
+  },
+  {
+   "title": "Staff Software Engineer",
+   "n": 12
+  },
+  {
+   "title": "Technical Program Manager",
+   "n": 12
+  },
+  {
+   "title": "Engineering Manager",
+   "n": 11
+  },
+  {
+   "title": "Senior Software Engineer",
+   "n": 11
+  },
+  {
+   "title": "Forward Deployed Infrastructure Engineer",
+   "n": 11
+  },
+  {
+   "title": "Senior Forward Deployed Engineer",
+   "n": 10
+  },
+  {
+   "title": "Machine Learning Engineer",
+   "n": 9
+  },
+  {
+   "title": "AI Engineer",
+   "n": 9
+  },
+  {
+   "title": "Staff Machine Learning Engineer",
+   "n": 8
+  },
+  {
+   "title": "Senior AI Data & Analytics Engineer II",
+   "n": 8
+  },
+  {
+   "title": "Senior Manager",
+   "n": 7
+  },
+  {
+   "title": "Research Engineer / Research Scientist",
+   "n": 6
+  },
+  {
+   "title": "Product Manager",
+   "n": 6
+  },
+  {
+   "title": "AI Forward Deployed Engineer",
+   "n": 6
+  },
+  {
+   "title": "Specialist Solutions Architect",
+   "n": 6
+  },
+  {
+   "title": "Principal AI Engineer",
+   "n": 6
+  },
+  {
+   "title": "AI Deployment Manager",
+   "n": 6
+  },
+  {
+   "title": "Staff+ Software Engineer",
+   "n": 5
+  }
+ ],
+ "skills": [
+  {
+   "id": "security",
+   "n": 962,
+   "share": 86
+  },
+  {
+   "id": "software",
+   "n": 863,
+   "share": 77
+  },
+  {
+   "id": "customer",
+   "n": 795,
+   "share": 71
+  },
+  {
+   "id": "architecture",
+   "n": 714,
+   "share": 64
+  },
+  {
+   "id": "evals",
+   "n": 693,
+   "share": 62
+  },
+  {
+   "id": "agents",
+   "n": 688,
+   "share": 62
+  },
+  {
+   "id": "models",
+   "n": 682,
+   "share": 61
+  },
+  {
+   "id": "product",
+   "n": 497,
+   "share": 45
+  },
+  {
+   "id": "data",
+   "n": 274,
+   "share": 25
+  },
+  {
+   "id": "retrieval",
+   "n": 256,
+   "share": 23
+  },
+  {
+   "id": "context",
+   "n": 196,
+   "share": 18
+  },
+  {
+   "id": "ai-dev",
+   "n": 193,
+   "share": 17
+  }
+ ],
+ "tools": [
+  {
+   "name": "Python",
+   "n": 617,
+   "inStack": true
+  },
+  {
+   "name": "TypeScript",
+   "n": 253,
+   "inStack": true
+  },
+  {
+   "name": "Google Cloud",
+   "n": 203,
+   "inStack": true
+  },
+  {
+   "name": "RAG",
+   "n": 115,
+   "inStack": true
+  },
+  {
+   "name": "SQL",
+   "n": 113,
+   "inStack": true
+  },
+  {
+   "name": "MCP",
+   "n": 82,
+   "inStack": true
+  },
+  {
+   "name": "LangChain",
+   "n": 60,
+   "inStack": true
+  },
+  {
+   "name": "Unstructured",
+   "n": 56,
+   "inStack": false
+  },
+  {
+   "name": "Claude Code",
+   "n": 54,
+   "inStack": true
+  },
+  {
+   "name": "LangGraph",
+   "n": 38,
+   "inStack": true
+  },
+  {
+   "name": "Elasticsearch",
+   "n": 38,
+   "inStack": false
+  },
+  {
+   "name": "Hugging Face",
+   "n": 26,
+   "inStack": true
+  },
+  {
+   "name": "Perplexity AI Search",
+   "n": 26,
+   "inStack": true
+  },
+  {
+   "name": "BigQuery",
+   "n": 21,
+   "inStack": true
+  },
+  {
+   "name": "LangSmith",
+   "n": 13,
+   "inStack": false
+  },
+  {
+   "name": "Deep Agents",
+   "n": 13,
+   "inStack": true
+  },
+  {
+   "name": "EU AI Act",
+   "n": 12,
+   "inStack": false
+  },
+  {
+   "name": "Vertex AI",
+   "n": 12,
+   "inStack": true
+  },
+  {
+   "name": "DSPy",
+   "n": 12,
+   "inStack": false
+  },
+  {
+   "name": "ElevenLabs",
+   "n": 12,
+   "inStack": true
+  },
+  {
+   "name": "Claude Agent SDK",
+   "n": 11,
+   "inStack": true
+  },
+  {
+   "name": "CrewAI",
+   "n": 9,
+   "inStack": false
+  },
+  {
+   "name": "Next.js",
+   "n": 8,
+   "inStack": true
+  },
+  {
+   "name": "Vector DB",
+   "n": 8,
+   "inStack": true
+  },
+  {
+   "name": "LlamaIndex",
+   "n": 7,
+   "inStack": false
+  },
+  {
+   "name": "Microsoft Agents SDK",
+   "n": 6,
+   "inStack": true
+  },
+  {
+   "name": "AutoGen",
+   "n": 6,
+   "inStack": false
+  },
+  {
+   "name": "Azure AI Foundry",
+   "n": 6,
+   "inStack": true
+  },
+  {
+   "name": "A2A",
+   "n": 5,
+   "inStack": false
+  },
+  {
+   "name": "Copilot Studio",
+   "n": 5,
+   "inStack": true
+  },
+  {
+   "name": "MemOS",
+   "n": 4,
+   "inStack": false
+  },
+  {
+   "name": "OpenAI Agents SDK",
+   "n": 4,
+   "inStack": false
+  },
+  {
+   "name": "Temporal",
+   "n": 4,
+   "inStack": false
+  },
+  {
+   "name": "Langfuse",
+   "n": 4,
+   "inStack": true
+  },
+  {
+   "name": "MLflow Tracing",
+   "n": 3,
+   "inStack": false
+  },
+  {
+   "name": "Power Automate",
+   "n": 3,
+   "inStack": true
+  },
+  {
+   "name": "LiteLLM",
+   "n": 3,
+   "inStack": false
+  },
+  {
+   "name": "Text-to-SQL",
+   "n": 2,
+   "inStack": true
+  },
+  {
+   "name": "Zapier",
+   "n": 2,
+   "inStack": true
+  },
+  {
+   "name": "pgvector",
+   "n": 2,
+   "inStack": false
+  }
+ ],
+ "byMonth": [
+  {
+   "month": "2026-11",
+   "n": 1115
+  }
+ ]
 }
