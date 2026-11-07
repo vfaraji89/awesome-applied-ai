@@ -41,7 +41,13 @@ const tasks: Promise<RawJob[]>[] = [
 ];
 const raw = (await Promise.all(tasks)).flat();
 
-const normTitle = (t: string) => t.replace(/\(.*?\)|,.*$| - .*$| – .*$| \| .*$/g, "").replace(/\s+/g, " ").trim().slice(0, 80);
+/** Keep the role and its qualifier ("Software Engineer, Agents"); drop brackets and trailing locations or notes. */
+const ROLEISH = /engineer|architect|scientist|research|developer|agent|ai\b|ml\b|llm|platform|infrastructure|applied|inference|deployed/i;
+const normTitle = (t: string) => {
+  const parts = t.replace(/\(.*?\)|\[.*?\]/g, "").split(/\s+[-–|]\s+/).map((x) => x.trim()).filter(Boolean);
+  const keep = [parts[0], ...parts.slice(1).filter((x) => ROLEISH.test(x) && x.length < 40)];
+  return keep.join(", ").replace(/\s+/g, " ").replace(/\s+,/g, ",").trim().slice(0, 80);
+};
 const hash = (s: string) => createHash("sha256").update(s).digest("hex").slice(0, 16);
 const fresh: Job[] = raw.map((j) => {
   const text = `${j.title} ${j.text}`;
