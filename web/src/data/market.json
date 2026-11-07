@@ -1,9 +1,9 @@
 {
- "generatedAt": "2026-11-07T08:54:31.913Z",
+ "generatedAt": "2026-11-07T08:56:10.857Z",
  "totals": {
   "allTime": 858,
   "openNow": 858,
-  "newToday": 858,
+  "newToday": 0,
   "remoteShare": 29
  },
  "sources": [
@@ -14,7 +14,7 @@
   },
   {
    "id": "ashby",
-   "boards": 9,
+   "boards": 8,
    "ai": 251
   },
   {
@@ -38,7 +38,7 @@
    "ai": 74
   }
  ],
- "failed": 3,
+ "failed": 0,
  "roles": [
   {
    "id": "forward-deployed-engineer",
@@ -46,7 +46,7 @@
   },
   {
    "id": "rd-researcher",
-   "n": 142
+   "n": 146
   },
   {
    "id": "ai-platform-engineer",
@@ -66,7 +66,7 @@
   },
   {
    "id": "other-ai",
-   "n": 57
+   "n": 53
   },
   {
    "id": "ai-native-developer",
@@ -80,7 +80,7 @@
  "seniority": [
   {
    "id": "Mid",
-   "n": 467
+   "n": 453
   },
   {
    "id": "Senior",
@@ -99,12 +99,12 @@
    "n": 33
   },
   {
-   "id": "Principal",
-   "n": 13
+   "id": "Junior",
+   "n": 21
   },
   {
-   "id": "Junior",
-   "n": 7
+   "id": "Principal",
+   "n": 13
   },
   {
    "id": "Head",
