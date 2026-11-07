@@ -10,21 +10,23 @@ export default function Learn() {
       <div className="wrap">
         <span className="kicker">Learn</span>
         <h1 style={{ marginTop: 12 }}>Courses you watch<span className="dot">.</span></h1>
-        <p className="lead" style={{ marginTop: 16 }}>Every lesson is a short animation with one idea in it. The outlines are set, and lessons go live one at a time. Until then, start with the <Link href="/jargon/">jargon</Link> and the <Link href="/architecture/">architecture</Link>.</p>
+        <p className="lead" style={{ marginTop: 16 }}>Every lesson is a short animation with one idea in it. The Claude API course is live; the others go live one lesson at a time. Some lessons belong to the paid course and show as locked. Until then, start with the <Link href="/jargon/">jargon</Link> and the <Link href="/architecture/">architecture</Link>.</p>
         <div className="grid" style={{ marginTop: 36, gap: 22 }}>
           {courses.map((c, ci) => (
             <article key={c.id} id={c.id} className="frame rise" style={{ ["--i" as string]: ci }}>
               <div style={{ display: "flex", justifyContent: "space-between", gap: 12, flexWrap: "wrap", alignItems: "center" }}>
                 <span className="kicker">Course {String(ci + 1).padStart(2, "0")}</span>
-                <span className="soon">Coming soon</span>
+                {c.status === "live" ? <span className="chip on">Live · {c.free} free lessons</span> : <span className="soon">Coming soon</span>}
               </div>
               <h2 style={{ marginTop: 10 }}>{c.name}<span className="dot">.</span></h2>
               <p className="muted" style={{ marginTop: 8 }}>{c.oneLine}</p>
               <ol className="lessons">
-                {c.lessons.map((l, i) => (
-                  <li key={l}><span className="bead white" /><span className="mono count">{String(i + 1).padStart(2, "0")}</span><span>{l}</span></li>
-                ))}
+                {c.lessons.map((l, i) => {
+                  const locked = c.free !== undefined && i >= c.free;
+                  return <li key={l}><span className={`bead${locked || c.status !== "live" ? " white" : ""}`} /><span className="mono count">{String(i + 1).padStart(2, "0")}</span><span className={locked ? "muted" : ""}>{l}</span>{locked && <span className="count">· paid</span>}</li>;
+                })}
               </ol>
+              {c.href && <Link href={c.href} className="btn" style={{ marginTop: 20 }}>Start the course →</Link>}
             </article>
           ))}
         </div>

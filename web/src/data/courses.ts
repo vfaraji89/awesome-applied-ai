@@ -5,9 +5,22 @@ export interface Course {
   oneLine: string;
   lessons: string[];
   status: "soon" | "live";
+  /** Where the course lives, once it is live. */
+  href?: string;
+  /** How many lessons, from the start, are free. The rest are locked for the paid course. */
+  free?: number;
 }
 
 export const courses: Course[] = [
+  {
+    id: "claude-api",
+    name: "The Claude API, animated",
+    oneLine: "How your app talks to Claude, in plain words and short animations. No jargon needed.",
+    lessons: ["What it is: an order window", "The doors, and which to use", "The label on every request", "Let a helper do the paperwork", "Buy direct, or through your cloud", "Reading a long list, page by page", "Speed limits and spending caps", "The receipt that comes back"],
+    status: "live",
+    href: "/learn/claude-api/",
+    free: 3,
+  },
   {
     id: "applied-ai",
     name: "Applied AI, from zero",

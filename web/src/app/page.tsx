@@ -94,14 +94,14 @@ export default function Home() {
           <div className="section-head">
             <div>
               <span className="kicker">Courses</span>
-              <h2 style={{ marginTop: 10 }}>Fully animated, coming one lesson at a time<span className="dot">.</span></h2>
+              <h2 style={{ marginTop: 10 }}>Fully animated, one lesson at a time<span className="dot">.</span></h2>
             </div>
             <Link href="/learn/" className="chip">All courses →</Link>
           </div>
           <div className="grid" style={{ gridTemplateColumns: "repeat(auto-fit, minmax(min(100%, 240px), 1fr))" }}>
             {courses.map((c) => (
-              <Link key={c.id} href={`/learn/#${c.id}`} className="frame" style={{ paddingBottom: 38 }}>
-                <span className="soon">Coming soon</span>
+              <Link key={c.id} href={c.href ?? `/learn/#${c.id}`} className="frame" style={{ paddingBottom: 38 }}>
+                {c.status === "live" ? <span className="chip on">Live · {c.free} free</span> : <span className="soon">Coming soon</span>}
                 <h3 style={{ marginTop: 12 }}>{c.name}</h3>
                 <p className="muted" style={{ marginTop: 6 }}>{c.oneLine}</p>
                 <span className="count" style={{ display: "block", marginTop: 12 }}>{c.lessons.length} lessons</span>
