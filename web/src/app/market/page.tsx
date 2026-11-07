@@ -17,7 +17,7 @@ function Bars({ rows, label, max }: { rows: Row[]; label: (r: Row) => React.Reac
       {rows.map((r, i) => (
         <li key={i} style={{ ["--i" as string]: i }}>
           <span className="mk-label">{label(r)}</span>
-          <span className="mk-track"><span className={`mk-fill${r.inStack ? " mine" : ""}`} style={{ width: `${(r.n / top) * 100}%` }} /></span>
+          <span className="mk-track"><span className={`mk-fill${r.inStack ? " mine" : ""}`} style={{ width: `${Math.min(100, ((max !== undefined && r.share !== undefined ? r.share : r.n) / top) * 100)}%` }} /></span>
           <span className="mono mk-n">{r.share !== undefined ? `${r.share}%` : r.n}</span>
         </li>
       ))}
@@ -123,7 +123,7 @@ export default function Market() {
         .mk-big { display: block; font-size: 2.6rem; font-weight: 800; letter-spacing: -.04em; margin-top: 6px; }
         .mk-totals .frame:first-child .mk-big { color: var(--rust); }
         .mk-bars { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 9px; }
-        .mk-bars li { display: grid; grid-template-columns: minmax(0, 190px) minmax(0, 1fr) 52px; gap: 12px; align-items: center; font-size: .92rem; animation: rise .5s var(--ease) both; animation-delay: calc(var(--i) * 40ms); }
+        .mk-bars li { display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr) 46px; gap: 12px; align-items: center; font-size: .92rem; animation: rise .5s var(--ease) both; animation-delay: calc(var(--i) * 40ms); }
         .mk-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } .mk-label a { text-decoration: none; } .mk-label a:hover { color: var(--rust-deep); }
         .mk-track { height: 10px; border-radius: 6px; background: var(--line); overflow: hidden; }
         .mk-fill { display: block; height: 100%; border-radius: 6px; background: var(--ink); opacity: .8; transform-origin: left; animation: mk-grow .9s var(--ease) both; }

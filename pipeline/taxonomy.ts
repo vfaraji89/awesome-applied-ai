@@ -16,7 +16,7 @@ const ROLES: [string, RegExp][] = [
   ["ai-solutions-architect", /solutions? architect|solutions? engineer|customer engineer|sales engineer|technical consultant|pre[- ]?sales/i],
   ["agentic-ai-engineer", /\bagent(s|ic)?\b/i],
   ["ai-platform-engineer", /platform|infrastructure|infra\b|mlops|llmops|inference|serving|ml engineer|machine learning engineer|ml systems/i],
-  ["rd-researcher", /research|scientist/i],
+  ["rd-researcher", /research|scientist|fellow/i],
   ["ai-native-developer", /ai[- ]native|product engineer|full[- ]?stack|founding engineer|software engineer.*\b(ai|llm)\b|\b(ai|llm)\b.*software engineer/i],
   ["applied-ai-engineer", /applied ai|ai engineer|llm engineer|gen ?ai engineer|generative ai|ai\/ml|ml\/ai|nlp engineer|prompt engineer/i],
 ];
@@ -28,7 +28,7 @@ export function role(title: string): string {
 export function seniority(title: string): string {
   const t = title.toLowerCase();
   if (/intern|internship|working student|werkstudent|apprentice/.test(t)) return "Intern";
-  if (/\b(junior|jr\.?|graduate|entry|associate)\b/.test(t)) return "Junior";
+  if (/\b(junior|jr\.?|graduate|new grad|entry|associate)\b/.test(t)) return "Junior";
   if (/\b(head|director|vp|chief)\b/.test(t)) return "Head";
   if (/\b(principal|distinguished)\b/.test(t)) return "Principal";
   if (/\b(staff)\b/.test(t)) return "Staff";
