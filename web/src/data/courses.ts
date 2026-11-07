@@ -26,11 +26,11 @@ export const courses: Course[] = [
     id: "claude-platform",
     name: "Claude Platform",
     logo: "Claude Agent SDK",
-    oneLine: "How your app talks to Claude, in plain words and short animations. No jargon needed.",
+    oneLine: "How your app talks to Claude, from the first request to the receipt that comes back. Eight short lessons, no jargon.",
     lessons: ["What it is: an order window", "The doors, and which to use", "The label on every request", "Let a helper do the paperwork", "Buy direct, or through your cloud", "Reading a long list, page by page", "Speed limits and spending caps", "The receipt that comes back"],
     status: "live",
     href: "/learn/claude-platform/",
-    ready: 3,
+    ready: 8,
   },
   {
     id: "langchain-deep-agents",
