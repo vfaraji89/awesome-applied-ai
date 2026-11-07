@@ -6,7 +6,7 @@ import { tools } from "@/data/tools";
 import { terms } from "@/data/dictionary";
 import { problems } from "@/data/problems";
 import { layers } from "@/data/layers";
-import { roles } from "@/data/roles";
+import { fRoles } from "@/data/framework";
 import { courses } from "@/data/courses";
 import { stack } from "@/data/stack";
 import { StackRows } from "@/components/stack-rows";
@@ -16,7 +16,7 @@ const START = [
   { href: "/jargon/", t: "Jargon", d: "The words people use in AI, in plain language.", n: `${terms.length} terms` },
   { href: "/architecture/", t: "Architecture", d: "Six layers every AI-native system is built from.", n: `${layers.length} layers` },
   { href: "/tools/", t: "Tools", d: "The 30 tools I use every day, and the wider map.", n: `30 + ${tools.length} tools` },
-  { href: "/roles/", t: "Roles", d: "Applied AI jobs: what each one owns and uses.", n: `${roles.length} roles` },
+  { href: "/roles/", t: "Roles & skills", d: "Titles, tasks, skills, stacks and education for eight AI roles.", n: `${fRoles.length} roles · 12 skills` },
   { href: "/problems/", t: "Problems", d: "What breaks in real projects, and the fix.", n: `${problems.length} problems` },
 ];
 
