@@ -10,88 +10,33 @@ export function generateStaticParams() {
   return problems.map((p) => ({ id: p.id }));
 }
 
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}): Promise<Metadata> {
-  const problem = problemById.get((await params).id);
-  if (!problem) return {};
-  return { title: problem.title, description: problem.asked };
+export async function generateMetadata({ params }: { params: Promise<{ id: string }> }): Promise<Metadata> {
+  const p = problemById.get((await params).id);
+  return p ? { title: p.title, description: p.asked } : {};
 }
 
-export default async function ProblemPage({
-  params,
-}: {
-  params: Promise<{ id: string }>;
-}) {
-  const problem = problemById.get((await params).id);
-  if (!problem) notFound();
-
-  const layer = layers.find((l) => l.id === problem.layer);
-  const index = problems.findIndex((p) => p.id === problem.id);
-  const prev = problems[index - 1];
-  const next = problems[index + 1];
-
+export default async function ProblemPage({ params }: { params: Promise<{ id: string }> }) {
+  const p = problemById.get((await params).id);
+  if (!p) notFound();
+  const layer = layers.find((l) => l.id === p.layer);
+  const i = problems.findIndex((x) => x.id === p.id);
+  const prev = problems[i - 1], next = problems[i + 1];
   return (
-    <div className="mx-auto w-full max-w-4xl px-6 py-12">
-      <Link
-        href="/problems/"
-        className="mono-data text-tag text-ink-faint transition-colors hover:text-accent"
-      >
-        ← Design problems
-      </Link>
-
-      <p className="mono-data mt-5 flex items-baseline gap-3 text-tag text-ink-faint">
-        <span className="tabular-nums">{String(problem.n).padStart(2, "0")}</span>
-        {layer && (
-          <Link
-            href={`/layers/${layer.id}/`}
-            className="underline-offset-4 transition-colors hover:text-accent hover:underline"
-          >
-            {layer.name}
-          </Link>
-        )}
-      </p>
-
-      <h1 className="mt-3 font-serif text-h1 font-semibold leading-tight tracking-tight text-ink">
-        {problem.title}
-      </h1>
-
-      <blockquote className="mt-8 border-l-2 border-accent pl-5 font-serif text-lead leading-relaxed text-ink">
-        {problem.asked}
-      </blockquote>
-
-      <div className="mt-10">
-        <Prose blocks={problemBodies[problem.id]} />
+    <section className="section">
+      <div className="wrap" style={{ maxWidth: 860 }}>
+        <Link href="/problems/" className="count" style={{ textDecoration: "none" }}>← All problems</Link>
+        <div className="kicker" style={{ marginTop: 18 }}>Problem {String(p.n).padStart(2, "0")} · <Link href={`/architecture/#${p.layer}`}>{layer?.name}</Link></div>
+        <h1 style={{ marginTop: 12, fontSize: "clamp(2rem, 5vw, 3.2rem)" }}>{p.title}<span className="dot">.</span></h1>
+        <blockquote className="frame" style={{ margin: "26px 0 34px", fontSize: "1.1rem", background: "var(--paper)" }}>
+          <span className="kicker">The question</span>
+          <p style={{ marginTop: 8 }}>{p.asked}</p>
+        </blockquote>
+        <Prose blocks={problemBodies[p.id] ?? []} />
+        <nav style={{ display: "flex", justifyContent: "space-between", gap: 12, marginTop: 48, flexWrap: "wrap" }}>
+          {prev ? <Link href={`/problems/${prev.id}/`} className="chip">← {prev.title}</Link> : <span />}
+          {next ? <Link href={`/problems/${next.id}/`} className="chip">{next.title} →</Link> : <span />}
+        </nav>
       </div>
-
-      <nav className="mt-16 grid gap-3 border-t border-line pt-6 sm:grid-cols-2">
-        {prev ? (
-          <Link
-            href={`/problems/${prev.id}/`}
-            className="group rounded-lg border border-line bg-panel p-4 transition-colors hover:border-line-bright"
-          >
-            <span className="mono-data text-tag text-ink-faint">← Previous</span>
-            <span className="mt-1 block text-meta text-ink group-hover:text-accent">
-              {prev.title}
-            </span>
-          </Link>
-        ) : (
-          <span />
-        )}
-        {next && (
-          <Link
-            href={`/problems/${next.id}/`}
-            className="group rounded-lg border border-line bg-panel p-4 transition-colors hover:border-line-bright sm:text-right"
-          >
-            <span className="mono-data text-tag text-ink-faint">Next →</span>
-            <span className="mt-1 block text-meta text-ink group-hover:text-accent">
-              {next.title}
-            </span>
-          </Link>
-        )}
-      </nav>
-    </div>
+    </section>
   );
 }

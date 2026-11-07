@@ -1,99 +1,33 @@
 # awesome-applied-ai
 
-A working map of the applied AI stack: six layers, the equations that decide an
-architecture, and an index of what is actually in production.
+**Applied AI, mapped.** Learn how AI systems really work, one animation at a time.
 
-**[vfaraji89.github.io/awesome-applied-ai](https://vfaraji89.github.io/awesome-applied-ai)**
+→ https://vfaraji89.github.io/awesome-applied-ai/
 
-Not a link dump. Every index entry carries a maturity rating and a deployment
-model, most carry a note saying when the thing breaks, and the equations carry
-the assumption that fails in practice rather than only the formula.
-
-## What is in it
-
-| | |
+| Section | What is in it |
 |---|---|
-| 133 | index entries, rated for maturity and deployment |
-| 130 | defined terms |
-| 136 | commands |
-| 20 | design problems, worked end to end |
-| 20 | equations, each with its failure mode |
-| 78 | kit entries |
-| 16 | cycle stages |
-| 6 | layers |
-| 5 | case studies with measured numbers |
+| **Learn** | Animated courses: applied AI from zero, data problems, the stack layer by layer (lessons going live one at a time) |
+| **Jargon** | 121 terms in plain language, as flip cards: the meaning on the front, the deeper answer and the interview question on the back |
+| **Architecture** | The six layers of an AI-native system, one request animated through them, and the agent harness |
+| **Tools** | 133 tools per layer, with licence and production maturity |
+| **Roles** | Six applied AI roles: what each owns, the layers it works on, the tools it reaches for |
+| **Problems** | 20 common problems, asked the way a team would ask them, with worked answers |
+| **Market** | What the applied AI job market asks for: roles, levels, titles, skills and tools, tracked daily |
 
-## The six layers
-
-The spine of the taxonomy. Each answers one question.
-
-| Layer | The question it answers |
-|---|---|
-| **Guardrails & Governance** | What stops this from causing harm, and who signs off? |
-| **Evaluation & Observability** | How do you tell a good trajectory from a lucky answer? |
-| **Orchestration & Protocols** | What runs the loop, and how does it survive a crash? |
-| **Caching & Context Optimization** | What does each token cost, and is it earning its place? |
-| **Memory & State** | What should the system still know tomorrow? |
-| **Retrieval** | Where does the evidence come from, and is it the right evidence? |
-
-## What it is opinionated about
-
-The index records status, not just existence. A tool marked `deprecated` or
-`stalled` stays listed, labelled, because knowing a thing is dead is worth more
-than not finding it. Most MCP server roundups still link to archived
-repositories; the GitHub, GitLab, Postgres, SQLite, Slack, Redis and Drive
-reference servers were moved to an archive and several have first-party
-replacements.
-
-The equations are the part that earns the repo. Three examples:
-
-- Ten million 1536-dimension vectors at m = 16 want roughly 63 GB resident.
-  That figure picks your architecture. Query latency does not.
-- At a 90 percent cache hit rate on a five minute window, input spend falls
-  78.5 percent. Hit rate is a larger lever than the model you chose.
-- Twenty steps at 99 percent each succeed 81.8 percent of the time. At 95
-  percent each, 35.8 percent. No amount of prompting closes that.
-
-Layered guardrails are written up the same way: three filters at 30 percent
-attack success rate each multiply to 2.7 percent on paper, and independence is
-the assumption that fails.
-
-## Layout
-
-```
-system-design.md      the long-form design document
-stack.md              the stack notes
-web/                  Next.js app, deployed to GitHub Pages
-  src/data/           the taxonomy: tools, dictionary, commands, kit,
-                      layers, problems, cycle, shipped
-  src/app/            17 routes
-  scripts/            build-problems.mjs, runs before next build
-```
-
-The data files are plain TypeScript with typed records. `src/lib/types.ts` is
-the schema.
-
-## Running it
+## Run it
 
 ```bash
 cd web
-npm ci
-npm run dev      # regenerates problem data, then next dev
-npm run build    # static export to web/out
+bun install
+bun run dev      # http://localhost:3000
+bun run build    # static export in web/out
 ```
 
-Deploys from `main` on any change under `web/` or to `system-design.md`.
+Problems are written in `system-design.md` and compiled into `web/src/data/` on every build.
+Tools, jargon, roles and courses live in `web/src/data/*.ts`.
 
-## How an entry is judged
+## The market tracker
 
-An index entry needs a maturity rating and a deployment model before it goes
-in. `production-common` means it is boring and widely run; `fragile` means it
-works and will surprise you. A note is expected wherever the summary would
-otherwise read as an endorsement.
+`pipeline/` reads public job boards once a day (company boards on Greenhouse, Lever and Ashby, listed in `pipeline/companies.json`; Remotive; Arbeitnow; Hacker News "Who is hiring?"), keeps the AI roles and reduces each to its role, level, skills and tools. It is not a job board: no posting, link, description or company is stored or shown. `bun pipeline/run.ts --dry` reports without writing.
 
-Corrections are more welcome than additions. If something here is out of date,
-that is the bug.
-
-## Author
-
-Vahid Faraji, Applied AI. [vfaraji89.github.io](https://vfaraji89.github.io)
+Curated by [Vahid Faraji](https://vfaraji89.github.io/).

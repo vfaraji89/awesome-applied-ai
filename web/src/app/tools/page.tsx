@@ -1,40 +1,28 @@
 import type { Metadata } from "next";
-import Link from "next/link";
-import { ToolBrowser } from "@/components/tool-browser";
+import { ToolIndex } from "@/components/tool-index";
+import { tools } from "@/data/tools";
+import { layers } from "@/data/layers";
+import { stack } from "@/data/stack";
+import { StackRows } from "@/components/stack-rows";
 
-export const metadata: Metadata = {
-  title: "Index",
-  description:
-    "The full context engineering index, filterable by layer, topic, license, maturity, deployment and project health.",
-};
+export const metadata: Metadata = { title: "Tools", description: "The main applied AI tools, per layer: licence, maturity and what each one is for." };
 
-export default function ToolsPage() {
+export default function Tools() {
+  const ls = layers.map((l) => ({ id: l.id, name: l.name, categories: l.categories.map((c) => ({ id: c.id, name: c.name })) }));
   return (
-    <div className="mx-auto w-full max-w-6xl px-6 py-12">
-      <p className="label">Inside I · Context engineering</p>
-      <h1 className="mt-5 font-serif text-h1 font-semibold tracking-tight text-ink">
-        The full index
-      </h1>
-      <p className="mt-4 max-w-2xl font-serif text-lead leading-relaxed text-ink-dim">
-        Every entry across the six layers in one place. Narrow by topic, layer,
-        licence model, maturity, deployment or project health — topics stack, so
-        picking two shows only the entries carrying both. Maturity and status are
-        my readings of the evidence; every row links to the source.
-      </p>
-      <p className="mt-4 max-w-2xl text-meta leading-relaxed text-ink-dim">
-        Everything here is a library you import. For the binaries, apps, MCP
-        servers and corpora that sit around the work, see{" "}
-        <Link
-          href="/kit/"
-          className="text-ink underline decoration-line underline-offset-4 transition-colors hover:text-accent hover:decoration-accent"
-        >
-          the kit
-        </Link>
-        .
-      </p>
-      <div className="mt-10">
-        <ToolBrowser />
+    <section className="section">
+      <div className="wrap">
+        <span className="kicker">Tools</span>
+        <h1 style={{ marginTop: 12 }}>The stack I use, every day<span className="dot">.</span></h1>
+        <p className="lead" style={{ marginTop: 16 }}>Thirty tools in three groups: applied AI, data and retrieval, product engineering. Tap a bead to see what it is and where I use it.</p>
+        <div style={{ marginTop: 30 }}><StackRows groups={stack} /></div>
+        <div id="map" style={{ marginTop: 72 }}>
+          <span className="kicker">The wider map</span>
+          <h2 style={{ marginTop: 10 }}>{tools.length} tools, per layer<span className="dot">.</span></h2>
+          <p className="lead" style={{ marginTop: 12 }}>Beyond my own stack: the main tools in each of the six layers, with licence and how proven each is in production.</p>
+          <div style={{ marginTop: 20 }}><ToolIndex tools={tools} layers={ls} /></div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 }
