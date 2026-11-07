@@ -1,45 +1,53 @@
-/** Animated courses. The outlines are set; lessons are being animated one at a time. */
+/** The course catalogue: four tools, each taught in short animated lessons, in plain language.
+ *  `logo` is a tool name from stack.ts; the cover shows its logo on a white bead. */
 export interface Course {
   id: string;
   name: string;
+  logo: string;
   oneLine: string;
   lessons: string[];
   status: "soon" | "live";
-  /** Where the course lives, once it is live. */
   href?: string;
-  /** How many lessons, from the start, are free. The rest are locked for the paid course. */
-  free?: number;
+  /** How many lessons, from the start, are written and ready. Every lesson is free. */
+  ready: number;
 }
 
 export const courses: Course[] = [
   {
-    id: "claude-api",
-    name: "The Claude API, animated",
+    id: "claude-code",
+    name: "Claude Code",
+    logo: "Claude Code",
+    oneLine: "A coding partner that works in your terminal: what it does, and how to work with it well.",
+    lessons: ["What it is: a pair programmer in your terminal", "Your first task, start to finish", "CLAUDE.md: the house rules", "Plan first, then build", "Skills and slash commands", "Hooks: checks that run by themselves", "Subagents: helpers for side jobs", "Connecting your tools with MCP"],
+    status: "soon",
+    ready: 0,
+  },
+  {
+    id: "claude-platform",
+    name: "Claude Platform",
+    logo: "Claude Agent SDK",
     oneLine: "How your app talks to Claude, in plain words and short animations. No jargon needed.",
     lessons: ["What it is: an order window", "The doors, and which to use", "The label on every request", "Let a helper do the paperwork", "Buy direct, or through your cloud", "Reading a long list, page by page", "Speed limits and spending caps", "The receipt that comes back"],
     status: "live",
-    href: "/learn/claude-api/",
-    free: 3,
+    href: "/learn/claude-platform/",
+    ready: 3,
   },
   {
-    id: "applied-ai",
-    name: "Applied AI, from zero",
-    oneLine: "What a model reads, what it costs, and how it becomes a product.",
-    lessons: ["What a token is, and what it costs", "The context window is a budget", "Retrieval before generation", "Agents: the loop, the tools, the memory", "Evals from real tasks"],
+    id: "langchain-deep-agents",
+    name: "LangChain & Deep Agents",
+    logo: "Deep Agents",
+    oneLine: "Building blocks for AI apps, and agents that plan, delegate and keep notes.",
+    lessons: ["What LangChain is: a box of building blocks", "Models, prompts and tools", "LangGraph: a flowchart that remembers", "Deep Agents: plan, delegate, write things down", "Helpers and a shared notebook", "Watching it work, step by step"],
     status: "soon",
+    ready: 0,
   },
   {
-    id: "data-problems",
-    name: "Data problems, solved",
-    oneLine: "Messy data in, decisions out: the problems every AI project meets.",
-    lessons: ["One job, many names: normalising messy text", "When filters kill recall", "Fresh data without re-embedding everything", "People data and salaries, done carefully", "Measure, then decide"],
+    id: "vercel-ai-sdk",
+    name: "Vercel AI SDK",
+    logo: "Vercel AI SDK",
+    oneLine: "Add AI to a web app in TypeScript: one way to call any model, with answers that stream in.",
+    lessons: ["What the AI SDK is", "One call, any model", "Answers that appear as they are written", "Tools: letting the model take a step", "Answers in a fixed shape", "A chat screen in minutes", "Agents with the SDK"],
     status: "soon",
-  },
-  {
-    id: "the-stack",
-    name: "The stack, layer by layer",
-    oneLine: "Six layers, one request, animated from the guardrail down to the vector index.",
-    lessons: ["Guardrails and governance", "Evaluation and observability", "Orchestration and protocols", "Caching and context", "Memory and state", "Retrieval"],
-    status: "soon",
+    ready: 0,
   },
 ];

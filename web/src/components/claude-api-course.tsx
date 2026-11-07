@@ -1,19 +1,19 @@
 "use client";
 import { useEffect, useState } from "react";
 
-/* The Claude API, animated. Lessons 1-3 are free and their content ships here.
-   Locked lessons ship only a title and a teaser: their content is not in this build. */
+/* The Claude Platform course, animated. Every lesson is free.
+   Lessons that are written ship here; the rest show their title and a short preview until they are ready. */
 
-type Lesson = { title: string; free: boolean; teaser: string };
+type Lesson = { title: string; ready: boolean; teaser: string };
 const LESSONS: Lesson[] = [
-  { title: "What it is: an order window", free: true, teaser: "Your app asks, Claude answers." },
-  { title: "The doors, and which to use", free: true, teaser: "Six doors open today, three still being built." },
-  { title: "The label on every request", free: true, teaser: "Four lines that say who you are and what you sent." },
-  { title: "Let a helper do the paperwork", free: false, teaser: "Ready-made code libraries that fill in the label, retry when something fails, and stream answers as they are written." },
-  { title: "Buy direct, or through your cloud", free: false, teaser: "Use Claude straight from Anthropic, or through Amazon, Google or Microsoft: what changes, and how to choose." },
-  { title: "Reading a long list, page by page", free: false, teaser: "How to get through a long list of results without loading it all at once." },
-  { title: "Speed limits and spending caps", free: false, teaser: "How much you can ask per minute, how much you can spend per month, and how to raise both." },
-  { title: "The receipt that comes back", free: false, teaser: "The numbers on every answer, and which one to send when you ask for help." },
+  { title: "What it is: an order window", ready: true, teaser: "Your app asks, Claude answers." },
+  { title: "The doors, and which to use", ready: true, teaser: "Six doors open today, three still being built." },
+  { title: "The label on every request", ready: true, teaser: "Four lines that say who you are and what you sent." },
+  { title: "Let a helper do the paperwork", ready: false, teaser: "Ready-made code libraries that fill in the label, retry when something fails, and stream answers as they are written." },
+  { title: "Buy direct, or through your cloud", ready: false, teaser: "Use Claude straight from Anthropic, or through Amazon, Google or Microsoft: what changes, and how to choose." },
+  { title: "Reading a long list, page by page", ready: false, teaser: "How to get through a long list of results without loading it all at once." },
+  { title: "Speed limits and spending caps", ready: false, teaser: "How much you can ask per minute, how much you can spend per month, and how to raise both." },
+  { title: "The receipt that comes back", ready: false, teaser: "The numbers on every answer, and which one to send when you ask for help." },
 ];
 
 function useTicker(steps: number, ms: number, key: number) {
@@ -113,10 +113,6 @@ const BODY: Record<number, { h: string; analogy: string; p: string[]; hint: stri
     hint: "You rarely write the label yourself. Anthropic's ready-made code libraries fill it in for you, except the team line, which you add when you need it." },
 };
 
-const Lock = () => (
-  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2.5" stroke="currentColor" strokeWidth="2" /><path d="M8 11V8a4 4 0 0 1 8 0v3" stroke="currentColor" strokeWidth="2" /></svg>
-);
-
 export function ClaudeApiCourse() {
   const [i, setI] = useState(0);
   useEffect(() => {
@@ -126,24 +122,24 @@ export function ClaudeApiCourse() {
   const go = (n: number) => { setI(n); history.replaceState(null, "", `#lesson-${n + 1}`); };
   const l = LESSONS[i];
   const b = BODY[i];
-  const freeCount = LESSONS.filter((x) => x.free).length;
+  const readyCount = LESSONS.filter((x) => x.ready).length;
   return (
     <div className="cc">
       <nav className="cc-list" aria-label="Lessons">
         {LESSONS.map((x, k) => (
-          <button key={x.title} type="button" className={`cc-item${k === i ? " on" : ""}${x.free ? "" : " locked"}`} onClick={() => go(k)} aria-current={k === i ? "step" : undefined}>
-            <span className={`bead${x.free ? (k <= i ? "" : " white") : " white"}`} />
+          <button key={x.title} type="button" className={`cc-item${k === i ? " on" : ""}${x.ready ? "" : " later"}`} onClick={() => go(k)} aria-current={k === i ? "step" : undefined}>
+            <span className={`bead${x.ready && k <= i ? "" : " white"}`} />
             <span className="mono count">{String(k + 1).padStart(2, "0")}</span>
             <span className="cc-t">{x.title}</span>
-            {!x.free && <span className="cc-lock"><Lock /></span>}
+            {!x.ready && <span className="cc-soon">soon</span>}
           </button>
         ))}
-        <p className="count" style={{ margin: "14px 0 0" }}>{freeCount} free · {LESSONS.length - freeCount} in the paid course</p>
+        <p className="count" style={{ margin: "14px 0 0" }}>All free · {readyCount} ready, {LESSONS.length - readyCount} on the way</p>
       </nav>
 
       <article key={i} className="cc-panel frame">
         <span className="kicker">Lesson {String(i + 1).padStart(2, "0")} · {l.title}</span>
-        {l.free && b ? (
+        {l.ready && b ? (
           <>
             <h2 style={{ marginTop: 10 }}>{b.h}<span className="dot">.</span></h2>
             <div className="cc-box analogy"><span className="cc-ico" aria-hidden="true">≈</span><div><span className="kicker">Think of it like this</span><p>{b.analogy}</p></div></div>
@@ -152,11 +148,10 @@ export function ClaudeApiCourse() {
             <div className="cc-box hint"><span className="cc-ico" aria-hidden="true">✦</span><div><span className="kicker">Useful hint</span><p>{b.hint}</p></div></div>
           </>
         ) : (
-          <div className="cc-locked">
-            <span className="cc-bigLock"><Lock /></span>
+          <div className="cc-later">
             <h2>{l.title}<span className="dot">.</span></h2>
             <p className="lead">{l.teaser}</p>
-            <span className="soon">Paid course · coming soon</span>
+            <span className="soon">Free lesson · coming soon</span>
           </div>
         )}
         <div className="cc-nav">
@@ -172,9 +167,9 @@ export function ClaudeApiCourse() {
         .cc-item { all: unset; cursor: pointer; display: grid; grid-template-columns: 14px 24px minmax(0, 1fr) auto; gap: 10px; align-items: center; padding: 10px 12px; border-radius: 12px; font-size: .95rem; color: var(--sec); }
         .cc-item:hover { background: var(--paper); color: var(--ink); }
         .cc-item.on { background: var(--paper); color: var(--ink); box-shadow: inset 3px 0 0 var(--rust); }
-        .cc-item.locked .cc-t { color: var(--muted); }
+        .cc-item.later .cc-t { color: var(--muted); }
         .cc-item:focus-visible { outline: 2px solid var(--rust); }
-        .cc-lock { color: var(--muted); }
+        .cc-soon { margin-left: auto; font-family: var(--font-mono), monospace; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
         .cc-panel { min-height: 520px; animation: rise .5s var(--ease) both; display: flex; flex-direction: column; }
         .cc-anim { margin: 26px 0; padding: 26px; border-radius: 14px; background: var(--paper); min-height: 220px; display: flex; align-items: center; }
         .cc-anim > * { width: 100%; }
@@ -187,9 +182,7 @@ export function ClaudeApiCourse() {
         .cc-box.analogy .cc-ico { background: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); }
         .cc-nav { display: flex; justify-content: space-between; margin-top: auto; padding-top: 28px; }
         .cc-nav .chip { cursor: pointer; font: inherit; font-size: .85rem; } .cc-nav .chip:disabled { opacity: .35; cursor: default; }
-        .cc-locked { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin: 40px 0; }
-        .cc-bigLock { width: 64px; height: 64px; border-radius: 18px; display: grid; place-items: center; background: var(--paper); color: var(--rust-deep); }
-        .cc-bigLock svg { width: 28px; height: 28px; }
+        .cc-later { display: flex; flex-direction: column; align-items: flex-start; gap: 14px; margin: 40px 0; }
 
         .rt { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 14px; align-items: center; }
         .rt-node { display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); transition: all .4s var(--ease); }
