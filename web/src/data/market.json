@@ -1,10 +1,10 @@
 {
- "generatedAt": "2026-11-07T08:56:10.857Z",
+ "generatedAt": "2026-11-08T05:22:50.036Z",
  "totals": {
-  "allTime": 858,
-  "openNow": 858,
-  "newToday": 0,
-  "remoteShare": 29
+  "allTime": 911,
+  "openNow": 885,
+  "newToday": 53,
+  "remoteShare": 28
  },
  "sources": [
   {
@@ -35,42 +35,42 @@
   {
    "id": "arbeitnow",
    "boards": 1,
-   "ai": 74
+   "ai": 101
   }
  ],
  "failed": 0,
  "roles": [
   {
    "id": "forward-deployed-engineer",
-   "n": 250
+   "n": 253
   },
   {
    "id": "rd-researcher",
-   "n": 146
-  },
-  {
-   "id": "ai-platform-engineer",
-   "n": 93
+   "n": 149
   },
   {
    "id": "applied-ai-engineer",
-   "n": 87
+   "n": 97
+  },
+  {
+   "id": "ai-platform-engineer",
+   "n": 96
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 84
+   "n": 93
   },
   {
    "id": "ai-native-architect",
-   "n": 69
+   "n": 68
   },
   {
    "id": "other-ai",
-   "n": 53
+   "n": 51
   },
   {
    "id": "ai-native-developer",
-   "n": 47
+   "n": 49
   },
   {
    "id": "ai-solutions-architect",
@@ -80,7 +80,7 @@
  "seniority": [
   {
    "id": "Mid",
-   "n": 453
+   "n": 474
   },
   {
    "id": "Senior",
@@ -88,11 +88,11 @@
   },
   {
    "id": "Staff",
-   "n": 98
+   "n": 101
   },
   {
    "id": "Lead",
-   "n": 87
+   "n": 89
   },
   {
    "id": "Intern",
@@ -100,7 +100,7 @@
   },
   {
    "id": "Junior",
-   "n": 21
+   "n": 22
   },
   {
    "id": "Principal",
@@ -118,11 +118,15 @@
   },
   {
    "title": "Forward Deployed Engineer",
-   "n": 35
+   "n": 37
   },
   {
    "title": "Forward Deployed Software Engineer",
    "n": 25
+  },
+  {
+   "title": "Applied AI Engineer",
+   "n": 15
   },
   {
    "title": "Member of Technical Staff",
@@ -133,16 +137,16 @@
    "n": 13
   },
   {
+   "title": "AI Engineer",
+   "n": 11
+  },
+  {
    "title": "Forward Deployed Software Engineer, Internship",
    "n": 11
   },
   {
    "title": "Applied AI Engineer, Startups",
    "n": 10
-  },
-  {
-   "title": "Senior Forward Deployed Engineer",
-   "n": 9
   },
   {
    "title": "Forward Deployed Software Engineer, New Grad",
@@ -153,12 +157,16 @@
    "n": 9
   },
   {
-   "title": "Applied AI Engineer",
+   "title": "Senior Forward Deployed Engineer",
    "n": 8
   },
   {
    "title": "Senior AI Data & Analytics Engineer II",
    "n": 8
+  },
+  {
+   "title": "Data Scientist",
+   "n": 7
   },
   {
    "title": "Manager, Forward Deployed Engineering",
@@ -177,10 +185,6 @@
    "n": 6
   },
   {
-   "title": "AI Engineer",
-   "n": 6
-  },
-  {
    "title": "AI Forward Deployed Engineer",
    "n": 6
   },
@@ -189,11 +193,19 @@
    "n": 6
   },
   {
-   "title": "Lead Solutions Architect, Generative AI",
+   "title": "AI Research Engineer",
    "n": 5
   },
   {
-   "title": "Data Scientist",
+   "title": "Research Engineer",
+   "n": 5
+  },
+  {
+   "title": "Machine Learning Engineer",
+   "n": 5
+  },
+  {
+   "title": "Lead Solutions Architect, Generative AI",
    "n": 5
   },
   {
@@ -209,116 +221,104 @@
    "n": 5
   },
   {
+   "title": "Senior AI Engineer",
+   "n": 4
+  },
+  {
    "title": "Applied AI Architect, Industries",
    "n": 4
   },
   {
    "title": "Applied AI Architect, Public Sector",
    "n": 4
-  },
-  {
-   "title": "Manager, Applied AI Architect",
-   "n": 4
-  },
-  {
-   "title": "Research Engineer, Machine Learning",
-   "n": 4
-  },
-  {
-   "title": "Staff Forward Deployed Engineer",
-   "n": 4
-  },
-  {
-   "title": "Specialist Solutions Architect, AI/ML",
-   "n": 4
   }
  ],
  "skills": [
   {
    "id": "software",
-   "n": 640,
+   "n": 663,
    "share": 75
   },
   {
    "id": "customer",
-   "n": 571,
-   "share": 67
+   "n": 575,
+   "share": 65
   },
   {
    "id": "agents",
-   "n": 544,
-   "share": 63
+   "n": 574,
+   "share": 65
   },
   {
    "id": "evals",
-   "n": 399,
-   "share": 47
+   "n": 422,
+   "share": 48
   },
   {
    "id": "product",
    "n": 394,
-   "share": 46
+   "share": 45
   },
   {
    "id": "models",
-   "n": 282,
+   "n": 292,
    "share": 33
   },
   {
    "id": "security",
-   "n": 242,
-   "share": 28
+   "n": 260,
+   "share": 29
+  },
+  {
+   "id": "architecture",
+   "n": 233,
+   "share": 26
   },
   {
    "id": "retrieval",
-   "n": 228,
-   "share": 27
-  },
-  {
-   "id": "data",
    "n": 227,
    "share": 26
   },
   {
-   "id": "architecture",
-   "n": 222,
-   "share": 26
+   "id": "data",
+   "n": 225,
+   "share": 25
   },
   {
    "id": "context",
-   "n": 169,
+   "n": 176,
    "share": 20
   },
   {
    "id": "ai-dev",
-   "n": 155,
+   "n": 163,
    "share": 18
   }
  ],
  "tools": [
   {
    "name": "Python",
-   "n": 547,
+   "n": 565,
    "inStack": true
   },
   {
    "name": "TypeScript",
-   "n": 235,
+   "n": 246,
    "inStack": true
   },
   {
    "name": "Google Cloud",
-   "n": 179,
+   "n": 180,
    "inStack": true
   },
   {
    "name": "RAG",
-   "n": 95,
+   "n": 92,
    "inStack": true
   },
   {
    "name": "SQL",
-   "n": 89,
+   "n": 86,
    "inStack": true
   },
   {
@@ -328,12 +328,12 @@
   },
   {
    "name": "LangChain",
-   "n": 58,
+   "n": 56,
    "inStack": true
   },
   {
    "name": "Claude Code",
-   "n": 44,
+   "n": 45,
    "inStack": true
   },
   {
@@ -343,7 +343,7 @@
   },
   {
    "name": "Hugging Face",
-   "n": 26,
+   "n": 28,
    "inStack": true
   },
   {
@@ -358,7 +358,12 @@
   },
   {
    "name": "BigQuery",
-   "n": 18,
+   "n": 17,
+   "inStack": true
+  },
+  {
+   "name": "ElevenLabs",
+   "n": 15,
    "inStack": true
   },
   {
@@ -383,11 +388,6 @@
   },
   {
    "name": "Vertex AI",
-   "n": 11,
-   "inStack": true
-  },
-  {
-   "name": "ElevenLabs",
    "n": 10,
    "inStack": true
   },
@@ -427,8 +427,8 @@
    "inStack": true
   },
   {
-   "name": "Copilot Studio",
-   "n": 5,
+   "name": "Langfuse",
+   "n": 4,
    "inStack": true
   },
   {
@@ -442,7 +442,7 @@
    "inStack": false
   },
   {
-   "name": "Langfuse",
+   "name": "Copilot Studio",
    "n": 4,
    "inStack": true
   },
@@ -477,13 +477,8 @@
    "inStack": false
   },
   {
-   "name": "Power Automate",
-   "n": 2,
-   "inStack": true
-  },
-  {
-   "name": "Mastra",
-   "n": 2,
+   "name": "Vespa",
+   "n": 1,
    "inStack": false
   },
   {
@@ -495,12 +490,17 @@
    "name": "OpenSearch",
    "n": 1,
    "inStack": false
+  },
+  {
+   "name": "Semantic Kernel",
+   "n": 1,
+   "inStack": false
   }
  ],
  "byMonth": [
   {
    "month": "2026-11",
-   "n": 858
+   "n": 911
   }
  ]
 }
