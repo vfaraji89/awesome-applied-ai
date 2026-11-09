@@ -1,21 +1,21 @@
 {
- "generatedAt": "2026-11-08T05:22:50.036Z",
+ "generatedAt": "2026-11-09T05:24:06.963Z",
  "totals": {
-  "allTime": 911,
-  "openNow": 885,
-  "newToday": 53,
+  "allTime": 933,
+  "openNow": 884,
+  "newToday": 22,
   "remoteShare": 28
  },
  "sources": [
   {
    "id": "greenhouse",
    "boards": 10,
-   "ai": 405
+   "ai": 404
   },
   {
    "id": "ashby",
    "boards": 8,
-   "ai": 251
+   "ai": 252
   },
   {
    "id": "lever",
@@ -28,32 +28,28 @@
    "ai": 3
   },
   {
-   "id": "hackernews",
-   "boards": 1,
-   "ai": 37
-  },
-  {
    "id": "arbeitnow",
    "boards": 1,
-   "ai": 101
+   "ai": 99
+  },
+  {
+   "id": "hackernews",
+   "boards": 1,
+   "ai": 38
   }
  ],
  "failed": 0,
  "roles": [
   {
    "id": "forward-deployed-engineer",
-   "n": 253
+   "n": 255
   },
   {
    "id": "rd-researcher",
-   "n": 149
+   "n": 147
   },
   {
    "id": "applied-ai-engineer",
-   "n": 97
-  },
-  {
-   "id": "ai-platform-engineer",
    "n": 96
   },
   {
@@ -61,12 +57,16 @@
    "n": 93
   },
   {
+   "id": "ai-platform-engineer",
+   "n": 92
+  },
+  {
    "id": "ai-native-architect",
-   "n": 68
+   "n": 69
   },
   {
    "id": "other-ai",
-   "n": 51
+   "n": 53
   },
   {
    "id": "ai-native-developer",
@@ -74,33 +74,33 @@
   },
   {
    "id": "ai-solutions-architect",
-   "n": 29
+   "n": 30
   }
  ],
  "seniority": [
   {
    "id": "Mid",
-   "n": 474
+   "n": 476
   },
   {
    "id": "Senior",
-   "n": 152
+   "n": 149
   },
   {
    "id": "Staff",
-   "n": 101
+   "n": 102
   },
   {
    "id": "Lead",
-   "n": 89
+   "n": 90
   },
   {
    "id": "Intern",
-   "n": 33
+   "n": 32
   },
   {
    "id": "Junior",
-   "n": 22
+   "n": 21
   },
   {
    "id": "Principal",
@@ -114,7 +114,7 @@
  "titles": [
   {
    "title": "Sr. Forward Deployed Engineer",
-   "n": 49
+   "n": 48
   },
   {
    "title": "Forward Deployed Engineer",
@@ -125,28 +125,32 @@
    "n": 25
   },
   {
-   "title": "Applied AI Engineer",
-   "n": 15
-  },
-  {
    "title": "Member of Technical Staff",
    "n": 14
+  },
+  {
+   "title": "Applied AI Engineer",
+   "n": 13
   },
   {
    "title": "Applied AI Architect",
    "n": 13
   },
   {
-   "title": "AI Engineer",
-   "n": 11
-  },
-  {
    "title": "Forward Deployed Software Engineer, Internship",
    "n": 11
   },
   {
+   "title": "AI Engineer",
+   "n": 10
+  },
+  {
    "title": "Applied AI Engineer, Startups",
    "n": 10
+  },
+  {
+   "title": "Senior Forward Deployed Engineer",
+   "n": 9
   },
   {
    "title": "Forward Deployed Software Engineer, New Grad",
@@ -157,7 +161,7 @@
    "n": 9
   },
   {
-   "title": "Senior Forward Deployed Engineer",
+   "title": "Manager, Forward Deployed Engineering",
    "n": 8
   },
   {
@@ -166,10 +170,6 @@
   },
   {
    "title": "Data Scientist",
-   "n": 7
-  },
-  {
-   "title": "Manager, Forward Deployed Engineering",
    "n": 7
   },
   {
@@ -193,15 +193,7 @@
    "n": 6
   },
   {
-   "title": "AI Research Engineer",
-   "n": 5
-  },
-  {
    "title": "Research Engineer",
-   "n": 5
-  },
-  {
-   "title": "Machine Learning Engineer",
    "n": 5
   },
   {
@@ -221,7 +213,11 @@
    "n": 5
   },
   {
-   "title": "Senior AI Engineer",
+   "title": "AI Research Engineer",
+   "n": 4
+  },
+  {
+   "title": "Machine Learning Engineer",
    "n": 4
   },
   {
@@ -231,37 +227,41 @@
   {
    "title": "Applied AI Architect, Public Sector",
    "n": 4
+  },
+  {
+   "title": "Manager, Applied AI Architect",
+   "n": 4
   }
  ],
  "skills": [
   {
    "id": "software",
-   "n": 663,
+   "n": 660,
    "share": 75
   },
   {
    "id": "customer",
-   "n": 575,
-   "share": 65
+   "n": 580,
+   "share": 66
   },
   {
    "id": "agents",
-   "n": 574,
+   "n": 572,
    "share": 65
   },
   {
    "id": "evals",
-   "n": 422,
+   "n": 424,
    "share": 48
   },
   {
    "id": "product",
-   "n": 394,
-   "share": 45
+   "n": 392,
+   "share": 44
   },
   {
    "id": "models",
-   "n": 292,
+   "n": 294,
    "share": 33
   },
   {
@@ -270,70 +270,70 @@
    "share": 29
   },
   {
-   "id": "architecture",
-   "n": 233,
+   "id": "retrieval",
+   "n": 230,
    "share": 26
   },
   {
-   "id": "retrieval",
-   "n": 227,
+   "id": "architecture",
+   "n": 228,
    "share": 26
   },
   {
    "id": "data",
-   "n": 225,
+   "n": 222,
    "share": 25
   },
   {
    "id": "context",
-   "n": 176,
+   "n": 178,
    "share": 20
   },
   {
    "id": "ai-dev",
-   "n": 163,
-   "share": 18
+   "n": 170,
+   "share": 19
   }
  ],
  "tools": [
   {
    "name": "Python",
-   "n": 565,
+   "n": 563,
    "inStack": true
   },
   {
    "name": "TypeScript",
-   "n": 246,
+   "n": 247,
    "inStack": true
   },
   {
    "name": "Google Cloud",
-   "n": 180,
+   "n": 183,
    "inStack": true
   },
   {
    "name": "RAG",
-   "n": 92,
+   "n": 93,
    "inStack": true
   },
   {
    "name": "SQL",
-   "n": 86,
+   "n": 85,
    "inStack": true
   },
   {
    "name": "MCP",
-   "n": 72,
+   "n": 73,
    "inStack": true
   },
   {
    "name": "LangChain",
-   "n": 56,
+   "n": 57,
    "inStack": true
   },
   {
    "name": "Claude Code",
-   "n": 45,
+   "n": 50,
    "inStack": true
   },
   {
@@ -343,7 +343,7 @@
   },
   {
    "name": "Hugging Face",
-   "n": 28,
+   "n": 30,
    "inStack": true
   },
   {
@@ -358,7 +358,7 @@
   },
   {
    "name": "BigQuery",
-   "n": 17,
+   "n": 18,
    "inStack": true
   },
   {
@@ -382,13 +382,13 @@
    "inStack": true
   },
   {
-   "name": "Claude Agent SDK",
+   "name": "Vertex AI",
    "n": 11,
    "inStack": true
   },
   {
-   "name": "Vertex AI",
-   "n": 10,
+   "name": "Claude Agent SDK",
+   "n": 11,
    "inStack": true
   },
   {
@@ -402,13 +402,13 @@
    "inStack": true
   },
   {
-   "name": "LlamaIndex",
+   "name": "EU AI Act",
    "n": 7,
    "inStack": false
   },
   {
-   "name": "EU AI Act",
-   "n": 6,
+   "name": "LlamaIndex",
+   "n": 7,
    "inStack": false
   },
   {
@@ -422,13 +422,13 @@
    "inStack": true
   },
   {
-   "name": "Microsoft Agents SDK",
+   "name": "Langfuse",
    "n": 5,
    "inStack": true
   },
   {
-   "name": "Langfuse",
-   "n": 4,
+   "name": "Microsoft Agents SDK",
+   "n": 5,
    "inStack": true
   },
   {
@@ -447,6 +447,11 @@
    "inStack": true
   },
   {
+   "name": "pgvector",
+   "n": 3,
+   "inStack": false
+  },
+  {
    "name": "MLflow Tracing",
    "n": 3,
    "inStack": false
@@ -462,6 +467,16 @@
    "inStack": false
   },
   {
+   "name": "Vapi",
+   "n": 2,
+   "inStack": true
+  },
+  {
+   "name": "Pinecone",
+   "n": 2,
+   "inStack": false
+  },
+  {
    "name": "Text-to-SQL",
    "n": 2,
    "inStack": true
@@ -472,27 +487,12 @@
    "inStack": false
   },
   {
-   "name": "pgvector",
-   "n": 2,
-   "inStack": false
-  },
-  {
-   "name": "Vespa",
+   "name": "NeMo Guardrails",
    "n": 1,
    "inStack": false
   },
   {
-   "name": "FAISS",
-   "n": 1,
-   "inStack": false
-  },
-  {
-   "name": "OpenSearch",
-   "n": 1,
-   "inStack": false
-  },
-  {
-   "name": "Semantic Kernel",
+   "name": "Weaviate",
    "n": 1,
    "inStack": false
   }
@@ -500,7 +500,7 @@
  "byMonth": [
   {
    "month": "2026-11",
-   "n": 911
+   "n": 933
   }
  ]
 }
