@@ -1,21 +1,21 @@
 {
- "generatedAt": "2026-11-10T05:22:59.859Z",
+ "generatedAt": "2026-11-10T11:09:53.391Z",
  "totals": {
-  "allTime": 967,
-  "openNow": 876,
-  "newToday": 34,
-  "remoteShare": 29
+  "allTime": 976,
+  "openNow": 885,
+  "newToday": 9,
+  "remoteShare": 28
  },
  "sources": [
   {
    "id": "greenhouse",
    "boards": 10,
-   "ai": 404
+   "ai": 403
   },
   {
    "id": "ashby",
    "boards": 8,
-   "ai": 251
+   "ai": 253
   },
   {
    "id": "lever",
@@ -35,14 +35,14 @@
   {
    "id": "arbeitnow",
    "boards": 1,
-   "ai": 90
+   "ai": 88
   }
  ],
  "failed": 0,
  "roles": [
   {
    "id": "forward-deployed-engineer",
-   "n": 253
+   "n": 256
   },
   {
    "id": "rd-researcher",
@@ -50,11 +50,11 @@
   },
   {
    "id": "applied-ai-engineer",
-   "n": 96
+   "n": 98
   },
   {
    "id": "ai-platform-engineer",
-   "n": 93
+   "n": 95
   },
   {
    "id": "agentic-ai-engineer",
@@ -70,7 +70,7 @@
   },
   {
    "id": "other-ai",
-   "n": 47
+   "n": 49
   },
   {
    "id": "ai-solutions-architect",
@@ -80,11 +80,11 @@
  "seniority": [
   {
    "id": "Mid",
-   "n": 465
+   "n": 470
   },
   {
    "id": "Senior",
-   "n": 154
+   "n": 156
   },
   {
    "id": "Staff",
@@ -92,7 +92,7 @@
   },
   {
    "id": "Lead",
-   "n": 89
+   "n": 91
   },
   {
    "id": "Intern",
@@ -118,7 +118,7 @@
   },
   {
    "title": "Forward Deployed Engineer",
-   "n": 37
+   "n": 39
   },
   {
    "title": "Forward Deployed Software Engineer",
@@ -236,32 +236,32 @@
  "skills": [
   {
    "id": "software",
-   "n": 648,
+   "n": 654,
    "share": 74
   },
   {
    "id": "customer",
-   "n": 571,
+   "n": 578,
    "share": 65
   },
   {
    "id": "agents",
-   "n": 565,
+   "n": 568,
    "share": 64
   },
   {
    "id": "evals",
-   "n": 411,
+   "n": 414,
    "share": 47
   },
   {
    "id": "product",
-   "n": 390,
+   "n": 395,
    "share": 45
   },
   {
    "id": "models",
-   "n": 289,
+   "n": 292,
    "share": 33
   },
   {
@@ -271,22 +271,22 @@
   },
   {
    "id": "retrieval",
-   "n": 234,
+   "n": 235,
    "share": 27
   },
   {
    "id": "architecture",
-   "n": 227,
+   "n": 228,
    "share": 26
   },
   {
    "id": "data",
-   "n": 218,
+   "n": 220,
    "share": 25
   },
   {
    "id": "context",
-   "n": 173,
+   "n": 175,
    "share": 20
   },
   {
@@ -298,17 +298,17 @@
  "tools": [
   {
    "name": "Python",
-   "n": 556,
+   "n": 561,
    "inStack": true
   },
   {
    "name": "TypeScript",
-   "n": 246,
+   "n": 247,
    "inStack": true
   },
   {
    "name": "Google Cloud",
-   "n": 184,
+   "n": 185,
    "inStack": true
   },
   {
@@ -318,7 +318,7 @@
   },
   {
    "name": "SQL",
-   "n": 80,
+   "n": 81,
    "inStack": true
   },
   {
@@ -343,7 +343,7 @@
   },
   {
    "name": "Hugging Face",
-   "n": 30,
+   "n": 31,
    "inStack": true
   },
   {
@@ -500,7 +500,7 @@
  "byMonth": [
   {
    "month": "2026-11",
-   "n": 967
+   "n": 976
   }
  ]
 }
