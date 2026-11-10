@@ -15,6 +15,13 @@ type Job = { role: string; seniority: string; remote: boolean; skills: string[];
 function load(): Job[] {
   try { return JSON.parse(fs.readFileSync(path.join(process.cwd(), "..", "market", "jobs.json"), "utf8")) as Job[]; } catch { return []; }
 }
+type Week = { week: string; from: string; to: string; open: number; new: number; remoteShare: number };
+function weeks(): Week[] {
+  try {
+    const dir = path.join(process.cwd(), "..", "market", "weekly");
+    return fs.readdirSync(dir).filter((f) => f.endsWith(".json")).sort().map((f) => JSON.parse(fs.readFileSync(path.join(dir, f), "utf8")) as Week);
+  } catch { return []; }
+}
 const top = (xs: string[], n: number) => {
   const m = new Map<string, number>();
   for (const x of xs) m.set(x, (m.get(x) ?? 0) + 1);
@@ -24,6 +31,7 @@ const fmt = (d: string) => new Date(d + "T00:00:00Z").toLocaleDateString("en-GB"
 
 export default function Note() {
   const jobs = load();
+  const hist = weeks();
   const days = [...new Set(jobs.map((j) => j.firstSeen))].sort();
   const first = days[0], last = jobs.map((j) => j.lastSeen).sort().at(-1) ?? days.at(-1);
   const from = last ? new Date(new Date(last + "T00:00:00Z").getTime() - 6 * 864e5).toISOString().slice(0, 10) : "";
@@ -66,6 +74,15 @@ export default function Note() {
             </div>
             <h2 style={{ marginTop: 44 }}>As a post<span className="dot">.</span></h2>
             <pre className="wn-text">{post}</pre>
+            {hist.length > 0 && (
+              <>
+                <h2 style={{ marginTop: 44 }}>Week by week<span className="dot">.</span></h2>
+                <table className="wn-hist">
+                  <thead><tr><th>Week</th><th>Dates</th><th>Open roles</th><th>New</th><th>Remote</th></tr></thead>
+                  <tbody>{hist.slice().reverse().map((w) => <tr key={w.week}><td className="mono">{w.week}</td><td>{fmt(w.from)} – {fmt(w.to)}</td><td>{w.open}</td><td>{w.new}</td><td>{w.remoteShare}%</td></tr>)}</tbody>
+                </table>
+              </>
+            )}
             <p className="count" style={{ marginTop: 14 }}>New means first seen in the last seven days. Tracking began on {fmt(first)}; that first day is left out because every open role looked new then.</p>
           </>
         )}
@@ -85,6 +102,9 @@ export default function Note() {
         .wn-cols i { font-style: normal; font-family: var(--font-mono), monospace; font-size: .8rem; color: var(--sec); }
         .wn-foot { margin-top: 28px; font-size: .8rem; color: var(--rust-deep); }
         .wn-text { margin-top: 14px; max-width: 880px; white-space: pre-wrap; padding: 18px 20px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); font-family: var(--font-sans), system-ui, sans-serif; font-size: .98rem; line-height: 1.55; user-select: all; }
+        .wn-hist { margin-top: 14px; border-collapse: collapse; width: 100%; max-width: 880px; font-size: .92rem; }
+        .wn-hist th, .wn-hist td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); }
+        .wn-hist th { font-family: var(--font-mono), monospace; font-size: .7rem; letter-spacing: .06em; text-transform: uppercase; color: var(--sec); font-weight: 400; }
         @media (max-width: 720px) { .wn { padding: 34px 40px 26px; } .wn-cols { grid-template-columns: 1fr; } }
       `}</style>
     </section>

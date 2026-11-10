@@ -1,0 +1,274 @@
+{
+ "week": "2026-W45",
+ "from": "2026-11-02",
+ "to": "2026-11-08",
+ "open": 911,
+ "new": 53,
+ "remoteShare": 28,
+ "roles": [
+  {
+   "id": "forward-deployed-engineer",
+   "n": 255
+  },
+  {
+   "id": "rd-researcher",
+   "n": 155
+  },
+  {
+   "id": "ai-platform-engineer",
+   "n": 102
+  },
+  {
+   "id": "applied-ai-engineer",
+   "n": 102
+  },
+  {
+   "id": "agentic-ai-engineer",
+   "n": 94
+  },
+  {
+   "id": "ai-native-architect",
+   "n": 69
+  },
+  {
+   "id": "other-ai",
+   "n": 55
+  },
+  {
+   "id": "ai-native-developer",
+   "n": 50
+  },
+  {
+   "id": "ai-solutions-architect",
+   "n": 29
+  }
+ ],
+ "newRoles": [
+  {
+   "id": "applied-ai-engineer",
+   "n": 15
+  },
+  {
+   "id": "agentic-ai-engineer",
+   "n": 10
+  },
+  {
+   "id": "rd-researcher",
+   "n": 9
+  },
+  {
+   "id": "ai-platform-engineer",
+   "n": 9
+  },
+  {
+   "id": "forward-deployed-engineer",
+   "n": 5
+  },
+  {
+   "id": "ai-native-developer",
+   "n": 3
+  },
+  {
+   "id": "other-ai",
+   "n": 2
+  }
+ ],
+ "seniority": [
+  {
+   "id": "Mid",
+   "n": 487
+  },
+  {
+   "id": "Senior",
+   "n": 162
+  },
+  {
+   "id": "Staff",
+   "n": 103
+  },
+  {
+   "id": "Lead",
+   "n": 90
+  },
+  {
+   "id": "Intern",
+   "n": 33
+  },
+  {
+   "id": "Junior",
+   "n": 22
+  },
+  {
+   "id": "Principal",
+   "n": 13
+  },
+  {
+   "id": "Head",
+   "n": 1
+  }
+ ],
+ "skills": [
+  {
+   "id": "software",
+   "n": 683,
+   "share": 75
+  },
+  {
+   "id": "customer",
+   "n": 590,
+   "share": 65
+  },
+  {
+   "id": "agents",
+   "n": 583,
+   "share": 64
+  },
+  {
+   "id": "evals",
+   "n": 433,
+   "share": 48
+  },
+  {
+   "id": "product",
+   "n": 405,
+   "share": 44
+  },
+  {
+   "id": "models",
+   "n": 302,
+   "share": 33
+  },
+  {
+   "id": "security",
+   "n": 265,
+   "share": 29
+  },
+  {
+   "id": "data",
+   "n": 239,
+   "share": 26
+  },
+  {
+   "id": "architecture",
+   "n": 237,
+   "share": 26
+  },
+  {
+   "id": "retrieval",
+   "n": 231,
+   "share": 25
+  },
+  {
+   "id": "context",
+   "n": 185,
+   "share": 20
+  },
+  {
+   "id": "ai-dev",
+   "n": 167,
+   "share": 18
+  }
+ ],
+ "tools": [
+  {
+   "id": "Python",
+   "n": 582
+  },
+  {
+   "id": "TypeScript",
+   "n": 250
+  },
+  {
+   "id": "Google Cloud",
+   "n": 182
+  },
+  {
+   "id": "RAG",
+   "n": 95
+  },
+  {
+   "id": "SQL",
+   "n": 93
+  },
+  {
+   "id": "MCP",
+   "n": 74
+  },
+  {
+   "id": "LangChain",
+   "n": 58
+  },
+  {
+   "id": "Claude Code",
+   "n": 46
+  },
+  {
+   "id": "LangGraph",
+   "n": 38
+  },
+  {
+   "id": "Hugging Face",
+   "n": 29
+  },
+  {
+   "id": "Elasticsearch",
+   "n": 21
+  },
+  {
+   "id": "Perplexity AI Search",
+   "n": 19
+  },
+  {
+   "id": "BigQuery",
+   "n": 18
+  },
+  {
+   "id": "ElevenLabs",
+   "n": 15
+  },
+  {
+   "id": "Vertex AI",
+   "n": 12
+  },
+  {
+   "id": "DSPy",
+   "n": 12
+  },
+  {
+   "id": "LangSmith",
+   "n": 12
+  },
+  {
+   "id": "Deep Agents",
+   "n": 12
+  },
+  {
+   "id": "Claude Agent SDK",
+   "n": 11
+  },
+  {
+   "id": "CrewAI",
+   "n": 9
+  },
+  {
+   "id": "Next.js",
+   "n": 8
+  },
+  {
+   "id": "LlamaIndex",
+   "n": 7
+  },
+  {
+   "id": "EU AI Act",
+   "n": 6
+  },
+  {
+   "id": "AutoGen",
+   "n": 6
+  },
+  {
+   "id": "Azure AI Foundry",
+   "n": 6
+  }
+ ]
+}
