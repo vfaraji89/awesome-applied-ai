@@ -6,7 +6,10 @@ export const structure: Section[] = [
   {
     n: "01", id: "market", label: "Market", title: "The market", href: "/market/", match: ["/market/"],
     line: "What applied AI jobs ask for, tracked every day.",
-    pages: [{ label: "Market pulse", href: "/market/", note: "Roles, levels, skills and tools in demand" }],
+    pages: [
+      { label: "Market pulse", href: "/market/", note: "Roles, levels, skills and tools in demand" },
+      { label: "Weekly note", href: "/market/note/", note: "What changed this week, ready to share" },
+    ],
   },
   {
     n: "02", id: "roles", label: "Roles & skills", title: "Roles, skills and tasks", href: "/roles/", match: ["/roles/"],

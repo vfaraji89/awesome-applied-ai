@@ -9,6 +9,7 @@ import path from "node:path";
 import { createHash } from "node:crypto";
 import { greenhouse, lever, ashby, remotive, arbeitnow, hackerNews } from "./sources";
 import { isAI, role, seniority, skillsOf, toolsOf, inStack } from "./taxonomy";
+import { writeWeekly } from "./weekly";
 import type { Job, RawJob } from "./types";
 
 const root = path.resolve(import.meta.dir, "..");
@@ -56,6 +57,17 @@ const fresh: Job[] = raw.map((j) => {
 });
 
 const store: Job[] = existsSync(STORE) ? JSON.parse(readFileSync(STORE, "utf8")) : [];
+
+// Safety: a network outage or a broken source must not wipe the summary. If far fewer roles
+// came back than were open at the last run, stop without writing and fail the run.
+const lastDay = store.map((j) => j.lastSeen).sort().at(-1);
+const openBefore = lastDay ? store.filter((j) => j.lastSeen === lastDay).length : 0;
+const okSources = report.filter((r) => r.ok).length;
+if (!dry && (okSources === 0 || (openBefore >= 50 && fresh.length < openBefore * 0.5))) {
+  for (const r of report.filter((x) => !x.ok)) console.log(`FAIL ${r.source}  ${r.note ?? ""}`);
+  console.error(`Stopped: ${fresh.length} AI roles from ${okSources}/${report.length} sources, against ${openBefore} open at the last run. Nothing written.`);
+  process.exit(1);
+}
 const byKey = new Map(store.map((j) => [j.key, j]));
 let added = 0;
 for (const j of fresh) {
@@ -95,4 +107,5 @@ if (!dry) {
   writeFileSync(STORE, JSON.stringify(all));
   writeFileSync(SUMMARY, JSON.stringify(summary, null, 1));
   console.log("wrote", path.relative(root, STORE), "and", path.relative(root, SUMMARY));
+  console.log("weekly snapshot:", writeWeekly(all, today).join(", "));
 }
