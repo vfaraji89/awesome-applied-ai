@@ -23,7 +23,7 @@ const IDS = G.skills;
 const BIT = Object.fromEntries(IDS.map((id, i) => [id, 1 << i])) as Record<string, number>;
 const SHARE = Object.fromEntries(IDS.map((id, i) => [id, Math.round((100 * G.n[i]) / G.postings)])) as Record<string, number>;
 const name = (id: string) => skillDefs.find((s) => s.id === id)?.name ?? id;
-const short = (id: string) => name(id).replace(/ and .*/, "").replace("AI-assisted development", "AI-assisted dev").replace("Software fundamentals", "Software");
+const short = (id: string) => name(id).replace(/ and .*/, "").replace("AI-assisted development", "AI-assisted dev").replace("Software fundamentals", "Software").replace("Product judgement", "Product");
 const roleName = (id: string) => fRoles.find((r) => r.id === id)?.name ?? id;
 const lift = (a: string, b: string) => G.pairs.find((p) => (p.a === a && p.b === b) || (p.a === b && p.b === a))?.lift ?? 1;
 
@@ -90,7 +90,7 @@ export function SkillMap() {
           </div>
         </div>
         <div className="sm-con">
-          <svg viewBox="-385 -290 770 580" className="sm-svg" role="img" aria-label="Skill constellation">
+          <svg viewBox="-425 -290 850 580" className="sm-svg" role="img" aria-label="Skill constellation">
             <circle r={RAD} className="sm-orbit" />
             {edges.map((p) => {
               const A = POS[p.a], B = POS[p.b]; const on = p.a === sel || p.b === sel;
@@ -119,9 +119,9 @@ export function SkillMap() {
             <ul className="sm-near">
               {near.slice(0, 3).map((x) => <li key={x.id}><button onClick={() => setSel(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
             </ul>
-            <span className="sm-sub">Least often</span>
+            {near.some((x) => x.lift < 0.95) && <span className="sm-sub">Rarely asked with</span>}
             <ul className="sm-near far">
-              {near.slice(-2).reverse().map((x) => <li key={x.id}><button onClick={() => setSel(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
+              {near.filter((x) => x.lift < 0.95).slice(-2).reverse().map((x) => <li key={x.id}><button onClick={() => setSel(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
             </ul>
             <span className="sm-sub">Tools that signal it</span>
             <div className="sm-chips">{G.toolsBySkill[sel].map((t) => <span key={t.name} className="chip" title={`${t.share}% of these postings; ${t.lift}× the usual rate`}>{t.name} <span className="mono muted">{t.lift}×</span></span>)}</div>
@@ -270,7 +270,7 @@ export function SkillMap() {
         .sm-pairs.uni li .mono { color: var(--sec); }
         .sm-pairs li .muted { grid-column: 1 / -1; font-size: 0.82rem; }
         @media (max-width: 900px) { .sm-con, .sm-doors { grid-template-columns: 1fr; } .sm-svg { max-width: 560px; margin: 0 auto; display: block; } }
-        @media (max-width: 480px) { .sm-lbl { font-size: 19px; } .sm-pct { font-size: 15px; } }
+        @media (max-width: 480px) { .sm-lbl { font-size: 24px; } .sm-pct { font-size: 17px; } }
         @media (prefers-reduced-motion: reduce) { .sm-meter span, .sm-gbar span, .sm-pick i { transition: none; } }
       `}</style>
     </div>
