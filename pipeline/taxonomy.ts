@@ -86,3 +86,4 @@ export const inStack = (name: string) => stackNames.has(name);
     is read exactly the way a posting is. */
 export const skillPatterns = () => SKILLS.map(([id, re]) => ({ id, source: re.source, flags: re.flags }));
 export const toolPatterns = () => matchers.map((m) => ({ name: m.name, inStack: m.inStack, source: m.re.source, flags: m.re.flags }));
+export const rolePatterns = () => ROLES.map(([id, re]) => ({ id, source: re.source, flags: re.flags }));

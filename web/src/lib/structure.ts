@@ -8,7 +8,7 @@ export const structure: Section[] = [
     line: "What applied AI jobs ask for, tracked every day, and where you fit.",
     pages: [
       { label: "Market pulse", href: "/market/", note: "Roles, levels, skills and tools in demand" },
-      { label: "Role fit", href: "/fit/", note: "Paste your CV, see your closest role and what to learn next" },
+      { label: "Role fit", href: "/fit/", note: "Your CV or a job description, against the market, with a learning path" },
       { label: "What the labs ask for", href: "/labs/", note: "Anthropic, OpenAI and Google, side by side" },
       { label: "Weekly note", href: "/market/note/", note: "What changed this week, ready to share" },
     ],

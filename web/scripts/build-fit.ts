@@ -2,7 +2,8 @@
 // the tracked postings ask for each skill and tool. Runs before every build (prebuild).
 // Reads market/jobs.json (the tracker's store) and the tracker's own patterns.
 import { readFileSync, writeFileSync } from "node:fs";
-import { skillPatterns, toolPatterns } from "../../pipeline/taxonomy";
+import { skillPatterns, toolPatterns, rolePatterns } from "../../pipeline/taxonomy";
+import { learn, checkLearnLinks } from "../src/data/learn";
 import { fRoles } from "../src/data/framework";
 
 type Job = { role: string; skills: string[]; tools: string[]; lastSeen: string; firstSeen: string };
@@ -15,7 +16,8 @@ const roles = fRoles.map((r) => {
   const tally = new Map<string, number>();
   for (const j of mine) for (const t of j.tools) tally.set(t, (tally.get(t) ?? 0) + 1);
   const tools = [...tally.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12).map(([name, c]) => ({ name, share: Math.round((100 * c) / n) }));
-  return { id: r.id, name: r.name, family: r.family, n: mine.length, skills, tools };
+  const avg = (f: (j: Job) => number) => Math.round((10 * mine.reduce((a, j) => a + f(j), 0)) / n) / 10;
+  return { id: r.id, name: r.name, family: r.family, n: mine.length, skills, tools, avgSkills: avg((j) => j.skills.length), avgTools: avg((j) => j.tools.length) };
 });
 const dates = jobs.map((j) => j.lastSeen).sort();
 const out = {
@@ -26,6 +28,11 @@ const out = {
   roles: roles.filter((r) => r.n > 0),
   skillPatterns: skillPatterns(),
   toolPatterns: toolPatterns(),
+  rolePatterns: rolePatterns(),
 };
+// Every learning link must point at something on the site; a broken one stops the build.
+const broken = checkLearnLinks();
+if (broken.length) { console.error("Broken learning links:\n  " + broken.join("\n  ")); process.exit(1); }
+console.log(`learn: ${Object.values(learn).flat().length} links checked`);
 writeFileSync(new URL("../src/data/role-fit.json", import.meta.url), JSON.stringify(out));
 console.log(`role-fit.json: ${out.roles.length} roles from ${out.postings} postings`);
