@@ -23,6 +23,17 @@ export interface RadarItem {
 
 export const checked = "2026-11-11";
 
+/** The quarter in brief: what moved in Q3 2026. Hand-written; refresh each quarter. */
+export const quarter = {
+  name: "Q3 2026",
+  points: [
+    { title: "MCP went stateless", line: "The 2026-07-28 revision removed the session, so MCP servers scale like plain HTTP services.", href: "#r-mcp-stateless" },
+    { title: "Evals became the release gate", line: "Agent pilots are common and production is rare; system-level evals are how teams close the gap.", href: "#r-agent-evals" },
+    { title: "Caching is the cheapest win nobody takes", line: "System prompts dominate input tokens, yet most calls read nothing from cache.", href: "#r-prompt-caching" },
+    { title: "Skills and sandboxes are the default kit", line: "Agents load SKILL.md packages and run code in disposable sandboxes; supply-chain review follows.", href: "#r-agent-skills" },
+  ],
+};
+
 export const rings: { id: Ring; name: string; line: string }[] = [
   { id: "use", name: "Use now", line: "Proven in production; a sensible default." },
   { id: "pilot", name: "Pilot", line: "Worth a real project with a fallback." },
@@ -180,6 +191,19 @@ export const radar: RadarItem[] = [
     sources: [{ label: "AI agent landscape 2026: what reached production", url: "https://www.qualiasolutions.ai/blog/the-ai-agent-stack-in-2026-which-harnesses-and-frameworks-actually-made-it-to-production" }],
     more: [{ label: "Durable execution", href: "/jargon/#durable-execution" }, { label: "Approval across a three-day pause", href: "/problems/approval-across-a-long-pause/" }],
   },
+  {
+    id: "mcp-stateless", name: "Stateless MCP (2026-07-28 revision)", area: "agents", ring: "pilot",
+    what: "The July 2026 MCP revision drops the protocol session: no initialize handshake and no session id, so each request carries its own version and capabilities.",
+    why: "An MCP server can now sit behind a plain load balancer like any HTTP service, and gateways can route on headers alone.",
+    use: "New remote MCP servers, and existing ones you need to scale out. Read the migration notes first: the change breaks older clients.",
+    avoid: "Rewriting a working local (stdio) server just to follow the new revision before your clients support it.",
+    examples: [{ name: "MCP specification", url: "https://modelcontextprotocol.io/specification" }],
+    sources: [
+      { label: "MCP blog: the 2026-07-28 release", url: "https://blog.modelcontextprotocol.io/posts/2026-07-28/" },
+      { label: "Google: scaling agent infrastructure with stateless MCP", url: "https://developers.googleblog.com/scaling-ai-agent-infrastructure-with-the-mcp-stateless-updates/" },
+    ],
+    more: [{ label: "Migrating to stateless MCP", href: "/problems/stateless-mcp-migration/" }, { label: "The MCP caching contract", href: "/problems/the-mcp-caching-contract/" }, { label: "Model Context Protocol", href: "/jargon/#mcp" }],
+  },
   // ---------------------------------------------------------------- serving & context
   {
     id: "disaggregated-serving", name: "Disaggregated prefill and decode", area: "serving", ring: "evaluate",
@@ -210,7 +234,30 @@ export const radar: RadarItem[] = [
     sources: [{ label: "Context Rot (Chroma research)", url: "https://research.trychroma.com/context-rot" }],
     more: [{ label: "The caching layer", href: "/architecture/#caching" }, { label: "The memory layer", href: "/architecture/#memory" }],
   },
+  {
+    id: "prompt-caching", name: "Prompt-caching discipline", area: "serving", ring: "use",
+    what: "Building prompts so the stable part (system prompt, tool list, guardrails) is a byte-identical prefix the provider can cache, and watching cache-read tokens in your traces.",
+    why: "Datadog reports that system prompts were 69% of input tokens in its customers' traces in March 2026, and secondary write-ups of its report say only about a quarter of calls on caching-capable models read anything from cache.",
+    use: "Every production prompt: fixed order for tools and instructions, variable content last, and a dashboard of cache hit rate.",
+    avoid: "Timestamps, request ids or shuffled tool lists near the top of the prompt: one changed byte and the cache misses.",
+    examples: [{ name: "Datadog: monitor prompt caching", url: "https://www.datadoghq.com/blog/monitor-prompt-caching-optimize-token-usage/" }],
+    sources: [{ label: "Datadog: State of AI Engineering", url: "https://www.datadoghq.com/state-of-ai-engineering/" }],
+    more: [{ label: "The caching layer", href: "/architecture/#caching" }, { label: "KV cache", href: "/jargon/#kv-cache" }, { label: "Cost per request", href: "/jargon/#cost-per-request" }],
+  },
   // ---------------------------------------------------------------- evals, ops & safety
+  {
+    id: "agent-evals", name: "System-level agent evals", area: "evals", ring: "use",
+    what: "Scoring the whole agent run (trajectory, tool calls, final state, cost) on a shared, versioned eval set, not one prompt at a time.",
+    why: "Many companies have agent pilots but few reach production; teams cite proving reliability as the gap. Eval suites are becoming the release gate.",
+    use: "Any agent going to production: a golden set of tasks, trace-based checks on tool use, a judge model with human spot checks, run in CI.",
+    avoid: "Public benchmark scores as a proxy for your task, and judge scores nobody has calibrated against people.",
+    examples: [{ name: "Inspect (UK AISI)", url: "https://github.com/UKGovernmentBEIS/inspect_ai" }, { name: "OpenAI Evals", url: "https://github.com/openai/evals" }],
+    sources: [
+      { label: "InfoQ: reusable evaluation frameworks for agentic products (Elastic)", url: "https://www.infoq.com/presentations/elastic-ai-agent-evaluations/" },
+      { label: "Agent evaluation: a detailed guide", url: "https://cameronrwolfe.substack.com/p/agent-evals" },
+    ],
+    more: [{ label: "The evaluation layer", href: "/architecture/#evaluation" }, { label: "Golden set", href: "/jargon/#golden-set" }, { label: "LLM as judge", href: "/jargon/#llm-as-judge" }, { label: "Proving a pipeline is better", href: "/problems/proving-the-pipeline-is-better/" }],
+  },
   {
     id: "otel-genai", name: "OpenTelemetry GenAI conventions", area: "evals", ring: "pilot",
     what: "A shared vocabulary for tracing model calls, agents and tools (invoke_agent, execute_tool) and for attaching evaluation scores to traces.",

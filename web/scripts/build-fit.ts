@@ -31,6 +31,44 @@ const out = {
   toolPatterns: toolPatterns(),
   rolePatterns: rolePatterns(),
 };
+// ---- skill graph for /skills/: which skills postings ask for together --------------
+{
+  const ids = skillPatterns().map((p) => p.id);
+  const bit = Object.fromEntries(ids.map((id, i) => [id, 1 << i]));
+  const roleIds = fRoles.map((r) => r.id);
+  const N = jobs.length;
+  const masks = jobs.map((j) => j.skills.reduce((m, s) => m | (bit[s] ?? 0), 0));
+  const roleOf = jobs.map((j) => roleIds.indexOf(j.role));
+  const count = (m: number) => masks.filter((x) => (x & m) === m).length;
+  const n = ids.map((id) => count(bit[id]));
+  const pairs: { a: string; b: string; n: number; lift: number }[] = [];
+  ids.forEach((a, i) => ids.forEach((b, k) => {
+    if (k <= i) return;
+    const both = count(bit[a] | bit[b]);
+    const lift = n[i] && n[k] ? (both * N) / (n[i] * n[k]) : 0;
+    pairs.push({ a, b, n: both, lift: Math.round(lift * 100) / 100 });
+  }));
+  // tools that signal a skill: share among postings with the skill, against everywhere
+  const toolsBySkill: Record<string, { name: string; share: number; lift: number }[]> = {};
+  ids.forEach((id) => {
+    const withSkill = jobs.filter((j) => j.skills.includes(id));
+    const tally = new Map<string, number>();
+    withSkill.forEach((j) => j.tools.forEach((t) => tally.set(t, (tally.get(t) ?? 0) + 1)));
+    toolsBySkill[id] = [...tally.entries()].filter(([, c]) => c >= 5).map(([name, c]) => {
+      const overall = jobs.filter((j) => j.tools.includes(name)).length / N;
+      const share = c / (withSkill.length || 1);
+      return { name, share: Math.round(share * 100), lift: Math.round((share / (overall || 1)) * 10) / 10 };
+    }).sort((x, y) => y.lift * y.share - x.lift * x.share).slice(0, 5);
+  });
+  const rolesBySkill = Object.fromEntries(ids.map((id) => [id, roleIds.map((r, ri) => {
+    const inRole = jobs.filter((_, k) => roleOf[k] === ri);
+    return { id: r, share: Math.round((100 * inRole.filter((j) => j.skills.includes(id)).length) / (inRole.length || 1)) };
+  }).sort((x, y) => y.share - x.share).slice(0, 3)]));
+  const graph = { postings: N, from: out.from, to: out.to, skills: ids, n, pairs, masks, roleOf, roleIds, toolsBySkill, rolesBySkill };
+  writeFileSync(new URL("../src/data/skill-graph.json", import.meta.url), JSON.stringify(graph));
+  console.log(`skill-graph.json: ${ids.length} skills, ${pairs.length} pairs, ${N} postings`);
+}
+
 // Every learning link must point at something on the site; a broken one stops the build.
 const broken = [...checkLearnLinks(), ...radar.flatMap((r) => (r.more ?? []).filter((m) => !linkOk(m.href)).map((m) => `radar ${r.id}: ${m.href}`))];
 if (broken.length) { console.error("Broken learning links:\n  " + broken.join("\n  ")); process.exit(1); }
