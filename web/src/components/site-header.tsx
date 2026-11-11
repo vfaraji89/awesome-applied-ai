@@ -3,6 +3,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Mark } from "./mark";
 import { nav } from "@/lib/site";
+import { FitIcon } from "./fit-icon";
 
 export function SiteHeader() {
   const path = usePathname() ?? "/";
@@ -21,6 +22,9 @@ export function SiteHeader() {
             </Link>
           ))}
         </nav>
+        <Link href="/fit/" className="hdr-fit" aria-current={path.startsWith("/fit/") ? "page" : undefined} title="Paste your CV, see which applied AI role you fit">
+          <FitIcon /><span>Role <em>fit</em></span>
+        </Link>
       </div>
     </header>
   );

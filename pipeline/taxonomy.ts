@@ -81,3 +81,8 @@ for (const name of [...stackNames, ...tools.map((t) => t.name)]) {
 }
 export const toolsOf = (text: string) => matchers.filter((m) => m.re.test(text)).map((m) => m.name);
 export const inStack = (name: string) => stackNames.has(name);
+
+/** The same patterns, for the site's role-fit check (web/scripts/build-fit.ts), so a CV
+    is read exactly the way a posting is. */
+export const skillPatterns = () => SKILLS.map(([id, re]) => ({ id, source: re.source, flags: re.flags }));
+export const toolPatterns = () => matchers.map((m) => ({ name: m.name, inStack: m.inStack, source: m.re.source, flags: m.re.flags }));
