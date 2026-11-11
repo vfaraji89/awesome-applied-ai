@@ -23,7 +23,7 @@ export default function Roles() {
         <div className="wrap">
           <span className="kicker">The whole matrix</span>
           <h2 style={{ marginTop: 10 }}>Eight roles, twelve skills<span className="dot">.</span></h2>
-          <p className="lead" style={{ marginTop: 12 }}>Red beads show the level each role needs: {LEVELS.slice(1).join(", ").toLowerCase()}.</p>
+          <p className="lead" style={{ marginTop: 12 }}>Red beads show the level each role needs: {LEVELS.slice(1).join(", ").toLowerCase()}. To see which skills postings ask for together, and which one opens the most doors, open the <Link href="/skills/">skill map</Link>.</p>
           <div className="mx-wrap">
             <table className="mx">
               <thead><tr><th>Skill</th>{fRoles.map((r) => <th key={r.id}><span>{r.name}</span></th>)}</tr></thead>

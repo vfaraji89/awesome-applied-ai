@@ -8,28 +8,30 @@ export const structure: Section[] = [
     line: "What applied AI jobs ask for, tracked every day, and where you fit.",
     pages: [
       { label: "Market pulse", href: "/market/", note: "Roles, levels, skills and tools in demand" },
-      { label: "Role fit", href: "/fit/", note: "Paste your CV, see your closest role and what to learn next" },
+      { label: "Role fit", href: "/fit/", note: "Your CV or a job description, against the market, with a learning path" },
       { label: "What the labs ask for", href: "/labs/", note: "Anthropic, OpenAI and Google, side by side" },
       { label: "Weekly note", href: "/market/note/", note: "What changed this week, ready to share" },
     ],
   },
   {
-    n: "02", id: "roles", label: "Roles & skills", title: "Roles, skills and tasks", href: "/roles/", match: ["/roles/"],
+    n: "02", id: "roles", label: "Roles & skills", title: "Roles, skills and tasks", href: "/roles/", match: ["/roles/", "/skills/"],
     line: "Who does the work, what they do all day, and the skills it takes.",
     pages: [
       { label: "Role families", href: "/roles/", note: "Titles, tasks, stack and growth path" },
       { label: "Skills matrix", href: "/roles/#matrix", note: "Twelve skills, scored aware to expert" },
+      { label: "Skill map", href: "/skills/", note: "Which skills travel together, and which one opens the most doors" },
       { label: "Tasks", href: "/roles/#tasks", note: "What each role does day to day" },
     ],
   },
   {
-    n: "03", id: "architect", label: "AI-native architect", title: "The AI-native architect", href: "/architect/", match: ["/architect/", "/architecture/", "/tools/", "/problems/"],
+    n: "03", id: "architect", label: "AI-native architect", title: "The AI-native architect", href: "/architect/", match: ["/architect/", "/architecture/", "/tools/", "/problems/", "/radar/"],
     line: "The role that designs AI into real systems: the layers, the stack and the problems.",
     pages: [
       { label: "The role", href: "/architect/", note: "What an AI-native architect does" },
       { label: "Architecture", href: "/architecture/", note: "Six layers, one request" },
       { label: "Tools", href: "/tools/", note: "The daily stack and the wider map" },
       { label: "Problems", href: "/problems/", note: "What breaks, and the fix" },
+      { label: "Emerging tech radar", href: "/radar/", note: "What's new, and how far to trust it" },
     ],
   },
   {
