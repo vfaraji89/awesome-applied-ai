@@ -3,7 +3,8 @@
 // Reads market/jobs.json (the tracker's store) and the tracker's own patterns.
 import { readFileSync, writeFileSync } from "node:fs";
 import { skillPatterns, toolPatterns, rolePatterns } from "../../pipeline/taxonomy";
-import { learn, checkLearnLinks } from "../src/data/learn";
+import { learn, checkLearnLinks, linkOk } from "../src/data/learn";
+import { radar } from "../src/data/radar";
 import { fRoles } from "../src/data/framework";
 
 type Job = { role: string; skills: string[]; tools: string[]; lastSeen: string; firstSeen: string };
@@ -31,8 +32,8 @@ const out = {
   rolePatterns: rolePatterns(),
 };
 // Every learning link must point at something on the site; a broken one stops the build.
-const broken = checkLearnLinks();
+const broken = [...checkLearnLinks(), ...radar.flatMap((r) => (r.more ?? []).filter((m) => !linkOk(m.href)).map((m) => `radar ${r.id}: ${m.href}`))];
 if (broken.length) { console.error("Broken learning links:\n  " + broken.join("\n  ")); process.exit(1); }
-console.log(`learn: ${Object.values(learn).flat().length} links checked`);
+console.log(`links: ${Object.values(learn).flat().length} learning + ${radar.flatMap((r) => r.more ?? []).length} radar links checked`);
 writeFileSync(new URL("../src/data/role-fit.json", import.meta.url), JSON.stringify(out));
 console.log(`role-fit.json: ${out.roles.length} roles from ${out.postings} postings`);

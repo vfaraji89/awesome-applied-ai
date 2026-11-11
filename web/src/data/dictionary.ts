@@ -1421,4 +1421,109 @@ export const terms: Term[] = [
     also: ["GDPR", "DPIA", "zero retention"],
     tags: ["privacy", "procurement"],
   },
+  // ------------------------------------------------------------ emerging (2026-11-11, see /radar/)
+  {
+    id: "tabular-foundation-model",
+    term: "Tabular foundation model",
+    field: "training",
+    short:
+      "A model pre-trained on millions of synthetic tables that predicts on a new table in one forward pass, by in-context learning, with no training run.",
+    detail:
+      "The rows you pass in act as the training set inside the prompt, so there is no fitting step and no hyperparameter search. On small and medium tables they match or beat tuned gradient-boosted trees, and some return calibrated uncertainty. Limits are table size, inference cost on large inputs, and licences that differ between models.",
+    also: ["TabPFN", "TabICL", "tabular FM"],
+    asked: "Would you still start a churn model with XGBoost?",
+    link: { label: "Emerging tech radar", href: "/radar/" },
+    tags: ["tabular", "in-context-learning"],
+  },
+  {
+    id: "jepa",
+    term: "JEPA",
+    field: "llm",
+    short:
+      "Joint-embedding predictive architecture: a model learns by predicting the representation of missing or future input rather than its pixels or tokens.",
+    detail:
+      "Predicting in representation space lets the model ignore details that cannot be predicted, such as every leaf moving in a video. Meta's V-JEPA 2 learns from unlabelled video and plans robot actions with very little robot data. It is the main research alternative to next-token prediction for world models.",
+    also: ["V-JEPA", "joint-embedding predictive architecture"],
+    asked: "How does a world model differ from an LLM?",
+    link: { label: "Emerging tech radar", href: "/radar/" },
+    tags: ["world-models", "self-supervised"],
+  },
+  {
+    id: "diffusion-language-model",
+    term: "Diffusion language model",
+    field: "llm",
+    short:
+      "A language model that writes by refining a whole block of text in parallel over a few denoising steps, instead of one token at a time.",
+    detail:
+      "Parallel refinement gives several times the throughput of a similar autoregressive model on some tasks, which matters for code completion and edits. The best autoregressive models still lead on the hardest reasoning, and serving stacks and tooling are younger.",
+    also: ["dLLM", "masked diffusion LM"],
+    asked: "When would you trade a little quality for a lot of speed?",
+    link: { label: "Emerging tech radar", href: "/radar/" },
+    tags: ["generation", "latency"],
+  },
+  {
+    id: "hybrid-ssm",
+    term: "Hybrid state-space model",
+    field: "llm",
+    short:
+      "A model that mixes state-space (Mamba-style) layers with a few attention layers, so memory grows far more slowly with context length.",
+    detail:
+      "State-space layers carry a fixed-size state instead of a growing KV cache, which cuts memory for long inputs and concurrent requests; the attention layers keep exact recall where it is needed. Check that your inference engine supports the architecture before choosing one.",
+    also: ["Mamba hybrid", "SSM"],
+    asked: "How would you serve long documents on less GPU memory?",
+    link: { label: "Emerging tech radar", href: "/radar/" },
+    tags: ["architecture", "long-context", "efficiency"],
+  },
+  {
+    id: "agent-skills",
+    term: "Agent Skills",
+    field: "agents",
+    short:
+      "A folder with a SKILL.md file: a name, a description and instructions, plus optional scripts. The agent loads only the name and description until a task needs the rest.",
+    detail:
+      "Progressive disclosure keeps procedures out of the context window until they are relevant, which is why skills scale where giant system prompts do not. Skills describe how to do a task; MCP gives live access to tools and data. Treat community skills as third-party code: review them before installing.",
+    also: ["SKILL.md"],
+    asked: "Where would you put your team's procedures so an agent can use them?",
+    link: { label: "Emerging tech radar", href: "/radar/" },
+    tags: ["skills", "context"],
+  },
+  {
+    id: "ag-ui",
+    term: "AG-UI",
+    field: "agents",
+    short:
+      "An event-streaming protocol between an agent and its user interface: messages, tool calls, state updates and progress, as they happen.",
+    detail:
+      "It fills the layer MCP and A2A leave open: MCP connects an agent to tools, A2A connects agents to agents, AG-UI connects an agent to the screen a person is watching.",
+    also: ["Agent-User Interaction protocol"],
+    asked: "How does the user see what a long-running agent is doing?",
+    link: { label: "Emerging tech radar", href: "/radar/" },
+    tags: ["protocols", "ui", "streaming"],
+  },
+  {
+    id: "computer-use-agent",
+    term: "Computer-use agent",
+    field: "agents",
+    short:
+      "An agent that operates a screen: it reads screenshots and clicks, types and scrolls in a browser or a desktop.",
+    detail:
+      "It reaches systems that have no API, which is most legacy software, at the price of speed and reliability. Run it in a sandbox, keep a human approval before irreversible steps, and use an API whenever one exists.",
+    also: ["browser agent", "CUA"],
+    asked: "How would you automate a back-office system that has no API?",
+    link: { label: "Emerging tech radar", href: "/radar/" },
+    tags: ["agents", "automation", "security"],
+  },
+  {
+    id: "disaggregated-serving",
+    term: "Disaggregated prefill and decode",
+    field: "serving",
+    short:
+      "Running prompt reading (prefill) and token writing (decode) on separate GPU pools, with requests routed to where the KV cache already lives.",
+    detail:
+      "Prefill is compute-bound and decode is memory-bandwidth-bound, so splitting them lets each run on hardware that suits it. Moving the KV cache between pools costs bandwidth, so the gains show up at large scale; most teams should start with chunked prefill and prefix caching.",
+    also: ["P/D disaggregation", "llm-d"],
+    asked: "When is splitting prefill and decode worth it?",
+    link: { label: "Emerging tech radar", href: "/radar/" },
+    tags: ["inference", "scaling"],
+  },
 ];

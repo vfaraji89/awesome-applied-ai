@@ -91,6 +91,7 @@ export const layers: Layer[] = [
       { id: "prompt-optimization", name: "Prompt optimization", blurb: "Compiling prompts against a metric instead of hand-tuning." },
       { id: "protocols", name: "Protocols & conventions", blurb: "How tools, agents and repos describe themselves." },
       { id: "structured-output", name: "Structured output", blurb: "Constrained decoding and schema enforcement." },
+      { id: "sandboxes", name: "Sandboxes", blurb: "Isolated machines where agents run code safely." },
     ],
     formulas: [
       {

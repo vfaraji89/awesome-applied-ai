@@ -30,6 +30,8 @@ Two workflows in `.github/workflows/`:
 6. **Summarise.** The summary for the site and the snapshot for the current week are rewritten.
 7. **Role fit.** At build time `web/scripts/build-fit.ts` turns `market/jobs.json` into per-role skill and tool shares for `/fit/` (`web/src/data/role-fit.json`, not committed). It reads CVs with the tracker's own patterns from `pipeline/taxonomy.ts`. The same page audits a pasted job description against similar postings. Gaps link to pages on this site listed in `web/src/data/learn.ts`; the build checks every one of those links and stops if one points at nothing.
 
+`/radar/` (the emerging tech radar) is written by hand in `web/src/data/radar.ts`, with sources per entry; links from it into the site are checked at build time like the learning links. Review the rings every quarter: move what has proven itself inward, drop what stalled.
+
 `/labs/` (what Anthropic, OpenAI and Google ask for) is written by hand in `web/src/data/labs.ts` from public postings, with sources and a date. Refresh it every few months.
 
 ## Safety built in

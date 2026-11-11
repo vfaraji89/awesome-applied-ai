@@ -44,7 +44,7 @@ export const learn: Record<string, LearnLink[]> = {
   ],
   models: [
     term("lora", "LoRA"), term("quantization", "Quantization"),
-    term("kv-cache", "KV cache"), term("vllm", "vLLM"),
+    term("kv-cache", "KV cache"), term("vllm", "vLLM"), { kind: "Page", label: "Emerging tech radar", href: "/radar/" },
   ],
   "ai-dev": [
     { kind: "Doc", label: "Claude Platform, animated", href: "/docs/claude-platform/" },
@@ -64,23 +64,22 @@ export const learn: Record<string, LearnLink[]> = {
   ],
 };
 
-/** Returns the links that point at nothing. Pages are checked against the app's routes. */
-export function checkLearnLinks(): string[] {
+/** Does an internal href point at a real page, layer, problem or jargon card? */
+export function linkOk(href: string): boolean {
   const terms = new Set(dictionary.map((t) => t.id));
   const probs = new Set(problems.map((p) => p.id));
   const lays = new Set<string>(layers.map((l) => l.id));
-  const pages = new Set(["/tools/", "/roles/", "/labs/", "/architecture/", "/problems/", "/docs/claude-platform/", "/fit/", "/market/", "/certificates/"]);
+  const pages = new Set(["/tools/", "/roles/", "/labs/", "/architecture/", "/problems/", "/docs/claude-platform/", "/fit/", "/market/", "/certificates/", "/radar/"]);
+  const [path, hash] = href.split("#");
+  return path === "/jargon/" ? terms.has(hash) :
+    path === "/architecture/" && hash ? lays.has(hash) :
+    path.startsWith("/problems/") && path !== "/problems/" ? probs.has(path.split("/")[2]) :
+    pages.has(path);
+}
+
+/** Returns the learning links that point at nothing. */
+export function checkLearnLinks(): string[] {
   const bad: string[] = [];
-  for (const [skill, links] of Object.entries(learn)) {
-    for (const l of links) {
-      const [path, hash] = l.href.split("#");
-      const ok =
-        path === "/jargon/" ? terms.has(hash) :
-        path === "/architecture/" && hash ? lays.has(hash) :
-        path.startsWith("/problems/") && path !== "/problems/" ? probs.has(path.split("/")[2]) :
-        pages.has(path);
-      if (!ok) bad.push(`${skill}: ${l.href}`);
-    }
-  }
+  for (const [skill, links] of Object.entries(learn)) for (const l of links) if (!linkOk(l.href)) bad.push(`${skill}: ${l.href}`);
   return bad;
 }

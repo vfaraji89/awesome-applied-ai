@@ -23,13 +23,14 @@ export const structure: Section[] = [
     ],
   },
   {
-    n: "03", id: "architect", label: "AI-native architect", title: "The AI-native architect", href: "/architect/", match: ["/architect/", "/architecture/", "/tools/", "/problems/"],
+    n: "03", id: "architect", label: "AI-native architect", title: "The AI-native architect", href: "/architect/", match: ["/architect/", "/architecture/", "/tools/", "/problems/", "/radar/"],
     line: "The role that designs AI into real systems: the layers, the stack and the problems.",
     pages: [
       { label: "The role", href: "/architect/", note: "What an AI-native architect does" },
       { label: "Architecture", href: "/architecture/", note: "Six layers, one request" },
       { label: "Tools", href: "/tools/", note: "The daily stack and the wider map" },
       { label: "Problems", href: "/problems/", note: "What breaks, and the fix" },
+      { label: "Emerging tech radar", href: "/radar/", note: "What's new, and how far to trust it" },
     ],
   },
   {
