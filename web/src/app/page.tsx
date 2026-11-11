@@ -7,6 +7,7 @@ import { fRoles, skills, education } from "@/data/framework";
 import { docs } from "@/data/docs";
 import { site } from "@/lib/site";
 import market from "@/data/market.json";
+import { FitIcon } from "@/components/fit-icon";
 
 function Band({ s, alt, children }: { s: Section; alt?: boolean; children: React.ReactNode }) {
   return (
@@ -47,6 +48,12 @@ export default function Home() {
             <Link href="#market" className="btn">Start with the market →</Link>
             <Link href="/docs/" className="btn ghost">Read the docs</Link>
           </div>
+          <Link href="/fit/" className="frame home-fit rise" style={{ ["--i" as string]: 4 }}>
+            <span className="hf-ic"><FitIcon size={28} /></span>
+            <span><span className="kicker">Role fit</span><b>Which applied AI role fits you?</b><span className="muted">Paste your CV. Scored against {market.totals.allTime.toLocaleString("en")} real postings, with what to learn next.</span></span>
+            <span className="hf-go" aria-hidden="true">→</span>
+            <span className="rod" />
+          </Link>
           <LearnPath />
         </div>
       </section>

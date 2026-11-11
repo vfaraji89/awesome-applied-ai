@@ -4,12 +4,13 @@
   "private": true,
   "packageManager": "bun@1.4.4",
   "scripts": {
-    "data": "bun scripts/build-problems.mjs",
+    "data": "bun scripts/build-problems.mjs && bun scripts/build-fit.ts",
     "predev": "bun run data",
     "dev": "next dev",
     "prebuild": "bun run data",
     "build": "next build",
     "start": "next start",
+    "pretypecheck": "bun run data",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
