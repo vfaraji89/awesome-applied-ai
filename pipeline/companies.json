@@ -56,7 +56,12 @@
   "lattice",
   "carta",
   "sambanovasystems",
-  "coreweave"
+  "coreweave",
+  "andurilindustries",
+  "crusoe",
+  "figureai",
+  "physicalintelligence",
+  "appliedintuition"
  ],
  "lever": [
   "palantir",
@@ -65,7 +70,8 @@
   "shieldai",
   "outreach",
   "wealthsimple",
-  "highspot"
+  "highspot",
+  "neura-robotics"
  ],
  "ashby": [
   "openai",
@@ -129,6 +135,12 @@
   "deepgram",
   "livekit",
   "vapi",
-  "bland"
+  "bland",
+  "crusoe",
+  "reflectionai",
+  "ssi",
+  "skild",
+  "thinkingmachines",
+  "physicalintelligence"
  ]
 }
