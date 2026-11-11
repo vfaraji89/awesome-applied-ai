@@ -2,233 +2,233 @@
  "week": "2026-W46",
  "from": "2026-11-09",
  "to": "2026-11-15",
- "open": 927,
- "new": 65,
- "remoteShare": 28,
+ "open": 977,
+ "new": 115,
+ "remoteShare": 27,
  "roles": [
   {
    "id": "forward-deployed-engineer",
-   "n": 265
+   "n": 274
   },
   {
    "id": "rd-researcher",
-   "n": 156
+   "n": 164
   },
   {
    "id": "applied-ai-engineer",
-   "n": 102
+   "n": 112
   },
   {
    "id": "ai-platform-engineer",
-   "n": 101
+   "n": 110
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 98
+   "n": 102
   },
   {
    "id": "ai-native-architect",
-   "n": 70
+   "n": 73
   },
   {
    "id": "other-ai",
-   "n": 55
+   "n": 59
   },
   {
    "id": "ai-native-developer",
-   "n": 50
+   "n": 52
   },
   {
    "id": "ai-solutions-architect",
-   "n": 30
+   "n": 31
   }
  ],
  "newRoles": [
   {
    "id": "rd-researcher",
-   "n": 14
-  },
-  {
-   "id": "forward-deployed-engineer",
-   "n": 13
+   "n": 22
   },
   {
    "id": "applied-ai-engineer",
-   "n": 12
+   "n": 22
+  },
+  {
+   "id": "forward-deployed-engineer",
+   "n": 22
   },
   {
    "id": "ai-platform-engineer",
-   "n": 10
+   "n": 19
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 6
+   "n": 10
   },
   {
    "id": "other-ai",
-   "n": 4
-  },
-  {
-   "id": "ai-native-developer",
-   "n": 3
+   "n": 8
   },
   {
    "id": "ai-native-architect",
-   "n": 2
+   "n": 5
+  },
+  {
+   "id": "ai-native-developer",
+   "n": 5
   },
   {
    "id": "ai-solutions-architect",
-   "n": 1
+   "n": 2
   }
  ],
  "seniority": [
   {
    "id": "Mid",
-   "n": 497
+   "n": 518
   },
   {
    "id": "Senior",
-   "n": 162
+   "n": 178
   },
   {
    "id": "Staff",
-   "n": 105
+   "n": 109
   },
   {
    "id": "Lead",
-   "n": 95
+   "n": 99
   },
   {
    "id": "Intern",
-   "n": 32
+   "n": 33
   },
   {
    "id": "Junior",
-   "n": 21
+   "n": 22
   },
   {
    "id": "Principal",
-   "n": 14
+   "n": 15
   },
   {
    "id": "Head",
-   "n": 1
+   "n": 3
   }
  ],
  "skills": [
   {
    "id": "software",
-   "n": 689,
-   "share": 74
+   "n": 733,
+   "share": 75
   },
   {
    "id": "customer",
-   "n": 602,
-   "share": 65
+   "n": 629,
+   "share": 64
   },
   {
    "id": "agents",
-   "n": 594,
+   "n": 624,
    "share": 64
   },
   {
    "id": "evals",
-   "n": 439,
+   "n": 464,
    "share": 47
   },
   {
    "id": "product",
-   "n": 405,
-   "share": 44
+   "n": 419,
+   "share": 43
   },
   {
    "id": "models",
-   "n": 311,
+   "n": 335,
    "share": 34
   },
   {
    "id": "security",
-   "n": 269,
+   "n": 284,
    "share": 29
   },
   {
    "id": "retrieval",
-   "n": 239,
+   "n": 256,
    "share": 26
   },
   {
-   "id": "architecture",
-   "n": 234,
+   "id": "data",
+   "n": 246,
    "share": 25
   },
   {
-   "id": "data",
-   "n": 229,
+   "id": "architecture",
+   "n": 244,
    "share": 25
   },
   {
    "id": "context",
-   "n": 186,
+   "n": 200,
    "share": 20
   },
   {
    "id": "ai-dev",
-   "n": 173,
-   "share": 19
+   "n": 179,
+   "share": 18
   }
  ],
  "tools": [
   {
    "id": "Python",
-   "n": 588
+   "n": 623
   },
   {
    "id": "TypeScript",
-   "n": 255
+   "n": 269
   },
   {
    "id": "Google Cloud",
-   "n": 189
+   "n": 198
   },
   {
    "id": "RAG",
-   "n": 94
+   "n": 106
   },
   {
    "id": "SQL",
-   "n": 88
+   "n": 99
   },
   {
    "id": "MCP",
-   "n": 79
+   "n": 83
   },
   {
    "id": "LangChain",
-   "n": 60
+   "n": 62
   },
   {
    "id": "Claude Code",
-   "n": 50
+   "n": 51
   },
   {
    "id": "LangGraph",
-   "n": 36
+   "n": 37
   },
   {
    "id": "Hugging Face",
-   "n": 31
+   "n": 32
+  },
+  {
+   "id": "BigQuery",
+   "n": 21
   },
   {
    "id": "Elasticsearch",
    "n": 21
   },
   {
-   "id": "BigQuery",
-   "n": 19
-  },
-  {
    "id": "Perplexity AI Search",
-   "n": 19
+   "n": 20
   },
   {
    "id": "ElevenLabs",
@@ -236,6 +236,10 @@
   },
   {
    "id": "LangSmith",
+   "n": 14
+  },
+  {
+   "id": "Vertex AI",
    "n": 13
   },
   {
@@ -247,7 +251,7 @@
    "n": 12
   },
   {
-   "id": "Vertex AI",
+   "id": "Next.js",
    "n": 11
   },
   {
@@ -259,23 +263,19 @@
    "n": 9
   },
   {
+   "id": "A2A",
+   "n": 8
+  },
+  {
+   "id": "EU AI Act",
+   "n": 8
+  },
+  {
    "id": "Microsoft Agents SDK",
    "n": 8
   },
   {
-   "id": "Next.js",
-   "n": 8
-  },
-  {
-   "id": "A2A",
-   "n": 7
-  },
-  {
-   "id": "EU AI Act",
-   "n": 7
-  },
-  {
-   "id": "LlamaIndex",
+   "id": "Azure AI Foundry",
    "n": 7
   }
  ]
