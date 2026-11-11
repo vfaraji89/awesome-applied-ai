@@ -142,5 +142,22 @@
   "skild",
   "thinkingmachines",
   "physicalintelligence"
+ ],
+ "workday": [
+  {
+   "tenant": "nvidia",
+   "host": "wd5",
+   "site": "NVIDIAExternalCareerSite"
+  },
+  {
+   "tenant": "salesforce",
+   "host": "wd12",
+   "site": "External_Career_Site"
+  },
+  {
+   "tenant": "adobe",
+   "host": "wd5",
+   "site": "external_experienced"
+  }
  ]
 }
