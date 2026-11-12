@@ -24,23 +24,31 @@ export const structure: Section[] = [
     ],
   },
   {
-    n: "03", id: "architect", label: "AI-native architect", title: "The AI-native architect", href: "/architect/", match: ["/architect/", "/architecture/", "/tools/", "/problems/", "/radar/"],
+    n: "03", id: "architect", label: "AI-native architect", title: "The AI-native architect", href: "/architect/", match: ["/architect/", "/architecture/", "/problems/", "/radar/"],
     line: "The role that designs AI into real systems: the layers, the stack and the problems.",
     pages: [
       { label: "The role", href: "/architect/", note: "What an AI-native architect does" },
       { label: "Architecture", href: "/architecture/", note: "Six layers, one request" },
-      { label: "Tools", href: "/tools/", note: "The daily stack and the wider map" },
       { label: "Problems", href: "/problems/", note: "What breaks, and the fix" },
       { label: "Emerging tech radar", href: "/radar/", note: "What's new, and how far to trust it" },
     ],
   },
   {
-    n: "04", id: "certificates", label: "Certificates", title: "Industry certificates", href: "/certificates/", match: ["/certificates/"],
+    n: "04", id: "tools", label: "Tools", title: "The tool map", href: "/tools/", match: ["/tools/"],
+    line: "Every tool across applied AI in eleven areas, with what is emerging and why.",
+    pages: [
+      { label: "Tool map", href: "/tools/", note: "Eleven areas, from data to the landscape" },
+      { label: "Emerging", href: "/tools/?emerging=1", note: "New and gaining adoption, each with a dated source" },
+      { label: "Daily stack", href: "/tools/#stack", note: "The thirty tools I use every day" },
+    ],
+  },
+  {
+    n: "05", id: "certificates", label: "Certificates", title: "Industry certificates", href: "/certificates/", match: ["/certificates/"],
     line: "The certificates the industry asks for most, and what each one proves.",
     pages: [{ label: "Certificates", href: "/certificates/", note: "By provider and by role", soon: true }],
   },
   {
-    n: "05", id: "docs", label: "Docs", title: "Technical docs, in motion", href: "/docs/", match: ["/docs/", "/jargon/", "/learn/"],
+    n: "06", id: "docs", label: "Docs", title: "Technical docs, in motion", href: "/docs/", match: ["/docs/", "/jargon/", "/learn/"],
     line: "The docs people skip, turned into short animations, examples and code.",
     pages: [
       { label: "Claude Platform", href: "/docs/claude-platform/", note: "How your app talks to Claude" },
@@ -51,7 +59,7 @@ export const structure: Section[] = [
     ],
   },
   {
-    n: "06", id: "contribute", label: "Feedback", title: "Feedback and corrections", href: "/contribute/", match: ["/contribute/"],
+    n: "07", id: "contribute", label: "Feedback", title: "Feedback and corrections", href: "/contribute/", match: ["/contribute/"],
     line: "Spot something wrong, missing or out of date? Tell me.",
     pages: [{ label: "Send a correction", href: "/contribute/", note: "Email or LinkedIn" }],
   },

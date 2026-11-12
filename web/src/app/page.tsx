@@ -44,7 +44,7 @@ export default function Home() {
           <span className="kicker rise">awesome-applied-ai</span>
           <h1 className="rise" style={{ ["--i" as string]: 1, marginTop: 14 }}><TH k="home.h1">Applied AI, <mark>mapped</mark></TH><span className="dot">.</span></h1>
           <p className="lead rise" style={{ ["--i" as string]: 2, marginTop: 18 }}>
-            <T k="home.lead">From what the market asks for to the docs you need to build it: six steps, in order.</T>
+            <T k="home.lead">From what the market asks for to the docs you need to build it: seven steps, in order.</T>
           </p>
           <div className="rise" style={{ ["--i" as string]: 3, display: "flex", gap: 10, flexWrap: "wrap", marginTop: 26 }}>
             <Link href="#market" className="btn"><T k="home.start">Start with the market</T> →</Link>

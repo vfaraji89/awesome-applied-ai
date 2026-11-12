@@ -67,7 +67,7 @@ const layerIds = new Set([...readFileSync(P.layers, "utf8").matchAll(/^\s{2,4}id
 const ALLOWED = {
   area: union(radarSrc, "Area"), ring: union(radarSrc, "Ring"), field: union(typesSrc, "FieldId"),
   model: union(typesSrc, "SourceModel"), maturity: union(typesSrc, "Maturity"), deployment: union(typesSrc, "Deployment"),
-  kind: union(typesSrc, "Kind"), status: union(typesSrc, "Status"), layer: layerIds,
+  kind: union(typesSrc, "Kind"), status: union(typesSrc, "Status"), layer: layerIds, toolArea: union(typesSrc, "ToolArea"),
   ats: new Set(["greenhouse", "lever", "ashby", "workday"]),
 };
 
@@ -79,9 +79,9 @@ const TABS: Tab[] = [
     required: ["id", "name", "area", "ring", "short", "what", "why", "use", "avoid", "sources"], enums: { area: "area", ring: "ring" }, unique: "id", linkCols: ["examples", "sources"] },
   { name: "radar_quarter", head: ["quarter", "title", "line", "href"], required: ["quarter", "title", "line", "href"] },
   { name: "settings", head: ["key", "value"], required: ["key"] },
-  { name: "tools", head: ["id", "name", "layer", "category", "summary", "license", "model", "maturity", "deployment", "kind", "status", "url", "tags", "note"],
-    required: ["id", "name", "layer", "category", "summary", "license", "model", "url"],
-    enums: { layer: "layer", model: "model", maturity: "maturity", deployment: "deployment", kind: "kind", status: "status" }, unique: "id", urls: ["url"] },
+  { name: "tools", head: ["id", "name", "area", "category", "layer", "summary", "license", "model", "maturity", "deployment", "kind", "status", "url", "icon", "emerging", "emerging_why", "emerging_source", "tags", "note"],
+    required: ["id", "name", "area", "category", "summary", "license", "model", "url"],
+    enums: { area: "toolArea", layer: "layer", model: "model", maturity: "maturity", deployment: "deployment", kind: "kind", status: "status" }, unique: "id", urls: ["url", "emerging_source"] },
   { name: "jargon", head: ["id", "term", "field", "short", "detail", "asked", "also", "tags", "link_label", "link_href"],
     required: ["id", "term", "field", "short", "detail"], enums: { field: "field" }, unique: "id", urls: ["link_href"] },
   { name: "jargon_fields", head: ["id", "name", "tagline", "intro"], required: ["id", "name", "tagline", "intro"], enums: { id: "field" }, unique: "id" },
@@ -98,7 +98,7 @@ function exportRows(): Record<string, Row[]> {
     radar: radar.items.map((r: any) => ({ ...r, examples: joinLinks(r.examples), sources: joinLinks(r.sources), more: joinLinks(r.more) })),
     radar_quarter: radar.quarter.points.map((p: any) => ({ quarter: radar.quarter.name, ...p })),
     settings: [{ key: "radar_checked", value: radar.checked }, { key: "companies_note", value: comp._note ?? "" }],
-    tools: tools.map((t: any) => ({ ...t, tags: joinWords(t.tags) })),
+    tools: tools.map((t: any) => ({ ...t, tags: joinWords(t.tags), emerging: t.emerging ? "TRUE" : "", emerging_why: t.emergingWhy ?? "", emerging_source: t.emergingSource ?? "" })),
     jargon: jargon.terms.map((t: any) => ({ ...t, also: joinWords(t.also), tags: joinWords(t.tags), link_label: t.link?.label ?? "", link_href: t.link?.href ?? "" })),
     jargon_fields: jargon.fields,
   };
@@ -116,8 +116,14 @@ function validate(tab: Tab, rows: Row[], errs: string[]) {
     for (const col of tab.urls ?? []) if (r[col] && !/^(https:\/\/|\/)/.test(r[col])) errs.push(`${at}: ${col} must be https://… or a path on this site (/…)`);
     for (const col of tab.linkCols ?? []) for (const l of links(r[col] ?? "")) if (!/^https:\/\//.test(l.url)) errs.push(`${at}: ${col} line "${l.label}" needs "label | https://…"`);
     for (const l of links(r.more ?? "")) if (!l.url.startsWith("/")) errs.push(`${at}: more line "${l.label}" needs "label | /path/on/this/site/"`);
+    if (tab.name === "tools") {
+      if (r.emerging && !YES.test(r.emerging) && !NO.test(r.emerging)) errs.push(`${at}: emerging "${r.emerging}" must be TRUE or FALSE`);
+      if (YES.test(r.emerging ?? "") && (!r.emerging_why || !r.emerging_source)) errs.push(`${at}: an emerging tool needs emerging_why (with a date) and emerging_source`);
+      if (r.icon && !/^[a-z0-9]+$/.test(r.icon)) errs.push(`${at}: icon "${r.icon}" must be a Simple Icons slug (lowercase letters and digits)`);
+    }
   });
 }
+const YES = /^(true|yes|1|x)$/i, NO = /^(false|no|0)$/i;
 const opt = <T,>(v: string, f: (s: string) => T) => (v ? f(v) : undefined);
 const compact = (o: Record<string, unknown>) => Object.fromEntries(Object.entries(o).filter(([, v]) => v !== undefined && v !== "" && !(Array.isArray(v) && !v.length && v !== null)));
 
@@ -141,8 +147,10 @@ function build(d: Record<string, Row[]>) {
     })),
   };
   const tools = d.tools.map((t) => compact({
-    id: t.id, name: t.name, layer: t.layer, category: t.category, summary: t.summary, license: t.license, model: t.model,
-    maturity: t.maturity, deployment: t.deployment, url: t.url, tags: words(t.tags ?? ""), note: t.note, status: t.status, kind: t.kind,
+    id: t.id, name: t.name, area: t.area, layer: t.layer, category: t.category, summary: t.summary, license: t.license, model: t.model,
+    maturity: t.maturity, deployment: t.deployment, url: t.url, icon: t.icon, emerging: YES.test(t.emerging ?? "") ? true : undefined,
+    emergingWhy: YES.test(t.emerging ?? "") ? t.emerging_why : undefined, emergingSource: YES.test(t.emerging ?? "") ? t.emerging_source : undefined,
+    tags: words(t.tags ?? ""), note: t.note, status: t.status, kind: t.kind,
   }));
   const jargon = {
     fields: d.jargon_fields.map((f) => ({ id: f.id, name: f.name, tagline: f.tagline, intro: f.intro })),

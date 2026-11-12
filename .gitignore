@@ -20,3 +20,5 @@ service-account*.json
 # bun scripts/content.ts export (default folder)
 content-export/
 web/public/pulse.json
+web/src/data/tool-icons.json
+tool-candidates.md
