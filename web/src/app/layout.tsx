@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { Analytics } from "@/components/analytics";
+import { LangProvider } from "@/i18n/lang";
 import { site } from "@/lib/site";
 import "./globals.css";
 
@@ -50,10 +51,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <meta name="referrer" content="strict-origin-when-cross-origin" />
       </head>
       <body>
-        <SiteHeader />
-        <main>{children}</main>
-        <SiteFooter />
-        <Analytics />
+        <LangProvider>
+          <SiteHeader />
+          <main>{children}</main>
+          <SiteFooter />
+          <Analytics />
+        </LangProvider>
       </body>
     </html>
   );

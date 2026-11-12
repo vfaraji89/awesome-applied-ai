@@ -13,4 +13,4 @@ export const site = {
   },
 } as const;
 
-export const nav = structure.map((s) => ({ href: s.href, label: s.label, match: s.match }));
+export const nav = structure.map((s) => ({ id: s.id, href: s.href, label: s.label, match: s.match }));

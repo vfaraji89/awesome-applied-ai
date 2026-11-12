@@ -1,5 +1,7 @@
 "use client";
 import Link from "next/link";
+import { T, TH } from "@/i18n/lang";
+import { slug } from "@/i18n/slug";
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -51,9 +53,9 @@ export function SiteFooter() {
     <footer className="ft" ref={root}>
       <div className="wrap fh">
         <div className="fh-say">
-          <span className="kicker">The whole site, as an agent would see it</span>
-          <h2 className="fh-title">One harness, six tools<span className="dot">.</span></h2>
-          <p className="muted">The box is the harness, the red bead is the model, and every section is a tool it can call. Point at one to call it.</p>
+          <span className="kicker"><T k="ft.kicker">The whole site, as an agent would see it</T></span>
+          <h2 className="fh-title"><T k="ft.title">One harness, six tools</T><span className="dot">.</span></h2>
+          <p className="muted"><T k="ft.text">The box is the harness, the red bead is the model, and every section is a tool it can call. Point at one to call it.</T></p>
         </div>
         <div className="fh-diagram" onMouseLeave={() => { hold.current = false; }}>
           <div className="fh-box" aria-hidden="true">
@@ -66,8 +68,8 @@ export function SiteFooter() {
                 <span className="fh-wire" aria-hidden="true"><span className="fh-call" /></span>
                 <Link href={s.href} className="fh-tool">
                   <span className="mono fh-n">{s.n}</span>
-                  <b>{s.label}</b>
-                  <span className="fh-line">{s.line}</span>
+                  <b><T k={`sec.${s.id}.label`}>{s.label}</T></b>
+                  <span className="fh-line"><T k={`sec.${s.id}.line`}>{s.line}</T></span>
                 </Link>
               </li>
             ))}
@@ -82,7 +84,7 @@ export function SiteFooter() {
           <span className="ft-role">awesome-applied-ai</span>
         </Link>
         <nav className="ft-nav" aria-label="Footer">
-          {structure.flatMap((s) => s.pages.filter((p) => !p.soon && !p.href.includes("#"))).filter((p, i, a) => a.findIndex((q) => q.href === p.href) === i).map((p) => <Link key={p.href} href={p.href}>{p.label}</Link>)}
+          {structure.flatMap((s) => s.pages.filter((p) => !p.soon && !p.href.includes("#"))).filter((p, i, a) => a.findIndex((q) => q.href === p.href) === i).map((p) => <Link key={p.href} href={p.href}><T k={`page.${slug(p.label)}`}>{p.label}</T></Link>)}
         </nav>
         <div className="ft-social">
           <a href={site.author.linkedin} target="_blank" rel="noopener" aria-label="LinkedIn">{LI}</a>
@@ -90,8 +92,8 @@ export function SiteFooter() {
         </div>
       </div>
       <div className="wrap ft-meta">
-        <span>© {new Date().getFullYear()} <a href={site.author.site}>Vahid Faraji</a> · Istanbul, Türkiye · The companion to <i>{site.author.book}</i>, a book in progress · All rights reserved</span>
-        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}>Back to top ↑</a>
+        <span>© {new Date().getFullYear()} <a href={site.author.site}>Vahid Faraji</a> · <TH k="ft.meta">Istanbul, Türkiye · The companion to <i>{site.author.book}</i>, a book in progress · All rights reserved</TH></span>
+        <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}><T k="ft.top">Back to top</T> ↑</a>
       </div>
       <div className="ft-word" aria-hidden="true">applied ai<span>.</span></div>
 
@@ -99,7 +101,7 @@ export function SiteFooter() {
         .ft { border-top: 1px solid var(--line); background: var(--paper); color: var(--sec); margin-top: 40px; overflow: hidden; }
         .ft a { text-decoration: none; color: inherit; }
         .fh { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 48px; padding-top: 72px; padding-bottom: 56px; align-items: center; }
-        @media (max-width: 900px) { .fh { grid-template-columns: 1fr; gap: 28px; } }
+        @media (max-width: 900px) { .fh { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
         .fh-title { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.05; color: var(--ink); margin: 8px 0 12px; }
         .fh-diagram { display: grid; grid-template-columns: 120px 1fr; }
         .fh-box { position: relative; border: 2px solid var(--ink); border-radius: 22px; background: var(--bg); }

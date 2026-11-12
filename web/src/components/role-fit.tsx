@@ -5,6 +5,7 @@ import { track } from "@/lib/track";
 import data from "@/data/role-fit.json";
 import { skills as skillDefs } from "@/data/framework";
 import { learn } from "@/data/learn";
+import { useT } from "@/i18n/lang";
 
 /* Role fit, both ways round. "My experience" reads a CV and finds the closest role;
    "A job description" reads a posting and compares it with what similar postings ask.
@@ -22,7 +23,7 @@ const toolRe = D.toolPatterns.map((t) => ({ name: t.name, re: new RegExp(t.sourc
 const roleRe = D.rolePatterns.map((r) => ({ id: r.id, re: new RegExp(r.source, r.flags) }));
 const skillName = (id: string) => skillDefs.find((s) => s.id === id)?.name ?? id;
 /** "A", "A and B", "A, B and C": skill names keep their capitals (SQL, RAG). */
-const list = (xs: string[]) => (xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(", ")} and ${xs[xs.length - 1]}`);
+const list = (xs: string[], and = " and ", comma = ", ") => (xs.length < 2 ? xs.join("") : `${xs.slice(0, -1).join(comma)}${and}${xs[xs.length - 1]}`);
 const read = (text: string) => ({
   skills: skillRe.filter((s) => s.re.test(text)).map((s) => s.id),
   tools: toolRe.filter((t) => t.re.test(text)).map((t) => t.name),
@@ -86,6 +87,7 @@ function auditJd(text: string) {
 
 // ------------------------------------------------------------------- learning path
 function Path({ ids, title }: { ids: string[]; title: string }) {
+  const t = useT();
   if (!ids.length) return null;
   return (
     <div className="lp">
@@ -95,10 +97,10 @@ function Path({ ids, title }: { ids: string[]; title: string }) {
           <li key={id}>
             <span className="lp-n">{i + 1}</span>
             <div>
-              <b>{skillName(id)}</b>
-              <span className="muted"> · {skillDefs.find((s) => s.id === id)?.what}</span>
+              <b>{t(`skill.${id}`, skillName(id))}</b>
+              <span className="muted"> · {t(`skillwhat.${id}`, skillDefs.find((s) => s.id === id)?.what ?? "")}</span>
               <div className="lp-links">
-                {(learn[id] ?? []).map((l) => <Link key={l.href + l.label} href={l.href} className="chip"><span className="lp-k">{l.kind}</span>{l.label}</Link>)}
+                {(learn[id] ?? []).map((l) => <Link key={l.href + l.label} href={l.href} className="chip"><span className="lp-k">{t(`kind.${l.kind.toLowerCase()}`, l.kind)}</span>{l.label}</Link>)}
               </div>
             </div>
           </li>
@@ -118,64 +120,68 @@ export function RoleFit() {
   const samples = mode === "cv" ? CV_SAMPLES : JD_SAMPLES;
   const run = (t: string) => { setRan((r) => ({ ...r, [mode]: t })); track("role_fit_check", { mode, chars: Math.min(t.length, 5000) }); };
   const best = cv?.roles[0];
+  const t = useT();
+  const sn = (id: string) => t(`skill.${id}`, skillName(id));
+  const ls = (xs: string[]) => list(xs, t("rf.and", " and "), t("rf.comma", ", "));
+  const band = (b: string) => t(`rf.band_${b.replace(" ", "_")}`, b);
 
   return (
     <div className="rf">
-      <div className="rf-tabs" role="tablist" aria-label="Which way round">
-        <button role="tab" aria-selected={mode === "cv"} onClick={() => setMode("cv")}><b>My experience</b><span>Which role fits me?</span></button>
-        <button role="tab" aria-selected={mode === "jd"} onClick={() => setMode("jd")}><b>A job description</b><span>How does this role compare?</span></button>
+      <div className="rf-tabs" role="tablist" aria-label={t("rf.tabs", "Which way round")}>
+        <button role="tab" aria-selected={mode === "cv"} onClick={() => setMode("cv")}><b>{t("rf.cv", "My experience")}</b><span>{t("rf.cv_q", "Which role fits me?")}</span></button>
+        <button role="tab" aria-selected={mode === "jd"} onClick={() => setMode("jd")}><b>{t("rf.jd", "A job description")}</b><span>{t("rf.jd_q", "How does this role compare?")}</span></button>
       </div>
 
       <div className="frame rf-in">
-        <label htmlFor="rf-text" className="kicker">{mode === "cv" ? "Your experience" : "The job description"}</label>
+        <label htmlFor="rf-text" className="kicker">{mode === "cv" ? t("rf.cv_label", "Your experience") : t("rf.jd_label", "The job description")}</label>
         <textarea id="rf-text" value={text[mode]} onChange={(e) => setText((x) => ({ ...x, [mode]: e.target.value }))} maxLength={20000}
-          placeholder={mode === "cv" ? "Paste your CV, your LinkedIn About, or just a list: Python, RAG, evals, customer workshops…" : "Paste a job description. Put the job title on the first line."} />
+          placeholder={mode === "cv" ? t("rf.cv_ph", "Paste your CV, your LinkedIn About, or just a list: Python, RAG, evals, customer workshops…") : t("rf.jd_ph", "Paste a job description. Put the job title on the first line.")} />
         <div className="rf-bar">
-          <button className="btn" onClick={() => run(text[mode])}>{mode === "cv" ? "Check my fit →" : "Audit this role →"}</button>
+          <button className="btn" onClick={() => run(text[mode])}>{mode === "cv" ? t("rf.cv_go", "Check my fit →") : t("rf.jd_go", "Audit this role →")}</button>
           {Object.keys(samples).map((k) => <button key={k} className="chip" onClick={() => { setText((x) => ({ ...x, [mode]: samples[k] })); run(samples[k]); }}>{k}</button>)}
-          <span className="muted rf-note">Runs in your browser. Nothing you paste is sent or stored.</span>
+          <span className="muted rf-note">{t("rf.private", "Runs in your browser. Nothing you paste is sent or stored.")} {t("rf.english", "")}</span>
         </div>
         <span className="rod" />
       </div>
 
       {mode === "cv" && cv && (
         <div className="rf-out" aria-live="polite">
-          {!cv.have.length && !cv.tools.length ? <p className="lead">I could not find skills I can read in that text. Try pasting the skills part of your CV.</p> : (
+          {!cv.have.length && !cv.tools.length ? <p className="lead">{t("rf.cv_none", "I could not find skills I can read in that text. Try pasting the skills part of your CV.")}</p> : (
             <>
               <div className="rf-head">
                 <div>
-                  <span className="kicker">Closest fit</span>
+                  <span className="kicker">{t("rf.closest", "Closest fit")}</span>
                   <h2 style={{ marginTop: 6 }}>{best!.r.name}<span className="dot">.</span></h2>
-                  <p className="muted" style={{ marginTop: 6 }}>{best!.fit}% of what {best!.r.n} {best!.r.name} postings ask for, weighted by how often they ask.</p>
+                  <p className="muted" style={{ marginTop: 6 }}>{t("rf.fit_line", "{fit}% of what {n} {role} postings ask for, weighted by how often they ask.", { fit: best!.fit, n: best!.r.n, role: best!.r.name })}</p>
                 </div>
                 <div>
-                  <span className="kicker">Read from your text</span>
+                  <span className="kicker">{t("rf.read", "Read from your text")}</span>
                   <div className="rf-chips">
-                    {cv.have.map((id) => <span key={id} className="chip on">{skillName(id)}</span>)}
+                    {cv.have.map((id) => <span key={id} className="chip on">{sn(id)}</span>)}
                     {cv.tools.map((t) => <span key={t} className="chip">{t}</span>)}
                   </div>
                 </div>
               </div>
-              <Path ids={best!.missing.map(([id]) => id)} title={`Your path to ${best!.r.name}: what its postings ask for that you don't show yet`} />
+              <Path ids={best!.missing.map(([id]) => id)} title={t("rf.path_cv", "Your path to {role}: what its postings ask for that you don't show yet", { role: best!.r.name })} />
               <ol className="rf-roles">
                 {cv.roles.map(({ r, fit, missing, missingTools }, i) => (
                   <li key={r.id} className={i === 0 ? "top" : ""}>
                     <div className="rf-row">
-                      <span className="rf-name"><b>{r.name}</b><span className="muted"> · {r.family} · {r.n} postings</span></span>
+                      <span className="rf-name"><b>{r.name}</b><span className="muted"> · {r.family} · {t("rf.postings", "{n} postings", { n: r.n })}</span></span>
                       <span className="rf-track"><span style={{ width: `${fit}%` }} /></span>
                       <span className="mono rf-pct">{fit}%</span>
                     </div>
                     {(missing.length > 0 || missingTools.length > 0) && (
                       <p className="rf-next">
-                        <span className="kicker">Learn next</span>{" "}
-                        {missing.map(([id, w]) => <Link key={id} href={learn[id]?.[0]?.href ?? "/roles/#matrix"} className="rf-gap">{skillName(id)} <span className="mono muted">{w}%</span></Link>)}
+                        <span className="kicker">{t("rf.learn_next", "Learn next")}</span>{" "}
+                        {missing.map(([id, w]) => <Link key={id} href={learn[id]?.[0]?.href ?? "/roles/#matrix"} className="rf-gap">{sn(id)} <span className="mono muted">{w}%</span></Link>)}
                         {missingTools.map((t) => <span key={t.name} className="rf-gap tool">{t.name} <span className="mono muted">{t.share}%</span></span>)}
                       </p>
                     )}
                   </li>
                 ))}
               </ol>
-              <p className="count" style={{ marginTop: 14 }}>Percentages after a skill are the share of that role&apos;s postings that ask for it. From {D.postings.toLocaleString("en")} technical AI postings tracked {D.from} to {D.to}.</p>
+              <p className="count" style={{ marginTop: 14 }}>{t("rf.cv_foot", "Percentages after a skill are the share of that role's postings that ask for it. From {n} technical AI postings tracked {from} to {to}.", { n: D.postings.toLocaleString("en"), from: D.from, to: D.to })}</p>
             </>
           )}
         </div>
@@ -183,70 +189,70 @@ export function RoleFit() {
 
       {mode === "jd" && jd && (
         <div className="rf-out" aria-live="polite">
-          {!jd.count && !jd.tools.length ? <p className="lead">I could not find skills I can read in that text. Paste the requirements part of the posting.</p> : (
+          {!jd.count && !jd.tools.length ? <p className="lead">{t("rf.jd_none", "I could not find skills I can read in that text. Paste the requirements part of the posting.")}</p> : (
             <>
               <div className="rf-head">
                 <div>
-                  <span className="kicker">{jd.how === "title" ? "Reads as, from the title" : "Closest role family, by its skills"}</span>
+                  <span className="kicker">{jd.how === "title" ? t("rf.by_title", "Reads as, from the title") : t("rf.by_skills", "Closest role family, by its skills")}</span>
                   <h2 style={{ marginTop: 6 }}>{jd.role.name}<span className="dot">.</span></h2>
-                  <p className="muted" style={{ marginTop: 6 }}>Compared with {jd.role.n} {jd.role.name} postings tracked {D.from} to {D.to}.</p>
+                  <p className="muted" style={{ marginTop: 6 }}>{t("rf.compared", "Compared with {n} {role} postings tracked {from} to {to}.", { n: jd.role.n, role: jd.role.name, from: D.from, to: D.to })}</p>
                 </div>
                 <ul className="ja-verdict">
-                  <li className={jd.forgot.length ? "warn" : "ok"}><b>{jd.forgot.length ? `${jd.forgot.length} common ask${jd.forgot.length > 1 ? "s" : ""} missing` : "Covers the common asks"}</b><span className="muted">{jd.forgot.length ? "Most similar postings ask for these; this one doesn't." : "Nothing most similar postings ask for is left out."}</span></li>
-                  <li className={jd.rare.length ? "warn" : "ok"}><b>{jd.rare.length ? `${jd.rare.length} rare ask${jd.rare.length > 1 ? "s" : ""}` : "No rare asks"}</b><span className="muted">{jd.rare.length ? "Under a quarter of similar postings ask for these: fewer people will match." : "Every skill it asks for is usual for this role."}</span></li>
-                  <li className={jd.over ? "warn" : "ok"}><b>{jd.count} skill areas asked</b><span className="muted">{jd.over ? `Similar postings ask for ${jd.role.avgSkills} on average. A long list narrows the pool to almost no one.` : `Similar postings ask for ${jd.role.avgSkills} on average.`}</span></li>
+                  <li className={jd.forgot.length ? "warn" : "ok"}><b>{jd.forgot.length ? (jd.forgot.length > 1 ? t("rf.forgot_n", "{n} common asks missing", { n: jd.forgot.length }) : t("rf.forgot_1", "1 common ask missing")) : t("rf.forgot_0", "Covers the common asks")}</b><span className="muted">{jd.forgot.length ? t("rf.forgot_line", "Most similar postings ask for these; this one doesn't.") : t("rf.forgot_ok", "Nothing most similar postings ask for is left out.")}</span></li>
+                  <li className={jd.rare.length ? "warn" : "ok"}><b>{jd.rare.length ? (jd.rare.length > 1 ? t("rf.rare_n", "{n} rare asks", { n: jd.rare.length }) : t("rf.rare_1", "1 rare ask")) : t("rf.rare_0", "No rare asks")}</b><span className="muted">{jd.rare.length ? t("rf.rare_line", "Under a quarter of similar postings ask for these: fewer people will match.") : t("rf.rare_ok", "Every skill it asks for is usual for this role.")}</span></li>
+                  <li className={jd.over ? "warn" : "ok"}><b>{t("rf.count", "{n} skill areas asked", { n: jd.count })}</b><span className="muted">{t("rf.avg", "Similar postings ask for {n} on average.", { n: jd.role.avgSkills })}{jd.over ? " " + t("rf.over", "A long list narrows the pool to almost no one.") : ""}</span></li>
                 </ul>
               </div>
 
-              <span className="kicker" style={{ display: "block", marginTop: 26 }}>What it asks for, against the market</span>
+              <span className="kicker" style={{ display: "block", marginTop: 26 }}>{t("rf.against", "What it asks for, against the market")}</span>
               <ul className="ja-rows">
                 {jd.askedRows.map((r) => (
                   <li key={r.id} className={`ja-${r.band}`}>
-                    <span className="ja-name">{skillName(r.id)}</span>
+                    <span className="ja-name">{sn(r.id)}</span>
                     <span className="rf-track"><span style={{ width: `${r.share}%` }} /></span>
                     <span className="mono rf-pct">{r.share}%</span>
-                    <span className="ja-band">{r.band}</span>
+                    <span className="ja-band">{band(r.band)}</span>
                   </li>
                 ))}
                 {jd.forgot.map(([id, w]) => (
                   <li key={id} className="ja-forgot">
-                    <span className="ja-name">{skillName(id)}</span>
+                    <span className="ja-name">{sn(id)}</span>
                     <span className="rf-track"><span style={{ width: `${w}%` }} /></span>
                     <span className="mono rf-pct">{w}%</span>
-                    <span className="ja-band">not asked</span>
+                    <span className="ja-band">{band("not asked")}</span>
                   </li>
                 ))}
               </ul>
               {(jd.tools.length > 0 || jd.forgotTools.length > 0) && (
                 <p className="rf-next" style={{ marginTop: 14 }}>
-                  <span className="kicker">Tools</span>{" "}
+                  <span className="kicker">{t("rf.tools", "Tools")}</span>{" "}
                   {jd.tools.map((t) => <span key={t} className="chip on">{t}</span>)}
-                  {jd.forgotTools.map((t) => <span key={t.name} className="rf-gap">{t.name} <span className="mono muted">{t.share}% of similar postings</span></span>)}
+                  {jd.forgotTools.map((t2) => <span key={t2.name} className="rf-gap">{t2.name} <span className="mono muted">{t("rf.share", "{n}% of similar postings", { n: t2.share })}</span></span>)}
                 </p>
               )}
 
               <div className="ja-two">
                 <div className="frame ja-card">
-                  <span className="kicker">If you are hiring</span>
+                  <span className="kicker">{t("rf.hiring", "If you are hiring")}</span>
                   <ul className="ed">
-                    {jd.forgot.length > 0 && <li>Say whether you need {list(jd.forgot.map(([id]) => skillName(id)))}: most {jd.role.name} postings ask, and strong candidates will look for it.</li>}
-                    {jd.rare.length > 0 && <li>Check you truly need {list(jd.rare.map((r) => skillName(r.id)))}. Rare asks shrink the pool; move them to &ldquo;nice to have&rdquo; if you can.</li>}
-                    {jd.over && <li>Cut the list toward {Math.round(jd.role.avgSkills)} core areas. A posting that asks for everything reads as unclear about the job.</li>}
-                    {!jd.forgot.length && !jd.rare.length && !jd.over && <li>This posting reads like the market: clear, usual asks, a normal length.</li>}
+                    {jd.forgot.length > 0 && <li>{t("rf.h_forgot", "Say whether you need {skills}: most {role} postings ask, and strong candidates will look for it.", { skills: ls(jd.forgot.map(([id]) => sn(id))), role: jd.role.name })}</li>}
+                    {jd.rare.length > 0 && <li>{t("rf.h_rare", "Check you truly need {skills}. Rare asks shrink the pool; move them to “nice to have” if you can.", { skills: ls(jd.rare.map((r) => sn(r.id))) })}</li>}
+                    {jd.over && <li>{t("rf.h_over", "Cut the list toward {n} core areas. A posting that asks for everything reads as unclear about the job.", { n: Math.round(jd.role.avgSkills) })}</li>}
+                    {!jd.forgot.length && !jd.rare.length && !jd.over && <li>{t("rf.h_ok", "This posting reads like the market: clear, usual asks, a normal length.")}</li>}
                   </ul>
                   <span className="rod" />
                 </div>
                 <div className="frame ja-card">
-                  <span className="kicker">If you are applying</span>
+                  <span className="kicker">{t("rf.applying", "If you are applying")}</span>
                   <ul className="ed">
-                    {jd.askedRows.filter((r) => r.band === "standard").length > 0 && <li>Lead with {list(jd.askedRows.filter((r) => r.band === "standard").map((r) => skillName(r.id)).slice(0, 3))}: the core of this role across the market.</li>}
-                    {jd.rare.length > 0 && <li>{list(jd.rare.map((r) => skillName(r.id)))} {jd.rare.length > 1 ? "are" : "is"} unusual here. If you have {jd.rare.length > 1 ? "them" : "it"}, say so early: few applicants will.</li>}
-                    <li>Check your own fit in the other tab, then follow the path below for anything you are missing.</li>
+                    {jd.askedRows.filter((r) => r.band === "standard").length > 0 && <li>{t("rf.a_lead", "Lead with {skills}: the core of this role across the market.", { skills: ls(jd.askedRows.filter((r) => r.band === "standard").map((r) => sn(r.id)).slice(0, 3)) })}</li>}
+                    {jd.rare.length > 0 && <li>{jd.rare.length > 1 ? t("rf.a_rare_n", "{skills} are unusual here. If you have them, say so early: few applicants will.", { skills: ls(jd.rare.map((r) => sn(r.id))) }) : t("rf.a_rare_1", "{skills} is unusual here. If you have it, say so early: few applicants will.", { skills: sn(jd.rare[0].id) })}</li>}
+                    <li>{t("rf.a_other", "Check your own fit in the other tab, then follow the path below for anything you are missing.")}</li>
                   </ul>
                   <span className="rod" />
                 </div>
               </div>
-              <Path ids={jd.askedRows.map((r) => r.id).slice(0, 5)} title="Learn what this role asks for, on this site" />
+              <Path ids={jd.askedRows.map((r) => r.id).slice(0, 5)} title={t("rf.path_jd", "Learn what this role asks for, on this site")} />
             </>
           )}
         </div>

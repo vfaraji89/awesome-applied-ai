@@ -69,6 +69,7 @@ p { margin: 0; }
   .site-header .wrap { height: auto; flex-wrap: wrap; padding-top: 10px; padding-bottom: 6px; gap: 6px; }
   .nav { margin-left: -8px; width: calc(100% + 16px); order: 2; }
   .hdr-fit { order: 1; margin-left: auto; }
+  .lgp { order: 1; }
   .brand small { display: none; }
 }
 
@@ -145,3 +146,27 @@ a.chip:hover { border-color: var(--rust); color: var(--rust-deep); }
 .more-btn:hover { border-color: var(--rust); color: var(--rust-deep); }
 .more-btn span { font-family: var(--font-mono), monospace; }
 @media (prefers-reduced-motion: reduce) { .more-body { transition: none; } }
+
+/* Language bead in the header and its five beads (src/i18n/lang.tsx). */
+.lgp { position: relative; flex: none; }
+.lgp-btn { display: grid; place-items: center; width: 34px; height: 34px; border-radius: 50%; border: 1px solid var(--line-strong); background: var(--card); cursor: pointer; transition: border-color .2s, transform .5s cubic-bezier(.34,1.56,.64,1); }
+.lgp-btn:hover { border-color: var(--rust); transform: rotate(-10deg) scale(1.06); }
+.lgp-btn[aria-expanded="true"] { border-color: var(--ink); background: var(--ink); }
+.lgp-btn[aria-expanded="true"] .lgp-glyph { color: var(--bg, #fff); }
+.lgp-glyph { font: 600 15px/1 var(--font-sans), "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif; color: var(--ink); animation: lgp-swap .5s cubic-bezier(.34,1.56,.64,1); }
+@keyframes lgp-swap { 0% { transform: scale(.4) rotate(-90deg); opacity: 0; } 70% { transform: scale(1.2) rotate(8deg); opacity: 1; } 100% { transform: none; } }
+.lgp-pop { position: absolute; right: 0; top: calc(100% + 10px); z-index: 60; width: 230px; display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 24px 48px -24px rgba(28,28,30,.45); animation: lgp-drop .45s cubic-bezier(.34,1.56,.64,1) both; }
+@keyframes lgp-drop { from { opacity: 0; transform: translateY(-6px) scale(.97); } to { opacity: 1; transform: none; } }
+.lgp-k { font-family: var(--font-mono), monospace; font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 2px 4px; }
+.lgp-bead { display: flex; align-items: center; gap: 10px; padding: 5px 12px 5px 5px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: .88rem; font-weight: 600; text-align: left; cursor: pointer; transition: border-color .2s, background .2s; }
+.lgp-bead i { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; font-style: normal; font: 600 .95rem/1 var(--font-sans), "Hiragino Sans", "Noto Sans JP", sans-serif; background: var(--paper); box-shadow: inset -2px -2px 0 rgba(0,0,0,.08); transition: transform .5s cubic-bezier(.34,1.56,.64,1); }
+.lgp-bead:hover { border-color: var(--rust); } .lgp-bead:hover i { transform: rotate(-12deg) scale(1.08); }
+.lgp-bead[aria-pressed="true"] { background: var(--ink); color: var(--bg, #fff); border-color: var(--ink); }
+.lgp-bead[aria-pressed="true"] i { background: var(--rust); color: #fff; }
+.lgp-note { margin: 4px 4px 0; font-size: .72rem; line-height: 1.4; color: var(--muted); }
+html[lang="ja"] body { line-break: strict; }
+html[lang="ja"] p { word-break: auto-phrase; }
+@media (prefers-reduced-motion: reduce) { .lgp-glyph, .lgp-pop { animation: none; } .lgp-btn, .lgp-bead i { transition: none; } }
+
+/* Translations carry longer words (Dutch and Turkish compounds): let headings hyphenate on phones. */
+@media (max-width: 480px) { html:not([lang="en"]) h1, html:not([lang="en"]) h2 { hyphens: auto; overflow-wrap: break-word; } }

@@ -4,6 +4,7 @@ import { Crumb } from "@/components/section-intro";
 import { TechRadar } from "@/components/tech-radar";
 import { More } from "@/components/more";
 import { radar, checked, quarter } from "@/data/radar";
+import { TH } from "@/i18n/lang";
 
 export const metadata: Metadata = { title: "Emerging tech radar", description: "What is new in applied AI and how far to trust it: tabular foundation models, JEPA world models, diffusion LMs, hybrid state-space models, agent skills and protocols, sandboxes, disaggregated serving, OpenTelemetry GenAI and more." };
 
@@ -12,10 +13,10 @@ export default function Radar() {
     <section className="section">
       <div className="wrap">
         <Crumb id="architect" page="Emerging tech radar" />
-        <h1 style={{ marginTop: 12 }}>What&apos;s new, and <mark>how far to trust it</mark><span className="dot">.</span></h1>
-        <p className="lead" style={{ marginTop: 16 }}><b>{radar.length} emerging technologies</b>, each on a ring: <b>use now</b>, <b>pilot</b>, <b>evaluate</b> or <b>watch</b>.</p>
+        <h1 style={{ marginTop: 12 }}><TH k="radar.h1">What&apos;s new, and <mark>how far to trust it</mark></TH><span className="dot">.</span></h1>
+        <p className="lead" style={{ marginTop: 16 }}><TH k="radar.p1" vars={{ v1: radar.length }}><b>{radar.length} emerging technologies</b>, each on a ring: <b>use now</b>, <b>pilot</b>, <b>evaluate</b> or <b>watch</b>.</TH></p>
         <More>
-          <p className="lead" style={{ marginTop: 12 }}>Every entry says <b>what it is</b>, <b>why it matters</b>, <b>when to use it</b> and <b>when not to</b>, with its sources. Tap a bead to open its card.</p>
+          <p className="lead" style={{ marginTop: 12 }}><TH k="radar.p2">Every entry says <b>what it is</b>, <b>why it matters</b>, <b>when to use it</b> and <b>when not to</b>, with its sources. Tap a bead to open its card.</TH></p>
           <p className="count" style={{ marginTop: 12 }}>Read on {checked} from papers, project pages and practitioner write-ups. Vendor figures are treated as claims, not results. Spot something out of date? <Link href="/contribute/">Send a fix</Link>.</p>
         </More>
         <div className="frame q-brief">

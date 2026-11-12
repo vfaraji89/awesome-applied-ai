@@ -8,6 +8,8 @@ import { docs } from "@/data/docs";
 import { site } from "@/lib/site";
 import market from "@/data/market.json";
 import { FitIcon } from "@/components/fit-icon";
+import { T, TH } from "@/i18n/lang";
+import { slug } from "@/i18n/slug";
 
 function Band({ s, alt, children }: { s: Section; alt?: boolean; children: React.ReactNode }) {
   return (
@@ -15,11 +17,11 @@ function Band({ s, alt, children }: { s: Section; alt?: boolean; children: React
       <div className="wrap band-grid">
         <div className="band-head">
           <span className="band-n">{s.n}</span>
-          <h2>{s.title}<span className="dot">.</span></h2>
-          <p className="lead">{s.line}</p>
+          <h2><T k={`sec.${s.id}.title`}>{s.title}</T><span className="dot">.</span></h2>
+          <p className="lead"><T k={`sec.${s.id}.line`}>{s.line}</T></p>
           <ul className="band-pages">
             {s.pages.map((p) => (
-              <li key={p.href}><Link href={p.href}><b>{p.label}</b><span className="muted">{p.note}</span>{p.soon ? <span className="soon">soon</span> : <span className="band-go">→</span>}</Link></li>
+              <li key={p.href}><Link href={p.href}><b><T k={`page.${slug(p.label)}`}>{p.label}</T></b><span className="muted"><T k={`note.${slug(p.label)}`}>{p.note}</T></span>{p.soon ? <span className="soon"><T k="ui.soon">soon</T></span> : <span className="band-go">→</span>}</Link></li>
             ))}
           </ul>
         </div>
@@ -40,17 +42,17 @@ export default function Home() {
       <section className="section">
         <div className="wrap">
           <span className="kicker rise">awesome-applied-ai</span>
-          <h1 className="rise" style={{ ["--i" as string]: 1, marginTop: 14 }}>Applied AI, <mark>mapped</mark><span className="dot">.</span></h1>
+          <h1 className="rise" style={{ ["--i" as string]: 1, marginTop: 14 }}><TH k="home.h1">Applied AI, <mark>mapped</mark></TH><span className="dot">.</span></h1>
           <p className="lead rise" style={{ ["--i" as string]: 2, marginTop: 18 }}>
-            From what the market asks for to the docs you need to build it: six steps, in order.
+            <T k="home.lead">From what the market asks for to the docs you need to build it: six steps, in order.</T>
           </p>
           <div className="rise" style={{ ["--i" as string]: 3, display: "flex", gap: 10, flexWrap: "wrap", marginTop: 26 }}>
-            <Link href="#market" className="btn">Start with the market →</Link>
-            <Link href="/docs/" className="btn ghost">Read the docs</Link>
+            <Link href="#market" className="btn"><T k="home.start">Start with the market</T> →</Link>
+            <Link href="/docs/" className="btn ghost"><T k="home.docs">Read the docs</T></Link>
           </div>
           <Link href="/fit/" className="frame home-fit rise" style={{ ["--i" as string]: 4 }}>
             <span className="hf-ic"><FitIcon size={28} /></span>
-            <span><span className="kicker">Role fit</span><b>Which applied AI role fits you?</b><span className="muted">Paste your CV. Scored against {market.totals.allTime.toLocaleString("en")} real postings, with what to learn next.</span></span>
+            <span><span className="kicker"><T k="page.role-fit">Role fit</T></span><b><T k="home.fit_b">Which applied AI role fits you?</T></b><span className="muted"><T k="home.fit_em" vars={{ n: market.totals.allTime.toLocaleString("en") }}>{"Paste your CV. Scored against {n} real postings, with what to learn next."}</T></span></span>
             <span className="hf-go" aria-hidden="true">→</span>
             <span className="rod" />
           </Link>
@@ -61,11 +63,11 @@ export default function Home() {
       <Band s={mk} alt>
         <div className="frame show-market">
           <div className="sm-stats">
-            <div><b>{market.totals.allTime.toLocaleString("en")}</b><span className="muted">technical AI roles tracked</span></div>
-            <div><b>{market.totals.remoteShare}%</b><span className="muted">remote</span></div>
-            <div><b>{market.sources.reduce((a, x) => a + x.boards, 0)}</b><span className="muted">public boards</span></div>
+            <div><b>{market.totals.allTime.toLocaleString("en")}</b><span className="muted"><T k="home.st_tracked">technical AI roles tracked</T></span></div>
+            <div><b>{market.totals.remoteShare}%</b><span className="muted"><T k="home.st_remote">remote</T></span></div>
+            <div><b>{market.sources.reduce((a, x) => a + x.boards, 0)}</b><span className="muted"><T k="home.st_boards">public boards</T></span></div>
           </div>
-          <span className="kicker" style={{ display: "block", marginTop: 20 }}>Most asked-for roles</span>
+          <span className="kicker" style={{ display: "block", marginTop: 20 }}><T k="home.top_roles">Most asked-for roles</T></span>
           <ul className="sm-bars">
             {topRoles.map((r) => <li key={r.id}><span>{roleName[r.id] ?? r.id}</span><i style={{ width: `${(r.n / max) * 100}%` }} /><span className="count">{r.n}</span></li>)}
           </ul>
@@ -74,10 +76,10 @@ export default function Home() {
 
       <Band s={rs}>
         <div className="frame">
-          <span className="kicker">{fRoles.length} role families · {skills.length} skills</span>
+          <span className="kicker"><T k="home.rs_count" vars={{ r: fRoles.length, s: skills.length }}>{"{r} role families · {s} skills"}</T></span>
           <div className="chips-wrap">{fRoles.map((r) => <Link key={r.id} href="/roles/" className={`chip${r.id === "ai-native-architect" ? " on" : ""}`}>{r.name}</Link>)}</div>
-          <span className="kicker" style={{ display: "block", marginTop: 20 }}>Skills</span>
-          <div className="chips-wrap">{skills.map((k) => <span key={k.id} className="chip">{k.name}</span>)}</div>
+          <span className="kicker" style={{ display: "block", marginTop: 20 }}><T k="ui.skills">Skills</T></span>
+          <div className="chips-wrap">{skills.map((k) => <span key={k.id} className="chip"><T k={`skill.${k.id}`}>{k.name}</T></span>)}</div>
         </div>
       </Band>
 
@@ -108,24 +110,25 @@ export default function Home() {
 
       <Band s={co}>
         <div className="frame show-co">
-          <p className="lead" style={{ color: "var(--ink)" }}>Found a mistake, a missing tool or a company worth tracking?</p>
+          <p className="lead" style={{ color: "var(--ink)" }}><T k="home.co_q">Found a mistake, a missing tool or a company worth tracking?</T></p>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 18 }}>
-            <a href={`mailto:${site.author.email}?subject=${encodeURIComponent("awesome-applied-ai: a correction")}`} className="btn">Send a correction</a>
-            <Link href="/contribute/" className="btn ghost">Feedback</Link>
+            <a href={`mailto:${site.author.email}?subject=${encodeURIComponent("awesome-applied-ai: a correction")}`} className="btn"><T k="page.send-a-correction">Send a correction</T></a>
+            <Link href="/contribute/" className="btn ghost"><T k="sec.contribute.label">Feedback</T></Link>
           </div>
         </div>
       </Band>
 
       <style>{`
         .band-grid { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: 48px; align-items: start; }
-        @media (max-width: 960px) { .band-grid { grid-template-columns: 1fr; gap: 28px; } }
+        @media (max-width: 960px) { .band-grid { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
         .band-n { display: inline-grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--ink); color: #fff; font-family: var(--font-mono), monospace; font-size: .95rem; }
         .band-head h2 { margin-top: 16px; }
         .band-head .lead { margin-top: 12px; }
         .band-pages { list-style: none; margin: 22px 0 0; padding: 0; border-top: 1px solid var(--line); }
-        .band-pages a { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: baseline; padding: 12px 2px; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); transition: padding .3s var(--ease); }
+        .band-pages a { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 12px; align-items: baseline; padding: 12px 2px; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); transition: padding .3s var(--ease); }
         .band-pages a:hover { padding-left: 10px; } .band-pages a:hover b { color: var(--rust-deep); }
-        .band-pages .muted { font-size: .88rem; }
+        .band-pages .muted { font-size: .88rem; min-width: 0; }
+        @media (max-width: 480px) { .band-pages a { grid-template-columns: minmax(0, 1fr) auto; } .band-pages a .muted { grid-column: 1; grid-row: 2; } }
         .band-go { color: var(--rust); }
         .sm-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
         .sm-stats div { display: flex; flex-direction: column; } .sm-stats b { font-size: clamp(1.6rem, 3.4vw, 2.4rem); font-weight: 800; letter-spacing: -.04em; }

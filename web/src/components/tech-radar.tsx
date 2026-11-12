@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { track } from "@/lib/track";
+import { useT } from "@/i18n/lang";
 import Link from "next/link";
 import { radar, rings, areas, type Area, type Ring } from "@/data/radar";
 
@@ -33,6 +34,9 @@ export function TechRadar() {
   const [area, setArea] = useState<Area | "all">("all");
   const [ring, setRing] = useState<Ring | "all">("all");
   const [open, setOpen] = useState<string | null>(null);
+  const t = useT();
+  const rn = (g: { id: string; name: string }) => t(`ring.${g.id}`, g.name);
+  const an = (a: { id: string; name: string }) => t(`area.${a.id}`, a.name);
   const [exp, setExp] = useState<Set<string>>(new Set());
   const flip = (id: string) => setExp((e) => { const n = new Set(e); if (n.has(id)) n.delete(id); else { n.add(id); track("radar_open", { item: id, via: "card" }); } return n; });
   const shown = radar.filter((r) => (area === "all" || r.area === area) && (ring === "all" || r.ring === ring));
@@ -47,11 +51,11 @@ export function TechRadar() {
           {RING_R.slice().reverse().map((r, i) => <circle key={r} r={r} className={`tr-ring tr-ring-${3 - i}`} />)}
           <line x1={-R} y1={0} x2={R} y2={0} className="tr-axis" />
           <line x1={0} y1={-R} x2={0} y2={R} className="tr-axis" />
-          {rings.map((g, i) => <text key={g.id} x={4} y={-(i === 0 ? RING_R[0] - 14 : RING_R[i] - 14)} className="tr-ring-label">{g.name}</text>)}
+          {rings.map((g, i) => <text key={g.id} x={4} y={-(i === 0 ? RING_R[0] - 14 : RING_R[i] - 14)} className="tr-ring-label">{rn(g)}</text>)}
           {areas.map((a) => {
             // each quarter's name sits in its own corner of the square, outside the circle
             const q = QUARTER[a.id], left = q === 0 || q === 3, top = q === 0 || q === 1;
-            return <text key={a.id} x={left ? -R - 8 : R + 8} y={top ? -R + 4 : R + 4} className="tr-area-label" textAnchor={left ? "start" : "end"}>{a.name}</text>;
+            return <text key={a.id} x={left ? -R - 8 : R + 8} y={top ? -R + 4 : R + 4} className="tr-area-label" textAnchor={left ? "start" : "end"}>{an(a)}</text>;
           })}
           {radar.map((r, i) => {
             const p = POS[r.id]; const dim = !shown.includes(r);
@@ -66,18 +70,18 @@ export function TechRadar() {
           })}
         </svg>
         <div className="tr-side">
-          <span className="kicker">Rings</span>
+          <span className="kicker">{t("radar.rings", "Rings")}</span>
           <ul className="tr-rings">
             {rings.map((g) => (
               <li key={g.id}><button className={ring === g.id ? "on" : ""} onClick={() => setRing(ring === g.id ? "all" : g.id)}>
-                <i className={`tr-key ring-${g.id}`} /><b>{g.name}</b><span className="muted">{g.line}</span>
+                <i className={`tr-key ring-${g.id}`} /><b>{rn(g)}</b><span className="muted">{t(`ringline.${g.id}`, g.line)}</span>
               </button></li>
             ))}
           </ul>
-          <span className="kicker" style={{ display: "block", marginTop: 18 }}>Quarters</span>
+          <span className="kicker" style={{ display: "block", marginTop: 18 }}>{t("radar.quarters", "Quarters")}</span>
           <div className="tr-chips">
-            <button className={`chip${area === "all" ? " on" : ""}`} onClick={() => setArea("all")}>All</button>
-            {areas.map((a) => <button key={a.id} className={`chip${area === a.id ? " on" : ""}`} onClick={() => setArea(area === a.id ? "all" : a.id)}>{a.name}</button>)}
+            <button className={`chip${area === "all" ? " on" : ""}`} onClick={() => setArea("all")}>{t("radar.all", "All")}</button>
+            {areas.map((a) => <button key={a.id} className={`chip${area === a.id ? " on" : ""}`} onClick={() => setArea(area === a.id ? "all" : a.id)}>{an(a)}</button>)}
           </div>
           <ol className="tr-index">
             {radar.map((r, i) => <li key={r.id} className={shown.includes(r) ? "" : "dim"}><button onClick={() => pick(r.id)}><span className="mono">{i + 1}</span> {r.name}</button></li>)}
@@ -92,22 +96,22 @@ export function TechRadar() {
             <article key={r.id} id={`r-${r.id}`} className={`frame tr-card${open === r.id ? " open" : ""}${exp.has(r.id) ? " exp" : ""}`}>
               <div className="tr-card-top">
                 <span className={`tr-num ring-${r.ring}`}>{n}</span>
-                <span className="kicker">{areas.find((a) => a.id === r.area)!.name} · <b className={`tr-ringname ring-${r.ring}`}>{g.name}</b></span>
+                <span className="kicker">{an(areas.find((a) => a.id === r.area)!)} · <b className={`tr-ringname ring-${r.ring}`}>{rn(g)}</b></span>
               </div>
               <h3>{r.name}<span className="dot">.</span></h3>
               <p className="tr-short"><b>{r.short}</b></p>
-              <p className="tr-use"><span className="kicker">Use it for</span> {r.use}</p>
+              <p className="tr-use"><span className="kicker">{t("radar.use", "Use it for")}</span> {r.use}</p>
               <div className="more-body" aria-hidden={!exp.has(r.id)} inert={!exp.has(r.id) || undefined}><div>
               <p className="tr-what">{r.what}</p>
               <dl className="tr-dl">
-                <div><dt>Why it matters</dt><dd>{r.why}</dd></div>
-                <div><dt>Not for</dt><dd>{r.avoid}</dd></div>
+                <div><dt>{t("radar.why", "Why it matters")}</dt><dd>{r.why}</dd></div>
+                <div><dt>{t("radar.avoid", "Not for")}</dt><dd>{r.avoid}</dd></div>
               </dl>
               <div className="tr-ex">{r.examples.map((e) => <a key={e.url} className="chip" href={e.url} target="_blank" rel="noopener noreferrer">{e.name} ↗</a>)}</div>
-              {r.more && <div className="tr-more"><span className="kicker">On this site</span>{r.more.map((m) => <Link key={m.href} href={m.href}>{m.label} →</Link>)}</div>}
-              <details className="tr-src"><summary>Sources ({r.sources.length})</summary><ul>{r.sources.map((s) => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a></li>)}</ul></details>
+              {r.more && <div className="tr-more"><span className="kicker">{t("radar.onsite", "On this site")}</span>{r.more.map((m) => <Link key={m.href} href={m.href}>{m.label} →</Link>)}</div>}
+              <details className="tr-src"><summary>{t("radar.sources", "Sources ({n})", { n: r.sources.length })}</summary><ul>{r.sources.map((s) => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a></li>)}</ul></details>
               </div></div>
-              <button type="button" className="more-btn" aria-expanded={exp.has(r.id)} onClick={() => flip(r.id)}>{exp.has(r.id) ? "Show less" : "What, why, when not, sources"}<span aria-hidden="true">{exp.has(r.id) ? "↑" : "↓"}</span></button>
+              <button type="button" className="more-btn" aria-expanded={exp.has(r.id)} onClick={() => flip(r.id)}>{exp.has(r.id) ? t("more.show-less", "Show less") : t("radar.expand", "What, why, when not, sources")}<span aria-hidden="true">{exp.has(r.id) ? "↑" : "↓"}</span></button>
               <span className="rod" />
             </article>
           );
