@@ -51,8 +51,8 @@ export const structure: Section[] = [
     ],
   },
   {
-    n: "06", id: "contribute", label: "Contribute", title: "Contributions", href: "/contribute/", match: ["/contribute/"],
-    line: "Open source: add a term, a company to track, a doc or a fix.",
-    pages: [{ label: "How to contribute", href: "/contribute/", note: "Issues, pull requests and where things live" }],
+    n: "06", id: "contribute", label: "Feedback", title: "Feedback and corrections", href: "/contribute/", match: ["/contribute/"],
+    line: "Spot something wrong, missing or out of date? Tell me.",
+    pages: [{ label: "Send a correction", href: "/contribute/", note: "Email or LinkedIn" }],
   },
 ];

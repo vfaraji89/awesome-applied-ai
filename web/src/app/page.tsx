@@ -108,10 +108,10 @@ export default function Home() {
 
       <Band s={co}>
         <div className="frame show-co">
-          <p className="lead" style={{ color: "var(--ink)" }}>Found a mistake, a missing tool or a company we should track?</p>
+          <p className="lead" style={{ color: "var(--ink)" }}>Found a mistake, a missing tool or a company worth tracking?</p>
           <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginTop: 18 }}>
-            <a href={`${site.repo}/issues/new`} target="_blank" rel="noopener" className="btn">Open an issue</a>
-            <Link href="/contribute/" className="btn ghost">How to contribute</Link>
+            <a href={`mailto:${site.author.email}?subject=${encodeURIComponent("awesome-applied-ai: a correction")}`} className="btn">Send a correction</a>
+            <Link href="/contribute/" className="btn ghost">Feedback</Link>
           </div>
         </div>
       </Band>
