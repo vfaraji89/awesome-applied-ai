@@ -43,7 +43,7 @@ const TOPICS: Record<string, [string, string][]> = {
 const RISING_STARS = 300, KNOWN_STARS = 5000;
 const AI_WORDS = /\b(AI|LLMs?|agents?|agentic|GPT|Claude|Gemini|RAG|embeddings?|inference|models?|fine-?tun\w*|MCP|voice|speech|OCR|vision|diffusion|text-to-\w+|transformers?|ML|neural|copilot)\b/i;
 
-type Tool = { id: string; name: string; url: string; status?: string };
+type Tool = { id: string; name: string; url: string; status?: string; github?: string };
 type Cand = { key: string; name: string; area: string; category: string; url: string; summary: string; license: string; stars?: number; created?: string; source: string; signal: string };
 
 const tools: Tool[] = JSON.parse(readFileSync(TOOLS, "utf8"));
@@ -55,11 +55,11 @@ const named = (n: string) => { const a = alnum(n); return onMap.has(a) || (a.len
 const host = (u: string) => norm(u).split("/")[0].replace(/^(docs|developers|www)\./, "");
 const mapHosts = new Set(tools.map((t) => host(t.url)).filter((h) => h !== "github.com"));
 // lists, courses and tutorials are not tools
-const NOT_A_TOOL = /awesome|tutorial|course|guide|interview|roadmap|cookbook|examples?\b|techniques|curated|list of|learning path|教程|面试|指南|课程/i;
+const NOT_A_TOOL = /awesome|tutorial|course|guide|interview|roadmap|cookbook|examples?\b|techniques|curated|list of|learning path|from[- ]scratch|for[- ]beginners|\bbook\b|handbook|lecture|教程|面试|指南|课程/i;
 // general-purpose languages and techniques that job posts name but the map does not list on purpose
 const GENERAL = new Set(["python", "typescript", "javascript", "sql", "java", "go", "rust", "c++", "rag", "scala", "kotlin", "r"]);
-const repoOf = (u: string) => u.match(/github\.com\/([^/]+\/[^/#?]+)/i)?.[1].toLowerCase().replace(/\.git$/, "");
-const mapRepos = new Set(tools.map((t) => repoOf(t.url)).filter(Boolean));
+const repoOf = (u: string) => u.match(/github\.com\/(?!(?:features|marketplace|orgs|topics|sponsors|apps|enterprise|solutions|about|pricing|security|collections|trending)\/)([^/]+\/[^/#?]+)/i)?.[1].toLowerCase().replace(/\.git$/, "");
+const mapRepos = new Set(tools.flatMap((t) => [repoOf(t.url), t.github?.toLowerCase()]).filter(Boolean));
 const state: { seen: Record<string, string>; weeks: { week: string; candidates: Cand[]; asked: string[]; health: string[] }[] } =
   existsSync(STATE) ? JSON.parse(readFileSync(STATE, "utf8")) : { seen: {}, weeks: [] };
 const clean = (s = "") => s.replace(/[–—]/g, ",").replace(/\s+/g, " ").replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, "").trim();
@@ -101,6 +101,8 @@ for (const [area, list] of Object.entries(TOPICS).filter(([a]) => !only || only.
         const d = await gh(`https://api.github.com/search/repositories?q=${encodeURIComponent(q)}&sort=stars&order=desc&per_page=${signal === "rising" ? 8 : 6}`);
         for (const r of d.items ?? []) {
           if (r.fork || r.archived) continue;
+          // a big repo found by topic must say it is about AI, so general software (databases, CMSs) stays out
+          if (signal === "known" && !AI_WORDS.test(`${r.name} ${r.description ?? ""}`)) continue;
           add({ key: `gh:${r.full_name.toLowerCase()}`, name: r.name, area, category, url: r.homepage?.startsWith("https://") && !/github\.io|readthedocs|vercel\.app/.test(r.homepage) ? r.homepage : r.html_url,
             summary: clean(r.description ?? "").slice(0, 110), license: r.license?.spdx_id && r.license.spdx_id !== "NOASSERTION" ? r.license.spdx_id : "",
             stars: r.stargazers_count, created: r.created_at?.slice(0, 10), source: r.html_url, signal: signal === "rising" ? `new, ${r.stargazers_count.toLocaleString("en")} stars since ${r.created_at.slice(0, 10)}` : `${r.stargazers_count.toLocaleString("en")} stars, active` });

@@ -1,6 +1,7 @@
 name: Find new tools
 
-# Every Monday: looks for tools the map does not list yet (new and rising open-source repos per
+# Every Monday: refreshes the GitHub stars behind the map's Popular, Trending and New badges,
+# then looks for tools the map does not list yet (new and rising open-source repos per
 # area, well-known repos still missing, notable Show HN launches, tools job posts ask for) and
 # opens one issue with the candidates, each as a row ready for the content sheet. The first run
 # of each month also checks the map's GitHub-hosted tools for archived or quiet repos.
@@ -13,7 +14,7 @@ on:
   workflow_dispatch:
   push:
     branches-ignore: [main]
-    paths: ["pipeline/discover.ts", ".github/workflows/discover.yml"]
+    paths: ["pipeline/discover.ts", "pipeline/github-stats.ts", ".github/workflows/discover.yml"]
 
 permissions:
   contents: write
@@ -36,7 +37,14 @@ jobs:
         if: github.ref != 'refs/heads/main'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: bun pipeline/discover.ts --dry --areas=retrieval,landscape | tee -a "$GITHUB_STEP_SUMMARY"
+        run: |
+          bun pipeline/github-stats.ts --dry | tee -a "$GITHUB_STEP_SUMMARY"
+          bun pipeline/discover.ts --dry --areas=retrieval,landscape | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Refresh GitHub stars for the map (popular, trending, new)
+        if: github.ref == 'refs/heads/main'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: bun pipeline/github-stats.ts
       - name: Find candidates
         if: github.ref == 'refs/heads/main'
         env:
@@ -57,8 +65,8 @@ jobs:
         run: |
           git config user.name "tool-discovery"
           git config user.email "tool-discovery@users.noreply.github.com"
-          git add market/tool-candidates.json
+          git add market/tool-candidates.json web/src/data/github-stats.json
           if git diff --cached --quiet; then echo "No change"; exit 0; fi
-          git commit -m "Tools: candidates for $(date -u +%G-W%V)"
+          git commit -m "Tools: GitHub stars and candidates for $(date -u +%G-W%V)"
           git pull --rebase origin main
           git push

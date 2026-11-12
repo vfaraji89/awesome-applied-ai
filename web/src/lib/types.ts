@@ -35,6 +35,10 @@ export interface Tool {
   license: string;
   model: SourceModel;
   url: string;
+  /** The main public GitHub repository, "owner/repo"; its stars and dates come from pipeline/github-stats.ts. */
+  github?: string;
+  /** First public release or GA, "YYYY-MM"; when empty the repo's creation month stands in. */
+  launched?: string;
   /** Simple Icons slug (simpleicons.org); empty when the brand has no icon there. */
   icon?: string;
   /** Launched or reached GA recently and gaining adoption; always with a dated reason and a source. */
