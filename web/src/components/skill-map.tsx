@@ -5,6 +5,7 @@ import g from "@/data/skill-graph.json";
 import { skills as skillDefs, fRoles } from "@/data/framework";
 import { learn } from "@/data/learn";
 import { More } from "./more";
+import { track } from "@/lib/track";
 
 /* The skill map, from real postings:
    1. Constellation: which skills employers ask for together (lift over chance).
@@ -70,7 +71,8 @@ export function SkillMap() {
     }
     return steps;
   }, [have, role]);
-  const toggle = (id: string) => setHave((h) => h ^ BIT[id]);
+  const toggle = (id: string) => { setHave((h) => h ^ BIT[id]); track("doors_toggle", { skill: id }); };
+  const pickSkill = (id: string) => { setSel(id); track("skill_select", { skill: id }); };
 
   const power = G.pairs.filter((p) => p.n >= 60).sort((a, b) => b.lift - a.lift).slice(0, 4);
   const unicorn = G.pairs.filter((p) => p.n >= 25).sort((a, b) => a.lift - b.lift).slice(0, 4);
@@ -104,8 +106,8 @@ export function SkillMap() {
               const nb = near.find((x) => x.id === id); const dim = !on && mode === "together" && nb && nb.lift < 1.2;
               const lx = Math.cos(P.a) * (RAD + r + 14), ly = Math.sin(P.a) * (RAD + r + 14);
               return (
-                <g key={id} className={`sm-node${on ? " on" : ""}${dim ? " dim" : ""}${have & BIT[id] ? " mine" : ""}`} onClick={() => setSel(id)} role="button" tabIndex={0}
-                   aria-label={`${name(id)}: asked by ${SHARE[id]}% of postings`} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); setSel(id); } }}>
+                <g key={id} className={`sm-node${on ? " on" : ""}${dim ? " dim" : ""}${have & BIT[id] ? " mine" : ""}`} onClick={() => pickSkill(id)} role="button" tabIndex={0}
+                   aria-label={`${name(id)}: asked by ${SHARE[id]}% of postings`} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pickSkill(id); } }}>
                   <circle cx={P.x} cy={P.y} r={r} />
                   <text x={P.x} y={P.y + 4} className="sm-pct">{SHARE[id]}</text>
                   <text x={lx} y={ly + 4} className="sm-lbl" textAnchor={Math.abs(Math.cos(P.a)) < 0.2 ? "middle" : Math.cos(P.a) > 0 ? "start" : "end"}>{short(id)}</text>
@@ -119,7 +121,7 @@ export function SkillMap() {
             <p className="muted">{skillDefs.find((s) => s.id === sel)?.what}</p>
             <span className="sm-sub">Most often asked with</span>
             <ul className="sm-near">
-              {near.slice(0, 3).map((x) => <li key={x.id}><button onClick={() => setSel(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
+              {near.slice(0, 3).map((x) => <li key={x.id}><button onClick={() => pickSkill(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
             </ul>
             <span className="sm-sub">Tools that signal it</span>
             <div className="sm-chips">{G.toolsBySkill[sel].map((t) => <span key={t.name} className="chip" title={`${t.share}% of these postings; ${t.lift}× the usual rate`}>{t.name} <span className="mono muted">{t.lift}×</span></span>)}</div>
@@ -130,7 +132,7 @@ export function SkillMap() {
             <div className="sm-chips">{(learn[sel] ?? []).slice(0, 3).map((l) => <Link key={l.href + l.label} href={l.href} className="chip">{l.label}</Link>)}</div>
             {near.some((x) => x.lift < 0.95) && <span className="sm-sub">Rarely asked with</span>}
             <ul className="sm-near far">
-              {near.filter((x) => x.lift < 0.95).slice(-2).reverse().map((x) => <li key={x.id}><button onClick={() => setSel(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
+              {near.filter((x) => x.lift < 0.95).slice(-2).reverse().map((x) => <li key={x.id}><button onClick={() => pickSkill(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
             </ul>
             </More>
             <span className="rod" />
@@ -150,7 +152,7 @@ export function SkillMap() {
               {IDS.map((id) => <button key={id} className={`sm-pick${have & BIT[id] ? " on" : ""}`} aria-pressed={!!(have & BIT[id])} onClick={() => toggle(id)}><i />{name(id)}</button>)}
             </div>
             <label className="sm-role">Postings for
-              <select value={role} onChange={(e) => setRole(Number(e.target.value))}>
+              <select value={role} onChange={(e) => { setRole(Number(e.target.value)); track("doors_role", { role: G.roleIds.at(Number(e.target.value)) ?? "all" }); }}>
                 <option value={-1}>all AI roles</option>
                 {G.roleIds.map((r, i) => <option key={r} value={i}>{roleName(r)}</option>)}
               </select>

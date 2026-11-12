@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { track } from "@/lib/track";
 import Link from "next/link";
 import { radar, rings, areas, type Area, type Ring } from "@/data/radar";
 
@@ -33,10 +34,10 @@ export function TechRadar() {
   const [ring, setRing] = useState<Ring | "all">("all");
   const [open, setOpen] = useState<string | null>(null);
   const [exp, setExp] = useState<Set<string>>(new Set());
-  const flip = (id: string) => setExp((e) => { const n = new Set(e); if (n.has(id)) n.delete(id); else n.add(id); return n; });
+  const flip = (id: string) => setExp((e) => { const n = new Set(e); if (n.has(id)) n.delete(id); else { n.add(id); track("radar_open", { item: id, via: "card" }); } return n; });
   const shown = radar.filter((r) => (area === "all" || r.area === area) && (ring === "all" || r.ring === ring));
   const pick = (id: string) => {
-    setOpen(id); setExp((e) => new Set(e).add(id));
+    setOpen(id); setExp((e) => new Set(e).add(id)); track("radar_open", { item: id, via: "bead" });
     requestAnimationFrame(() => document.getElementById(`r-${id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }));
   };
   return (
