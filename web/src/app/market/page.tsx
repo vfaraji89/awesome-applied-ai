@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import market from "@/data/market.json";
 import { fRoles, skills } from "@/data/framework";
+import { More } from "@/components/more";
 
 export const metadata: Metadata = { title: "Market pulse", description: "What the applied AI job market asks for: roles, levels, titles, skills and tools, tracked daily from public job boards." };
 
@@ -37,7 +38,8 @@ export default function Market() {
         <div className="wrap">
           <Crumb id="market" page="Market pulse" />
           <h1 style={{ marginTop: 12 }}>What the market asks for<span className="dot">.</span></h1>
-          <p className="lead" style={{ marginTop: 16 }}>Every day, public job boards are read and only the AI roles are kept. Each posting is reduced to its role, level, skills and tools; nothing is republished. This is the gist.</p>
+          <p className="lead" style={{ marginTop: 16 }}><b>What AI jobs ask for</b>, read from public job boards <b>every day</b>.</p>
+          <More label="How it is collected"><p className="lead" style={{ marginTop: 12 }}>Only the AI roles are kept. Each posting is reduced to its <b>role, level, skills and tools</b>; no posting, link or company is republished. This page is the gist.</p></More>
           {ready ? (
             <div className="mk-totals">
               {[["Open AI roles now", m.totals.openNow.toLocaleString("en-US")], ["Tracked all time", m.totals.allTime.toLocaleString("en-US")], ["New since yesterday", m.totals.newToday.toLocaleString("en-US")], ["Remote", `${m.totals.remoteShare}%`]].map(([k, v]) => (

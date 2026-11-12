@@ -5,6 +5,7 @@ import { layers } from "@/data/layers";
 import { tools } from "@/data/tools";
 import { problems } from "@/data/problems";
 import { RequestFlow } from "@/components/request-flow";
+import { More } from "@/components/more";
 
 export const metadata: Metadata = { title: "AI-native architecture", description: "The six layers of an AI-native system, and the agent harness that runs on them." };
 
@@ -24,7 +25,8 @@ export default function Architecture() {
         <div className="wrap">
           <Crumb id="architect" page="Architecture" />
           <h1 style={{ marginTop: 12 }}>Six layers, one system<span className="dot">.</span></h1>
-          <p className="lead" style={{ marginTop: 16 }}>An AI-native system is designed around the model from day one. These are the six layers it is built from, top to bottom, and the agent harness that runs across them.</p>
+          <p className="lead" style={{ marginTop: 16 }}><b>Six layers</b>, top to bottom, and <b>the harness</b> that runs across them.</p>
+          <More><p className="lead" style={{ marginTop: 12 }}>An AI-native system is <b>designed around the model from day one</b>. Each layer below links to its tools and to the design problems that break it.</p></More>
           <div style={{ marginTop: 40 }}><RequestFlow /></div>
         </div>
       </section>
@@ -60,7 +62,8 @@ export default function Architecture() {
         <div className="wrap">
           <span className="kicker">The agent harness</span>
           <h2 style={{ marginTop: 10 }}>What runs on the layers<span className="dot">.</span></h2>
-          <p className="lead" style={{ marginTop: 12 }}>An agent is a model inside a harness. Six parts make the difference between a demo and something that survives production.</p>
+          <p className="lead" style={{ marginTop: 12 }}>An agent is <b>a model inside a harness</b>.</p>
+          <More><p className="lead" style={{ marginTop: 12 }}>Six parts make the difference between <b>a demo</b> and something that <b>survives production</b>.</p></More>
           <div className="harness">
             {HARNESS.map((h, i) => (
               <a key={h.t} href={`#${h.layer}`} className="h-node" style={{ ["--i" as string]: i }}>
