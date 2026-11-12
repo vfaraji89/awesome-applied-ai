@@ -28,7 +28,7 @@ const CAT_NAMES: Record<string, string> = {
   "token-accounting": "Token accounting", "long-context": "Long context", "prompt-optimization": "Prompt optimization",
   "structured-output": "Structured output", "eval-frameworks": "Eval frameworks", "governance-tooling": "Governance tooling",
   "llm-apis": "LLM APIs", "ai-ide": "AI IDEs", "ai-ides": "AI IDEs", "gpu-clouds": "GPU clouds", "ai-security": "AI security",
-  "automl": "AutoML", "stack-detection": "Stack detection", "model-benchmarks": "Model benchmarks", "tool-directories": "Tool directories", "research-tracking": "Research tracking", "mlops": "MLOps", "ocr": "OCR", "tts": "Text to speech", "stt": "Speech to text", "asr": "Speech to text",
+  "automl": "AutoML", "rag-engines": "RAG engines", "dl-frameworks": "Deep learning frameworks", "image-video-gen": "Image and video generation", "agent-ui": "Agent UI kits", "ml-platforms": "ML platforms", "model-apis": "Model APIs", "open-weights": "Open-weight models", "browser-use": "Browser use", "web-search": "Web search for agents", "red-teaming": "Red teaming", "stack-detection": "Stack detection", "model-benchmarks": "Model benchmarks", "tool-directories": "Tool directories", "research-tracking": "Research tracking", "mlops": "MLOps", "ocr": "OCR", "tts": "Text to speech", "stt": "Speech to text", "asr": "Speech to text",
 };
 export const catName = (id: string) =>
   CAT_NAMES[id] ?? id.split("-").map((w, i) => (i ? w : w[0].toUpperCase() + w.slice(1))).join(" ").replace(/\b(ai|llm|llms|gpu|ml|api|apis|ocr|etl|sdk|ide)\b/gi, (m) => m.toUpperCase().replace("LLMS", "LLMs").replace("APIS", "APIs"));

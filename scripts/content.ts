@@ -79,7 +79,7 @@ const TABS: Tab[] = [
     required: ["id", "name", "area", "ring", "short", "what", "why", "use", "avoid", "sources"], enums: { area: "area", ring: "ring" }, unique: "id", linkCols: ["examples", "sources"] },
   { name: "radar_quarter", head: ["quarter", "title", "line", "href"], required: ["quarter", "title", "line", "href"] },
   { name: "settings", head: ["key", "value"], required: ["key"] },
-  { name: "tools", head: ["id", "name", "area", "category", "layer", "summary", "license", "model", "maturity", "deployment", "kind", "status", "url", "icon", "emerging", "emerging_why", "emerging_source", "tags", "note"],
+  { name: "tools", head: ["id", "name", "area", "category", "layer", "summary", "license", "model", "maturity", "deployment", "kind", "status", "url", "github", "launched", "icon", "emerging", "emerging_why", "emerging_source", "tags", "note"],
     required: ["id", "name", "area", "category", "summary", "license", "model", "url"],
     enums: { area: "toolArea", layer: "layer", model: "model", maturity: "maturity", deployment: "deployment", kind: "kind", status: "status" }, unique: "id", urls: ["url", "emerging_source"] },
   { name: "jargon", head: ["id", "term", "field", "short", "detail", "asked", "also", "tags", "link_label", "link_href"],
@@ -119,6 +119,8 @@ function validate(tab: Tab, rows: Row[], errs: string[]) {
     if (tab.name === "tools") {
       if (r.emerging && !YES.test(r.emerging) && !NO.test(r.emerging)) errs.push(`${at}: emerging "${r.emerging}" must be TRUE or FALSE`);
       if (YES.test(r.emerging ?? "") && (!r.emerging_why || !r.emerging_source)) errs.push(`${at}: an emerging tool needs emerging_why (with a date) and emerging_source`);
+      if (r.github && !/^[A-Za-z0-9_.-]+\/[A-Za-z0-9_.-]+$/.test(r.github)) errs.push(`${at}: github "${r.github}" must be owner/repo`);
+      if (r.launched && !/^20\d\d-(0[1-9]|1[0-2])$/.test(r.launched)) errs.push(`${at}: launched "${r.launched}" must be YYYY-MM`);
       if (r.icon && !/^[a-z0-9]+$/.test(r.icon)) errs.push(`${at}: icon "${r.icon}" must be a Simple Icons slug (lowercase letters and digits)`);
     }
   });
@@ -148,7 +150,7 @@ function build(d: Record<string, Row[]>) {
   };
   const tools = d.tools.map((t) => compact({
     id: t.id, name: t.name, area: t.area, layer: t.layer, category: t.category, summary: t.summary, license: t.license, model: t.model,
-    maturity: t.maturity, deployment: t.deployment, url: t.url, icon: t.icon, emerging: YES.test(t.emerging ?? "") ? true : undefined,
+    maturity: t.maturity, deployment: t.deployment, url: t.url, github: t.github, launched: t.launched, icon: t.icon, emerging: YES.test(t.emerging ?? "") ? true : undefined,
     emergingWhy: YES.test(t.emerging ?? "") ? t.emerging_why : undefined, emergingSource: YES.test(t.emerging ?? "") ? t.emerging_source : undefined,
     tags: words(t.tags ?? ""), note: t.note, status: t.status, kind: t.kind,
   }));

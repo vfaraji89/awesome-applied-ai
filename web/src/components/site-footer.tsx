@@ -111,11 +111,22 @@ export function SiteFooter() {
         <span>© {new Date().getFullYear()} <a href={site.author.site}>Vahid Faraji</a> · <TH k="ft.meta">Istanbul, Türkiye · The companion to <i>{site.author.book}</i>, a book in progress · All rights reserved</TH></span>
         <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: "smooth" }); }}><T k="ft.top">Back to top</T> ↑</a>
       </div>
+      <div className="wrap ft-legal">
+        <p><T k="ft.indep">Independent and non-commercial, made to help people understand applied AI. Not affiliated with, sponsored or endorsed by any company named here; no one pays to be listed. Names and logos belong to their owners.</T></p>
+        <nav aria-label="Legal">
+          <a href="/privacy.html"><T k="ft.privacy">Privacy</T></a>
+          <a href="/terms.html"><T k="ft.terms">Terms and disclaimer</T></a>
+          <a href="#" onClick={(e) => { e.preventDefault(); try { localStorage.removeItem("vf-consent"); } catch { /* ignore */ } window.dispatchEvent(new Event("vf:consent-reset")); }}><T k="ft.consent">Analytics choice</T></a>
+        </nav>
+      </div>
       <div className="ft-word" aria-hidden="true">applied ai<span>.</span></div>
 
       <style>{`
         .ft { border-top: 1px solid var(--line); background: var(--paper); color: var(--sec); margin-top: 40px; overflow: hidden; }
         .ft a { text-decoration: none; color: inherit; }
+        .ft-legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 8px 24px; padding-bottom: 18px; font-size: .74rem; color: var(--muted); }
+        .ft-legal p { max-width: 62ch; line-height: 1.5; }
+        .ft-legal nav { display: flex; gap: 14px; flex-wrap: wrap; } .ft-legal a { text-decoration: underline; text-underline-offset: 2px; } .ft-legal a:hover { color: var(--rust-deep); }
         .fh { display: grid; grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 48px; padding-top: 72px; padding-bottom: 56px; align-items: center; }
         @media (max-width: 900px) { .fh { grid-template-columns: minmax(0, 1fr); gap: 28px; } }
         .fh-title { font-size: clamp(1.8rem, 3.6vw, 2.6rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.05; color: var(--ink); margin: 8px 0 12px; }

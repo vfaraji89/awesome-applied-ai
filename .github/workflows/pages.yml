@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
   # the market tracker commits with the workflow token, which does not trigger push workflows
   workflow_run:
-    workflows: ["Track job market"]
+    workflows: ["Track job market", "Find new tools"]
     types: [completed]
     branches: [main]
 

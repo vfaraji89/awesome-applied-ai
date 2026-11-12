@@ -5,8 +5,9 @@ import { useT } from "@/i18n/lang";
 /* Google Analytics 4, privacy first.
    - Same property as vfaraji89.github.io: both live on one domain, so a visit
      from the portfolio into this guide is one journey. content_group splits them.
-   - Consent mode v2: storage denied until the visitor says yes. The choice is
-     stored under the same key as the portfolio's, so it is asked once for both.
+   - Nothing reaches Google until the visitor says yes: the script itself is only loaded
+     after consent. The choice is stored under the same key as the portfolio's, so it is
+     asked once for both, and "Analytics choice" in the footer asks again.
    - Page views on client-side navigation come from GA4's enhanced measurement
      (browser history events), so none are sent by hand here.
    - ?ga_debug=1 turns on DebugView for that visit. */
@@ -27,7 +28,23 @@ export function clean(p: Record<string, unknown>) {
   return o;
 }
 const redactUrl = (u: string) => u.replace(/([?&])(q|email|name|jd|cv)=[^&#]*/g, "$1$2=redacted");
-type W = Window & { dataLayer?: unknown[]; gtag?: (...a: unknown[]) => void };
+type W = Window & { dataLayer?: unknown[]; gtag?: (...a: unknown[]) => void; vfGA?: boolean };
+function loadGA() {
+  const w = window as W;
+  if (w.vfGA || !GA_ID) return;
+  w.vfGA = true;
+  const s = document.createElement("script");
+  s.async = true; s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
+  document.head.appendChild(s);
+}
+/** A "no" (or a change of mind) also clears any Google Analytics cookies already set. */
+function forgetGA() {
+  (window as W).gtag?.("consent", "update", { analytics_storage: "denied" });
+  for (const c of document.cookie.split(";")) {
+    const n = c.split("=")[0].trim();
+    if (/^_ga/.test(n)) for (const d of ["", `; domain=${location.hostname}`, `; domain=.${location.hostname}`]) document.cookie = `${n}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/${d}`;
+  }
+}
 
 export function Analytics() {
   const [ask, setAsk] = useState(false);
@@ -50,10 +67,12 @@ export function Analytics() {
     const section = location.pathname.split("/").filter(Boolean).find((p) => p !== "awesome-applied-ai") ?? "home";
     w.dataLayer.push({ event: "vf_context", site: "awesome-applied-ai", page_group: section, consent_state: saved === "yes" ? "granted" : "denied" });
     w.gtag("config", GA_ID, { content_group: "awesome-applied-ai", page_location: redactUrl(location.href), site_section: section, ...(debug ? { debug_mode: true } : {}) });
-    const s = document.createElement("script");
-    s.async = true; s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
-    document.head.appendChild(s);
-    if (saved === null) { const t = setTimeout(() => setAsk(true), 1500); return () => clearTimeout(t); }
+    // Google is contacted only after a yes: until then the script is not even loaded
+    if (saved === "yes") loadGA();
+    const reset = () => setAsk(true);
+    window.addEventListener("vf:consent-reset", reset);
+    if (saved === null) { const t = setTimeout(() => setAsk(true), 1500); return () => { clearTimeout(t); window.removeEventListener("vf:consent-reset", reset); }; }
+    return () => window.removeEventListener("vf:consent-reset", reset);
   }, []);
 
   // Clicks that matter: the repo, the portfolio, the CV, and sources behind the data.
@@ -75,7 +94,8 @@ export function Analytics() {
 
   const choose = (v: "yes" | "no") => {
     try { localStorage.setItem(KEY, v); } catch { /* ignore */ }
-    if (v === "yes") (window as W).gtag?.("consent", "update", { analytics_storage: "granted" });
+    if (v === "yes") { (window as W).gtag?.("consent", "update", { analytics_storage: "granted" }); loadGA(); }
+    else forgetGA();
     setAsk(false);
   };
   if (!ask) return null;
@@ -83,12 +103,14 @@ export function Analytics() {
     <div className="consent" role="region" aria-label="Analytics consent">
       <span className="consent-bead" aria-hidden="true" />
       <span title={t("consent.title", "Google Analytics, only to count visits. No ads, no tracking across sites.")}>{t("consent.ask", "One cookie to count visits?")}</span>
+      <a href="/privacy.html#analytics" className="more">{t("consent.more", "Privacy")}</a>
       <button type="button" onClick={() => choose("no")} aria-label={t("consent.no_aria", "No, do not use an analytics cookie")}>{t("consent.no", "No")}</button>
       <button type="button" className="yes" onClick={() => choose("yes")} aria-label={t("consent.yes_aria", "Sure, use an analytics cookie")}>{t("consent.yes", "Sure")}</button>
       <style>{`
         .consent { position: fixed; left: 16px; bottom: 16px; z-index: 90; max-width: calc(100vw - 32px); display: flex; align-items: center; gap: 10px; padding: 7px 8px 7px 12px; border-radius: 999px; background: var(--paper); color: var(--ink); border: 1px solid rgba(180,138,92,.45); box-shadow: 0 12px 26px -16px rgba(60,30,10,.55); font-size: 12.5px; font-weight: 500; animation: consent-in .5s cubic-bezier(0.22, 1, 0.36, 1) both; }
         .consent-bead { flex: none; width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
         .consent button { font: inherit; font-size: 12px; font-weight: 600; padding: 7px 12px; border-radius: 999px; cursor: pointer; background: transparent; color: var(--sec); border: 1px solid transparent; }
+        .consent .more { font-size: 12px; color: var(--sec); text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }
         .consent button.yes { background: var(--ink); color: var(--bg, #fff); border-color: var(--ink); }
         @keyframes consent-in { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
         @media (prefers-reduced-motion: reduce) { .consent { animation: none; } }

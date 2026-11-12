@@ -1,5 +1,5 @@
 "use client";
-/* The tool atlas: every tool on the map across ten areas of applied AI.
+/* The tool atlas: every tool on the map across eleven areas of applied AI.
    An area rail on top (one bead per area), search and two toggles (emerging, open source),
    then cards grouped by area and category. Each card carries the brand icon (Simple Icons)
    or a monogram bead, the licence and how proven it is; an emerging tool says why, with a
@@ -9,11 +9,14 @@ import type { Tool, ToolArea } from "@/lib/types";
 import { areas, catName } from "@/data/areas";
 import icons from "@/data/tool-icons.json";
 import { useT } from "@/i18n/lang";
+import { signals, fmtStars, statsDate } from "@/lib/tool-signals";
 
 const ICONS = icons as Record<string, { hex: string; path: string }>;
 const MAT: Record<string, string> = { "production-common": "widely used", "production-viable": "production-ready", early: "early", research: "research", fragile: "fragile" };
 const DEP: Record<string, string> = { "self-host": "self-host", saas: "cloud", both: "cloud or self-host" };
 const OPEN = new Set(["oss", "hybrid", "source-available"]);
+type Sort = "area" | "stars" | "trending" | "new";
+type Tag = "trending" | "new" | "popular";
 
 function lum(hex: string) {
   const n = parseInt(hex, 16), c = [n >> 16, (n >> 8) & 255, n & 255].map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; });
@@ -34,6 +37,24 @@ function Icon({ t }: { t: Tool }) {
   );
 }
 
+function Badges({ t }: { t: Tool }) {
+  const tr = useT();
+  const g = signals(t);
+  if (!g.stars && !g.isNew) return null;
+  return (
+    <div className="ta-badges">
+      {g.stars !== undefined && (
+        <a className="ta-b ta-stars mono" href={`https://github.com/${g.repo}`} target="_blank" rel="noreferrer" title={tr("tools.stars_t", "Stars on GitHub")}>
+          <svg viewBox="0 0 16 16" width="11" height="11" aria-hidden="true"><path d="M8 .9l2.1 4.4 4.8.6-3.5 3.3.9 4.8L8 11.7 3.7 14l.9-4.8L1.1 5.9l4.8-.6z" fill="currentColor" /></svg>{fmtStars(g.stars)}
+        </a>
+      )}
+      {g.trending && <span className="ta-b ta-trend">↑ {g.gain !== undefined ? tr("tools.gain", "+{n} this week", { n: fmtStars(g.gain) }) : tr("tools.trending", "Trending")}</span>}
+      {g.popular && <span className="ta-b ta-pop">{tr("tools.popular", "Popular")}</span>}
+      {g.isNew && g.quarter && <span className="ta-b ta-q">{tr("tools.new_q", "New · {q}", { q: g.quarter })}</span>}
+    </div>
+  );
+}
+
 function Card({ t, why, setWhy }: { t: Tool; why: string | null; setWhy: (id: string | null) => void }) {
   const tr = useT();
   const open = why === t.id;
@@ -51,6 +72,7 @@ function Card({ t, why, setWhy }: { t: Tool; why: string | null; setWhy: (id: st
           </button>
         )}
       </div>
+      <Badges t={t} />
       <p className="ta-sum">{t.summary}</p>
       {open && t.emergingWhy && (
         <p className="ta-why">{t.emergingWhy} {t.emergingSource && <a href={t.emergingSource} target="_blank" rel="noreferrer">{tr("tools.source", "Source")} ↗</a>}</p>
@@ -71,6 +93,9 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
   const [fresh, setFresh] = useState(false);
   const [open, setOpen] = useState(false);
   const [why, setWhy] = useState<string | null>(null);
+  const [sort, setSort] = useState<Sort>("area");
+  const [tags, setTags] = useState<Set<Tag>>(new Set());
+  const tog = (k: Tag) => setTags((o) => { const n = new Set(o); n.has(k) ? n.delete(k) : n.add(k); return n; });
   const search = useRef<HTMLInputElement>(null);
   const rail = useRef<HTMLDivElement>(null);
 
@@ -82,6 +107,8 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
     if (a && areas.some((x) => x.id === a)) setArea(a as ToolArea);
     if (p.get("emerging") === "1") setFresh(true);
     if (p.get("open") === "1") setOpen(true);
+    const so = p.get("sort"); if (so === "stars" || so === "trending" || so === "new") setSort(so);
+    const tg = (p.get("tags") ?? "").split(",").filter((x): x is Tag => x === "trending" || x === "new" || x === "popular"); if (tg.length) setTags(new Set(tg));
     const key = (e: KeyboardEvent) => {
       if (e.key === "/" && !(e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement)) { e.preventDefault(); search.current?.focus(); }
     };
@@ -95,18 +122,35 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
     if (q.trim()) p.set("q", q.trim());
     if (fresh) p.set("emerging", "1");
     if (open) p.set("open", "1");
+    if (sort !== "area") p.set("sort", sort);
+    if (tags.size) p.set("tags", [...tags].join(","));
     const s = p.toString();
     window.history.replaceState(null, "", window.location.pathname + (s ? `?${s}` : "") + window.location.hash);
-  }, [area, q, fresh, open]);
+  }, [area, q, fresh, open, sort, tags]);
 
   const base = useMemo(() => {
     const s = q.trim().toLowerCase();
-    return tools.filter((t) => (!fresh || t.emerging) && (!open || OPEN.has(t.model)) &&
-      (!s || [t.name, t.summary, t.category, catName(t.category), t.license, ...t.tags].join(" ").toLowerCase().includes(s)));
-  }, [q, fresh, open, tools]);
+    return tools.filter((t) => {
+      const g = signals(t);
+      return (!fresh || t.emerging) && (!open || OPEN.has(t.model)) && (!tags.has("trending") || g.trending) && (!tags.has("new") || g.isNew) && (!tags.has("popular") || g.popular) &&
+        (!s || [t.name, t.summary, t.category, catName(t.category), t.license, g.repo, ...t.tags].join(" ").toLowerCase().includes(s));
+    });
+  }, [q, fresh, open, tags, tools]);
   const hits = area === "all" ? base : base.filter((t) => t.area === area);
   const nNew = tools.filter((t) => t.emerging).length;
-  const spotlight = area === "all" && !q.trim() && !fresh && !open ? tools.filter((t) => t.emerging) : [];
+  const quiet = area === "all" && !q.trim() && !fresh && !open && !tags.size && sort === "area";
+  const spotlight = quiet ? tools.filter((t) => t.emerging) : [];
+  // one row per repo: a feature of a project (say, vLLM prefix caching) does not take a second place
+  const top = quiet ? tools.filter((t) => signals(t).stars).sort((a, b) => (signals(b).stars ?? 0) - (signals(a).stars ?? 0))
+    .filter((t, i, a) => a.findIndex((x) => signals(x).repo === signals(t).repo) === i).slice(0, 10) : [];
+  const topMax = top.length ? signals(top[0]).stars ?? 1 : 1;
+  const ranked = sort === "area" ? [] : [...hits].filter((t) => sort === "new" ? !!signals(t).launched : sort === "stars" || sort === "trending" ? signals(t).stars !== undefined : true).sort((a, b) => {
+    const x = signals(a), y = signals(b);
+    if (sort === "stars") return (y.stars ?? 0) - (x.stars ?? 0);
+    if (sort === "trending") return Number(y.trending) - Number(x.trending) || (y.gain ?? 0) - (x.gain ?? 0) || (y.stars ?? 0) - (x.stars ?? 0);
+    return (y.launched ?? "").localeCompare(x.launched ?? "") || (y.stars ?? 0) - (x.stars ?? 0);
+  });
+  const nTag = (k: Tag) => tools.filter((t) => { const g = signals(t); return k === "trending" ? g.trending : k === "new" ? g.isNew : g.popular; }).length;
 
   const pick = (a: ToolArea | "all") => setArea(a);
   // keep the chosen area in view on the rail (scrolls the rail only, never the page)
@@ -127,6 +171,22 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
         <div className="ta-toggles">
           <button type="button" className={`ta-tog${fresh ? " on" : ""}`} aria-pressed={fresh} onClick={() => setFresh(!fresh)}><span className="bead" />{tr("tools.emerging", "Emerging")} <span className="count">{nNew}</span></button>
           <button type="button" className={`ta-tog${open ? " on" : ""}`} aria-pressed={open} onClick={() => setOpen(!open)}><span className="bead ink" />{tr("tools.open_only", "Open source")}</button>
+        </div>
+        <div className="ta-tags">
+          {(["trending", "new", "popular"] as Tag[]).filter((k) => tags.has(k) || nTag(k) > 0).map((k) => (
+            <button key={k} type="button" className={`ta-chip ta-chip-${k}${tags.has(k) ? " on" : ""}`} aria-pressed={tags.has(k)} onClick={() => tog(k)}>
+              {k === "trending" ? "↑ " : k === "new" ? "✦ " : "★ "}{tr(`tools.tag.${k}`, k === "trending" ? "Trending" : k === "new" ? "New" : "Popular")} <span className="count">{nTag(k)}</span>
+            </button>
+          ))}
+          <label className="ta-sort">
+            <span className="mono">{tr("tools.sort", "Sort")}</span>
+            <select value={sort} onChange={(e) => setSort(e.target.value as Sort)}>
+              <option value="area">{tr("tools.sort.area", "By area")}</option>
+              <option value="stars">{tr("tools.sort.stars", "Most stars on GitHub")}</option>
+              <option value="trending">{tr("tools.sort.trending", "Trending")}</option>
+              <option value="new">{tr("tools.sort.new", "Newest")}</option>
+            </select>
+          </label>
         </div>
         <div className="ta-rail" ref={rail} role="tablist" aria-label={tr("tools.areas", "Areas")}>
           {[{ id: "all" as const, name: tr("tools.all", "All") }, ...areas.map((a) => ({ id: a.id, name: tr(`tarea.${a.id}`, a.name) }))].map((a) => {
@@ -149,9 +209,26 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
         </section>
       )}
 
+      {top.length > 0 && (
+        <section className="ta-top10" aria-label={tr("tools.top", "Most starred on GitHub")}>
+          <div className="ta-spot-h"><svg viewBox="0 0 16 16" width="15" height="15" aria-hidden="true"><path d="M8 .9l2.1 4.4 4.8.6-3.5 3.3.9 4.8L8 11.7 3.7 14l.9-4.8L1.1 5.9l4.8-.6z" fill="currentColor" /></svg><h3>{tr("tools.top", "Most starred on GitHub")}<span className="dot">.</span></h3><span className="muted">{tr("tools.top_p", "Open-source tools on the map, by GitHub stars on {d}.", { d: statsDate })}</span></div>
+          <ol className="ta-lb">
+            {top.map((t, i) => { const g = signals(t); return (
+              <li key={t.id}>
+                <span className="ta-lb-n mono">{String(i + 1).padStart(2, "0")}</span>
+                <Icon t={t} />
+                <a href={`https://github.com/${g.repo}`} target="_blank" rel="noreferrer" className="ta-lb-name">{t.name}<span className="mono">{g.repo}</span></a>
+                <span className="ta-lb-rod" aria-hidden="true"><i style={{ width: `${((g.stars ?? 0) / topMax) * 100}%` }} /></span>
+                <span className="ta-lb-s mono">{fmtStars(g.stars ?? 0)}</span>
+              </li>
+            ); })}
+          </ol>
+        </section>
+      )}
       <p className="count" style={{ margin: "22px 0 4px" }} aria-live="polite">{tr("tools.n", "{n} tools", { n: hits.length })}</p>
       {!hits.length && <p className="muted" style={{ marginTop: 12 }}>{tr("tools.none", "Nothing matches. Try a shorter word, or clear a filter.")}</p>}
-      {areas.filter((a) => area === "all" || a.id === area).map((a) => {
+      {sort !== "area" && <ul className="ta-grid ta-ranked">{ranked.map((t) => <Card key={t.id} t={t} why={why} setWhy={setWhy} />)}</ul>}
+      {sort === "area" && areas.filter((a) => area === "all" || a.id === area).map((a) => {
         const at = hits.filter((t) => t.area === a.id);
         if (!at.length) return null;
         const cats = [...new Set(at.map((t) => t.category))].sort((x, y) => at.filter((t) => t.category === y).length - at.filter((t) => t.category === x).length);
@@ -219,6 +296,30 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
         .ta-why a { color: var(--rust-deep); font-weight: 600; }
         .ta-meta { margin-top: auto; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: .7rem; color: var(--muted); }
         .ta-meta .ta-open { color: #15803d; }
+        .ta-tags { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+        .ta-chip { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--card); font: inherit; font-size: .8rem; font-weight: 650; color: var(--sec); cursor: pointer; transition: border-color .3s var(--ease), background .3s var(--ease), color .3s var(--ease); }
+        .ta-chip.on { border-color: var(--ink); background: var(--ink); color: var(--bg); } .ta-chip.on .count { color: inherit; opacity: .7; }
+        .ta-sort { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; font-size: .8rem; color: var(--muted); }
+        .ta-sort select { height: 32px; padding: 0 28px 0 10px; border-radius: 10px; border: 1px solid var(--line-strong); background: var(--card); color: var(--ink); font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer; }
+        .ta-badges { display: flex; flex-wrap: wrap; gap: 5px; }
+        .ta-b { display: inline-flex; align-items: center; gap: 4px; height: 20px; padding: 0 7px; border-radius: 6px; font-size: .68rem; font-weight: 700; white-space: nowrap; text-decoration: none; }
+        .ta-stars { background: color-mix(in srgb, var(--ink) 7%, var(--card)); color: var(--ink); } .ta-stars:hover { background: var(--ink); color: var(--bg); }
+        .ta-trend { background: color-mix(in srgb, #16a34a 14%, var(--card)); color: #15803d; }
+        .ta-pop { background: color-mix(in srgb, #d4a017 18%, var(--card)); color: #8a6508; }
+        .ta-q { background: color-mix(in srgb, #2563eb 12%, var(--card)); color: #1d4ed8; }
+        .ta-top10 { margin-top: 14px; padding: 18px; border-radius: 18px; border: 1px solid var(--line); background: var(--card); }
+        .ta-top10 .ta-spot-h svg { color: #d4a017; }
+        .ta-lb { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
+        .ta-lb li { display: grid; grid-template-columns: 22px 30px minmax(0, 1fr) 90px 44px; align-items: center; gap: 10px; padding: 8px 0; border-bottom: 1px solid var(--line); }
+        .ta-lb .ta-ic { width: 30px; height: 30px; border-radius: 9px; } .ta-lb .ta-ic svg { width: 17px; height: 17px; } .ta-lb .ta-mono { font-size: .7rem; }
+        .ta-lb-n { font-size: .72rem; color: var(--muted); }
+        .ta-lb-name { min-width: 0; display: flex; flex-direction: column; font-weight: 700; font-size: .9rem; color: var(--ink); text-decoration: none; }
+        .ta-lb-name span { font-size: .68rem; font-weight: 400; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .ta-lb-name:hover { color: var(--rust-deep); }
+        .ta-lb-rod { position: relative; height: 4px; border-radius: 4px; background: var(--line); } .ta-lb-rod i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: linear-gradient(90deg, #e0301e, #ff9d8f); }
+        .ta-lb-s { font-size: .78rem; font-weight: 700; text-align: right; }
+        .ta-ranked { margin-top: 14px; }
+        @media (max-width: 760px) { .ta-lb { grid-template-columns: 1fr; } .ta-lb li { grid-template-columns: 22px 30px minmax(0, 1fr) 60px 40px; } .ta-sort { margin-left: 0; } }
         @media (max-width: 760px) { .ta-bar { grid-template-columns: 1fr; top: 96px; } .ta-toggles .ta-tog { flex: 1; justify-content: center; } .ta-grid { grid-template-columns: 1fr; } }
         @media (prefers-reduced-motion: reduce) { .ta-card, .ta-rod i, .ta-area { animation: none; transition: none; } }
       `}</style>

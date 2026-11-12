@@ -1,0 +1,547 @@
+{
+ "updated": "2026-11-12",
+ "repos": {
+  "567-labs/instructor": {
+   "stars": 14110,
+   "created": "2023-06-14",
+   "pushed": "2026-11-11"
+  },
+  "ag-ui-protocol/ag-ui": {
+   "stars": 17148,
+   "created": "2025-05-07",
+   "pushed": "2026-11-12"
+  },
+  "ai-dynamo/dynamo": {
+   "stars": 8478,
+   "created": "2025-03-03",
+   "pushed": "2026-11-12"
+  },
+  "anthropics/claude-agent-sdk-python": {
+   "stars": 8532,
+   "created": "2025-06-11",
+   "pushed": "2026-11-12"
+  },
+  "arize-ai/openinference": {
+   "stars": 1318,
+   "created": "2023-12-26",
+   "pushed": "2026-11-12"
+  },
+  "ax-llm/ax": {
+   "stars": 2979,
+   "created": "2023-02-23",
+   "pushed": "2026-11-12"
+  },
+  "azure/pyrit": {
+   "stars": 126,
+   "created": "2026-03-25",
+   "pushed": "2026-03-25",
+   "archived": true
+  },
+  "berriai/litellm": {
+   "stars": 63186,
+   "created": "2023-07-27",
+   "pushed": "2026-11-12"
+  },
+  "clearml/clearml": {
+   "stars": 6938,
+   "created": "2019-06-10",
+   "pushed": "2026-11-03"
+  },
+  "cline/cline": {
+   "stars": 71565,
+   "created": "2024-07-06",
+   "pushed": "2026-11-12"
+  },
+  "cloudflare/agents": {
+   "stars": 5991,
+   "created": "2025-01-29",
+   "pushed": "2026-11-12"
+  },
+  "comet-ml/opik": {
+   "stars": 23366,
+   "created": "2023-05-10",
+   "pushed": "2026-11-12"
+  },
+  "copilotkit/copilotkit": {
+   "stars": 38669,
+   "created": "2023-06-19",
+   "pushed": "2026-11-12"
+  },
+  "crewaiinc/crewai": {
+   "stars": 60823,
+   "created": "2023-10-27",
+   "pushed": "2026-11-12"
+  },
+  "datalab-to/marker": {
+   "stars": 40887,
+   "created": "2023-10-30",
+   "pushed": "2026-11-12"
+  },
+  "daytonaio/daytona": {
+   "stars": 71324,
+   "created": "2024-02-06",
+   "pushed": "2026-07-24",
+   "archived": true
+  },
+  "dbos-inc/dbos-transact-py": {
+   "stars": 1680,
+   "created": "2024-07-19",
+   "pushed": "2026-11-12"
+  },
+  "deepseek-ai/deepseek-ocr": {
+   "stars": 24147,
+   "created": "2025-10-17",
+   "pushed": "2026-01-27"
+  },
+  "docling-project/docling": {
+   "stars": 70506,
+   "created": "2024-07-09",
+   "pushed": "2026-11-12"
+  },
+  "dottxt-ai/outlines": {
+   "stars": 16009,
+   "created": "2023-03-17",
+   "pushed": "2026-09-21"
+  },
+  "e2b-dev/e2b": {
+   "stars": 14827,
+   "created": "2023-03-04",
+   "pushed": "2026-11-12"
+  },
+  "eleutherai/lm-evaluation-harness": {
+   "stars": 14459,
+   "created": "2020-08-28",
+   "pushed": "2026-11-04"
+  },
+  "evidentlyai/evidently": {
+   "stars": 8059,
+   "created": "2020-11-25",
+   "pushed": "2026-09-29"
+  },
+  "facebookresearch/faiss": {
+   "stars": 41521,
+   "created": "2017-02-07",
+   "pushed": "2026-11-12"
+  },
+  "facebookresearch/sam3": {
+   "stars": 12291,
+   "created": "2025-07-17",
+   "pushed": "2026-11-10"
+  },
+  "flagopen/flagembedding": {
+   "stars": 12317,
+   "created": "2023-08-02",
+   "pushed": "2026-10-27"
+  },
+  "gepa-ai/gepa": {
+   "stars": 7411,
+   "created": "2025-08-05",
+   "pushed": "2026-11-09"
+  },
+  "getzep/graphiti": {
+   "stars": 32778,
+   "created": "2024-08-08",
+   "pushed": "2026-11-11"
+  },
+  "getzep/zep": {
+   "stars": 5005,
+   "created": "2023-04-29",
+   "pushed": "2026-11-12"
+  },
+  "ggml-org/llama.cpp": {
+   "stars": 134476,
+   "created": "2023-03-10",
+   "pushed": "2026-11-12"
+  },
+  "google-deepmind/synthid-text": {
+   "stars": 1246,
+   "created": "2024-10-23",
+   "pushed": "2026-10-26"
+  },
+  "google-gemini/gemini-cli": {
+   "stars": 108801,
+   "created": "2025-04-17",
+   "pushed": "2026-11-12"
+  },
+  "google/adk-python": {
+   "stars": 22195,
+   "created": "2025-04-01",
+   "pushed": "2026-11-12"
+  },
+  "guidance-ai/llguidance": {
+   "stars": 910,
+   "created": "2024-07-25",
+   "pushed": "2026-11-11"
+  },
+  "hkuds/lightrag": {
+   "stars": 40673,
+   "created": "2024-10-02",
+   "pushed": "2026-11-12"
+  },
+  "huggingface/datasets": {
+   "stars": 22132,
+   "created": "2020-03-26",
+   "pushed": "2026-11-12"
+  },
+  "huggingface/datatrove": {
+   "stars": 3419,
+   "created": "2023-06-14",
+   "pushed": "2026-11-10"
+  },
+  "huggingface/diffusers": {
+   "stars": 34914,
+   "created": "2022-05-30",
+   "pushed": "2026-11-12"
+  },
+  "huggingface/lighteval": {
+   "stars": 2586,
+   "created": "2024-01-26",
+   "pushed": "2026-11-11"
+  },
+  "huggingface/peft": {
+   "stars": 21884,
+   "created": "2022-11-25",
+   "pushed": "2026-11-12"
+  },
+  "huggingface/smolagents": {
+   "stars": 30341,
+   "created": "2024-12-05",
+   "pushed": "2026-11-10"
+  },
+  "huggingface/transformers": {
+   "stars": 168915,
+   "created": "2018-10-29",
+   "pushed": "2026-11-12"
+  },
+  "huggingface/trl": {
+   "stars": 19729,
+   "created": "2020-03-27",
+   "pushed": "2026-11-12"
+  },
+  "ibm-granite/granite-guardian": {
+   "stars": 190,
+   "created": "2024-10-11",
+   "pushed": "2026-10-16"
+  },
+  "illuin-tech/colpali": {
+   "stars": 2852,
+   "created": "2024-06-20",
+   "pushed": "2026-09-21"
+  },
+  "infiniflow/ragflow": {
+   "stars": 94093,
+   "created": "2023-12-12",
+   "pushed": "2026-11-12"
+  },
+  "jax-ml/jax": {
+   "stars": 36618,
+   "created": "2018-10-25",
+   "pushed": "2026-11-12"
+  },
+  "langchain-ai/langchain": {
+   "stars": 149413,
+   "created": "2022-10-17",
+   "pushed": "2026-11-12"
+  },
+  "langchain-ai/langgraph": {
+   "stars": 44869,
+   "created": "2023-08-09",
+   "pushed": "2026-11-12"
+  },
+  "langchain-ai/langmem": {
+   "stars": 1764,
+   "created": "2025-01-21",
+   "pushed": "2026-11-03"
+  },
+  "letta-ai/letta": {
+   "stars": 25426,
+   "created": "2023-10-11",
+   "pushed": "2026-10-18"
+  },
+  "livekit/agents": {
+   "stars": 15202,
+   "created": "2023-10-19",
+   "pushed": "2026-11-12"
+  },
+  "llm-d/llm-d": {
+   "stars": 5239,
+   "created": "2025-04-29",
+   "pushed": "2026-11-12"
+  },
+  "lmcache/lmcache": {
+   "stars": 12348,
+   "created": "2024-05-28",
+   "pushed": "2026-11-12"
+  },
+  "mastra-ai/mastra": {
+   "stars": 29488,
+   "created": "2024-08-06",
+   "pushed": "2026-11-12"
+  },
+  "mem0ai/mem0": {
+   "stars": 68881,
+   "created": "2023-06-20",
+   "pushed": "2026-11-06"
+  },
+  "memtensor/memos": {
+   "stars": 12374,
+   "created": "2025-07-06",
+   "pushed": "2026-11-11"
+  },
+  "microsoft/agent-framework": {
+   "stars": 14653,
+   "created": "2025-04-28",
+   "pushed": "2026-11-12"
+  },
+  "microsoft/autogen": {
+   "stars": 61796,
+   "created": "2023-08-18",
+   "pushed": "2026-11-12"
+  },
+  "microsoft/graphrag": {
+   "stars": 36638,
+   "created": "2024-03-27",
+   "pushed": "2026-11-09"
+  },
+  "microsoft/llmlingua": {
+   "stars": 6820,
+   "created": "2023-07-07",
+   "pushed": "2026-11-09"
+  },
+  "microsoft/playwright-mcp": {
+   "stars": 39567,
+   "created": "2025-03-21",
+   "pushed": "2026-11-11"
+  },
+  "microsoft/semantic-kernel": {
+   "stars": 28763,
+   "created": "2023-02-27",
+   "pushed": "2026-11-12"
+  },
+  "ml-explore/mlx": {
+   "stars": 29151,
+   "created": "2023-11-28",
+   "pushed": "2026-11-11"
+  },
+  "mlc-ai/xgrammar": {
+   "stars": 2009,
+   "created": "2024-06-28",
+   "pushed": "2026-11-12"
+  },
+  "moonshotai/kimi-k2": {
+   "stars": 11114,
+   "created": "2025-07-03",
+   "pushed": "2026-01-21"
+  },
+  "neo4j/neo4j-graphrag-python": {
+   "stars": 1332,
+   "created": "2024-02-27",
+   "pushed": "2026-11-12"
+  },
+  "neuml/txtai": {
+   "stars": 13350,
+   "created": "2020-08-09",
+   "pushed": "2026-11-12"
+  },
+  "nvidia-nemo/datadesigner": {
+   "stars": 2404,
+   "created": "2025-10-16",
+   "pushed": "2026-11-12"
+  },
+  "nvidia/garak": {
+   "stars": 10005,
+   "created": "2023-05-10",
+   "pushed": "2026-11-06"
+  },
+  "nvidia/megatron-lm": {
+   "stars": 18385,
+   "created": "2019-03-21",
+   "pushed": "2026-11-12"
+  },
+  "nvidia/tensorrt-llm": {
+   "stars": 15072,
+   "created": "2023-08-16",
+   "pushed": "2026-11-12"
+  },
+  "open-telemetry/semantic-conventions-genai": {
+   "stars": 535,
+   "created": "2026-05-05",
+   "pushed": "2026-11-11"
+  },
+  "openai/codex": {
+   "stars": 135035,
+   "created": "2025-04-13",
+   "pushed": "2026-11-12"
+  },
+  "openai/evals": {
+   "stars": 19735,
+   "created": "2023-01-23",
+   "pushed": "2026-04-14"
+  },
+  "openai/openai-agents-python": {
+   "stars": 30640,
+   "created": "2025-03-11",
+   "pushed": "2026-11-12"
+  },
+  "openai/tiktoken": {
+   "stars": 19651,
+   "created": "2022-12-01",
+   "pushed": "2026-11-08"
+  },
+  "openai/whisper": {
+   "stars": 112593,
+   "created": "2022-09-16",
+   "pushed": "2026-08-31"
+  },
+  "opendatalab/mineru": {
+   "stars": 83572,
+   "created": "2024-02-29",
+   "pushed": "2026-11-12"
+  },
+  "openhands/openhands": {
+   "stars": 93341,
+   "created": "2024-03-13",
+   "pushed": "2026-11-12"
+  },
+  "openvinotoolkit/openvino": {
+   "stars": 11149,
+   "created": "2018-10-15",
+   "pushed": "2026-11-12"
+  },
+  "paddlepaddle/paddleocr": {
+   "stars": 92640,
+   "created": "2020-05-08",
+   "pushed": "2026-09-16"
+  },
+  "pgvector/pgvector": {
+   "stars": 23662,
+   "created": "2021-04-20",
+   "pushed": "2026-11-11"
+  },
+  "portkey-ai/gateway": {
+   "stars": 13372,
+   "created": "2023-08-23",
+   "pushed": "2026-05-25"
+  },
+  "prithivirajdamodaran/flashrank": {
+   "stars": 1015,
+   "created": "2023-12-04",
+   "pushed": "2026-07-11"
+  },
+  "protectai/modelscan": {
+   "stars": 795,
+   "created": "2023-07-25",
+   "pushed": "2026-09-28"
+  },
+  "pydantic/pydantic-ai": {
+   "stars": 21173,
+   "created": "2024-06-21",
+   "pushed": "2026-11-12"
+  },
+  "quickwit-oss/tantivy": {
+   "stars": 16431,
+   "created": "2016-01-11",
+   "pushed": "2026-11-11"
+  },
+  "qwenlm/qwen3": {
+   "stars": 27729,
+   "created": "2024-02-05",
+   "pushed": "2026-01-09"
+  },
+  "qwenlm/qwen3-embedding": {
+   "stars": 2071,
+   "created": "2025-06-05",
+   "pushed": "2025-09-30"
+  },
+  "run-llama/llama_index": {
+   "stars": 52884,
+   "created": "2022-11-02",
+   "pushed": "2026-11-11"
+  },
+  "sgl-project/sglang": {
+   "stars": 38796,
+   "created": "2024-01-08",
+   "pushed": "2026-11-12"
+  },
+  "stanford-crfm/helm": {
+   "stars": 2969,
+   "created": "2021-11-29",
+   "pushed": "2026-09-01"
+  },
+  "stanford-futuredata/colbert": {
+   "stars": 3954,
+   "created": "2020-05-25",
+   "pushed": "2025-10-14"
+  },
+  "stanfordnlp/dspy": {
+   "stars": 39025,
+   "created": "2023-01-09",
+   "pushed": "2026-11-12"
+  },
+  "supermemoryai/supermemory": {
+   "stars": 31602,
+   "created": "2024-02-27",
+   "pushed": "2026-11-11"
+  },
+  "systran/faster-whisper": {
+   "stars": 26696,
+   "created": "2023-02-11",
+   "pushed": "2026-11-12"
+  },
+  "timescale/pgvectorscale": {
+   "stars": 3164,
+   "created": "2023-07-01",
+   "pushed": "2026-10-14"
+  },
+  "topoteretes/cognee": {
+   "stars": 33281,
+   "created": "2023-08-16",
+   "pushed": "2026-11-12"
+  },
+  "traceloop/openllmetry": {
+   "stars": 7532,
+   "created": "2023-09-02",
+   "pushed": "2026-11-09"
+  },
+  "triton-inference-server/server": {
+   "stars": 11137,
+   "created": "2018-10-04",
+   "pushed": "2026-11-12"
+  },
+  "trycua/cua": {
+   "stars": 32252,
+   "created": "2025-01-31",
+   "pushed": "2026-11-12"
+  },
+  "unclecode/crawl4ai": {
+   "stars": 87278,
+   "created": "2024-05-09",
+   "pushed": "2026-11-12"
+  },
+  "vectorize-io/hindsight": {
+   "stars": 60686,
+   "created": "2025-10-30",
+   "pushed": "2026-11-12"
+  },
+  "verl-project/verl": {
+   "stars": 24210,
+   "created": "2024-10-31",
+   "pushed": "2026-11-12"
+  },
+  "vllm-project/vllm": {
+   "stars": 96831,
+   "created": "2023-02-09",
+   "pushed": "2026-11-12"
+  },
+  "zai-org/glm-4.5": {
+   "stars": 4426,
+   "created": "2025-07-20",
+   "pushed": "2026-02-01"
+  },
+  "zou-group/textgrad": {
+   "stars": 3794,
+   "created": "2024-06-11",
+   "pushed": "2025-07-25"
+  }
+ }
+}
