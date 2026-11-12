@@ -48,7 +48,7 @@ export default function Note() {
       `Most common: ${roles.map(([r, n]) => `${roleName(r)} (${n})`).join(", ")}.\n` +
       `Skills asked for most: ${sk.map(([s, n]) => `${skillName(s)} ${pct(n)}%`).join(", ")}.\n` +
       `Tools named most: ${tl.map(([t]) => t).join(", ")}.\n\n` +
-      `Tracked daily from public job boards: vfaraji89.github.io/awesome-applied-ai/market/`
+      `Updated weekly from public job boards: vfaraji89.github.io/awesome-applied-ai/market/`
     : "";
   return (
     <section className="section">

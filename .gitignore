@@ -19,3 +19,4 @@ service-account*.json
 
 # bun scripts/content.ts export (default folder)
 content-export/
+web/public/pulse.json

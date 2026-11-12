@@ -14,7 +14,7 @@ The companion site to the book *Applied AI, Simplified* (in progress). This repo
 | **Tools** | 133 tools per layer, with licence and production maturity |
 | **Roles** | Six applied AI roles: what each owns, the layers it works on, the tools it reaches for |
 | **Problems** | 20 common problems, asked the way a team would ask them, with worked answers |
-| **Market** | What the applied AI job market asks for: roles, levels, titles, skills and tools, tracked daily |
+| **Market** | What the applied AI job market asks for: roles, levels, titles, skills and tools, updated weekly |
 
 ## Run it
 
