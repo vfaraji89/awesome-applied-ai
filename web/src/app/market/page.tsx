@@ -84,7 +84,7 @@ export default function Market() {
               <div>
                 <span className="kicker">Tools</span>
                 <h2 style={{ marginTop: 10 }}>The tools named most<span className="dot">.</span></h2>
-                <p className="muted" style={{ marginTop: 8 }}><span className="mk-key" /> in <Link href="/tools/">my daily stack</Link></p>
+                <p className="muted" style={{ marginTop: 8 }}><span className="mk-key" /> in <Link href="/tools/#stack">my daily stack</Link></p>
                 <Bars rows={m.tools.slice(0, 20)} label={(r) => r.name} />
               </div>
             </div>

@@ -21,15 +21,26 @@ export type Maturity =
 
 export type Deployment = "self-host" | "saas" | "both";
 
+/** The eleven areas of the tool map: all of applied AI, not only the LLM app stack. */
+export type ToolArea = "data" | "models" | "training" | "inference" | "retrieval" | "agents" | "evaluation" | "governance" | "modalities" | "builders" | "landscape";
+
 export interface Tool {
   id: string;
   name: string;
-  layer: LayerId;
+  area: ToolArea;
+  /** Set only for tools that belong to one of the six AI-native architecture layers. */
+  layer?: LayerId;
   category: string;
   summary: string;
   license: string;
   model: SourceModel;
   url: string;
+  /** Simple Icons slug (simpleicons.org); empty when the brand has no icon there. */
+  icon?: string;
+  /** Launched or reached GA recently and gaining adoption; always with a dated reason and a source. */
+  emerging?: boolean;
+  emergingWhy?: string;
+  emergingSource?: string;
   kind?: Kind;
   status?: Status;
   maturity?: Maturity;

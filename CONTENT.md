@@ -16,7 +16,7 @@ Google Sheet ──(daily or "Run workflow")──▶ validate rows ──▶ ty
 | `radar` | `web/src/data/content/radar.json` | `area`, `ring` are dropdowns. `examples`, `sources`: one link per line, `label \| https://…`. `more`: links on this site, `label \| /path/`. |
 | `radar_quarter` | the "in brief" panel | One row per point; every row names the same quarter. |
 | `settings` | | `radar_checked`: the date the radar was last reviewed, `YYYY-MM-DD`. |
-| `tools` | `web/src/data/content/tools.json` | `layer`, `model`, `maturity`, `deployment`, `kind`, `status` are dropdowns. `tags`: comma separated. |
+| `tools` | `web/src/data/content/tools.json` | `area` (one of eleven: data, models, training, inference, retrieval, agents, evaluation, governance, modalities, builders, landscape), `layer` (only for the six architecture layers, else blank), `model`, `maturity`, `deployment`, `kind`, `status` and `emerging` are dropdowns. `icon`: a [Simple Icons](https://simpleicons.org) slug, blank for a monogram. `emerging` TRUE needs `emerging_why` (with a date) and `emerging_source` (https). `tags`: comma separated. |
 | `jargon` | `web/src/data/content/jargon.json` | `field` is a dropdown. `also`, `tags`: comma separated. `link_href`: https://… or /path/. |
 | `jargon_fields` | the groups on /jargon/ | |
 

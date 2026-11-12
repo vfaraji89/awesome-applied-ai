@@ -13,12 +13,13 @@ web/ (Next.js static export) ◄────────────────
 GitHub Pages  https://vfaraji89.github.io/awesome-applied-ai/
 ```
 
-Two workflows in `.github/workflows/`:
+Three workflows in `.github/workflows/` (plus the content sync, see CONTENT.md):
 
 | Workflow | Runs | Does |
 |---|---|---|
 | `market.yml` (Track job market) | daily at 05:17 UTC, or by hand | reads the boards, updates the store, the summary and this week's snapshot, commits to `main` |
 | `pages.yml` (Deploy web) | on a push to `main` that touches `web/`, and after every tracker run | builds the site and publishes it |
+| `discover.yml` (Find new tools) | Mondays at 06:23 UTC, or by hand | proposes tools the map lacks in one issue labelled `tool-candidates`, each as a row for the content sheet; the first run of a month also flags archived or quiet repos on the map. Adds nothing to the site by itself |
 
 ## How the data is collected
 
