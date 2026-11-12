@@ -2,6 +2,8 @@
 
 **Applied AI, mapped.** Learn how AI systems really work, one animation at a time.
 
+The companion site to the book *Applied AI, Simplified* (in progress). This repository is private and all rights are reserved: see [LICENSE](LICENSE).
+
 → https://vfaraji89.github.io/awesome-applied-ai/
 
 | Section | What is in it |
@@ -24,10 +26,10 @@ bun run build    # static export in web/out
 ```
 
 Problems are written in `system-design.md` and compiled into `web/src/data/` on every build.
-Tools, jargon, roles and courses live in `web/src/data/*.ts`.
+The radar, tools, jargon and the tracker's company list are edited in a Google Sheet and synced by pull request (see [CONTENT.md](CONTENT.md)). Roles, layers and courses live in `web/src/data/*.ts`.
 
 ## The market tracker
 
-`pipeline/` reads public job boards once a day (company boards on Greenhouse, Lever and Ashby, listed in `pipeline/companies.json`; Remotive; Arbeitnow; Hacker News "Who is hiring?"), keeps the AI roles and reduces each to its role, level, skills and tools. It is not a job board: no posting, link, description or company is stored or shown. `bun pipeline/run.ts --dry` reports without writing.
+`pipeline/` reads public job boards once a day (company boards on Greenhouse, Lever, Ashby and Workday, listed in `pipeline/companies.json`; Remotive; Arbeitnow; Hacker News "Who is hiring?"), keeps the AI roles and reduces each to its role, level, skills and tools. It is not a job board: no posting, link, description or company is stored or shown. `bun pipeline/run.ts --dry` reports without writing.
 
-Curated by [Vahid Faraji](https://vfaraji89.github.io/).
+© 2026 [Vahid Faraji](https://vfaraji89.github.io/). All rights reserved.

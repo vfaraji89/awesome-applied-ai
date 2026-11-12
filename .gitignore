@@ -4,3 +4,18 @@ design-Q
 git-concepts
 web/src/data/role-fit.json
 web/src/data/skill-graph.json
+
+# Secrets never go in the repo: they live in Cloudflare Worker secrets
+# (wrangler secret put) and GitHub Actions secrets. CI fails if one slips in.
+.env
+.env.*
+!.env.example
+.dev.vars
+**/.dev.vars
+.wrangler/
+*.pem
+credentials.json
+service-account*.json
+
+# bun scripts/content.ts export (default folder)
+content-export/
