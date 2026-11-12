@@ -15,6 +15,14 @@ Radar entries, tools, jargon, problems and docs stay in English for now (a note 
 language picker says so). Role titles stay in English: they are the job titles used in postings.
 The Role fit check reads **English** text, and each language says so.
 
+## Principle: meaning, not words
+Each string is rewritten the way a native speaker in tech would say it, not translated word for
+word: natural collocations (TR *iş piyasası*, ES *mercado laboral*, NL *arbeidsmarkt*, JA
+*採用市場*), each language's usual headline rhythm, and the terms practitioners actually use.
+Where a field keeps the English word (harness, evals, embeddings, forward deployed engineer),
+it stays in English rather than being forced into a literal coinage. No em dashes, and nothing
+is added that the English does not say.
+
 ## Status
 | Language | Standard followed | Register | Review |
 | --- | --- | --- | --- |

@@ -12,7 +12,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Product metadata is structured. Brand, category, price, dimensions, compatibility, stock — these are columns, not prose. Embedding a row into a chunk and running cosine similarity discards precisely the signal that makes catalog retrieval exact. Most catalog queries are not semantic: \"Bosch dishwashers under €700 with a third rack\" is a "
+          "v": " Product metadata is structured. Brand, category, price, dimensions, compatibility, stock: these are columns, not prose. Embedding a row into a chunk and running cosine similarity discards precisely the signal that makes catalog retrieval exact. Most catalog queries are not semantic: \"Bosch dishwashers under €700 with a third rack\" is a "
         },
         {
           "t": "c",
@@ -172,7 +172,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " 500M rows are not 500M distinct products. Collapse SKU variants to product models — colour, size and packaging variants share one canonical record. A 10-50x reduction is typical. Retrieve at model level; expand to variants deterministically in SQL afterwards. This is the cheapest accuracy win available and it is usually skipped."
+            "v": " 500M rows are not 500M distinct products. Collapse SKU variants to product models: colour, size and packaging variants share one canonical record. A 10-50x reduction is typical. Retrieve at model level; expand to variants deterministically in SQL afterwards. This is the cheapest accuracy win available and it is usually skipped."
           }
         ],
         [
@@ -182,7 +182,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " A product row is not a document. Emit one vector per product from a templated canonical string, and separate vectors only for genuinely long fields — description, review digest, manual excerpt. Chunking structured records is what manufactures \"irrelevant chunks.\""
+            "v": " A product row is not a document. Emit one vector per product from a templated canonical string, and separate vectors only for genuinely long fields: description, review digest, manual excerpt. Chunking structured records is what manufactures \"irrelevant chunks.\""
           }
         ],
         [
@@ -192,7 +192,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " Extract structured constraints — attributes, numeric ranges, entities — with grammar-constrained decoding on a small model. Route: fully filterable queries go to SQL and never touch the vector index; ambiguous ones go to hybrid. This removes a large fraction of traffic from the expensive path entirely."
+            "v": " Extract structured constraints (attributes, numeric ranges, entities) with grammar-constrained decoding on a small model. Route: fully filterable queries go to SQL and never touch the vector index; ambiguous ones go to hybrid. This removes a large fraction of traffic from the expensive path entirely."
           }
         ],
         [
@@ -232,7 +232,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " If nothing clears the rerank score threshold, return \"no confident match\" rather than shipping ten weak candidates. This is the hallucination fix — the model hallucinates because you handed it irrelevant context and implied it was relevant."
+            "v": " If nothing clears the rerank score threshold, return \"no confident match\" rather than shipping ten weak candidates. This is the hallucination fix: the model hallucinates because you handed it irrelevant context and implied it was relevant."
           }
         ],
         [
@@ -464,7 +464,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Pull the histogram from the query log rather than estimating it. If most traffic sits above 10% selectivity, filtered ANN carries you. If there is a long tail below 1%, you need an engine that can fall back to exact scan over a materialized ID set — which means you need cardinality statistics, which means a relational planner is in the picture."
+          "v": " Pull the histogram from the query log rather than estimating it. If most traffic sits above 10% selectivity, filtered ANN carries you. If there is a long tail below 1%, you need an engine that can fall back to exact scan over a materialized ID set, which means you need cardinality statistics, which means a relational planner is in the picture."
         }
       ]
     },
@@ -494,7 +494,7 @@ export const problemBodies: Record<string, Block[]> = {
             },
             {
               "t": "text",
-              "v": " the product. Multi-phase ranking, filtering and lexical in one system — this architecture as one config"
+              "v": " the product. Multi-phase ranking, filtering and lexical in one system: this architecture as one config"
             }
           ],
           [
@@ -631,7 +631,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " a catalog search problem, rather than because you already run it, is choosing a data model that fights the query pattern. Note also that DataStax has been IBM since May 2025 and Astra is folding into watsonx.data — a procurement fact rather than a technical one, but it belongs in the decision."
+          "v": " a catalog search problem, rather than because you already run it, is choosing a data model that fights the query pattern. Note also that DataStax has been IBM since May 2025 and Astra is folding into watsonx.data: a procurement fact rather than a technical one, but it belongs in the decision."
         }
       ]
     },
@@ -661,7 +661,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " half only. It reorders a fused candidate list; it does not remove weak candidates, and it has no way to express \"nothing here is good enough.\" The two stated symptoms are precision and cost, and both are closed by what comes after fusion — the rerank stage, the abstain threshold, and the token ceiling. Naming a vendor before naming the memory budget and the selectivity distribution reads as not having worked the problem."
+          "v": " half only. It reorders a fused candidate list; it does not remove weak candidates, and it has no way to express \"nothing here is good enough.\" The two stated symptoms are precision and cost, and both are closed by what comes after fusion: the rerank stage, the abstain threshold, and the token ceiling. Naming a vendor before naming the memory budget and the selectivity distribution reads as not having worked the problem."
         }
       ]
     }
@@ -753,7 +753,7 @@ export const problemBodies: Record<string, Block[]> = {
       "c": [
         {
           "t": "text",
-          "v": "The last row is the answer people miss. Below 1% of 500M is 5M rows — but a "
+          "v": "The last row is the answer people miss. Below 1% of 500M is 5M rows, but a "
         },
         {
           "t": "i",
@@ -802,7 +802,7 @@ export const problemBodies: Record<string, Block[]> = {
         [
           {
             "t": "text",
-            "v": "Partition the index along the highest-cardinality filter you actually use — tenant, category, region — so pruning happens at partition level rather than inside traversal."
+            "v": "Partition the index along the highest-cardinality filter you actually use (tenant, category, region) so pruning happens at partition level rather than inside traversal."
           }
         ]
       ]
@@ -905,7 +905,7 @@ export const problemBodies: Record<string, Block[]> = {
           [
             {
               "t": "text",
-              "v": "A table split across chunks yields rows without headers — the single worst retrieval artifact"
+              "v": "A table split across chunks yields rows without headers: the single worst retrieval artifact"
             }
           ]
         ],
@@ -980,7 +980,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Retrieve small, provide large. Embed a precise unit for matching, then expand to its natural container before it reaches the model — the parent section, the full function, the entire ticket. This decouples matching granularity from grounding granularity, and it removes most of the chunk-size argument."
+          "v": " Retrieve small, provide large. Embed a precise unit for matching, then expand to its natural container before it reaches the model: the parent section, the full function, the entire ticket. This decouples matching granularity from grounding granularity, and it removes most of the chunk-size argument."
         }
       ]
     },
@@ -1002,7 +1002,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Docling for PDFs when per-page cost matters and the documents are local; LlamaParse or Reducto when the documents are genuinely messy and the accuracy is worth the invoice. Chonkie for the chunking strategies themselves — token, semantic, recursive, late. Tree-sitter for code, not a text splitter. Unstructured if the format spread is wider than these four."
+          "v": " Docling for PDFs when per-page cost matters and the documents are local; LlamaParse or Reducto when the documents are genuinely messy and the accuracy is worth the invoice. Chonkie for the chunking strategies themselves: token, semantic, recursive, late. Tree-sitter for code, not a text splitter. Unstructured if the format spread is wider than these four."
         }
       ]
     },
@@ -1053,7 +1053,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " Hash the exact text that feeds the embedding model. Store the hash alongside the vector. On ingest, recompute the hash; if unchanged, skip. This alone converts a 100% job into a 2% job — the stated $8,000 becomes roughly $160."
+            "v": " Hash the exact text that feeds the embedding model. Store the hash alongside the vector. On ingest, recompute the hash; if unchanged, skip. This alone converts a 100% job into a 2% job: the stated $8,000 becomes roughly $160."
           }
         ],
         [
@@ -1063,7 +1063,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " Change data capture from the source of record — Postgres logical replication, or the platform's webhook — not a nightly re-crawl. The crawl becomes a weekly reconciliation job that catches what CDC missed, not the primary path."
+            "v": " Change data capture from the source of record (Postgres logical replication, or the platform's webhook) not a nightly re-crawl. The crawl becomes a weekly reconciliation job that catches what CDC missed, not the primary path."
           }
         ],
         [
@@ -1107,7 +1107,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Postgres logical replication or Debezium for CDC. LanceDB and Turbopuffer handle incremental writes against object storage without a rebuild, which is the structural fit here. Qdrant supports live upserts with background optimization. Airflow or Temporal for the reconciliation job — Temporal if the pipeline needs to survive partial failure and resume, which at this size it does."
+          "v": " Postgres logical replication or Debezium for CDC. LanceDB and Turbopuffer handle incremental writes against object storage without a rebuild, which is the structural fit here. Qdrant supports live upserts with background optimization. Airflow or Temporal for the reconciliation job: Temporal if the pipeline needs to survive partial failure and resume, which at this size it does."
         }
       ]
     },
@@ -1120,7 +1120,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Optimising the batch job — more workers, bigger machines — rather than eliminating the 98% of it that is redundant."
+          "v": " Optimising the batch job (more workers, bigger machines) rather than eliminating the 98% of it that is redundant."
         }
       ]
     }
@@ -1168,7 +1168,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " This is the legitimate case. An agent that may only read, and one that may write, are genuinely different security principals. An expensive reasoner and a cheap extractor are genuinely different cost profiles. Splitting for \"separation of concerns\" alone is not a reason — that is a function, not an agent."
+            "v": " This is the legitimate case. An agent that may only read, and one that may write, are genuinely different security principals. An expensive reasoner and a cheap extractor are genuinely different cost profiles. Splitting for \"separation of concerns\" alone is not a reason: that is a function, not an agent."
           }
         ],
         [
@@ -1192,7 +1192,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Tool scope isolation for security. Context isolation, where a sub-agent burns 50k tokens searching and returns a 500-token summary, keeping the parent window clean — this is the strongest genuine case. Cost tiering. Independent parallel work with a deterministic merge. Different failure and retry semantics per stage."
+          "v": " Tool scope isolation for security. Context isolation, where a sub-agent burns 50k tokens searching and returns a 500-token summary, keeping the parent window clean: this is the strongest genuine case. Cost tiering. Independent parallel work with a deterministic merge. Different failure and retry semantics per stage."
         }
       ]
     },
@@ -1205,7 +1205,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Latency-sensitive paths. Anything where the subtasks share mutable state. Anything where the \"agents\" are really steps in a fixed sequence — that is a workflow, and it should be a graph with deterministic edges and model calls at the nodes."
+          "v": " Latency-sensitive paths. Anything where the subtasks share mutable state. Anything where the \"agents\" are really steps in a fixed sequence: that is a workflow, and it should be a graph with deterministic edges and model calls at the nodes."
         }
       ]
     },
@@ -1231,7 +1231,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " LangGraph if the topology is a state machine with checkpoints. Temporal if durability and replay matter more than agent ergonomics — and at seven stages they do. Reject CrewAI for this: LLM-driven routing makes cost and latency non-deterministic and failures non-reproducible, which is the opposite of what a seven-stage system needs."
+          "v": " LangGraph if the topology is a state machine with checkpoints. Temporal if durability and replay matter more than agent ergonomics, and at seven stages they do. Reject CrewAI for this: LLM-driven routing makes cost and latency non-deterministic and failures non-reproducible, which is the opposite of what a seven-stage system needs."
         }
       ]
     },
@@ -1259,7 +1259,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Fan-out multiplies context. Twenty sub-agents each returning 10k tokens of findings puts 200k tokens into the supervisor, which is past the point where accuracy degrades measurably regardless of the advertised window — mid-context evidence loses over 30% accuracy, and tool-calling degrades faster than prose retrieval."
+          "v": " Fan-out multiplies context. Twenty sub-agents each returning 10k tokens of findings puts 200k tokens into the supervisor, which is past the point where accuracy degrades measurably regardless of the advertised window: mid-context evidence loses over 30% accuracy, and tool-calling degrades faster than prose retrieval."
         }
       ]
     },
@@ -1282,7 +1282,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " This is the whole point of the pattern. A sub-agent may consume 50k tokens internally; the parent sees a bounded, schema-validated result. Enforce the bound structurally — a "
+            "v": " This is the whole point of the pattern. A sub-agent may consume 50k tokens internally; the parent sees a bounded, schema-validated result. Enforce the bound structurally: a "
           },
           {
             "t": "c",
@@ -1320,7 +1320,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " Deduplicate by source ID, sort by confidence, truncate to budget — in code. Using a model to merge twenty results is a second, avoidable, hallucination surface."
+            "v": " Deduplicate by source ID, sort by confidence, truncate to budget, in code. Using a model to merge twenty results is a second, avoidable, hallucination surface."
           }
         ],
         [
@@ -1365,7 +1365,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " API for dynamic fan-out with a reducer on the merge. Claude Agent SDK subagents if you are on Anthropic and want context isolation without building it. Temporal child workflows when each branch needs independent retry and durability. Object storage or Postgres for the artifact store — the handle-passing tier is the part people skip and then regret."
+          "v": " API for dynamic fan-out with a reducer on the merge. Claude Agent SDK subagents if you are on Anthropic and want context isolation without building it. Temporal child workflows when each branch needs independent retry and durability. Object storage or Postgres for the artifact store: the handle-passing tier is the part people skip and then regret."
         }
       ]
     },
@@ -1525,7 +1525,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Hash each tool call — name plus normalized arguments. If the same hash appears twice in one run, the agent is not making progress. Second occurrence: inject an observation naming the repetition. Third: terminate. This catches the actual failure mode, which is rarely \"too many steps\" and almost always \"the same step forever.\""
+          "v": " Hash each tool call: name plus normalized arguments. If the same hash appears twice in one run, the agent is not making progress. Second occurrence: inject an observation naming the repetition. Third: terminate. This catches the actual failure mode, which is rarely \"too many steps\" and almost always \"the same step forever.\""
         }
       ]
     },
@@ -1551,7 +1551,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " In the gateway or the orchestrator, never in the agent. An agent asked to respect its own budget will exceed it — the instruction competes with the task, and the task wins. Enforce in middleware that counts tokens on every request and can refuse."
+          "v": " In the gateway or the orchestrator, never in the agent. An agent asked to respect its own budget will exceed it: the instruction competes with the task, and the task wins. Enforce in middleware that counts tokens on every request and can refuse."
         }
       ]
     },
@@ -1572,7 +1572,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " for the crude iteration ceiling, plus a custom reducer for the repeated-state hash. Temporal if you want the budget as workflow state that survives process death. Langfuse for the trace that tells you which prompt change caused it — after the gate has already stopped the bleeding."
+          "v": " for the crude iteration ceiling, plus a custom reducer for the repeated-state hash. Temporal if you want the budget as workflow state that survives process death. Langfuse for the trace that tells you which prompt change caused it: after the gate has already stopped the bleeding."
         }
       ]
     },
@@ -1657,7 +1657,7 @@ export const problemBodies: Record<string, Block[]> = {
       "c": [
         {
           "t": "text",
-          "v": "It also removes SSE stream resumability — "
+          "v": "It also removes SSE stream resumability: "
         },
         {
           "t": "c",
@@ -1709,7 +1709,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " Three buckets: stateless already; state that can become an explicit handle; state that was really per-user authorization. The third bucket is the trap — servers that varied their tool list by caller were doing authorization through the protocol, and that now has to move into the authorization layer proper."
+            "v": " Three buckets: stateless already; state that can become an explicit handle; state that was really per-user authorization. The third bucket is the trap: servers that varied their tool list by caller were doing authorization through the protocol, and that now has to move into the authorization layer proper."
           }
         ],
         [
@@ -1784,7 +1784,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " A private MCP registry is the precondition for a fleet migration of this shape — you cannot roll a version boundary across 40 servers you do not have an inventory of. Pin by digest. The official SDKs at 2.0 track the new revision. OpenTelemetry for the logging migration, using the newly documented "
+          "v": " A private MCP registry is the precondition for a fleet migration of this shape: you cannot roll a version boundary across 40 servers you do not have an inventory of. Pin by digest. The official SDKs at 2.0 track the new revision. OpenTelemetry for the logging migration, using the newly documented "
         },
         {
           "t": "c",
@@ -1844,7 +1844,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " These are two problems with one cause and different solutions. The token cost is fixed by caching (item 10). The selection accuracy is not — a model choosing among 400 near-synonymous tools is doing retrieval, badly, with no reranker."
+          "v": " These are two problems with one cause and different solutions. The token cost is fixed by caching (item 10). The selection accuracy is not: a model choosing among 400 near-synonymous tools is doing retrieval, badly, with no reranker."
         }
       ]
     },
@@ -1867,7 +1867,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " Index tool descriptions. At request time, retrieve the 15-30 relevant tools and expose only those. This is ordinary retrieval and it responds to ordinary retrieval technique — hybrid search, reranking, a threshold."
+            "v": " Index tool descriptions. At request time, retrieve the 15-30 relevant tools and expose only those. This is ordinary retrieval and it responds to ordinary retrieval technique: hybrid search, reranking, a threshold."
           }
         ],
         [
@@ -1903,7 +1903,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": ". Prefix by server and, more importantly, resolve the genuine duplicates — the accuracy loss is largely the model picking a plausible wrong one among identical-sounding options."
+            "v": ". Prefix by server and, more importantly, resolve the genuine duplicates: the accuracy loss is largely the model picking a plausible wrong one among identical-sounding options."
           }
         ],
         [
@@ -1966,7 +1966,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Tool descriptions are an injection surface — tool poisoning, where instructions hidden in descriptions or parameter metadata reach the model but never the user, is an OWASP-catalogued class, with cross-tool poisoning and rug-pull server updates as variants. Forty servers is forty supply chains. Review tool metadata as code, pin by digest, and gate write-capable tools behind approval."
+          "v": " Tool descriptions are an injection surface: tool poisoning, where instructions hidden in descriptions or parameter metadata reach the model but never the user, is an OWASP-catalogued class, with cross-tool poisoning and rug-pull server updates as variants. Forty servers is forty supply chains. Review tool metadata as code, pin by digest, and gate write-capable tools behind approval."
         }
       ]
     },
@@ -1979,7 +1979,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Any vector store for the tool index — this is a tiny corpus, so pgvector or an in-process index is sufficient. FlashRank for CPU-only reranking at negligible latency. A private registry for pinning. promptfoo for the selection eval matrix."
+          "v": " Any vector store for the tool index: this is a tiny corpus, so pgvector or an in-process index is sufficient. FlashRank for CPU-only reranking at negligible latency. A private registry for pinning. promptfoo for the selection eval matrix."
         }
       ]
     },
@@ -2108,7 +2108,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Provider prompt caches match on exact prefixes. One reordered tool definition changes a byte in the preamble and invalidates everything below it. Cached input reads cost roughly a tenth of fresh input across all three major providers; Anthropic additionally charges 1.25x to write a five-minute cache and 2.0x for an hour. So a nondeterministically-ordered tool list does not merely miss the cache — it pays the write multiplier repeatedly, which is worse than not caching at all."
+          "v": " Provider prompt caches match on exact prefixes. One reordered tool definition changes a byte in the preamble and invalidates everything below it. Cached input reads cost roughly a tenth of fresh input across all three major providers; Anthropic additionally charges 1.25x to write a five-minute cache and 2.0x for an hour. So a nondeterministically-ordered tool list does not merely miss the cache: it pays the write multiplier repeatedly, which is worse than not caching at all."
         }
       ]
     },
@@ -2184,7 +2184,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " Sort tools by a stable key, canonicalize JSON — key order, whitespace, number formatting — then serialize. Never trust the server's ordering even though it SHOULD be deterministic; normalize on receipt."
+            "v": " Sort tools by a stable key, canonicalize JSON (key order, whitespace, number formatting) then serialize. Never trust the server's ordering even though it SHOULD be deterministic; normalize on receipt."
           }
         ],
         [
@@ -2252,7 +2252,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " endpoint for billing-accurate measurement including tool definitions — it is free, and estimating tool-definition cost with a tokenizer library will be wrong."
+          "v": " endpoint for billing-accurate measurement including tool definitions: it is free, and estimating tool-definition cost with a tokenizer library will be wrong."
         }
       ]
     },
@@ -2280,7 +2280,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " GraphRAG's cost sits almost entirely in construction, and construction scales with corpus size times extraction model price. Entity and relationship extraction runs per chunk, then community detection and summarization run over the result — several model calls per chunk, not one. The benefit only materialises on queries that actually traverse a relationship."
+          "v": " GraphRAG's cost sits almost entirely in construction, and construction scales with corpus size times extraction model price. Entity and relationship extraction runs per chunk, then community detection and summarization run over the result: several model calls per chunk, not one. The benefit only materialises on queries that actually traverse a relationship."
         }
       ]
     },
@@ -2363,7 +2363,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Approve when multi-hop exceeds roughly a quarter of queries, the corpus is stable, and the relationships are genuinely implicit in prose — legal discovery, incident forensics, research synthesis. Reject when entities are already structured, when the corpus churns daily, or when the proof of concept compared GraphRAG against a naive vector baseline with no reranker, which is the usual reason the proof of concept looked good."
+          "v": " Approve when multi-hop exceeds roughly a quarter of queries, the corpus is stable, and the relationships are genuinely implicit in prose: legal discovery, incident forensics, research synthesis. Reject when entities are already structured, when the corpus churns daily, or when the proof of concept compared GraphRAG against a naive vector baseline with no reranker, which is the usual reason the proof of concept looked good."
         }
       ]
     },
@@ -2376,7 +2376,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Graphiti for incremental, bitemporal graph construction — the property that makes it viable under churn. Kùzu embedded, or Neo4j when the graph is a shared asset. LightRAG and nano-graphrag as substantially cheaper implementations of the same idea. Microsoft GraphRAG as the reference paper, not the production system."
+          "v": " Graphiti for incremental, bitemporal graph construction: the property that makes it viable under churn. Kùzu embedded, or Neo4j when the graph is a shared asset. LightRAG and nano-graphrag as substantially cheaper implementations of the same idea. Microsoft GraphRAG as the reference paper, not the production system."
         }
       ]
     },
@@ -2563,7 +2563,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " The cheap path needs a way to say \"not confident\" and hand up. Without it, routing converts a latency win into a silent quality regression. The metric that matters is not router accuracy — it is the "
+          "v": " The cheap path needs a way to say \"not confident\" and hand up. Without it, routing converts a latency win into a silent quality regression. The metric that matters is not router accuracy: it is the "
         },
         {
           "t": "b",
@@ -2584,7 +2584,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Redis or GPTCache for the semantic cache tier. A fine-tuned ModernBERT or DeBERTa encoder for the classifier — this is a classification problem with abundant training data sitting in your logs, not a generation problem. LiteLLM or RouteLLM for the routing layer itself. Langfuse to attribute quality regressions back to routing decisions, which requires recording the tier on every trace."
+          "v": " Redis or GPTCache for the semantic cache tier. A fine-tuned ModernBERT or DeBERTa encoder for the classifier: this is a classification problem with abundant training data sitting in your logs, not a generation problem. LiteLLM or RouteLLM for the routing layer itself. Langfuse to attribute quality regressions back to routing decisions, which requires recording the tier on every trace."
         }
       ]
     },
@@ -2661,7 +2661,7 @@ export const problemBodies: Record<string, Block[]> = {
           [
             {
               "t": "text",
-              "v": "Tool-calling degrades faster with context length than prose question answering — directly relevant to agents"
+              "v": "Tool-calling degrades faster with context length than prose question answering: directly relevant to agents"
             }
           ]
         ],
@@ -2711,7 +2711,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " A single document that cannot be chunked without destroying it — a contract, a long statute, one large source file. A stable prefix reused across many queries, where caching does apply. Low query volume where engineering time costs more than tokens. And cases where retrieval "
+          "v": " A single document that cannot be chunked without destroying it: a contract, a long statute, one large source file. A stable prefix reused across many queries, where caching does apply. Low query volume where engineering time costs more than tokens. And cases where retrieval "
         },
         {
           "t": "i",
@@ -2768,7 +2768,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " The tenant size distribution decides the architecture, and it is a power law. Neither \"one index per tenant\" nor \"one index for all\" works — the first pays fixed per-index overhead 500 times for tenants with 200 documents, the second gives the 40-million-document tenant no isolation and lets it starve everyone else."
+          "v": " The tenant size distribution decides the architecture, and it is a power law. Neither \"one index per tenant\" nor \"one index for all\" works: the first pays fixed per-index overhead 500 times for tenants with 200 documents, the second gives the 40-million-document tenant no isolation and lets it starve everyone else."
         }
       ]
     },
@@ -2884,7 +2884,7 @@ export const problemBodies: Record<string, Block[]> = {
         [
           {
             "t": "text",
-            "v": "Or a proxy that injects the predicate and refuses any query arriving without one — fail closed, never fail open."
+            "v": "Or a proxy that injects the predicate and refuses any query arriving without one: fail closed, never fail open."
           }
         ],
         [
@@ -2929,7 +2929,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": ": embeddings are invertible enough that inversion attacks recover meaningful source text. A shared index holding tenant A's vectors is holding tenant A's data whatever the filters say — which matters for residency and deletion obligations, not just access control."
+          "v": ": embeddings are invertible enough that inversion attacks recover meaningful source text. A shared index holding tenant A's vectors is holding tenant A's data whatever the filters say, which matters for residency and deletion obligations, not just access control."
         }
       ]
     },
@@ -2970,7 +2970,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " RRF discards scores and uses ranks alone. That is its virtue — it needs no score normalization between two incomparable scales — and it is exactly the source of the regression. A document ranked first on overwhelming lexical evidence and one ranked first on marginal semantic similarity contribute identically."
+          "v": " RRF discards scores and uses ranks alone. That is its virtue (it needs no score normalization between two incomparable scales) and it is exactly the source of the regression. A document ranked first on overwhelming lexical evidence and one ranked first on marginal semantic similarity contribute identically."
         }
       ]
     },
@@ -2983,7 +2983,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Queries where one retriever is authoritative. An exact SKU, part number or error code is a solved problem for BM25; fusion then drags in semantically plausible, factually wrong neighbours and dilutes a confident result. Tuning the constant trades one query class against another. It cannot fix this, because the information needed to fix it — how confident each retriever was — has already been thrown away."
+          "v": " Queries where one retriever is authoritative. An exact SKU, part number or error code is a solved problem for BM25; fusion then drags in semantically plausible, factually wrong neighbours and dilutes a confident result. Tuning the constant trades one query class against another. It cannot fix this, because the information needed to fix it (how confident each retriever was) has already been thrown away."
         }
       ]
     },
@@ -3030,7 +3030,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " An aggregate nDCG improved while a query class broke, and nobody noticed until users did. Stratify every retrieval metric by query class — identifier lookup, attribute filter, natural language, multi-hop — and report per class. An aggregate over a mixed workload hides exactly the regression you need to see."
+          "v": " An aggregate nDCG improved while a query class broke, and nobody noticed until users did. Stratify every retrieval metric by query class (identifier lookup, attribute filter, natural language, multi-hop) and report per class. An aggregate over a mixed workload hides exactly the regression you need to see."
         }
       ]
     },
@@ -3216,7 +3216,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Shadow the new pipeline on live traffic, retrieve with both, log both candidate sets, ship neither. Where the sets agree, no risk. Where they disagree, sample and review — that population is small and it is the only part that carries information. This produces a defensible decision in days without a labelled corpus, and it doubles as the regression harness afterwards."
+          "v": " Shadow the new pipeline on live traffic, retrieve with both, log both candidate sets, ship neither. Where the sets agree, no risk. Where they disagree, sample and review: that population is small and it is the only part that carries information. This produces a defensible decision in days without a labelled corpus, and it doubles as the regression harness afterwards."
         }
       ]
     },
@@ -3257,7 +3257,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " A natural-language handoff is unvalidated serialization. Each boundary is a lossy encoder with no checksum, and the failure mode is silent omission rather than a visible error — the downstream agent proceeds confidently on incomplete input."
+          "v": " A natural-language handoff is unvalidated serialization. Each boundary is a lossy encoder with no checksum, and the failure mode is silent omission rather than a visible error: the downstream agent proceeds confidently on incomplete input."
         }
       ]
     },
@@ -3342,7 +3342,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Contract tests at each boundary, exactly as with microservices: fixed inputs, assertions on the structured output, run in CI. You cannot assert on prose, which is why the schema matters — it converts an untestable boundary into a testable one."
+          "v": " Contract tests at each boundary, exactly as with microservices: fixed inputs, assertions on the structured output, run in CI. You cannot assert on prose, which is why the schema matters: it converts an untestable boundary into a testable one."
         }
       ]
     },
@@ -3355,7 +3355,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Grammar-constrained decoding via XGrammar or llguidance so the schema is enforced during generation rather than validated afterwards — a retry loop on validation failure is a worse version of the same thing. Pydantic with instructor for the type layer. LangGraph typed state where the boundary is in-process. Pact-style contract tests where the agents deploy separately."
+          "v": " Grammar-constrained decoding via XGrammar or llguidance so the schema is enforced during generation rather than validated afterwards: a retry loop on validation failure is a worse version of the same thing. Pydantic with instructor for the type layer. LangGraph typed state where the boundary is in-process. Pact-style contract tests where the agents deploy separately."
         }
       ]
     },
@@ -3508,7 +3508,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " Retry is the default recovery, and without keys retry means a second refund. This is now sharper under MCP revision 2026-07-28, which removed SSE resumability — a broken stream means re-issuing the request with a new request ID, so the server side must deduplicate or you will double-execute."
+            "v": " Retry is the default recovery, and without keys retry means a second refund. This is now sharper under MCP revision 2026-07-28, which removed SSE resumability: a broken stream means re-issuing the request with a new request ID, so the server side must deduplicate or you will double-execute."
           }
         ],
         [
@@ -3555,7 +3555,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Temporal — sagas, compensation handlers, durable state and deterministic replay are precisely its purpose, and this problem is the canonical case for it. Restate as the lighter alternative. Building this on a queue and a state table means reimplementing Temporal without its testing story."
+          "v": " Temporal: sagas, compensation handlers, durable state and deterministic replay are precisely its purpose, and this problem is the canonical case for it. Restate as the lighter alternative. Building this on a queue and a state table means reimplementing Temporal without its testing story."
         }
       ]
     },
@@ -3583,7 +3583,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " A multi-day pause cannot live in process memory. The run must suspend to durable storage, release every resource, and resume in a different process — quite possibly a different build, since three days spans at least one deploy."
+          "v": " A multi-day pause cannot live in process memory. The run must suspend to durable storage, release every resource, and resume in a different process: quite possibly a different build, since three days spans at least one deploy."
         }
       ]
     },
@@ -3617,7 +3617,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " Version the persisted state. On resume, either migrate it or fail explicitly with an explanation — never deserialize optimistically into a changed shape."
+            "v": " Version the persisted state. On resume, either migrate it or fail explicitly with an explanation: never deserialize optimistically into a changed shape."
           }
         ],
         [
@@ -3647,7 +3647,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " Decide explicitly what happens at day seven — escalate, expire, auto-reject. Auto-approve is never the answer, and leaving it undefined means runs accumulate silently forever."
+            "v": " Decide explicitly what happens at day seven: escalate, expire, auto-reject. Auto-approve is never the answer, and leaving it undefined means runs accumulate silently forever."
           }
         ]
       ]
@@ -3677,7 +3677,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": ". That is a request-response shape for gathering input, not a suspension mechanism. A three-day approval still needs the tasks extension or your own durable layer underneath — and with SSE resumability removed, holding a stream open is no longer even a bad option, it is not an option."
+          "v": ". That is a request-response shape for gathering input, not a suspension mechanism. A three-day approval still needs the tasks extension or your own durable layer underneath, and with SSE resumability removed, holding a stream open is no longer even a bad option, it is not an option."
         }
       ]
     },
@@ -3690,7 +3690,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Temporal signals, which is the textbook fit — a workflow can wait days at no compute cost and receive the approval as a signal. LangGraph "
+          "v": " Temporal signals, which is the textbook fit: a workflow can wait days at no compute cost and receive the approval as a signal. LangGraph "
         },
         {
           "t": "c",
@@ -3726,7 +3726,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " You cannot make the model deterministic. Temperature zero still varies with batch composition, hardware and silent provider-side updates. So do not try to replay the model — replay everything around it."
+          "v": " You cannot make the model deterministic. Temperature zero still varies with batch composition, hardware and silent provider-side updates. So do not try to replay the model: replay everything around it."
         }
       ]
     },
@@ -3768,7 +3768,7 @@ export const problemBodies: Record<string, Block[]> = {
           },
           {
             "t": "text",
-            "v": " The exact bytes sent after templating, retrieval and tool-definition assembly. A trace showing the template and the variables separately is not enough — the bug is often in the join."
+            "v": " The exact bytes sent after templating, retrieval and tool-definition assembly. A trace showing the template and the variables separately is not enough: the bug is often in the join."
           }
         ],
         [
@@ -3828,7 +3828,7 @@ export const problemBodies: Record<string, Block[]> = {
         },
         {
           "t": "text",
-          "v": " Temporal for the record-and-replay substrate — deterministic replay is its defining property, not a feature. Langfuse or LangSmith for traces, with the caveat that a trace is an observation and not a replay; they are complementary. Resolved prompts to object storage keyed by trace ID, since tracing backends truncate large payloads exactly when you need them."
+          "v": " Temporal for the record-and-replay substrate: deterministic replay is its defining property, not a feature. Langfuse or LangSmith for traces, with the caveat that a trace is an observation and not a replay; they are complementary. Resolved prompts to object storage keyed by trace ID, since tracing backends truncate large payloads exactly when you need them."
         }
       ]
     },

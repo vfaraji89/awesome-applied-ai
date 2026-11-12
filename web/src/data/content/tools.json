@@ -47,7 +47,7 @@
    "postgres",
    "agpl"
   ],
-  "note": "AGPL — check policy before embedding."
+  "note": "AGPL: check policy before embedding."
  },
  {
   "id": "qdrant",
@@ -256,7 +256,7 @@
    "postgres",
    "agpl"
   ],
-  "note": "AGPL — check policy before embedding."
+  "note": "AGPL: check policy before embedding."
  },
  {
   "id": "typesense",
@@ -545,7 +545,7 @@
    "chunking",
    "agpl"
   ],
-  "note": "AGPL — check policy before embedding."
+  "note": "AGPL: check policy before embedding."
  },
  {
   "id": "chonkie",
@@ -578,7 +578,7 @@
    "crawling",
    "agpl"
   ],
-  "note": "AGPL — check policy before embedding."
+  "note": "AGPL: check policy before embedding."
  },
  {
   "id": "azure-ai-search",

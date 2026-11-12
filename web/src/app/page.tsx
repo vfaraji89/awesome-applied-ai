@@ -52,7 +52,7 @@ export default function Home() {
           </div>
           <Link href="/fit/" className="frame home-fit rise" style={{ ["--i" as string]: 4 }}>
             <span className="hf-ic"><FitIcon size={28} /></span>
-            <span><span className="kicker"><T k="page.role-fit">Role fit</T></span><b><T k="home.fit_b">Which applied AI role fits you?</T></b><span className="muted"><T k="home.fit_em" vars={{ n: market.totals.allTime.toLocaleString("en") }}>{"Paste your CV. Scored against {n} real postings, with what to learn next."}</T></span></span>
+            <span><span className="kicker"><T k="page.role-fit">Role fit</T></span><b><T k="home.fit_b">How ready are you for applied AI roles?</T></b><span className="muted"><T k="home.fit_em" vars={{ n: market.totals.allTime.toLocaleString("en") }}>{"Paste your CV. Scored against {n} real postings, with what to learn next."}</T></span></span>
             <span className="hf-go" aria-hidden="true">→</span>
             <span className="rod" />
           </Link>

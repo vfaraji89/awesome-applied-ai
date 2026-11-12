@@ -23,8 +23,9 @@ export function SiteHeader() {
               <T k={`sec.${n.id}.label`}>{n.label}</T>
             </Link>
           ))}
+          <a href="#about"><T k="ab.kicker">About</T></a>
         </nav>
-        <Link href="/fit/" className="hdr-fit" aria-current={path.startsWith("/fit/") ? "page" : undefined} title={t("hdr.fit_title", "Paste your CV, see which applied AI role you fit")}>
+        <Link href="/fit/" className="hdr-fit" aria-current={path.startsWith("/fit/") ? "page" : undefined} title={t("hdr.fit_title", "Paste your CV and see how ready you are for applied AI roles")}>
           <FitIcon /><span><TH k="hdr.fit">Role <em>fit</em></TH></span>
         </Link>
         <LangPicker />
