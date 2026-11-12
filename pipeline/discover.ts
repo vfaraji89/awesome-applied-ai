@@ -41,6 +41,7 @@ const TOPICS: Record<string, [string, string][]> = {
   landscape: [["technology-detection", "stack-detection"], ["llm-benchmark", "model-benchmarks"], ["leaderboard", "model-benchmarks"]],
 };
 const RISING_STARS = 300, KNOWN_STARS = 5000;
+const AI_WORDS = /\b(AI|LLMs?|agents?|agentic|GPT|Claude|Gemini|RAG|embeddings?|inference|models?|fine-?tun\w*|MCP|voice|speech|OCR|vision|diffusion|text-to-\w+|transformers?|ML|neural|copilot)\b/i;
 
 type Tool = { id: string; name: string; url: string; status?: string };
 type Cand = { key: string; name: string; area: string; category: string; url: string; summary: string; license: string; stars?: number; created?: string; source: string; signal: string };
@@ -117,8 +118,11 @@ for (const q of ["AI", "LLM", "agent", "RAG", "voice AI", "open-source model"]) 
     if (!r.ok) throw new Error(String(r.status));
     for (const h of (await r.json()).hits ?? []) {
       if (!h.url?.startsWith("https://")) continue;
-      const name = clean(String(h.title).replace(/^Show HN:\s*/i, "").split(/\s+[-:|,]\s+|:\s/)[0]).slice(0, 60);
-      add({ key: `hn:${norm(h.url)}`, name, area: "", category: "", url: h.url, summary: clean(String(h.title).replace(/^Show HN:\s*/i, "")).slice(0, 110), license: "",
+      const title = String(h.title).replace(/^Show HN:\s*/i, "");
+      if (!AI_WORDS.test(title)) continue; // the search matches loosely; keep launches that are about AI
+      const name = clean(title.split(/\s+[-\u2013\u2014:|]\s+|:\s|,\s/)[0]);
+      if (name.split(/\s+/).length > 5) continue; // a sentence, not a product name
+      add({ key: `hn:${norm(h.url)}`, name, area: "", category: "", url: h.url, summary: clean(title).slice(0, 110), license: "",
         source: `https://news.ycombinator.com/item?id=${h.objectID}`, signal: `Show HN, ${h.points} points` });
     }
   } catch (e) { errors.push(`hacker news "${q}": ${(e as Error).message.slice(0, 60)}`); }
