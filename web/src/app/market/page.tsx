@@ -6,7 +6,7 @@ import { fRoles, skills } from "@/data/framework";
 import { More } from "@/components/more";
 import { TH } from "@/i18n/lang";
 
-export const metadata: Metadata = { title: "Market pulse", description: "What the applied AI job market asks for: roles, levels, titles, skills and tools, tracked daily from public job boards." };
+export const metadata: Metadata = { title: "Market pulse", description: "What the applied AI job market asks for: roles, levels, titles, skills and tools, updated weekly from public job boards." };
 
 type Row = { id?: string; name?: string; title?: string; month?: string; n: number; share?: number; inStack?: boolean };
 const roleName = (id: string) => fRoles.find((r) => r.id === id)?.name ?? "Other AI roles";
@@ -39,7 +39,7 @@ export default function Market() {
         <div className="wrap">
           <Crumb id="market" page="Market pulse" />
           <h1 style={{ marginTop: 12 }}><TH k="market.h1">What the market asks for</TH><span className="dot">.</span></h1>
-          <p className="lead" style={{ marginTop: 16 }}><TH k="market.p1"><b>What AI jobs ask for</b>, read from public job boards <b>every day</b>.</TH></p>
+          <p className="lead" style={{ marginTop: 16 }}><TH k="market.p1"><b>What AI jobs ask for</b>, read from public job boards and <b>updated every week</b>.</TH></p>
           <More label="How it is collected"><p className="lead" style={{ marginTop: 12 }}><TH k="market.p2">Only the AI roles are kept. Each posting is reduced to its <b>role, level, skills and tools</b>; no posting, link or company is republished. This page is the gist.</TH></p></More>
           {ready ? (
             <div className="mk-totals">
@@ -118,7 +118,7 @@ export default function Market() {
             <li>Sources: {m.sources.length ? m.sources.map((s) => `${SOURCE[s.id] ?? s.id} (${s.ai} AI roles)`).join(" · ") : "public company job boards (Greenhouse, Lever, Ashby), Remotive, Arbeitnow and Hacker News “Who is hiring?”"}. Big boards that forbid automated reading are not used.</li>
             <li>A posting counts as an AI role when its title says so. Role family and level come from the title; skills and tools from the whole description.</li>
             <li>Only the role, level, skills, tools, remote flag and dates are kept. No posting, link, description or company is stored or shown.</li>
-            <li>The data covers the boards watched, not the whole market, and grows every day.</li>
+            <li>The data covers the boards watched, not the whole market, and grows every week.</li>
           </ul>
         </div>
       </section>

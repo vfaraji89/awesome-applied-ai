@@ -5,7 +5,7 @@ export interface Section { n: string; id: string; label: string; title: string; 
 export const structure: Section[] = [
   {
     n: "01", id: "market", label: "Market", title: "The market", href: "/market/", match: ["/market/", "/fit/", "/labs/"],
-    line: "What applied AI jobs ask for, tracked every day, and where you fit.",
+    line: "What applied AI jobs ask for, updated every week, and where you fit.",
     pages: [
       { label: "Market pulse", href: "/market/", note: "Roles, levels, skills and tools in demand" },
       { label: "Role fit", href: "/fit/", note: "Your CV or a job description, against the market, with a learning path" },
