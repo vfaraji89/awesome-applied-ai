@@ -308,5 +308,8 @@
  "tools.p3": "<b>The wider map</b>: the main tools in each of the six layers.",
  "tools.p4": "Beyond my own stack, each tool shows its <b>licence</b> and <b>how proven it is in production</b>. Filter by layer or search by name.",
  "ui.skills": "Skills",
- "ui.soon": "soon"
+ "ui.soon": "soon",
+ "_review": {
+  "_how": "English is the source. Each other language has its own _review list of judgment calls to confirm."
+ }
 }
