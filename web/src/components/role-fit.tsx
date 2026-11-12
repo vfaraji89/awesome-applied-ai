@@ -1,6 +1,7 @@
 "use client";
 import { useMemo, useState } from "react";
 import Link from "next/link";
+import { track } from "@/lib/track";
 import data from "@/data/role-fit.json";
 import { skills as skillDefs } from "@/data/framework";
 import { learn } from "@/data/learn";
@@ -115,7 +116,7 @@ export function RoleFit() {
   const cv = useMemo(() => (ran.cv.trim().length >= 20 ? scoreCv(ran.cv) : null), [ran.cv]);
   const jd = useMemo(() => (ran.jd.trim().length >= 40 ? auditJd(ran.jd) : null), [ran.jd]);
   const samples = mode === "cv" ? CV_SAMPLES : JD_SAMPLES;
-  const run = (t: string) => setRan((r) => ({ ...r, [mode]: t }));
+  const run = (t: string) => { setRan((r) => ({ ...r, [mode]: t })); track("role_fit_check", { mode, chars: Math.min(t.length, 5000) }); };
   const best = cv?.roles[0];
 
   return (

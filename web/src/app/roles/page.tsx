@@ -5,6 +5,7 @@ import { SkillsExplorer } from "@/components/skills-explorer";
 import { fRoles, skills, LEVELS, SOURCES } from "@/data/framework";
 import { stack } from "@/data/stack";
 import { layers } from "@/data/layers";
+import { More } from "@/components/more";
 
 export const metadata: Metadata = { title: "Roles and skills", description: "A framework for AI-native developers, forward deployed engineers, applied AI and product engineering roles: titles, tasks, skills, stacks." };
 
@@ -23,7 +24,8 @@ export default function Roles() {
         <div className="wrap">
           <span className="kicker">The whole matrix</span>
           <h2 style={{ marginTop: 10 }}>Eight roles, twelve skills<span className="dot">.</span></h2>
-          <p className="lead" style={{ marginTop: 12 }}>Red beads show the level each role needs: {LEVELS.slice(1).join(", ").toLowerCase()}. To see which skills postings ask for together, and which one opens the most doors, open the <Link href="/skills/">skill map</Link>.</p>
+          <p className="lead" style={{ marginTop: 12 }}><b>Red beads</b> show the level each role needs.</p>
+          <More label="Levels and the skill map"><p className="lead" style={{ marginTop: 12 }}>The levels run {LEVELS.slice(1).join(", ").toLowerCase()}. To see which skills postings ask for <b>together</b>, and which one <b>opens the most doors</b>, open the <Link href="/skills/">skill map</Link>.</p></More>
           <div className="mx-wrap">
             <table className="mx">
               <thead><tr><th>Skill</th>{fRoles.map((r) => <th key={r.id}><span>{r.name}</span></th>)}</tr></thead>

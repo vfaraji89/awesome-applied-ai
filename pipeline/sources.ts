@@ -1,4 +1,5 @@
 import type { RawJob } from "./types";
+import { isAI } from "./taxonomy";
 
 const UA = { "User-Agent": "awesome-applied-ai job-market collector (+https://github.com/vfaraji89/awesome-applied-ai)" };
 
@@ -83,4 +84,39 @@ export async function hackerNews(): Promise<RawJob[]> {
     return { source: "hackernews", id: String(c.id), company, title: title.slice(0, 120), location: parts.find((x: string) => /remote|onsite|hybrid|[A-Z][a-z]+, [A-Z]/.test(x)) ?? "",
       remote: /remote/i.test(head), posted: day(c.created_at), url: `https://news.ycombinator.com/item?id=${c.id}`, text };
   });
+}
+
+/** Workday career sites (NVIDIA and other large employers). The public CXS endpoint lists 20 postings a page with
+ *  titles only, so we page through the list, keep AI titles, and fetch the description for those alone. */
+export interface WorkdayBoard { tenant: string; host: string; site: string }
+export async function workday(b: WorkdayBoard, maxPages = 150): Promise<RawJob[]> {
+  const base = `https://${b.tenant}.${b.host}.myworkdayjobs.com/wday/cxs/${b.tenant}/${b.site}`;
+  const post = async (offset: number) => {
+    const r = await fetch(`${base}/jobs`, { method: "POST", headers: { ...UA, "Content-Type": "application/json", Accept: "application/json" },
+      body: JSON.stringify({ appliedFacets: {}, limit: 20, offset, searchText: "" }) });
+    if (!r.ok) throw new Error(`${r.status} ${base}/jobs`);
+    return r.json();
+  };
+  const listed: any[] = [];
+  let total = Infinity;
+  for (let p = 0; p < maxPages && p * 20 < total; p++) {
+    const d = await post(p * 20);
+    if (p === 0) total = d.total ?? 0;
+    const page = d.jobPostings ?? [];
+    if (!page.length) break;
+    listed.push(...page);
+  }
+  const ai = listed.filter((j) => isAI(j.title ?? ""));
+  const out: RawJob[] = [];
+  for (let i = 0; i < ai.length; i += 8) {
+    const batch = await Promise.all(ai.slice(i, i + 8).map(async (j) => {
+      try { const d = await getJSON(`${base}${j.externalPath}`); return { j, info: d.jobPostingInfo ?? {} }; } catch { return { j, info: {} as any }; }
+    }));
+    for (const { j, info } of batch)
+      out.push({ source: "workday", id: String(info.jobReqId ?? info.id ?? j.externalPath), company: b.tenant, title: j.title ?? "", location: j.locationsText ?? "",
+        remote: /remote/i.test(`${j.locationsText ?? ""} ${info.remoteType ?? ""}`), posted: day(info.startDate), url: info.externalUrl ?? "", text: strip(info.jobDescription ?? "") });
+  }
+  // Non-AI postings still count towards the board's size in the run log.
+  return [...out, ...listed.filter((j) => !isAI(j.title ?? "")).map((j) => ({ source: "workday", id: String(j.externalPath), company: b.tenant, title: j.title ?? "",
+    location: j.locationsText ?? "", remote: false, posted: day(undefined), url: "", text: "" }))];
 }

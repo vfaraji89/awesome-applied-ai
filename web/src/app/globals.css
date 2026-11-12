@@ -136,3 +136,12 @@ a.chip:hover { border-color: var(--rust); color: var(--rust-deep); }
 .home-fit .hf-go { display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; background: var(--rust); color: #fff; }
 @media (max-width: 640px) { .hdr-fit span { display: none; } .hdr-fit { padding: 0 9px; } .home-fit { grid-template-columns: auto minmax(0, 1fr); } .home-fit .hf-go { display: none; } }
 @media (prefers-reduced-motion: reduce) { .fit-ic .fb { transition: none; } }
+
+/* Short first, the rest on request (components/more.tsx and the radar cards). */
+.more-body { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.35s var(--ease); }
+.more-body > div { overflow: hidden; min-height: 0; }
+.more.open .more-body, .tr-card.exp .more-body { grid-template-rows: 1fr; }
+.more-btn { display: inline-flex; align-items: center; gap: 6px; margin-top: 10px; padding: 6px 12px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--card); color: var(--ink); font: inherit; font-size: 0.82rem; font-weight: 600; cursor: pointer; transition: border-color 0.2s, color 0.2s; }
+.more-btn:hover { border-color: var(--rust); color: var(--rust-deep); }
+.more-btn span { font-family: var(--font-mono), monospace; }
+@media (prefers-reduced-motion: reduce) { .more-body { transition: none; } }

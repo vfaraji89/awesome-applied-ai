@@ -7,7 +7,7 @@
 import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
-import { greenhouse, lever, ashby, remotive, arbeitnow, hackerNews } from "./sources";
+import { greenhouse, lever, ashby, workday, remotive, arbeitnow, hackerNews } from "./sources";
 import { isAI, role, seniority, skillsOf, toolsOf, inStack } from "./taxonomy";
 import { writeWeekly } from "./weekly";
 import type { Job, RawJob } from "./types";
@@ -36,6 +36,7 @@ const tasks: Promise<RawJob[]>[] = [
   ...companies.greenhouse.map((s: string) => take(`greenhouse:${s}`, () => greenhouse(s))),
   ...companies.lever.map((s: string) => take(`lever:${s}`, () => lever(s))),
   ...companies.ashby.map((s: string) => take(`ashby:${s}`, () => ashby(s))),
+  ...(companies.workday ?? []).map((b: { tenant: string; host: string; site: string }) => take(`workday:${b.tenant}`, () => workday(b))),
   take("remotive", remotive),
   take("arbeitnow", arbeitnow),
   take("hackernews", hackerNews),

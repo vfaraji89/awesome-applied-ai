@@ -4,6 +4,7 @@ import { Crumb } from "@/components/section-intro";
 import { labs, shared, checked } from "@/data/labs";
 import { skills } from "@/data/framework";
 import fit from "@/data/role-fit.json";
+import { More } from "@/components/more";
 
 export const metadata: Metadata = { title: "What the labs ask for", description: "What Anthropic, OpenAI and Google Cloud ask for in their own applied AI and forward deployed engineering roles, from their public postings." };
 
@@ -21,8 +22,11 @@ export default function Labs() {
         <div className="wrap">
           <Crumb id="market" page="What the labs ask for" />
           <h1 style={{ marginTop: 12 }}>What the model labs <mark>ask for</mark><span className="dot">.</span></h1>
-          <p className="lead" style={{ marginTop: 16 }}>Anthropic, OpenAI and Google hire applied AI and forward deployed engineers to put their models into production with customers. This is what their own postings ask for, side by side, next to what the wider market asks for the same roles.</p>
-          <p className="count" style={{ marginTop: 14 }}>Read from public postings on {checked}. Postings change; each card links to the provider&apos;s careers page and to the postings used.</p>
+          <p className="lead" style={{ marginTop: 16 }}><b>Anthropic, OpenAI and Google</b>, side by side: what their applied AI roles ask for.</p>
+          <More>
+            <p className="lead" style={{ marginTop: 12 }}>All three hire <b>applied AI and forward deployed engineers</b> to put their models into production with customers. Each card sets their own postings next to <b>what the wider market asks</b> for the same roles.</p>
+            <p className="count" style={{ marginTop: 14 }}>Read from public postings on {checked}. Postings change; each card links to the provider&apos;s careers page and to the postings used.</p>
+          </More>
 
           <span className="kicker" style={{ display: "block", marginTop: 34 }}>What all three ask for</span>
           <ul className="lb-shared">
