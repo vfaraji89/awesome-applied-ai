@@ -77,6 +77,22 @@ export function SiteFooter() {
         </div>
       </div>
 
+      <section className="wrap ft-about" id="about" aria-labelledby="ft-about-h">
+        <img className="ft-photo" src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/vahid.jpg`} alt="Vahid Faraji" width={112} height={112} loading="lazy" />
+        <div>
+          <span className="kicker"><T k="ab.kicker">About</T></span>
+          <h2 id="ft-about-h" className="ft-about-h"><T k="ab.title">Who makes this site</T><span className="dot">.</span></h2>
+          <p className="ft-about-p"><TH k="ab.p1">I&apos;m <b>Vahid Faraji</b>, and I work in applied AI. I build <b>workflows, data pipelines and agents</b> that teams use in their daily work. I write the spec, build the tools the agent can use, and measure whether it actually helps.</TH></p>
+          <p className="ft-about-p muted"><TH k="ab.p2">Eight years in industry and four in research. This site is the companion to <i>Applied AI, Simplified</i>, the book I&apos;m writing.</TH></p>
+          <div className="ft-about-links">
+            <a className="btn" href={site.author.site}><T k="ab.portfolio">My portfolio</T> →</a>
+            <a className="btn ghost" href={`${site.author.site}#work`}><T k="ab.work">Case studies</T></a>
+            <a className="btn ghost" href={`${site.author.site}fit.html`}><T k="ab.fit">How I fit your role</T></a>
+            <a className="btn ghost" href={site.author.linkedin} target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+
       <div className="wrap ft-inner">
         <Link href="/" className="ft-brand" aria-label="Applied AI, home">
           <Mark size={30} spin />
@@ -119,6 +135,14 @@ export function SiteFooter() {
         .fh-tool b { color: var(--ink); font-size: 1rem; white-space: nowrap; }
         .fh-line { font-size: .84rem; color: var(--sec); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
         @media (max-width: 640px) { .fh-diagram { grid-template-columns: 56px 1fr; } .fh-label { display: none; } .fh-model { width: 30px; height: 30px; left: calc(50% - 15px); top: -15px; } .fh-row { grid-template-columns: 22px 1fr; } .fh-tool { grid-template-columns: 26px 1fr; } .fh-line { display: none; } }
+        .ft-about { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 28px; align-items: start; padding-top: 44px; padding-bottom: 44px; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
+        .ft-photo { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; border: 3px solid var(--bg); box-shadow: 0 0 0 1px var(--line), 0 14px 28px -16px rgba(28,28,30,.5); }
+        .ft-about-h { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.1; color: var(--ink); margin: 8px 0 12px; }
+        .ft-about-p { max-width: 62ch; font-size: 1rem; line-height: 1.6; color: var(--sec); } .ft-about-p + .ft-about-p { margin-top: 8px; }
+        .ft-about-p b { color: var(--ink); }
+        .ft-about-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+        .ft-about-links .btn { color: var(--bg); } .ft-about-links .btn.ghost { color: var(--ink); }
+        @media (max-width: 560px) { .ft-about { grid-template-columns: minmax(0, 1fr); gap: 16px; } .ft-photo { width: 84px; height: 84px; } }
         .ft-inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px; padding-top: 26px; padding-bottom: 18px; border-top: 1px solid var(--line); }
         .ft-brand { display: flex; align-items: center; gap: 10px; color: var(--ink) !important; }
         .ft-name { font-weight: 800; font-size: 1.15rem; letter-spacing: -.03em; } .ft-name b { color: var(--rust); }

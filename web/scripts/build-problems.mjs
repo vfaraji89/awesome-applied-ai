@@ -6,7 +6,7 @@ const source = path.join(root, "system-design.md");
 const outDir = path.resolve(import.meta.dirname, "..", "src", "data");
 
 /**
- * Which of the six layers each problem belongs to, and its URL. Editorial —
+ * Which of the six layers each problem belongs to, and its URL. Editorial:
  * the document groups by theme, the site groups by layer, and the two differ.
  */
 const taxonomy = {
