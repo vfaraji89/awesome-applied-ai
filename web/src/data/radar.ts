@@ -11,6 +11,8 @@ export interface RadarItem {
   name: string;
   area: Area;
   ring: Ring;
+  /** One line, shown first in bold. */
+  short: string;
   what: string;
   why: string;
   use: string;
@@ -52,6 +54,7 @@ export const radar: RadarItem[] = [
   // ---------------------------------------------------------------- models
   {
     id: "tabular-fm", name: "Tabular foundation models", area: "models", ring: "pilot",
+    short: "Predictions on a new table with no training run.",
     what: "Models pre-trained on millions of synthetic tables that predict on a new table in one forward pass, by in-context learning: no training, no tuning loop.",
     why: "Most enterprise data is tables. For small and medium tables they now match or beat tuned gradient-boosted trees out of the box, and some give calibrated uncertainty.",
     use: "Churn, pricing, risk and demand on tables up to tens of thousands of rows; a strong baseline before you tune XGBoost.",
@@ -72,6 +75,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "jepa", name: "JEPA world models", area: "models", ring: "watch",
+    short: "Models that learn the world by predicting meaning, not pixels.",
     what: "Joint-embedding predictive architectures learn by predicting the representation of missing or future input, not its pixels or tokens. V-JEPA 2 learns from video and plans robot actions from it.",
     why: "A different route from next-token prediction: models that learn how the physical world behaves from unlabelled video, with very little robot data.",
     use: "Robotics, video understanding and planning research; following where non-LLM foundation models are going.",
@@ -89,6 +93,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "diffusion-lm", name: "Diffusion language models", area: "models", ring: "evaluate",
+    short: "Text written in parallel blocks, not token by token.",
     what: "Language models that write by refining a whole block of text in parallel over a few steps, instead of one token at a time.",
     why: "Several times the throughput of similar autoregressive models on some tasks, which changes the cost and latency of code completion and edits.",
     use: "Latency-bound generation: autocomplete, code edits, fast drafts; compare against a small autoregressive model on your own task.",
@@ -106,6 +111,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "hybrid-ssm", name: "Hybrid state-space models", area: "models", ring: "pilot",
+    short: "Long context at a fraction of the memory.",
     what: "Models that mix Mamba-style state-space layers with a few attention layers, so memory grows far more slowly with context length.",
     why: "Long inputs and many concurrent requests on less GPU memory; small hybrids run on phones and laptops.",
     use: "Long-document and high-concurrency workloads on your own hardware; on-device assistants.",
@@ -124,6 +130,7 @@ export const radar: RadarItem[] = [
   // ---------------------------------------------------------------- agents
   {
     id: "agent-skills", name: "Agent Skills (SKILL.md)", area: "agents", ring: "use",
+    short: "Know-how an agent loads only when a task needs it.",
     what: "A folder with a SKILL.md file: a name, a description and instructions, plus optional scripts. Agents read only the name and description until a task needs the rest.",
     why: "Anthropic opened the format on 18 December 2025 and dozens of agents now read it. It is the cheapest way to give an agent your team's procedures without filling its context.",
     use: "Repeatable procedures: report formats, review checklists, deploy steps. Pair with MCP for live data.",
@@ -137,6 +144,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "agent-protocols", name: "The agent protocol stack: MCP, A2A, AG-UI", area: "agents", ring: "pilot",
+    short: "One plug for tools, one for agents, one for the UI.",
     what: "Three layers that complement each other: MCP connects an agent to tools and data, A2A lets agents delegate to agents, AG-UI streams an agent's work into a user interface.",
     why: "Build once, plug into many hosts. A2A reached a stable 1.0; AG-UI fills the gap between an agent and the screen.",
     use: "MCP for every tool you expose; A2A when separate teams own separate agents; AG-UI for live agent UIs.",
@@ -154,6 +162,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "sandboxes", name: "Agent sandboxes", area: "agents", ring: "use",
+    short: "A throwaway machine for code the model wrote.",
     what: "Isolated, short-lived machines where an agent runs code, installs packages and touches files, away from your systems.",
     why: "Any agent that executes code needs one. Startup in well under a second makes a sandbox per task affordable.",
     use: "Code interpreters, data analysis agents, coding agents, anything that runs model-written code.",
@@ -167,6 +176,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "computer-use", name: "Computer-use and browser agents", area: "agents", ring: "evaluate",
+    short: "Agents that click and type like a person.",
     what: "Agents that operate a screen: they look at screenshots and click, type and scroll, in a browser or a whole desktop.",
     why: "They reach systems that have no API, which is most legacy enterprise software.",
     use: "Internal back-office flows with no API, under human review, in a sandbox.",
@@ -179,6 +189,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "durable-agents", name: "Durable execution for agents", area: "agents", ring: "pilot",
+    short: "Long agent runs that survive crashes and pauses.",
     what: "Workflow engines that record every step, so a long agent run survives crashes, deploys and days-long pauses for approval.",
     why: "Agents now run for minutes to days; a retry from scratch wastes tokens and repeats side effects.",
     use: "Long-running or multi-step agents with side effects, and human approvals in the middle.",
@@ -193,6 +204,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "mcp-stateless", name: "Stateless MCP (2026-07-28 revision)", area: "agents", ring: "pilot",
+    short: "MCP servers that scale like any web service.",
     what: "The July 2026 MCP revision drops the protocol session: no initialize handshake and no session id, so each request carries its own version and capabilities.",
     why: "An MCP server can now sit behind a plain load balancer like any HTTP service, and gateways can route on headers alone.",
     use: "New remote MCP servers, and existing ones you need to scale out. Read the migration notes first: the change breaks older clients.",
@@ -207,6 +219,7 @@ export const radar: RadarItem[] = [
   // ---------------------------------------------------------------- serving & context
   {
     id: "disaggregated-serving", name: "Disaggregated prefill and decode", area: "serving", ring: "evaluate",
+    short: "Separate GPUs for reading the prompt and writing the answer.",
     what: "Running the prompt-reading phase (prefill) and the token-writing phase (decode) on separate GPU pools, routed by where the KV cache already lives.",
     why: "Each phase gets the hardware it needs; reported gains in latency and throughput at large scale.",
     use: "Large self-hosted fleets with long prompts and many users.",
@@ -223,6 +236,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "context-engineering", name: "Context engineering and memory layers", area: "serving", ring: "use",
+    short: "Choosing what the model sees on every step.",
     what: "Deciding what goes into the model's window on each step: retrieved facts, memory, tool results, compacted history, and in what order, so it can be cached.",
     why: "Quality and cost now depend more on the context than on the model choice.",
     use: "Every agent: budget the window, cache the stable prefix, compact long runs, keep memory outside the prompt.",
@@ -236,6 +250,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "prompt-caching", name: "Prompt-caching discipline", area: "serving", ring: "use",
+    short: "Keep the prompt's top identical and pay a tenth.",
     what: "Building prompts so the stable part (system prompt, tool list, guardrails) is a byte-identical prefix the provider can cache, and watching cache-read tokens in your traces.",
     why: "Datadog reports that system prompts were 69% of input tokens in its customers' traces in March 2026, and secondary write-ups of its report say only about a quarter of calls on caching-capable models read anything from cache.",
     use: "Every production prompt: fixed order for tools and instructions, variable content last, and a dashboard of cache hit rate.",
@@ -247,6 +262,7 @@ export const radar: RadarItem[] = [
   // ---------------------------------------------------------------- evals, ops & safety
   {
     id: "agent-evals", name: "System-level agent evals", area: "evals", ring: "use",
+    short: "Score the whole run, not one prompt.",
     what: "Scoring the whole agent run (trajectory, tool calls, final state, cost) on a shared, versioned eval set, not one prompt at a time.",
     why: "Many companies have agent pilots but few reach production; teams cite proving reliability as the gap. Eval suites are becoming the release gate.",
     use: "Any agent going to production: a golden set of tasks, trace-based checks on tool use, a judge model with human spot checks, run in CI.",
@@ -260,6 +276,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "otel-genai", name: "OpenTelemetry GenAI conventions", area: "evals", ring: "pilot",
+    short: "Traces of model and agent calls any tool can read.",
     what: "A shared vocabulary for tracing model calls, agents and tools (invoke_agent, execute_tool) and for attaching evaluation scores to traces.",
     why: "Traces that any backend can read, so you are not locked to one observability vendor.",
     use: "New tracing work: emit the GenAI attributes now. Keep prompt and output capture opt-in, since they hold sensitive data.",
@@ -273,6 +290,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "prompt-optimization", name: "Prompt optimization against evals", area: "evals", ring: "pilot",
+    short: "Let an optimizer tune the prompt against your evals.",
     what: "Optimizers that rewrite prompts and few-shot examples to raise a metric on your own eval set, using the model's reflections on its failures.",
     why: "Turns prompt tuning into a measured loop, and makes switching models cheaper.",
     use: "Any prompt that has a golden set and a clear metric.",
@@ -286,6 +304,7 @@ export const radar: RadarItem[] = [
   },
   {
     id: "skill-supply-chain", name: "Agent supply-chain security", area: "evals", ring: "watch",
+    short: "Treat skills and MCP servers as third-party code.",
     what: "Treating skills, MCP servers and agent plugins as third-party code: provenance, review, pinning and least privilege.",
     why: "Agents now install capabilities at run time; one malicious skill or server can reach everything the agent can.",
     use: "An allow-list of reviewed skills and MCP servers; pin versions; run untrusted ones in a sandbox.",

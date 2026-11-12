@@ -4,6 +4,7 @@ import Link from "next/link";
 import g from "@/data/skill-graph.json";
 import { skills as skillDefs, fRoles } from "@/data/framework";
 import { learn } from "@/data/learn";
+import { More } from "./more";
 
 /* The skill map, from real postings:
    1. Constellation: which skills employers ask for together (lift over chance).
@@ -82,7 +83,8 @@ export function SkillMap() {
           <div>
             <span className="kicker">1 · The constellation</span>
             <h2>Skills travel in packs<span className="dot">.</span></h2>
-            <p className="lead">Each bead is a skill, sized by how many postings ask for it. A line joins two skills when postings ask for them together more often than chance. Tap a skill.</p>
+            <p className="lead"><b>Tap a skill</b> to see what it is asked with.</p>
+            <More label="How to read it"><p className="lead" style={{ marginTop: 10 }}>Each bead is a skill, <b>sized by how many postings ask for it</b>. A line joins two skills when postings ask for them <b>together more often than chance</b>; the thicker the line, the stronger the pull.</p></More>
           </div>
           <div className="sm-toggle" role="tablist" aria-label="Show">
             <button role="tab" aria-selected={mode === "together"} onClick={() => setMode("together")}>Asked together</button>
@@ -119,16 +121,18 @@ export function SkillMap() {
             <ul className="sm-near">
               {near.slice(0, 3).map((x) => <li key={x.id}><button onClick={() => setSel(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
             </ul>
-            {near.some((x) => x.lift < 0.95) && <span className="sm-sub">Rarely asked with</span>}
-            <ul className="sm-near far">
-              {near.filter((x) => x.lift < 0.95).slice(-2).reverse().map((x) => <li key={x.id}><button onClick={() => setSel(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
-            </ul>
             <span className="sm-sub">Tools that signal it</span>
             <div className="sm-chips">{G.toolsBySkill[sel].map((t) => <span key={t.name} className="chip" title={`${t.share}% of these postings; ${t.lift}× the usual rate`}>{t.name} <span className="mono muted">{t.lift}×</span></span>)}</div>
+            <More label="Roles, rare pairs and where to learn it">
             <span className="sm-sub">Roles that ask most</span>
             <ul className="sm-roles">{G.rolesBySkill[sel].map((r) => <li key={r.id}><span>{roleName(r.id)}</span><span className="mono">{r.share}%</span></li>)}</ul>
             <span className="sm-sub">Learn it here</span>
             <div className="sm-chips">{(learn[sel] ?? []).slice(0, 3).map((l) => <Link key={l.href + l.label} href={l.href} className="chip">{l.label}</Link>)}</div>
+            {near.some((x) => x.lift < 0.95) && <span className="sm-sub">Rarely asked with</span>}
+            <ul className="sm-near far">
+              {near.filter((x) => x.lift < 0.95).slice(-2).reverse().map((x) => <li key={x.id}><button onClick={() => setSel(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
+            </ul>
+            </More>
             <span className="rod" />
           </aside>
         </div>
@@ -138,7 +142,8 @@ export function SkillMap() {
       <section className="sm-block">
         <span className="kicker">2 · Doors</span>
         <h2>Which skill opens the most doors<span className="dot">?</span></h2>
-        <p className="lead">Tick what you can do. You meet a posting when you have every skill it asks for. Each next skill is ranked by how many more postings it would open for you.</p>
+        <p className="lead"><b>Tick what you can do.</b> See which next skill opens the most postings.</p>
+        <More label="How it counts"><p className="lead" style={{ marginTop: 10 }}>You meet a posting when you have <b>every skill it asks for</b>. Each missing skill is ranked by <b>how many more postings it would open</b>, and the path shows the fewest skills to reach half the market.</p></More>
         <div className="sm-doors">
           <div>
             <div className="sm-picks">
@@ -182,7 +187,8 @@ export function SkillMap() {
       <section className="sm-block">
         <span className="kicker">3 · Pairs</span>
         <h2>Power pairs and unicorn combos<span className="dot">.</span></h2>
-        <p className="lead">Lift is how many times more often two skills are asked for together than if they were unrelated. Above 1, they come as a pair; below 1, a posting that asks for both is hunting a rare profile.</p>
+        <p className="lead"><b>Power pairs</b> come together; <b>unicorn combos</b> are rare in one person.</p>
+        <More label="What lift means"><p className="lead" style={{ marginTop: 10 }}>Lift is how many times more often two skills are asked for together than if they were unrelated. <b>Above 1</b>, they come as a pair: learn them together. <b>Below 1</b>, a posting that asks for both is hunting a rare profile: if you have both, lead with them.</p></More>
         <div className="grid grid-2" style={{ marginTop: 22 }}>
           <div className="frame sm-pairs">
             <span className="kicker">Power pairs: learn them together</span>

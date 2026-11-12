@@ -32,9 +32,11 @@ export function TechRadar() {
   const [area, setArea] = useState<Area | "all">("all");
   const [ring, setRing] = useState<Ring | "all">("all");
   const [open, setOpen] = useState<string | null>(null);
+  const [exp, setExp] = useState<Set<string>>(new Set());
+  const flip = (id: string) => setExp((e) => { const n = new Set(e); if (n.has(id)) n.delete(id); else n.add(id); return n; });
   const shown = radar.filter((r) => (area === "all" || r.area === area) && (ring === "all" || r.ring === ring));
   const pick = (id: string) => {
-    setOpen(id);
+    setOpen(id); setExp((e) => new Set(e).add(id));
     requestAnimationFrame(() => document.getElementById(`r-${id}`)?.scrollIntoView({ behavior: "smooth", block: "center" }));
   };
   return (
@@ -86,21 +88,25 @@ export function TechRadar() {
         {shown.map((r) => {
           const n = radar.indexOf(r) + 1, g = rings.find((x) => x.id === r.ring)!;
           return (
-            <article key={r.id} id={`r-${r.id}`} className={`frame tr-card${open === r.id ? " open" : ""}`}>
+            <article key={r.id} id={`r-${r.id}`} className={`frame tr-card${open === r.id ? " open" : ""}${exp.has(r.id) ? " exp" : ""}`}>
               <div className="tr-card-top">
                 <span className={`tr-num ring-${r.ring}`}>{n}</span>
                 <span className="kicker">{areas.find((a) => a.id === r.area)!.name} · <b className={`tr-ringname ring-${r.ring}`}>{g.name}</b></span>
               </div>
               <h3>{r.name}<span className="dot">.</span></h3>
+              <p className="tr-short"><b>{r.short}</b></p>
+              <p className="tr-use"><span className="kicker">Use it for</span> {r.use}</p>
+              <div className="more-body" aria-hidden={!exp.has(r.id)} inert={!exp.has(r.id) || undefined}><div>
               <p className="tr-what">{r.what}</p>
               <dl className="tr-dl">
                 <div><dt>Why it matters</dt><dd>{r.why}</dd></div>
-                <div><dt>Use it for</dt><dd>{r.use}</dd></div>
                 <div><dt>Not for</dt><dd>{r.avoid}</dd></div>
               </dl>
               <div className="tr-ex">{r.examples.map((e) => <a key={e.url} className="chip" href={e.url} target="_blank" rel="noopener noreferrer">{e.name} ↗</a>)}</div>
               {r.more && <div className="tr-more"><span className="kicker">On this site</span>{r.more.map((m) => <Link key={m.href} href={m.href}>{m.label} →</Link>)}</div>}
               <details className="tr-src"><summary>Sources ({r.sources.length})</summary><ul>{r.sources.map((s) => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a></li>)}</ul></details>
+              </div></div>
+              <button type="button" className="more-btn" aria-expanded={exp.has(r.id)} onClick={() => flip(r.id)}>{exp.has(r.id) ? "Show less" : "What, why, when not, sources"}<span aria-hidden="true">{exp.has(r.id) ? "↑" : "↓"}</span></button>
               <span className="rod" />
             </article>
           );
@@ -148,7 +154,11 @@ export function TechRadar() {
         .tr-card-top { display: flex; align-items: center; gap: 10px; }
         .tr-num { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; font-family: var(--font-mono), monospace; font-size: 0.75rem; font-weight: 600; }
         .tr-card h3 { font-size: 1.3rem; font-weight: 800; margin-top: 10px; }
-        .tr-what { margin-top: 8px; color: var(--sec); font-size: 0.95rem; }
+        .tr-short { margin-top: 8px; font-size: 1.05rem; line-height: 1.4; }
+        .tr-short b { font-weight: 700; color: var(--ink); background: linear-gradient(transparent 62%, color-mix(in srgb, var(--rust) 18%, transparent) 62%); }
+        .tr-use { margin-top: 8px; font-size: 0.9rem; color: var(--sec); }
+        .tr-use .kicker { margin-right: 4px; }
+        .tr-what { margin-top: 12px; color: var(--sec); font-size: 0.95rem; }
         .tr-dl { margin: 14px 0 0; display: flex; flex-direction: column; gap: 10px; }
         .tr-dl dt { font-family: var(--font-mono), monospace; font-size: 0.66rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rust-deep); }
         .tr-dl dd { margin: 2px 0 0; font-size: 0.9rem; line-height: 1.5; }
