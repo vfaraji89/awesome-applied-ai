@@ -31,7 +31,7 @@ Two workflows in `.github/workflows/`:
 7. **Role fit.** At build time `web/scripts/build-fit.ts` turns `market/jobs.json` into per-role skill and tool shares for `/fit/` (`web/src/data/role-fit.json`, not committed). It reads CVs with the tracker's own patterns from `pipeline/taxonomy.ts`. The same page audits a pasted job description against similar postings. Gaps link to pages on this site listed in `web/src/data/learn.ts`; the build checks every one of those links and stops if one points at nothing.
 8. **Skill map.** The same script writes `web/src/data/skill-graph.json` (not committed) for `/skills/`: each posting's skills as a 12-bit mask, pair counts and lift. Nothing to edit by hand; it follows the tracker.
 
-`/radar/` (the emerging tech radar) is written by hand in `web/src/data/radar.ts`, with sources per entry; links from it into the site are checked at build time like the learning links. Review the rings every quarter: move what has proven itself inward, drop what stalled. Rewrite the `quarter` brief at the top of `radar.ts` at the same time.
+`/radar/` (the emerging tech radar), the tool map, the jargon and the tracker's company list are edited in the content Google Sheet and synced by pull request (see `CONTENT.md`); the radar's types and rings stay in `web/src/data/radar.ts`, with sources per entry; links from it into the site are checked at build time like the learning links. Review the rings every quarter: move what has proven itself inward, drop what stalled. Rewrite the `quarter` brief at the top of `radar.ts` at the same time.
 
 `/labs/` (what Anthropic, OpenAI and Google ask for) is written by hand in `web/src/data/labs.ts` from public postings, with sources and a date. Refresh it every few months.
 

@@ -16,3 +16,6 @@ web/src/data/skill-graph.json
 *.pem
 credentials.json
 service-account*.json
+
+# bun scripts/content.ts export (default folder)
+content-export/
