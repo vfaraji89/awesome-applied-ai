@@ -287,7 +287,7 @@ export function RoleFit() {
       )}
 
       <style>{`
-        .rf { --rf-spring: cubic-bezier(0.34, 1.56, 0.64, 1); --rf-out: cubic-bezier(0.22, 1, 0.36, 1); }
+        .rf { --rf-spring: cubic-bezier(0.22, 1, 0.36, 1); --rf-out: cubic-bezier(0.22, 1, 0.36, 1); }
         .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
         .rf-tabs { display: inline-flex; gap: 4px; padding: 4px; border-radius: 16px; background: var(--paper); border: 1px solid var(--line); margin-bottom: 18px; flex-wrap: wrap; max-width: 100%; }
         .rf-tabs button { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 9px 16px; border-radius: 12px; border: 0; background: transparent; cursor: pointer; font: inherit; color: var(--sec); text-align: left; transition: background .25s, transform .5s var(--rf-spring); }
@@ -387,8 +387,8 @@ export function RoleFit() {
         .ja-card { padding: 18px 22px; border-radius: 16px; border: 1px solid var(--line); background: var(--card); }
         .ja-card ul { margin: 10px 0 0; padding-left: 18px; font-size: .9rem; display: flex; flex-direction: column; gap: 6px; }
 
-        @keyframes rf-pop { 0% { opacity: 0; transform: scale(.5); } 70% { opacity: 1; transform: scale(1.08); } 100% { opacity: 1; transform: none; } }
-        @keyframes rf-rise { 0% { opacity: 0; transform: translateY(12px) scale(.98); } 100% { opacity: 1; transform: none; } }
+        @keyframes rf-pop { 0% { opacity: 0; transform: scale(.92); filter: blur(3px); } 100% { opacity: 1; transform: none; filter: none; } }
+        @keyframes rf-rise { 0% { opacity: 0; transform: translateY(12px); filter: blur(4px); } 100% { opacity: 1; transform: none; filter: none; } }
         @keyframes rf-draw { from { stroke-dashoffset: 100; } to { stroke-dashoffset: 0; } }
         @keyframes rf-slide { to { opacity: 1; transform: none; } }
         @keyframes rf-spin { to { transform: rotate(360deg); } }

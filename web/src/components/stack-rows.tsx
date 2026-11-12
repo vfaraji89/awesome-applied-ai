@@ -45,7 +45,7 @@ export function StackRows({ groups }: { groups: StackGroup[] }) {
         .sr-label { position: relative; z-index: 1; justify-self: start; align-self: start; margin-top: 12px; background: var(--bg); padding-right: 10px; }
         .sr-beads { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 2px; position: relative; z-index: 1; }
         .sr-beads li { animation: sr-drop .7s var(--spring) both; animation-delay: calc(var(--k) * 30ms); }
-        @keyframes sr-drop { from { transform: translateY(-14px) scale(.6); opacity: 0; } to { transform: none; opacity: 1; } }
+        @keyframes sr-drop { from { transform: translateY(-10px); opacity: 0; } to { transform: none; opacity: 1; } }
         .sr-bead { all: unset; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 6px; width: 78px; }
         .sr-ball { width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #1c1c1e; background: radial-gradient(circle at 34% 28%, #fff 0%, #f6f3f0 40%, #dcd6d0 100%); box-shadow: inset -3px -4px 7px -3px rgba(0,0,0,.14), 0 6px 10px -6px rgba(40,20,10,.45); transition: transform .5s var(--spring), box-shadow .3s; }
         .sr-ball svg { width: 19px; height: 19px; }
