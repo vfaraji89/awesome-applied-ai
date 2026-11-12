@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { useT } from "@/i18n/lang";
 
 /* Google Analytics 4, privacy first.
    - Same property as vfaraji89.github.io: both live on one domain, so a visit
@@ -30,6 +31,7 @@ type W = Window & { dataLayer?: unknown[]; gtag?: (...a: unknown[]) => void };
 
 export function Analytics() {
   const [ask, setAsk] = useState(false);
+  const t = useT();
 
   useEffect(() => {
     if (!GA_ID || location.hostname === "localhost") return;
@@ -80,9 +82,9 @@ export function Analytics() {
   return (
     <div className="consent" role="region" aria-label="Analytics consent">
       <span className="consent-bead" aria-hidden="true" />
-      <span title="Google Analytics, only to count visits. No ads, no tracking across sites.">One cookie to count visits?</span>
-      <button type="button" onClick={() => choose("no")} aria-label="No, do not use an analytics cookie">No</button>
-      <button type="button" className="yes" onClick={() => choose("yes")} aria-label="Sure, use an analytics cookie">Sure</button>
+      <span title={t("consent.title", "Google Analytics, only to count visits. No ads, no tracking across sites.")}>{t("consent.ask", "One cookie to count visits?")}</span>
+      <button type="button" onClick={() => choose("no")} aria-label={t("consent.no_aria", "No, do not use an analytics cookie")}>{t("consent.no", "No")}</button>
+      <button type="button" className="yes" onClick={() => choose("yes")} aria-label={t("consent.yes_aria", "Sure, use an analytics cookie")}>{t("consent.yes", "Sure")}</button>
       <style>{`
         .consent { position: fixed; left: 16px; bottom: 16px; z-index: 90; max-width: calc(100vw - 32px); display: flex; align-items: center; gap: 10px; padding: 7px 8px 7px 12px; border-radius: 999px; background: var(--paper); color: var(--ink); border: 1px solid rgba(180,138,92,.45); box-shadow: 0 12px 26px -16px rgba(60,30,10,.55); font-size: 12.5px; font-weight: 500; animation: consent-in .5s cubic-bezier(.34,1.56,.64,1) both; }
         .consent-bead { flex: none; width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }

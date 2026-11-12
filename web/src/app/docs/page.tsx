@@ -3,6 +3,7 @@ import Link from "next/link";
 import { docs } from "@/data/docs";
 import { DocCover } from "@/components/doc-cover";
 import { SectionIntro } from "@/components/section-intro";
+import { TH } from "@/i18n/lang";
 
 export const metadata: Metadata = { title: "Docs", description: "Technical docs, in motion: Claude Platform, Vercel AI SDK, LangChain and Deep Agents, and MCP, as short animations, examples and code." };
 
@@ -10,7 +11,7 @@ export default function Docs() {
   return (
     <section className="section">
       <div className="wrap">
-        <SectionIntro id="docs" h1={<>Docs people actually <mark>finish</mark></>} lead="Nobody reads technical docs end to end. Here each idea is one short animation, one everyday comparison, a real example and the code you need, in plain words." />
+        <SectionIntro id="docs" h1={<TH k="h1.docs">Docs people actually <mark>finish</mark></TH>} lead="Nobody reads technical docs end to end. Here each idea is one short animation, one everyday comparison, a real example and the code you need, in plain words." />
         <div className="dcat">
           {docs.map((d, i) => {
             const body = (

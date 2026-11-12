@@ -6,6 +6,7 @@ import { skills as skillDefs, fRoles } from "@/data/framework";
 import { learn } from "@/data/learn";
 import { More } from "./more";
 import { track } from "@/lib/track";
+import { T, TH, useT } from "@/i18n/lang";
 
 /* The skill map, from real postings:
    1. Constellation: which skills employers ask for together (lift over chance).
@@ -53,6 +54,9 @@ function coverage(have: number, role: number) {
 }
 
 export function SkillMap() {
+  const t = useT();
+  const nm = (id: string) => t(`skill.${id}`, name(id));
+  const sh = (id: string) => t(`skillshort.${id}`, short(id));
   const [sel, setSel] = useState<string>("evals");
   const [mode, setMode] = useState<"together" | "apart">("together");
   const [have, setHave] = useState<number>(BIT.software | BIT.agents);
@@ -83,14 +87,14 @@ export function SkillMap() {
       <section className="sm-block">
         <div className="sm-head">
           <div>
-            <span className="kicker">1 · The constellation</span>
-            <h2>Skills travel in packs<span className="dot">.</span></h2>
-            <p className="lead"><b>Tap a skill</b> to see what it is asked with.</p>
-            <More label="How to read it"><p className="lead" style={{ marginTop: 10 }}>Each bead is a skill, <b>sized by how many postings ask for it</b>. A line joins two skills when postings ask for them <b>together more often than chance</b>; the thicker the line, the stronger the pull.</p></More>
+            <span className="kicker">1 · <T k="sm.k1">The constellation</T></span>
+            <h2><T k="sm.h1">Skills travel in packs</T><span className="dot">.</span></h2>
+            <p className="lead"><TH k="sm.l1"><b>Tap a skill</b> to see what it is asked with.</TH></p>
+            <More label="How to read it"><p className="lead" style={{ marginTop: 10 }}><TH k="sm.m1">Each bead is a skill, <b>sized by how many postings ask for it</b>. A line joins two skills when postings ask for them <b>together more often than chance</b>; the thicker the line, the stronger the pull.</TH></p></More>
           </div>
-          <div className="sm-toggle" role="tablist" aria-label="Show">
-            <button role="tab" aria-selected={mode === "together"} onClick={() => setMode("together")}>Asked together</button>
-            <button role="tab" aria-selected={mode === "apart"} onClick={() => setMode("apart")}>Rarely together</button>
+          <div className="sm-toggle" role="tablist" aria-label={t("sm.show", "Show")}>
+            <button role="tab" aria-selected={mode === "together"} onClick={() => setMode("together")}><T k="sm.together">Asked together</T></button>
+            <button role="tab" aria-selected={mode === "apart"} onClick={() => setMode("apart")}><T k="sm.apart">Rarely together</T></button>
           </div>
         </div>
         <div className="sm-con">
@@ -107,32 +111,32 @@ export function SkillMap() {
               const lx = Math.cos(P.a) * (RAD + r + 14), ly = Math.sin(P.a) * (RAD + r + 14);
               return (
                 <g key={id} className={`sm-node${on ? " on" : ""}${dim ? " dim" : ""}${have & BIT[id] ? " mine" : ""}`} onClick={() => pickSkill(id)} role="button" tabIndex={0}
-                   aria-label={`${name(id)}: asked by ${SHARE[id]}% of postings`} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pickSkill(id); } }}>
+                   aria-label={`${nm(id)}: asked by ${SHARE[id]}% of postings`} onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pickSkill(id); } }}>
                   <circle cx={P.x} cy={P.y} r={r} />
                   <text x={P.x} y={P.y + 4} className="sm-pct">{SHARE[id]}</text>
-                  <text x={lx} y={ly + 4} className="sm-lbl" textAnchor={Math.abs(Math.cos(P.a)) < 0.2 ? "middle" : Math.cos(P.a) > 0 ? "start" : "end"}>{short(id)}</text>
+                  <text x={lx} y={ly + 4} className="sm-lbl" textAnchor={Math.abs(Math.cos(P.a)) < 0.2 ? "middle" : Math.cos(P.a) > 0 ? "start" : "end"}>{sh(id)}</text>
                 </g>
               );
             })}
           </svg>
           <aside className="frame sm-side" aria-live="polite">
-            <span className="kicker">Asked by {SHARE[sel]}% of postings</span>
-            <h3>{name(sel)}<span className="dot">.</span></h3>
+            <span className="kicker"><T k="sm.asked_by" vars={{ p: SHARE[sel] }}>{"Asked by {p}% of postings"}</T></span>
+            <h3>{nm(sel)}<span className="dot">.</span></h3>
             <p className="muted">{skillDefs.find((s) => s.id === sel)?.what}</p>
-            <span className="sm-sub">Most often asked with</span>
+            <span className="sm-sub"><T k="sm.most_with">Most often asked with</T></span>
             <ul className="sm-near">
-              {near.slice(0, 3).map((x) => <li key={x.id}><button onClick={() => pickSkill(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
+              {near.slice(0, 3).map((x) => <li key={x.id}><button onClick={() => pickSkill(x.id)}>{nm(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
             </ul>
-            <span className="sm-sub">Tools that signal it</span>
+            <span className="sm-sub"><T k="sm.tools">Tools that signal it</T></span>
             <div className="sm-chips">{G.toolsBySkill[sel].map((t) => <span key={t.name} className="chip" title={`${t.share}% of these postings; ${t.lift}× the usual rate`}>{t.name} <span className="mono muted">{t.lift}×</span></span>)}</div>
             <More label="Roles, rare pairs and where to learn it">
-            <span className="sm-sub">Roles that ask most</span>
+            <span className="sm-sub"><T k="sm.roles">Roles that ask most</T></span>
             <ul className="sm-roles">{G.rolesBySkill[sel].map((r) => <li key={r.id}><span>{roleName(r.id)}</span><span className="mono">{r.share}%</span></li>)}</ul>
-            <span className="sm-sub">Learn it here</span>
+            <span className="sm-sub"><T k="sm.learn">Learn it here</T></span>
             <div className="sm-chips">{(learn[sel] ?? []).slice(0, 3).map((l) => <Link key={l.href + l.label} href={l.href} className="chip">{l.label}</Link>)}</div>
-            {near.some((x) => x.lift < 0.95) && <span className="sm-sub">Rarely asked with</span>}
+            {near.some((x) => x.lift < 0.95) && <span className="sm-sub"><T k="sm.rarely_with">Rarely asked with</T></span>}
             <ul className="sm-near far">
-              {near.filter((x) => x.lift < 0.95).slice(-2).reverse().map((x) => <li key={x.id}><button onClick={() => pickSkill(x.id)}>{name(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
+              {near.filter((x) => x.lift < 0.95).slice(-2).reverse().map((x) => <li key={x.id}><button onClick={() => pickSkill(x.id)}>{nm(x.id)}</button><span className="mono">{x.lift.toFixed(2)}×</span></li>)}
             </ul>
             </More>
             <span className="rod" />
@@ -142,44 +146,44 @@ export function SkillMap() {
 
       {/* ------------------------------------------------ 2. doors */}
       <section className="sm-block">
-        <span className="kicker">2 · Doors</span>
-        <h2>Which skill opens the most doors<span className="dot">?</span></h2>
-        <p className="lead"><b>Tick what you can do.</b> See which next skill opens the most postings.</p>
-        <More label="How it counts"><p className="lead" style={{ marginTop: 10 }}>You meet a posting when you have <b>every skill it asks for</b>. Each missing skill is ranked by <b>how many more postings it would open</b>, and the path shows the fewest skills to reach half the market.</p></More>
+        <span className="kicker">2 · <T k="sm.k2">Doors</T></span>
+        <h2><T k="sm.h2">Which skill opens the most doors</T><span className="dot">?</span></h2>
+        <p className="lead"><TH k="sm.l2"><b>Tick what you can do.</b> See which next skill opens the most postings.</TH></p>
+        <More label="How it counts"><p className="lead" style={{ marginTop: 10 }}><TH k="sm.m2">You meet a posting when you have <b>every skill it asks for</b>. Each missing skill is ranked by <b>how many more postings it would open</b>, and the path shows the fewest skills to reach half the market.</TH></p></More>
         <div className="sm-doors">
           <div>
             <div className="sm-picks">
-              {IDS.map((id) => <button key={id} className={`sm-pick${have & BIT[id] ? " on" : ""}`} aria-pressed={!!(have & BIT[id])} onClick={() => toggle(id)}><i />{name(id)}</button>)}
+              {IDS.map((id) => <button key={id} className={`sm-pick${have & BIT[id] ? " on" : ""}`} aria-pressed={!!(have & BIT[id])} onClick={() => toggle(id)}><i />{nm(id)}</button>)}
             </div>
-            <label className="sm-role">Postings for
+            <label className="sm-role"><T k="sm.postings_for">Postings for</T>
               <select value={role} onChange={(e) => { setRole(Number(e.target.value)); track("doors_role", { role: G.roleIds.at(Number(e.target.value)) ?? "all" }); }}>
-                <option value={-1}>all AI roles</option>
+                <option value={-1}>{t("sm.all_roles", "all AI roles")}</option>
                 {G.roleIds.map((r, i) => <option key={r} value={i}>{roleName(r)}</option>)}
               </select>
             </label>
           </div>
           <div className="frame sm-result">
-            <div className="sm-big"><b>{Math.round(cov.pct)}%</b><span>of {cov.total.toLocaleString("en")} postings: you meet every skill ask in {cov.met.toLocaleString("en")}.</span></div>
+            <div className="sm-big"><b>{Math.round(cov.pct)}%</b><span><T k="sm.cov" vars={{ n: cov.total.toLocaleString("en"), m: cov.met.toLocaleString("en") }}>{"of {n} postings: you meet every skill ask in {m}."}</T></span></div>
             <div className="sm-meter" aria-hidden="true"><span style={{ width: `${cov.pct}%` }} /></div>
-            <span className="sm-sub">Add next</span>
+            <span className="sm-sub"><T k="sm.add_next">Add next</T></span>
             <ol className="sm-gains">
               {gains.slice(0, 5).map((x, i) => (
                 <li key={x.id} className={i === 0 ? "best" : ""}>
-                  <button onClick={() => toggle(x.id)} title="Add it">{name(x.id)}</button>
+                  <button onClick={() => toggle(x.id)} title={t("sm.add_it", "Add it")}>{nm(x.id)}</button>
                   <span className="sm-gbar"><span style={{ width: `${Math.min(100, (x.pct / Math.max(1, gains[0].pct)) * 100)}%` }} /></span>
-                  <span className="mono">+{x.pct.toFixed(1)} pts</span>
+                  <span className="mono">+{x.pct.toFixed(1)} <T k="sm.pts">pts</T></span>
                 </li>
               ))}
             </ol>
             {path.length > 0 && (
               <>
-                <span className="sm-sub">Shortest path to half the market</span>
+                <span className="sm-sub"><T k="sm.path">Shortest path to half the market</T></span>
                 <ol className="sm-path">
-                  {path.map((s, i) => <li key={s.id}><span className="sm-bead">{i + 1}</span><b>{short(s.id)}</b><span className="mono muted">{Math.round(s.pct)}%</span></li>)}
+                  {path.map((s, i) => <li key={s.id}><span className="sm-bead">{i + 1}</span><b>{sh(s.id)}</b><span className="mono muted">{Math.round(s.pct)}%</span></li>)}
                 </ol>
               </>
             )}
-            {!path.length && cov.total > 0 && <p className="sm-done">You already meet half of these postings or more.</p>}
+            {!path.length && cov.total > 0 && <p className="sm-done"><T k="sm.done">You already meet half of these postings or more.</T></p>}
             <span className="rod" />
           </div>
         </div>
@@ -187,23 +191,23 @@ export function SkillMap() {
 
       {/* ------------------------------------------------ 3. pairs */}
       <section className="sm-block">
-        <span className="kicker">3 · Pairs</span>
-        <h2>Power pairs and unicorn combos<span className="dot">.</span></h2>
-        <p className="lead"><b>Power pairs</b> come together; <b>unicorn combos</b> are rare in one person.</p>
-        <More label="What lift means"><p className="lead" style={{ marginTop: 10 }}>Lift is how many times more often two skills are asked for together than if they were unrelated. <b>Above 1</b>, they come as a pair: learn them together. <b>Below 1</b>, a posting that asks for both is hunting a rare profile: if you have both, lead with them.</p></More>
+        <span className="kicker">3 · <T k="sm.k3">Pairs</T></span>
+        <h2><T k="sm.h3">Power pairs and unicorn combos</T><span className="dot">.</span></h2>
+        <p className="lead"><TH k="sm.l3"><b>Power pairs</b> come together; <b>unicorn combos</b> are rare in one person.</TH></p>
+        <More label="What lift means"><p className="lead" style={{ marginTop: 10 }}><TH k="sm.m3">Lift is how many times more often two skills are asked for together than if they were unrelated. <b>Above 1</b>, they come as a pair: learn them together. <b>Below 1</b>, a posting that asks for both is hunting a rare profile: if you have both, lead with them.</TH></p></More>
         <div className="grid grid-2" style={{ marginTop: 22 }}>
           <div className="frame sm-pairs">
-            <span className="kicker">Power pairs: learn them together</span>
-            <ul>{power.map((p) => <li key={p.a + p.b}><b>{name(p.a)} + {name(p.b)}</b><span className="mono">{p.lift.toFixed(2)}×</span><span className="muted">{p.n} postings ask for both</span></li>)}</ul>
+            <span className="kicker"><T k="sm.power_k">Power pairs: learn them together</T></span>
+            <ul>{power.map((p) => <li key={p.a + p.b}><b>{nm(p.a)} + {nm(p.b)}</b><span className="mono">{p.lift.toFixed(2)}×</span><span className="muted"><T k="sm.both" vars={{ n: p.n }}>{"{n} postings ask for both"}</T></span></li>)}</ul>
             <span className="rod" />
           </div>
           <div className="frame sm-pairs uni">
-            <span className="kicker">Unicorn combos: rare in one person</span>
-            <ul>{unicorn.map((p) => <li key={p.a + p.b}><b>{name(p.a)} + {name(p.b)}</b><span className="mono">{p.lift.toFixed(2)}×</span><span className="muted">only {p.n} postings ask for both</span></li>)}</ul>
+            <span className="kicker"><T k="sm.uni_k">Unicorn combos: rare in one person</T></span>
+            <ul>{unicorn.map((p) => <li key={p.a + p.b}><b>{nm(p.a)} + {nm(p.b)}</b><span className="mono">{p.lift.toFixed(2)}×</span><span className="muted"><T k="sm.only_both" vars={{ n: p.n }}>{"only {n} postings ask for both"}</T></span></li>)}</ul>
             <span className="rod" />
           </div>
         </div>
-        <p className="count" style={{ marginTop: 16 }}>From {G.postings.toLocaleString("en")} technical AI postings tracked {G.from} to {G.to}. Skills are read from each posting with the same rules as the <Link href="/market/">market pulse</Link>.</p>
+        <p className="count" style={{ marginTop: 16 }}><TH k="sm.source" vars={{ n: G.postings.toLocaleString("en"), a: G.from, b: G.to }}>From {G.postings.toLocaleString("en")} technical AI postings tracked {G.from} to {G.to}. Skills are read from each posting with the same rules as the <Link href="/market/">market pulse</Link>.</TH></p>
       </section>
 
       <style>{`

@@ -5,6 +5,7 @@ import { labs, shared, checked } from "@/data/labs";
 import { skills } from "@/data/framework";
 import fit from "@/data/role-fit.json";
 import { More } from "@/components/more";
+import { TH } from "@/i18n/lang";
 
 export const metadata: Metadata = { title: "What the labs ask for", description: "What Anthropic, OpenAI and Google Cloud ask for in their own applied AI and forward deployed engineering roles, from their public postings." };
 
@@ -21,10 +22,10 @@ export default function Labs() {
       <section className="section">
         <div className="wrap">
           <Crumb id="market" page="What the labs ask for" />
-          <h1 style={{ marginTop: 12 }}>What the model labs <mark>ask for</mark><span className="dot">.</span></h1>
-          <p className="lead" style={{ marginTop: 16 }}><b>Anthropic, OpenAI and Google</b>, side by side: what their applied AI roles ask for.</p>
+          <h1 style={{ marginTop: 12 }}><TH k="labs.h1">What the model labs <mark>ask for</mark></TH><span className="dot">.</span></h1>
+          <p className="lead" style={{ marginTop: 16 }}><TH k="labs.p1"><b>Anthropic, OpenAI and Google</b>, side by side: what their applied AI roles ask for.</TH></p>
           <More>
-            <p className="lead" style={{ marginTop: 12 }}>All three hire <b>applied AI and forward deployed engineers</b> to put their models into production with customers. Each card sets their own postings next to <b>what the wider market asks</b> for the same roles.</p>
+            <p className="lead" style={{ marginTop: 12 }}><TH k="labs.p2">All three hire <b>applied AI and forward deployed engineers</b> to put their models into production with customers. Each card sets their own postings next to <b>what the wider market asks</b> for the same roles.</TH></p>
             <p className="count" style={{ marginTop: 14 }}>Read from public postings on {checked}. Postings change; each card links to the provider&apos;s careers page and to the postings used.</p>
           </More>
 
