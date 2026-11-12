@@ -36,7 +36,7 @@ export function SiteFooter() {
     const wire = row.querySelector(".fh-wire");
     const dot = row.querySelector(".fh-call");
     gsap.timeline()
-      .to(".fh-model", { y, duration: .45, ease: "back.out(1.6)" })
+      .to(".fh-model", { y, duration: .45, ease: "expo.out" })
       .fromTo(dot, { left: "0%", autoAlpha: 1 }, { left: "100%", duration: .45, ease: "power2.in" }, ">-.05")
       .to(dot, { left: "0%", duration: .45, ease: "power2.out" })
       .to(dot, { autoAlpha: 0, duration: .15 })

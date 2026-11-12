@@ -259,7 +259,7 @@ export function ClaudeApiCourse() {
       gsap.timeline({ defaults: { ease: "power3.out" } })
         .from(".cc-panel", { y: 24, autoAlpha: 0, duration: .5 })
         .from(".cc-panel .cc-step", { y: 22, autoAlpha: 0, duration: .55, stagger: .09 }, "-=.25")
-        .from(".cc-item.on .bead", { scale: 0, duration: .6, ease: "back.out(3)" }, 0);
+        .from(".cc-item.on .bead", { scale: 0, duration: .6, ease: "expo.out" }, 0);
     });
     return () => mm.revert();
   }, { scope: root, dependencies: [i] });

@@ -1,10 +1,39 @@
 "use client";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import { Mark } from "./mark";
 import { nav } from "@/lib/site";
 import { FitIcon } from "./fit-icon";
 import { T, TH, LangPicker, useT } from "@/i18n/lang";
+
+/** A hairline rod under the bar; its bead glides with reading progress, easing toward the
+ *  scroll position each frame so it never jumps. Same motion as the portfolio. */
+function BeadRod() {
+  const ref = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+    const rod = ref.current;
+    if (!rod || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+    let cur = 0, goal = 0, raf = 0;
+    const step = () => {
+      cur += (goal - cur) * 0.14;
+      if (Math.abs(goal - cur) < 0.0005) cur = goal;
+      rod.style.setProperty("--p", cur.toFixed(4));
+      raf = cur !== goal ? requestAnimationFrame(step) : 0;
+    };
+    const measure = () => {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      goal = max > 0 ? Math.min(1, Math.max(0, window.scrollY / max)) : 0;
+      rod.classList.toggle("on", window.scrollY > 40 && max > window.innerHeight * 0.5);
+      if (!raf) raf = requestAnimationFrame(step);
+    };
+    measure();
+    window.addEventListener("scroll", measure, { passive: true });
+    window.addEventListener("resize", measure);
+    return () => { window.removeEventListener("scroll", measure); window.removeEventListener("resize", measure); cancelAnimationFrame(raf); };
+  }, []);
+  return <div ref={ref} className="bead-rod" aria-hidden="true"><i /></div>;
+}
 
 export function SiteHeader() {
   const path = usePathname() ?? "/";
@@ -30,6 +59,7 @@ export function SiteHeader() {
         </Link>
         <LangPicker />
       </div>
+      <BeadRod />
     </header>
   );
 }
