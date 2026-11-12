@@ -381,6 +381,7 @@
  "ft.terms": "Koşullar ve sorumluluk reddi",
  "ft.consent": "Analitik tercihi",
  "consent.more": "Gizlilik",
+ "tools.subcats": "Alt kategoriler",
  "_review": {
   "_how": "Vahid: these are judgment calls for you to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'servisleme'; alternatives: 'model servisi', or keep 'serving'.",
