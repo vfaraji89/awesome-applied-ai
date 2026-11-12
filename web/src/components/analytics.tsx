@@ -11,6 +11,21 @@ import { useEffect, useState } from "react";
    - ?ga_debug=1 turns on DebugView for that visit. */
 const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? "G-GTZW5NNEZ5";
 const KEY = "vf-consent";
+/** No personal data reaches Google: emails, phone numbers and mailto/tel links are
+ *  redacted, values are capped at 100 characters. Free text (a pasted CV or job
+ *  description) is never sent at all; only its length. */
+export function clean(p: Record<string, unknown>) {
+  const o: Record<string, unknown> = {};
+  for (const [k, v] of Object.entries(p)) {
+    o[k] = typeof v !== "string" ? v : v
+      .replace(/^(mailto|tel):.*/i, "$1:[redacted]")
+      .replace(/[\w.+-]+@[\w-]+(\.[\w-]+)+/g, "[email]")
+      .replace(/\+?\d[\d\s().-]{8,}\d/g, "[number]")
+      .slice(0, 100);
+  }
+  return o;
+}
+const redactUrl = (u: string) => u.replace(/([?&])(q|email|name|jd|cv)=[^&#]*/g, "$1$2=redacted");
 type W = Window & { dataLayer?: unknown[]; gtag?: (...a: unknown[]) => void };
 
 export function Analytics() {
@@ -20,13 +35,19 @@ export function Analytics() {
     if (!GA_ID || location.hostname === "localhost") return;
     const w = window as W;
     w.dataLayer = w.dataLayer || [];
-    w.gtag = function gtag() { w.dataLayer!.push(arguments); }; // eslint-disable-line prefer-rest-params
+    // Privacy guard: every event's values pass through clean() before they reach Google.
+    w.gtag = function gtag() { // eslint-disable-line prefer-rest-params
+      if (arguments[0] === "event" && arguments[2]) arguments[2] = clean(arguments[2] as Record<string, unknown>);
+      w.dataLayer!.push(arguments);
+    };
     let saved: string | null = null;
     try { saved = localStorage.getItem(KEY); } catch { /* private mode */ }
     w.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: saved === "yes" ? "granted" : "denied", wait_for_update: 500 });
     w.gtag("js", new Date());
     const debug = new URLSearchParams(location.search).has("ga_debug");
-    w.gtag("config", GA_ID, { content_group: "awesome-applied-ai", site_section: location.pathname.split("/").filter(Boolean).find((p) => p !== "awesome-applied-ai") ?? "home", ...(debug ? { debug_mode: true } : {}) });
+    const section = location.pathname.split("/").filter(Boolean).find((p) => p !== "awesome-applied-ai") ?? "home";
+    w.dataLayer.push({ event: "vf_context", site: "awesome-applied-ai", page_group: section, consent_state: saved === "yes" ? "granted" : "denied" });
+    w.gtag("config", GA_ID, { content_group: "awesome-applied-ai", page_location: redactUrl(location.href), site_section: section, ...(debug ? { debug_mode: true } : {}) });
     const s = document.createElement("script");
     s.async = true; s.src = `https://www.googletagmanager.com/gtag/js?id=${GA_ID}`;
     document.head.appendChild(s);
