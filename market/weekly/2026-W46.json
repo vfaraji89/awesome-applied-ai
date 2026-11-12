@@ -2,105 +2,105 @@
  "week": "2026-W46",
  "from": "2026-11-09",
  "to": "2026-11-15",
- "open": 977,
- "new": 115,
- "remoteShare": 27,
+ "open": 1042,
+ "new": 180,
+ "remoteShare": 25,
  "roles": [
   {
    "id": "forward-deployed-engineer",
-   "n": 274
+   "n": 283
   },
   {
    "id": "rd-researcher",
-   "n": 164
+   "n": 180
   },
   {
    "id": "applied-ai-engineer",
-   "n": 112
+   "n": 121
   },
   {
    "id": "ai-platform-engineer",
-   "n": 110
+   "n": 117
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 102
+   "n": 104
   },
   {
    "id": "ai-native-architect",
-   "n": 73
+   "n": 79
   },
   {
    "id": "other-ai",
-   "n": 59
+   "n": 70
   },
   {
    "id": "ai-native-developer",
-   "n": 52
+   "n": 54
   },
   {
    "id": "ai-solutions-architect",
-   "n": 31
+   "n": 34
   }
  ],
  "newRoles": [
   {
    "id": "rd-researcher",
-   "n": 22
+   "n": 38
   },
   {
    "id": "applied-ai-engineer",
-   "n": 22
+   "n": 31
   },
   {
    "id": "forward-deployed-engineer",
-   "n": 22
+   "n": 31
   },
   {
    "id": "ai-platform-engineer",
+   "n": 26
+  },
+  {
+   "id": "other-ai",
    "n": 19
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 10
-  },
-  {
-   "id": "other-ai",
-   "n": 8
+   "n": 12
   },
   {
    "id": "ai-native-architect",
-   "n": 5
+   "n": 11
   },
   {
    "id": "ai-native-developer",
-   "n": 5
+   "n": 7
   },
   {
    "id": "ai-solutions-architect",
-   "n": 2
+   "n": 5
   }
  ],
  "seniority": [
   {
    "id": "Mid",
-   "n": 518
+   "n": 554
   },
   {
    "id": "Senior",
-   "n": 178
+   "n": 190
   },
   {
    "id": "Staff",
-   "n": 109
+   "n": 112
   },
   {
    "id": "Lead",
-   "n": 99
+   "n": 106
   },
   {
    "id": "Intern",
-   "n": 33
+   "n": 35
   },
   {
    "id": "Junior",
@@ -108,138 +108,142 @@
   },
   {
    "id": "Principal",
-   "n": 15
+   "n": 18
   },
   {
    "id": "Head",
-   "n": 3
+   "n": 5
   }
  ],
  "skills": [
   {
    "id": "software",
-   "n": 733,
-   "share": 75
-  },
-  {
-   "id": "customer",
-   "n": 629,
-   "share": 64
+   "n": 776,
+   "share": 74
   },
   {
    "id": "agents",
-   "n": 624,
+   "n": 669,
+   "share": 64
+  },
+  {
+   "id": "customer",
+   "n": 665,
    "share": 64
   },
   {
    "id": "evals",
-   "n": 464,
-   "share": 47
+   "n": 484,
+   "share": 46
   },
   {
    "id": "product",
-   "n": 419,
+   "n": 444,
    "share": 43
   },
   {
    "id": "models",
-   "n": 335,
-   "share": 34
+   "n": 364,
+   "share": 35
   },
   {
    "id": "security",
-   "n": 284,
+   "n": 300,
    "share": 29
   },
   {
    "id": "retrieval",
-   "n": 256,
-   "share": 26
+   "n": 277,
+   "share": 27
   },
   {
    "id": "data",
-   "n": 246,
+   "n": 259,
    "share": 25
   },
   {
    "id": "architecture",
-   "n": 244,
-   "share": 25
+   "n": 254,
+   "share": 24
   },
   {
    "id": "context",
-   "n": 200,
-   "share": 20
+   "n": 216,
+   "share": 21
   },
   {
    "id": "ai-dev",
-   "n": 179,
+   "n": 192,
    "share": 18
   }
  ],
  "tools": [
   {
    "id": "Python",
-   "n": 623
+   "n": 654
   },
   {
    "id": "TypeScript",
-   "n": 269
+   "n": 275
   },
   {
    "id": "Google Cloud",
-   "n": 198
+   "n": 208
   },
   {
    "id": "RAG",
-   "n": 106
+   "n": 113
   },
   {
    "id": "SQL",
-   "n": 99
+   "n": 107
   },
   {
    "id": "MCP",
-   "n": 83
+   "n": 91
   },
   {
    "id": "LangChain",
-   "n": 62
+   "n": 69
   },
   {
    "id": "Claude Code",
-   "n": 51
+   "n": 54
   },
   {
    "id": "LangGraph",
-   "n": 37
+   "n": 41
   },
   {
    "id": "Hugging Face",
-   "n": 32
-  },
-  {
-   "id": "BigQuery",
-   "n": 21
+   "n": 33
   },
   {
    "id": "Elasticsearch",
-   "n": 21
+   "n": 24
+  },
+  {
+   "id": "BigQuery",
+   "n": 24
   },
   {
    "id": "Perplexity AI Search",
-   "n": 20
+   "n": 21
+  },
+  {
+   "id": "LangSmith",
+   "n": 16
   },
   {
    "id": "ElevenLabs",
    "n": 15
   },
   {
-   "id": "LangSmith",
+   "id": "Vertex AI",
    "n": 14
   },
   {
-   "id": "Vertex AI",
+   "id": "Agent Skills",
    "n": 13
   },
   {
@@ -251,6 +255,14 @@
    "n": 12
   },
   {
+   "id": "AutoGen",
+   "n": 11
+  },
+  {
+   "id": "CrewAI",
+   "n": 11
+  },
+  {
    "id": "Next.js",
    "n": 11
   },
@@ -259,24 +271,12 @@
    "n": 11
   },
   {
-   "id": "CrewAI",
-   "n": 9
+   "id": "EU AI Act",
+   "n": 10
   },
   {
    "id": "A2A",
-   "n": 8
-  },
-  {
-   "id": "EU AI Act",
-   "n": 8
-  },
-  {
-   "id": "Microsoft Agents SDK",
-   "n": 8
-  },
-  {
-   "id": "Azure AI Foundry",
-   "n": 7
+   "n": 9
   }
  ]
 }
