@@ -94,6 +94,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
   const [open, setOpen] = useState(false);
   const [why, setWhy] = useState<string | null>(null);
   const [sort, setSort] = useState<Sort>("area");
+  const [cat, setCat] = useState<string>("");
   const [tags, setTags] = useState<Set<Tag>>(new Set());
   const tog = (k: Tag) => setTags((o) => { const n = new Set(o); n.has(k) ? n.delete(k) : n.add(k); return n; });
   const search = useRef<HTMLInputElement>(null);
@@ -105,6 +106,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
     if (p.get("q")) setQ(p.get("q") ?? "");
     const a = p.get("area") ?? ({ retrieval: "retrieval", memory: "agents", caching: "inference", orchestration: "agents", evaluation: "evaluation", governance: "governance" } as Record<string, string>)[p.get("layer") ?? ""];
     if (a && areas.some((x) => x.id === a)) setArea(a as ToolArea);
+    if (p.get("cat")) setCat(p.get("cat") ?? "");
     if (p.get("emerging") === "1") setFresh(true);
     if (p.get("open") === "1") setOpen(true);
     const so = p.get("sort"); if (so === "stars" || so === "trending" || so === "new") setSort(so);
@@ -119,6 +121,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
   useEffect(() => {
     const p = new URLSearchParams();
     if (area !== "all") p.set("area", area);
+    if (cat) p.set("cat", cat);
     if (q.trim()) p.set("q", q.trim());
     if (fresh) p.set("emerging", "1");
     if (open) p.set("open", "1");
@@ -126,7 +129,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
     if (tags.size) p.set("tags", [...tags].join(","));
     const s = p.toString();
     window.history.replaceState(null, "", window.location.pathname + (s ? `?${s}` : "") + window.location.hash);
-  }, [area, q, fresh, open, sort, tags]);
+  }, [area, q, fresh, open, sort, tags, cat]);
 
   const base = useMemo(() => {
     const s = q.trim().toLowerCase();
@@ -136,7 +139,9 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
         (!s || [t.name, t.summary, t.category, catName(t.category), t.license, g.repo, ...t.tags].join(" ").toLowerCase().includes(s));
     });
   }, [q, fresh, open, tags, tools]);
-  const hits = area === "all" ? base : base.filter((t) => t.area === area);
+  const inArea = area === "all" ? base : base.filter((t) => t.area === area);
+  const hits = cat ? inArea.filter((t) => t.category === cat) : inArea;
+  const cats = area === "all" ? [] : [...new Set(inArea.map((t) => t.category))].map((c) => [c, inArea.filter((t) => t.category === c).length] as const).sort((x, y) => y[1] - x[1]);
   const nNew = tools.filter((t) => t.emerging).length;
   const quiet = area === "all" && !q.trim() && !fresh && !open && !tags.size && sort === "area";
   const spotlight = quiet ? tools.filter((t) => t.emerging) : [];
@@ -152,7 +157,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
   });
   const nTag = (k: Tag) => tools.filter((t) => { const g = signals(t); return k === "trending" ? g.trending : k === "new" ? g.isNew : g.popular; }).length;
 
-  const pick = (a: ToolArea | "all") => setArea(a);
+  const pick = (a: ToolArea | "all") => { setArea(a); setCat(""); };
   // keep the chosen area in view on the rail (scrolls the rail only, never the page)
   useEffect(() => {
     const r = rail.current, el = r?.querySelector<HTMLElement>(`[data-a="${area}"]`);
@@ -200,6 +205,12 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
             );
           })}
         </div>
+        {cats.length > 1 && (
+          <div className="ta-cats" role="group" aria-label={tr("tools.subcats", "Subcategories")}>
+            <button type="button" className={`ta-cat-chip${cat ? "" : " on"}`} onClick={() => setCat("")}>{tr("tools.all", "All")} <span className="count">{inArea.length}</span></button>
+            {cats.map(([c, n]) => <button key={c} type="button" className={`ta-cat-chip${cat === c ? " on" : ""}`} aria-pressed={cat === c} onClick={() => setCat(cat === c ? "" : c)}>{catName(c)} <span className="count">{n}</span></button>)}
+          </div>
+        )}
       </div>
 
       {spotlight.length > 0 && (
@@ -299,6 +310,10 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
         .ta-tags { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
         .ta-chip { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--card); font: inherit; font-size: .8rem; font-weight: 650; color: var(--sec); cursor: pointer; transition: border-color .3s var(--ease), background .3s var(--ease), color .3s var(--ease); }
         .ta-chip.on { border-color: var(--ink); background: var(--ink); color: var(--bg); } .ta-chip.on .count { color: inherit; opacity: .7; }
+        .ta-cats { grid-column: 1 / -1; display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+        .ta-cats::-webkit-scrollbar { display: none; }
+        .ta-cat-chip { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 11px; border-radius: 8px; border: 1px dashed var(--line-strong); background: none; font: inherit; font-size: .78rem; color: var(--sec); cursor: pointer; white-space: nowrap; }
+        .ta-cat-chip.on { border-style: solid; border-color: var(--rust); color: var(--rust-deep); background: var(--paper); }
         .ta-sort { margin-left: auto; display: inline-flex; align-items: center; gap: 8px; font-size: .8rem; color: var(--muted); }
         .ta-sort select { height: 32px; padding: 0 28px 0 10px; border-radius: 10px; border: 1px solid var(--line-strong); background: var(--card); color: var(--ink); font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer; }
         .ta-badges { display: flex; flex-wrap: wrap; gap: 5px; }

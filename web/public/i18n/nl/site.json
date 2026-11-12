@@ -381,6 +381,7 @@
  "ft.terms": "Voorwaarden en disclaimer",
  "ft.consent": "Analytics-keuze",
  "consent.more": "Privacy",
+ "tools.subcats": "Subcategorieën",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Dutch reader). Delete a line once agreed, or change the value above it.",
   "area.serving": "'Serving', 'evals', 'retrieval', 'harness' kept in English, as Dutch tech teams say them.",
