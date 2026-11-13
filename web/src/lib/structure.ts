@@ -55,7 +55,7 @@ export const structure: Section[] = [
       { label: "Claude Platform", href: "/docs/claude-platform/", note: "How your app talks to Claude" },
       { label: "Vercel AI SDK", href: "/docs/#vercel-ai-sdk", note: "AI in a TypeScript app", soon: true },
       { label: "LangChain & Deep Agents", href: "/docs/#langchain", note: "Agents from building blocks", soon: true },
-      { label: "MCP", href: "/docs/#mcp", note: "One plug for every tool", soon: true },
+      { label: "MCP", href: "/docs/mcp/", note: "One plug for every tool" },
       { label: "DataHub", href: "/docs/#datahub", note: "The metadata under your AI", soon: true },
       { label: "Jargon", href: "/jargon/", note: "The words, in plain language" },
     ],
