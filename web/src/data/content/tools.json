@@ -10563,5 +10563,360 @@
    "gateway",
    "failover"
   ]
+ },
+ {
+  "id": "tokalator",
+  "name": "Tokalator",
+  "area": "agents",
+  "layer": "caching",
+  "category": "context-management",
+  "summary": "Token budgets and cost for coding agents: VS Code extension, MCP server, CLI. By this site's author",
+  "license": "AGPL-3.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://tokalator.ai",
+  "github": "vfaraji89/tokalator",
+  "tags": [
+   "context",
+   "tokens",
+   "vs-code",
+   "mcp"
+  ]
+ },
+ {
+  "id": "context7",
+  "name": "Context7",
+  "area": "agents",
+  "layer": "caching",
+  "category": "context-management",
+  "summary": "MCP server that feeds coding agents up-to-date, version-specific library docs",
+  "license": "MIT",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/upstash/context7",
+  "github": "upstash/context7",
+  "tags": [
+   "docs",
+   "mcp",
+   "coding-agents"
+  ]
+ },
+ {
+  "id": "repomix",
+  "name": "Repomix",
+  "area": "agents",
+  "layer": "caching",
+  "category": "context-management",
+  "summary": "Packs a whole repository into one AI-friendly file, with token counts per file",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/yamadashy/repomix",
+  "github": "yamadashy/repomix",
+  "tags": [
+   "repo",
+   "packing",
+   "tokens"
+  ]
+ },
+ {
+  "id": "gitingest",
+  "name": "Gitingest",
+  "area": "agents",
+  "layer": "caching",
+  "category": "context-management",
+  "summary": "Turns any Git repository into a prompt-ready text digest",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/coderamp-labs/gitingest",
+  "github": "coderamp-labs/gitingest",
+  "tags": [
+   "repo",
+   "digest",
+   "prompt"
+  ]
+ },
+ {
+  "id": "code2prompt",
+  "name": "code2prompt",
+  "area": "agents",
+  "layer": "caching",
+  "category": "context-management",
+  "summary": "CLI that turns a codebase into one prompt, with templates and token counting",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/mufeedvh/code2prompt",
+  "github": "mufeedvh/code2prompt",
+  "tags": [
+   "cli",
+   "prompt",
+   "tokens"
+  ]
+ },
+ {
+  "id": "serena",
+  "name": "Serena",
+  "area": "agents",
+  "layer": "caching",
+  "category": "context-management",
+  "summary": "Symbol-level code retrieval and editing for coding agents over MCP, instead of reading whole files",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/oraios/serena",
+  "github": "oraios/serena",
+  "tags": [
+   "code",
+   "mcp",
+   "retrieval"
+  ]
+ },
+ {
+  "id": "datahub",
+  "name": "DataHub",
+  "area": "data",
+  "category": "data-catalog",
+  "summary": "Open metadata platform for data discovery, lineage and governance across the stack",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "production-common",
+  "deployment": "both",
+  "url": "https://github.com/datahub-project/datahub",
+  "github": "datahub-project/datahub",
+  "tags": [
+   "metadata",
+   "lineage",
+   "catalog"
+  ]
+ },
+ {
+  "id": "openmetadata",
+  "name": "OpenMetadata",
+  "area": "data",
+  "category": "data-catalog",
+  "summary": "Unified metadata platform: discovery, lineage, data quality and collaboration",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/open-metadata/OpenMetadata",
+  "github": "open-metadata/OpenMetadata",
+  "tags": [
+   "metadata",
+   "lineage",
+   "quality"
+  ]
+ },
+ {
+  "id": "unity-catalog",
+  "name": "Unity Catalog",
+  "area": "data",
+  "category": "data-catalog",
+  "summary": "Open catalog for data and AI assets: tables, files, functions and models",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/unitycatalog/unitycatalog",
+  "github": "unitycatalog/unitycatalog",
+  "tags": [
+   "catalog",
+   "governance",
+   "models"
+  ]
+ },
+ {
+  "id": "openlineage",
+  "name": "OpenLineage",
+  "area": "data",
+  "category": "data-catalog",
+  "summary": "Open standard and API for collecting lineage from data pipelines",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-common",
+  "deployment": "self-host",
+  "url": "https://github.com/OpenLineage/OpenLineage",
+  "github": "OpenLineage/OpenLineage",
+  "tags": [
+   "lineage",
+   "standard",
+   "pipelines"
+  ]
+ },
+ {
+  "id": "aaif",
+  "name": "Agentic AI Foundation",
+  "area": "landscape",
+  "category": "foundations",
+  "summary": "Linux Foundation home for open agent standards: MCP, AGENTS.md, goose, A2A and Agent Skills",
+  "license": "Foundation",
+  "model": "oss",
+  "url": "https://aaif.io",
+  "launched": "2025-12",
+  "icon": "linuxfoundation",
+  "tags": [
+   "agents",
+   "standards",
+   "linux-foundation"
+  ]
+ },
+ {
+  "id": "lf-ai-data",
+  "name": "LF AI & Data Foundation",
+  "area": "landscape",
+  "category": "foundations",
+  "summary": "Linux Foundation umbrella for open-source AI and data projects",
+  "license": "Foundation",
+  "model": "oss",
+  "url": "https://lfaidata.foundation",
+  "icon": "linuxfoundation",
+  "tags": [
+   "open-source",
+   "data",
+   "linux-foundation"
+  ]
+ },
+ {
+  "id": "pytorch-foundation",
+  "name": "PyTorch Foundation",
+  "area": "landscape",
+  "category": "foundations",
+  "summary": "Neutral home for PyTorch, vLLM, DeepSpeed, Ray and Helion",
+  "license": "Foundation",
+  "model": "oss",
+  "url": "https://pytorch.org/",
+  "icon": "pytorch",
+  "tags": [
+   "training",
+   "inference",
+   "linux-foundation"
+  ]
+ },
+ {
+  "id": "ai-alliance",
+  "name": "AI Alliance",
+  "area": "landscape",
+  "category": "foundations",
+  "summary": "Open-source AI community started by IBM and Meta: models, data, evals and advocacy",
+  "license": "Foundation",
+  "model": "oss",
+  "url": "https://thealliance.ai",
+  "tags": [
+   "open-source",
+   "community",
+   "advocacy"
+  ]
+ },
+ {
+  "id": "mlcommons",
+  "name": "MLCommons",
+  "area": "landscape",
+  "category": "foundations",
+  "summary": "Open engineering consortium behind the MLPerf benchmarks and AI measurement standards",
+  "license": "Foundation",
+  "model": "oss",
+  "url": "https://mlcommons.org/",
+  "tags": [
+   "benchmarks",
+   "mlperf",
+   "standards"
+  ]
+ },
+ {
+  "id": "cosai",
+  "name": "Coalition for Secure AI (CoSAI)",
+  "area": "landscape",
+  "category": "foundations",
+  "summary": "OASIS open project on security frameworks and guidance for AI systems",
+  "license": "Foundation",
+  "model": "oss",
+  "url": "https://www.coalitionforsecureai.org/",
+  "tags": [
+   "security",
+   "standards",
+   "oasis"
+  ]
+ },
+ {
+  "id": "goose",
+  "name": "goose",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Open-source local agent (desktop app, CLI and API) for code and workflows; an AAIF project",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/aaif-goose/goose",
+  "github": "aaif-goose/goose",
+  "tags": [
+   "agent",
+   "mcp",
+   "local"
+  ]
+ },
+ {
+  "id": "agentgateway",
+  "name": "agentgateway",
+  "area": "inference",
+  "category": "gateways",
+  "summary": "Gateway for agent traffic: MCP and A2A routing, security and observability; an AAIF project",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/agentgateway/agentgateway",
+  "github": "agentgateway/agentgateway",
+  "tags": [
+   "mcp",
+   "a2a",
+   "gateway"
+  ]
+ },
+ {
+  "id": "openenv",
+  "name": "OpenEnv",
+  "area": "training",
+  "category": "rl-environments",
+  "summary": "Isolated execution environments for agentic RL with a Gymnasium-style API; an AAIF project",
+  "license": "BSD-3-Clause",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/meta-pytorch/OpenEnv",
+  "github": "meta-pytorch/OpenEnv",
+  "tags": [
+   "rl",
+   "environments",
+   "agents"
+  ]
+ },
+ {
+  "id": "opensandbox",
+  "name": "OpenSandbox",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "sandboxes",
+  "summary": "Sandboxes for running agent code and tools in isolation; an AAIF project",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/alibaba/OpenSandbox",
+  "github": "alibaba/OpenSandbox",
+  "tags": [
+   "sandbox",
+   "isolation",
+   "agents"
+  ]
  }
 ]

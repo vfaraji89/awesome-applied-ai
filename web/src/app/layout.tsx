@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next";
 import localFont from "next/font/local";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
+import { harnessCounts } from "@/lib/harness-counts";
 import { Analytics } from "@/components/analytics";
 import { LangProvider } from "@/i18n/lang";
 import { site } from "@/lib/site";
@@ -54,7 +55,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangProvider>
           <SiteHeader />
           <main>{children}</main>
-          <SiteFooter />
+          <SiteFooter counts={harnessCounts()} />
           <Analytics />
         </LangProvider>
       </body>

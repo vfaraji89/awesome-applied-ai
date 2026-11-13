@@ -10,6 +10,7 @@ import { areas, catName } from "@/data/areas";
 import icons from "@/data/tool-icons.json";
 import { useT } from "@/i18n/lang";
 import { signals, fmtStars, statsDate } from "@/lib/tool-signals";
+import { useCases, useCasesOf } from "@/data/usecases";
 
 const ICONS = icons as Record<string, { hex: string; path: string }>;
 const MAT: Record<string, string> = { "production-common": "widely used", "production-viable": "production-ready", early: "early", research: "research", fragile: "fragile" };
@@ -98,6 +99,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
   const [sort, setSort] = useState<Sort>("area");
   const [cat, setCat] = useState<string>("");
   const [tags, setTags] = useState<Set<Tag>>(new Set());
+  const [use, setUse] = useState<string>("");
   const tog = (k: Tag) => setTags((o) => { const n = new Set(o); n.has(k) ? n.delete(k) : n.add(k); return n; });
   const search = useRef<HTMLInputElement>(null);
   const rail = useRef<HTMLDivElement>(null);
@@ -111,6 +113,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
     if (p.get("cat")) setCat(p.get("cat") ?? "");
     if (p.get("emerging") === "1") setFresh(true);
     if (p.get("open") === "1") setOpen(true);
+    const u = p.get("use"); if (u && useCases.some((x) => x.id === u)) setUse(u);
     const so = p.get("sort"); if (so === "stars" || so === "trending" || so === "new") setSort(so);
     const tg = (p.get("tags") ?? "").split(",");
     if (tg.includes("new")) setFresh(true); // the old "New" tag is the emerging toggle now
@@ -131,23 +134,24 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
     if (open) p.set("open", "1");
     if (sort !== "area") p.set("sort", sort);
     if (tags.size) p.set("tags", [...tags].join(","));
+    if (use) p.set("use", use);
     const s = p.toString();
     window.history.replaceState(null, "", window.location.pathname + (s ? `?${s}` : "") + window.location.hash);
-  }, [area, q, fresh, open, sort, tags, cat]);
+  }, [area, q, fresh, open, sort, tags, cat, use]);
 
   const base = useMemo(() => {
     const s = q.trim().toLowerCase();
     return tools.filter((t) => {
       const g = signals(t);
-      return (!fresh || g.isNew) && (!open || OPEN.has(t.model)) && (!tags.has("trending") || g.trending) && (!tags.has("popular") || g.popular) &&
+      return (!fresh || g.isNew) && (!use || useCasesOf(t).includes(use)) && (!open || OPEN.has(t.model)) && (!tags.has("trending") || g.trending) && (!tags.has("popular") || g.popular) &&
         (!s || [t.name, t.summary, t.category, catName(t.category), tr(`tcat.${t.category}`, ""), t.license, g.repo, ...t.tags].join(" ").toLowerCase().includes(s));
     });
-  }, [q, fresh, open, tags, tools, tr]);
+  }, [q, fresh, open, tags, tools, tr, use]);
   const inArea = area === "all" ? base : base.filter((t) => t.area === area);
   const hits = cat ? inArea.filter((t) => t.category === cat) : inArea;
   const cats = area === "all" ? [] : [...new Set(inArea.map((t) => t.category))].map((c) => [c, inArea.filter((t) => t.category === c).length] as const).sort((x, y) => y[1] - x[1]);
   const nNew = tools.filter((t) => signals(t).isNew).length;
-  const quiet = area === "all" && !q.trim() && !fresh && !open && !tags.size && sort === "area";
+  const quiet = area === "all" && !q.trim() && !fresh && !open && !tags.size && !use && sort === "area";
   const spotlight = quiet ? tools.filter((t) => signals(t).isNew).sort((a, b) => (signals(b).launched ?? "").localeCompare(signals(a).launched ?? "")) : [];
   // one row per repo: a feature of a project (say, vLLM prefix caching) does not take a second place
   const top = quiet ? tools.filter((t) => signals(t).stars).sort((a, b) => (signals(b).stars ?? 0) - (signals(a).stars ?? 0))
@@ -196,6 +200,16 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
               <option value="new">{tr("tools.sort.new", "Newest")}</option>
             </select>
           </label>
+        </div>
+        <div className="ta-uses" role="group" aria-label={tr("tools.use", "Use case")}>
+          <span className="mono ta-uses-k">{tr("tools.use_k", "I want to build")}</span>
+          <div className="ta-uses-row">
+            {useCases.map((u) => {
+              const n = tools.filter((t) => useCasesOf(t).includes(u.id)).length;
+              return <button key={u.id} type="button" className={`ta-use${use === u.id ? " on" : ""}`} aria-pressed={use === u.id} onClick={() => setUse(use === u.id ? "" : u.id)}>{tr(`uc.${u.id}`, u.name)} <span className="count">{n}</span></button>;
+            })}
+          </div>
+          {use && <p className="muted ta-uses-line">{tr(`uc.${use}.line`, useCases.find((u) => u.id === use)!.line)} <button type="button" className="ta-uses-clear" onClick={() => setUse("")}>{tr("tools.use_clear", "Clear")} ×</button></p>}
         </div>
         <div className="ta-rail" ref={rail} role="tablist" aria-label={tr("tools.areas", "Areas")}>
           {[{ id: "all" as const, name: tr("tools.all", "All") }, ...areas.map((a) => ({ id: a.id, name: tr(`tarea.${a.id}`, a.name) }))].map((a) => {
@@ -311,6 +325,15 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
         .ta-why a { color: var(--rust-deep); font-weight: 600; }
         .ta-meta { margin-top: auto; display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: .7rem; color: var(--muted); }
         .ta-meta .ta-open { color: #15803d; }
+        .ta-uses { grid-column: 1 / -1; display: grid; gap: 8px; }
+        .ta-uses-k { font-size: .7rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); }
+        .ta-uses-row { display: flex; gap: 6px; overflow-x: auto; scrollbar-width: none; padding-bottom: 2px; }
+        .ta-uses-row::-webkit-scrollbar { display: none; }
+        .ta-use { flex: none; display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line); background: var(--paper); font: inherit; font-size: .8rem; font-weight: 600; color: var(--ink); cursor: pointer; white-space: nowrap; transition: border-color .3s var(--ease), background .3s var(--ease), color .3s var(--ease); }
+        .ta-use:hover { border-color: var(--rust); }
+        .ta-use.on { border-color: var(--rust); background: var(--rust); color: #fff; } .ta-use.on .count { color: inherit; opacity: .8; }
+        .ta-uses-line { margin: 0; font-size: .88rem; }
+        .ta-uses-clear { border: 0; background: none; font: inherit; color: var(--rust-deep); cursor: pointer; padding: 0 4px; }
         .ta-tags { grid-column: 1 / -1; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
         .ta-chip { display: inline-flex; align-items: center; gap: 6px; height: 32px; padding: 0 12px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--card); font: inherit; font-size: .8rem; font-weight: 650; color: var(--sec); cursor: pointer; transition: border-color .3s var(--ease), background .3s var(--ease), color .3s var(--ease); }
         .ta-chip.on { border-color: var(--ink); background: var(--ink); color: var(--bg); } .ta-chip.on .count { color: inherit; opacity: .7; }
