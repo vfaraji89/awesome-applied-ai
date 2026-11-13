@@ -155,11 +155,11 @@ export default function Sources() {
         .src-head a { text-decoration: none; } .src-head a:hover b { color: var(--rust-deep); }
         .src-n { margin-left: auto; font-size: .8rem; color: var(--muted); }
         .src-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
-        .src-chip { font: .74rem var(--font-mono), monospace; padding: 3px 8px; border: 1px solid var(--line); border-radius: 6px; text-decoration: none; color: var(--ink); }
+        .src-chip { font: .74rem var(--font-mono), monospace; padding: 3px 10px; border: 1px solid var(--line-strong); border-radius: 999px; background: var(--card); text-decoration: none; color: var(--sec); }
         .src-chip:hover { border-color: var(--rust); color: var(--rust-deep); }
-        .src-tag { display: inline-block; font: 600 .74rem var(--font-mono), monospace; letter-spacing: .08em; text-transform: uppercase; padding: 3px 9px; border-radius: 6px; background: var(--rust); color: #fff; margin-right: 8px; }
-        .src-chip.lab { border-color: var(--rust); }
-        .src-chip.map::after { content: "◆"; font-size: .6rem; color: var(--rust); margin-left: 5px; vertical-align: 1px; }
+        .src-tag { display: inline-block; font: .7rem var(--font-mono), monospace; letter-spacing: .1em; text-transform: uppercase; padding: 3px 10px; border-radius: 999px; border: 1px dashed var(--rust); color: var(--rust-deep); margin-right: 8px; }
+        .src-chip.lab { border-color: var(--rust); color: var(--rust-deep); background: var(--paper); }
+        .src-chip.map::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 6px; vertical-align: 0; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); }
         .src-chip.off { color: var(--muted); text-decoration: line-through; opacity: .7; }
         .src-rows { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
         .src-rows li { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; padding-bottom: 10px; border-bottom: 1px solid var(--line); }

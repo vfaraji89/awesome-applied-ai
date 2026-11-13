@@ -9,7 +9,7 @@ import { T, TH } from "@/i18n/lang";
 import { JsonLd } from "@/components/json-ld";
 import { marketLd } from "@/lib/seo";
 import { share } from "@/lib/share";
-import { Aha, Heatmap, Pairs, LabsVsRest, YearsByLevel, SkillProfiles, insightCss, type Insights } from "@/components/market-insights";
+import { Aha, Heatmap, Pairs, LabsVsRest, YearsByLevel, SkillProfiles, Weekly, TechStack, AffectedByAI, insightCss, insightCss2, type Insights } from "@/components/market-insights";
 
 export const metadata: Metadata = { ...share("market"), title: "Market pulse", description: "What applied AI job ads ask for since 1 October 2026: roles, levels, titles, skills, tasks and tools, read daily from public career pages and job boards." };
 
@@ -36,7 +36,8 @@ function Bars({ rows, label, max }: { rows: Row[]; label: (r: Row) => React.Reac
 export default function Market() {
   const m = market as unknown as { generatedAt: string | null; totals: { processed: number; listedNow: number; newToday: number; remoteShare: number }; sources: { id: string; boards: number; ai: number }[];
     roles: Row[]; seniority: Row[]; titles: Row[]; skills: Row[]; tasks: Row[]; tools: Row[]; byMonth: Row[];
-    sinceQuarter?: string; years?: { asked: number; median: number; bands: Row[] }; insights?: Insights };
+    sinceQuarter?: string; years?: { asked: number; median: number; bands: Row[] }; insights?: Insights;
+    byWeek?: { week: string; n: number; partial?: boolean }[]; tech?: Parameters<typeof TechStack>[0]["tech"] | null; affected?: Parameters<typeof AffectedByAI>[0]["a"] | null };
   const ins = m.insights;
   const ready = !!m.generatedAt && m.totals.processed > 0;
   const read = sources.providers.reduce((a, p) => a + (p.boards.length ? p.boards.filter((b) => b.ok !== false).length : p.ok ? 1 : 0), 0);
@@ -207,19 +208,47 @@ export default function Market() {
               </div>
               <div>
                 <span className="kicker"><T k="mk.k_time">Over time</T></span>
-                <h2 style={{ marginTop: 10 }}><T k="mk.h_time2">AI job ads per month</T><span className="dot">.</span></h2>
-                <div className="mk-months">
-                  {m.byMonth.map((r) => {
-                    const top = Math.max(1, ...m.byMonth.map((x) => x.n));
-                    return <div key={r.month} className="mk-col"><span className="mono count">{r.n}</span><span className="mk-colbar" style={{ height: `${(r.n / top) * 100}%` }} /><span className="mono count">{r.month}</span></div>;
-                  })}
-                </div>
+                <h2 style={{ marginTop: 10 }}><T k="mk.h_time3">AI job ads, week by week</T><span className="dot">.</span></h2>
+                {m.byWeek?.length ? (
+                  <>
+                    <p className="muted" style={{ marginTop: 8 }}><T k="mk.time_p">By each ad&apos;s publish date since 1 October. The striped week is still filling.</T></p>
+                    <Weekly weeks={m.byWeek} />
+                  </>
+                ) : (
+                  <div className="mk-months">
+                    {m.byMonth.map((r) => {
+                      const top = Math.max(1, ...m.byMonth.map((x) => x.n));
+                      return <div key={r.month} className="mk-col"><span className="mono count">{r.n}</span><span className="mk-colbar" style={{ height: `${(r.n / top) * 100}%` }} /><span className="mono count">{r.month}</span></div>;
+                    })}
+                  </div>
+                )}
               </div>
             </div>
           </section>
         </>
       )}
 
+      {ready && m.affected && m.affected.rows.length > 0 && (
+        <section className="section" id="affected" style={{ background: "var(--paper)" }}>
+          <div className="wrap">
+            <span className="kicker"><T k="mi.k_aff">AI beyond AI jobs</T></span>
+            <h2 style={{ marginTop: 10 }}><T k="mi.h_aff">How AI is reaching other tech jobs</T><span className="dot">.</span></h2>
+            <p className="lead" style={{ marginTop: 12 }}><T k="mi.aff_lead" vars={{ p: m.affected.any, n: m.affected.ads.toLocaleString("en-US") }}>{"{p}% of {n} non-AI tech job ads since 1 October ask for AI in the job itself: building it into the product, or working with AI tools."}</T></p>
+            <p className="muted" style={{ marginTop: 6, maxWidth: "75ch" }}><T k="mi.aff_p">Read from the same company career pages; only the responsibilities and requirements count, not the company pitch. Families with under 20 ads are left out.</T></p>
+            <AffectedByAI a={m.affected} />
+          </div>
+        </section>
+      )}
+      {ready && m.tech && (
+        <section className="section" id="stack">
+          <div className="wrap">
+            <span className="kicker"><T k="mi.k_stack">The stack around AI</T></span>
+            <h2 style={{ marginTop: 10 }}><T k="mi.h_stack">Languages and frameworks the AI ads name</T><span className="dot">.</span></h2>
+            <p className="muted" style={{ marginTop: 8, maxWidth: "75ch" }}><T k="mi.stack_p" vars={{ n: m.tech.read.toLocaleString("en-US") }}>{"Share of the {n} AI job ads read with a description that name each one. New: first named in the last 30 days."}</T></p>
+            <TechStack tech={m.tech} />
+          </div>
+        </section>
+      )}
       <section className="section">
         <div className="wrap">
           <span className="kicker"><T k="mk.k_method">Method</T></span>
@@ -233,9 +262,10 @@ export default function Market() {
         </div>
       </section>
       <style>{insightCss}</style>
+      <style>{insightCss2}</style>
       <style>{`
         .mk-totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 16px; margin-top: 30px; }
-        .mk-q { display: inline-block; font-weight: 700; letter-spacing: .06em; padding: 1px 7px; border-radius: 5px; background: var(--rust); color: #fff; margin-right: 4px; }
+        .mk-q { display: inline-block; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; padding: 1px 8px; border-radius: 999px; border: 1px dashed var(--rust); color: var(--rust-deep); margin-right: 4px; }
         .mk-pref { font-size: .72rem; }
         .mk-sub { display: block; margin-top: 4px; } .mk-sub a { color: inherit; }
         .mk-tasks .mk-bars { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); column-gap: 36px; }
@@ -244,12 +274,14 @@ export default function Market() {
         .mk-bars { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 9px; }
         .mk-bars li { display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr) 46px; gap: 12px; align-items: center; font-size: .92rem; animation: rise .5s var(--ease) both; animation-delay: calc(var(--i) * 40ms); }
         .mk-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } .mk-label a { text-decoration: none; } .mk-label a:hover { color: var(--rust-deep); }
-        .mk-track { height: 10px; border-radius: 6px; background: var(--line); overflow: hidden; }
-        .mk-fill { display: block; height: 100%; border-radius: 6px; background: var(--ink); opacity: .8; transform-origin: left; animation: mk-grow .9s var(--ease) both; }
-        .mk-fill.mine { background: var(--rust); opacity: 1; }
+        .mk-track { height: 6px; border-radius: 3px; background: var(--rod); }
+        .mk-fill { position: relative; display: block; height: 100%; border-radius: 3px; background: var(--ink); transform-origin: left; animation: mk-grow .9s var(--ease) both; }
+        .mk-fill::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%); box-shadow: 0 1px 2px rgba(0,0,0,.25); }
+        .mk-fill.mine { background: var(--rust); }
+        .mk-fill.mine::after { background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); }
         @keyframes mk-grow { from { transform: scaleX(0); } to { transform: none; } }
         .mk-n { font-size: .78rem; color: var(--muted); text-align: right; }
-        .mk-key { display: inline-block; width: 14px; height: 10px; border-radius: 4px; background: var(--rust); vertical-align: 0; margin-right: 4px; }
+        .mk-key { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); vertical-align: -1px; margin-right: 4px; }
         .mk-months { display: flex; align-items: end; gap: 10px; height: 220px; margin-top: 20px; overflow-x: auto; }
         .mk-col { flex: 1; min-width: 44px; height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: end; gap: 6px; }
         .mk-colbar { width: 100%; border-radius: 6px 6px 2px 2px; background: var(--rust); animation: mk-up .9s var(--ease) both; transform-origin: bottom; }
