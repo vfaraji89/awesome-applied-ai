@@ -21,6 +21,9 @@ export interface Job {
   skills: string[];
   tools: string[];
   tasks?: string[]; // what the job asks people to do (taxonomy TASKS ids)
+  toolsPreferred?: string[]; // tools named only under nice-to-have (also listed in tools)
+  years?: number; // smallest years of experience asked for
+  ck?: string; // hash of company and title, to count an ad once when several boards carry it
   posted?: string; // the board's own publish date, when it gives one
   firstSeen: string;
   lastSeen: string;

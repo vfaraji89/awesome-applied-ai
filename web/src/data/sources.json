@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T03:28:43.965Z",
+ "generatedAt": "2026-11-13T03:34:40.102Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -12,7 +12,9 @@
      "slug": "anthropic",
      "url": "https://job-boards.greenhouse.io/anthropic",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Anthropic",
+     "kind": "lab"
     },
     {
      "slug": "scaleai",
@@ -186,7 +188,9 @@
      "slug": "togetherai",
      "url": "https://job-boards.greenhouse.io/togetherai",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Together AI",
+     "kind": "lab"
     },
     {
      "slug": "gleanwork",
@@ -198,7 +202,9 @@
      "slug": "xai",
      "url": "https://job-boards.greenhouse.io/xai",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "xAI",
+     "kind": "lab"
     },
     {
      "slug": "nuro",
@@ -426,13 +432,17 @@
      "slug": "openai",
      "url": "https://jobs.ashbyhq.com/openai",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "OpenAI",
+     "kind": "lab"
     },
     {
      "slug": "cohere",
      "url": "https://jobs.ashbyhq.com/cohere",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Cohere",
+     "kind": "lab"
     },
     {
      "slug": "elevenlabs",
@@ -450,7 +460,9 @@
      "slug": "perplexity",
      "url": "https://jobs.ashbyhq.com/perplexity",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Perplexity",
+     "kind": "lab"
     },
     {
      "slug": "notion",
@@ -600,19 +612,25 @@
      "slug": "character",
      "url": "https://jobs.ashbyhq.com/character",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Character.AI",
+     "kind": "lab"
     },
     {
      "slug": "poolside",
      "url": "https://jobs.ashbyhq.com/poolside",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Poolside",
+     "kind": "lab"
     },
     {
      "slug": "magic",
      "url": "https://jobs.ashbyhq.com/magic",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Magic",
+     "kind": "lab"
     },
     {
      "slug": "lovable",
@@ -804,19 +822,25 @@
      "slug": "reflectionai",
      "url": "https://jobs.ashbyhq.com/reflectionai",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Reflection AI",
+     "kind": "lab"
     },
     {
      "slug": "ssi",
      "url": "https://jobs.ashbyhq.com/ssi",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Safe Superintelligence",
+     "kind": "lab"
     },
     {
      "slug": "thinkingmachines",
      "url": "https://jobs.ashbyhq.com/thinkingmachines",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Thinking Machines Lab",
+     "kind": "lab"
     },
     {
      "slug": "physicalintelligence",
@@ -918,7 +942,9 @@
      "slug": "huggingface",
      "url": "https://apply.workable.com/huggingface/",
      "ok": null,
-     "ai": 0
+     "ai": 0,
+     "name": "Hugging Face",
+     "kind": "lab"
     }
    ],
    "ok": false,

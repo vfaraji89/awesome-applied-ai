@@ -22,12 +22,22 @@ concurrency:
 jobs:
   track:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
       - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6  # v2
         with:
           bun-version: 1.4.4
+      # Find career pages for the companies behind the map's tools and the AI labs: on every
+      # branch dry run, and on main each Monday or when nothing has been found yet.
+      - name: Find career pages of the map's tools and the labs
+        run: |
+          empty=$(bun -e 'console.log(require("./pipeline/discovered.json").boards.length === 0 ? 1 : 0)')
+          if [ "$GITHUB_REF" != "refs/heads/main" ] || [ "$(date -u +%u)" = "1" ] || [ "$empty" = "1" ] || [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            bun pipeline/boards.ts
+          else
+            echo "Not Monday: keeping last week's list"
+          fi
       - name: Dry run on a branch (reads and reports, writes nothing)
         if: github.ref != 'refs/heads/main'
         run: bun pipeline/run.ts --dry
@@ -39,7 +49,7 @@ jobs:
         run: |
           git config user.name "market-tracker"
           git config user.email "market-tracker@users.noreply.github.com"
-          git add market/jobs.json market/weekly web/src/data/market.json web/src/data/sources.json
+          git add market/jobs.json market/weekly web/src/data/market.json web/src/data/sources.json pipeline/discovered.json
           if git diff --cached --quiet; then echo "No change"; exit 0; fi
           git commit -m "Market: $(date -u +%Y-%m-%d) update"
           # main may have moved while the boards were being read

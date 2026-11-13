@@ -76,7 +76,7 @@ export default function Home() {
           <div className="sm-stats">
             <div><b>{market.totals.processed.toLocaleString("en")}</b><span className="muted"><T k="home.st_ads">AI job ads processed since 1 Oct 2026</T></span></div>
             <div><b>{market.totals.remoteShare}%</b><span className="muted"><T k="home.st_remote">remote</T></span></div>
-            <div><b>{market.sources.reduce((a, x) => a + x.boards, 0)}</b><span className="muted"><T k="home.st_boards">public boards</T></span></div>
+            <div><b>{market.sources.reduce((a, x) => a + x.boards, 0)}</b><span className="muted"><T k="home.st_sites">career pages and boards read</T></span></div>
           </div>
           <span className="kicker" style={{ display: "block", marginTop: 20 }}><T k="home.top_roles">Most asked-for roles</T></span>
           <ul className="sm-bars">

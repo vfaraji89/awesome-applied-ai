@@ -4,15 +4,21 @@ import { Crumb } from "@/components/section-intro";
 import market from "@/data/market.json";
 import sources from "@/data/sources.json";
 import { skills } from "@/data/framework";
+import { tools } from "@/data/tools";
 import { T, TH } from "@/i18n/lang";
 import { share } from "@/lib/share";
 
 export const metadata: Metadata = { ...share("market/sources"), title: "Sources", description: "Every company career page and job board the applied AI job tracker reads, the hiring platform behind each, and what the ads ask for: skills, tasks and tools." };
 
-type Board = { slug: string; url: string; ok: boolean | null; ai: number };
+type Board = { slug: string; url: string; ok: boolean | null; ai: number; name?: string; kind?: string; tool?: string };
 type Provider = { id: string; name: string; kind: string; site: string; how: string; boards: Board[]; ok: boolean; ai: number; processed: number };
 type Row = { id?: string; name?: string; n: number; share?: number };
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
+const toolName = (id: string) => tools.find((t) => t.id === id)?.name ?? id;
+/** Hiring tools worth knowing that are references, not sources: they search people, not job ads. */
+const RECRUITING = [
+  { name: "Juicebox", site: "https://juicebox.ai", what: "AI search across candidate profiles for recruiters (PeopleGPT). It finds people, not job ads, so it is a reference here, not a source." },
+];
 
 export default function Sources() {
   const m = market as unknown as { generatedAt: string; totals: { processed: number }; skills: Row[]; tasks?: Row[]; tools: Row[] };
@@ -21,6 +27,10 @@ export default function Sources() {
   const live = (p: Provider) => p.boards.filter((b) => b.ok !== false);
   const pages = ats.reduce((a, p) => a + live(p).length, 0);
   const updated = new Date(sources.generatedAt).toUTCString().slice(5, 16);
+  const q = (market as unknown as { sinceQuarter?: string }).sinceQuarter ?? "2026 Q4";
+  const flat = ats.flatMap((p) => p.boards.filter((b) => b.ok !== false).map((b) => ({ ...b, platform: p.name })));
+  const labs = flat.filter((b) => b.kind === "lab").sort((a, b) => b.ai - a.ai);
+  const onMap = flat.filter((b) => b.tool);
   const col = (k: string, en: string, rows: { key: string; label: React.ReactNode; v: string }[]) => (
     <div className="frame src-col">
       <span className="kicker"><T k={k}>{en}</T></span>
@@ -33,6 +43,7 @@ export default function Sources() {
         <div className="wrap">
           <Crumb id="market" page="Sources" />
           <h1 style={{ marginTop: 12 }}><TH k="src.h1">Every site the tracker <mark>reads</mark></TH><span className="dot">.</span></h1>
+          <p style={{ marginTop: 14 }}><span className="src-tag"><T k="src.from" vars={{ q }}>{"from {q}"}</T></span> <span className="count"><T k="src.from_p">Counting starts on 1 October 2026, the first day of Q4.</T></span></p>
           <p className="lead" style={{ marginTop: 16 }}>
             <TH k="src.lead" vars={{ n: m.totals.processed.toLocaleString("en-US"), c: pages, p: ats.length, b: boards.length }}>
               <b>{m.totals.processed.toLocaleString("en-US")} AI job ads</b> since 1 October 2026, from <b>{pages} company career pages</b> on {ats.length} hiring platforms and {boards.length} public job boards. Each ad is reduced to what it asks for.
@@ -46,6 +57,36 @@ export default function Sources() {
             {col("src.k_tools", "Tools", m.tools.slice(0, 8).map((r) => ({ key: r.name!, label: r.name, v: String(r.n) })))}
           </div>
           <p className="count" style={{ marginTop: 14 }}><Link href="/market/"><T k="src.more">Roles, levels and titles on the market pulse</T></Link> · <T k="mk.updated" vars={{ d: updated }}>{"Updated {d}"}</T></p>
+        </div>
+      </section>
+
+      <section className="section">
+        <div className="wrap grid grid-2" style={{ gap: 36 }}>
+          <div>
+            <span className="kicker"><T k="src.k_labs">AI labs and model providers</T></span>
+            <h2 style={{ marginTop: 10 }}><T k="src.h_labs">Their own career pages</T><span className="dot">.</span></h2>
+            <ul className="src-rows">
+              {labs.map((b) => (
+                <li key={b.platform + b.slug}><a href={b.url} rel="noopener nofollow" target="_blank">{b.name ?? b.slug}</a><span className="count">{b.platform}</span><span className="mono src-n">{b.ai} <T k="src.ai_now">AI ads now</T></span></li>
+              ))}
+            </ul>
+          </div>
+          <div>
+            <span className="kicker"><T k="src.k_map">On the tool map</T></span>
+            <h2 style={{ marginTop: 10 }}><T k="src.h_map">The companies behind the tools</T><span className="dot">.</span></h2>
+            <p className="muted" style={{ marginTop: 8 }}><T k="src.map_p" vars={{ n: onMap.length, t: tools.length }}>{"Each week the tracker looks for a career page behind every tool on the map, by its GitHub organisation and website, and reads the ones it finds: {n} so far, from {t} tools."}</T></p>
+            {onMap.length > 0 && (
+              <div className="src-chips">
+                {onMap.map((b) => <Link key={b.platform + b.slug} href={`/tools/?q=${encodeURIComponent(toolName(b.tool!))}`} className="src-chip">{toolName(b.tool!)}</Link>)}
+              </div>
+            )}
+            <span className="kicker" style={{ display: "block", marginTop: 26 }}><T k="src.k_recruit">Recruiting tools, for reference</T></span>
+            <ul className="src-rows">
+              {RECRUITING.map((r) => (
+                <li key={r.name} className="col"><a href={r.site} rel="noopener" target="_blank">{r.name}</a><span className="muted"><T k={`src.rec.${r.name.toLowerCase()}`}>{r.what}</T></span></li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -65,14 +106,18 @@ export default function Sources() {
                 {p.boards.length ? (
                   <div className="src-chips">
                     {p.boards.map((b) => (
-                      <a key={b.slug} href={b.url} rel="noopener nofollow" target="_blank" className={`src-chip${b.ok === false ? " off" : ""}`} title={b.ok === false ? "Did not answer on the last run" : undefined}>{b.slug}</a>
+                      <a key={b.slug} href={b.url} rel="noopener nofollow" target="_blank" className={`src-chip${b.ok === false ? " off" : ""}${b.kind === "lab" ? " lab" : ""}${b.tool ? " map" : ""}`} title={b.ok === false ? "Did not answer on the last run" : b.name}>{b.slug}</a>
                     ))}
                   </div>
                 ) : null}
               </div>
             ))}
           </div>
-          <p className="count" style={{ marginTop: 12 }}><span className="src-chip off" style={{ pointerEvents: "none" }}>slug</span> <T k="src.off">did not answer on the last run, so it is not counted</T></p>
+          <p className="count" style={{ marginTop: 12, display: "flex", flexWrap: "wrap", gap: "8px 18px" }}>
+            <span><span className="src-chip lab" style={{ pointerEvents: "none" }}>lab</span> <T k="src.key_lab">AI lab or model provider</T></span>
+            <span><span className="src-chip map" style={{ pointerEvents: "none" }}>tool</span> <T k="src.key_map">company behind a tool on the map</T></span>
+            <span><span className="src-chip off" style={{ pointerEvents: "none" }}>slug</span> <T k="src.off">did not answer on the last run, so it is not counted</T></span>
+          </p>
         </div>
       </section>
 
@@ -112,6 +157,9 @@ export default function Sources() {
         .src-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
         .src-chip { font: .74rem var(--font-mono), monospace; padding: 3px 8px; border: 1px solid var(--line); border-radius: 6px; text-decoration: none; color: var(--ink); }
         .src-chip:hover { border-color: var(--rust); color: var(--rust-deep); }
+        .src-tag { display: inline-block; font: 600 .74rem var(--font-mono), monospace; letter-spacing: .08em; text-transform: uppercase; padding: 3px 9px; border-radius: 6px; background: var(--rust); color: #fff; margin-right: 8px; }
+        .src-chip.lab { border-color: var(--rust); }
+        .src-chip.map::after { content: "◆"; font-size: .6rem; color: var(--rust); margin-left: 5px; vertical-align: 1px; }
         .src-chip.off { color: var(--muted); text-decoration: line-through; opacity: .7; }
         .src-rows { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 10px; }
         .src-rows li { display: flex; flex-wrap: wrap; gap: 4px 12px; align-items: baseline; padding-bottom: 10px; border-bottom: 1px solid var(--line); }

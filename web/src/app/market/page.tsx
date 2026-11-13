@@ -12,7 +12,7 @@ import { share } from "@/lib/share";
 
 export const metadata: Metadata = { ...share("market"), title: "Market pulse", description: "What applied AI job ads ask for since 1 October 2026: roles, levels, titles, skills, tasks and tools, read daily from public career pages and job boards." };
 
-type Row = { id?: string; name?: string; title?: string; month?: string; n: number; share?: number; inStack?: boolean };
+type Row = { id?: string; name?: string; title?: string; month?: string; n: number; share?: number; inStack?: boolean; preferred?: number };
 const roleName = (id: string) => fRoles.find((r) => r.id === id)?.name ?? "";
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
 const SINCE_EN = "1 Oct 2026";
@@ -34,7 +34,8 @@ function Bars({ rows, label, max }: { rows: Row[]; label: (r: Row) => React.Reac
 
 export default function Market() {
   const m = market as unknown as { generatedAt: string | null; totals: { processed: number; listedNow: number; newToday: number; remoteShare: number }; sources: { id: string; boards: number; ai: number }[];
-    roles: Row[]; seniority: Row[]; titles: Row[]; skills: Row[]; tasks: Row[]; tools: Row[]; byMonth: Row[] };
+    roles: Row[]; seniority: Row[]; titles: Row[]; skills: Row[]; tasks: Row[]; tools: Row[]; byMonth: Row[];
+    sinceQuarter?: string; years?: { asked: number; median: number; bands: Row[] } };
   const ready = !!m.generatedAt && m.totals.processed > 0;
   const read = sources.providers.reduce((a, p) => a + (p.boards.length ? p.boards.filter((b) => b.ok !== false).length : p.ok ? 1 : 0), 0);
   const updated = m.generatedAt ? new Date(m.generatedAt).toUTCString().replace(/:\d\d GMT/, " UTC") : "";
@@ -49,7 +50,7 @@ export default function Market() {
           <More label="How it is collected"><p className="lead" style={{ marginTop: 12 }}><TH k="market.p2b">Only AI job ads are kept. Each ad is reduced to its <b>role, level, skills, tasks and tools</b>; no ad or its link is republished. <Link href="/market/sources/">Every site read</Link> is listed.</TH></p></More>
           {ready ? (
             <div className="mk-totals">
-              {[["mk.processed", "AI job ads processed", m.totals.processed.toLocaleString("en-US"), <T key="s" k="mk.since" vars={{ d: SINCE_EN }}>{"since {d}"}</T>],
+              {[["mk.processed", "AI job ads processed", m.totals.processed.toLocaleString("en-US"), <><span key="q" className="mk-q">{m.sinceQuarter ?? "2026 Q4"}</span> <T key="s" k="mk.since" vars={{ d: SINCE_EN }}>{"since {d}"}</T></>],
                 ["mk.read", "Career pages and boards read", String(read), <Link key="s" href="/market/sources/"><T k="mk.see_sources">see the list</T></Link>],
                 ["mk.new", "New since yesterday", m.totals.newToday.toLocaleString("en-US"), null],
                 ["mk.remote", "Remote", `${m.totals.remoteShare}%`, null]].map(([k, en, v, sub]) => (
@@ -79,6 +80,12 @@ export default function Market() {
                 <span className="kicker"><T k="mk.k_levels">Levels</T></span>
                 <h2 style={{ marginTop: 10 }}><T k="mk.h_levels">At what level</T><span className="dot">.</span></h2>
                 <Bars rows={m.seniority} label={(r) => <T k={`lvl.${(r.id ?? "").toLowerCase()}`}>{r.id ?? ""}</T>} />
+                {m.years && m.years.asked > 0 && (
+                  <>
+                    <p className="muted" style={{ marginTop: 22 }}><T k="mk.years_p" vars={{ a: m.years.asked, y: m.years.median }}>{"Years of experience asked for, in the {a}% of ads that say: {y} is the median."}</T></p>
+                    <Bars rows={m.years.bands} label={(r) => <T k="mk.years_band" vars={{ b: r.id ?? "" }}>{"{b} years"}</T>} />
+                  </>
+                )}
               </div>
             </div>
           </section>
@@ -94,7 +101,7 @@ export default function Market() {
                 <span className="kicker"><T k="mk.k_tools">Tools</T></span>
                 <h2 style={{ marginTop: 10 }}><T k="mk.h_tools">The tools named most</T><span className="dot">.</span></h2>
                 <p className="muted" style={{ marginTop: 8 }}><span className="mk-key" /> <Link href="/tools/#stack"><T k="mk.mystack">in my daily stack</T></Link></p>
-                <Bars rows={m.tools.slice(0, 20)} label={(r) => r.name} />
+                <Bars rows={m.tools.slice(0, 20)} label={(r) => <>{r.name}{r.preferred ? <span className="count mk-pref"> · <T k="mk.pref" vars={{ n: r.preferred }}>{"{n} as nice-to-have"}</T></span> : null}</>} />
               </div>
             </div>
           </section>
@@ -146,6 +153,8 @@ export default function Market() {
       </section>
       <style>{`
         .mk-totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 16px; margin-top: 30px; }
+        .mk-q { display: inline-block; font-weight: 700; letter-spacing: .06em; padding: 1px 7px; border-radius: 5px; background: var(--rust); color: #fff; margin-right: 4px; }
+        .mk-pref { font-size: .72rem; }
         .mk-sub { display: block; margin-top: 4px; } .mk-sub a { color: inherit; }
         .mk-tasks .mk-bars { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); column-gap: 36px; }
         .mk-big { display: block; font-size: 2.6rem; font-weight: 800; letter-spacing: -.04em; margin-top: 6px; }

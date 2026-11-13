@@ -8,8 +8,10 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { greenhouse, lever, ashby, workday, remotive, arbeitnow, hackerNews, smartrecruiters, workable, recruitee, personio, himalayas, jobicy, boardUrl } from "./sources";
-import { isAI, role, seniority, skillsOf, toolsOf, tasksOf, TASKS, inStack } from "./taxonomy";
+import { isAI, role, seniority, TASKS, inStack } from "./taxonomy";
 import { writeWeekly } from "./weekly";
+import { extract } from "./extract";
+import { labOf } from "./labs";
 import type { Job, RawJob } from "./types";
 
 const root = path.resolve(import.meta.dir, "..");
@@ -22,6 +24,14 @@ const dry = process.argv.includes("--dry");
 // --from-store: read nothing, rebuild the summary and sources list from the store as of its last run
 const fromStore = process.argv.includes("--from-store");
 const companies = JSON.parse(readFileSync(path.join(import.meta.dir, "companies.json"), "utf8"));
+// boards found for the map's tools and the labs (pipeline/boards.ts), read next to the hand-kept list
+type Found = { provider: string; slug: string; name: string; tool?: string; kind?: string };
+const discovered: Found[] = existsSync(path.join(import.meta.dir, "discovered.json")) ? JSON.parse(readFileSync(path.join(import.meta.dir, "discovered.json"), "utf8")).boards ?? [] : [];
+const meta = new Map<string, Found>(discovered.map((d) => [`${d.provider}:${d.slug}`, d]));
+for (const d of discovered) {
+  companies[d.provider] ??= [];
+  if (!companies[d.provider].some((s: string) => s.toLowerCase() === d.slug)) companies[d.provider].push(d.slug);
+}
 const prevStore: Job[] = existsSync(path.join(root, "market", "jobs.json")) ? JSON.parse(readFileSync(path.join(root, "market", "jobs.json"), "utf8")) : [];
 const today = fromStore ? (prevStore.map((j) => j.lastSeen).sort().at(-1) ?? "") : new Date().toISOString().slice(0, 10);
 
@@ -68,10 +78,17 @@ const normTitle = (t: string) => {
   return keep.join(", ").replace(/\s+/g, " ").replace(/\s+,/g, ",").trim().slice(0, 80);
 };
 const hash = (s: string) => createHash("sha256").update(s).digest("hex").slice(0, 16);
-const fresh: Job[] = raw.map((j) => {
-  const text = `${j.title} ${j.text}`;
+// Boards that repost other companies' ads. When the company's own career page carries the same
+// ad (same company and title), the repost is dropped so the ad is counted once.
+const AGGREGATORS = new Set(["himalayas", "jobicy", "remotive", "arbeitnow", "hackernews"]);
+const ckOf = (j: RawJob) => hash(`${j.company.toLowerCase().replace(/[^a-z0-9]/g, "")}|${normTitle(j.title).toLowerCase()}`);
+const direct = new Set(raw.filter((j) => !AGGREGATORS.has(j.source)).map(ckOf));
+const reposts = raw.filter((j) => AGGREGATORS.has(j.source) && direct.has(ckOf(j))).length;
+const fresh: Job[] = raw.filter((j) => !(AGGREGATORS.has(j.source) && direct.has(ckOf(j)))).map((j) => {
+  const x = extract(j.title, j.text);
   return { key: hash(`${j.source}:${j.id}`), source: j.source, title: normTitle(j.title), role: role(j.title), seniority: seniority(j.title),
-    remote: j.remote, skills: skillsOf(text), tools: toolsOf(text), tasks: tasksOf(text), ...(j.posted ? { posted: j.posted } : {}), firstSeen: today, lastSeen: today };
+    remote: j.remote, skills: x.skills, tools: x.tools, tasks: x.tasks, ...(x.toolsPreferred.length ? { toolsPreferred: x.toolsPreferred } : {}),
+    ...(x.years ? { years: x.years } : {}), ck: ckOf(j), ...(j.posted ? { posted: j.posted } : {}), firstSeen: today, lastSeen: today };
 });
 
 const store: Job[] = prevStore;
@@ -111,6 +128,7 @@ const pct = (n: number, of: number) => (of ? Math.round((n / of) * 100) : 0);
 const summary = {
   generatedAt: new Date().toISOString(),
   since: SINCE,
+  sinceQuarter: `${SINCE.slice(0, 4)} Q${Math.ceil(+SINCE.slice(5, 7) / 3)}`,
   totals: { processed: win.length, listedNow: open.length, newToday: added, allTime: all.length, openNow: open.length,
     remoteShare: pct(win.filter((j) => j.remote).length, win.length), dated: pct(win.filter((j) => j.posted).length, win.length) },
   sources: fromStore ? prev.sources : count(report.filter((r) => r.ok), (r) => r.source.split(":")[0]).map(([k]) => ({ id: k, boards: report.filter((r) => r.ok && r.source.split(":")[0] === k).length, ai: report.filter((r) => r.ok && r.source.split(":")[0] === k).reduce((a, r) => a + r.ai, 0) })),
@@ -120,7 +138,14 @@ const summary = {
   titles: count(win, (j) => j.title).slice(0, 30).map(([k, n]) => ({ title: k, n })),
   skills: count(win, (j) => j.skills).map(([k, n]) => ({ id: k, n, share: pct(n, win.length) })),
   tasks: count(win.filter((j) => j.tasks), (j) => j.tasks ?? []).map(([k, n]) => ({ id: k, name: TASKS.find((t) => t.id === k)?.name ?? k, n, share: pct(n, win.filter((j) => j.tasks).length) })),
-  tools: count(win, (j) => j.tools).slice(0, 40).map(([k, n]) => ({ name: k, n, inStack: inStack(k) })),
+  tools: count(win, (j) => j.tools).slice(0, 40).map(([k, n]) => ({ name: k, n, inStack: inStack(k),
+    preferred: win.filter((j) => j.toolsPreferred?.includes(k)).length })),
+  years: (() => { const ys = win.map((j) => j.years).filter((y): y is number => !!y).sort((a, b) => a - b);
+    const band = (y: number) => (y <= 2 ? "0-2" : y <= 4 ? "3-4" : y <= 7 ? "5-7" : "8+");
+    return { asked: pct(ys.length, win.length), median: ys.length ? ys[Math.floor(ys.length / 2)] : 0,
+      bands: ["0-2", "3-4", "5-7", "8+"].map((b) => ({ id: b, n: ys.filter((y) => band(y) === b).length })) }; })(),
+  byQuarter: count(win, (j) => { const [y, m] = when(j).split("-").map(Number); return `${y} Q${Math.ceil(m / 3)}`; }).sort((a, b) => a[0].localeCompare(b[0])).map(([q, n]) => ({ quarter: q, n })),
+  reposts,
   byMonth: months.map(([m, n]) => ({ month: m, n })),
 };
 
@@ -149,7 +174,9 @@ const sources = {
       p.id === "workday" ? (companies.workday ?? []).map((b: { tenant: string; host: string; site: string }) => ({ slug: b.tenant, wd: b }))
       : (companies[p.id] ?? []).map((s: string) => ({ slug: s }));
     const boards = slugs.map(({ slug, wd }) => { const r = status.get(`${p.id}:${slug}`);
-      return { slug, url: boardUrl(p.id, slug, wd), ok: fromStore ? null : (r?.ok ?? false), ai: r?.ai ?? 0 }; });
+      const m = meta.get(`${p.id}:${slug}`), lab = labOf(slug);
+      return { slug, url: boardUrl(p.id, slug, wd), ok: fromStore ? null : (r?.ok ?? false), ai: r?.ai ?? 0,
+        ...(lab ? { name: lab.name, kind: lab.kind } : m ? { name: m.name, ...(m.kind ? { kind: m.kind } : {}) } : {}), ...(m?.tool ? { tool: m.tool } : {}) }; });
     const self = status.get(p.id);
     return { ...p, boards, ok: self ? self.ok : boards.some((b) => b.ok) || (fromStore && win.some((j) => j.source === p.id)), ai: self ? self.ai : boards.reduce((a, b) => a + b.ai, 0),
       processed: win.filter((j) => j.source === p.id).length };
@@ -165,6 +192,7 @@ console.log(`AI postings: ${fresh.length} listed now, ${added} new, ${win.length
 for (const r of report) console.log(`${r.ok ? "ok  " : "FAIL"} ${r.source.padEnd(24)} jobs ${String(r.jobs).padStart(5)}  ai ${String(r.ai).padStart(4)}  ${r.note ?? ""}`);
 console.log("roles:", summary.roles.map((r) => `${r.id} ${r.n}`).join(", "));
 console.log("skills:", summary.skills.map((s) => `${s.id} ${s.share}%`).join(", "));
+console.log(`reposts dropped: ${reposts}; years asked in ${summary.years.asked}% (median ${summary.years.median})`);
 console.log("tasks:", summary.tasks.map((t) => `${t.id} ${t.share}%`).join(", "));
 console.log("tools:", summary.tools.slice(0, 20).map((t) => `${t.name} ${t.n}`).join(", "));
 if (!dry) {
