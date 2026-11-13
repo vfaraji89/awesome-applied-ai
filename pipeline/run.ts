@@ -164,7 +164,7 @@ const summary = {
     for (const j of win) { const k = monday(when(j)); m.set(k, (m.get(k) ?? 0) + 1); }
     const out: { week: string; n: number; partial?: boolean }[] = [];
     for (let d = monday(SINCE); d <= today; d = new Date(Date.parse(d + "T00:00:00Z") + 7 * 864e5).toISOString().slice(0, 10))
-      out.push({ week: d, n: m.get(d) ?? 0, ...(Date.parse(d + "T00:00:00Z") + 6 * 864e5 > Date.parse(today + "T00:00:00Z") ? { partial: true } : {}) });
+      out.push({ week: d < SINCE ? SINCE : d, n: m.get(d) ?? 0, ...(Date.parse(d + "T00:00:00Z") + 6 * 864e5 > Date.parse(today + "T00:00:00Z") ? { partial: true } : {}) });
     return out; })(),
   tech: techSummary(win, when),
   affected: fromStore ? prev.affected ?? null : affectedSummary(),
@@ -184,8 +184,11 @@ function techSummary(ads: Job[], when: (j: Job) => string) {
     const key = `${c.id}:${name}`, hit = read.filter((j) => j.tech?.includes(key));
     const first = hit.map(when).sort()[0];
     const r = pct(recent.filter((j) => j.tech?.includes(key)).length, recent.length), b = pct(before.filter((j) => j.tech?.includes(key)).length, before.length);
-    return { name, n: hit.length, share: pct(hit.length, read.length), first, ...(before.length >= 20 ? { change: Math.round((r - b) * 10) / 10 } : {}),
-      ...(hit.length >= 3 && first >= cut ? { isNew: true } : {}) };
+    // "rising" needs 10 mentions; "new" needs a real baseline (500 ads read before the last 30
+    // days), else a thin early window makes ordinary names look new
+    const baseline = read.filter((j) => when(j) < cut).length;
+    return { name, n: hit.length, share: pct(hit.length, read.length), first, ...(before.length >= 20 && hit.length >= 10 ? { change: Math.round((r - b) * 10) / 10 } : {}),
+      ...(baseline >= 500 && hit.length >= 3 && first >= cut ? { isNew: true } : {}) };
   }).filter((x) => x.n > 0).sort((a, b) => b.n - a.n) }));
   return { read: read.length, cats };
 }

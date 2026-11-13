@@ -258,12 +258,14 @@ export const insightCss = `
 
 /** AI job ads per week by publish date: one column per week, month names under each month's
  *  first week, the current week drawn lighter as it is still filling. */
-export function Weekly({ weeks }: { weeks: { week: string; n: number; partial?: boolean }[] }) {
+export function Weekly({ weeks, months: byMonth }: { weeks: { week: string; n: number; partial?: boolean }[]; months?: { month?: string; n: number }[] }) {
   const top = Math.max(1, ...weeks.map((w) => w.n));
   const mon = (d: string) => new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", { month: "short", timeZone: "UTC" });
   const day = (d: string) => new Date(d + "T00:00:00Z").toLocaleDateString("en-GB", { day: "numeric", month: "short", timeZone: "UTC" });
+  // month totals from the exact monthly counts (a week can straddle two months)
   const months = new Map<string, number>();
-  for (const w of weeks) months.set(mon(w.week), (months.get(mon(w.week)) ?? 0) + w.n);
+  if (byMonth?.length) for (const r of byMonth) months.set(mon(`${r.month}-01`), r.n);
+  else for (const w of weeks) months.set(mon(w.week), (months.get(mon(w.week)) ?? 0) + w.n);
   return (
     <>
       <div className="mi-months count">{[...months.entries()].map(([m, n]) => <span key={m}><b>{n.toLocaleString("en-US")}</b> {m}</span>)}</div>

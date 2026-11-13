@@ -212,7 +212,7 @@ export default function Market() {
                 {m.byWeek?.length ? (
                   <>
                     <p className="muted" style={{ marginTop: 8 }}><T k="mk.time_p">By each ad&apos;s publish date since 1 October. The striped week is still filling.</T></p>
-                    <Weekly weeks={m.byWeek} />
+                    <Weekly weeks={m.byWeek} months={m.byMonth} />
                   </>
                 ) : (
                   <div className="mk-months">
