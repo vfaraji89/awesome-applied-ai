@@ -1,5 +1,5 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { T, useT } from "@/i18n/lang";
 import type { Field, Term } from "@/lib/types";
 
@@ -9,6 +9,8 @@ export function JargonBrowser({ terms, fields }: { terms: Term[]; fields: Field[
   const tr = useT();
   const [field, setField] = useState("all");
   const [open, setOpen] = useState<Record<string, boolean>>({});
+  // ?field=retrieval (from a skill page) opens on that field
+  useEffect(() => { const f = new URLSearchParams(window.location.search).get("field"); if (f && fields.some((x) => x.id === f)) setField(f); }, [fields]);
   const hits = useMemo(() => {
     const s = q.trim().toLowerCase();
     return terms.filter((t) => (field === "all" || t.field === field) && (!s || [t.term, t.short, ...(t.also ?? []), ...t.tags].join(" ").toLowerCase().includes(s)));

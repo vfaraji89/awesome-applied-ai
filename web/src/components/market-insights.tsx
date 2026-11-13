@@ -176,7 +176,7 @@ export function SkillProfiles({ list }: { list: SkillProfile[] }) {
         <article key={s.id} className="frame mi-prof" style={{ ["--i" as string]: i }}>
           <header>
             <span className="mono mi-rank">{String(i + 1).padStart(2, "0")}</span>
-            <b><Sk id={s.id} /></b>
+            <b><Link href={`/skills/${s.id}/`} className="mi-prof-name"><Sk id={s.id} /></Link></b>
             <span className="mi-prof-pct">{s.share}%</span>
           </header>
           <span className="mi-prof-bar"><span style={{ width: `${s.share}%` }} /></span>
@@ -186,6 +186,7 @@ export function SkillProfiles({ list }: { list: SkillProfile[] }) {
             {s.with.length > 0 && <><dt><T k="mi.with2">comes with, more than usual</T></dt><dd>{s.with.map((w, k) => <span key={w.id}>{k ? " · " : ""}<Sk id={w.id} /> <i className="mono">{w.lift ? `${w.lift}×` : `${w.share}%`}</i></span>)}</dd></>}
             {(s.toolLift?.length ?? 0) > 0 && <><dt><T k="mi.tools2">tools that stand out</T></dt><dd className="mi-chips">{s.toolLift!.map((t) => <span key={t.name} className="chip" title={`${t.share}% of these ads, ${t.lift}× the usual rate`}>{t.name} <i className="mono">{t.lift}×</i></span>)}</dd></>}
           </dl>
+          <Link href={`/skills/${s.id}/`} className="mi-prof-go"><T k="mi.open_skill">Open the skill</T> →</Link>
           <span className="rod" />
         </article>
       ))}
@@ -250,6 +251,8 @@ export const insightCss = `
   .mi-prof dl { margin: 2px 0 0; display: grid; gap: 3px; font-size: .86rem; }
   .mi-prof dt { color: var(--muted); font-family: var(--font-mono), monospace; font-size: .66rem; text-transform: uppercase; letter-spacing: .08em; margin-top: 6px; }
   .mi-prof dd { margin: 0; }
+  .mi-prof-name { text-decoration: none; } .mi-prof-name:hover { color: var(--rust-deep); }
+  .mi-prof-go { margin-top: 4px; font-size: .86rem; font-weight: 600; color: var(--rust-deep); text-decoration: none; } .mi-prof-go:hover { text-decoration: underline; }
   .mi-chips { display: flex; flex-wrap: wrap; gap: 5px; }
   .mi-chips .chip, .mi-aff-terms .chip, .mi-rising .chip { padding: 2px 9px; font-size: .76rem; }
   .chip i.mono { font-style: normal; font-size: .68rem; color: var(--rust-deep); } .mi-prof dd i { font-style: normal; color: var(--muted); font-size: .74rem; }

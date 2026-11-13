@@ -259,8 +259,25 @@ function insights(ads: Job[]) {
         .filter((x) => x.k >= MIN).sort((a, b) => b.lift - a.lift);
       const toolLift = count(g, (j) => j.tools).filter(([, k]) => k >= 5).map(([t, k]) => ({ name: t, share: share(k, g.length), lift: lift(k, ads.filter((j) => j.tools.includes(t)).length) }))
         .sort((a, b) => b.lift - a.lift);
+      // detail for the skill's own page: every co-skill, more tools, tasks, years, remote, levels
+      const gt = g.filter((j) => j.tasks);
+      const allT = ads.filter((j) => j.tasks);
+      const taskShare = count(gt, (j) => j.tasks ?? []).slice(0, 8).map(([t, k]) => {
+        const base = allT.filter((j) => j.tasks!.includes(t)).length / (allT.length || 1); // share of all ads read with tasks
+        return { id: t, share: share(k, gt.length), lift: base ? Math.round(((k / gt.length) / base) * 10) / 10 : 0 };
+      });
+      const ys = g.map((j) => j.years).filter((y): y is number => !!y).sort((a, b) => a - b);
       return { id: s, n: g.length, share: share(g.length, ads.length), topRole: byRole[0] ?? null,
-        with: withSkill.slice(0, 2).map(({ id, share: sh, lift: l }) => ({ id, share: sh, lift: l })), tools: toolLift.slice(0, 4).map((t) => t.name), toolLift: toolLift.slice(0, 4) };
+        with: withSkill.slice(0, 2).map(({ id, share: sh, lift: l }) => ({ id, share: sh, lift: l })), tools: toolLift.slice(0, 4).map((t) => t.name), toolLift: toolLift.slice(0, 4),
+        detail: {
+          withAll: withSkill.map(({ id, share: sh, lift: l }) => ({ id, share: sh, lift: l })),
+          tools: toolLift.slice(0, 10),
+          tasks: gt.length >= MIN ? taskShare : [],
+          years: ys.length >= 10 ? { asked: share(ys.length, g.length), median: ys[Math.floor(ys.length / 2)] } : null,
+          remote: share(g.filter((j) => j.remote).length, g.length),
+          levels: count(g, (j) => j.seniority).map(([lvl, k]) => ({ id: lvl, share: share(k, g.length) })),
+          byRole,
+        } };
     }),
   };
 }

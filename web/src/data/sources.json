@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T13:26:27.519Z",
+ "generatedAt": "2026-11-13T14:15:45.189Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -1362,7 +1362,7 @@
      "slug": "Wise",
      "url": "https://careers.smartrecruiters.com/Wise",
      "ok": true,
-     "ai": 13
+     "ai": 14
     },
     {
      "slug": "Canva",
@@ -1384,8 +1384,8 @@
     }
    ],
    "ok": true,
-   "ai": 211,
-   "processed": 171
+   "ai": 212,
+   "processed": 172
   },
   {
    "id": "workable",
@@ -1483,8 +1483,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 85,
-   "processed": 319
+   "ai": 84,
+   "processed": 321
   },
   {
    "id": "hackernews",
