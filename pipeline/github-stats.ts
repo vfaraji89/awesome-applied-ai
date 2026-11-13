@@ -69,6 +69,8 @@ for (const r of missing.splice(0)) {
   } catch { missing.push(r); }
   await sleep(process.env.GITHUB_TOKEN ? 200 : 1500);
 }
+// a lookup that failed (rate limit, outage) keeps last week's numbers rather than dropping the badge
+for (const r of missing) if (old.repos[r]) repos2[r] = old.repos[r];
 const out: File = { updated: today, repos: Object.fromEntries(Object.entries(repos2).sort()) };
 console.log(`github-stats: ${Object.keys(repos2).length} of ${repos.length} repos` + (missing.length ? `; not found: ${missing.join(", ")}` : ""));
 if (!dry) writeFileSync(OUT, JSON.stringify(out, null, 1) + "\n");

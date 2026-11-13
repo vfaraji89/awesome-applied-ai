@@ -11,6 +11,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/pgvector/pgvector",
+  "github": "pgvector/pgvector",
   "tags": [
    "postgres",
    "self-host",
@@ -29,6 +30,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/timescale/pgvectorscale",
+  "github": "timescale/pgvectorscale",
   "icon": "timescale",
   "tags": [
    "postgres",
@@ -47,6 +49,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://vectorchord.ai",
+  "github": "supervc-stack/VectorChord",
   "tags": [
    "postgres",
    "agpl"
@@ -65,6 +68,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://qdrant.tech",
+  "github": "qdrant/qdrant",
   "icon": "qdrant",
   "tags": [
    "rust",
@@ -83,6 +87,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://weaviate.io",
+  "github": "weaviate/weaviate",
   "tags": [
    "hybrid",
    "multi-tenant"
@@ -100,6 +105,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://milvus.io",
+  "github": "milvus-io/milvus",
   "icon": "milvus",
   "tags": [
    "distributed",
@@ -118,6 +124,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://trychroma.com",
+  "github": "chroma-core/chroma",
   "tags": [
    "embedded",
    "prototyping"
@@ -135,6 +142,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://lancedb.com",
+  "github": "lancedb/lancedb",
   "tags": [
    "object-storage",
    "serverless"
@@ -185,6 +193,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://vespa.ai",
+  "github": "vespa-engine/vespa",
   "icon": "vespa",
   "tags": [
    "ranking",
@@ -221,6 +230,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/facebookresearch/faiss",
+  "github": "facebookresearch/faiss",
   "tags": [
    "library",
    "offline"
@@ -238,6 +248,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://elastic.co",
+  "github": "elastic/elasticsearch",
   "icon": "elasticsearch",
   "tags": [
    "incumbent",
@@ -257,6 +268,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://opensearch.org",
+  "github": "opensearch-project/OpenSearch",
   "icon": "opensearch",
   "tags": [
    "incumbent",
@@ -275,6 +287,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://paradedb.com",
+  "github": "paradedb/paradedb",
   "tags": [
    "postgres",
    "agpl"
@@ -293,6 +306,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://typesense.org",
+  "github": "typesense/typesense",
   "tags": [
    "app-search"
   ]
@@ -309,6 +323,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://meilisearch.com",
+  "github": "meilisearch/meilisearch",
   "icon": "meilisearch",
   "tags": [
    "app-search"
@@ -326,6 +341,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/quickwit-oss/tantivy",
+  "github": "quickwit-oss/tantivy",
   "tags": [
    "library",
    "rust"
@@ -343,6 +359,8 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/QwenLM/Qwen3-Embedding",
+  "github": "QwenLM/Qwen3-Embedding",
+  "launched": "2025-06",
   "icon": "qwen",
   "emerging": true,
   "emergingWhy": "Released June 2025; the 8B model ranked first on the MTEB multilingual leaderboard at launch.",
@@ -364,6 +382,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/FlagOpen/FlagEmbedding",
+  "github": "FlagOpen/FlagEmbedding",
   "tags": [
    "open-weights",
    "default-choice"
@@ -381,6 +400,7 @@
   "maturity": "production-common",
   "deployment": "saas",
   "url": "https://cohere.com/rerank",
+  "launched": "2025-04",
   "tags": [
    "managed",
    "multimodal"
@@ -467,6 +487,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/stanford-futuredata/ColBERT",
+  "github": "stanford-futuredata/ColBERT",
   "tags": [
    "late-interaction",
    "research-derived"
@@ -484,6 +505,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/PrithivirajDamodaran/FlashRank",
+  "github": "PrithivirajDamodaran/FlashRank",
   "tags": [
    "cpu",
    "low-latency"
@@ -501,6 +523,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/docling-project/docling",
+  "github": "docling-project/docling",
   "tags": [
    "pdf",
    "local",
@@ -519,6 +542,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://unstructured.io",
+  "github": "Unstructured-IO/unstructured",
   "tags": [
    "connectors",
    "vpc"
@@ -570,6 +594,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/datalab-to/marker",
+  "github": "datalab-to/marker",
   "tags": [
    "pdf",
    "gpu"
@@ -587,6 +612,7 @@
   "maturity": "early",
   "deployment": "both",
   "url": "https://chunkr.ai",
+  "github": "lumina-ai-inc/chunkr",
   "tags": [
    "chunking",
    "agpl"
@@ -605,6 +631,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/chonkie-inc/chonkie",
+  "github": "feyninc/chonkie",
   "tags": [
    "chunking",
    "library"
@@ -622,6 +649,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://firecrawl.dev",
+  "github": "firecrawl/firecrawl",
   "tags": [
    "crawling",
    "agpl"
@@ -726,6 +754,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/microsoft/graphrag",
+  "github": "microsoft/graphrag",
   "tags": [
    "graph",
    "global-queries"
@@ -744,6 +773,7 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/HKUDS/LightRAG",
+  "github": "HKUDS/LightRAG",
   "tags": [
    "graph",
    "cost-efficient"
@@ -761,6 +791,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/getzep/graphiti",
+  "github": "getzep/graphiti",
   "tags": [
    "graph",
    "temporal"
@@ -779,6 +810,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/neo4j/neo4j-graphrag-python",
+  "github": "neo4j/neo4j-graphrag-python",
   "icon": "neo4j",
   "tags": [
    "graph",
@@ -797,6 +829,7 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/topoteretes/cognee",
+  "github": "topoteretes/cognee",
   "tags": [
    "graph",
    "memory"
@@ -815,6 +848,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/mem0ai/mem0",
+  "github": "mem0ai/mem0",
   "tags": [
    "fact-extraction",
    "popular"
@@ -833,6 +867,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/getzep/graphiti",
+  "github": "getzep/graphiti",
   "tags": [
    "temporal",
    "graph"
@@ -852,6 +887,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/getzep/zep",
+  "github": "getzep/zep",
   "tags": [
    "summarization",
    "service"
@@ -870,6 +906,7 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/topoteretes/cognee",
+  "github": "topoteretes/cognee",
   "tags": [
    "ontology",
    "graph"
@@ -888,6 +925,7 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/MemTensor/MemOS",
+  "github": "MemTensor/MemOS",
   "tags": [
    "research-derived"
   ],
@@ -905,6 +943,7 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/vectorize-io/hindsight",
+  "github": "vectorize-io/hindsight",
   "tags": [
    "mcp",
    "reflection"
@@ -923,6 +962,7 @@
   "maturity": "early",
   "deployment": "both",
   "url": "https://github.com/supermemoryai/supermemory",
+  "github": "supermemoryai/supermemory",
   "tags": [
    "mcp",
    "api"
@@ -941,6 +981,7 @@
   "maturity": "early",
   "deployment": "both",
   "url": "https://github.com/letta-ai/letta",
+  "github": "letta-ai/letta",
   "tags": [
    "paging",
    "check-before-adopting"
@@ -960,6 +1001,7 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/langchain-ai/langmem",
+  "github": "langchain-ai/langmem",
   "icon": "langchain",
   "tags": [
    "langgraph",
@@ -980,6 +1022,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://platform.claude.com/docs/en/agents-and-tools/tool-use/memory-tool",
+  "launched": "2025-09",
   "icon": "anthropic",
   "emerging": true,
   "emergingWhy": "Launched in the Claude API with Claude Sonnet 4.5 in late September 2025.",
@@ -1003,6 +1046,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://platform.claude.com/docs/en/build-with-claude/context-editing",
+  "launched": "2025-09",
   "icon": "anthropic",
   "emerging": true,
   "emergingWhy": "Launched in the Claude API with Claude Sonnet 4.5 in late September 2025, cutting tokens 84% in Anthropic's 100-turn test.",
@@ -1026,6 +1070,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://developers.openai.com/api/docs/guides/conversation-state",
+  "launched": "2025-03",
   "tags": [
    "native",
    "openai"
@@ -1044,6 +1089,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://ai.google.dev/gemini-api/docs/caching",
+  "launched": "2024-05",
   "icon": "googlegemini",
   "tags": [
    "native",
@@ -1063,6 +1109,7 @@
   "maturity": "production-common",
   "deployment": "saas",
   "url": "https://platform.claude.com/docs/en/build-with-claude/prompt-caching",
+  "launched": "2024-08",
   "icon": "anthropic",
   "tags": [
    "anthropic",
@@ -1082,6 +1129,7 @@
   "maturity": "production-common",
   "deployment": "saas",
   "url": "https://developers.openai.com/api/docs/guides/prompt-caching",
+  "launched": "2024-10",
   "tags": [
    "openai",
    "cost-lever"
@@ -1099,6 +1147,7 @@
   "maturity": "production-common",
   "deployment": "saas",
   "url": "https://ai.google.dev/gemini-api/docs/caching",
+  "launched": "2024-05",
   "icon": "googlegemini",
   "tags": [
    "google",
@@ -1118,6 +1167,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/vllm-project/vllm",
+  "github": "vllm-project/vllm",
   "icon": "vllm",
   "tags": [
    "serving",
@@ -1136,6 +1186,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/sgl-project/sglang",
+  "github": "sgl-project/sglang",
   "tags": [
    "serving",
    "self-host"
@@ -1153,6 +1204,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/LMCache/LMCache",
+  "github": "LMCache/LMCache",
   "tags": [
    "serving",
    "multi-node"
@@ -1172,6 +1224,7 @@
   "maturity": "research",
   "deployment": "self-host",
   "url": "https://github.com/microsoft/LLMLingua",
+  "github": "microsoft/LLMLingua",
   "tags": [
    "compression",
    "check-before-adopting"
@@ -1190,6 +1243,7 @@
   "model": "oss",
   "maturity": "production-common",
   "url": "https://www.anthropic.com/engineering/multi-agent-research-system",
+  "launched": "2025-06",
   "icon": "anthropic",
   "tags": [
    "pattern",
@@ -1210,6 +1264,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/openai/tiktoken",
+  "github": "openai/tiktoken",
   "tags": [
    "tokenizer",
    "openai"
@@ -1228,6 +1283,7 @@
   "maturity": "production-common",
   "deployment": "saas",
   "url": "https://platform.claude.com/docs/en/build-with-claude/token-counting",
+  "launched": "2024-11",
   "icon": "anthropic",
   "tags": [
    "tokenizer",
@@ -1246,6 +1302,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://github.com/BerriAI/litellm",
+  "github": "BerriAI/litellm",
   "tags": [
    "gateway",
    "multi-provider"
@@ -1262,6 +1319,7 @@
   "license": "Research",
   "model": "oss",
   "url": "https://research.trychroma.com/context-rot",
+  "github": "chroma-core/context-rot",
   "tags": [
    "benchmark",
    "citable"
@@ -1278,6 +1336,7 @@
   "license": "Research",
   "model": "oss",
   "url": "https://arxiv.org/abs/2502.05167",
+  "github": "adobe-research/NoLiMa",
   "tags": [
    "benchmark",
    "citable"
@@ -1294,6 +1353,7 @@
   "license": "Research",
   "model": "oss",
   "url": "https://arxiv.org/abs/2307.03172",
+  "github": "nelson-liu/lost-in-the-middle",
   "tags": [
    "benchmark",
    "canonical"
@@ -1310,6 +1370,7 @@
   "license": "Research",
   "model": "oss",
   "url": "https://arxiv.org/abs/2505.10570",
+  "launched": "2025-05",
   "tags": [
    "benchmark",
    "tool-calling"
@@ -1328,6 +1389,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://github.com/langchain-ai/langgraph",
+  "github": "langchain-ai/langgraph",
   "icon": "langgraph",
   "tags": [
    "durable",
@@ -1346,6 +1408,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://temporal.io",
+  "github": "temporalio/temporal",
   "icon": "temporal",
   "tags": [
    "durable",
@@ -1365,6 +1428,8 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/microsoft/agent-framework",
+  "github": "microsoft/agent-framework",
+  "launched": "2025-10",
   "emerging": true,
   "emergingWhy": "Public preview in October 2025 as the successor to Semantic Kernel and AutoGen; version 1.0 followed in April 2026.",
   "emergingSource": "https://www.infoq.com/news/2025/10/microsoft-agent-framework",
@@ -1385,6 +1450,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/openai/openai-agents-python",
+  "github": "openai/openai-agents-python",
   "tags": [
    "vendor-sdk",
    "openai"
@@ -1402,6 +1468,8 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/anthropics/claude-agent-sdk-python",
+  "github": "anthropics/claude-agent-sdk-python",
+  "launched": "2025-09",
   "icon": "claude",
   "emerging": true,
   "emergingWhy": "Renamed from Claude Code SDK and released as a general agent SDK in late September 2025.",
@@ -1424,6 +1492,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/google/adk-python",
+  "github": "google/adk-python",
   "icon": "google",
   "tags": [
    "vendor-sdk",
@@ -1442,6 +1511,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/pydantic/pydantic-ai",
+  "github": "pydantic/pydantic-ai",
   "icon": "pydantic",
   "tags": [
    "typed",
@@ -1460,6 +1530,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/mastra-ai/mastra",
+  "github": "mastra-ai/mastra",
   "tags": [
    "typescript"
   ]
@@ -1476,6 +1547,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/langchain-ai/langchain",
+  "github": "langchain-ai/langchain",
   "icon": "langchain",
   "emerging": true,
   "emergingWhy": "LangChain 1.0 released October 22, 2025 with a slimmer core built on the LangGraph runtime.",
@@ -1497,6 +1569,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/run-llama/llama_index",
+  "github": "run-llama/llama_index",
   "tags": [
    "rag"
   ],
@@ -1514,6 +1587,7 @@
   "maturity": "fragile",
   "deployment": "both",
   "url": "https://github.com/crewAIInc/crewAI",
+  "github": "crewAIInc/crewAI",
   "icon": "crewai",
   "tags": [
    "multi-agent",
@@ -1533,6 +1607,7 @@
   "maturity": "early",
   "deployment": "both",
   "url": "https://github.com/dbos-inc/dbos-transact-py",
+  "github": "dbos-inc/dbos-transact-py",
   "tags": [
    "durable",
    "postgres"
@@ -1550,6 +1625,7 @@
   "maturity": "research",
   "deployment": "self-host",
   "url": "https://github.com/microsoft/autogen",
+  "github": "microsoft/autogen",
   "tags": [
    "deprecated",
    "microsoft"
@@ -1569,6 +1645,7 @@
   "maturity": "research",
   "deployment": "self-host",
   "url": "https://github.com/microsoft/semantic-kernel",
+  "github": "microsoft/semantic-kernel",
   "tags": [
    "deprecated",
    "microsoft"
@@ -1588,6 +1665,7 @@
   "maturity": "research",
   "deployment": "self-host",
   "url": "https://github.com/stanfordnlp/dspy",
+  "github": "stanfordnlp/dspy",
   "tags": [
    "compilation",
    "offline"
@@ -1606,6 +1684,8 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/gepa-ai/gepa",
+  "github": "gepa-ai/gepa",
+  "launched": "2025-07",
   "emerging": true,
   "emergingWhy": "Introduced in July 2025 (arXiv 2507.19457) and shipped as the dspy.GEPA optimizer; accepted as an ICLR 2026 oral.",
   "emergingSource": "https://dspy.ai/api/optimizers/GEPA/overview/",
@@ -1625,6 +1705,7 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/ax-llm/ax",
+  "github": "ax-llm/ax",
   "tags": [
    "typescript"
   ]
@@ -1641,6 +1722,7 @@
   "maturity": "research",
   "deployment": "self-host",
   "url": "https://github.com/zou-group/textgrad",
+  "github": "zou-group/textgrad",
   "tags": [
    "research-only"
   ],
@@ -1657,6 +1739,8 @@
   "model": "oss",
   "maturity": "production-common",
   "url": "https://modelcontextprotocol.io",
+  "github": "modelcontextprotocol/modelcontextprotocol",
+  "launched": "2024-11",
   "icon": "modelcontextprotocol",
   "tags": [
    "protocol",
@@ -1677,6 +1761,8 @@
   "model": "oss",
   "maturity": "production-viable",
   "url": "https://a2a-protocol.org",
+  "github": "a2aproject/A2A",
+  "launched": "2025-04",
   "tags": [
    "protocol",
    "agent-to-agent"
@@ -1694,6 +1780,7 @@
   "model": "oss",
   "maturity": "early",
   "url": "https://agntcy.org",
+  "launched": "2025-03",
   "tags": [
    "protocol",
    "mesh"
@@ -1711,6 +1798,7 @@
   "model": "oss",
   "maturity": "production-common",
   "url": "https://agents.md",
+  "github": "agentsmd/agents.md",
   "emerging": true,
   "emergingWhy": "Donated by OpenAI and Anthropic as a founding project of the Linux Foundation's Agentic AI Foundation on December 9, 2025.",
   "emergingSource": "https://www.linuxfoundation.org/press/linux-foundation-announces-the-formation-of-the-agentic-ai-foundation",
@@ -1732,6 +1820,7 @@
   "model": "commercial",
   "maturity": "production-common",
   "url": "https://docs.claude.com/en/docs/claude-code/memory",
+  "launched": "2025-02",
   "icon": "claude",
   "tags": [
    "convention",
@@ -1750,6 +1839,8 @@
   "model": "oss",
   "maturity": "early",
   "url": "https://llmstxt.org",
+  "github": "AnswerDotAI/llms-txt",
+  "launched": "2024-09",
   "tags": [
    "convention",
    "unproven"
@@ -1769,6 +1860,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/mlc-ai/xgrammar",
+  "github": "mlc-ai/xgrammar",
   "tags": [
    "constrained-decoding",
    "default-choice"
@@ -1786,6 +1878,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/guidance-ai/llguidance",
+  "github": "guidance-ai/llguidance",
   "tags": [
    "constrained-decoding"
   ]
@@ -1802,6 +1895,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/dottxt-ai/outlines",
+  "github": "dottxt-ai/outlines",
   "tags": [
    "constrained-decoding"
   ]
@@ -1818,6 +1912,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/567-labs/instructor",
+  "github": "567-labs/instructor",
   "tags": [
    "validation",
    "retries"
@@ -1835,6 +1930,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://langfuse.com",
+  "github": "langfuse/langfuse",
   "tags": [
    "otel",
    "self-host",
@@ -1854,6 +1950,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://phoenix.arize.com",
+  "github": "Arize-ai/phoenix",
   "tags": [
    "otel",
    "self-host"
@@ -1871,6 +1968,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/comet-ml/opik",
+  "github": "comet-ml/opik",
   "tags": [
    "otel",
    "permissive"
@@ -1926,6 +2024,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://wandb.ai/site/weave",
+  "github": "wandb/weave",
   "icon": "weightsandbiases",
   "tags": [
    "mlops-incumbent"
@@ -1943,6 +2042,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://mlflow.org",
+  "github": "mlflow/mlflow",
   "icon": "mlflow",
   "tags": [
    "mlops-incumbent",
@@ -1977,6 +2077,7 @@
   "maturity": "production-common",
   "deployment": "saas",
   "url": "https://datadoghq.com",
+  "launched": "2024-06",
   "icon": "datadog",
   "tags": [
    "apm-incumbent",
@@ -1996,6 +2097,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://helicone.ai",
+  "github": "Helicone/helicone",
   "tags": [
    "maintenance-mode",
    "check-before-adopting"
@@ -2014,6 +2116,7 @@
   "model": "oss",
   "maturity": "early",
   "url": "https://github.com/open-telemetry/semantic-conventions-genai",
+  "github": "open-telemetry/semantic-conventions-genai",
   "icon": "opentelemetry",
   "tags": [
    "standard",
@@ -2034,6 +2137,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/explodinggradients/ragas",
+  "github": "vibrantlabsai/ragas",
   "tags": [
    "rag-eval",
    "commoditised"
@@ -2052,6 +2156,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://deepeval.com",
+  "github": "confident-ai/deepeval",
   "tags": [
    "trajectory",
    "ci"
@@ -2069,6 +2174,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://promptfoo.dev",
+  "github": "promptfoo/promptfoo",
   "tags": [
    "red-team",
    "ci"
@@ -2086,6 +2192,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://inspect.aisi.org.uk",
+  "github": "UKGovernmentBEIS/inspect_ai",
   "tags": [
    "safety",
    "trajectory"
@@ -2103,6 +2210,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/openai/evals",
+  "github": "openai/evals",
   "tags": [
    "openai"
   ]
@@ -2119,6 +2227,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://microsoft.github.io/presidio",
+  "github": "microsoft/presidio",
   "tags": [
    "pii",
    "deterministic"
@@ -2137,6 +2246,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/NVIDIA/NeMo-Guardrails",
+  "github": "NVIDIA-NeMo/Guardrails",
   "icon": "nvidia",
   "tags": [
    "dialog-rails"
@@ -2154,6 +2264,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://guardrailsai.com",
+  "github": "guardrails-ai/guardrails",
   "tags": [
    "validation"
   ]
@@ -2170,6 +2281,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://llama.meta.com",
+  "github": "meta-llama/PurpleLlama",
   "icon": "meta",
   "tags": [
    "classifier",
@@ -2189,6 +2301,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://llm-guard.com",
+  "github": "protectai/llm-guard",
   "tags": [
    "scanner"
   ]
@@ -2222,6 +2335,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://azure.microsoft.com",
+  "launched": "2024-03",
   "tags": [
    "managed",
    "evasion-risk"
@@ -2304,6 +2418,7 @@
   "license": "Regulation",
   "model": "commercial",
   "url": "https://artificialintelligenceact.eu",
+  "launched": "2024-08",
   "icon": "europeanunion",
   "tags": [
    "eu",
@@ -2322,6 +2437,7 @@
   "license": "Regulation",
   "model": "commercial",
   "url": "https://artificialintelligenceact.eu",
+  "launched": "2025-11",
   "icon": "europeanunion",
   "tags": [
    "eu",
@@ -2378,6 +2494,8 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://agentskills.io",
+  "github": "agentskills/agentskills",
+  "launched": "2025-12",
   "icon": "claude",
   "emerging": true,
   "emergingWhy": "Published by Anthropic as an open standard in December 2025 and adopted across several agent platforms and coding tools.",
@@ -2401,6 +2519,7 @@
   "maturity": "early",
   "deployment": "both",
   "url": "https://github.com/ag-ui-protocol/ag-ui",
+  "github": "ag-ui-protocol/ag-ui",
   "tags": [
    "agent-ui",
    "streaming"
@@ -2419,6 +2538,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/e2b-dev/E2B",
+  "github": "e2b-dev/E2B",
   "tags": [
    "code-execution",
    "isolation"
@@ -2436,6 +2556,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/daytonaio/daytona",
+  "github": "daytonaio/daytona",
   "tags": [
    "code-execution",
    "isolation",
@@ -2454,6 +2575,8 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/llm-d/llm-d",
+  "github": "llm-d/llm-d",
+  "launched": "2025-05",
   "emerging": true,
   "emergingWhy": "Launched May 21, 2025 by Red Hat with Google Cloud, IBM Research, CoreWeave and NVIDIA; reached 1.0 with 500+ contributors.",
   "emergingSource": "https://redhat.com/en/about/press-releases/red-hat-launches-llm-d-community-powering-distributed-gen-ai-inference-scale",
@@ -2475,6 +2598,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/Arize-ai/openinference",
+  "github": "Arize-ai/openinference",
   "tags": [
    "otel",
    "conventions"
@@ -2492,6 +2616,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://labelstud.io",
+  "github": "HumanSignal/label-studio",
   "tags": [
    "labeling",
    "annotation"
@@ -2508,6 +2633,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://www.cvat.ai",
+  "github": "cvat-ai/cvat",
   "tags": [
    "labeling",
    "vision",
@@ -2590,6 +2716,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://cleanlab.ai",
+  "github": "cleanlab/cleanlab",
   "tags": [
    "data-quality",
    "labels"
@@ -2606,6 +2733,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://greatexpectations.io",
+  "github": "great-expectations/great_expectations",
   "tags": [
    "data-quality",
    "testing"
@@ -2622,6 +2750,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://dvc.org",
+  "github": "treeverse/dvc",
   "icon": "dvc",
   "tags": [
    "versioning",
@@ -2639,6 +2768,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://lakefs.io",
+  "github": "treeverse/lakeFS",
   "tags": [
    "versioning",
    "data-lake"
@@ -2655,6 +2785,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://feast.dev",
+  "github": "feast-dev/feast",
   "tags": [
    "features",
    "mlops"
@@ -2671,6 +2802,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://sdv.dev",
+  "github": "sdv-dev/SDV",
   "tags": [
    "synthetic",
    "tabular"
@@ -2687,6 +2819,8 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/NVIDIA-NeMo/DataDesigner",
+  "github": "NVIDIA-NeMo/DataDesigner",
+  "launched": "2025-11",
   "icon": "nvidia",
   "emerging": true,
   "emergingWhy": "Open sourced by NVIDIA in November 2025 (first PyPI release 2025-11-20), built on Gretel technology and released often since.",
@@ -2707,6 +2841,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/NVIDIA/NeMo-Curator",
+  "github": "NVIDIA-NeMo/Curator",
   "icon": "nvidia",
   "tags": [
    "curation",
@@ -2724,6 +2859,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/huggingface/datatrove",
+  "github": "huggingface/datatrove",
   "icon": "huggingface",
   "tags": [
    "curation",
@@ -2741,6 +2877,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/huggingface/datasets",
+  "github": "huggingface/datasets",
   "icon": "huggingface",
   "tags": [
    "datasets",
@@ -2758,6 +2895,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://www.daft.ai",
+  "github": "Eventual-Inc/Daft",
   "tags": [
    "dataframe",
    "multimodal"
@@ -2774,6 +2912,7 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://cocoindex.io",
+  "github": "cocoindex-io/cocoindex",
   "tags": [
    "etl",
    "indexing"
@@ -2790,6 +2929,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://dagster.io",
+  "github": "dagster-io/dagster",
   "tags": [
    "orchestration",
    "pipelines"
@@ -2874,6 +3014,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://docs.x.ai",
+  "launched": "2024-11",
   "tags": [
    "api",
    "llm"
@@ -2890,6 +3031,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://github.com/deepseek-ai",
+  "github": "deepseek-ai/DeepSeek-V3",
   "icon": "deepseek",
   "tags": [
    "open-weights",
@@ -2907,6 +3049,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://www.llama.com",
+  "github": "meta-llama/llama-models",
   "icon": "meta",
   "tags": [
    "open-weights",
@@ -2924,6 +3067,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://github.com/QwenLM/Qwen3",
+  "github": "QwenLM/Qwen3",
   "icon": "qwen",
   "tags": [
    "open-weights",
@@ -2941,6 +3085,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://ai.google.dev/gemma",
+  "github": "google-deepmind/gemma",
   "icon": "google",
   "tags": [
    "open-weights",
@@ -2958,6 +3103,8 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://openai.com/index/introducing-gpt-oss/",
+  "github": "openai/gpt-oss",
+  "launched": "2025-08",
   "emerging": true,
   "emergingWhy": "Released August 5, 2025 as OpenAI's first open weight LLMs since GPT-2; served by most inference providers and local runtimes.",
   "emergingSource": "https://www.theregister.com/2025/08/05/openai_open_gpt/",
@@ -2977,6 +3124,8 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/MoonshotAI/Kimi-K2",
+  "github": "MoonshotAI/Kimi-K2",
+  "launched": "2025-07",
   "icon": "kimi",
   "emerging": true,
   "emergingWhy": "Released July 2025 with open weights under a modified MIT license, followed by K2 Thinking and K2.5.",
@@ -2997,6 +3146,8 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/zai-org/GLM-4.5",
+  "github": "zai-org/GLM-4.5",
+  "launched": "2025-07",
   "icon": "zdotai",
   "emerging": true,
   "emergingWhy": "GLM-4.5 released July 28, 2025 under MIT, followed by GLM-4.6 and GLM-4.7.",
@@ -3017,6 +3168,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://allenai.org/olmo",
+  "github": "allenai/OLMo",
   "tags": [
    "open-weights",
    "open-data"
@@ -3083,6 +3235,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://modelscope.cn",
+  "github": "modelscope/modelscope",
   "icon": "modelscope",
   "tags": [
    "hub",
@@ -3117,6 +3270,7 @@
   "maturity": "production-common",
   "deployment": "saas",
   "url": "https://ai.azure.com",
+  "launched": "2024-11",
   "tags": [
    "api",
    "managed",
@@ -3134,6 +3288,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://pytorch.org",
+  "github": "pytorch/pytorch",
   "icon": "pytorch",
   "tags": [
    "framework",
@@ -3151,6 +3306,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/jax-ml/jax",
+  "github": "jax-ml/jax",
   "tags": [
    "framework",
    "tpu"
@@ -3167,6 +3323,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/huggingface/transformers",
+  "github": "huggingface/transformers",
   "icon": "huggingface",
   "tags": [
    "models",
@@ -3184,6 +3341,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/huggingface/trl",
+  "github": "huggingface/trl",
   "icon": "huggingface",
   "tags": [
    "post-training",
@@ -3201,6 +3359,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/huggingface/peft",
+  "github": "huggingface/peft",
   "icon": "huggingface",
   "tags": [
    "lora",
@@ -3218,6 +3377,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://unsloth.ai",
+  "github": "unslothai/unsloth",
   "tags": [
    "fine-tuning",
    "lora"
@@ -3234,6 +3394,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://axolotl.ai",
+  "github": "axolotl-ai-cloud/axolotl",
   "tags": [
    "fine-tuning",
    "post-training"
@@ -3250,6 +3411,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/hiyouga/LLaMA-Factory",
+  "github": "hiyouga/LlamaFactory",
   "tags": [
    "fine-tuning",
    "no-code"
@@ -3266,6 +3428,7 @@
   "maturity": "early",
   "deployment": "saas",
   "url": "https://thinkingmachines.ai/tinker",
+  "launched": "2025-10",
   "emerging": true,
   "emergingWhy": "Launched in beta October 2025 and generally available December 12, 2025, adding Kimi K2 Thinking and Qwen3-VL.",
   "emergingSource": "https://siliconangle.com/2025/12/12/thinking-machines-makes-tinker-ai-fine-tuning-service-generally-available/",
@@ -3286,6 +3449,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/verl-project/verl",
+  "github": "verl-project/verl",
   "tags": [
    "rl",
    "post-training"
@@ -3302,6 +3466,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://www.deepspeed.ai",
+  "github": "deepspeedai/DeepSpeed",
   "tags": [
    "distributed",
    "gpu"
@@ -3318,6 +3483,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/NVIDIA/Megatron-LM",
+  "github": "NVIDIA/Megatron-LM",
   "icon": "nvidia",
   "tags": [
    "distributed",
@@ -3335,6 +3501,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://lightning.ai",
+  "github": "Lightning-AI/pytorch-lightning",
   "icon": "lightning",
   "tags": [
    "training",
@@ -3352,6 +3519,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://www.ray.io",
+  "github": "ray-project/ray",
   "icon": "ray",
   "tags": [
    "distributed",
@@ -3386,6 +3554,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/clearml/clearml",
+  "github": "clearml/clearml",
   "tags": [
    "tracking",
    "mlops"
@@ -3402,6 +3571,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://optuna.org",
+  "github": "optuna/optuna",
   "icon": "optuna",
   "tags": [
    "hpo",
@@ -3419,6 +3589,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://auto.gluon.ai",
+  "github": "autogluon/autogluon",
   "tags": [
    "automl",
    "tabular"
@@ -3435,6 +3606,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://www.kubeflow.org",
+  "github": "kubeflow/kubeflow",
   "tags": [
    "kubernetes",
    "mlops"
@@ -3503,6 +3675,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/NVIDIA/TensorRT-LLM",
+  "github": "NVIDIA/TensorRT-LLM",
   "icon": "nvidia",
   "tags": [
    "llm",
@@ -3520,6 +3693,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/ai-dynamo/dynamo",
+  "github": "ai-dynamo/dynamo",
   "icon": "nvidia",
   "tags": [
    "distributed",
@@ -3537,6 +3711,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/triton-inference-server/server",
+  "github": "triton-inference-server/server",
   "icon": "nvidia",
   "tags": [
    "serving",
@@ -3554,6 +3729,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://kserve.github.io/website/",
+  "github": "kserve/kserve",
   "tags": [
    "kubernetes",
    "serving"
@@ -3570,6 +3746,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://bentoml.com",
+  "github": "bentoml/BentoML",
   "icon": "bentoml",
   "tags": [
    "serving",
@@ -3587,6 +3764,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/ggml-org/llama.cpp",
+  "github": "ggml-org/llama.cpp",
   "tags": [
    "local",
    "gguf"
@@ -3603,6 +3781,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://ollama.com",
+  "github": "ollama/ollama",
   "icon": "ollama",
   "tags": [
    "local",
@@ -3637,6 +3816,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/ml-explore/mlx",
+  "github": "ml-explore/mlx",
   "icon": "apple",
   "tags": [
    "apple",
@@ -3654,6 +3834,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://pytorch.org/executorch/",
+  "github": "pytorch/executorch",
   "icon": "pytorch",
   "emerging": true,
   "emergingWhy": "ExecuTorch 1.0 reached GA on October 22, 2025 and powers on-device AI across Meta's apps.",
@@ -3674,6 +3855,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://onnxruntime.ai",
+  "github": "microsoft/onnxruntime",
   "icon": "onnx",
   "tags": [
    "onnx",
@@ -3691,6 +3873,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/openvinotoolkit/openvino",
+  "github": "openvinotoolkit/openvino",
   "icon": "intel",
   "tags": [
    "intel",
@@ -3708,6 +3891,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://ai.google.dev/edge/litert",
+  "github": "google-ai-edge/LiteRT",
   "icon": "google",
   "tags": [
    "mobile",
@@ -3773,6 +3957,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://www.cerebras.ai",
+  "launched": "2024-08",
   "tags": [
    "inference",
    "low-latency"
@@ -3855,6 +4040,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://build.nvidia.com",
+  "launched": "2024-03",
   "icon": "nvidia",
   "tags": [
    "microservices",
@@ -3937,6 +4123,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/Portkey-AI/gateway",
+  "github": "Portkey-AI/gateway",
   "tags": [
    "gateway",
    "routing"
@@ -3953,6 +4140,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://vercel.com/ai-gateway",
+  "launched": "2025-08",
   "icon": "vercel",
   "emerging": true,
   "emergingWhy": "Generally available in August 2025 after running v0 internally; also listed on AWS Marketplace.",
@@ -3991,6 +4179,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://redis.io",
+  "github": "redis/redis",
   "icon": "redis",
   "tags": [
    "vector",
@@ -4009,6 +4198,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://neo4j.com",
+  "github": "neo4j/neo4j",
   "icon": "neo4j",
   "tags": [
    "graph",
@@ -4079,6 +4269,7 @@
   "maturity": "early",
   "deployment": "saas",
   "url": "https://docs.perplexity.ai",
+  "launched": "2025-09",
   "icon": "perplexity",
   "emerging": true,
   "emergingWhy": "Launched September 25, 2025, opening Perplexity's web index to developers as Microsoft retired the Bing search APIs.",
@@ -4100,6 +4291,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://www.sbert.net",
+  "github": "huggingface/sentence-transformers",
   "icon": "huggingface",
   "tags": [
    "embeddings",
@@ -4118,6 +4310,7 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/illuin-tech/colpali",
+  "github": "illuin-tech/colpali",
   "tags": [
    "visual-retrieval",
    "late-interaction"
@@ -4135,6 +4328,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/opendatalab/MinerU",
+  "github": "opendatalab/MinerU",
   "tags": [
    "pdf",
    "parsing",
@@ -4153,6 +4347,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/unclecode/crawl4ai",
+  "github": "unclecode/crawl4ai",
   "tags": [
    "crawler",
    "web"
@@ -4170,6 +4365,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/infiniflow/ragflow",
+  "github": "infiniflow/ragflow",
   "tags": [
    "rag",
    "parsing"
@@ -4187,6 +4383,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/neuml/txtai",
+  "github": "neuml/txtai",
   "tags": [
    "rag",
    "semantic-search"
@@ -4204,6 +4401,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://haystack.deepset.ai",
+  "github": "deepset-ai/haystack",
   "icon": "haystack",
   "tags": [
    "framework",
@@ -4222,6 +4420,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/huggingface/smolagents",
+  "github": "huggingface/smolagents",
   "icon": "huggingface",
   "tags": [
    "framework",
@@ -4240,6 +4439,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://agno.com",
+  "github": "agno-agi/agno",
   "tags": [
    "framework",
    "multi-agent"
@@ -4257,6 +4457,8 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://strandsagents.com",
+  "github": "strands-agents/harness-sdk",
+  "launched": "2025-05",
   "emerging": true,
   "emergingWhy": "Released by AWS in May 2025 (first PyPI release 2025-05-14) and updated at a steady pace since.",
   "emergingSource": "https://pypi.org/project/strands-agents/",
@@ -4277,6 +4479,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://ai-sdk.dev",
+  "github": "vercel/ai",
   "icon": "vercel",
   "tags": [
    "typescript",
@@ -4295,6 +4498,7 @@
   "maturity": "early",
   "deployment": "saas",
   "url": "https://github.com/cloudflare/agents",
+  "github": "cloudflare/agents",
   "icon": "cloudflare",
   "tags": [
    "typescript",
@@ -4313,6 +4517,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/CopilotKit/CopilotKit",
+  "github": "CopilotKit/CopilotKit",
   "tags": [
    "react",
    "agent-ui"
@@ -4329,6 +4534,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://browser-use.com",
+  "github": "browser-use/browser-use",
   "tags": [
    "browser",
    "automation"
@@ -4345,6 +4551,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://stagehand.dev",
+  "github": "browserbase/stagehand",
   "tags": [
    "browser",
    "automation"
@@ -4378,6 +4585,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/microsoft/playwright-mcp",
+  "github": "microsoft/playwright-mcp",
   "tags": [
    "browser",
    "mcp"
@@ -4395,6 +4603,7 @@
   "maturity": "early",
   "deployment": "both",
   "url": "https://github.com/trycua/cua",
+  "github": "trycua/cua",
   "tags": [
    "computer-use",
    "sandbox"
@@ -4412,6 +4621,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://composio.dev",
+  "github": "ComposioHQ/composio",
   "tags": [
    "tools",
    "auth"
@@ -4429,6 +4639,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://gofastmcp.com",
+  "github": "PrefectHQ/fastmcp",
   "tags": [
    "mcp",
    "python"
@@ -4445,6 +4656,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://n8n.io",
+  "github": "n8n-io/n8n",
   "icon": "n8n",
   "tags": [
    "workflows",
@@ -4481,6 +4693,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://aws.amazon.com/bedrock/agentcore/",
+  "launched": "2025-07",
   "emerging": true,
   "emergingWhy": "Generally available October 13, 2025 after a July 2025 preview; AWS reported over 1 million SDK downloads.",
   "emergingSource": "https://aws.amazon.com/about-aws/whats-new/2025/10/amazon-bedrock-agentcore-available",
@@ -4502,6 +4715,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/evidentlyai/evidently",
+  "github": "evidentlyai/evidently",
   "tags": [
    "monitoring",
    "drift"
@@ -4519,6 +4733,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://giskard.ai",
+  "github": "Giskard-AI/giskard-oss",
   "tags": [
    "testing",
    "red-teaming"
@@ -4536,6 +4751,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/EleutherAI/lm-evaluation-harness",
+  "github": "EleutherAI/lm-evaluation-harness",
   "tags": [
    "benchmarks",
    "llm"
@@ -4553,6 +4769,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/stanford-crfm/helm",
+  "github": "stanford-crfm/helm",
   "tags": [
    "benchmarks",
    "research"
@@ -4570,6 +4787,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/huggingface/lighteval",
+  "github": "huggingface/lighteval",
   "icon": "huggingface",
   "tags": [
    "benchmarks",
@@ -4588,6 +4806,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://www.trulens.org",
+  "github": "truera/trulens",
   "tags": [
    "evals",
    "tracing"
@@ -4673,6 +4892,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/traceloop/openllmetry",
+  "github": "traceloop/openllmetry",
   "tags": [
    "opentelemetry",
    "tracing"
@@ -4690,6 +4910,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://pydantic.dev/logfire",
+  "github": "pydantic/logfire",
   "icon": "pydantic",
   "tags": [
    "opentelemetry",
@@ -4708,6 +4929,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://agenta.ai",
+  "github": "Agenta-AI/agenta",
   "tags": [
    "prompts",
    "evals"
@@ -4725,6 +4947,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/NVIDIA/garak",
+  "github": "NVIDIA/garak",
   "icon": "nvidia",
   "tags": [
    "red-teaming",
@@ -4743,6 +4966,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/Azure/PyRIT",
+  "github": "Azure/PyRIT",
   "tags": [
    "red-teaming",
    "security"
@@ -4760,6 +4984,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/protectai/modelscan",
+  "github": "protectai/modelscan",
   "tags": [
    "supply-chain",
    "scanner"
@@ -4794,6 +5019,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://www.cisco.com/site/us/en/products/security/ai-defense/index.html",
+  "launched": "2025-01",
   "icon": "cisco",
   "tags": [
    "security",
@@ -4812,6 +5038,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://www.paloaltonetworks.com",
+  "launched": "2025-04",
   "icon": "paloaltonetworks",
   "tags": [
    "security",
@@ -4830,6 +5057,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/ibm-granite/granite-guardian",
+  "github": "ibm-granite/granite-guardian",
   "tags": [
    "guardrails",
    "classifier"
@@ -4846,6 +5074,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://opacus.ai",
+  "github": "meta-pytorch/opacus",
   "tags": [
    "differential-privacy",
    "pytorch"
@@ -4862,6 +5091,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://opendp.org",
+  "github": "opendp/opendp",
   "tags": [
    "differential-privacy"
   ]
@@ -4877,6 +5107,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://flower.ai",
+  "github": "flwrlabs/flower",
   "icon": "flower",
   "tags": [
    "federated",
@@ -4894,6 +5125,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://fairlearn.org",
+  "github": "fairlearn/fairlearn",
   "tags": [
    "fairness",
    "bias"
@@ -4963,6 +5195,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/google-deepmind/synthid-text",
+  "github": "google-deepmind/synthid-text",
   "icon": "google",
   "tags": [
    "watermarking",
@@ -4981,6 +5214,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://leginfo.legislature.ca.gov/faces/billNavClient.xhtml?bill_id=202520260SB53",
+  "launched": "2025-09",
   "tags": [
    "regulation",
    "frontier"
@@ -4997,6 +5231,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/openai/whisper",
+  "github": "openai/whisper",
   "tags": [
    "asr",
    "speech"
@@ -5013,6 +5248,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/SYSTRAN/faster-whisper",
+  "github": "SYSTRAN/faster-whisper",
   "tags": [
    "asr",
    "speech"
@@ -5079,6 +5315,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://cartesia.ai",
+  "launched": "2024-05",
   "tags": [
    "tts",
    "real-time"
@@ -5095,6 +5332,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://pipecat.ai",
+  "github": "pipecat-ai/pipecat",
   "icon": "pipecat",
   "tags": [
    "voice-agents",
@@ -5112,6 +5350,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/livekit/agents",
+  "github": "livekit/agents",
   "icon": "livekit",
   "tags": [
    "voice-agents",
@@ -5145,6 +5384,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://www.ultralytics.com",
+  "github": "ultralytics/ultralytics",
   "icon": "ultralytics",
   "tags": [
    "detection",
@@ -5162,6 +5402,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://opencv.org",
+  "github": "opencv/opencv",
   "icon": "opencv",
   "tags": [
    "vision",
@@ -5196,6 +5437,8 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/facebookresearch/sam3",
+  "github": "facebookresearch/sam3",
+  "launched": "2025-11",
   "icon": "meta",
   "emerging": true,
   "emergingWhy": "Released by Meta in November 2025 with text-prompted segmentation; SAM 3.1 followed in March 2026.",
@@ -5216,6 +5459,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/PaddlePaddle/PaddleOCR",
+  "github": "PaddlePaddle/PaddleOCR",
   "icon": "paddlepaddle",
   "tags": [
    "ocr",
@@ -5233,6 +5477,8 @@
   "maturity": "early",
   "deployment": "self-host",
   "url": "https://github.com/deepseek-ai/DeepSeek-OCR",
+  "github": "deepseek-ai/DeepSeek-OCR",
+  "launched": "2025-10",
   "icon": "deepseek",
   "emerging": true,
   "emergingWhy": "Released October 20, 2025 and widely adopted for document OCR; DeepSeek-OCR2 followed January 2026.",
@@ -5253,6 +5499,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://docs.mistral.ai",
+  "launched": "2025-03",
   "icon": "mistralai",
   "tags": [
    "ocr",
@@ -5270,6 +5517,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://learn.microsoft.com/azure/ai-services/content-understanding",
+  "launched": "2024-11",
   "tags": [
    "documents",
    "extraction"
@@ -5319,6 +5567,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/huggingface/diffusers",
+  "github": "huggingface/diffusers",
   "icon": "huggingface",
   "tags": [
    "diffusion",
@@ -5336,6 +5585,7 @@
   "maturity": "production-common",
   "deployment": "self-host",
   "url": "https://github.com/comfyanonymous/ComfyUI",
+  "github": "Comfy-Org/ComfyUI",
   "tags": [
    "diffusion",
    "workflows"
@@ -5352,6 +5602,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://bfl.ai",
+  "github": "black-forest-labs/flux",
   "tags": [
    "image-gen",
    "open-weights"
@@ -5400,6 +5651,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://ai.google.dev/gemini-api/docs/veo",
+  "launched": "2025-05",
   "icon": "google",
   "emerging": true,
   "emergingWhy": "Veo 3 launched at Google I/O in May 2025 and Veo 3.1 reached the Gemini API in October 2025; Flow passed 275 million videos.",
@@ -5420,6 +5672,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://ai.google.dev/gemini-api/docs/image-generation",
+  "launched": "2025-08",
   "icon": "googlegemini",
   "emerging": true,
   "emergingWhy": "Gemini 2.5 Flash Image launched August 26, 2025; users edited 200M+ images in its first week.",
@@ -5491,6 +5744,7 @@
   "maturity": "production-common",
   "deployment": "saas",
   "url": "https://docs.claude.com/en/docs/claude-code",
+  "launched": "2025-05",
   "icon": "claude",
   "emerging": true,
   "emergingWhy": "Generally available May 22, 2025 with Claude 4; active users grew over 300% within two months.",
@@ -5512,6 +5766,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://github.com/openai/codex",
+  "github": "openai/codex",
   "emerging": true,
   "emergingWhy": "Codex CLI open sourced April 2025, cloud agent in May 2025, generally available October 6, 2025.",
   "emergingSource": "https://openai.com/index/codex-now-generally-available",
@@ -5532,6 +5787,8 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/google-gemini/gemini-cli",
+  "github": "google-gemini/gemini-cli",
+  "launched": "2025-06",
   "icon": "googlegemini",
   "emerging": true,
   "emergingWhy": "Released June 25, 2025 as an Apache-2.0 terminal agent and updated weekly since.",
@@ -5552,6 +5809,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://kiro.dev",
+  "launched": "2025-07",
   "emerging": true,
   "emergingWhy": "Previewed July 2025 and generally available November 17, 2025 with a CLI and team plans.",
   "emergingSource": "https://kiro.dev/blog/general-availability/",
@@ -5572,6 +5830,7 @@
   "maturity": "early",
   "deployment": "saas",
   "url": "https://antigravity.google",
+  "launched": "2025-11",
   "icon": "google",
   "emerging": true,
   "emergingWhy": "Launched November 18, 2025 alongside Gemini 3 as a free public preview for macOS, Windows and Linux.",
@@ -5593,6 +5852,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://opencode.ai",
+  "github": "anomalyco/opencode",
   "icon": "opencode",
   "tags": [
    "coding",
@@ -5627,6 +5887,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://github.com/cline/cline",
+  "github": "cline/cline",
   "icon": "cline",
   "tags": [
    "coding",
@@ -5644,6 +5905,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://aider.chat",
+  "github": "Aider-AI/aider",
   "tags": [
    "coding",
    "cli"
@@ -5660,6 +5922,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://github.com/OpenHands/OpenHands",
+  "github": "OpenHands/OpenHands",
   "tags": [
    "coding",
    "agents"
@@ -5676,6 +5939,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://devin.ai",
+  "launched": "2024-03",
   "tags": [
    "coding",
    "agents"
@@ -5708,6 +5972,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://bolt.new",
+  "github": "stackblitz/bolt.new",
   "icon": "stackblitz",
   "tags": [
    "no-code",
@@ -5760,6 +6025,7 @@
   "maturity": "production-common",
   "deployment": "both",
   "url": "https://dify.ai",
+  "github": "langgenius/dify",
   "icon": "dify",
   "tags": [
    "low-code",
@@ -5778,6 +6044,7 @@
   "maturity": "production-viable",
   "deployment": "both",
   "url": "https://www.langflow.org",
+  "github": "langflow-ai/langflow",
   "icon": "langflow",
   "tags": [
    "low-code",
@@ -5812,6 +6079,7 @@
   "maturity": "early",
   "deployment": "saas",
   "url": "https://platform.openai.com/docs/guides/agents",
+  "launched": "2025-10",
   "emerging": true,
   "emergingWhy": "Announced at DevDay on October 6, 2025, with a visual Agent Builder and embeddable ChatKit UI.",
   "emergingSource": "https://techcrunch.com/2025/10/06/openai-launches-agentkit-to-help-developers-build-and-ship-ai-agents",
@@ -5865,6 +6133,7 @@
   "maturity": "production-viable",
   "deployment": "self-host",
   "url": "https://marimo.io",
+  "github": "marimo-team/marimo",
   "tags": [
    "notebooks",
    "python"
@@ -5979,6 +6248,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://epoch.ai/benchmarks",
+  "launched": "2024-11",
   "tags": [
    "benchmarks",
    "trends"
@@ -5995,6 +6265,7 @@
   "maturity": "production-common",
   "deployment": "saas",
   "url": "https://www.swebench.com",
+  "github": "SWE-bench/SWE-bench",
   "tags": [
    "coding",
    "benchmark"
@@ -6011,6 +6282,7 @@
   "maturity": "production-viable",
   "deployment": "saas",
   "url": "https://labs.scale.com",
+  "launched": "2024-05",
   "tags": [
    "leaderboard",
    "private-evals"
@@ -6112,6 +6384,4184 @@
   "tags": [
    "github",
    "trending"
+  ]
+ },
+ {
+  "id": "assistant-ui",
+  "name": "assistant-ui",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "React primitives for AI chat: threads, streaming, tool call UIs, attachments",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/assistant-ui/assistant-ui",
+  "github": "assistant-ui/assistant-ui",
+  "launched": "2024-05",
+  "tags": [
+   "react",
+   "chat-ui"
+  ]
+ },
+ {
+  "id": "vercel-ai-elements",
+  "name": "Vercel AI Elements",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "shadcn/ui based React components for AI SDK chat and agent interfaces",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/vercel/ai-elements",
+  "github": "vercel/ai-elements",
+  "launched": "2025-07",
+  "icon": "vercel",
+  "tags": [
+   "react",
+   "ai-sdk",
+   "shadcn",
+   "generative-ui"
+  ]
+ },
+ {
+  "id": "langchain-agent-chat-ui",
+  "name": "LangChain Agent Chat UI",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Next.js chat app for any LangGraph agent, with tool calls and interrupts",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/langchain-ai/agent-chat-ui",
+  "github": "langchain-ai/agent-chat-ui",
+  "icon": "langchain",
+  "tags": [
+   "langgraph",
+   "nextjs"
+  ]
+ },
+ {
+  "id": "chainlit",
+  "name": "Chainlit",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Python framework for chat and agent UIs with step and tool call tracing",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/Chainlit/chainlit",
+  "github": "Chainlit/chainlit",
+  "tags": [
+   "python",
+   "chat-ui"
+  ]
+ },
+ {
+  "id": "gradio",
+  "name": "Gradio",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Python UI library for ML demos with ChatInterface and Hugging Face Spaces hosting",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-common",
+  "deployment": "both",
+  "url": "https://github.com/gradio-app/gradio",
+  "github": "gradio-app/gradio",
+  "icon": "gradio",
+  "tags": [
+   "python",
+   "demos",
+   "chat-ui"
+  ]
+ },
+ {
+  "id": "streamlit",
+  "name": "Streamlit",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Python data app framework with chat_message and chat_input elements",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-common",
+  "deployment": "both",
+  "url": "https://github.com/streamlit/streamlit",
+  "github": "streamlit/streamlit",
+  "icon": "streamlit",
+  "tags": [
+   "python",
+   "data-apps",
+   "chat-ui"
+  ]
+ },
+ {
+  "id": "mesop",
+  "name": "Mesop",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Python UI framework from Google engineers for building AI apps and chat demos",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/mesop-dev/mesop",
+  "github": "mesop-dev/mesop",
+  "tags": [
+   "python",
+   "chat-ui"
+  ]
+ },
+ {
+  "id": "open-webui",
+  "name": "Open WebUI",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Self-hosted chat front end for Ollama and OpenAI compatible APIs, with RAG and tools",
+  "license": "Open WebUI License",
+  "model": "source-available",
+  "maturity": "production-common",
+  "deployment": "self-host",
+  "url": "https://github.com/open-webui/open-webui",
+  "github": "open-webui/open-webui",
+  "launched": "2024-05",
+  "tags": [
+   "self-host",
+   "chat-ui",
+   "ollama"
+  ]
+ },
+ {
+  "id": "librechat",
+  "name": "LibreChat",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Self-hosted multi provider chat app with agents, MCP, code interpreter and auth",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/danny-avila/LibreChat",
+  "github": "danny-avila/LibreChat",
+  "tags": [
+   "self-host",
+   "chat-ui",
+   "mcp"
+  ]
+ },
+ {
+  "id": "lobehub",
+  "name": "LobeHub (LobeChat)",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Chat and agent workspace with plugins, knowledge bases and many model providers",
+  "license": "LobeHub Community License",
+  "model": "source-available",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/lobehub/lobehub",
+  "github": "lobehub/lobehub",
+  "tags": [
+   "chat-ui",
+   "self-host"
+  ]
+ },
+ {
+  "id": "tambo",
+  "name": "Tambo",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Generative UI SDK for React: agents render and update registered components",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/tambo-ai/tambo",
+  "github": "tambo-ai/tambo",
+  "launched": "2025-03",
+  "tags": [
+   "react",
+   "generative-ui"
+  ]
+ },
+ {
+  "id": "thesys-c1",
+  "name": "Thesys C1",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Generative UI API that returns interactive UI specs rendered by a React SDK",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://www.thesys.dev",
+  "launched": "2025-04",
+  "tags": [
+   "generative-ui",
+   "react"
+  ]
+ },
+ {
+  "id": "chatbot-ui",
+  "name": "Chatbot UI",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Open source ChatGPT style web UI for multiple model providers",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "fragile",
+  "deployment": "self-host",
+  "url": "https://github.com/mckaywrigley/chatbot-ui",
+  "github": "mckaywrigley/chatbot-ui",
+  "tags": [
+   "chat-ui",
+   "nextjs"
+  ]
+ },
+ {
+  "id": "nlux",
+  "name": "NLUX",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "React and JavaScript conversational UI components with LLM adapters",
+  "license": "MPL-2.0",
+  "model": "oss",
+  "maturity": "fragile",
+  "deployment": "self-host",
+  "url": "https://github.com/nlkitai/nlux",
+  "github": "nlkitai/nlux",
+  "tags": [
+   "react",
+   "chat-ui"
+  ]
+ },
+ {
+  "id": "deep-chat",
+  "name": "Deep Chat",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Framework agnostic chat web component that connects to many AI APIs",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/OvidijusParsiunas/deep-chat",
+  "github": "OvidijusParsiunas/deep-chat",
+  "tags": [
+   "web-component",
+   "chat-ui"
+  ]
+ },
+ {
+  "id": "openai-chatkit",
+  "name": "OpenAI ChatKit",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Embeddable chat UI for agents built with Agent Builder or a custom backend",
+  "license": "MIT",
+  "model": "hybrid",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/openai/chatkit-js",
+  "github": "openai/chatkit-js",
+  "launched": "2025-10",
+  "tags": [
+   "openai",
+   "embeddable"
+  ]
+ },
+ {
+  "id": "openai-apps-sdk",
+  "name": "OpenAI Apps SDK",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Build apps that render UI inside ChatGPT, built on MCP servers and UI resources",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://developers.openai.com/apps-sdk",
+  "launched": "2025-10",
+  "tags": [
+   "openai",
+   "mcp",
+   "chatgpt",
+   "generative-ui"
+  ]
+ },
+ {
+  "id": "mcp-ui",
+  "name": "MCP-UI",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "SDKs for returning interactive UI resources from MCP servers and rendering them",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/MCP-UI-Org/mcp-ui",
+  "github": "MCP-UI-Org/mcp-ui",
+  "launched": "2025-05",
+  "tags": [
+   "mcp",
+   "generative-ui"
+  ]
+ },
+ {
+  "id": "mcp-apps",
+  "name": "MCP Apps",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "protocols",
+  "summary": "Official MCP extension for interactive HTML UIs rendered in sandboxed iframes",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/modelcontextprotocol/ext-apps",
+  "github": "modelcontextprotocol/ext-apps",
+  "launched": "2025-12",
+  "icon": "modelcontextprotocol",
+  "tags": [
+   "mcp",
+   "agent-ui",
+   "spec",
+   "generative-ui"
+  ]
+ },
+ {
+  "id": "hf-chat-ui",
+  "name": "Hugging Face Chat UI",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "SvelteKit chat app behind HuggingChat, self-hostable with any OpenAI compatible API",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/huggingface/chat-ui",
+  "github": "huggingface/chat-ui",
+  "icon": "huggingface",
+  "tags": [
+   "self-host",
+   "chat-ui"
+  ]
+ },
+ {
+  "id": "anythingllm",
+  "name": "AnythingLLM",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Desktop and Docker app for private chat with documents, agents and MCP tools",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/Mintplex-Labs/anything-llm",
+  "github": "Mintplex-Labs/anything-llm",
+  "tags": [
+   "self-host",
+   "rag",
+   "desktop"
+  ]
+ },
+ {
+  "id": "nextchat",
+  "name": "NextChat",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Lightweight cross platform chat client for many LLM providers",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/ChatGPTNextWeb/NextChat",
+  "github": "ChatGPTNextWeb/NextChat",
+  "tags": [
+   "chat-ui",
+   "desktop"
+  ]
+ },
+ {
+  "id": "prompt-kit",
+  "name": "prompt-kit",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "shadcn/ui style components for chat and agent interfaces",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/ibelick/prompt-kit",
+  "github": "ibelick/prompt-kit",
+  "tags": [
+   "react",
+   "shadcn"
+  ]
+ },
+ {
+  "id": "a2ui",
+  "name": "A2UI",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Generative UI format: agents stream declarative layouts that apps render natively",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/a2ui-project/a2ui",
+  "github": "a2ui-project/a2ui",
+  "icon": "google",
+  "tags": [
+   "generative-ui",
+   "spec"
+  ]
+ },
+ {
+  "id": "vercel-chat-sdk",
+  "name": "Vercel Chat SDK",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "TypeScript SDK for chat bots across Slack, Teams, Discord and more",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/vercel/chat",
+  "github": "vercel/chat",
+  "launched": "2026-01",
+  "icon": "vercel",
+  "tags": [
+   "bots",
+   "typescript"
+  ]
+ },
+ {
+  "id": "llamaindex-workflows",
+  "name": "LlamaIndex Workflows",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Event driven, async workflow engine for agents, split out of LlamaIndex",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/run-llama/workflows-py",
+  "github": "run-llama/workflows-py",
+  "launched": "2025-06",
+  "tags": [
+   "python",
+   "event-driven"
+  ]
+ },
+ {
+  "id": "camel",
+  "name": "CAMEL",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Multi agent framework for role playing agents, simulations and data generation",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/camel-ai/camel",
+  "github": "camel-ai/camel",
+  "tags": [
+   "python",
+   "multi-agent",
+   "research"
+  ]
+ },
+ {
+  "id": "langroid",
+  "name": "Langroid",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Python multi agent framework built on message passing between agents",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/langroid/langroid",
+  "github": "langroid/langroid",
+  "tags": [
+   "python",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "beeai-framework",
+  "name": "BeeAI Framework",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Python and TypeScript agent framework from IBM Research, now under the Linux Foundation",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/i-am-bee/beeai-framework",
+  "github": "i-am-bee/beeai-framework",
+  "tags": [
+   "python",
+   "typescript"
+  ]
+ },
+ {
+  "id": "agentscope",
+  "name": "AgentScope",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Multi agent framework with tools, memory and visual debugging, from Alibaba",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/agentscope-ai/agentscope",
+  "github": "agentscope-ai/agentscope",
+  "launched": "2024-02",
+  "icon": "alibabacloud",
+  "tags": [
+   "python",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "voltagent",
+  "name": "VoltAgent",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "TypeScript agent framework with workflows, memory and a VoltOps console",
+  "license": "MIT",
+  "model": "hybrid",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/VoltAgent/voltagent",
+  "github": "VoltAgent/voltagent",
+  "launched": "2025-04",
+  "tags": [
+   "typescript"
+  ]
+ },
+ {
+  "id": "inngest-agentkit",
+  "name": "Inngest AgentKit",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "TypeScript multi agent networks with routers, state and durable execution on Inngest",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/inngest/agent-kit",
+  "github": "inngest/agent-kit",
+  "launched": "2024-11",
+  "tags": [
+   "typescript",
+   "durable"
+  ]
+ },
+ {
+  "id": "atomic-agents",
+  "name": "Atomic Agents",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Lightweight Python agent framework built on Instructor and Pydantic schemas",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/Eigenwise/atomic-agents",
+  "github": "Eigenwise/atomic-agents",
+  "launched": "2024-06",
+  "tags": [
+   "python",
+   "pydantic"
+  ]
+ },
+ {
+  "id": "metagpt",
+  "name": "MetaGPT",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Multi agent framework that assigns software company roles to LLM agents",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/FoundationAgents/MetaGPT",
+  "github": "FoundationAgents/MetaGPT",
+  "tags": [
+   "python",
+   "multi-agent",
+   "research"
+  ]
+ },
+ {
+  "id": "swarms",
+  "name": "Swarms",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Python framework for orchestrating many agents in swarm topologies",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "fragile",
+  "deployment": "self-host",
+  "url": "https://github.com/kyegomez/swarms",
+  "github": "kyegomez/swarms",
+  "tags": [
+   "python",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "upsonic",
+  "name": "Upsonic",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Python agent framework focused on reliability checks and MCP tools",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/Upsonic/Upsonic",
+  "github": "Upsonic/Upsonic",
+  "tags": [
+   "python"
+  ]
+ },
+ {
+  "id": "rig",
+  "name": "Rig",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Rust library for LLM apps and agents with provider and vector store integrations",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/0xPlaygrounds/rig",
+  "github": "0xPlaygrounds/rig",
+  "icon": "rust",
+  "tags": [
+   "rust"
+  ]
+ },
+ {
+  "id": "spring-ai",
+  "name": "Spring AI",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Spring framework for LLM apps in Java: chat clients, tools, RAG, MCP",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/spring-projects/spring-ai",
+  "github": "spring-projects/spring-ai",
+  "icon": "spring",
+  "tags": [
+   "java",
+   "enterprise"
+  ]
+ },
+ {
+  "id": "genkit",
+  "name": "Genkit",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Open source AI framework from Google for JS, Go and Python with flows and tools",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/genkit-ai/genkit",
+  "github": "genkit-ai/genkit",
+  "tags": [
+   "typescript",
+   "go",
+   "python"
+  ]
+ },
+ {
+  "id": "langgraphjs",
+  "name": "LangGraph.js",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "TypeScript port of LangGraph for stateful, graph based agent workflows",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/langchain-ai/langgraphjs",
+  "github": "langchain-ai/langgraphjs",
+  "launched": "2024-01",
+  "icon": "langchain",
+  "tags": [
+   "typescript",
+   "graph"
+  ]
+ },
+ {
+  "id": "ag2",
+  "name": "AG2",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Community fork of AutoGen 0.2 for conversational multi agent systems",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/ag2ai/ag2",
+  "github": "ag2ai/ag2",
+  "launched": "2024-11",
+  "tags": [
+   "python",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "langchain4j",
+  "name": "LangChain4j",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Java library for LLM apps: AI services, tools, RAG and agents",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/langchain4j/langchain4j",
+  "github": "langchain4j/langchain4j",
+  "tags": [
+   "java"
+  ]
+ },
+ {
+  "id": "koog",
+  "name": "Koog",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Kotlin framework from JetBrains for building agents on the JVM and multiplatform",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/JetBrains/koog",
+  "github": "JetBrains/koog",
+  "icon": "jetbrains",
+  "tags": [
+   "kotlin",
+   "jvm"
+  ]
+ },
+ {
+  "id": "eino",
+  "name": "Eino",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Go framework for LLM apps and agents from ByteDance CloudWeGo",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/cloudwego/eino",
+  "github": "cloudwego/eino",
+  "icon": "go",
+  "tags": [
+   "go"
+  ]
+ },
+ {
+  "id": "langchaingo",
+  "name": "LangChainGo",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Community Go port of LangChain for chains, agents and vector stores",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/tmc/langchaingo",
+  "github": "tmc/langchaingo",
+  "icon": "go",
+  "tags": [
+   "go"
+  ]
+ },
+ {
+  "id": "agency-swarm",
+  "name": "Agency Swarm",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Framework for agent teams with defined roles, built on the OpenAI Agents SDK",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/VRSEN/agency-swarm",
+  "github": "VRSEN/agency-swarm",
+  "launched": "2024-01",
+  "tags": [
+   "python",
+   "multi-agent"
+  ]
+ },
+ {
+  "id": "griptape",
+  "name": "Griptape",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Python framework for agents, pipelines and workflows with memory and tools",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/griptape-ai/griptape",
+  "github": "griptape-ai/griptape",
+  "tags": [
+   "python"
+  ]
+ },
+ {
+  "id": "burr",
+  "name": "Burr",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "State machine framework for agent apps with a tracking UI, an Apache incubator project",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/apache/burr",
+  "github": "apache/burr",
+  "launched": "2024-02",
+  "icon": "apache",
+  "tags": [
+   "python",
+   "state-machine"
+  ]
+ },
+ {
+  "id": "pocketflow",
+  "name": "PocketFlow",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Minimal 100 line Python graph framework for agents and workflows",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/The-Pocket/PocketFlow",
+  "github": "The-Pocket/PocketFlow",
+  "launched": "2025-01",
+  "tags": [
+   "python",
+   "minimal"
+  ]
+ },
+ {
+  "id": "embabel",
+  "name": "Embabel",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "JVM agent framework using goal oriented planning, from the creator of Spring",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/embabel/embabel-agent",
+  "github": "embabel/embabel-agent",
+  "tags": [
+   "java",
+   "kotlin",
+   "planning"
+  ]
+ },
+ {
+  "id": "tanstack-ai",
+  "name": "TanStack AI",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Type safe TypeScript AI SDK with provider adapters, tools and framework bindings",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/TanStack/ai",
+  "github": "TanStack/ai",
+  "launched": "2025-12",
+  "icon": "tanstack",
+  "tags": [
+   "typescript",
+   "react"
+  ]
+ },
+ {
+  "id": "kagent",
+  "name": "kagent",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "agent-platforms",
+  "summary": "Kubernetes native framework for running AI agents, a CNCF project",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/kagent-dev/kagent",
+  "github": "kagent-dev/kagent",
+  "icon": "kubernetes",
+  "tags": [
+   "kubernetes",
+   "cloud-native"
+  ]
+ },
+ {
+  "id": "hermes-agent",
+  "name": "Hermes Agent",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "agent-platforms",
+  "summary": "Self hosted personal agent from Nous Research with skills, memory and messaging",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/NousResearch/hermes-agent",
+  "github": "NousResearch/hermes-agent",
+  "tags": [
+   "personal-agent",
+   "self-host"
+  ]
+ },
+ {
+  "id": "agent-sandbox-k8s",
+  "name": "Agent Sandbox (Kubernetes)",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "sandboxes",
+  "summary": "Kubernetes SIG Apps CRDs for isolated, stateful sandboxes for agent code",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/kubernetes-sigs/agent-sandbox",
+  "github": "kubernetes-sigs/agent-sandbox",
+  "launched": "2025-11",
+  "icon": "kubernetes",
+  "tags": [
+   "kubernetes",
+   "isolation"
+  ]
+ },
+ {
+  "id": "openclaw",
+  "name": "OpenClaw",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "agent-platforms",
+  "summary": "Self hosted personal AI agent that acts across chat apps, files and the OS",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/openclaw/openclaw",
+  "github": "openclaw/openclaw",
+  "launched": "2026-01",
+  "emerging": true,
+  "emergingWhy": "Renamed to OpenClaw and first published on npm on 2026-01-29; among the most starred agent repos of 2026.",
+  "emergingSource": "https://www.npmjs.com/package/openclaw",
+  "tags": [
+   "personal-agent",
+   "self-host"
+  ]
+ },
+ {
+  "id": "github-agentic-workflows",
+  "name": "GitHub Agentic Workflows",
+  "area": "agents",
+  "category": "workflow-automation",
+  "summary": "Markdown defined agent workflows compiled to GitHub Actions, run by coding agents",
+  "license": "MIT",
+  "model": "hybrid",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://github.com/github/gh-aw",
+  "github": "github/gh-aw",
+  "launched": "2026-02",
+  "icon": "github",
+  "emerging": true,
+  "emergingWhy": "Technical preview announced February 13, 2026 by GitHub Next and Microsoft Research; open source gh-aw CLI.",
+  "emergingSource": "https://github.blog/changelog/2026-02-13-github-agentic-workflows-are-now-in-technical-preview/",
+  "tags": [
+   "github-actions",
+   "coding-agents"
+  ]
+ },
+ {
+  "id": "hyperframes",
+  "name": "HyperFrames",
+  "area": "modalities",
+  "category": "image-video-gen",
+  "summary": "Renders HTML, CSS and seekable animations into deterministic MP4 video, built for agents",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/heygen-com/hyperframes",
+  "github": "heygen-com/hyperframes",
+  "launched": "2026-03",
+  "emerging": true,
+  "emergingWhy": "Open sourced by HeyGen with first npm release 2026-03-23; one of the most starred agent media tools of 2026.",
+  "emergingSource": "https://www.npmjs.com/package/hyperframes",
+  "tags": [
+   "video",
+   "agents"
+  ]
+ },
+ {
+  "id": "tokenspeed",
+  "name": "TokenSpeed",
+  "area": "inference",
+  "category": "serving-engines",
+  "summary": "LLM inference engine tuned for agentic workloads, from the LightSeek Foundation",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/lightseekorg/tokenspeed",
+  "github": "lightseekorg/tokenspeed",
+  "launched": "2026-05",
+  "emerging": true,
+  "emergingWhy": "Announced May 2026 as a preview engine; first PyPI release 2026-07-24; its MLA kernel was reported adopted by vLLM.",
+  "emergingSource": "https://kalinga.ai/tokenspeed-llm-inference-engine/",
+  "tags": [
+   "serving",
+   "agentic"
+  ]
+ },
+ {
+  "id": "vercel-eve",
+  "name": "Vercel eve",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "TypeScript agent framework where each agent is a directory compiled into a service",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/vercel/eve",
+  "github": "vercel/eve",
+  "launched": "2026-06",
+  "icon": "vercel",
+  "emerging": true,
+  "emergingWhy": "Open sourced by Vercel at Ship London on June 17, 2026 in public preview; Vercel runs 100+ internal agents on it.",
+  "emergingSource": "https://www.infoq.com/news/2026/06/vercel-eve-agents/",
+  "tags": [
+   "typescript",
+   "durable"
+  ]
+ },
+ {
+  "id": "openai-sites",
+  "name": "OpenAI Sites",
+  "area": "builders",
+  "category": "app-builders",
+  "summary": "Codex plugin that builds and deploys OpenAI hosted websites, web apps and games",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://developers.openai.com/codex/sites",
+  "launched": "2026-06",
+  "emerging": true,
+  "emergingWhy": "Previewed June 2, 2026 for Business and Enterprise; OpenAI reported 5 million Sites built in three months.",
+  "emergingSource": "https://runtimewire.com/article/openai-chatgpt-sites-5-million-three-months",
+  "tags": [
+   "openai",
+   "codex",
+   "hosting"
+  ]
+ },
+ {
+  "id": "unlimited-ocr",
+  "name": "Unlimited OCR",
+  "area": "modalities",
+  "category": "document-ai",
+  "summary": "Baidu OCR model for one shot parsing of very long documents, a DeepSeek-OCR successor",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/baidu/Unlimited-OCR",
+  "github": "baidu/Unlimited-OCR",
+  "launched": "2026-06",
+  "emerging": true,
+  "emergingWhy": "Released June 22, 2026; Unlimited OCR 2 with unbounded parsing followed October 27, 2026.",
+  "emergingSource": "https://github.com/baidu/Unlimited-OCR",
+  "tags": [
+   "ocr",
+   "long-document"
+  ]
+ },
+ {
+  "id": "deepseek-harness",
+  "name": "DeepSeek Harness",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "frameworks",
+  "summary": "Plugin based agent harness for coding agents around DeepSeek models, with a web UI",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/deepseek-ai/deepseek-harness",
+  "github": "deepseek-ai/deepseek-harness",
+  "launched": "2026-08",
+  "icon": "deepseek",
+  "emerging": true,
+  "emergingWhy": "Open sourced August 13, 2026 alongside DeepSeek V4-Pro; its npm plugin packages see millions of monthly downloads.",
+  "emergingSource": "https://www.infoq.com/news/2026/08/deep-seek-harness",
+  "tags": [
+   "coding-agents",
+   "plugins"
+  ]
+ },
+ {
+  "id": "openai-agents-api",
+  "name": "OpenAI Agents API",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "agent-platforms",
+  "summary": "Managed API that runs the Codex harness with hosted sandboxes for long running agents",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://openai.com/index/introducing-the-agents-api/",
+  "launched": "2026-09",
+  "emerging": true,
+  "emergingWhy": "Public beta September 10, 2026; computer use via hosted browsers added at DevDay on September 29, 2026.",
+  "emergingSource": "https://www.infoworld.com/article/4221163/openai-launches-managed-agents-api-to-simplify-enterprise-ai-agent-development.html",
+  "tags": [
+   "openai",
+   "managed",
+   "hosted-sandbox"
+  ]
+ },
+ {
+  "id": "cursor-agent-sdk",
+  "name": "Cursor Agent SDK",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "agent-platforms",
+  "summary": "Define, test and deploy agents as code on the Cursor agent harness",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://cursor.com/docs/agent-sdk",
+  "icon": "cursor",
+  "emerging": true,
+  "emergingWhy": "First npm release (as @cursor/bdk) 2026-09-22; general availability reported October 20, 2026.",
+  "emergingSource": "https://cursor.com/blog/agent-sdk",
+  "tags": [
+   "coding-agents",
+   "typescript"
+  ]
+ },
+ {
+  "id": "pi-coding-agent",
+  "name": "Pi",
+  "area": "builders",
+  "category": "coding-assistants",
+  "summary": "Minimal, extensible terminal coding agent and agent toolkit from Earendil",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/earendil-works/pi",
+  "github": "earendil-works/pi",
+  "launched": "2026-10",
+  "emerging": true,
+  "emergingWhy": "Pi 1.0, the first stable release, shipped October 1, 2026 with native MCP and the Pi Durable runtime.",
+  "emergingSource": "https://alternativeto.net/news/2026/10/pi-1-0-brings-native-mcp-support-and-pi-durable-for-long-running-crash-resistant-ai-agents/",
+  "tags": [
+   "terminal",
+   "harness"
+  ]
+ },
+ {
+  "id": "reflection-beam",
+  "name": "Reflection Beam",
+  "area": "models",
+  "category": "open-weights",
+  "summary": "501B MoE open weight reasoning model from Reflection AI, 23B active, 1M context",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://reflection.ai/blog/beam-is-available",
+  "launched": "2026-10",
+  "emerging": true,
+  "emergingWhy": "Weights published on Hugging Face under Apache 2.0 on October 16, 2026, with day 0 hosting from Baseten.",
+  "emergingSource": "https://reflection.ai/blog/beam-is-available",
+  "tags": [
+   "open-weights",
+   "moe"
+  ]
+ },
+ {
+  "id": "nemotron-transcribe",
+  "name": "NVIDIA Nemotron 3.5 Transcribe",
+  "area": "modalities",
+  "category": "speech",
+  "summary": "Open weight speech LLM for transcription in 40 languages, diarization and translation",
+  "license": "OpenMDW-1.1",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://research.nvidia.com/labs/nemotron/NVIDIA-Nemotron-3.5-Transcribe/",
+  "launched": "2026-10",
+  "icon": "nvidia",
+  "emerging": true,
+  "emergingWhy": "Released October 28, 2026 as open weights; topped the Hugging Face English ASR leaderboard at launch.",
+  "emergingSource": "https://techcrunch.com/2026/10/28/voice-ai-in-vogue-nvidia-releases-new-open-transcription-model/",
+  "tags": [
+   "asr",
+   "open-weights"
+  ]
+ },
+ {
+  "id": "voxtral-3",
+  "name": "Mistral Voxtral 3",
+  "area": "modalities",
+  "category": "speech",
+  "summary": "Mistral transcription and TTS models plus a voice agent SDK built on LiveKit",
+  "license": "Proprietary (preview)",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://mistral.ai/news/voxtral-3/",
+  "launched": "2026-10",
+  "icon": "mistralai",
+  "emerging": true,
+  "emergingWhy": "Launched October 20, 2026 in public preview on the Mistral API with three STT models and one TTS model.",
+  "emergingSource": "https://www.marktechpost.com/2026/10/20/mistral-voxtral-3-speech-models-voice-agent-sdk/",
+  "tags": [
+   "asr",
+   "tts",
+   "voice-agents"
+  ]
+ },
+ {
+  "id": "kling",
+  "name": "Kling AI",
+  "area": "modalities",
+  "category": "image-video-gen",
+  "summary": "Kuaishou video generation models; Kling 4.0 does 30 second takes with keyframe control",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://klingai.com",
+  "icon": "kuaishou",
+  "emerging": true,
+  "emergingWhy": "Kling 4.0 announced September 28, 2026 and officially launched October 15, 2026.",
+  "emergingSource": "https://letsdatascience.com/news/kling-ai-opens-kling-40-to-all-users-d9dc6422",
+  "tags": [
+   "video",
+   "api"
+  ]
+ },
+ {
+  "id": "mcp-tasks",
+  "name": "MCP Tasks extension",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "protocols",
+  "summary": "MCP extension for long running, pollable tool calls, split from core in 2026-07-28",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/modelcontextprotocol/ext-tasks",
+  "github": "modelcontextprotocol/ext-tasks",
+  "launched": "2026-07",
+  "icon": "modelcontextprotocol",
+  "emerging": true,
+  "emergingWhy": "Moved into a versioned extension with the MCP 2026-07-28 specification; SDK package published September 2026.",
+  "emergingSource": "https://blog.modelcontextprotocol.io/posts/2026-07-28/",
+  "tags": [
+   "mcp",
+   "spec",
+   "async"
+  ]
+ },
+ {
+  "id": "california-sb-942",
+  "name": "California AI Transparency Act (SB 942)",
+  "area": "governance",
+  "layer": "governance",
+  "category": "regulation",
+  "summary": "Requires large GenAI providers to offer AI detection tools and provenance disclosures",
+  "license": "Regulation",
+  "model": "commercial",
+  "url": "https://www.morganlewis.com/ja/pubs/2026/08/new-california-ai-disclosure-rules-become-operative",
+  "launched": "2026-08",
+  "emerging": true,
+  "emergingWhy": "Became operative August 2, 2026 after AB 853 moved the date from January 1, 2026.",
+  "emergingSource": "https://www.morganlewis.com/ja/pubs/2026/08/new-california-ai-disclosure-rules-become-operative",
+  "tags": [
+   "us-state",
+   "provenance",
+   "california"
+  ]
+ },
+ {
+  "id": "connecticut-cart-act",
+  "name": "Connecticut CART Act (SB 5)",
+  "area": "governance",
+  "layer": "governance",
+  "category": "regulation",
+  "summary": "Connecticut AI law: provenance data, frontier whistleblower protection, AEDT duties",
+  "license": "Regulation",
+  "model": "commercial",
+  "url": "https://ropesgray.com/en/insights/alerts/2026/06/connecticut-enacts-sweeping-ai-law-covering-employment-healthcare-and-online-safety",
+  "launched": "2026-10",
+  "emerging": true,
+  "emergingWhy": "Signed June 2026 as Public Act 26-15; first obligations took effect October 1, 2026, with more through 2028.",
+  "emergingSource": "https://www.davispolk.com/insights/client-update/connecticut-enacts-sweeping-ai-legislation-addressing-multiple-ai",
+  "tags": [
+   "us-state",
+   "connecticut"
+  ]
+ },
+ {
+  "id": "nvidia-skillspector",
+  "name": "NVIDIA SkillSpector",
+  "area": "governance",
+  "layer": "governance",
+  "category": "ai-security",
+  "summary": "Scanner for agent skills that flags prompt injection, exfiltration and supply chain risk",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/NVIDIA/SkillSpector",
+  "github": "NVIDIA/SkillSpector",
+  "icon": "nvidia",
+  "tags": [
+   "agent-skills",
+   "scanner"
+  ]
+ },
+ {
+  "id": "orca-agents",
+  "name": "Orca",
+  "area": "builders",
+  "category": "coding-assistants",
+  "summary": "Desktop and mobile workspace for running fleets of coding agents in parallel worktrees",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/stablyai/orca",
+  "github": "stablyai/orca",
+  "tags": [
+   "coding-agents",
+   "parallel"
+  ]
+ },
+ {
+  "id": "json-render",
+  "name": "json-render",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Vercel Labs generative UI framework: models emit JSON specs limited to your components",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/vercel-labs/json-render",
+  "github": "vercel-labs/json-render",
+  "launched": "2026-01",
+  "icon": "vercel",
+  "tags": [
+   "generative-ui",
+   "react"
+  ]
+ },
+ {
+  "id": "hashbrown",
+  "name": "Hashbrown",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Framework for browser side agents and generative UI in Angular and React",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/liveloveapp/hashbrown",
+  "github": "liveloveapp/hashbrown",
+  "launched": "2025-05",
+  "tags": [
+   "generative-ui",
+   "angular",
+   "react"
+  ]
+ },
+ {
+  "id": "thesys-openui",
+  "name": "Thesys OpenUI",
+  "area": "builders",
+  "category": "agent-ui",
+  "summary": "Open generative UI standard and React component library from Thesys, formerly Crayon",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/thesysdev/openui",
+  "github": "thesysdev/openui",
+  "launched": "2025-02",
+  "tags": [
+   "generative-ui",
+   "react"
+  ]
+ },
+ {
+  "id": "tavus-cvi",
+  "name": "Tavus CVI",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Real-time conversational video agents with AI replicas over WebRTC",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://www.tavus.io/cvi",
+  "launched": "2024-08",
+  "tags": [
+   "avatars",
+   "webrtc",
+   "api"
+  ]
+ },
+ {
+  "id": "heygen-liveavatar",
+  "name": "HeyGen LiveAvatar",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Real-time interactive avatar API and SDK; successor to HeyGen Interactive Avatar",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://help.heygen.com/en/articles/12758516-introducing-liveavatar",
+  "launched": "2025-11",
+  "emerging": true,
+  "emergingWhy": "Launched Nov 2025 as the production version of HeyGen Interactive Avatar, whose SDK sunset in March 2026.",
+  "emergingSource": "https://help.heygen.com/en/articles/12758516-introducing-liveavatar",
+  "tags": [
+   "avatars",
+   "realtime",
+   "sdk"
+  ]
+ },
+ {
+  "id": "synthesia-interactive-avatar",
+  "name": "Synthesia Interactive Avatar API",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Streams a real-time lip-synced Synthesia avatar into web products; LiveKit plugin",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://www.synthesia.io/post/interactive-avatar-api-real-time-avatars",
+  "tags": [
+   "avatars",
+   "enterprise",
+   "livekit"
+  ]
+ },
+ {
+  "id": "d-id-agents",
+  "name": "D-ID Agents",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "LLM-backed avatar agents with knowledge base, streamed over WebRTC with a JS SDK",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://docs.d-id.com/docs/realtime-overview",
+  "tags": [
+   "avatars",
+   "webrtc",
+   "sdk"
+  ]
+ },
+ {
+  "id": "hedra-live-avatars",
+  "name": "Hedra Live Avatars",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Real-time talking avatars from one image, delivered through LiveKit Agents",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://www.hedra.com/docs/pages/realtime-avatar/about",
+  "launched": "2025-07",
+  "emerging": true,
+  "emergingWhy": "Released July 2025 with LiveKit at about 0.05 USD per minute; LiveKit plugin ships updates through 2026.",
+  "emergingSource": "https://mpost.io/hedra-launches-live-avatars-with-livekit-delivering-real-time-ai-characters-at-ultra-low-latency-and-cost/",
+  "tags": [
+   "avatars",
+   "livekit",
+   "realtime"
+  ]
+ },
+ {
+  "id": "simli",
+  "name": "Simli",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Low-latency audio-to-video lip-sync avatar API over WebRTC; Pipecat and LiveKit plugins",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://docs.simli.com/introduction",
+  "tags": [
+   "avatars",
+   "lip-sync",
+   "webrtc"
+  ]
+ },
+ {
+  "id": "bithuman",
+  "name": "bitHuman",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Avatar SDK that animates a portrait in real time, including CPU-only and on-device",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://bithuman.ai",
+  "tags": [
+   "avatars",
+   "on-device",
+   "sdk"
+  ]
+ },
+ {
+  "id": "anam",
+  "name": "Anam",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Real-time AI personas on Cara avatar models with JS SDK, LLM routing and RAG",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://anam.ai",
+  "tags": [
+   "avatars",
+   "personas",
+   "webrtc"
+  ]
+ },
+ {
+  "id": "beyond-presence",
+  "name": "Beyond Presence",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Real-time video agents and speech-to-video avatar API",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://docs.bey.dev",
+  "tags": [
+   "avatars",
+   "speech-to-video",
+   "livekit"
+  ]
+ },
+ {
+  "id": "lemonslice",
+  "name": "LemonSlice",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Audio-in, video-out real-time avatar API from a single image",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://lemonslice.com/avatar-api",
+  "launched": "2025-12",
+  "emerging": true,
+  "emergingWhy": "Lemon Slice 2 launched Dec 2025 with a 10.5M USD seed; integrations with LiveKit, Daily, Pipecat and Agora.",
+  "emergingSource": "https://betanews.com/2025/12/24/lemon-slice-2-turns-any-single-image-into-a-real-time-talking-ai-avatar/",
+  "tags": [
+   "avatars",
+   "single-image",
+   "webrtc"
+  ]
+ },
+ {
+  "id": "akool-streaming-avatar",
+  "name": "Akool Streaming Avatar",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Streaming avatar API and JS SDK over Agora, LiveKit or TRTC with knowledge base",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://docs.akool.com/implementation-guide/streaming-avatar",
+  "tags": [
+   "avatars",
+   "streaming",
+   "sdk"
+  ]
+ },
+ {
+  "id": "liveportrait",
+  "name": "LivePortrait",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Open portrait animation model that drives a still face from video or motion",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/KwaiVGI/LivePortrait",
+  "github": "KwaiVGI/LivePortrait",
+  "tags": [
+   "open-source",
+   "portrait-animation"
+  ]
+ },
+ {
+  "id": "musetalk",
+  "name": "MuseTalk",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Open real-time audio-driven lip-sync model from Tencent Music",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/TMElyralab/MuseTalk",
+  "github": "TMElyralab/MuseTalk",
+  "tags": [
+   "open-source",
+   "lip-sync"
+  ]
+ },
+ {
+  "id": "latentsync",
+  "name": "LatentSync",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "ByteDance open lip-sync model using audio-conditioned latent diffusion",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/bytedance/LatentSync",
+  "github": "bytedance/LatentSync",
+  "icon": "bytedance",
+  "tags": [
+   "open-source",
+   "lip-sync"
+  ]
+ },
+ {
+  "id": "echomimic-v2",
+  "name": "EchoMimic V2",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Ant Group open audio-driven half-body human animation model",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/antgroup/echomimic_v2",
+  "github": "antgroup/echomimic_v2",
+  "tags": [
+   "open-source",
+   "human-animation"
+  ]
+ },
+ {
+  "id": "duix-avatar",
+  "name": "Duix Avatar",
+  "area": "modalities",
+  "category": "avatars-video-agents",
+  "summary": "Toolkit for offline digital human video cloning and synthesis",
+  "license": "Duix Community License",
+  "model": "source-available",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/duixcom/Duix-Avatar",
+  "github": "duixcom/Duix-Avatar",
+  "tags": [
+   "digital-human",
+   "offline"
+  ]
+ },
+ {
+  "id": "openai-realtime-api",
+  "name": "OpenAI Realtime API",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Speech-to-speech gpt-realtime models over WebRTC, WebSocket or SIP with tools",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-common",
+  "deployment": "saas",
+  "url": "https://openai.com/index/introducing-gpt-realtime/",
+  "launched": "2025-08",
+  "emerging": true,
+  "emergingWhy": "Realtime API went GA with gpt-realtime on 28 Aug 2025, adding SIP, MCP and image input.",
+  "emergingSource": "https://openai.com/index/introducing-gpt-realtime/",
+  "tags": [
+   "speech-to-speech",
+   "webrtc",
+   "sip"
+  ]
+ },
+ {
+  "id": "gemini-live-api",
+  "name": "Gemini Live API",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Low-latency bidirectional voice and video sessions with native-audio Gemini models",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://cloud.google.com/vertex-ai/generative-ai/docs/live-api",
+  "launched": "2025-12",
+  "icon": "googlegemini",
+  "emerging": true,
+  "emergingWhy": "GA on Vertex AI in Dec 2025 with the Gemini 2.5 Flash native audio model.",
+  "emergingSource": "https://cloud.google.com/blog/products/ai-machine-learning/gemini-live-api-available-on-vertex-ai",
+  "tags": [
+   "speech-to-speech",
+   "multimodal",
+   "websocket"
+  ]
+ },
+ {
+  "id": "azure-voice-live",
+  "name": "Azure Voice Live API",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Unified Azure speech-to-speech API combining STT, generative models and TTS",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://learn.microsoft.com/en-us/azure/ai-services/speech-service/voice-live-faq",
+  "launched": "2025-10",
+  "tags": [
+   "speech-to-speech",
+   "azure"
+  ]
+ },
+ {
+  "id": "amazon-nova-sonic",
+  "name": "Amazon Nova Sonic",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Bedrock speech-to-speech models with a bidirectional streaming API",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://aws.amazon.com/about-aws/whats-new/2025/04/amazon-nova-sonic-speech-to-speech-conversations-bedrock",
+  "launched": "2025-04",
+  "tags": [
+   "speech-to-speech",
+   "bedrock"
+  ]
+ },
+ {
+  "id": "xai-grok-voice-agent-api",
+  "name": "xAI Grok Voice Agent API",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Realtime voice agent API compatible with the OpenAI Realtime spec",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://x.ai/news/grok-voice-agent-api",
+  "launched": "2025-12",
+  "emerging": true,
+  "emergingWhy": "Launched 17 Dec 2025 with OpenAI Realtime compatibility and a LiveKit plugin; newer voice models followed in 2026.",
+  "emergingSource": "https://x.ai/news/grok-voice-agent-api",
+  "tags": [
+   "speech-to-speech",
+   "realtime"
+  ]
+ },
+ {
+  "id": "elevenlabs-agents",
+  "name": "ElevenLabs Agents",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Platform to build, test and monitor voice agents across phone, web and apps",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-common",
+  "deployment": "saas",
+  "url": "https://elevenlabs.io/blog/introducing-elevenlabs-agents",
+  "icon": "elevenlabs",
+  "tags": [
+   "voice-agents",
+   "telephony"
+  ]
+ },
+ {
+  "id": "deepgram-voice-agent-api",
+  "name": "Deepgram Voice Agent API",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Single voice-to-voice API combining Nova STT, Aura TTS and LLM orchestration",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://deepgram.com/learn/voice-agent-api-generally-available",
+  "launched": "2025-06",
+  "icon": "deepgram",
+  "emerging": true,
+  "emergingWhy": "GA on 16 June 2025 at 4.50 USD per hour with bring-your-own LLM and TTS; partners include Twilio.",
+  "emergingSource": "https://deepgram.com/learn/voice-agent-api-generally-available",
+  "tags": [
+   "voice-agents",
+   "api"
+  ]
+ },
+ {
+  "id": "hume-evi",
+  "name": "Hume EVI",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Empathic speech-to-speech interface over WebSocket with bring-your-own LLM",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://dev.hume.ai/docs/speech-to-speech-evi/overview",
+  "tags": [
+   "speech-to-speech",
+   "emotion"
+  ]
+ },
+ {
+  "id": "retell-ai",
+  "name": "Retell AI",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Platform and API for building and running phone voice agents",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-common",
+  "deployment": "saas",
+  "url": "https://www.retellai.com",
+  "tags": [
+   "voice-agents",
+   "telephony"
+  ]
+ },
+ {
+  "id": "bland-ai",
+  "name": "Bland AI",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Enterprise phone agent platform with its own telephony, STT, LLM and TTS stack",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://www.bland.ai",
+  "tags": [
+   "voice-agents",
+   "telephony"
+  ]
+ },
+ {
+  "id": "daily",
+  "name": "Daily",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "WebRTC infrastructure and SDKs used to transport realtime voice agents",
+  "license": "BSD-2-Clause (SDK)",
+  "model": "hybrid",
+  "maturity": "production-common",
+  "deployment": "saas",
+  "url": "https://www.daily.co",
+  "tags": [
+   "webrtc",
+   "transport"
+  ]
+ },
+ {
+  "id": "ultravox",
+  "name": "Ultravox",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Open speech-native LLM from Fixie plus a hosted realtime voice platform",
+  "license": "MIT",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/fixie-ai/ultravox",
+  "github": "fixie-ai/ultravox",
+  "tags": [
+   "speech-llm",
+   "open-weights"
+  ]
+ },
+ {
+  "id": "agora-conversational-ai",
+  "name": "Agora Conversational AI Engine",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Voice agent engine on Agora's RTC network with pluggable LLM and TTS",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://www.agora.io/en/blog/revolutionizing-human-ai-voice-interaction",
+  "launched": "2025-03",
+  "icon": "agora",
+  "tags": [
+   "voice-agents",
+   "rtc"
+  ]
+ },
+ {
+  "id": "speechmatics-flow",
+  "name": "Speechmatics Flow",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Voice agent API combining Speechmatics STT, pluggable LLMs and TTS",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://docs.speechmatics.com/flow-api-ref",
+  "launched": "2024-07",
+  "tags": [
+   "voice-agents",
+   "on-prem"
+  ]
+ },
+ {
+  "id": "layercode",
+  "name": "Layercode",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Edge-hosted voice layer for agents: STT, TTS and turn taking, your own backend",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://layercode.com",
+  "tags": [
+   "voice-agents",
+   "edge"
+  ]
+ },
+ {
+  "id": "twilio-conversationrelay",
+  "name": "Twilio ConversationRelay",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Bridges phone calls to your LLM over WebSocket with managed STT and TTS",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://www.twilio.com/en-us/blog/conversationrelay-generally-available",
+  "launched": "2025-05",
+  "tags": [
+   "telephony",
+   "voice-agents"
+  ]
+ },
+ {
+  "id": "jambonz",
+  "name": "jambonz",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Open-source voice gateway and CPaaS connecting SIP telephony to voice AI",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/jambonz/jambonz-feature-server",
+  "github": "jambonz/jambonz-feature-server",
+  "tags": [
+   "sip",
+   "telephony",
+   "open-source"
+  ]
+ },
+ {
+  "id": "ten-framework",
+  "name": "TEN Framework",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Open framework for real-time multimodal voice agents with VAD and turn detection",
+  "license": "Apache-2.0 (with extra terms)",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/TEN-framework/ten-framework",
+  "github": "TEN-framework/ten-framework",
+  "tags": [
+   "open-source",
+   "voice-agents"
+  ]
+ },
+ {
+  "id": "kyutai-unmute",
+  "name": "Kyutai Unmute",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Wraps any text LLM with Kyutai streaming STT and TTS for low-latency voice chat",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/kyutai-labs/unmute",
+  "github": "kyutai-labs/unmute",
+  "launched": "2025-07",
+  "tags": [
+   "open-source",
+   "speech"
+  ]
+ },
+ {
+  "id": "fastrtc",
+  "name": "FastRTC",
+  "area": "modalities",
+  "category": "realtime-voice",
+  "summary": "Python library that turns a function into a realtime audio or video WebRTC stream",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/gradio-app/fastrtc",
+  "github": "gradio-app/fastrtc",
+  "launched": "2025-01",
+  "tags": [
+   "webrtc",
+   "python"
+  ]
+ },
+ {
+  "id": "opencompass",
+  "name": "OpenCompass",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "LLM evaluation platform with a large dataset library and distributed runner",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/open-compass/opencompass",
+  "github": "open-compass/opencompass",
+  "tags": [
+   "harness",
+   "llm-eval"
+  ]
+ },
+ {
+  "id": "tau2-bench",
+  "name": "tau2-bench",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Dual-control conversational agent benchmark across airline, retail and telecom",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/sierra-research/tau2-bench",
+  "github": "sierra-research/tau2-bench",
+  "launched": "2025-06",
+  "emerging": true,
+  "emergingWhy": "Released June 2025 (arXiv 2506.07982) as the tau-bench successor; package releases continue into Nov 2026.",
+  "emergingSource": "https://github.com/sierra-research/tau2-bench",
+  "tags": [
+   "agents",
+   "tool-use"
+  ]
+ },
+ {
+  "id": "harbor",
+  "name": "Harbor (Terminal-Bench 2.0)",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Container harness that runs Terminal-Bench 2.0 and other agent evals at scale",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://www.tbench.ai/news/announcement-2-0",
+  "github": "laude-institute/harbor",
+  "launched": "2025-11",
+  "emerging": true,
+  "emergingWhy": "Terminal-Bench 2.0 and Harbor launched 7 Nov 2025; Harbor is the official TB2 harness with frequent releases.",
+  "emergingSource": "https://www.tbench.ai/news/announcement-2-0",
+  "tags": [
+   "agents",
+   "terminal",
+   "harness"
+  ]
+ },
+ {
+  "id": "swe-bench-pro",
+  "name": "SWE-Bench Pro",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Scale AI long-horizon software engineering benchmark with public and held-out sets",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://scaleapi.github.io/SWE-bench_Pro-os",
+  "github": "scaleapi/SWE-bench_Pro-os",
+  "launched": "2025-09",
+  "emerging": true,
+  "emergingWhy": "Released Sept 2025 (arXiv 2509.16941) as a harder, contamination-resistant SWE-bench variant.",
+  "emergingSource": "https://labs.scale.com/papers/swe_bench_pro",
+  "tags": [
+   "coding",
+   "agents"
+  ]
+ },
+ {
+  "id": "webarena",
+  "name": "WebArena",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Self-hostable web environments and tasks for evaluating autonomous web agents",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/web-arena-x/webarena",
+  "github": "web-arena-x/webarena",
+  "tags": [
+   "web-agents",
+   "environment"
+  ]
+ },
+ {
+  "id": "osworld",
+  "name": "OSWorld",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Real desktop OS benchmark for multimodal computer-use agents",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/xlang-ai/OSWorld",
+  "github": "xlang-ai/OSWorld",
+  "tags": [
+   "computer-use",
+   "environment"
+  ]
+ },
+ {
+  "id": "agentbench",
+  "name": "AgentBench",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Multi-environment benchmark for LLMs acting as agents (OS, DB, web, games)",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/THUDM/AgentBench",
+  "github": "THUDM/AgentBench",
+  "tags": [
+   "agents"
+  ]
+ },
+ {
+  "id": "mle-bench",
+  "name": "MLE-bench",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "OpenAI benchmark of Kaggle competitions for ML engineering agents",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/openai/mle-bench",
+  "github": "openai/mle-bench",
+  "tags": [
+   "agents",
+   "ml-engineering"
+  ]
+ },
+ {
+  "id": "livecodebench",
+  "name": "LiveCodeBench",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Contamination-aware code benchmark that keeps adding new contest problems",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/LiveCodeBench/LiveCodeBench",
+  "github": "LiveCodeBench/LiveCodeBench",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "bfcl",
+  "name": "Berkeley Function Calling Leaderboard (BFCL)",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Harness and data for evaluating LLM function and tool calling",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/ShishirPatil/gorilla",
+  "github": "ShishirPatil/gorilla",
+  "tags": [
+   "tool-use",
+   "function-calling"
+  ]
+ },
+ {
+  "id": "evalplus",
+  "name": "EvalPlus",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Stricter HumanEval+ and MBPP+ code benchmarks with expanded test cases",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/evalplus/evalplus",
+  "github": "evalplus/evalplus",
+  "tags": [
+   "coding"
+  ]
+ },
+ {
+  "id": "lmms-eval",
+  "name": "lmms-eval",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Evaluation harness for multimodal models across image, video and audio tasks",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/EvolvingLMMs-Lab/lmms-eval",
+  "github": "EvolvingLMMs-Lab/lmms-eval",
+  "tags": [
+   "multimodal",
+   "harness"
+  ]
+ },
+ {
+  "id": "vlmevalkit",
+  "name": "VLMEvalKit",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "OpenCompass toolkit for one-command evaluation of vision-language models",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/open-compass/VLMEvalKit",
+  "github": "open-compass/VLMEvalKit",
+  "tags": [
+   "multimodal",
+   "harness"
+  ]
+ },
+ {
+  "id": "evalchemy",
+  "name": "Evalchemy",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Unified toolkit from mlfoundations for running common LLM benchmarks",
+  "license": "No licence stated",
+  "model": "source-available",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/mlfoundations/evalchemy",
+  "github": "mlfoundations/evalchemy",
+  "tags": [
+   "harness",
+   "post-training"
+  ]
+ },
+ {
+  "id": "appworld",
+  "name": "AppWorld",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Simulated world of everyday apps and APIs for benchmarking interactive coding agents",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/StonyBrookNLP/appworld",
+  "github": "StonyBrookNLP/appworld",
+  "tags": [
+   "agents",
+   "environment"
+  ]
+ },
+ {
+  "id": "inspect-evals",
+  "name": "Inspect Evals",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Community suite of ready-to-run benchmarks implemented on Inspect AI",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/UKGovernmentBEIS/inspect_evals",
+  "github": "UKGovernmentBEIS/inspect_evals",
+  "tags": [
+   "harness",
+   "suite"
+  ]
+ },
+ {
+  "id": "humanitys-last-exam",
+  "name": "Humanity's Last Exam",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "Expert-written frontier knowledge and reasoning benchmark from CAIS and Scale AI",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/centerforaisafety/hle",
+  "github": "centerforaisafety/hle",
+  "launched": "2025-01",
+  "tags": [
+   "reasoning",
+   "frontier"
+  ]
+ },
+ {
+  "id": "browsecomp",
+  "name": "BrowseComp",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "benchmarks",
+  "summary": "OpenAI benchmark of hard-to-find facts for evaluating browsing agents",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/openai/simple-evals",
+  "github": "openai/simple-evals",
+  "tags": [
+   "web-agents",
+   "search"
+  ]
+ },
+ {
+  "id": "anthropic-computer-use",
+  "name": "Anthropic computer use tool",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Claude tool for screenshot, mouse and keyboard control of a desktop",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://docs.anthropic.com/en/docs/agents-and-tools/computer-use",
+  "launched": "2024-10",
+  "icon": "anthropic",
+  "tags": [
+   "computer-use",
+   "api"
+  ]
+ },
+ {
+  "id": "openai-computer-use",
+  "name": "OpenAI computer use tool",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Responses API tool that drives a computer from screenshots with CUA models",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://developers.openai.com/api/docs/guides/tools-computer-use",
+  "launched": "2025-03",
+  "tags": [
+   "computer-use",
+   "api"
+  ]
+ },
+ {
+  "id": "gemini-computer-use",
+  "name": "Gemini Computer Use",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Gemini API computer_use tool for browser and mobile UI control",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://ai.google.dev/gemini-api/docs/computer-use",
+  "launched": "2025-10",
+  "icon": "googlegemini",
+  "emerging": true,
+  "emergingWhy": "Gemini 2.5 Computer Use model shipped 7 Oct 2025; Gemini 3 models now include the tool natively.",
+  "emergingSource": "https://blog.google/technology/google-deepmind/gemini-computer-use-model/",
+  "tags": [
+   "computer-use",
+   "api"
+  ]
+ },
+ {
+  "id": "amazon-nova-act",
+  "name": "Amazon Nova Act",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "AWS service and SDK for reliable browser UI automation agents",
+  "license": "Apache-2.0 (SDK)",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://aws.amazon.com/blogs/aws/build-reliable-ai-agents-for-ui-workflow-automation-with-amazon-nova-act-now-generally-available",
+  "github": "aws/nova-act",
+  "launched": "2025-12",
+  "emerging": true,
+  "emergingWhy": "GA on 2 Dec 2025 at re:Invent after 2025 previews; SDK releases continue weekly in late 2026.",
+  "emergingSource": "https://aws.amazon.com/about-aws/whats-new/2025/12/build-automate-production-ui-workflows-nova-act",
+  "tags": [
+   "browser-agents",
+   "aws"
+  ]
+ },
+ {
+  "id": "skyvern",
+  "name": "Skyvern",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Browser automation agent using LLMs and computer vision for web workflows",
+  "license": "AGPL-3.0",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/Skyvern-AI/skyvern",
+  "github": "Skyvern-AI/skyvern",
+  "tags": [
+   "browser-agents",
+   "open-source"
+  ]
+ },
+ {
+  "id": "steel",
+  "name": "Steel",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Open-source browser API and sandbox for AI agents, with a hosted cloud",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/steel-dev/steel-browser",
+  "github": "steel-dev/steel-browser",
+  "tags": [
+   "browser-infra",
+   "open-source"
+  ]
+ },
+ {
+  "id": "hyperbrowser",
+  "name": "Hyperbrowser",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Hosted cloud browsers and agent APIs for web automation at scale",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://www.hyperbrowser.ai",
+  "tags": [
+   "browser-infra"
+  ]
+ },
+ {
+  "id": "kernel",
+  "name": "Kernel",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Cloud Chrome browsers for agents with session recordings; open-source images",
+  "license": "Apache-2.0 (images)",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://kernel.sh",
+  "github": "onkernel/kernel-images",
+  "tags": [
+   "browser-infra"
+  ]
+ },
+ {
+  "id": "anchor-browser",
+  "name": "Anchor Browser",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Cloud-hosted browsers with persistent profiles and MCP control for agents",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://anchorbrowser.io",
+  "tags": [
+   "browser-infra",
+   "mcp"
+  ]
+ },
+ {
+  "id": "browserless",
+  "name": "Browserless",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Self-hostable headless Chrome service for automation and agents",
+  "license": "SSPL-1.0 or commercial",
+  "model": "source-available",
+  "maturity": "production-common",
+  "deployment": "both",
+  "url": "https://github.com/browserless/browserless",
+  "github": "browserless/browserless",
+  "tags": [
+   "browser-infra",
+   "self-host"
+  ]
+ },
+ {
+  "id": "notte",
+  "name": "Notte",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Web agent framework with hosted browser sessions",
+  "license": "SSPL-1.0",
+  "model": "source-available",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/nottelabs/notte",
+  "github": "nottelabs/notte",
+  "tags": [
+   "browser-agents"
+  ]
+ },
+ {
+  "id": "magnitude",
+  "name": "Magnitude",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Vision-first open-source browser agent and test runner",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/magnitudedev/magnitude",
+  "github": "magnitudedev/magnitude",
+  "tags": [
+   "browser-agents",
+   "testing"
+  ]
+ },
+ {
+  "id": "e2b-desktop",
+  "name": "E2B Desktop",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Cloud Linux desktop sandboxes with streaming for computer-use agents",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/e2b-dev/desktop",
+  "github": "e2b-dev/desktop",
+  "tags": [
+   "sandbox",
+   "desktop"
+  ]
+ },
+ {
+  "id": "agent-s",
+  "name": "Agent S",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Simular open agentic framework for computer use across operating systems",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/simular-ai/Agent-S",
+  "github": "simular-ai/Agent-S",
+  "tags": [
+   "desktop-agents"
+  ]
+ },
+ {
+  "id": "ui-tars-desktop",
+  "name": "UI-TARS Desktop",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "ByteDance desktop app and CLI agent driven by UI-TARS vision models",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/bytedance/UI-TARS-desktop",
+  "github": "bytedance/UI-TARS-desktop",
+  "icon": "bytedance",
+  "tags": [
+   "desktop-agents"
+  ]
+ },
+ {
+  "id": "chrome-devtools-mcp",
+  "name": "Chrome DevTools MCP",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "MCP server that lets coding agents control and inspect a live Chrome",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
+  "github": "ChromeDevTools/chrome-devtools-mcp",
+  "launched": "2025-09",
+  "icon": "googlechrome",
+  "emerging": true,
+  "emergingWhy": "Public preview on 23 Sept 2025; npm package at v1.13 by Nov 2026 and listed in the GitHub MCP Registry.",
+  "emergingSource": "https://developer.chrome.com/blog/chrome-devtools-mcp",
+  "tags": [
+   "mcp",
+   "browser"
+  ]
+ },
+ {
+  "id": "bytebot",
+  "name": "Bytebot",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Self-hosted AI desktop agent running inside a containerized Linux desktop",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/bytebot-ai/bytebot",
+  "github": "bytebot-ai/bytebot",
+  "tags": [
+   "desktop-agents",
+   "self-host"
+  ]
+ },
+ {
+  "id": "opencua",
+  "name": "OpenCUA",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Open framework, data and models for computer-use agents from XLANG Lab",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/xlang-ai/OpenCUA",
+  "github": "xlang-ai/OpenCUA",
+  "tags": [
+   "models",
+   "datasets"
+  ]
+ },
+ {
+  "id": "fara-7b",
+  "name": "Fara-7B",
+  "area": "agents",
+  "category": "computer-use",
+  "summary": "Microsoft 7B open-weight computer-use model acting on predicted screen coordinates",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/microsoft/fara",
+  "github": "microsoft/fara",
+  "launched": "2025-11",
+  "tags": [
+   "open-weights",
+   "web-agents"
+  ]
+ },
+ {
+  "id": "omniparser",
+  "name": "OmniParser",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Microsoft screen parser that turns UI screenshots into labeled interactable elements",
+  "license": "CC-BY-4.0 (repo); model licences vary",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/microsoft/OmniParser",
+  "github": "microsoft/OmniParser",
+  "tags": [
+   "screen-parsing",
+   "grounding"
+  ]
+ },
+ {
+  "id": "set-of-mark",
+  "name": "Set-of-Mark Prompting",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Overlays numbered marks on image regions so multimodal LLMs can ground actions",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/microsoft/SoM",
+  "github": "microsoft/SoM",
+  "tags": [
+   "prompting",
+   "grounding"
+  ]
+ },
+ {
+  "id": "ui-tars",
+  "name": "UI-TARS",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "ByteDance native GUI agent models for perception, grounding and action",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/bytedance/UI-TARS",
+  "github": "bytedance/UI-TARS",
+  "icon": "bytedance",
+  "tags": [
+   "models",
+   "gui-agents"
+  ]
+ },
+ {
+  "id": "showui",
+  "name": "ShowUI",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Lightweight vision-language-action model for GUI grounding and navigation",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/showlab/ShowUI",
+  "github": "showlab/ShowUI",
+  "tags": [
+   "models",
+   "grounding"
+  ]
+ },
+ {
+  "id": "ferret-ui",
+  "name": "Ferret-UI",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Apple multimodal LLM for referring, grounding and reasoning on UI screens",
+  "license": "Apple research licence",
+  "model": "source-available",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/apple/ml-ferret/tree/main/ferretui",
+  "github": "apple/ml-ferret",
+  "icon": "apple",
+  "tags": [
+   "models",
+   "mobile-ui"
+  ]
+ },
+ {
+  "id": "seeclick",
+  "name": "SeeClick",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Visual GUI agent model with grounding pretraining; introduced ScreenSpot",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/njucckevin/SeeClick",
+  "github": "njucckevin/SeeClick",
+  "tags": [
+   "models",
+   "grounding"
+  ]
+ },
+ {
+  "id": "os-atlas",
+  "name": "OS-Atlas",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Cross-platform GUI grounding action model and large grounding dataset",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/OS-Copilot/OS-Atlas",
+  "github": "OS-Copilot/OS-Atlas",
+  "tags": [
+   "models",
+   "datasets"
+  ]
+ },
+ {
+  "id": "aguvis",
+  "name": "Aguvis",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Pure-vision GUI agent model unifying grounding and planning across platforms",
+  "license": "No licence stated",
+  "model": "source-available",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/xlang-ai/aguvis",
+  "github": "xlang-ai/aguvis",
+  "tags": [
+   "models",
+   "grounding"
+  ]
+ },
+ {
+  "id": "uground",
+  "name": "UGround",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Universal visual GUI grounding model trained on large synthetic web data",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/OSU-NLP-Group/UGround",
+  "github": "OSU-NLP-Group/UGround",
+  "tags": [
+   "models",
+   "grounding"
+  ]
+ },
+ {
+  "id": "screenagent",
+  "name": "ScreenAgent",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "VLM agent that controls a real desktop over VNC with a plan, act, reflect loop",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/niuzaisheng/ScreenAgent",
+  "github": "niuzaisheng/ScreenAgent",
+  "tags": [
+   "desktop-agents",
+   "research"
+  ]
+ },
+ {
+  "id": "gui-actor",
+  "name": "GUI-Actor",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Microsoft coordinate-free GUI grounding with an attention-based action head",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/microsoft/GUI-Actor",
+  "github": "microsoft/GUI-Actor",
+  "tags": [
+   "models",
+   "grounding"
+  ]
+ },
+ {
+  "id": "ui-venus",
+  "name": "UI-Venus",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Ant Group GUI grounding and navigation models trained with reinforcement learning",
+  "license": "Apache-2.0 (research use)",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/inclusionAI/UI-Venus",
+  "github": "inclusionAI/UI-Venus",
+  "launched": "2025-08",
+  "tags": [
+   "models",
+   "grounding"
+  ]
+ },
+ {
+  "id": "gta1",
+  "name": "GTA1",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "GUI grounding models paired with a test-time scaling agent",
+  "license": "No licence stated",
+  "model": "source-available",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/Yan98/GTA1",
+  "github": "Yan98/GTA1",
+  "tags": [
+   "models",
+   "grounding"
+  ]
+ },
+ {
+  "id": "screenspot-pro",
+  "name": "ScreenSpot-Pro",
+  "area": "agents",
+  "category": "ui-grounding",
+  "summary": "Benchmark for GUI grounding in high-resolution professional software",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/likaixin2000/ScreenSpot-Pro-GUI-Grounding",
+  "github": "likaixin2000/ScreenSpot-Pro-GUI-Grounding",
+  "tags": [
+   "benchmark",
+   "grounding"
+  ]
+ },
+ {
+  "id": "cerebrium",
+  "name": "Cerebrium",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Serverless GPU platform for real-time AI apps with per-second billing",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://www.cerebrium.ai",
+  "tags": [
+   "serverless",
+   "gpu"
+  ]
+ },
+ {
+  "id": "beam",
+  "name": "Beam",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Serverless GPU runtime whose open-source engine beta9 can be self-hosted",
+  "license": "AGPL-3.0",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://www.beam.cloud",
+  "github": "beam-cloud/beta9",
+  "tags": [
+   "serverless",
+   "gpu"
+  ]
+ },
+ {
+  "id": "skypilot",
+  "name": "SkyPilot",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Runs AI jobs and services on any cloud or Kubernetes from one YAML spec",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/skypilot-org/skypilot",
+  "github": "skypilot-org/skypilot",
+  "tags": [
+   "multi-cloud",
+   "kubernetes"
+  ]
+ },
+ {
+  "id": "ray-serve",
+  "name": "Ray Serve",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Model serving library on Ray with autoscaling and multi-model composition",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-common",
+  "deployment": "self-host",
+  "url": "https://docs.ray.io/en/latest/serve/index.html",
+  "github": "ray-project/ray",
+  "icon": "ray",
+  "tags": [
+   "serving",
+   "python"
+  ]
+ },
+ {
+  "id": "dstack",
+  "name": "dstack",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Orchestrates AI dev, training and inference across clouds, Kubernetes and on-prem",
+  "license": "MPL-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/dstackai/dstack",
+  "github": "dstackai/dstack",
+  "tags": [
+   "orchestration",
+   "gpu"
+  ]
+ },
+ {
+  "id": "northflank",
+  "name": "Northflank",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Deploys apps and GPU workloads on its cloud or your own account (BYOC)",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://northflank.com/cloud/gpus",
+  "tags": [
+   "paas",
+   "byoc",
+   "gpu"
+  ]
+ },
+ {
+  "id": "dgx-cloud-lepton",
+  "name": "NVIDIA DGX Cloud Lepton",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "NVIDIA platform to deploy GPU workloads across a marketplace of partner clouds",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://www.nvidia.com/en-gb/data-center/dgx-cloud-lepton/",
+  "launched": "2025-05",
+  "icon": "nvidia",
+  "tags": [
+   "gpu",
+   "marketplace"
+  ]
+ },
+ {
+  "id": "koyeb",
+  "name": "Koyeb",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Serverless platform for GPU and CPU apps; acquired by Mistral AI in 2026",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://www.koyeb.com",
+  "icon": "koyeb",
+  "tags": [
+   "serverless",
+   "gpu"
+  ]
+ },
+ {
+  "id": "hf-inference-endpoints",
+  "name": "Hugging Face Inference Endpoints",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Deploys Hub models on dedicated autoscaling infrastructure on AWS, Azure or GCP",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-common",
+  "deployment": "saas",
+  "url": "https://huggingface.co/docs/inference-endpoints",
+  "icon": "huggingface",
+  "tags": [
+   "managed",
+   "autoscaling"
+  ]
+ },
+ {
+  "id": "cloud-run-gpu",
+  "name": "Google Cloud Run GPUs",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Serverless Cloud Run containers with attached NVIDIA L4 GPUs",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://cloud.google.com/blog/products/serverless/cloud-run-gpus-are-now-generally-available",
+  "launched": "2025-06",
+  "icon": "googlecloud",
+  "tags": [
+   "serverless",
+   "gpu"
+  ]
+ },
+ {
+  "id": "aca-serverless-gpu",
+  "name": "Azure Container Apps serverless GPUs",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Serverless A100 and T4 GPUs for containers with per-second billing",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://learn.microsoft.com/azure/container-apps/gpu-serverless-overview",
+  "launched": "2025-03",
+  "tags": [
+   "serverless",
+   "gpu"
+  ]
+ },
+ {
+  "id": "saladcloud",
+  "name": "SaladCloud",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Container GPU cloud built on idle consumer GPUs at low hourly prices",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://salad.com",
+  "tags": [
+   "gpu",
+   "low-cost"
+  ]
+ },
+ {
+  "id": "kaito",
+  "name": "KAITO",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Kubernetes operator that automates model inference and tuning on GPU nodes",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/kaito-project/kaito",
+  "github": "kaito-project/kaito",
+  "tags": [
+   "kubernetes",
+   "operator"
+  ]
+ },
+ {
+  "id": "truss",
+  "name": "Truss",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Baseten open-source tool for packaging and serving models as containers",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/basetenlabs/truss",
+  "github": "basetenlabs/truss",
+  "tags": [
+   "packaging",
+   "serving"
+  ]
+ },
+ {
+  "id": "cog",
+  "name": "Cog",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Replicate open-source tool that packages models into standard containers",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/replicate/cog",
+  "github": "replicate/cog",
+  "icon": "replicate",
+  "tags": [
+   "packaging",
+   "containers"
+  ]
+ },
+ {
+  "id": "litserve",
+  "name": "LitServe",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Lightning AI FastAPI-based serving engine for models and AI pipelines",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/Lightning-AI/LitServe",
+  "github": "Lightning-AI/LitServe",
+  "icon": "lightning",
+  "tags": [
+   "serving",
+   "python"
+  ]
+ },
+ {
+  "id": "aibrix",
+  "name": "AIBrix",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "vLLM project control plane for scalable LLM serving on Kubernetes",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/vllm-project/aibrix",
+  "github": "vllm-project/aibrix",
+  "tags": [
+   "kubernetes",
+   "llm-serving"
+  ]
+ },
+ {
+  "id": "seldon-core",
+  "name": "Seldon Core 2",
+  "area": "inference",
+  "category": "deployment",
+  "summary": "Kubernetes model serving and MLOps framework under a source-available licence",
+  "license": "BSL-1.1",
+  "model": "source-available",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/SeldonIO/seldon-core",
+  "github": "SeldonIO/seldon-core",
+  "tags": [
+   "kubernetes",
+   "serving"
+  ]
+ },
+ {
+  "id": "gpt-oss-safeguard",
+  "name": "gpt-oss-safeguard",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "OpenAI open-weight reasoning models that classify content against your own policy",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/openai/gpt-oss-safeguard",
+  "github": "openai/gpt-oss-safeguard",
+  "launched": "2025-10",
+  "emerging": true,
+  "emergingWhy": "Released 29 Oct 2025 with ROOST as bring-your-own-policy safety classifiers in 20b and 120b sizes.",
+  "emergingSource": "https://www.helpnetsecurity.com/2025/10/29/openai-gpt-oss-safeguard-safety-models/",
+  "tags": [
+   "open-weights",
+   "moderation"
+  ]
+ },
+ {
+  "id": "qwen3guard",
+  "name": "Qwen3Guard",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "Alibaba open guard models, including token-level streaming moderation",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/QwenLM/Qwen3Guard",
+  "github": "QwenLM/Qwen3Guard",
+  "launched": "2025-09",
+  "icon": "qwen",
+  "emerging": true,
+  "emergingWhy": "Released Sept 2025 in 0.6B, 4B and 8B sizes with a streaming variant; hosted on OVHcloud and Alibaba Cloud.",
+  "emergingSource": "https://qwenlm.github.io/blog/qwen3guard",
+  "tags": [
+   "open-weights",
+   "streaming",
+   "multilingual"
+  ]
+ },
+ {
+  "id": "llamafirewall",
+  "name": "LlamaFirewall",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "Meta guardrail framework for agents: PromptGuard 2, AlignmentCheck, CodeShield",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://ai.meta.com/research/publications/llamafirewall-an-open-source-guardrail-system-for-building-secure-ai-agents/",
+  "github": "meta-llama/PurpleLlama",
+  "launched": "2025-04",
+  "icon": "meta",
+  "tags": [
+   "agents",
+   "prompt-injection"
+  ]
+ },
+ {
+  "id": "nemotron-safety-guard",
+  "name": "Llama 3.1 Nemotron Safety Guard",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "NVIDIA multilingual content safety model (formerly NemoGuard), deployable as a NIM",
+  "license": "NVIDIA Open Model License",
+  "model": "source-available",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://build.nvidia.com/nvidia/llama-3_1-nemotron-safety-guard-8b-v3/modelcard",
+  "icon": "nvidia",
+  "tags": [
+   "open-weights",
+   "multilingual"
+  ]
+ },
+ {
+  "id": "shieldgemma-2",
+  "name": "ShieldGemma 2",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "Gemma 3 based 4B image safety classifier for VLM inputs and image generator outputs",
+  "license": "Gemma Terms of Use",
+  "model": "source-available",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://ai.google.dev/gemma/docs/shieldgemma/model_card_2",
+  "icon": "google",
+  "tags": [
+   "open-weights",
+   "image-safety"
+  ]
+ },
+ {
+  "id": "wildguard",
+  "name": "WildGuard",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "AI2 open moderation model for prompt harm, response harm and refusal detection",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/allenai/wildguard",
+  "github": "allenai/wildguard",
+  "tags": [
+   "open-weights",
+   "moderation"
+  ]
+ },
+ {
+  "id": "bedrock-guardrails",
+  "name": "Amazon Bedrock Guardrails",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "Managed content filters and grounding checks; ApplyGuardrail works with any model",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-common",
+  "deployment": "saas",
+  "url": "https://docs.aws.amazon.com/bedrock/latest/userguide/guardrails.html",
+  "tags": [
+   "managed",
+   "grounding"
+  ]
+ },
+ {
+  "id": "google-model-armor",
+  "name": "Google Model Armor",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "Google Cloud service screening prompts and responses for injection, data loss and bad URLs",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://docs.cloud.google.com/model-armor/overview",
+  "icon": "googlecloud",
+  "tags": [
+   "managed",
+   "prompt-injection"
+  ]
+ },
+ {
+  "id": "cloudflare-ai-security",
+  "name": "Cloudflare AI Security for Apps",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "Edge WAF detections that score prompt injection and flag unsafe LLM prompts",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://developers.cloudflare.com/waf/detections/firewall-for-ai/",
+  "icon": "cloudflare",
+  "tags": [
+   "waf",
+   "edge",
+   "prompt-injection"
+  ]
+ },
+ {
+  "id": "arthur-engine",
+  "name": "Arthur Engine",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "Open-source real-time evaluation and guardrails engine for GenAI apps",
+  "license": "MIT",
+  "model": "hybrid",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/arthur-ai/arthur-engine",
+  "github": "arthur-ai/arthur-engine",
+  "launched": "2025-03",
+  "tags": [
+   "guardrails",
+   "evaluation"
+  ]
+ },
+ {
+  "id": "superagent",
+  "name": "Superagent SDK",
+  "area": "governance",
+  "layer": "governance",
+  "category": "guardrails",
+  "summary": "Open-source agent safety SDK: blocks prompt injection, redacts PII and secrets",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/superagent-ai/superagent",
+  "github": "superagent-ai/superagent",
+  "tags": [
+   "agents",
+   "pii",
+   "prompt-injection"
+  ]
+ },
+ {
+  "id": "laminar",
+  "name": "Laminar",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "tracing",
+  "summary": "Open-source observability and evals platform built for AI agents",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/lmnr-ai/lmnr",
+  "github": "lmnr-ai/lmnr",
+  "tags": [
+   "agents",
+   "opentelemetry"
+  ]
+ },
+ {
+  "id": "agentops",
+  "name": "AgentOps",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "tracing",
+  "summary": "Agent observability SDK with session replays across agent frameworks",
+  "license": "MIT",
+  "model": "hybrid",
+  "maturity": "fragile",
+  "deployment": "both",
+  "url": "https://github.com/AgentOps-AI/agentops",
+  "github": "AgentOps-AI/agentops",
+  "tags": [
+   "agents",
+   "session-replay"
+  ]
+ },
+ {
+  "id": "lunary",
+  "name": "Lunary",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "tracing",
+  "summary": "Open-source LLM observability with prompt management and evals",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://lunary.ai",
+  "tags": [
+   "observability",
+   "prompts"
+  ]
+ },
+ {
+  "id": "langwatch",
+  "name": "LangWatch",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "tracing",
+  "summary": "LLMOps platform for tracing, evaluation and agent simulation testing",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/langwatch/langwatch",
+  "github": "langwatch/langwatch",
+  "tags": [
+   "observability",
+   "simulation"
+  ]
+ },
+ {
+  "id": "openlit",
+  "name": "OpenLIT",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "tracing",
+  "summary": "OpenTelemetry-native LLM and GPU observability with a self-hosted UI",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/openlit/openlit",
+  "github": "openlit/openlit",
+  "tags": [
+   "opentelemetry",
+   "gpu"
+  ]
+ },
+ {
+  "id": "judgeval",
+  "name": "Judgment Labs judgeval",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "tracing",
+  "summary": "Agent tracing and online evaluation SDK with a hosted platform",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/JudgmentLabs/judgeval",
+  "github": "JudgmentLabs/judgeval",
+  "tags": [
+   "agents",
+   "online-evals"
+  ]
+ },
+ {
+  "id": "raindrop",
+  "name": "Raindrop",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "tracing",
+  "summary": "Production monitoring that flags silent AI agent failures and sends alerts",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "early",
+  "deployment": "saas",
+  "url": "https://raindrop.ai",
+  "tags": [
+   "agents",
+   "alerting"
+  ]
+ },
+ {
+  "id": "sentry-ai-agent-monitoring",
+  "name": "Sentry AI Agent Monitoring",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "tracing",
+  "summary": "Traces LLM calls, tool runs and MCP interactions as spans inside Sentry",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://docs.sentry.io/product/ai-monitoring",
+  "icon": "sentry",
+  "tags": [
+   "apm",
+   "agents"
+  ]
+ },
+ {
+  "id": "posthog-llm-analytics",
+  "name": "PostHog LLM Analytics",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "tracing",
+  "summary": "Captures LLM traces and generations as product analytics events",
+  "license": "MIT (core)",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://posthog.com/docs/llm-analytics/basics",
+  "icon": "posthog",
+  "tags": [
+   "product-analytics"
+  ]
+ },
+ {
+  "id": "langfuse-annotation-queues",
+  "name": "Langfuse Annotation Queues",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "annotation",
+  "summary": "Queues for domain experts to score and comment on traces, observations and sessions",
+  "license": "MIT",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://langfuse.com/docs/evaluation/evaluation-methods/annotation-queues",
+  "launched": "2024-10",
+  "tags": [
+   "human-feedback",
+   "queues"
+  ]
+ },
+ {
+  "id": "langsmith-annotation-queues",
+  "name": "LangSmith Annotation Queues",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "annotation",
+  "summary": "Single-run and pairwise review queues with rubrics for traced runs",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://docs.langchain.com/langsmith/annotation-queues",
+  "icon": "langchain",
+  "tags": [
+   "human-feedback",
+   "pairwise"
+  ]
+ },
+ {
+  "id": "opik-annotation-queues",
+  "name": "Opik Annotation Queues",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "annotation",
+  "summary": "Shareable queues for subject experts to score traces and threads in Opik",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://www.comet.com/docs/opik/evaluation/annotation_queues",
+  "github": "comet-ml/opik",
+  "tags": [
+   "human-feedback",
+   "queues"
+  ]
+ },
+ {
+  "id": "phoenix-annotations",
+  "name": "Arize Phoenix Annotations",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "annotation",
+  "summary": "Human, LLM and code annotations on spans that feed filters and eval datasets",
+  "license": "ELv2",
+  "model": "source-available",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://arize.com/docs/phoenix/tracing/concepts-tracing/annotations-concepts",
+  "github": "Arize-ai/phoenix",
+  "tags": [
+   "human-feedback",
+   "spans"
+  ]
+ },
+ {
+  "id": "braintrust-human-review",
+  "name": "Braintrust Human Review",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "annotation",
+  "summary": "Review mode with score configs, assignments and multi-reviewer scoring",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://www.braintrust.dev/docs/annotate/human-review",
+  "tags": [
+   "human-feedback",
+   "review"
+  ]
+ },
+ {
+  "id": "docent",
+  "name": "Docent",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "annotation",
+  "summary": "Transluce tool to summarize, cluster and search large sets of agent transcripts",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://docs.transluce.org/",
+  "github": "TransluceAI/docent",
+  "tags": [
+   "agents",
+   "transcripts"
+  ]
+ },
+ {
+  "id": "prodigy",
+  "name": "Prodigy",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "annotation",
+  "summary": "Scriptable annotation tool from Explosion with DSPy-based LLM eval workflows",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://prodi.gy",
+  "tags": [
+   "annotation",
+   "self-host"
+  ]
+ },
+ {
+  "id": "superannotate",
+  "name": "SuperAnnotate",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "annotation",
+  "summary": "Annotation platform with hybrid human and LLM-judge evaluation pipelines",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://www.superannotate.com",
+  "tags": [
+   "annotation",
+   "llm-eval"
+  ]
+ },
+ {
+  "id": "kili-technology",
+  "name": "Kili Technology",
+  "area": "evaluation",
+  "layer": "evaluation",
+  "category": "annotation",
+  "summary": "Expert-in-the-loop platform for LLM evaluation datasets and review workflows",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://kili-technology.com/ai-evaluation",
+  "tags": [
+   "annotation",
+   "llm-eval"
+  ]
+ },
+ {
+  "id": "tenacity",
+  "name": "Tenacity",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Python retry library with configurable backoff, stop and retry conditions",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-common",
+  "deployment": "self-host",
+  "url": "https://github.com/jd/tenacity",
+  "github": "jd/tenacity",
+  "launched": "2016-08",
+  "tags": [
+   "retries",
+   "python"
+  ]
+ },
+ {
+  "id": "stamina",
+  "name": "stamina",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Opinionated retry wrapper around Tenacity with production defaults",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/hynek/stamina",
+  "github": "hynek/stamina",
+  "tags": [
+   "retries",
+   "python"
+  ]
+ },
+ {
+  "id": "pybreaker",
+  "name": "PyBreaker",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Circuit breaker pattern implementation for Python services",
+  "license": "BSD-3-Clause",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/danielfm/pybreaker",
+  "github": "danielfm/pybreaker",
+  "tags": [
+   "circuit-breaker",
+   "python"
+  ]
+ },
+ {
+  "id": "inngest",
+  "name": "Inngest",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Event-driven durable functions with steps, retries and AI agent workflows",
+  "license": "SSPL-1.0 (delayed Apache-2.0)",
+  "model": "source-available",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/inngest/inngest",
+  "github": "inngest/inngest",
+  "tags": [
+   "durable-execution",
+   "events"
+  ]
+ },
+ {
+  "id": "restate",
+  "name": "Restate",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Durable execution engine journaling services, workflows and agents",
+  "license": "BSL-1.1",
+  "model": "source-available",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/restatedev/restate",
+  "github": "restatedev/restate",
+  "tags": [
+   "durable-execution"
+  ]
+ },
+ {
+  "id": "trigger-dev",
+  "name": "Trigger.dev",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Durable background jobs and AI tasks in TypeScript with retries",
+  "license": "Apache-2.0",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/triggerdotdev/trigger.dev",
+  "github": "triggerdotdev/trigger.dev",
+  "tags": [
+   "durable-execution",
+   "typescript"
+  ]
+ },
+ {
+  "id": "hatchet",
+  "name": "Hatchet",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Postgres-backed durable task queue and workflow engine",
+  "license": "MIT",
+  "model": "hybrid",
+  "maturity": "production-viable",
+  "deployment": "both",
+  "url": "https://github.com/hatchet-dev/hatchet",
+  "github": "hatchet-dev/hatchet",
+  "tags": [
+   "durable-execution",
+   "queues"
+  ]
+ },
+ {
+  "id": "resonate",
+  "name": "Resonate",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Durable execution platform built on distributed async and await",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/resonatehq/resonate",
+  "github": "resonatehq/resonate",
+  "tags": [
+   "durable-execution"
+  ]
+ },
+ {
+  "id": "golem",
+  "name": "Golem",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Durable WebAssembly runtime for agents with transparent state recovery",
+  "license": "BSL-1.1",
+  "model": "source-available",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/golemcloud/golem",
+  "github": "golemcloud/golem",
+  "tags": [
+   "durable-execution",
+   "wasm"
+  ]
+ },
+ {
+  "id": "absurd",
+  "name": "Absurd",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Durable execution workflows using only Postgres stored procedures",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "self-host",
+  "url": "https://github.com/earendil-works/absurd",
+  "github": "earendil-works/absurd",
+  "launched": "2025-11",
+  "tags": [
+   "durable-execution",
+   "postgres"
+  ]
+ },
+ {
+  "id": "vercel-workflow",
+  "name": "Workflow Development Kit",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Open TypeScript framework from Vercel that makes async functions durable",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/vercel/workflow",
+  "github": "vercel/workflow",
+  "tags": [
+   "durable-execution",
+   "typescript"
+  ]
+ },
+ {
+  "id": "routellm",
+  "name": "RouteLLM",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "LMSYS framework for training cost-quality routers between strong and weak LLMs",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "research",
+  "deployment": "self-host",
+  "url": "https://github.com/lm-sys/RouteLLM",
+  "github": "lm-sys/RouteLLM",
+  "tags": [
+   "routing",
+   "cost"
+  ]
+ },
+ {
+  "id": "not-diamond",
+  "name": "Not Diamond",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Model router API that recommends the best LLM per request",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://docs.notdiamond.ai/",
+  "tags": [
+   "routing"
+  ]
+ },
+ {
+  "id": "martian",
+  "name": "Martian",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Model router and gateway that sends each prompt to a suitable LLM",
+  "license": "Proprietary",
+  "model": "commercial",
+  "maturity": "production-viable",
+  "deployment": "saas",
+  "url": "https://docs.withmartian.com/",
+  "tags": [
+   "routing",
+   "gateway"
+  ]
+ },
+ {
+  "id": "baml",
+  "name": "BAML",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Typed prompt language with schema-aligned parsing, retry policies and fallback clients",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/BoundaryML/baml",
+  "github": "BoundaryML/baml",
+  "tags": [
+   "structured-output",
+   "fallbacks"
+  ]
+ },
+ {
+  "id": "guidance",
+  "name": "Guidance",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Constrained generation library interleaving control flow with LLM output",
+  "license": "MIT",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/guidance-ai/guidance",
+  "github": "guidance-ai/guidance",
+  "tags": [
+   "constrained-decoding"
+  ]
+ },
+ {
+  "id": "tensorzero",
+  "name": "TensorZero",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "Open-source LLM gateway with retries, fallbacks, observability and evals",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "production-viable",
+  "deployment": "self-host",
+  "url": "https://github.com/tensorzero/tensorzero",
+  "github": "tensorzero/tensorzero",
+  "tags": [
+   "gateway",
+   "fallbacks"
+  ]
+ },
+ {
+  "id": "bifrost",
+  "name": "Bifrost",
+  "area": "agents",
+  "layer": "orchestration",
+  "category": "reliability",
+  "summary": "High-performance Go AI gateway with provider failover across many LLM APIs",
+  "license": "Apache-2.0",
+  "model": "oss",
+  "maturity": "early",
+  "deployment": "both",
+  "url": "https://github.com/maximhq/bifrost",
+  "github": "maximhq/bifrost",
+  "tags": [
+   "gateway",
+   "failover"
   ]
  }
 ]

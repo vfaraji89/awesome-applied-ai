@@ -64,7 +64,7 @@ function Card({ t, why, setWhy }: { t: Tool; why: string | null; setWhy: (id: st
         <Icon t={t} />
         <div className="ta-head">
           <a href={t.url} target="_blank" rel="noreferrer" className="ta-name">{t.name}<span className="ta-ext" aria-hidden="true">↗</span></a>
-          <span className="ta-cat mono">{catName(t.category)}</span>
+          <span className="ta-cat mono">{tr(`tcat.${t.category}`, catName(t.category))}</span>
         </div>
         {t.emerging && (
           <button type="button" className={`ta-new${open ? " on" : ""}`} aria-expanded={open} onClick={() => setWhy(open ? null : t.id)}>
@@ -136,9 +136,9 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
     return tools.filter((t) => {
       const g = signals(t);
       return (!fresh || t.emerging) && (!open || OPEN.has(t.model)) && (!tags.has("trending") || g.trending) && (!tags.has("new") || g.isNew) && (!tags.has("popular") || g.popular) &&
-        (!s || [t.name, t.summary, t.category, catName(t.category), t.license, g.repo, ...t.tags].join(" ").toLowerCase().includes(s));
+        (!s || [t.name, t.summary, t.category, catName(t.category), tr(`tcat.${t.category}`, ""), t.license, g.repo, ...t.tags].join(" ").toLowerCase().includes(s));
     });
-  }, [q, fresh, open, tags, tools]);
+  }, [q, fresh, open, tags, tools, tr]);
   const inArea = area === "all" ? base : base.filter((t) => t.area === area);
   const hits = cat ? inArea.filter((t) => t.category === cat) : inArea;
   const cats = area === "all" ? [] : [...new Set(inArea.map((t) => t.category))].map((c) => [c, inArea.filter((t) => t.category === c).length] as const).sort((x, y) => y[1] - x[1]);
@@ -208,7 +208,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
         {cats.length > 1 && (
           <div className="ta-cats" role="group" aria-label={tr("tools.subcats", "Subcategories")}>
             <button type="button" className={`ta-cat-chip${cat ? "" : " on"}`} onClick={() => setCat("")}>{tr("tools.all", "All")} <span className="count">{inArea.length}</span></button>
-            {cats.map(([c, n]) => <button key={c} type="button" className={`ta-cat-chip${cat === c ? " on" : ""}`} aria-pressed={cat === c} onClick={() => setCat(cat === c ? "" : c)}>{catName(c)} <span className="count">{n}</span></button>)}
+            {cats.map(([c, n]) => <button key={c} type="button" className={`ta-cat-chip${cat === c ? " on" : ""}`} aria-pressed={cat === c} onClick={() => setCat(cat === c ? "" : c)}>{tr(`tcat.${c}`, catName(c))} <span className="count">{n}</span></button>)}
           </div>
         )}
       </div>
@@ -251,7 +251,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
             </div>
             {cats.map((c) => (
               <div key={c} className="ta-cat-sec">
-                <div className="kicker">{catName(c)} <span className="count">{at.filter((t) => t.category === c).length}</span></div>
+                <div className="kicker">{tr(`tcat.${c}`, catName(c))} <span className="count">{at.filter((t) => t.category === c).length}</span></div>
                 <ul className="ta-grid">{at.filter((t) => t.category === c).sort((x, y) => Number(!!y.emerging) - Number(!!x.emerging) || x.name.localeCompare(y.name)).map((t) => <Card key={t.id} t={t} why={why} setWhy={setWhy} />)}</ul>
               </div>
             ))}
