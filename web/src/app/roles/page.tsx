@@ -6,7 +6,7 @@ import { fRoles, skills, LEVELS, SOURCES } from "@/data/framework";
 import { stack } from "@/data/stack";
 import { layers } from "@/data/layers";
 import { More } from "@/components/more";
-import { TH } from "@/i18n/lang";
+import { T, TH } from "@/i18n/lang";
 
 export const metadata: Metadata = { title: "Roles and skills", description: "A framework for AI-native developers, forward deployed engineers, applied AI and product engineering roles: titles, tasks, skills, stacks." };
 
@@ -23,17 +23,17 @@ export default function Roles() {
 
       <section className="section" id="matrix">
         <div className="wrap">
-          <span className="kicker">The whole matrix</span>
-          <h2 style={{ marginTop: 10 }}>Eight roles, twelve skills<span className="dot">.</span></h2>
+          <span className="kicker"><T k="rl.matrix">The whole matrix</T></span>
+          <h2 style={{ marginTop: 10 }}><T k="rl.matrix_h">Eight roles, twelve skills</T><span className="dot">.</span></h2>
           <p className="lead" style={{ marginTop: 12 }}><TH k="roles.p1"><b>Red beads</b> show the level each role needs.</TH></p>
           <More label="Levels and the skill map"><p className="lead" style={{ marginTop: 12 }}><TH k="roles.p2" vars={{ v1: LEVELS.slice(1).join(", ").toLowerCase() }}>The levels run {LEVELS.slice(1).join(", ").toLowerCase()}. To see which skills postings ask for <b>together</b>, and which one <b>opens the most doors</b>, open the <Link href="/skills/">skill map</Link>.</TH></p></More>
           <div className="mx-wrap">
             <table className="mx">
-              <thead><tr><th>Skill</th>{fRoles.map((r) => <th key={r.id}><span>{r.name}</span></th>)}</tr></thead>
+              <thead><tr><th><T k="rl.skill">Skill</T></th>{fRoles.map((r) => <th key={r.id}><span>{r.name}</span></th>)}</tr></thead>
               <tbody>
                 {skills.map((s) => (
                   <tr key={s.id}>
-                    <th scope="row"><b>{s.name}</b><span className="muted">{s.what}</span></th>
+                    <th scope="row"><b><T k={`skill.${s.id}`}>{s.name}</T></b><span className="muted"><T k={`skillwhat.${s.id}`}>{s.what}</T></span></th>
                     {fRoles.map((r) => {
                       const lv = r.levels[s.id] ?? 0;
                       return <td key={r.id} title={`${r.name} · ${s.name}: ${LEVELS[lv]}`}><span className="mx-beads">{[0, 1, 2, 3].map((b) => <i key={b} className={b < lv ? "on" : ""} />)}</span></td>;
@@ -48,25 +48,25 @@ export default function Roles() {
 
       <section className="section" id="tasks" style={{ background: "var(--paper)" }}>
         <div className="wrap">
-          <span className="kicker">Tasks</span>
-          <h2 style={{ marginTop: 10 }}>What each role does all day<span className="dot">.</span></h2>
+          <span className="kicker"><T k="rl.tasks">Tasks</T></span>
+          <h2 style={{ marginTop: 10 }}><T k="rl.tasks_h">What each role does all day</T><span className="dot">.</span></h2>
           <div className="grid grid-2" style={{ marginTop: 26 }}>
             {fRoles.map((r) => (
               <div key={r.id} className="frame">
-                <span className="count">{r.family}</span>
+                <span className="count"><T k={`fam.${r.family.toLowerCase()}`}>{r.family}</T></span>
                 <h3 style={{ fontSize: "1.25rem", fontWeight: 800, marginTop: 6 }}>{r.name}<span className="dot">.</span></h3>
-                <ul className="ed">{r.tasks.map((t) => <li key={t}><span className="bead" />{t}</li>)}</ul>
+                <ul className="ed">{r.tasks.map((t, i) => <li key={t}><span className="bead" /><T k={`role.${r.id}.task.${i}`}>{t}</T></li>)}</ul>
               </div>
             ))}
           </div>
-          <p className="count" style={{ marginTop: 22 }}>Certificates and degrees now live on <Link href="/certificates/">Certificates</Link>.</p>
+          <p className="count" style={{ marginTop: 22 }}><T k="rl.certs">Certificates and degrees have their own page:</T> <Link href="/certificates/"><T k="page.certificates">Certificates</T></Link>.</p>
         </div>
       </section>
 
       <section className="section">
         <div className="wrap">
-          <span className="kicker">Sources</span>
-          <p className="muted" style={{ marginTop: 10, maxWidth: "70ch" }}>Built from 2026 job postings and role guides. The skill levels are an editorial synthesis of them, not an industry standard.</p>
+          <span className="kicker"><T k="rl.sources">Sources</T></span>
+          <p className="muted" style={{ marginTop: 10, maxWidth: "70ch" }}><T k="rl.sources_p">Built from 2026 job postings and role guides. The skill levels are an editorial synthesis of them, not an industry standard.</T></p>
           <ul className="src">{SOURCES.map((s) => <li key={s.url}><a href={s.url} target="_blank" rel="noreferrer">{s.label} ↗</a></li>)}</ul>
         </div>
       </section>

@@ -1,4 +1,5 @@
 import type { Doc } from "@/data/docs";
+import { T } from "@/i18n/lang";
 import { stack } from "@/data/stack";
 
 /* A course cover from the brand kit only: paper and dot grid, wooden posts and rods,
@@ -19,7 +20,7 @@ export function DocCover({ course, index }: { course: Doc; index: number }) {
       <div className="cv-mid">
         <span className="cv-logo" dangerouslySetInnerHTML={{ __html: logo?.svg ?? "" }} />
         <div>
-          <span className="cv-k">Doc {String(index + 1).padStart(2, "0")} · {course.status === "live" ? `${total} pages` : "coming soon"}</span>
+          <span className="cv-k"><T k="dc.doc">Doc</T> {String(index + 1).padStart(2, "0")} · {course.status === "live" ? <T k="dc.pages" vars={{ n: total }}>{"{n} pages"}</T> : <T k="ui.soon">soon</T>}</span>
           <b className="cv-t">{course.name}<span className="dot">.</span></b>
         </div>
       </div>

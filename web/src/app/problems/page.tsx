@@ -4,7 +4,7 @@ import Link from "next/link";
 import { problems } from "@/data/problems";
 import { layers } from "@/data/layers";
 import { More } from "@/components/more";
-import { TH } from "@/i18n/lang";
+import { T, TH } from "@/i18n/lang";
 
 export const metadata: Metadata = { title: "Problems", description: "Common applied AI problems, the way they are asked, and how to solve them." };
 
@@ -18,7 +18,7 @@ export default function Problems() {
         <More><p className="lead" style={{ marginTop: 12 }}><TH k="problems.p2">Each one is asked <b>the way a team would ask it</b>, then answered with <b>the constraint that decides it</b> and a worked design.</TH></p></More>
         {layers.filter((l) => problems.some((p) => p.layer === l.id)).map((l) => (
           <div key={l.id} id={l.id} style={{ marginTop: 40 }}>
-            <h2>{l.name}<span className="dot">.</span></h2>
+            <h2><T k={`layer.${l.id}`}>{l.name}</T><span className="dot">.</span></h2>
             <div className="grid grid-2" style={{ marginTop: 18 }}>
               {problems.filter((p) => p.layer === l.id).map((p, i) => (
                 <Link key={p.id} href={`/problems/${p.id}/`} className="frame rise" style={{ ["--i" as string]: i, paddingBottom: 38 }}>

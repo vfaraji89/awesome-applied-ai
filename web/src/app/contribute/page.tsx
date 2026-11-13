@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { T } from "@/i18n/lang";
 import { SectionIntro } from "@/components/section-intro";
 import { site } from "@/lib/site";
 
@@ -18,24 +19,24 @@ export default function Feedback() {
         <SectionIntro id="contribute" lead={`This site is the companion to ${site.author.book}, a book in progress. Corrections make both better.`} />
         <div className="grid grid-2" style={{ marginTop: 34 }}>
           <a href={mail} className="frame" style={{ paddingBottom: 38 }}>
-            <span className="count">Email</span>
-            <h3 style={{ fontSize: "1.5rem", fontWeight: 800, marginTop: 8 }}>Send a correction<span className="dot">.</span></h3>
-            <p className="muted" style={{ marginTop: 8 }}>The page, what is wrong, and a link to a source.</p>
+            <span className="count"><T k="cw.email">Email</T></span>
+            <h3 style={{ fontSize: "1.5rem", fontWeight: 800, marginTop: 8 }}><T k="cw.send">Send a correction</T><span className="dot">.</span></h3>
+            <p className="muted" style={{ marginTop: 8 }}><T k="cw.send_p">The page, what is wrong, and a link to a source.</T></p>
             <span className="rod" />
           </a>
           <a href={site.author.linkedin} target="_blank" rel="noopener" className="frame" style={{ paddingBottom: 38 }}>
             <span className="count">LinkedIn</span>
-            <h3 style={{ fontSize: "1.5rem", fontWeight: 800, marginTop: 8 }}>Message me<span className="dot">.</span></h3>
-            <p className="muted" style={{ marginTop: 8 }}>For a longer conversation, or to suggest a topic for the book.</p>
+            <h3 style={{ fontSize: "1.5rem", fontWeight: 800, marginTop: 8 }}><T k="cw.msg">Message me</T><span className="dot">.</span></h3>
+            <p className="muted" style={{ marginTop: 8 }}><T k="cw.msg_p">For a longer conversation, or to suggest a topic for the book.</T></p>
             <span className="rod" />
           </a>
         </div>
-        <h2 style={{ marginTop: 56 }}>Most useful<span className="dot">.</span></h2>
+        <h2 style={{ marginTop: 56 }}><T k="cw.useful">Most useful</T><span className="dot">.</span></h2>
         <div className="cw">
-          {ASKS.map((w) => (
+          {ASKS.map((w, i) => (
             <div key={w.what} className="cw-row">
-              <b>{w.what}</b>
-              <span className="muted">{w.how}</span>
+              <b><T k={`cw.ask${i}`}>{w.what}</T></b>
+              <span className="muted"><T k={`cw.ask${i}_how`}>{w.how}</T></span>
             </div>
           ))}
         </div>

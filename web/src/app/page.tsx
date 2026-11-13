@@ -10,6 +10,8 @@ import market from "@/data/market.json";
 import { FitIcon } from "@/components/fit-icon";
 import { T, TH } from "@/i18n/lang";
 import { slug } from "@/i18n/slug";
+import { tools } from "@/data/tools";
+import { areas } from "@/data/areas";
 
 function Band({ s, alt, children }: { s: Section; alt?: boolean; children: React.ReactNode }) {
   return (
@@ -32,7 +34,10 @@ function Band({ s, alt, children }: { s: Section; alt?: boolean; children: React
 }
 
 export default function Home() {
-  const [mk, rs, ar, ce, dc, co] = structure;
+  // by id, never by position: adding a section must not shift the others
+  const sec = (id: string) => structure.find((x) => x.id === id)!;
+  const [mk, rs, ar, tl, ce, dc, co] = ["market", "roles", "architect", "tools", "certificates", "docs", "contribute"].map(sec);
+  const areaCount = (id: string) => tools.filter((t) => t.area === id).length;
   const roleName = Object.fromEntries(fRoles.map((r) => [r.id, r.name]));
   const topRoles = market.roles.slice(0, 4);
   const max = topRoles[0]?.n ?? 1;
@@ -87,12 +92,20 @@ export default function Home() {
         <RequestFlow />
       </Band>
 
+      <Band s={tl}>
+        <ul className="home-areas">
+          {areas.map((a) => { const n = areaCount(a.id); return (
+            <li key={a.id}><Link href={`/tools/?area=${a.id}`}><b><T k={`tarea.${a.id}`}>{a.name}</T></b><span className="home-rod" aria-hidden="true"><i style={{ width: `${Math.min(100, (n / Math.max(...areas.map((x) => areaCount(x.id)))) * 100)}%` }} /></span><span className="mono count">{n}</span></Link></li>
+          ); })}
+        </ul>
+      </Band>
+
       <Band s={ce}>
         <div className="grid grid-2">
           {providers.map((e) => (
             <div key={e.kind} className="frame">
-              <span className="kicker">{e.kind}</span>
-              <p className="muted" style={{ marginTop: 6, fontSize: ".92rem" }}>{e.items[0]}</p>
+              <span className="kicker">{e.kind === "Frameworks" ? <T k="ce.frameworks">Frameworks</T> : e.kind}</span>
+              <p className="muted" style={{ marginTop: 6, fontSize: ".92rem" }}><T k={`ce.${e.kind.toLowerCase().replace(/[^a-z]+/g, "-")}.0`}>{e.items[0]}</T></p>
             </div>
           ))}
         </div>
@@ -138,7 +151,12 @@ export default function Home() {
         .sm-bars i { height: 10px; border-radius: 6px; background: linear-gradient(90deg, #e0301e, #ff8f80); }
         @media (max-width: 560px) { .sm-bars li { grid-template-columns: 1fr 44px; } .sm-bars i { grid-column: 1 / -1; grid-row: 2; } }
         .chips-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
-      `}</style>
+              .home-areas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 22px; }
+        .home-areas a { display: grid; grid-template-columns: 110px minmax(0, 1fr) 34px; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); }
+        .home-areas a:hover b { color: var(--rust-deep); }
+        .home-rod { position: relative; height: 4px; border-radius: 4px; background: var(--line); } .home-rod i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: linear-gradient(90deg, #e0301e, #ff9d8f); }
+        @media (max-width: 560px) { .home-areas { grid-template-columns: 1fr; } }
+`}</style>
     </>
   );
 }

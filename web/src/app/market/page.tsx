@@ -4,12 +4,12 @@ import Link from "next/link";
 import market from "@/data/market.json";
 import { fRoles, skills } from "@/data/framework";
 import { More } from "@/components/more";
-import { TH } from "@/i18n/lang";
+import { T, TH } from "@/i18n/lang";
 
 export const metadata: Metadata = { title: "Market pulse", description: "What the applied AI job market asks for: roles, levels, titles, skills and tools, updated weekly from public job boards." };
 
 type Row = { id?: string; name?: string; title?: string; month?: string; n: number; share?: number; inStack?: boolean };
-const roleName = (id: string) => fRoles.find((r) => r.id === id)?.name ?? "Other AI roles";
+const roleName = (id: string) => fRoles.find((r) => r.id === id)?.name ?? "";
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
 const SOURCE: Record<string, string> = { greenhouse: "Greenhouse boards", lever: "Lever boards", ashby: "Ashby boards", remotive: "Remotive", arbeitnow: "Arbeitnow", hackernews: "Hacker News: Who is hiring?" };
 
@@ -43,17 +43,17 @@ export default function Market() {
           <More label="How it is collected"><p className="lead" style={{ marginTop: 12 }}><TH k="market.p2">Only the AI roles are kept. Each posting is reduced to its <b>role, level, skills and tools</b>; no posting, link or company is republished. This page is the gist.</TH></p></More>
           {ready ? (
             <div className="mk-totals">
-              {[["Open AI roles now", m.totals.openNow.toLocaleString("en-US")], ["Tracked all time", m.totals.allTime.toLocaleString("en-US")], ["New since yesterday", m.totals.newToday.toLocaleString("en-US")], ["Remote", `${m.totals.remoteShare}%`]].map(([k, v]) => (
-                <div key={k} className="frame"><span className="count">{k}</span><b className="mk-big">{v}</b></div>
+              {[["mk.open", "Open AI roles now", m.totals.openNow.toLocaleString("en-US")], ["mk.all", "Tracked all time", m.totals.allTime.toLocaleString("en-US")], ["mk.new", "New since yesterday", m.totals.newToday.toLocaleString("en-US")], ["mk.remote", "Remote", `${m.totals.remoteShare}%`]].map(([k, en, v]) => (
+                <div key={k} className="frame"><span className="count"><T k={k}>{en}</T></span><b className="mk-big">{v}</b></div>
               ))}
             </div>
           ) : (
             <div className="frame" style={{ marginTop: 28 }}>
-              <span className="soon">First collection pending</span>
-              <p className="muted" style={{ marginTop: 10 }}>The tracker runs once a day. The numbers appear here after its first run.</p>
+              <span className="soon"><T k="mk.pending">First collection pending</T></span>
+              <p className="muted" style={{ marginTop: 10 }}><T k="mk.pending_p">The tracker runs once a day. The numbers appear here after its first run.</T></p>
             </div>
           )}
-          {updated && <p className="count" style={{ marginTop: 14 }}>Updated {updated}</p>}
+          {updated && <p className="count" style={{ marginTop: 14 }}><T k="mk.updated" vars={{ d: updated }}>{"Updated {d}"}</T></p>}
         </div>
       </section>
 
@@ -62,29 +62,29 @@ export default function Market() {
           <section className="section">
             <div className="wrap grid grid-2" style={{ gap: 36 }}>
               <div>
-                <span className="kicker">Roles</span>
-                <h2 style={{ marginTop: 10 }}>Which jobs are open<span className="dot">.</span></h2>
-                <Bars rows={m.roles} label={(r) => <Link href="/roles/">{roleName(r.id!)}</Link>} />
+                <span className="kicker"><T k="mk.k_roles">Roles</T></span>
+                <h2 style={{ marginTop: 10 }}><T k="mk.h_roles">Which jobs are open</T><span className="dot">.</span></h2>
+                <Bars rows={m.roles} label={(r) => <Link href="/roles/">{roleName(r.id!) || <T k="mk.other">Other AI roles</T>}</Link>} />
               </div>
               <div>
-                <span className="kicker">Levels</span>
-                <h2 style={{ marginTop: 10 }}>At what level<span className="dot">.</span></h2>
-                <Bars rows={m.seniority} label={(r) => r.id} />
+                <span className="kicker"><T k="mk.k_levels">Levels</T></span>
+                <h2 style={{ marginTop: 10 }}><T k="mk.h_levels">At what level</T><span className="dot">.</span></h2>
+                <Bars rows={m.seniority} label={(r) => <T k={`lvl.${(r.id ?? "").toLowerCase()}`}>{r.id ?? ""}</T>} />
               </div>
             </div>
           </section>
           <section className="section" style={{ background: "var(--paper)" }}>
             <div className="wrap grid grid-2" style={{ gap: 36 }}>
               <div>
-                <span className="kicker">Skills</span>
-                <h2 style={{ marginTop: 10 }}>What postings ask for<span className="dot">.</span></h2>
-                <p className="muted" style={{ marginTop: 8 }}>Share of open AI postings that mention each skill area.</p>
-                <Bars rows={m.skills} max={100} label={(r) => skillName(r.id!)} />
+                <span className="kicker"><T k="mk.k_skills">Skills</T></span>
+                <h2 style={{ marginTop: 10 }}><T k="mk.h_skills">What postings ask for</T><span className="dot">.</span></h2>
+                <p className="muted" style={{ marginTop: 8 }}><T k="mk.skills_p">Share of open AI postings that mention each skill area.</T></p>
+                <Bars rows={m.skills} max={100} label={(r) => <T k={`skill.${r.id}`}>{skillName(r.id!)}</T>} />
               </div>
               <div>
-                <span className="kicker">Tools</span>
-                <h2 style={{ marginTop: 10 }}>The tools named most<span className="dot">.</span></h2>
-                <p className="muted" style={{ marginTop: 8 }}><span className="mk-key" /> in <Link href="/tools/#stack">my daily stack</Link></p>
+                <span className="kicker"><T k="mk.k_tools">Tools</T></span>
+                <h2 style={{ marginTop: 10 }}><T k="mk.h_tools">The tools named most</T><span className="dot">.</span></h2>
+                <p className="muted" style={{ marginTop: 8 }}><span className="mk-key" /> <Link href="/tools/#stack"><T k="mk.mystack">in my daily stack</T></Link></p>
                 <Bars rows={m.tools.slice(0, 20)} label={(r) => r.name} />
               </div>
             </div>
@@ -92,13 +92,13 @@ export default function Market() {
           <section className="section">
             <div className="wrap grid grid-2" style={{ gap: 36 }}>
               <div>
-                <span className="kicker">Titles</span>
-                <h2 style={{ marginTop: 10 }}>What they call it<span className="dot">.</span></h2>
+                <span className="kicker"><T k="mk.k_titles">Titles</T></span>
+                <h2 style={{ marginTop: 10 }}><T k="mk.h_titles">What they call it</T><span className="dot">.</span></h2>
                 <Bars rows={m.titles.slice(0, 15)} label={(r) => r.title} />
               </div>
               <div>
-                <span className="kicker">Over time</span>
-                <h2 style={{ marginTop: 10 }}>New AI roles per month<span className="dot">.</span></h2>
+                <span className="kicker"><T k="mk.k_time">Over time</T></span>
+                <h2 style={{ marginTop: 10 }}><T k="mk.h_time">New AI roles per month</T><span className="dot">.</span></h2>
                 <div className="mk-months">
                   {m.byMonth.map((r) => {
                     const top = Math.max(1, ...m.byMonth.map((x) => x.n));
@@ -113,12 +113,12 @@ export default function Market() {
 
       <section className="section">
         <div className="wrap">
-          <span className="kicker">Method</span>
+          <span className="kicker"><T k="mk.k_method">Method</T></span>
           <ul className="muted mk-method">
-            <li>Sources: {m.sources.length ? m.sources.map((s) => `${SOURCE[s.id] ?? s.id} (${s.ai} AI roles)`).join(" · ") : "public company job boards (Greenhouse, Lever, Ashby), Remotive, Arbeitnow and Hacker News “Who is hiring?”"}. Big boards that forbid automated reading are not used.</li>
-            <li>A posting counts as an AI role when its title says so. Role family and level come from the title; skills and tools from the whole description.</li>
-            <li>Only the role, level, skills, tools, remote flag and dates are kept. No posting, link, description or company is stored or shown.</li>
-            <li>The data covers the boards watched, not the whole market, and grows every week.</li>
+            <li><T k="mk.m1" vars={{ list: m.sources.length ? m.sources.map((s) => `${SOURCE[s.id] ?? s.id} (${s.ai})`).join(" · ") : "Greenhouse, Lever, Ashby, Remotive, Arbeitnow, Hacker News" }}>{"Sources, with the AI roles each one gave: {list}. Big boards that forbid automated reading are not used."}</T></li>
+            <li><T k="mk.m2">A posting counts as an AI role when its title says so. Role family and level come from the title; skills and tools from the whole description.</T></li>
+            <li><T k="mk.m3">Only the role, level, skills, tools, remote flag and dates are kept. No posting, link, description or company is stored or shown.</T></li>
+            <li><T k="mk.m4">The data covers the boards watched, not the whole market, and grows every week.</T></li>
           </ul>
         </div>
       </section>

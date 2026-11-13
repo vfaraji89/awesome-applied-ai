@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { T } from "@/i18n/lang";
 
 /* One request, animated through the six layers: down to fetch, back up to answer.
    Each step lights its layer and says, in one sentence, what happens there. */
@@ -37,18 +38,18 @@ export function RequestFlow() {
         {LAYERS.map((l, i) => (
           <button key={l.id} role="listitem" type="button" className={`rf-layer${i === row ? " on" : ""}`} onClick={() => { setAuto(false); setStep(i); }}>
             <span className="mono rf-n">{String(6 - i).padStart(2, "0")}</span>
-            <span>{l.name}</span>
+            <span><T k={`rf2.${l.id}`}>{l.name}</T></span>
           </button>
         ))}
         <span className="rf-bead" style={{ top: `calc(${row} * (100% / 6) + (100% / 12) - 11px)` }} aria-hidden="true" />
       </div>
       <div className="rf-say" aria-live="polite">
-        <span className="kicker">{cur.dir === "down" ? `Step ${step + 1} · going down` : `Step ${step + 1} · coming back up`}</span>
-        <p key={step} className="rf-text">{cur.say}</p>
+        <span className="kicker">{cur.dir === "down" ? <T k="rf2.down" vars={{ n: step + 1 }}>{"Step {n} · going down"}</T> : <T k="rf2.up" vars={{ n: step + 1 }}>{"Step {n} · coming back up"}</T>}</span>
+        <p key={step} className="rf-text"><T k={`rf2.say.${step}`}>{cur.say}</T></p>
         <div className="rf-ctl">
-          <button type="button" className="chip" onClick={() => { setAuto(false); setStep((s) => (s + SEQ.length - 1) % SEQ.length); }}>← Back</button>
-          <button type="button" className="chip" onClick={() => setAuto((a) => !a)}>{auto ? "Pause" : "Play"}</button>
-          <button type="button" className="chip" onClick={() => { setAuto(false); setStep((s) => (s + 1) % SEQ.length); }}>Next →</button>
+          <button type="button" className="chip" onClick={() => { setAuto(false); setStep((s) => (s + SEQ.length - 1) % SEQ.length); }}>← <T k="rf2.back">Back</T></button>
+          <button type="button" className="chip" onClick={() => setAuto((a) => !a)}>{auto ? <T k="rf2.pause">Pause</T> : <T k="rf2.play">Play</T>}</button>
+          <button type="button" className="chip" onClick={() => { setAuto(false); setStep((s) => (s + 1) % SEQ.length); }}><T k="rf2.next">Next</T> →</button>
         </div>
       </div>
       <style>{`

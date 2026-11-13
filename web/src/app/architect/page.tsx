@@ -4,6 +4,8 @@ import { SectionIntro } from "@/components/section-intro";
 import { fRoles, skills, LEVELS } from "@/data/framework";
 import { layers } from "@/data/layers";
 import { structure } from "@/lib/structure";
+import { T } from "@/i18n/lang";
+import { slug } from "@/i18n/slug";
 
 export const metadata: Metadata = { title: "AI-native architect", description: "The AI-native architect: what the role does, the layers it designs, the stack and the problems it solves." };
 
@@ -23,32 +25,32 @@ export default function Architect() {
       <section className="section" style={{ background: "var(--paper)" }}>
         <div className="wrap grid grid-2" style={{ alignItems: "start" }}>
           <div className="frame">
-            <span className="kicker">What the job is called</span>
+            <span className="kicker"><T k="ar.called">What the job is called</T></span>
             <ul className="ar-list">{role.titles.map((t) => <li key={t}><span className="bead white" />{t}</li>)}</ul>
-            <span className="kicker" style={{ display: "block", marginTop: 22 }}>What they do</span>
-            <ul className="ar-list">{role.tasks.map((t) => <li key={t}><span className="bead" />{t}</li>)}</ul>
+            <span className="kicker" style={{ display: "block", marginTop: 22 }}><T k="ar.do">What they do</T></span>
+            <ul className="ar-list">{role.tasks.map((t, i) => <li key={t}><span className="bead" /><T k={`role.${role.id}.task.${i}`}>{t}</T></li>)}</ul>
           </div>
           <div className="frame">
-            <span className="kicker">Skills at fluent or expert</span>
-            <ul className="ar-list">{top.map((s) => <li key={s.id}><span className="mx-beads">{[0, 1, 2, 3].map((b) => <i key={b} className={b < (role.levels[s.id] ?? 0) ? "on" : ""} />)}</span><b>{s.name}</b><span className="muted"> · {LEVELS[role.levels[s.id] ?? 0]}</span></li>)}</ul>
-            <span className="kicker" style={{ display: "block", marginTop: 22 }}>Layers they own</span>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 10 }}>{role.layers.map((l) => <span key={l} className="chip">{layerNames[l]}</span>)}</div>
-            <span className="kicker" style={{ display: "block", marginTop: 22 }}>How it grows</span>
-            <ol className="ar-grow">{role.growth.map((g) => <li key={g.level}><b>{g.level}</b><span className="muted">{g.scope}</span></li>)}</ol>
+            <span className="kicker"><T k="ar.skills">Skills at fluent or expert</T></span>
+            <ul className="ar-list">{top.map((s) => <li key={s.id}><span className="mx-beads">{[0, 1, 2, 3].map((b) => <i key={b} className={b < (role.levels[s.id] ?? 0) ? "on" : ""} />)}</span><b><T k={`skill.${s.id}`}>{s.name}</T></b><span className="muted"> · <T k={`lv.${role.levels[s.id] ?? 0}`}>{LEVELS[role.levels[s.id] ?? 0]}</T></span></li>)}</ul>
+            <span className="kicker" style={{ display: "block", marginTop: 22 }}><T k="ar.layers">Layers they own</T></span>
+            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 10 }}>{role.layers.map((l) => <span key={l} className="chip"><T k={`layer.${l}`}>{layerNames[l]}</T></span>)}</div>
+            <span className="kicker" style={{ display: "block", marginTop: 22 }}><T k="ar.grows">How it grows</T></span>
+            <ol className="ar-grow">{role.growth.map((g, i) => <li key={g.level}><b><T k={`lvl.${g.level.toLowerCase()}`}>{g.level}</T></b><span className="muted"><T k={`role.${role.id}.grow.${i}`}>{g.scope}</T></span></li>)}</ol>
           </div>
         </div>
       </section>
 
       <section className="section">
         <div className="wrap">
-          <span className="kicker">The architect's toolkit</span>
-          <h2 style={{ marginTop: 10 }}>Layers, stack, problems<span className="dot">.</span></h2>
+          <span className="kicker"><T k="ar.toolkit">The architect’s toolkit</T></span>
+          <h2 style={{ marginTop: 10 }}><T k="ar.toolkit_h">Layers, stack, problems</T><span className="dot">.</span></h2>
           <div className="grid grid-3" style={{ marginTop: 26 }}>
             {sec.pages.slice(1).map((p, i) => (
               <Link key={p.href} href={p.href} className="frame rise" style={{ ["--i" as string]: i, paddingBottom: 38 }}>
                 <span className="count">03.{i + 1}</span>
-                <h3 style={{ fontSize: "1.6rem", fontWeight: 800, marginTop: 8 }}>{p.label}<span className="dot">.</span></h3>
-                <p className="muted" style={{ marginTop: 8 }}>{p.note}</p>
+                <h3 style={{ fontSize: "1.6rem", fontWeight: 800, marginTop: 8 }}><T k={`page.${slug(p.label)}`}>{p.label}</T><span className="dot">.</span></h3>
+                <p className="muted" style={{ marginTop: 8 }}><T k={`note.${slug(p.label)}`}>{p.note}</T></p>
                 <span className="rod" />
               </Link>
             ))}

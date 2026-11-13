@@ -3,7 +3,7 @@ import Link from "next/link";
 import { docs } from "@/data/docs";
 import { DocCover } from "@/components/doc-cover";
 import { SectionIntro } from "@/components/section-intro";
-import { TH } from "@/i18n/lang";
+import { T, TH } from "@/i18n/lang";
 
 export const metadata: Metadata = { title: "Docs", description: "Technical docs, in motion: Claude Platform, Vercel AI SDK, LangChain and Deep Agents, and MCP, as short animations, examples and code." };
 
@@ -19,11 +19,11 @@ export default function Docs() {
                 <DocCover course={d} index={i} />
                 <div className="dcat-body">
                   <div className="dcat-top">
-                    {d.status === "live" ? <span className="chip on">Live</span> : <span className="soon">Coming soon</span>}
-                    {d.pages.length > 0 && <span className="count">{d.pages.length} pages</span>}
+                    {d.status === "live" ? <span className="chip on"><T k="dc.live">Live</T></span> : <span className="soon"><T k="dc.soon">Coming soon</T></span>}
+                    {d.pages.length > 0 && <span className="count"><T k="dc.pages" vars={{ n: d.pages.length }}>{"{n} pages"}</T></span>}
                   </div>
-                  <p className="muted" style={{ marginTop: 10 }}>{d.oneLine}</p>
-                  {d.href && <span className="btn" style={{ marginTop: 18, alignSelf: "flex-start" }}>Open the doc →</span>}
+                  <p className="muted" style={{ marginTop: 10 }}><T k={`dc.${d.id}`}>{d.oneLine}</T></p>
+                  {d.href && <span className="btn" style={{ marginTop: 18, alignSelf: "flex-start" }}><T k="dc.open">Open the doc</T> →</span>}
                 </div>
               </>
             );
