@@ -1,11 +1,13 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { T, useT } from "@/i18n/lang";
 import { certs, TRACKS, LEVELS, type Track } from "@/data/certificates";
 
 /* Certificates by track, foundational first. Each card links to the provider's own page. */
 export function CertBoard() {
   const [track, setTrack] = useState<Track | "all">("all");
+  // ?track=build (from a skill page) opens on that track
+  useEffect(() => { const t = new URLSearchParams(window.location.search).get("track"); if (t && TRACKS.some((x) => x.id === t)) setTrack(t as Track); }, []);
   const tr = useT();
   const shown = certs.filter((c) => track === "all" || c.track === track).sort((a, b) => a.level - b.level);
   const line = TRACKS.find((t) => t.id === track);

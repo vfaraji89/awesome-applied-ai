@@ -114,7 +114,7 @@ export default function Market() {
                 <span className="kicker"><T k="mk.k_skills">Skills</T></span>
                 <h2 style={{ marginTop: 10 }}><T k="mk.h_skills">What postings ask for</T><span className="dot">.</span></h2>
                 <p className="muted" style={{ marginTop: 8 }}><T k="mk.skills_p2">Share of AI job ads that mention each skill area.</T></p>
-                <Bars rows={m.skills} max={100} label={(r) => <T k={`skill.${r.id}`}>{skillName(r.id!)}</T>} />
+                <Bars rows={m.skills} max={100} label={(r) => <Link href={`/skills/${r.id}/`}><T k={`skill.${r.id}`}>{skillName(r.id!)}</T></Link>} />
               </div>
               <div>
                 <span className="kicker"><T k="mk.k_tools">Tools</T></span>

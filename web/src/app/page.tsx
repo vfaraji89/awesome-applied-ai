@@ -104,7 +104,7 @@ export default function Home() {
           </ul>
           <span className="kicker" style={{ display: "block", marginTop: 22 }}><T k="home.top_skills">Most asked-for skills</T></span>
           <ul className="sm-bars">
-            {M.skills.slice(0, 5).map((k) => <li key={k.id}><span><T k={`skill.${k.id}`}>{skills.find((x) => x.id === k.id)?.name ?? k.id ?? ""}</T></span><span className="rodbar"><i style={{ width: `${k.share}%` }} /></span><span className="count">{k.share}%</span></li>)}
+            {M.skills.slice(0, 5).map((k) => <li key={k.id}><span><Link href={`/skills/${k.id}/`} className="home-sk"><T k={`skill.${k.id}`}>{skills.find((x) => x.id === k.id)?.name ?? k.id ?? ""}</T></Link></span><span className="rodbar"><i style={{ width: `${k.share}%` }} /></span><span className="count">{k.share}%</span></li>)}
           </ul>
           <Link href="/market/" className="home-more"><T k="home.more_market">Heatmap, labs, the stack and AI beyond AI jobs</T> →</Link>
         </div>
@@ -115,7 +115,7 @@ export default function Home() {
           <span className="kicker"><T k="home.rs_count" vars={{ r: fRoles.length, s: skills.length }}>{"{r} role families · {s} skills"}</T></span>
           <div className="chips-wrap">{fRoles.map((r) => <Link key={r.id} href="/roles/" className={`chip${r.id === "ai-native-architect" ? " on" : ""}`}>{r.name}</Link>)}</div>
           <span className="kicker" style={{ display: "block", marginTop: 20 }}><T k="ui.skills">Skills</T></span>
-          <div className="chips-wrap">{skills.map((k) => <span key={k.id} className="chip"><T k={`skill.${k.id}`}>{k.name}</T></span>)}</div>
+          <div className="chips-wrap">{skills.map((k) => <Link key={k.id} href={`/skills/${k.id}/`} className="chip"><T k={`skill.${k.id}`}>{k.name}</T></Link>)}</div>
         </div>
       </Band>
 
@@ -182,6 +182,7 @@ export default function Home() {
         .sm-bars li { display: grid; grid-template-columns: 190px 1fr 44px; gap: 12px; align-items: center; font-size: .9rem; }
         .sm-bars .rodbar { margin-right: 6px; }
         @media (max-width: 560px) { .sm-bars li { grid-template-columns: 1fr 44px; } .sm-bars .rodbar { grid-column: 1 / -1; grid-row: 2; } }
+        .home-sk { text-decoration: none; color: inherit; } .home-sk:hover { color: var(--rust-deep); }
         .home-more { display: inline-block; margin-top: 18px; font-size: .9rem; color: var(--rust-deep); text-decoration: none; } .home-more:hover { text-decoration: underline; }
         .home-glance { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
         @media (max-width: 900px) { .home-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
