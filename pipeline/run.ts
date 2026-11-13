@@ -10,7 +10,8 @@ import { createHash } from "node:crypto";
 import { greenhouse, lever, ashby, workday, remotive, arbeitnow, hackerNews, smartrecruiters, workable, recruitee, personio, himalayas, jobicy, boardUrl } from "./sources";
 import { isAI, role, seniority, TASKS, inStack } from "./taxonomy";
 import { writeWeekly } from "./weekly";
-import { extract } from "./extract";
+import { extract, jobPart } from "./extract";
+import { TECH, familyOf, FAMILIES, BUILD_AI, USE_AI, AI_TERMS } from "./tech";
 import { labOf } from "./labs";
 import type { Job, RawJob } from "./types";
 
@@ -36,9 +37,19 @@ const prevStore: Job[] = existsSync(path.join(root, "market", "jobs.json")) ? JS
 const today = fromStore ? (prevStore.map((j) => j.lastSeen).sort().at(-1) ?? "") : new Date().toISOString().slice(0, 10);
 
 const report: { source: string; ok: boolean; jobs: number; ai: number; note?: string }[] = [];
+/** Non-AI tech ads from company career pages, kept in memory only for "how AI reaches other jobs".
+ *  Reduced to family and three flags right away; nothing about them is stored per ad. */
+const others: { family: string; posted: string; build: boolean; use: boolean; terms: string[] }[] = [];
 async function take(source: string, fn: () => Promise<RawJob[]>): Promise<RawJob[]> {
   try {
     const all = await fn();
+    for (const j of all) {
+      if (isAI(j.title) || ["himalayas", "jobicy", "remotive", "arbeitnow", "hackernews"].includes(j.source) || (j.text ?? "").length < 300) continue;
+      const family = familyOf(j.title);
+      if (!family) continue;
+      const part = jobPart(j.text);
+      others.push({ family, posted: j.posted, build: BUILD_AI.test(part), use: USE_AI.test(part), terms: AI_TERMS.filter(([, re]) => re.test(part)).map(([n]) => n) });
+    }
     const ai = all.filter((j) => isAI(j.title));
     report.push({ source, ok: true, jobs: all.length, ai: ai.length });
     return ai;
@@ -87,7 +98,7 @@ const reposts = raw.filter((j) => AGGREGATORS.has(j.source) && direct.has(ckOf(j
 const fresh: Job[] = raw.filter((j) => !(AGGREGATORS.has(j.source) && direct.has(ckOf(j)))).map((j) => {
   const x = extract(j.title, j.text);
   return { key: hash(`${j.source}:${j.id}`), source: j.source, title: normTitle(j.title), role: role(j.title), seniority: seniority(j.title),
-    remote: j.remote, skills: x.skills, tools: x.tools, tasks: x.tasks, ...(x.toolsPreferred.length ? { toolsPreferred: x.toolsPreferred } : {}),
+    remote: j.remote, skills: x.skills, tools: x.tools, tasks: x.tasks, ...(x.tech.length ? { tech: x.tech } : {}), ...(x.toolsPreferred.length ? { toolsPreferred: x.toolsPreferred } : {}),
     ...(x.years ? { years: x.years } : {}), ...(!AGGREGATORS.has(j.source) && labOf(j.company)?.kind === "lab" ? { lab: true } : {}), ck: ckOf(j), ...(j.posted ? { posted: j.posted } : {}), firstSeen: today, lastSeen: today };
 });
 
@@ -147,8 +158,52 @@ const summary = {
   byQuarter: count(win, (j) => { const [y, m] = when(j).split("-").map(Number); return `${y} Q${Math.ceil(m / 3)}`; }).sort((a, b) => a[0].localeCompare(b[0])).map(([q, n]) => ({ quarter: q, n })),
   reposts,
   insights: insights(win),
+  byWeek: (() => { // AI job ads per week by publish date, Monday to Sunday, from the window's first week
+    const monday = (d: string) => { const t = new Date(d + "T00:00:00Z"); t.setUTCDate(t.getUTCDate() - ((t.getUTCDay() + 6) % 7)); return t.toISOString().slice(0, 10); };
+    const m = new Map<string, number>();
+    for (const j of win) { const k = monday(when(j)); m.set(k, (m.get(k) ?? 0) + 1); }
+    const out: { week: string; n: number; partial?: boolean }[] = [];
+    for (let d = monday(SINCE); d <= today; d = new Date(Date.parse(d + "T00:00:00Z") + 7 * 864e5).toISOString().slice(0, 10))
+      out.push({ week: d, n: m.get(d) ?? 0, ...(Date.parse(d + "T00:00:00Z") + 6 * 864e5 > Date.parse(today + "T00:00:00Z") ? { partial: true } : {}) });
+    return out; })(),
+  tech: techSummary(win, when),
+  affected: fromStore ? prev.affected ?? null : affectedSummary(),
   byMonth: months.map(([m, n]) => ({ month: m, n })),
 };
+
+/** The general stack by category, with what is new (first named in the last 30 days) and what is
+ *  rising (share in the last 30 days against the 30 before). Only ads read with a description count. */
+function techSummary(ads: Job[], when: (j: Job) => string) {
+  const read = ads.filter((j) => j.tech !== undefined || j.tasks !== undefined);
+  if (read.length < 20) return null;
+  const cut = new Date(Date.parse(today + "T00:00:00Z") - 30 * 864e5).toISOString().slice(0, 10);
+  const cut2 = new Date(Date.parse(today + "T00:00:00Z") - 60 * 864e5).toISOString().slice(0, 10);
+  const recent = read.filter((j) => when(j) >= cut), before = read.filter((j) => when(j) >= cut2 && when(j) < cut);
+  const pct = (n: number, of: number) => (of ? Math.round((n / of) * 1000) / 10 : 0);
+  const cats = TECH.map((c) => ({ id: c.id, name: c.name, items: c.items.map(([name]) => {
+    const key = `${c.id}:${name}`, hit = read.filter((j) => j.tech?.includes(key));
+    const first = hit.map(when).sort()[0];
+    const r = pct(recent.filter((j) => j.tech?.includes(key)).length, recent.length), b = pct(before.filter((j) => j.tech?.includes(key)).length, before.length);
+    return { name, n: hit.length, share: pct(hit.length, read.length), first, ...(before.length >= 20 ? { change: Math.round((r - b) * 10) / 10 } : {}),
+      ...(hit.length >= 3 && first >= cut ? { isNew: true } : {}) };
+  }).filter((x) => x.n > 0).sort((a, b) => b.n - a.n) }));
+  return { read: read.length, cats };
+}
+
+/** How AI is reaching traditional tech jobs: of the non-AI ads in each family published in the
+ *  window, the share that ask to build with AI, to work with AI tools, or either. */
+function affectedSummary() {
+  const win2 = others.filter((o) => o.posted >= SINCE);
+  const pct = (n: number, of: number) => (of ? Math.round((n / of) * 100) : 0);
+  const rows = FAMILIES.map((f) => {
+    const g = win2.filter((o) => o.family === f.id);
+    const terms = new Map<string, number>();
+    for (const o of g) for (const t of o.terms) terms.set(t, (terms.get(t) ?? 0) + 1);
+    return { id: f.id, name: f.name, n: g.length, any: pct(g.filter((o) => o.build || o.use).length, g.length), build: pct(g.filter((o) => o.build).length, g.length),
+      use: pct(g.filter((o) => o.use).length, g.length), terms: [...terms.entries()].sort((a, b) => b[1] - a[1]).slice(0, 3).map(([t]) => t) };
+  }).filter((r) => r.n >= 20).sort((a, b) => b.any - a.any);
+  return { since: SINCE, ads: win2.length, any: pct(win2.filter((o) => o.build || o.use).length, win2.length), rows };
+}
 
 /** Cross-cuts for the market page: what each role asks, which skills travel together, what labs
  *  ask that others do not, and a profile per skill. Shares are whole percentages of the ads in
@@ -250,9 +305,20 @@ console.log(`AI postings: ${fresh.length} listed now, ${added} new, ${win.length
 for (const r of report) console.log(`${r.ok ? "ok  " : "FAIL"} ${r.source.padEnd(24)} jobs ${String(r.jobs).padStart(5)}  ai ${String(r.ai).padStart(4)}  ${r.note ?? ""}`);
 console.log("roles:", summary.roles.map((r) => `${r.id} ${r.n}`).join(", "));
 console.log("skills:", summary.skills.map((s) => `${s.id} ${s.share}%`).join(", "));
+console.log("affected:", summary.affected ? summary.affected.rows.map((r: { id: string; any: number; n: number }) => `${r.id} ${r.any}% of ${r.n}`).join(", ") : "none");
 console.log(`reposts dropped: ${reposts}; years asked in ${summary.years.asked}% (median ${summary.years.median})`);
 console.log("tasks:", summary.tasks.map((t) => `${t.id} ${t.share}%`).join(", "));
 console.log("tools:", summary.tools.slice(0, 20).map((t) => `${t.name} ${t.n}`).join(", "));
+// --out DIR: also write what a real run would write, into DIR (for a dry run's artifact)
+const outDir = process.argv.includes("--out") ? process.argv[process.argv.indexOf("--out") + 1] : "";
+if (outDir) {
+  const { mkdirSync } = await import("node:fs");
+  mkdirSync(outDir, { recursive: true });
+  writeFileSync(path.join(outDir, "market.json"), JSON.stringify(summary, null, 1));
+  writeFileSync(path.join(outDir, "sources.json"), JSON.stringify(sources, null, 1) + "\n");
+  writeFileSync(path.join(outDir, "jobs.json"), JSON.stringify(all));
+  console.log("wrote the would-be outputs to", outDir);
+}
 if (!dry) {
   if (!fromStore) writeFileSync(STORE, JSON.stringify(all));
   writeFileSync(SUMMARY, JSON.stringify(summary, null, 1));

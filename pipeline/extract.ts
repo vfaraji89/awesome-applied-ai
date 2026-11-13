@@ -5,6 +5,7 @@
    are not counted as skills or tools. Works on the plain text the sources produce; when an ad has
    no recognisable headings, the whole text is used, as before. */
 import { skillsOf, toolsOf, tasksOf } from "./taxonomy";
+import { techOf } from "./tech";
 
 type Kind = "intro" | "do" | "need" | "nice" | "skip";
 const HEADINGS: [Kind, RegExp][] = [
@@ -13,6 +14,13 @@ const HEADINGS: [Kind, RegExp][] = [
   ["nice", /\b(nice[- ]to[- ]haves?|preferred( qualifications)?|bonus( points)?|it'?s a plus|ideally,? you|even better|extra credit)\b/gi],
   ["skip", /\b(benefits|perks|what we offer|compensation|salary range|pay range|about (us|the company|the team)|why join|our (values|culture)|equal (opportunity|employment)|eeo\b|privacy (notice|policy)|how to apply|interview process)\b/gi],
 ];
+
+/** The part of an ad that is about the job itself: responsibilities, requirements and nice-to-haves,
+ *  or the whole text when it has no headings. Used to judge what a non-AI job asks for. */
+export function jobPart(text: string): string {
+  const s = sections(text);
+  return s.do.trim() || s.need.trim() ? `${s.do} ${s.need} ${s.nice}` : text;
+}
 
 /** Split the text at each heading phrase; a section runs until the next heading. */
 export function sections(text: string): Record<Kind, string> {
@@ -37,7 +45,7 @@ export function yearsOf(text: string): number | undefined {
   return ys.length ? Math.min(...ys) : undefined;
 }
 
-export interface Extracted { skills: string[]; tasks: string[]; tools: string[]; toolsPreferred: string[]; years?: number; sectioned: boolean }
+export interface Extracted { skills: string[]; tasks: string[]; tools: string[]; toolsPreferred: string[]; tech: string[]; years?: number; sectioned: boolean }
 
 export function extract(title: string, text: string): Extracted {
   const s = sections(text);
@@ -51,6 +59,7 @@ export function extract(title: string, text: string): Extracted {
     tasks: tasksOf(sectioned && s.do.trim() ? `${title} ${s.do}` : core),
     tools: [...required, ...preferred],
     toolsPreferred: preferred,
+    tech: techOf(all),
     years: yearsOf(sectioned ? `${s.need} ${s.nice}` : text),
     sectioned,
   };
