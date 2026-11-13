@@ -45,7 +45,7 @@ export const structure: Section[] = [
   {
     n: "05", id: "certificates", label: "Certificates", title: "Industry certificates", href: "/certificates/", match: ["/certificates/"],
     line: "The certificates the industry asks for most, and what each one proves.",
-    pages: [{ label: "Certificates", href: "/certificates/", note: "By provider and by role", soon: true }],
+    pages: [{ label: "Certificates", href: "/certificates/", note: "By track and level, with official links" }],
   },
   {
     n: "06", id: "docs", label: "Docs", title: "Technical docs, in motion", href: "/docs/", match: ["/docs/", "/jargon/", "/learn/"],

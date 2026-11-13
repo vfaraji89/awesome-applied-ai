@@ -3,7 +3,8 @@ import { LearnPath } from "@/components/learn-path";
 import { RequestFlow } from "@/components/request-flow";
 import { DocCover } from "@/components/doc-cover";
 import { structure, type Section } from "@/lib/structure";
-import { fRoles, skills, education } from "@/data/framework";
+import { fRoles, skills } from "@/data/framework";
+import { certs, LEVELS } from "@/data/certificates";
 import { docs } from "@/data/docs";
 import { site } from "@/lib/site";
 import market from "@/data/market.json";
@@ -12,6 +13,8 @@ import { T, TH } from "@/i18n/lang";
 import { slug } from "@/i18n/slug";
 import { tools } from "@/data/tools";
 import { areas } from "@/data/areas";
+
+const FEATURED = ["claude-ccaf", "aws-genai", "ms-ai103", "google-agentic"];
 
 function Band({ s, alt, children }: { s: Section; alt?: boolean; children: React.ReactNode }) {
   return (
@@ -41,7 +44,6 @@ export default function Home() {
   const roleName = Object.fromEntries(fRoles.map((r) => [r.id, r.name]));
   const topRoles = market.roles.slice(0, 4);
   const max = topRoles[0]?.n ?? 1;
-  const providers = education.filter((e) => e.kind !== "Degree");
   return (
     <>
       <section className="section">
@@ -102,11 +104,12 @@ export default function Home() {
 
       <Band s={ce}>
         <div className="grid grid-2">
-          {providers.map((e) => (
-            <div key={e.kind} className="frame">
-              <span className="kicker">{e.kind === "Frameworks" ? <T k="ce.frameworks">Frameworks</T> : e.kind}</span>
-              <p className="muted" style={{ marginTop: 6, fontSize: ".92rem" }}><T k={`ce.${e.kind.toLowerCase().replace(/[^a-z]+/g, "-")}.0`}>{e.items[0]}</T></p>
-            </div>
+          {FEATURED.map((id) => certs.find((c) => c.id === id)!).map((c) => (
+            <a key={c.id} href={c.url} target="_blank" rel="noreferrer" className="frame">
+              <span className="kicker">{c.provider} · <T k={`ce.level.${c.level}`}>{LEVELS[c.level]}</T></span>
+              <b style={{ display: "block", marginTop: 6 }}>{c.name} <span aria-hidden="true">↗</span></b>
+              <p className="muted" style={{ marginTop: 6, fontSize: ".92rem" }}><T k={`ce.${c.id}.what`}>{c.what}</T></p>
+            </a>
           ))}
         </div>
       </Band>
