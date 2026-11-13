@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { structure } from "@/lib/structure";
+import { T } from "@/i18n/lang";
 
 /* The hero's seven steps, in the site's order, on one wooden rod; a red bead walks along them. */
 export function LearnPath() {
@@ -12,7 +13,7 @@ export function LearnPath() {
             <Link href={`#${s.id}`} className="lp-step">
               <span className="lp-dot" />
               <span className="mono lp-n">{s.n}</span>
-              <b>{s.label}</b>
+              <b><T k={`sec.${s.id}.label`}>{s.label}</T></b>
             </Link>
           </li>
         ))}
@@ -22,8 +23,8 @@ export function LearnPath() {
         .lp-rod { position: absolute; left: 0; right: 0; top: 7px; height: 4px; border-radius: 4px; background: var(--rod); }
         .lp-bead { position: absolute; top: -7px; left: 0; width: 18px; height: 18px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); box-shadow: 0 4px 8px -3px rgba(158,26,12,.6); animation: lp-walk 12s var(--ease) infinite; }
         @keyframes lp-walk {
-          0%, 8% { left: 0; } 16%, 24% { left: calc(100% / 6); } 32%, 40% { left: calc(200% / 6); } 48%, 56% { left: calc(300% / 6); }
-          64%, 72% { left: calc(400% / 6); } 80%, 92% { left: calc(500% / 6); } 100% { left: 0; }
+          0%, 6% { left: 0; } 13%, 19% { left: calc(100% / 7); } 26%, 32% { left: calc(200% / 7); } 39%, 45% { left: calc(300% / 7); }
+          52%, 58% { left: calc(400% / 7); } 65%, 71% { left: calc(500% / 7); } 78%, 90% { left: calc(600% / 7); } 100% { left: 0; }
         }
         .lp-steps { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(7, 1fr); gap: 12px; }
         .lp-step { display: flex; flex-direction: column; gap: 2px; padding-top: 26px; text-decoration: none; position: relative; animation: rise .7s var(--ease) both; animation-delay: calc(var(--i) * 90ms + 200ms); }

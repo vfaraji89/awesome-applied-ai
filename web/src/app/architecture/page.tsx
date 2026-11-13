@@ -6,7 +6,7 @@ import { tools } from "@/data/tools";
 import { problems } from "@/data/problems";
 import { RequestFlow } from "@/components/request-flow";
 import { More } from "@/components/more";
-import { TH } from "@/i18n/lang";
+import { T, TH } from "@/i18n/lang";
 
 export const metadata: Metadata = { title: "AI-native architecture", description: "The six layers of an AI-native system, and the agent harness that runs on them." };
 
@@ -42,16 +42,16 @@ export default function Architecture() {
                   <div className="layer-head">
                     <span className="mono count">{String(layers.length - i).padStart(2, "0")}</span>
                     <div>
-                      <h2>{l.name}<span className="dot">.</span></h2>
-                      <p className="muted" style={{ marginTop: 6 }}>{l.tagline}. <i>{l.question}</i></p>
+                      <h2><T k={`layer.${l.id}`}>{l.name}</T><span className="dot">.</span></h2>
+                      <p className="muted" style={{ marginTop: 6 }}><T k={`layer.${l.id}.tag`}>{l.tagline}</T>. <i><T k={`layer.${l.id}.q`}>{l.question}</T></i></p>
                     </div>
                   </div>
                   <div className="chips" style={{ marginTop: 16 }}>
-                    {l.categories.map((c) => <Link key={c.id} href={`/tools/?layer=${l.id}&q=`} className="chip">{c.name}</Link>)}
+                    {l.categories.map((c) => <Link key={c.id} href={`/tools/?layer=${l.id}&q=`} className="chip"><T k={`layer.${l.id}.cat.${c.id}`}>{c.name}</T></Link>)}
                   </div>
                   <div className="layer-foot">
-                    <Link href={`/tools/?layer=${l.id}`} className="count">{n} tools →</Link>
-                    {pr.length > 0 && <Link href={`/problems/#${l.id}`} className="count">{pr.length} problems →</Link>}
+                    <Link href={`/tools/?layer=${l.id}`} className="count"><T k="tools.n" vars={{ n }}>{"{n} tools"}</T> →</Link>
+                    {pr.length > 0 && <Link href={`/problems/#${l.id}`} className="count"><T k="ac.problems" vars={{ n: pr.length }}>{"{n} problems"}</T> →</Link>}
                   </div>
                 </article>
               );
@@ -61,16 +61,16 @@ export default function Architecture() {
       </section>
       <section className="section" style={{ background: "var(--paper)" }}>
         <div className="wrap">
-          <span className="kicker">The agent harness</span>
-          <h2 style={{ marginTop: 10 }}>What runs on the layers<span className="dot">.</span></h2>
+          <span className="kicker"><T k="ac.harness">The agent harness</T></span>
+          <h2 style={{ marginTop: 10 }}><T k="ac.harness_h">What runs on the layers</T><span className="dot">.</span></h2>
           <p className="lead" style={{ marginTop: 12 }}><TH k="architecture.p3">An agent is <b>a model inside a harness</b>.</TH></p>
           <More><p className="lead" style={{ marginTop: 12 }}><TH k="architecture.p4">Six parts make the difference between <b>a demo</b> and something that <b>survives production</b>.</TH></p></More>
           <div className="harness">
             {HARNESS.map((h, i) => (
               <a key={h.t} href={`#${h.layer}`} className="h-node" style={{ ["--i" as string]: i }}>
                 <span className="bead" />
-                <b>{h.t}</b>
-                <span className="muted">{h.d}</span>
+                <b><T k={`ac.h.${i}`}>{h.t}</T></b>
+                <span className="muted"><T k={`ac.h.${i}.d`}>{h.d}</T></span>
               </a>
             ))}
           </div>

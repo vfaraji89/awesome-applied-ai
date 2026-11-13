@@ -4,7 +4,7 @@ import { Crumb } from "@/components/section-intro";
 import { TechRadar } from "@/components/tech-radar";
 import { More } from "@/components/more";
 import { radar, checked, quarter } from "@/data/radar";
-import { TH } from "@/i18n/lang";
+import { T, TH } from "@/i18n/lang";
 
 export const metadata: Metadata = { title: "Emerging tech radar", description: "What is new in applied AI and how far to trust it: tabular foundation models, JEPA world models, diffusion LMs, hybrid state-space models, agent skills and protocols, sandboxes, disaggregated serving, OpenTelemetry GenAI and more." };
 
@@ -17,10 +17,10 @@ export default function Radar() {
         <p className="lead" style={{ marginTop: 16 }}><TH k="radar.p1" vars={{ v1: radar.length }}><b>{radar.length} emerging technologies</b>, each on a ring: <b>use now</b>, <b>pilot</b>, <b>evaluate</b> or <b>watch</b>.</TH></p>
         <More>
           <p className="lead" style={{ marginTop: 12 }}><TH k="radar.p2">Every entry says <b>what it is</b>, <b>why it matters</b>, <b>when to use it</b> and <b>when not to</b>, with its sources. Tap a bead to open its card.</TH></p>
-          <p className="count" style={{ marginTop: 12 }}>Read on {checked} from papers, project pages and practitioner write-ups. Vendor figures are treated as claims, not results. Spot something out of date? <Link href="/contribute/">Send a fix</Link>.</p>
+          <p className="count" style={{ marginTop: 12 }}><T k="rd.read" vars={{ d: checked }}>{"Read on {d} from papers, project pages and practitioner write-ups. Vendor figures are treated as claims, not results. Spot something out of date?"}</T> <Link href="/contribute/"><T k="ui.fix">Send a fix</T></Link>.</p>
         </More>
         <div className="frame q-brief">
-          <span className="kicker">{quarter.name} in brief</span>
+          <span className="kicker"><T k="rd.brief" vars={{ q: quarter.name }}>{"{q} in brief"}</T></span>
           <ol>
             {quarter.points.map((p, i) => (
               <li key={p.title}><span className="q-n">{i + 1}</span><div><a href={p.href}><b>{p.title}</b></a></div></li>

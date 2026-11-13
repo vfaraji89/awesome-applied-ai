@@ -5,7 +5,7 @@ import { labs, shared, checked } from "@/data/labs";
 import { skills } from "@/data/framework";
 import fit from "@/data/role-fit.json";
 import { More } from "@/components/more";
-import { TH } from "@/i18n/lang";
+import { T, TH } from "@/i18n/lang";
 
 export const metadata: Metadata = { title: "What the labs ask for", description: "What Anthropic, OpenAI and Google Cloud ask for in their own applied AI and forward deployed engineering roles, from their public postings." };
 
@@ -26,21 +26,21 @@ export default function Labs() {
           <p className="lead" style={{ marginTop: 16 }}><TH k="labs.p1"><b>Anthropic, OpenAI and Google</b>, side by side: what their applied AI roles ask for.</TH></p>
           <More>
             <p className="lead" style={{ marginTop: 12 }}><TH k="labs.p2">All three hire <b>applied AI and forward deployed engineers</b> to put their models into production with customers. Each card sets their own postings next to <b>what the wider market asks</b> for the same roles.</TH></p>
-            <p className="count" style={{ marginTop: 14 }}>Read from public postings on {checked}. Postings change; each card links to the provider&apos;s careers page and to the postings used.</p>
+            <p className="count" style={{ marginTop: 14 }}><T k="lb.read" vars={{ d: checked }}>{"Read from public postings on {d}. Postings change; each card links to the provider’s careers page and to the postings used."}</T></p>
           </More>
 
-          <span className="kicker" style={{ display: "block", marginTop: 34 }}>What all three ask for</span>
+          <span className="kicker" style={{ display: "block", marginTop: 34 }}><T k="lb.shared">What all three ask for</T></span>
           <ul className="lb-shared">
             {shared.map((s) => (
               <li key={s.id} className="frame">
-                <b>{skillName(s.id)}</b>
-                <span className="muted">{s.why}</span>
-                <span className="lb-mk"><span className="mono">{market(s.id)}%</span> of applied AI and FDE postings across the market ask for it</span>
+                <b><T k={`skill.${s.id}`}>{skillName(s.id)}</T></b>
+                <span className="muted"><T k={`lb.why.${s.id}`}>{s.why}</T></span>
+                <span className="lb-mk"><span className="mono">{market(s.id)}%</span> <T k="lb.mk">of applied AI and FDE postings across the market ask for it</T></span>
                 <span className="rod" />
               </li>
             ))}
           </ul>
-          <p style={{ marginTop: 16 }}><Link href="/fit/" className="btn">Check your fit against the market →</Link></p>
+          <p style={{ marginTop: 16 }}><Link href="/fit/" className="btn"><T k="lb.fit">Check your fit against the market</T> →</Link></p>
         </div>
       </section>
 
@@ -50,24 +50,24 @@ export default function Labs() {
             {labs.map((l) => (
               <article key={l.id} className="frame lb-card">
                 <span className="kicker">{l.name}</span>
-                <h2 style={{ fontSize: "1.35rem", marginTop: 8 }}>{l.headline}<span className="dot">.</span></h2>
+                <h2 style={{ fontSize: "1.35rem", marginTop: 8 }}><T k={`lb.${l.id}.head`}>{l.headline}</T><span className="dot">.</span></h2>
                 <ul className="lb-titles">{l.titles.map((t) => <li key={t}>{t}</li>)}</ul>
-                <p className="lb-exp"><b>Experience</b> {l.experience}</p>
+                <p className="lb-exp"><b><T k="lb.exp">Experience</T></b> <T k={`lb.${l.id}.exp`}>{l.experience}</T></p>
                 <dl className="lb-asks">
-                  {l.asks.map((a) => <div key={a.skill}><dt>{a.skill}</dt><dd>{a.detail}</dd></div>)}
+                  {l.asks.map((a, i) => <div key={a.skill}><dt><T k={`lb.${l.id}.ask.${i}`}>{a.skill}</T></dt><dd><T k={`lb.${l.id}.ask.${i}.d`}>{a.detail}</T></dd></div>)}
                 </dl>
                 <div className="lb-stack">{l.stack.map((s) => <span key={s} className="chip">{s}</span>)}</div>
-                <ul className="lb-notes">{l.notes.map((n) => <li key={n}>{n}</li>)}</ul>
+                <ul className="lb-notes">{l.notes.map((n, i) => <li key={n}><T k={`lb.${l.id}.note.${i}`}>{n}</T></li>)}</ul>
                 <details className="lb-src">
-                  <summary>Sources ({l.sources.length})</summary>
+                  <summary><T k="lb.sources" vars={{ n: l.sources.length }}>{"Sources ({n})"}</T></summary>
                   <ul>{l.sources.map((s) => <li key={s.url}><a href={s.url} target="_blank" rel="noopener noreferrer">{s.label}</a></li>)}</ul>
                 </details>
-                <a className="chip" href={l.careers} target="_blank" rel="noopener noreferrer" style={{ marginTop: 14 }}>{l.name} careers ↗</a>
+                <a className="chip" href={l.careers} target="_blank" rel="noopener noreferrer" style={{ marginTop: 14 }}><T k="lb.careers" vars={{ n: l.name }}>{"{n} careers"}</T> ↗</a>
                 <span className="rod" />
               </article>
             ))}
           </div>
-          <p className="count" style={{ marginTop: 22 }}>Pay is left out on purpose: the figures in mirrored postings did not agree. Spot an outdated line? <Link href="/contribute/">Send a fix</Link>.</p>
+          <p className="count" style={{ marginTop: 22 }}><T k="lb.pay">Pay is left out on purpose: the figures in mirrored postings did not agree. Spot an outdated line?</T> <Link href="/contribute/"><T k="ui.fix">Send a fix</T></Link>.</p>
         </div>
       </section>
       <style>{`

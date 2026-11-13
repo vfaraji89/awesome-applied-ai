@@ -1,10 +1,12 @@
 "use client";
 import { useMemo, useState } from "react";
+import { T, useT } from "@/i18n/lang";
 import type { Field, Term } from "@/lib/types";
 
 /* Flip cards: the plain meaning on the front, the deeper answer and the interview question on the back. */
 export function JargonBrowser({ terms, fields }: { terms: Term[]; fields: Field[] }) {
   const [q, setQ] = useState("");
+  const tr = useT();
   const [field, setField] = useState("all");
   const [open, setOpen] = useState<Record<string, boolean>>({});
   const hits = useMemo(() => {
@@ -14,18 +16,18 @@ export function JargonBrowser({ terms, fields }: { terms: Term[]; fields: Field[
   return (
     <div>
       <div className="jb-bar">
-        <input className="field" type="search" placeholder={`Search ${terms.length} terms: KV cache, RAG, eval, MCP…`} value={q} onChange={(e) => setQ(e.target.value)} aria-label="Search jargon" />
+        <input className="field" type="search" placeholder={tr("jg.search", "Search {n} terms: KV cache, RAG, eval, MCP…", { n: terms.length })} value={q} onChange={(e) => setQ(e.target.value)} aria-label={tr("jg.search_aria", "Search jargon")} />
         <div className="chips">
-          <button type="button" className={`chip${field === "all" ? " on" : ""}`} onClick={() => setField("all")}>All <span className="count">{terms.length}</span></button>
+          <button type="button" className={`chip${field === "all" ? " on" : ""}`} onClick={() => setField("all")}><T k="tools.all">All</T> <span className="count">{terms.length}</span></button>
           {fields.map((f) => (
             <button key={f.id} type="button" className={`chip${field === f.id ? " on" : ""}`} onClick={() => setField(f.id)}>
-              {f.name} <span className="count">{terms.filter((t) => t.field === f.id).length}</span>
+              <T k={`jf.${f.id}`}>{f.name}</T> <span className="count">{terms.filter((t) => t.field === f.id).length}</span>
             </button>
           ))}
         </div>
       </div>
-      {field !== "all" && <p className="lead" style={{ margin: "18px 0 0" }}>{fields.find((f) => f.id === field)?.intro}</p>}
-      <p className="count" style={{ margin: "18px 0 14px" }}>{hits.length} terms · tap a card to turn it over</p>
+      {field !== "all" && <p className="lead" style={{ margin: "18px 0 0" }}><T k={`jf.${field}.intro`}>{fields.find((f) => f.id === field)?.intro ?? ""}</T></p>}
+      <p className="count" style={{ margin: "18px 0 14px" }}><T k="jg.n" vars={{ n: hits.length }}>{"{n} terms · tap a card to turn it over"}</T></p>
       <div className="grid grid-3">
         {hits.map((t, i) => {
           const on = !!open[t.id];
@@ -33,15 +35,15 @@ export function JargonBrowser({ terms, fields }: { terms: Term[]; fields: Field[
             <button key={t.id} id={t.id} type="button" className={`jb-card${on ? " flipped" : ""}`} style={{ ["--i" as string]: Math.min(i, 12) }} onClick={() => setOpen((o) => ({ ...o, [t.id]: !o[t.id] }))} aria-pressed={on}>
               <span className="jb-inner">
                 <span className="jb-face jb-front frame">
-                  <span className="kicker">{fields.find((f) => f.id === t.field)?.name}</span>
+                  <span className="kicker"><T k={`jf.${t.field}`}>{fields.find((f) => f.id === t.field)?.name ?? ""}</T></span>
                   <b className="jb-term">{t.term}<span className="dot">.</span></b>
                   <span className="muted">{t.short}</span>
-                  {t.also && <span className="count">also: {t.also.join(", ")}</span>}
+                  {t.also && <span className="count"><T k="jg.also">also:</T> {t.also.join(", ")}</span>}
                 </span>
                 <span className="jb-face jb-back frame">
-                  <span className="kicker">Go deeper</span>
+                  <span className="kicker"><T k="jg.deeper">Go deeper</T></span>
                   <span>{t.detail}</span>
-                  {t.asked && <span className="jb-asked"><span className="count">Asked as</span> “{t.asked}”</span>}
+                  {t.asked && <span className="jb-asked"><span className="count"><T k="jg.asked">Asked as</T></span> “{t.asked}”</span>}
                   {t.link && <span className="jb-link" role="link" tabIndex={0} onClick={(e) => { e.stopPropagation(); window.open(t.link!.href, "_blank", "noopener"); }} onKeyDown={(e) => { if (e.key === "Enter") { e.stopPropagation(); e.preventDefault(); window.open(t.link!.href, "_blank", "noopener"); } }}>{t.link.label} ↗</span>}
                 </span>
               </span>

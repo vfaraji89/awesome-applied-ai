@@ -1,3 +1,4 @@
+import { T } from "@/i18n/lang";
 import type { Metadata } from "next";
 import fs from "node:fs";
 import path from "node:path";
@@ -36,7 +37,8 @@ export default function Note() {
   const first = days[0], last = jobs.map((j) => j.lastSeen).sort().at(-1) ?? days.at(-1);
   const from = last ? new Date(new Date(last + "T00:00:00Z").getTime() - 6 * 864e5).toISOString().slice(0, 10) : "";
   const fresh = jobs.filter((j) => j.firstSeen !== first && j.firstSeen >= from);
-  const roleName = (id: string) => fRoles.find((r) => r.id === id)?.name ?? "Other AI roles";
+  const roleName = (id: string) => fRoles.find((r) => r.id === id)?.name ?? "";
+  const roleEn = (id: string) => roleName(id) || "Other AI roles";
   const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
   const roles = top(fresh.map((j) => j.role), 4);
   const sk = top(fresh.flatMap((j) => j.skills), 4);
@@ -45,7 +47,7 @@ export default function Note() {
   const pct = (n: number) => (fresh.length ? Math.round((n / fresh.length) * 100) : 0);
   const post = fresh.length
     ? `Applied AI hiring, ${fmt(from)} to ${fmt(last!)}: ${fresh.length} new technical AI roles on the boards I track.\n\n` +
-      `Most common: ${roles.map(([r, n]) => `${roleName(r)} (${n})`).join(", ")}.\n` +
+      `Most common: ${roles.map(([r, n]) => `${roleEn(r)} (${n})`).join(", ")}.\n` +
       `Skills asked for most: ${sk.map(([s, n]) => `${skillName(s)} ${pct(n)}%`).join(", ")}.\n` +
       `Tools named most: ${tl.map(([t]) => t).join(", ")}.\n\n` +
       `Updated weekly from public job boards: vfaraji89.github.io/awesome-applied-ai/market/`
@@ -54,36 +56,36 @@ export default function Note() {
     <section className="section">
       <div className="wrap">
         <Crumb id="market" page="Weekly note" />
-        <h1 style={{ marginTop: 12 }}>This week in applied AI hiring<span className="dot">.</span></h1>
-        <p className="lead" style={{ marginTop: 16 }}>Written from the tracker every time the site builds. Screenshot the card, or copy the text under it.</p>
+        <h1 style={{ marginTop: 12 }}><T k="wn.h1">This week in applied AI hiring</T><span className="dot">.</span></h1>
+        <p className="lead" style={{ marginTop: 16 }}><T k="wn.lead">Written from the tracker every time the site builds. Screenshot the card, or copy the text under it.</T></p>
 
         {fresh.length === 0 ? (
-          <div className="frame" style={{ marginTop: 32 }}><p className="lead">Not enough history yet. The note appears once the tracker has run for a few days.</p></div>
+          <div className="frame" style={{ marginTop: 32 }}><p className="lead"><T k="wn.empty">Not enough history yet. The note appears once the tracker has run for a few days.</T></p></div>
         ) : (
           <>
             <div className="wn" aria-label="Weekly note card">
               <span className="wn-post l" /><span className="wn-post r" />
-              <div className="wn-top"><Mark size={34} /><b>Applied AI<span className="dot">.</span></b><span className="kicker">market note · {fmt(from)} – {fmt(last!)}</span></div>
-              <div className="wn-big"><b>{fresh.length}</b><span>new technical AI roles this week<br /><em>{remote}% remote</em></span></div>
+              <div className="wn-top"><Mark size={34} /><b>Applied AI<span className="dot">.</span></b><span className="kicker"><T k="wn.k" vars={{ from: fmt(from), to: fmt(last!) }}>{"market note · {from} to {to}"}</T></span></div>
+              <div className="wn-big"><b>{fresh.length}</b><span><T k="wn.new">new technical AI roles this week</T><br /><em><T k="wn.remote" vars={{ n: remote }}>{"{n}% remote"}</T></em></span></div>
               <div className="wn-cols">
-                <div><span className="kicker">Roles</span><ul>{roles.map(([r, n]) => <li key={r}><span className="bead" />{roleName(r)}<i>{n}</i></li>)}</ul></div>
-                <div><span className="kicker">Skills asked for</span><ul>{sk.map(([s, n]) => <li key={s}><span className="bead ink" />{skillName(s)}<i>{pct(n)}%</i></li>)}</ul></div>
-                <div><span className="kicker">Tools named</span><ul>{tl.map(([t, n]) => <li key={t}><span className="bead white" />{t}<i>{n}</i></li>)}</ul></div>
+                <div><span className="kicker"><T k="mk.k_roles">Roles</T></span><ul>{roles.map(([r, n]) => <li key={r}><span className="bead" />{roleName(r) || <T k="mk.other">Other AI roles</T>}<i>{n}</i></li>)}</ul></div>
+                <div><span className="kicker"><T k="wn.skills">Skills asked for</T></span><ul>{sk.map(([s, n]) => <li key={s}><span className="bead ink" /><T k={`skill.${s}`}>{skillName(s)}</T><i>{pct(n)}%</i></li>)}</ul></div>
+                <div><span className="kicker"><T k="wn.tools">Tools named</T></span><ul>{tl.map(([t, n]) => <li key={t}><span className="bead white" />{t}<i>{n}</i></li>)}</ul></div>
               </div>
               <div className="wn-foot mono">vfaraji89.github.io/awesome-applied-ai/market</div>
             </div>
-            <h2 style={{ marginTop: 44 }}>As a post<span className="dot">.</span></h2>
+            <h2 style={{ marginTop: 44 }}><T k="wn.post">As a post, in English</T><span className="dot">.</span></h2>
             <pre className="wn-text">{post}</pre>
             {hist.length > 0 && (
               <>
-                <h2 style={{ marginTop: 44 }}>Week by week<span className="dot">.</span></h2>
+                <h2 style={{ marginTop: 44 }}><T k="wn.weeks">Week by week</T><span className="dot">.</span></h2>
                 <table className="wn-hist">
-                  <thead><tr><th>Week</th><th>Dates</th><th>Open roles</th><th>New</th><th>Remote</th></tr></thead>
+                  <thead><tr><th><T k="wn.th_week">Week</T></th><th><T k="wn.th_dates">Dates</T></th><th><T k="wn.th_open">Open roles</T></th><th><T k="wn.th_new">New</T></th><th><T k="mk.remote">Remote</T></th></tr></thead>
                   <tbody>{hist.slice().reverse().map((w) => <tr key={w.week}><td className="mono">{w.week}</td><td>{fmt(w.from)} – {fmt(w.to)}</td><td>{w.open}</td><td>{w.new}</td><td>{w.remoteShare}%</td></tr>)}</tbody>
                 </table>
               </>
             )}
-            <p className="count" style={{ marginTop: 14 }}>New means first seen in the last seven days. Tracking began on {fmt(first)}; that first day is left out because every open role looked new then.</p>
+            <p className="count" style={{ marginTop: 14 }}><T k="wn.foot" vars={{ d: fmt(first) }}>{"New means first seen in the last seven days. Tracking began on {d}; that first day is left out because every open role looked new then."}</T></p>
           </>
         )}
       </div>
