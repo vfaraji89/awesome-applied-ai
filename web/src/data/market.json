@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T03:36:36.668Z",
+ "generatedAt": "2026-11-13T03:40:56.424Z",
  "since": "2026-10-01",
  "sinceQuarter": "2026 Q4",
  "totals": {
@@ -572,6 +572,862 @@
   }
  ],
  "reposts": 0,
+ "insights": {
+  "perAd": {
+   "skills": 4.7,
+   "wide": 52
+  },
+  "aiDev": {
+   "share": 5,
+   "tools": [
+    "Claude Code"
+   ]
+  },
+  "junior": 5,
+  "roleSkill": {
+   "rows": [
+    "forward-deployed-engineer",
+    "rd-researcher",
+    "applied-ai-engineer",
+    "ai-platform-engineer",
+    "agentic-ai-engineer",
+    "ai-native-architect",
+    "ai-native-developer",
+    "ai-solutions-architect"
+   ],
+   "cols": [
+    "software",
+    "agents",
+    "customer",
+    "evals",
+    "product",
+    "models",
+    "security",
+    "retrieval",
+    "data",
+    "architecture",
+    "context",
+    "ai-dev"
+   ],
+   "n": [
+    286,
+    193,
+    133,
+    128,
+    106,
+    80,
+    57,
+    34
+   ],
+   "cells": [
+    [
+     80,
+     54,
+     92,
+     25,
+     53,
+     8,
+     9,
+     23,
+     38,
+     20,
+     9,
+     5
+    ],
+    [
+     65,
+     45,
+     36,
+     42,
+     22,
+     62,
+     42,
+     8,
+     30,
+     16,
+     8,
+     7
+    ],
+    [
+     72,
+     72,
+     66,
+     61,
+     50,
+     26,
+     36,
+     34,
+     18,
+     11,
+     46,
+     34
+    ],
+    [
+     80,
+     65,
+     41,
+     51,
+     33,
+     66,
+     19,
+     23,
+     18,
+     32,
+     29,
+     5
+    ],
+    [
+     75,
+     100,
+     50,
+     68,
+     42,
+     38,
+     38,
+     36,
+     12,
+     47,
+     38,
+     33
+    ],
+    [
+     65,
+     60,
+     85,
+     75,
+     50,
+     6,
+     60,
+     43,
+     5,
+     30,
+     19,
+     56
+    ],
+    [
+     82,
+     79,
+     49,
+     53,
+     33,
+     33,
+     21,
+     16,
+     18,
+     49,
+     21,
+     25
+    ],
+    [
+     74,
+     88,
+     94,
+     47,
+     62,
+     74,
+     59,
+     74,
+     56,
+     15,
+     18,
+     21
+    ]
+   ]
+  },
+  "roleTask": null,
+  "pairs": [
+   {
+    "a": "retrieval",
+    "b": "context",
+    "n": 108,
+    "share": 10,
+    "lift": 1.81
+   },
+   {
+    "a": "evals",
+    "b": "context",
+    "n": 190,
+    "share": 17,
+    "lift": 1.79
+   },
+   {
+    "a": "retrieval",
+    "b": "ai-dev",
+    "n": 83,
+    "share": 8,
+    "lift": 1.61
+   },
+   {
+    "a": "models",
+    "b": "context",
+    "n": 117,
+    "share": 11,
+    "lift": 1.46
+   },
+   {
+    "a": "security",
+    "b": "context",
+    "n": 95,
+    "share": 9,
+    "lift": 1.44
+   },
+   {
+    "a": "security",
+    "b": "ai-dev",
+    "n": 82,
+    "share": 8,
+    "lift": 1.44
+   },
+   {
+    "a": "evals",
+    "b": "security",
+    "n": 201,
+    "share": 18,
+    "lift": 1.38
+   },
+   {
+    "a": "product",
+    "b": "retrieval",
+    "n": 163,
+    "share": 15,
+    "lift": 1.36
+   }
+  ],
+  "remoteByRole": [
+   {
+    "id": "applied-ai-engineer",
+    "n": 133,
+    "share": 35
+   },
+   {
+    "id": "ai-native-architect",
+    "n": 80,
+    "share": 30
+   },
+   {
+    "id": "ai-native-developer",
+    "n": 57,
+    "share": 26
+   },
+   {
+    "id": "ai-solutions-architect",
+    "n": 34,
+    "share": 26
+   },
+   {
+    "id": "agentic-ai-engineer",
+    "n": 106,
+    "share": 25
+   },
+   {
+    "id": "forward-deployed-engineer",
+    "n": 286,
+    "share": 22
+   },
+   {
+    "id": "rd-researcher",
+    "n": 193,
+    "share": 21
+   },
+   {
+    "id": "ai-platform-engineer",
+    "n": 128,
+    "share": 21
+   }
+  ],
+  "yearsByLevel": [],
+  "labs": null,
+  "skills": [
+   {
+    "id": "software",
+    "n": 814,
+    "share": 75,
+    "topRole": {
+     "id": "ai-native-developer",
+     "share": 82
+    },
+    "with": [
+     {
+      "id": "data",
+      "share": 30,
+      "lift": 1.2
+     },
+     {
+      "id": "evals",
+      "share": 50,
+      "lift": 1.1
+     }
+    ],
+    "tools": [
+     "Python",
+     "TypeScript",
+     "SQL",
+     "LangGraph"
+    ],
+    "toolLift": [
+     {
+      "name": "Python",
+      "share": 85,
+      "lift": 1.3
+     },
+     {
+      "name": "TypeScript",
+      "share": 35,
+      "lift": 1.3
+     },
+     {
+      "name": "SQL",
+      "share": 14,
+      "lift": 1.3
+     },
+     {
+      "name": "LangGraph",
+      "share": 5,
+      "lift": 1.3
+     }
+    ]
+   },
+   {
+    "id": "agents",
+    "n": 693,
+    "share": 64,
+    "topRole": {
+     "id": "agentic-ai-engineer",
+     "share": 100
+    },
+    "with": [
+     {
+      "id": "context",
+      "share": 28,
+      "lift": 1.3
+     },
+     {
+      "id": "ai-dev",
+      "share": 24,
+      "lift": 1.3
+     }
+    ],
+    "tools": [
+     "MCP",
+     "LangGraph",
+     "LangSmith",
+     "ElevenLabs"
+    ],
+    "toolLift": [
+     {
+      "name": "MCP",
+      "share": 13,
+      "lift": 1.6
+     },
+     {
+      "name": "LangGraph",
+      "share": 6,
+      "lift": 1.6
+     },
+     {
+      "name": "LangSmith",
+      "share": 2,
+      "lift": 1.6
+     },
+     {
+      "name": "ElevenLabs",
+      "share": 2,
+      "lift": 1.6
+     }
+    ]
+   },
+   {
+    "id": "customer",
+    "n": 686,
+    "share": 63,
+    "topRole": {
+     "id": "ai-solutions-architect",
+     "share": 94
+    },
+    "with": [
+     {
+      "id": "product",
+      "share": 53,
+      "lift": 1.3
+     },
+     {
+      "id": "retrieval",
+      "share": 30,
+      "lift": 1.2
+     }
+    ],
+    "tools": [
+     "DSPy",
+     "BigQuery",
+     "LlamaIndex",
+     "RAG"
+    ],
+    "toolLift": [
+     {
+      "name": "DSPy",
+      "share": 2,
+      "lift": 1.6
+     },
+     {
+      "name": "BigQuery",
+      "share": 3,
+      "lift": 1.4
+     },
+     {
+      "name": "LlamaIndex",
+      "share": 1,
+      "lift": 1.4
+     },
+     {
+      "name": "RAG",
+      "share": 13,
+      "lift": 1.3
+     }
+    ]
+   },
+   {
+    "id": "evals",
+    "n": 505,
+    "share": 46,
+    "topRole": {
+     "id": "ai-native-architect",
+     "share": 75
+    },
+    "with": [
+     {
+      "id": "context",
+      "share": 38,
+      "lift": 1.8
+     },
+     {
+      "id": "security",
+      "share": 40,
+      "lift": 1.4
+     }
+    ],
+    "tools": [
+     "LangSmith",
+     "Azure AI Foundry",
+     "Langfuse",
+     "Braintrust"
+    ],
+    "toolLift": [
+     {
+      "name": "LangSmith",
+      "share": 3,
+      "lift": 2.2
+     },
+     {
+      "name": "Azure AI Foundry",
+      "share": 2,
+      "lift": 2.2
+     },
+     {
+      "name": "Langfuse",
+      "share": 2,
+      "lift": 2.2
+     },
+     {
+      "name": "Braintrust",
+      "share": 1,
+      "lift": 2.2
+     }
+    ]
+   },
+   {
+    "id": "product",
+    "n": 459,
+    "share": 42,
+    "topRole": {
+     "id": "ai-solutions-architect",
+     "share": 62
+    },
+    "with": [
+     {
+      "id": "retrieval",
+      "share": 36,
+      "lift": 1.4
+     },
+     {
+      "id": "customer",
+      "share": 79,
+      "lift": 1.3
+     }
+    ],
+    "tools": [
+     "Claude Agent SDK",
+     "DSPy",
+     "Elasticsearch",
+     "Agent Skills"
+    ],
+    "toolLift": [
+     {
+      "name": "Claude Agent SDK",
+      "share": 2,
+      "lift": 2.2
+     },
+     {
+      "name": "DSPy",
+      "share": 2,
+      "lift": 2
+     },
+     {
+      "name": "Elasticsearch",
+      "share": 4,
+      "lift": 1.7
+     },
+     {
+      "name": "Agent Skills",
+      "share": 2,
+      "lift": 1.6
+     }
+    ]
+   },
+   {
+    "id": "models",
+    "n": 382,
+    "share": 35,
+    "topRole": {
+     "id": "ai-solutions-architect",
+     "share": 74
+    },
+    "with": [
+     {
+      "id": "context",
+      "share": 31,
+      "lift": 1.5
+     },
+     {
+      "id": "evals",
+      "share": 58,
+      "lift": 1.3
+     }
+    ],
+    "tools": [
+     "Hugging Face",
+     "DSPy",
+     "LlamaIndex",
+     "AutoGen"
+    ],
+    "toolLift": [
+     {
+      "name": "Hugging Face",
+      "share": 9,
+      "lift": 2.9
+     },
+     {
+      "name": "DSPy",
+      "share": 3,
+      "lift": 2.6
+     },
+     {
+      "name": "LlamaIndex",
+      "share": 2,
+      "lift": 2.5
+     },
+     {
+      "name": "AutoGen",
+      "share": 2,
+      "lift": 2.1
+     }
+    ]
+   },
+   {
+    "id": "security",
+    "n": 314,
+    "share": 29,
+    "topRole": {
+     "id": "ai-native-architect",
+     "share": 60
+    },
+    "with": [
+     {
+      "id": "evals",
+      "share": 64,
+      "lift": 1.4
+     },
+     {
+      "id": "context",
+      "share": 30,
+      "lift": 1.4
+     }
+    ],
+    "tools": [
+     "CrewAI",
+     "EU AI Act",
+     "Claude Agent SDK",
+     "LlamaIndex"
+    ],
+    "toolLift": [
+     {
+      "name": "CrewAI",
+      "share": 3,
+      "lift": 3.2
+     },
+     {
+      "name": "EU AI Act",
+      "share": 3,
+      "lift": 3.1
+     },
+     {
+      "name": "Claude Agent SDK",
+      "share": 3,
+      "lift": 2.8
+     },
+     {
+      "name": "LlamaIndex",
+      "share": 2,
+      "lift": 2.7
+     }
+    ]
+   },
+   {
+    "id": "retrieval",
+    "n": 284,
+    "share": 26,
+    "topRole": {
+     "id": "ai-solutions-architect",
+     "share": 74
+    },
+    "with": [
+     {
+      "id": "context",
+      "share": 38,
+      "lift": 1.8
+     },
+     {
+      "id": "ai-dev",
+      "share": 29,
+      "lift": 1.6
+     }
+    ],
+    "tools": [
+     "RAG",
+     "DSPy",
+     "CrewAI",
+     "LlamaIndex"
+    ],
+    "toolLift": [
+     {
+      "name": "RAG",
+      "share": 41,
+      "lift": 3.8
+     },
+     {
+      "name": "DSPy",
+      "share": 4,
+      "lift": 3.8
+     },
+     {
+      "name": "CrewAI",
+      "share": 4,
+      "lift": 3.8
+     },
+     {
+      "name": "LlamaIndex",
+      "share": 3,
+      "lift": 3.8
+     }
+    ]
+   },
+   {
+    "id": "data",
+    "n": 280,
+    "share": 26,
+    "topRole": {
+     "id": "ai-solutions-architect",
+     "share": 56
+    },
+    "with": [
+     {
+      "id": "product",
+      "share": 56,
+      "lift": 1.3
+     },
+     {
+      "id": "software",
+      "share": 88,
+      "lift": 1.2
+     }
+    ],
+    "tools": [
+     "SQL",
+     "BigQuery",
+     "DSPy",
+     "Hugging Face"
+    ],
+    "toolLift": [
+     {
+      "name": "SQL",
+      "share": 41,
+      "lift": 3.9
+     },
+     {
+      "name": "BigQuery",
+      "share": 9,
+      "lift": 3.9
+     },
+     {
+      "name": "DSPy",
+      "share": 4,
+      "lift": 3.2
+     },
+     {
+      "name": "Hugging Face",
+      "share": 8,
+      "lift": 2.6
+     }
+    ]
+   },
+   {
+    "id": "architecture",
+    "n": 266,
+    "share": 24,
+    "topRole": {
+     "id": "ai-native-developer",
+     "share": 49
+    },
+    "with": [
+     {
+      "id": "evals",
+      "share": 62,
+      "lift": 1.3
+     },
+     {
+      "id": "models",
+      "share": 42,
+      "lift": 1.2
+     }
+    ],
+    "tools": [
+     "Perplexity AI Search",
+     "ElevenLabs",
+     "Agent Skills",
+     "MCP"
+    ],
+    "toolLift": [
+     {
+      "name": "Perplexity AI Search",
+      "share": 3,
+      "lift": 1.6
+     },
+     {
+      "name": "ElevenLabs",
+      "share": 2,
+      "lift": 1.6
+     },
+     {
+      "name": "Agent Skills",
+      "share": 2,
+      "lift": 1.6
+     },
+     {
+      "name": "MCP",
+      "share": 9,
+      "lift": 1.1
+     }
+    ]
+   },
+   {
+    "id": "context",
+    "n": 229,
+    "share": 21,
+    "topRole": {
+     "id": "applied-ai-engineer",
+     "share": 46
+    },
+    "with": [
+     {
+      "id": "evals",
+      "share": 83,
+      "lift": 1.8
+     },
+     {
+      "id": "retrieval",
+      "share": 47,
+      "lift": 1.8
+     }
+    ],
+    "tools": [
+     "LlamaIndex",
+     "Claude Agent SDK",
+     "Agent Skills",
+     "Elasticsearch"
+    ],
+    "toolLift": [
+     {
+      "name": "LlamaIndex",
+      "share": 3,
+      "lift": 4.2
+     },
+     {
+      "name": "Claude Agent SDK",
+      "share": 4,
+      "lift": 3.9
+     },
+     {
+      "name": "Agent Skills",
+      "share": 4,
+      "lift": 3.7
+     },
+     {
+      "name": "Elasticsearch",
+      "share": 7,
+      "lift": 3.4
+     }
+    ]
+   },
+   {
+    "id": "ai-dev",
+    "n": 198,
+    "share": 18,
+    "topRole": {
+     "id": "ai-native-architect",
+     "share": 56
+    },
+    "with": [
+     {
+      "id": "retrieval",
+      "share": 42,
+      "lift": 1.6
+     },
+     {
+      "id": "security",
+      "share": 41,
+      "lift": 1.4
+     }
+    ],
+    "tools": [
+     "Claude Code",
+     "Copilot Studio",
+     "Claude Agent SDK",
+     "A2A"
+    ],
+    "toolLift": [
+     {
+      "name": "Claude Code",
+      "share": 28,
+      "lift": 5.5
+     },
+     {
+      "name": "Copilot Studio",
+      "share": 3,
+      "lift": 5.5
+     },
+     {
+      "name": "Claude Agent SDK",
+      "share": 5,
+      "lift": 5
+     },
+     {
+      "name": "A2A",
+      "share": 3,
+      "lift": 3.7
+     }
+    ]
+   }
+  ]
+ },
  "byMonth": [
   {
    "month": "2026-11",

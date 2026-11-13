@@ -88,7 +88,7 @@ const fresh: Job[] = raw.filter((j) => !(AGGREGATORS.has(j.source) && direct.has
   const x = extract(j.title, j.text);
   return { key: hash(`${j.source}:${j.id}`), source: j.source, title: normTitle(j.title), role: role(j.title), seniority: seniority(j.title),
     remote: j.remote, skills: x.skills, tools: x.tools, tasks: x.tasks, ...(x.toolsPreferred.length ? { toolsPreferred: x.toolsPreferred } : {}),
-    ...(x.years ? { years: x.years } : {}), ck: ckOf(j), ...(j.posted ? { posted: j.posted } : {}), firstSeen: today, lastSeen: today };
+    ...(x.years ? { years: x.years } : {}), ...(!AGGREGATORS.has(j.source) && labOf(j.company)?.kind === "lab" ? { lab: true } : {}), ck: ckOf(j), ...(j.posted ? { posted: j.posted } : {}), firstSeen: today, lastSeen: today };
 });
 
 const store: Job[] = prevStore;
@@ -146,8 +146,66 @@ const summary = {
       bands: ["0-2", "3-4", "5-7", "8+"].map((b) => ({ id: b, n: ys.filter((y) => band(y) === b).length })) }; })(),
   byQuarter: count(win, (j) => { const [y, m] = when(j).split("-").map(Number); return `${y} Q${Math.ceil(m / 3)}`; }).sort((a, b) => a[0].localeCompare(b[0])).map(([q, n]) => ({ quarter: q, n })),
   reposts,
+  insights: insights(win),
   byMonth: months.map(([m, n]) => ({ month: m, n })),
 };
+
+/** Cross-cuts for the market page: what each role asks, which skills travel together, what labs
+ *  ask that others do not, and a profile per skill. Shares are whole percentages of the ads in
+ *  each group; groups under MIN ads are left out so a handful of ads cannot make a headline. */
+function insights(ads: Job[]) {
+  const MIN = 20;
+  const share = (n: number, of: number) => (of ? Math.round((n / of) * 100) : 0);
+  const has = (j: Job, s: string) => j.skills.includes(s);
+  const skillIds = count(ads, (j) => j.skills).map(([k]) => k);
+  const roleIds = count(ads, (j) => j.role).map(([k]) => k).filter((r) => r !== "other-ai" && ads.filter((j) => j.role === r).length >= MIN);
+  const grid = (rows: string[], cols: string[], pick: (j: Job) => string[]) => ({
+    rows, cols,
+    n: rows.map((r) => ads.filter((j) => j.role === r).length),
+    cells: rows.map((r) => { const g = ads.filter((j) => j.role === r); return cols.map((c) => share(g.filter((j) => pick(j).includes(c)).length, g.length)); }),
+  });
+  const withTasks = ads.filter((j) => j.tasks);
+  const taskIds = count(withTasks, (j) => j.tasks ?? []).map(([k]) => k);
+  // pairs: how much more often two skills appear together than if they were independent (lift)
+  const pairs: { a: string; b: string; n: number; share: number; lift: number }[] = [];
+  for (let i = 0; i < skillIds.length; i++) for (let k = i + 1; k < skillIds.length; k++) {
+    const a = skillIds[i], b = skillIds[k];
+    const na = ads.filter((j) => has(j, a)).length, nb = ads.filter((j) => has(j, b)).length, nab = ads.filter((j) => has(j, a) && has(j, b)).length;
+    if (nab < MIN || !na || !nb) continue;
+    pairs.push({ a, b, n: nab, share: share(nab, ads.length), lift: Math.round(((nab * ads.length) / (na * nb)) * 100) / 100 });
+  }
+  const labAds = ads.filter((j) => j.lab), rest = ads.filter((j) => !j.lab);
+  const AI_DEV = ["Cursor", "Claude Code", "GitHub Copilot", "Codex", "Windsurf", "Devin", "Aider", "Cline"];
+  return {
+    perAd: { skills: Math.round((ads.reduce((a, j) => a + j.skills.length, 0) / (ads.length || 1)) * 10) / 10,
+      wide: share(ads.filter((j) => j.skills.length >= 5).length, ads.length) },
+    aiDev: { share: share(ads.filter((j) => j.tools.some((t) => AI_DEV.includes(t))).length, ads.length), tools: AI_DEV.filter((t) => ads.some((j) => j.tools.includes(t))) },
+    junior: share(ads.filter((j) => /^(intern|junior)$/i.test(j.seniority)).length, ads.length),
+    roleSkill: grid(roleIds, skillIds, (j) => j.skills),
+    roleTask: withTasks.length >= MIN ? { ...grid(roleIds.filter((r) => withTasks.filter((j) => j.role === r).length >= MIN), taskIds, (j) => j.tasks ?? []) } : null,
+    pairs: pairs.sort((x, y) => y.lift - x.lift).slice(0, 8),
+    remoteByRole: roleIds.map((r) => { const g = ads.filter((j) => j.role === r); return { id: r, n: g.length, share: share(g.filter((j) => j.remote).length, g.length) }; }).sort((a, b) => b.share - a.share),
+    yearsByLevel: count(ads.filter((j) => j.years), (j) => j.seniority).filter(([, n]) => n >= MIN).map(([lvl]) => {
+      const ys = ads.filter((j) => j.seniority === lvl && j.years).map((j) => j.years!).sort((a, b) => a - b);
+      return { id: lvl, n: ys.length, median: ys[Math.floor(ys.length / 2)], low: ys[Math.floor(ys.length / 4)], high: ys[Math.floor((ys.length * 3) / 4)] };
+    }),
+    labs: labAds.length >= MIN ? { n: labAds.length, rest: rest.length,
+      skills: skillIds.map((s) => ({ id: s, lab: share(labAds.filter((j) => has(j, s)).length, labAds.length), rest: share(rest.filter((j) => has(j, s)).length, rest.length) })) } : null,
+    skills: skillIds.map((s) => {
+      const g = ads.filter((j) => has(j, s));
+      const byRole = roleIds.map((r) => { const rg = ads.filter((j) => j.role === r); return { id: r, share: share(rg.filter((j) => has(j, s)).length, rg.length) }; }).sort((a, b) => b.share - a.share);
+      // what comes with this skill more than it comes with any ad: lift over the overall share
+      const lift = (inG: number, overall: number) => (overall ? Math.round(((inG / (g.length || 1)) / (overall / ads.length)) * 10) / 10 : 0);
+      const withSkill = skillIds.filter((o) => o !== s).map((o) => { const k = g.filter((j) => has(j, o)).length;
+        return { id: o, share: share(k, g.length), lift: lift(k, ads.filter((j) => has(j, o)).length), k }; })
+        .filter((x) => x.k >= MIN).sort((a, b) => b.lift - a.lift);
+      const toolLift = count(g, (j) => j.tools).filter(([, k]) => k >= 5).map(([t, k]) => ({ name: t, share: share(k, g.length), lift: lift(k, ads.filter((j) => j.tools.includes(t)).length) }))
+        .sort((a, b) => b.lift - a.lift);
+      return { id: s, n: g.length, share: share(g.length, ads.length), topRole: byRole[0] ?? null,
+        with: withSkill.slice(0, 2).map(({ id, share: sh, lift: l }) => ({ id, share: sh, lift: l })), tools: toolLift.slice(0, 4).map((t) => t.name), toolLift: toolLift.slice(0, 4) };
+    }),
+  };
+}
 
 // The reference list of every site read: provider, company board and its public career page, and
 // whether it answered on the last run. Company names are already public in pipeline/companies.json.

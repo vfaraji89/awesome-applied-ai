@@ -50,7 +50,7 @@ export default function Sources() {
             </TH>
           </p>
           <div className="src-asks">
-            {col("src.k_skills", "Skills", m.skills.slice(0, 8).map((r) => ({ key: r.id!, label: <T k={`skill.${r.id}`}>{skillName(r.id!)}</T>, v: `${r.share}%` })))}
+            {col("src.k_skills", "Skills", m.skills.map((r) => ({ key: r.id!, label: <T k={`skill.${r.id}`}>{skillName(r.id!)}</T>, v: `${r.share}%` })))}
             {m.tasks?.length
               ? col("src.k_tasks", "Tasks", m.tasks.slice(0, 8).map((r) => ({ key: r.id!, label: <T k={`task.${r.id}`}>{r.name ?? r.id ?? ""}</T>, v: `${r.share}%` })))
               : <div className="frame src-col"><span className="kicker"><T k="src.k_tasks">Tasks</T></span><p className="muted" style={{ marginTop: 10 }}><T k="mk.tasks_soon">Read from each ad's description from the next daily run on.</T></p></div>}

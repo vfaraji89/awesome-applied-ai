@@ -9,6 +9,7 @@ import { T, TH } from "@/i18n/lang";
 import { JsonLd } from "@/components/json-ld";
 import { marketLd } from "@/lib/seo";
 import { share } from "@/lib/share";
+import { Aha, Heatmap, Pairs, LabsVsRest, YearsByLevel, SkillProfiles, insightCss, type Insights } from "@/components/market-insights";
 
 export const metadata: Metadata = { ...share("market"), title: "Market pulse", description: "What applied AI job ads ask for since 1 October 2026: roles, levels, titles, skills, tasks and tools, read daily from public career pages and job boards." };
 
@@ -35,7 +36,8 @@ function Bars({ rows, label, max }: { rows: Row[]; label: (r: Row) => React.Reac
 export default function Market() {
   const m = market as unknown as { generatedAt: string | null; totals: { processed: number; listedNow: number; newToday: number; remoteShare: number }; sources: { id: string; boards: number; ai: number }[];
     roles: Row[]; seniority: Row[]; titles: Row[]; skills: Row[]; tasks: Row[]; tools: Row[]; byMonth: Row[];
-    sinceQuarter?: string; years?: { asked: number; median: number; bands: Row[] } };
+    sinceQuarter?: string; years?: { asked: number; median: number; bands: Row[] }; insights?: Insights };
+  const ins = m.insights;
   const ready = !!m.generatedAt && m.totals.processed > 0;
   const read = sources.providers.reduce((a, p) => a + (p.boards.length ? p.boards.filter((b) => b.ok !== false).length : p.ok ? 1 : 0), 0);
   const updated = m.generatedAt ? new Date(m.generatedAt).toUTCString().replace(/:\d\d GMT/, " UTC") : "";
@@ -64,6 +66,12 @@ export default function Market() {
             </div>
           )}
           {updated && <p className="count" style={{ marginTop: 14 }}><T k="mk.updated" vars={{ d: updated }}>{"Updated {d}"}</T></p>}
+          {ready && ins && (
+            <>
+              <span className="kicker" style={{ display: "block", marginTop: 44 }}><T k="mi.k_aha">Worth knowing</T></span>
+              <Aha ins={ins} total={m.totals.processed} roles={m.roles} skillsTop={m.skills} tasks={m.tasks} />
+            </>
+          )}
         </div>
       </section>
 
@@ -89,6 +97,16 @@ export default function Market() {
               </div>
             </div>
           </section>
+          {ins && ins.roleSkill.rows.length > 0 && (
+            <section className="section" id="heatmap">
+              <div className="wrap">
+                <span className="kicker"><T k="mi.k_heat">Role by skill</T></span>
+                <h2 style={{ marginTop: 10 }}><T k="mi.h_heat">What each role really asks for</T><span className="dot">.</span></h2>
+                <p className="muted" style={{ marginTop: 8, maxWidth: "70ch" }}><T k="mi.heat_p">Read across a row to see a role&apos;s profile, down a column to see which roles a skill opens. Hover a cell for the number.</T></p>
+                <Heatmap g={ins.roleSkill} col="skill" />
+              </div>
+            </section>
+          )}
           <section className="section" style={{ background: "var(--paper)" }}>
             <div className="wrap grid grid-2" style={{ gap: 36 }}>
               <div>
@@ -105,6 +123,63 @@ export default function Market() {
               </div>
             </div>
           </section>
+          {ins && (
+            <section className="section" id="skills">
+              <div className="wrap">
+                <span className="kicker"><T k="mi.k_prof">Every skill, opened</T></span>
+                <h2 style={{ marginTop: 10 }}><T k="mi.h_prof">What each skill means in the ads</T><span className="dot">.</span></h2>
+                <SkillProfiles list={ins.skills} />
+              </div>
+            </section>
+          )}
+          {ins && (
+            <section className="section" style={{ background: "var(--paper)" }}>
+              <div className="wrap grid grid-2" style={{ gap: 36 }}>
+                <div>
+                  <span className="kicker"><T k="mi.k_pairs">Skills that travel together</T></span>
+                  <h2 style={{ marginTop: 10 }}><T k="mi.h_pairs">Learn one, you will meet the other</T><span className="dot">.</span></h2>
+                  <p className="muted" style={{ marginTop: 8 }}><T k="mi.pairs_p">How much more often two skills appear in the same ad than chance would give. The line marks 1×, no link.</T></p>
+                  <Pairs pairs={ins.pairs} />
+                </div>
+                <div>
+                  {ins.labs ? (
+                    <>
+                      <span className="kicker"><T k="mi.k_labs">The labs against everyone else</T></span>
+                      <h2 style={{ marginTop: 10 }}><T k="mi.h_labs">What AI labs ask for differently</T><span className="dot">.</span></h2>
+                      <LabsVsRest labs={ins.labs} />
+                    </>
+                  ) : (
+                    <>
+                      <span className="kicker"><T k="mi.k_remote">Remote, by role</T></span>
+                      <h2 style={{ marginTop: 10 }}><T k="mi.h_remote">Where you can work from anywhere</T><span className="dot">.</span></h2>
+                      <Bars rows={ins.remoteByRole.map((r) => ({ id: r.id, n: r.n, share: r.share }))} max={100} label={(r) => roleName(r.id!)} />
+                    </>
+                  )}
+                </div>
+              </div>
+            </section>
+          )}
+          {ins && (ins.labs || ins.yearsByLevel.length > 0) && (
+            <section className="section">
+              <div className="wrap grid grid-2" style={{ gap: 36 }}>
+                {ins.labs && (
+                  <div>
+                    <span className="kicker"><T k="mi.k_remote">Remote, by role</T></span>
+                    <h2 style={{ marginTop: 10 }}><T k="mi.h_remote">Where you can work from anywhere</T><span className="dot">.</span></h2>
+                    <Bars rows={ins.remoteByRole.map((r) => ({ id: r.id, n: r.n, share: r.share }))} max={100} label={(r) => roleName(r.id!)} />
+                  </div>
+                )}
+                {ins.yearsByLevel.length > 0 && (
+                  <div>
+                    <span className="kicker"><T k="mi.k_years">Experience, by level</T></span>
+                    <h2 style={{ marginTop: 10 }}><T k="mi.h_years">How many years each level means</T><span className="dot">.</span></h2>
+                    <p className="muted" style={{ marginTop: 8 }}><T k="mi.years_p">The band is the middle half of the ads that state years; the dot is the median.</T></p>
+                    <YearsByLevel rows={ins.yearsByLevel} />
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
           <section className="section" id="tasks">
             <div className="wrap">
               <span className="kicker"><T k="mk.k_tasks">Tasks</T></span>
@@ -113,6 +188,12 @@ export default function Market() {
                 <>
                   <p className="muted" style={{ marginTop: 8 }}><T k="mk.tasks_p">Share of AI job ads whose description asks for each kind of work.</T></p>
                   <div className="mk-tasks"><Bars rows={m.tasks} max={100} label={(r) => <T k={`task.${r.id}`}>{r.name ?? r.id ?? ""}</T>} /></div>
+                  {ins?.roleTask && ins.roleTask.rows.length > 0 && (
+                    <>
+                      <h3 style={{ marginTop: 34 }}><T k="mi.h_taskheat">Tasks, role by role</T></h3>
+                      <Heatmap g={ins.roleTask} col="task" colLabel={(id) => <T k={`task.${id}`}>{m.tasks.find((t) => t.id === id)?.name ?? id}</T>} />
+                    </>
+                  )}
                 </>
               ) : <p className="muted" style={{ marginTop: 8 }}><T k="mk.tasks_soon">Read from each ad's description from the next daily run on.</T></p>}
             </div>
@@ -151,6 +232,7 @@ export default function Market() {
           </ul>
         </div>
       </section>
+      <style>{insightCss}</style>
       <style>{`
         .mk-totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 16px; margin-top: 30px; }
         .mk-q { display: inline-block; font-weight: 700; letter-spacing: .06em; padding: 1px 7px; border-radius: 5px; background: var(--rust); color: #fff; margin-right: 4px; }
