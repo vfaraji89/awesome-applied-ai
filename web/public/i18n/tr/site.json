@@ -1136,6 +1136,9 @@
  "sd.h_next": "Öğren, pratik yap, kanıtla",
  "sd.prev": "önceki beceri",
  "sd.next": "sonraki beceri",
+ "page.datahub": "DataHub",
+ "note.datahub": "Yapay zekânızın altındaki üstveri",
+ "dc.datahub": "YZ'nizin altındaki üstveri: hangi verinin olduğu, sahibinin kim olduğu, nereden geldiği ve kimin kullanabileceği.",
  "_review": {
   "_how": "Vahid: these are judgment calls for you to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'servisleme'; alternatives: 'model servisi', or keep 'serving'.",

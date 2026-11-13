@@ -1136,6 +1136,9 @@
  "sd.h_next": "Leer het, oefen het, bewijs het",
  "sd.prev": "vorige vaardigheid",
  "sd.next": "volgende vaardigheid",
+ "page.datahub": "DataHub",
+ "note.datahub": "De metadata onder je AI",
+ "dc.datahub": "De metadata onder je AI: welke data je hebt, van wie die is, waar die vandaan komt en wie die mag gebruiken.",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Dutch reader). Delete a line once agreed, or change the value above it.",
   "area.serving": "'Serving', 'evals', 'retrieval', 'harness' kept in English, as Dutch tech teams say them.",

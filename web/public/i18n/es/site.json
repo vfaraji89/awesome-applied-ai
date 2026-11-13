@@ -1136,6 +1136,9 @@
  "sd.h_next": "Apréndela, practícala, demuéstrala",
  "sd.prev": "habilidad anterior",
  "sd.next": "habilidad siguiente",
+ "page.datahub": "DataHub",
+ "note.datahub": "Los metadatos bajo tu IA",
+ "dc.datahub": "Los metadatos bajo tu IA: qué datos tienes, de quién son, de dónde vienen y quién puede usarlos.",
  "_review": {
   "_how": "Vahid: judgment calls to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'inferencia'; alternative: keep 'serving'.",

@@ -1138,6 +1138,9 @@
  "sd.h_next": "学ぶ、練習する、証明する",
  "sd.prev": "前のスキル",
  "sd.next": "次のスキル",
+ "page.datahub": "DataHub",
+ "note.datahub": "AI を支えるメタデータ",
+ "dc.datahub": "AI を支えるメタデータ：どんなデータがあり、誰が持ち、どこから来て、誰が使えるのか。",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Japanese reader). Delete a line once agreed, or change the value above it.",
   "fit.h1": "'採用市場に、どこまで届いているか' is a free rendering of 'How ready are you for the market'.",
