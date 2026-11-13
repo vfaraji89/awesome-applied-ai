@@ -5,8 +5,9 @@ import path from "node:path";
 import { Crumb } from "@/components/section-intro";
 import { Mark } from "@/components/mark";
 import { fRoles, skills } from "@/data/framework";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Weekly market note", description: "What changed this week in applied AI hiring: new roles, and the skills and tools they ask for." };
+export const metadata: Metadata = { ...share("market/note"), title: "Weekly market note", description: "What changed this week in applied AI hiring: new roles, and the skills and tools they ask for." };
 
 /* The weekly note, written at build time from the tracker's own store.
    "New" means a role first seen in the last seven days. The first day of tracking

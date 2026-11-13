@@ -5,8 +5,9 @@ import { TechRadar } from "@/components/tech-radar";
 import { More } from "@/components/more";
 import { radar, checked, quarter } from "@/data/radar";
 import { T, TH } from "@/i18n/lang";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Emerging tech radar", description: "What is new in applied AI and how far to trust it: tabular foundation models, JEPA world models, diffusion LMs, hybrid state-space models, agent skills and protocols, sandboxes, disaggregated serving, OpenTelemetry GenAI and more." };
+export const metadata: Metadata = { ...share("radar"), title: "Emerging tech radar", description: "What is new in applied AI and how far to trust it: tabular foundation models, JEPA world models, diffusion LMs, hybrid state-space models, agent skills and protocols, sandboxes, disaggregated serving, OpenTelemetry GenAI and more." };
 
 export default function Radar() {
   return (

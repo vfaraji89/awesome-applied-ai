@@ -6,8 +6,9 @@ import { layers } from "@/data/layers";
 import { structure } from "@/lib/structure";
 import { T } from "@/i18n/lang";
 import { slug } from "@/i18n/slug";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "AI-native architect", description: "The AI-native architect: what the role does, the layers it designs, the stack and the problems it solves." };
+export const metadata: Metadata = { ...share("architect"), title: "AI-native architect", description: "The AI-native architect: what the role does, the layers it designs, the stack and the problems it solves." };
 
 export default function Architect() {
   const role = fRoles.find((r) => r.id === "ai-native-architect")!;

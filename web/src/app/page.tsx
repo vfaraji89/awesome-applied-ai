@@ -13,6 +13,10 @@ import { T, TH } from "@/i18n/lang";
 import { slug } from "@/i18n/slug";
 import { tools } from "@/data/tools";
 import { areas } from "@/data/areas";
+import type { Metadata } from "next";
+import { share } from "@/lib/share";
+
+export const metadata: Metadata = { ...share("") };
 
 const FEATURED = ["claude-ccaf", "aws-genai", "ms-ai103", "google-agentic"];
 

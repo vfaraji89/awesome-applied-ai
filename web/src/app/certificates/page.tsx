@@ -4,8 +4,11 @@ import { SectionIntro } from "@/components/section-intro";
 import { CertBoard } from "@/components/cert-board";
 import { education } from "@/data/framework";
 import { CHECKED, courses, changes } from "@/data/certificates";
+import { JsonLd } from "@/components/json-ld";
+import { certificatesLd } from "@/lib/seo";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Certificates", description: "The industry certificates for applied AI, by track and level, each linked to the provider's official page." };
+export const metadata: Metadata = { ...share("certificates"), title: "Certificates", description: "The industry certificates for applied AI, by track and level, each linked to the provider's official page." };
 
 const TIPS = [
   { k: "ce.tip0", h: "Follow the stack in the job ad", p: "A certificate proves one provider's stack. Pick the cloud or platform the roles you want already use." },
@@ -17,6 +20,7 @@ export default function Certificates() {
   const degrees = education.find((e) => e.kind === "Degree");
   return (
     <>
+      <JsonLd data={certificatesLd()} />
       <section className="section">
         <div className="wrap">
           <SectionIntro id="certificates" lead="The certificates applied AI hiring asks for, by track and level. Each one links to the provider's official page." />

@@ -4,12 +4,16 @@ import { JargonBrowser } from "@/components/jargon-browser";
 import { fields, terms } from "@/data/dictionary";
 import { More } from "@/components/more";
 import { TH } from "@/i18n/lang";
+import { JsonLd } from "@/components/json-ld";
+import { jargonLd } from "@/lib/seo";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Jargon", description: "Applied AI jargon in plain language: tap a card for the deeper answer." };
+export const metadata: Metadata = { ...share("jargon"), title: "Jargon", description: "Applied AI jargon in plain language: tap a card for the deeper answer." };
 
 export default function Jargon() {
   return (
     <section className="section">
+      <JsonLd data={jargonLd()} />
       <div className="wrap">
         <Crumb id="docs" page="Jargon" />
         <h1 style={{ marginTop: 12 }}><TH k="jargon.h1">The words, made easy</TH><span className="dot">.</span></h1>

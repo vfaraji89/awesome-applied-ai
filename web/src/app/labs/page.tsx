@@ -6,8 +6,9 @@ import { skills } from "@/data/framework";
 import fit from "@/data/role-fit.json";
 import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "What the labs ask for", description: "What Anthropic, OpenAI and Google Cloud ask for in their own applied AI and forward deployed engineering roles, from their public postings." };
+export const metadata: Metadata = { ...share("labs"), title: "What the labs ask for", description: "What Anthropic, OpenAI and Google Cloud ask for in their own applied AI and forward deployed engineering roles, from their public postings." };
 
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
 

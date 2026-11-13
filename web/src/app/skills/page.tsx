@@ -3,8 +3,9 @@ import { Crumb } from "@/components/section-intro";
 import { SkillMap } from "@/components/skill-map";
 import { More } from "@/components/more";
 import { TH } from "@/i18n/lang";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Skill map", description: "Which applied AI skills employers ask for together, which pairs are rare, and which one skill would open the most job postings for you. Computed from real postings." };
+export const metadata: Metadata = { ...share("skills"), title: "Skill map", description: "Which applied AI skills employers ask for together, which pairs are rare, and which one skill would open the most job postings for you. Computed from real postings." };
 
 export default function Skills() {
   return (

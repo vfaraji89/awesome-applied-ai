@@ -4,8 +4,9 @@ import { docs } from "@/data/docs";
 import { DocCover } from "@/components/doc-cover";
 import { SectionIntro } from "@/components/section-intro";
 import { T, TH } from "@/i18n/lang";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Docs", description: "Technical docs, in motion: Claude Platform, Vercel AI SDK, LangChain and Deep Agents, and MCP, as short animations, examples and code." };
+export const metadata: Metadata = { ...share("docs"), title: "Docs", description: "Technical docs, in motion: Claude Platform, Vercel AI SDK, LangChain and Deep Agents, and MCP, as short animations, examples and code." };
 
 export default function Docs() {
   return (

@@ -21,4 +21,6 @@ service-account*.json
 content-export/
 web/public/pulse.json
 web/src/data/tool-icons.json
+web/public/llms.txt
+web/public/llms-full.txt
 tool-candidates.md

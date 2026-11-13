@@ -4,8 +4,9 @@ import { Crumb } from "@/components/section-intro";
 import { RoleFit } from "@/components/role-fit";
 import { More } from "@/components/more";
 import { TH } from "@/i18n/lang";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Role fit", description: "Paste your CV to see how ready you are for applied AI roles and what to learn next, or paste a job description to see how it compares with the market. Measured against real postings." };
+export const metadata: Metadata = { ...share("fit"), title: "Role fit", description: "Paste your CV to see how ready you are for applied AI roles and what to learn next, or paste a job description to see how it compares with the market. Measured against real postings." };
 
 export default function Fit() {
   return (
