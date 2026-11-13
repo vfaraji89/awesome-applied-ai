@@ -1057,6 +1057,13 @@
  "mi.k_stack": "De stack rond AI",
  "mi.h_stack": "Talen en frameworks die AI-vacatures noemen",
  "mi.stack_p": "Aandeel van de {n} AI-vacatures gelezen met beschrijving dat elk ervan noemt. Nieuw: voor het eerst genoemd in de laatste 30 dagen.",
+ "aha.aff": "van de niet-AI techvacatures vraagt nu om AI in het werk zelf, van",
+ "aha.aff_what": "{n} vacatures",
+ "aha.aff1": "van de vacatures in de familie die AI het meest raakt:",
+ "aha.rise": "procentpunt in 30 dagen, de snelste stijger:",
+ "aha.lang2": "noemt de tweede taal na Python:",
+ "aha.yrs": "jaar ervaring is de mediaan, in de",
+ "aha.yrs_what": "{p}% van de vacatures die het noemen",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Dutch reader). Delete a line once agreed, or change the value above it.",
   "area.serving": "'Serving', 'evals', 'retrieval', 'harness' kept in English, as Dutch tech teams say them.",

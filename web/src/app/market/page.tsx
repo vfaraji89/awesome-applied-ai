@@ -70,7 +70,7 @@ export default function Market() {
           {ready && ins && (
             <>
               <span className="kicker" style={{ display: "block", marginTop: 44 }}><T k="mi.k_aha">Worth knowing</T></span>
-              <Aha ins={ins} total={m.totals.processed} roles={m.roles} skillsTop={m.skills} tasks={m.tasks} />
+              <Aha ins={ins} total={m.totals.processed} roles={m.roles} skillsTop={m.skills} tasks={m.tasks} affected={m.affected} tech={m.tech} years={m.years} />
             </>
           )}
         </div>

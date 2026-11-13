@@ -318,10 +318,6 @@ if (outDir) {
   writeFileSync(path.join(outDir, "sources.json"), JSON.stringify(sources, null, 1) + "\n");
   writeFileSync(path.join(outDir, "jobs.json"), JSON.stringify(all));
   console.log("wrote the would-be outputs to", outDir);
-  // the summary and sources list, gzipped into the log, so a review can load them without the artifact
-  const { gzipSync } = await import("node:zlib");
-  console.log("MARKET_GZ " + gzipSync(JSON.stringify(summary), { level: 9 }).toString("base64"));
-  console.log("SOURCES_GZ " + gzipSync(JSON.stringify(sources), { level: 9 }).toString("base64"));
 }
 if (!dry) {
   if (!fromStore) writeFileSync(STORE, JSON.stringify(all));

@@ -1059,6 +1059,13 @@
  "mi.k_stack": "AI を取り巻く技術",
  "mi.h_stack": "AI 求人が挙げる言語とフレームワーク",
  "mi.stack_p": "説明文付きで読んだ AI 求人 {n} 件のうち、それぞれを挙げている割合。「新」は直近 30 日で初めて登場したもの。",
+ "aha.aff": "が、AI 以外の技術求人で仕事そのものに AI を求める割合。対象",
+ "aha.aff_what": "{n} 件",
+ "aha.aff1": "が AI の影響を最も受けている職種の求人で AI に言及：",
+ "aha.rise": "ポイント、30 日で最も伸びた名前：",
+ "aha.lang2": "が Python に次ぐ 2 番目の言語を挙げる：",
+ "aha.yrs": "年が経験年数の中央値。年数を明記した",
+ "aha.yrs_what": "{p}% の求人で",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Japanese reader). Delete a line once agreed, or change the value above it.",
   "fit.h1": "'採用市場に、どこまで届いているか' is a free rendering of 'How ready are you for the market'.",

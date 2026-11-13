@@ -6,6 +6,7 @@
 import Link from "next/link";
 import { fRoles, skills } from "@/data/framework";
 import { T } from "@/i18n/lang";
+import { InsightTicker } from "@/components/insight-ticker";
 
 type Grid = { rows: string[]; cols: string[]; n: number[]; cells: number[][] };
 type Pair = { a: string; b: string; n: number; share: number; lift: number };
@@ -30,7 +31,8 @@ const Sk = ({ id }: { id: string }) => <T k={`skill.${id}`}>{skillName(id)}</T>;
 const Lvl = ({ id }: { id: string }) => <T k={`lvl.${id.toLowerCase()}`}>{id}</T>;
 
 /** Headline cards: one number, one plain sentence, the thing it is about. */
-export function Aha({ ins, total, roles, skillsTop, tasks }: { ins: Insights; total: number; roles: { id?: string; n: number }[]; skillsTop: { id?: string; share?: number }[]; tasks?: { id?: string; name?: string; share?: number }[] }) {
+export function Aha({ ins, total, roles, skillsTop, tasks, affected, tech, years }: { ins: Insights; total: number; roles: { id?: string; n: number }[]; skillsTop: { id?: string; share?: number }[]; tasks?: { id?: string; name?: string; share?: number }[];
+  affected?: { any: number; ads: number; rows: { id: string; name: string; any: number; n: number }[] } | null; tech?: { cats: { id: string; items: { name: string; share: number; change?: number; isNew?: boolean }[] }[] } | null; years?: { asked: number; median: number } }) {
   const pct = (n: number) => Math.round((n / (total || 1)) * 100);
   const topSkill = skillsTop.find((s) => s.id !== "software") ?? skillsTop[0];
   const topRole = roles.find((r) => r.id !== "other-ai") ?? roles[0];
@@ -47,7 +49,22 @@ export function Aha({ ins, total, roles, skillsTop, tasks }: { ins: Insights; to
   if (tasks?.length) cards.push({ k: "task", big: `${tasks[0].share}%`, lead: <T k="aha.task">ask you to</T>, what: <T k={`task.${tasks[0].id}`}>{tasks[0].name ?? ""}</T> });
   cards.push({ k: "junior", big: `${ins.junior}%`, lead: <T k="aha.junior">are junior or intern roles:</T>, what: <T k="aha.junior_what">most ask for experience</T> });
   if (ins.aiDev.share > 0) cards.push({ k: "dev", big: `${ins.aiDev.share}%`, lead: <T k="aha.dev">name an AI coding tool, such as</T>, what: ins.aiDev.tools.slice(0, 3).join(", ") });
+  // more for the ticker than fits the cards: AI beyond AI jobs, the stack, experience
+  const extra: typeof cards = [];
+  if (affected && affected.ads > 0) {
+    extra.push({ k: "aff", big: `${affected.any}%`, lead: <T k="aha.aff">of non-AI tech job ads now ask for AI in the job itself, across</T>, what: <T k="aha.aff_what" vars={{ n: affected.ads.toLocaleString("en-US") }}>{"{n} ads"}</T> });
+    const f = affected.rows[0];
+    if (f) extra.push({ k: "aff1", big: `${f.any}%`, lead: <T k="aha.aff1">of ads in the job family most touched by AI:</T>, what: <T k={`fam.${f.id}`}>{f.name}</T> });
+  }
+  const rising = tech?.cats.flatMap((c) => c.items).filter((x) => (x.change ?? 0) > 0).sort((a, b) => (b.change ?? 0) - (a.change ?? 0))[0];
+  if (rising) extra.push({ k: "rise", big: `+${rising.change}`, lead: <T k="aha.rise">points in 30 days, the fastest-rising name in the stack:</T>, what: rising.name });
+  const lang2 = tech?.cats.find((c) => c.id === "lang")?.items[1];
+  if (lang2) extra.push({ k: "lang2", big: `${lang2.share}%`, lead: <T k="aha.lang2">name the second language after Python:</T>, what: lang2.name });
+  if (years && years.asked > 0) extra.push({ k: "yrs", big: String(years.median), lead: <T k="aha.yrs">years of experience is the median ask, in the</T>, what: <T k="aha.yrs_what" vars={{ p: years.asked }}>{"{p}% of ads that say"}</T> });
+  const label = "Insights from the AI job ads";
   return (
+    <>
+    <InsightTicker items={[...cards, ...extra]} label={label} />
     <div className="mi-aha">
       {cards.slice(0, 6).map((c, i) => (
         <div key={c.k} className="frame mi-card" style={{ ["--i" as string]: i }}>
@@ -58,6 +75,7 @@ export function Aha({ ins, total, roles, skillsTop, tasks }: { ins: Insights; to
         </div>
       ))}
     </div>
+    </>
   );
 }
 
@@ -184,7 +202,11 @@ export const insightCss = `
   .mi-b { position: absolute; width: 14px; height: 14px; top: 50%; margin: -7px 0 0 -7px; box-shadow: 0 1px 2px rgba(0,0,0,.25); transition: transform .15s; }
   .mi-legend .mi-b { position: static; margin: 0; display: inline-block; }
   .mi-aha { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; margin-top: 26px; }
-  .mi-card { display: flex; flex-direction: column; gap: 4px; padding: 22px 26px 30px; animation: rise .6s var(--ease) both; animation-delay: calc(var(--i) * 70ms); }
+  .mi-card { display: flex; flex-direction: column; gap: 4px; padding: 22px 26px 30px; animation: mi-open .9s cubic-bezier(.77,0,.18,1) both; animation-delay: calc(var(--i) * 110ms + .2s); }
+  .mi-card > * { animation: mi-in .5s var(--ease) both; animation-delay: calc(var(--i) * 110ms + .75s); }
+  /* opens from the centre to the edges, like a score graphic */
+  @keyframes mi-open { from { clip-path: inset(0 50% 0 50% round var(--radius)); } to { clip-path: inset(0 0 0 0 round var(--radius)); } }
+  @keyframes mi-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
   .mi-card:hover, .mi-prof:hover, .mi-cat:hover { transform: translateY(-3px); box-shadow: 0 22px 36px -28px rgba(28, 28, 30, .55); }
   :is(.mi-card, .mi-prof):hover .rod::after { transform: scaleX(1); }
   .mi-big { font-size: 2.6rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; color: var(--rust); }
@@ -231,7 +253,7 @@ export const insightCss = `
   .mi-chips .chip, .mi-aff-terms .chip, .mi-rising .chip { padding: 2px 9px; font-size: .76rem; }
   .chip i.mono { font-style: normal; font-size: .68rem; color: var(--rust-deep); } .mi-prof dd i { font-style: normal; color: var(--muted); font-size: .74rem; }
   @media (max-width: 640px) { .mi-pairs li, .mi-dumb li, .mi-years li { grid-template-columns: minmax(0, 1fr) 90px 44px; } .mi-tip { white-space: normal; width: max-content; max-width: 240px; } }
-  @media (prefers-reduced-motion: reduce) { .mi-card, .mi-card::before, .mi-pairs li, .mi-prof, .mi-pair-t > span, .mi-prof-bar span { animation: none; } }
+  @media (prefers-reduced-motion: reduce) { .mi-card, .mi-card > *, .mi-pairs li, .mi-prof, .mi-pair-t > span, .mi-prof-bar span { animation: none; } }
 `;
 
 /** AI job ads per week by publish date: one column per week, month names under each month's

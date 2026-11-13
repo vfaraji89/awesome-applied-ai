@@ -1057,6 +1057,13 @@
  "mi.k_stack": "La tecnología alrededor de la IA",
  "mi.h_stack": "Lenguajes y frameworks que nombran las ofertas de IA",
  "mi.stack_p": "Porcentaje de las {n} ofertas de IA leídas con descripción que nombran cada uno. Nuevo: nombrado por primera vez en los últimos 30 días.",
+ "aha.aff": "de las ofertas técnicas no de IA ya piden IA en el propio puesto, sobre",
+ "aha.aff_what": "{n} ofertas",
+ "aha.aff1": "de las ofertas de la familia más tocada por la IA:",
+ "aha.rise": "puntos en 30 días, el nombre que más sube:",
+ "aha.lang2": "nombran el segundo lenguaje tras Python:",
+ "aha.yrs": "años de experiencia es la mediana pedida, en el",
+ "aha.yrs_what": "{p}% de ofertas que lo dicen",
  "_review": {
   "_how": "Vahid: judgment calls to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'inferencia'; alternative: keep 'serving'.",

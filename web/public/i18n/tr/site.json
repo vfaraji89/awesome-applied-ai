@@ -1057,6 +1057,13 @@
  "mi.k_stack": "YZ'nin etrafındaki teknoloji",
  "mi.h_stack": "YZ ilanlarının andığı diller ve çatılar",
  "mi.stack_p": "Açıklamasıyla okunan {n} YZ ilanı içinde her birini anan pay. Yeni: ilk kez son 30 günde anıldı.",
+ "aha.aff": "YZ dışı teknoloji ilanlarının işin kendisinde YZ istediği oran; toplam",
+ "aha.aff_what": "{n} ilan",
+ "aha.aff1": "YZ'den en çok etkilenen iş ailesinde YZ anan ilanlar:",
+ "aha.rise": "puan, 30 günde en hızlı yükselen ad:",
+ "aha.lang2": "Python'dan sonraki ikinci dili anıyor:",
+ "aha.yrs": "yıl deneyim istenen ortanca; yıl belirten",
+ "aha.yrs_what": "%{p} ilanda",
  "_review": {
   "_how": "Vahid: these are judgment calls for you to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'servisleme'; alternatives: 'model servisi', or keep 'serving'.",
