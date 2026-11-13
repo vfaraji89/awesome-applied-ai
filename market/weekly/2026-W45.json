@@ -155,7 +155,7 @@
   },
   {
    "id": "retrieval",
-   "n": 231,
+   "n": 232,
    "share": 25
   },
   {
@@ -169,6 +169,7 @@
    "share": 18
   }
  ],
+ "tasks": [],
  "tools": [
   {
    "id": "Python",
@@ -247,6 +248,10 @@
    "n": 11
   },
   {
+   "id": "Agent Skills",
+   "n": 11
+  },
+  {
    "id": "CrewAI",
    "n": 9
   },
@@ -264,10 +269,6 @@
   },
   {
    "id": "AutoGen",
-   "n": 6
-  },
-  {
-   "id": "Azure AI Foundry",
    "n": 6
   }
  ]

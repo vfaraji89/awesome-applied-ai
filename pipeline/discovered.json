@@ -1,0 +1,349 @@
+{
+ "_note": "Written by pipeline/boards.ts. Career pages found for the map's tools and the AI labs. Do not edit; add boards by hand in companies.json.",
+ "generatedAt": "2026-11-13T03:54:29.871Z",
+ "probed": 2781,
+ "boards": [
+  {
+   "provider": "ashby",
+   "slug": "anam",
+   "name": "Anam",
+   "tool": "anam"
+  },
+  {
+   "provider": "ashby",
+   "slug": "arena",
+   "name": "LMArena (Arena)",
+   "tool": "lmarena"
+  },
+  {
+   "provider": "ashby",
+   "slug": "arthur-ai",
+   "name": "Arthur Engine",
+   "tool": "arthur-engine"
+  },
+  {
+   "provider": "ashby",
+   "slug": "artificialanalysis",
+   "name": "Artificial Analysis",
+   "tool": "artificial-analysis"
+  },
+  {
+   "provider": "ashby",
+   "slug": "black-forest-labs",
+   "name": "FLUX (Black Forest Labs)",
+   "tool": "flux"
+  },
+  {
+   "provider": "ashby",
+   "slug": "bolt",
+   "name": "Bolt.new",
+   "tool": "bolt"
+  },
+  {
+   "provider": "ashby",
+   "slug": "cerebras",
+   "name": "Cerebras",
+   "kind": "lab"
+  },
+  {
+   "provider": "ashby",
+   "slug": "comfy-org",
+   "name": "ComfyUI",
+   "tool": "comfyui"
+  },
+  {
+   "provider": "ashby",
+   "slug": "composio",
+   "name": "Composio",
+   "tool": "composio"
+  },
+  {
+   "provider": "ashby",
+   "slug": "credo",
+   "name": "Credo AI",
+   "tool": "credo-ai"
+  },
+  {
+   "provider": "ashby",
+   "slug": "encord",
+   "name": "Encord",
+   "tool": "encord"
+  },
+  {
+   "provider": "ashby",
+   "slug": "exa",
+   "name": "Exa",
+   "tool": "exa"
+  },
+  {
+   "provider": "ashby",
+   "slug": "firecrawl",
+   "name": "Firecrawl",
+   "tool": "firecrawl"
+  },
+  {
+   "provider": "ashby",
+   "slug": "fireworks",
+   "name": "Fireworks AI",
+   "kind": "lab"
+  },
+  {
+   "provider": "ashby",
+   "slug": "hedra",
+   "name": "Hedra Live Avatars",
+   "tool": "hedra-live-avatars"
+  },
+  {
+   "provider": "ashby",
+   "slug": "judgmentlabs",
+   "name": "Judgment Labs judgeval",
+   "tool": "judgeval"
+  },
+  {
+   "provider": "ashby",
+   "slug": "juicebox",
+   "name": "Juicebox",
+   "kind": "recruiting"
+  },
+  {
+   "provider": "ashby",
+   "slug": "lancedb",
+   "name": "LanceDB",
+   "tool": "lancedb"
+  },
+  {
+   "provider": "ashby",
+   "slug": "lightning",
+   "name": "PyTorch Lightning",
+   "tool": "lightning"
+  },
+  {
+   "provider": "ashby",
+   "slug": "midjourney",
+   "name": "Midjourney",
+   "tool": "midjourney"
+  },
+  {
+   "provider": "ashby",
+   "slug": "n8n",
+   "name": "n8n",
+   "tool": "n8n"
+  },
+  {
+   "provider": "ashby",
+   "slug": "nousresearch",
+   "name": "Hermes Agent",
+   "tool": "hermes-agent"
+  },
+  {
+   "provider": "ashby",
+   "slug": "ollama",
+   "name": "Ollama",
+   "tool": "ollama"
+  },
+  {
+   "provider": "ashby",
+   "slug": "openhands",
+   "name": "OpenHands",
+   "tool": "openhands"
+  },
+  {
+   "provider": "ashby",
+   "slug": "openrouter",
+   "name": "OpenRouter",
+   "tool": "openrouter"
+  },
+  {
+   "provider": "ashby",
+   "slug": "redis",
+   "name": "Redis",
+   "tool": "redis"
+  },
+  {
+   "provider": "ashby",
+   "slug": "reducto",
+   "name": "Reducto",
+   "tool": "reducto"
+  },
+  {
+   "provider": "ashby",
+   "slug": "reka",
+   "name": "Reka",
+   "kind": "lab"
+  },
+  {
+   "provider": "ashby",
+   "slug": "roboflow",
+   "name": "Roboflow",
+   "tool": "roboflow"
+  },
+  {
+   "provider": "ashby",
+   "slug": "runpod",
+   "name": "RunPod",
+   "tool": "runpod"
+  },
+  {
+   "provider": "ashby",
+   "slug": "sentry",
+   "name": "Sentry AI Agent Monitoring",
+   "tool": "sentry-ai-agent-monitoring"
+  },
+  {
+   "provider": "ashby",
+   "slug": "tavus",
+   "name": "Tavus CVI",
+   "tool": "tavus-cvi"
+  },
+  {
+   "provider": "ashby",
+   "slug": "trychroma",
+   "name": "Chroma",
+   "tool": "chroma"
+  },
+  {
+   "provider": "ashby",
+   "slug": "turbopuffer",
+   "name": "Turbopuffer",
+   "tool": "turbopuffer"
+  },
+  {
+   "provider": "ashby",
+   "slug": "ultralytics",
+   "name": "Ultralytics YOLO",
+   "tool": "ultralytics"
+  },
+  {
+   "provider": "ashby",
+   "slug": "weaviate",
+   "name": "Weaviate",
+   "tool": "weaviate"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "assemblyai",
+   "name": "AssemblyAI",
+   "tool": "assemblyai"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "baidu",
+   "name": "Baidu USA",
+   "tool": "unlimited-ocr"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "brave",
+   "name": "Brave",
+   "tool": "brave-search-api"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "cline",
+   "name": "Cline",
+   "tool": "cline"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "comet",
+   "name": "Comet",
+   "tool": "opik-annotation-queues"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "galileo",
+   "name": "Galileo",
+   "tool": "galileo"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "heygen",
+   "name": "HeyGen",
+   "tool": "heygen-liveavatar"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "hiddenlayer",
+   "name": "HiddenLayer",
+   "tool": "hiddenlayer"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "humansignal",
+   "name": "HumanSignal",
+   "tool": "label-studio"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "hume",
+   "name": "Hume",
+   "tool": "hume-evi"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "jetbrains",
+   "name": "JetBrains",
+   "tool": "koog"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "magic",
+   "name": "Magic",
+   "kind": "lab"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "neo4j",
+   "name": "Neo4j",
+   "tool": "neo4j-graphrag"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "resonate",
+   "name": "Resonate",
+   "tool": "resonate"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "speechmatics",
+   "name": "Speechmatics",
+   "tool": "speechmatics-flow"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "stabilityai",
+   "name": "Stability AI",
+   "kind": "lab"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "stackblitz",
+   "name": "Bolt.new",
+   "tool": "bolt"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "tavily",
+   "name": "Tavily",
+   "tool": "tavily"
+  },
+  {
+   "provider": "greenhouse",
+   "slug": "vectara",
+   "name": "Vectara",
+   "tool": "vectara"
+  },
+  {
+   "provider": "lever",
+   "slug": "copilotkit",
+   "name": "CopilotKit",
+   "tool": "copilotkit"
+  },
+  {
+   "provider": "lever",
+   "slug": "superannotate",
+   "name": "SuperAnnotate",
+   "tool": "superannotate"
+  }
+ ]
+}

@@ -3,7 +3,8 @@ name: Track job market
 # Reads public job boards once a day, keeps only AI roles, and updates the market summary.
 # Each run also rewrites the current week's snapshot in market/weekly/; Monday's run closes
 # the week before. Not a job board: only role, level, skills, tools and dates are kept.
-# On a branch push it only does a dry run: it reads and reports, and commits nothing.
+# On a branch push it does a dry run: it reads and reports, and puts only the summary files on the
+# branch (market.json, sources.json, discovered.json) so the pull request shows live numbers.
 on:
   schedule:
     - cron: "17 5 * * *"
@@ -22,15 +23,48 @@ concurrency:
 jobs:
   track:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 25
     steps:
       - uses: actions/checkout@v7
       - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6  # v2
         with:
           bun-version: 1.4.4
+      # Find career pages for the companies behind the map's tools and the AI labs: on every
+      # branch dry run, and on main each Monday or when nothing has been found yet.
+      - name: Find career pages of the map's tools and the labs
+        run: |
+          empty=$(bun -e 'console.log(require("./pipeline/discovered.json").boards.length === 0 ? 1 : 0)')
+          if [ "$GITHUB_REF" != "refs/heads/main" ] || [ "$(date -u +%u)" = "1" ] || [ "$empty" = "1" ] || [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            bun pipeline/boards.ts
+          else
+            echo "Not Monday: keeping last week's list"
+          fi
       - name: Dry run on a branch (reads and reports, writes nothing)
         if: github.ref != 'refs/heads/main'
-        run: bun pipeline/run.ts --dry
+        run: bun pipeline/run.ts --dry --out dry-run
+      - name: Keep the dry run's would-be outputs for review
+        if: github.ref != 'refs/heads/main'
+        uses: actions/upload-artifact@v4
+        with:
+          name: market-dry-run
+          path: |
+            dry-run/
+            pipeline/discovered.json
+          retention-days: 7
+      # Put the live summary on the branch too, so a pull request shows real numbers before it
+      # merges. Only the summary files, never the store; a push made with this token starts no run.
+      - name: Commit the dry run's summary to this branch
+        if: github.ref != 'refs/heads/main'
+        run: |
+          cp dry-run/market.json web/src/data/market.json
+          cp dry-run/sources.json web/src/data/sources.json
+          git config user.name "market-tracker"
+          git config user.email "market-tracker@users.noreply.github.com"
+          git add web/src/data/market.json web/src/data/sources.json pipeline/discovered.json
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git commit -m "Market: live summary from the branch dry run"
+          git pull --rebase origin "$GITHUB_REF_NAME" || { git rebase --abort; echo "Branch moved; skipping"; exit 0; }
+          git push origin HEAD:"$GITHUB_REF_NAME" || echo "Push refused; skipping"
       - name: Read the boards and update the summary
         if: github.ref == 'refs/heads/main'
         run: bun pipeline/run.ts
@@ -39,7 +73,7 @@ jobs:
         run: |
           git config user.name "market-tracker"
           git config user.email "market-tracker@users.noreply.github.com"
-          git add market/jobs.json market/weekly web/src/data/market.json
+          git add market/jobs.json market/weekly web/src/data/market.json web/src/data/sources.json pipeline/discovered.json
           if git diff --cached --quiet; then echo "No change"; exit 0; fi
           git commit -m "Market: $(date -u +%Y-%m-%d) update"
           # main may have moved while the boards were being read

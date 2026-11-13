@@ -63,7 +63,7 @@ export default function Home() {
           </div>
           <Link href="/fit/" className="frame home-fit rise" style={{ ["--i" as string]: 4 }}>
             <span className="hf-ic"><FitIcon size={28} /></span>
-            <span><span className="kicker"><T k="page.role-fit">Role fit</T></span><b><T k="home.fit_b">How ready are you for applied AI roles?</T></b><span className="muted"><T k="home.fit_em" vars={{ n: market.totals.allTime.toLocaleString("en") }}>{"Paste your CV. Scored against {n} real postings, with what to learn next."}</T></span></span>
+            <span><span className="kicker"><T k="page.role-fit">Role fit</T></span><b><T k="home.fit_b">How ready are you for applied AI roles?</T></b><span className="muted"><T k="home.fit_em2" vars={{ n: market.totals.processed.toLocaleString("en") }}>{"Paste your CV. Scored against {n} real job ads, with what to learn next."}</T></span></span>
             <span className="hf-go" aria-hidden="true">→</span>
             <span className="rod" />
           </Link>
@@ -74,9 +74,9 @@ export default function Home() {
       <Band s={mk} alt>
         <div className="frame show-market">
           <div className="sm-stats">
-            <div><b>{market.totals.allTime.toLocaleString("en")}</b><span className="muted"><T k="home.st_tracked">technical AI roles tracked</T></span></div>
+            <div><b>{market.totals.processed.toLocaleString("en")}</b><span className="muted"><T k="home.st_ads">AI job ads processed since 1 Oct 2026</T></span></div>
             <div><b>{market.totals.remoteShare}%</b><span className="muted"><T k="home.st_remote">remote</T></span></div>
-            <div><b>{market.sources.reduce((a, x) => a + x.boards, 0)}</b><span className="muted"><T k="home.st_boards">public boards</T></span></div>
+            <div><b>{market.sources.reduce((a, x) => a + x.boards, 0)}</b><span className="muted"><T k="home.st_sites">career pages and boards read</T></span></div>
           </div>
           <span className="kicker" style={{ display: "block", marginTop: 20 }}><T k="home.top_roles">Most asked-for roles</T></span>
           <ul className="sm-bars">

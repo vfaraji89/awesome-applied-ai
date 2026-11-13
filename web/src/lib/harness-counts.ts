@@ -14,7 +14,7 @@ export type HarnessCounts = Record<string, Record<string, number>>;
 
 export function harnessCounts(): HarnessCounts {
   return {
-    market: { n: market.totals.openNow, all: market.totals.allTime },
+    market: { n: market.totals.processed, all: market.totals.processed },
     roles: { n: fRoles.length, s: skills.length },
     architect: { n: layers.length, p: problems.length },
     tools: { n: tools.length, e: tools.filter((t) => signals(t).isNew).length },

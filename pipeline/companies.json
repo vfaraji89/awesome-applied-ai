@@ -154,5 +154,21 @@
    "host": "wd5",
    "site": "external_experienced"
   }
- ]
+ ],
+ "smartrecruiters": [
+  "BoschGroup",
+  "ServiceNow",
+  "Wise",
+  "Canva",
+  "Experian",
+  "Ubisoft2"
+ ],
+ "workable": [
+  "huggingface"
+ ],
+ "recruitee": [
+  "bunq",
+  "channable"
+ ],
+ "personio": []
 }

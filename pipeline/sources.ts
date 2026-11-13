@@ -120,3 +120,98 @@ export async function workday(b: WorkdayBoard, maxPages = 150): Promise<RawJob[]
   return [...out, ...listed.filter((j) => !isAI(j.title ?? "")).map((j) => ({ source: "workday", id: String(j.externalPath), company: b.tenant, title: j.title ?? "",
     location: j.locationsText ?? "", remote: false, posted: day(undefined), url: "", text: "" }))];
 }
+
+/* More applicant-tracking systems. Each reads the public job-board API a company's own career page
+   embeds; descriptions are fetched for AI titles only, to keep the number of requests low. */
+
+/** SmartRecruiters: the public posting API, 100 a page; the description is per posting. */
+export async function smartrecruiters(company: string, maxPages = 20): Promise<RawJob[]> {
+  const listed: any[] = [];
+  for (let p = 0; p < maxPages; p++) {
+    const d = await getJSON(`https://api.smartrecruiters.com/v1/companies/${company}/postings?limit=100&offset=${p * 100}`);
+    const page = d.content ?? [];
+    listed.push(...page);
+    if (page.length < 100 || listed.length >= (d.totalFound ?? 0)) break;
+  }
+  const out: RawJob[] = [];
+  for (const j of listed) {
+    const loc = [j.location?.city, j.location?.country].filter(Boolean).join(", ");
+    let text = "";
+    if (isAI(j.name ?? "")) {
+      try { const d = await getJSON(`https://api.smartrecruiters.com/v1/companies/${company}/postings/${j.id}`);
+        text = strip(Object.values(d.jobAd?.sections ?? {}).map((x: any) => x?.text ?? "").join(" ")); } catch { /* title only */ }
+    }
+    out.push({ source: "smartrecruiters", id: String(j.id), company, title: j.name ?? "", location: loc, remote: !!j.location?.remote,
+      posted: day(j.releasedDate), url: `https://jobs.smartrecruiters.com/${company}/${j.id}`, text });
+  }
+  return out;
+}
+
+/** Workable: the account widget lists every published job with its description in one call. */
+export async function workable(slug: string): Promise<RawJob[]> {
+  const d = await getJSON(`https://apply.workable.com/api/v1/widget/accounts/${slug}?details=true`);
+  return (d.jobs ?? []).map((j: any) => ({
+    source: "workable", id: String(j.shortcode ?? j.id), company: slug, title: j.title ?? "",
+    location: [j.city, j.country].filter(Boolean).join(", "), remote: !!j.telecommuting || /remote/i.test(`${j.city ?? ""} ${j.workplace ?? ""}`),
+    posted: day(j.published_on ?? j.created_at), url: j.url ?? j.application_url ?? "", text: strip(`${j.description ?? ""} ${j.requirements ?? ""} ${j.benefits ?? ""}`),
+  }));
+}
+
+/** Recruitee: the offers API of a company's career site. */
+export async function recruitee(slug: string): Promise<RawJob[]> {
+  const d = await getJSON(`https://${slug}.recruitee.com/api/offers/`);
+  return (d.offers ?? []).map((j: any) => ({
+    source: "recruitee", id: String(j.id), company: slug, title: j.title ?? "", location: j.location ?? [j.city, j.country].filter(Boolean).join(", "),
+    remote: !!j.remote, posted: day(j.published_at ?? j.created_at), url: j.careers_url ?? "", text: strip(`${j.description ?? ""} ${j.requirements ?? ""}`),
+  }));
+}
+
+/** Personio: the XML feed every Personio career page publishes. */
+export async function personio(slug: string): Promise<RawJob[]> {
+  // career pages live on .de or .com depending on the account's region
+  let r = await fetch(`https://${slug}.jobs.personio.com/xml?language=en`, { headers: UA });
+  if (!r.ok) r = await fetch(`https://${slug}.jobs.personio.de/xml?language=en`, { headers: UA });
+  if (!r.ok) throw new Error(`${r.status} personio:${slug}`);
+  const xml = await r.text();
+  const tag = (s: string, t: string) => (s.match(new RegExp(`<${t}>([\\s\\S]*?)</${t}>`)) ?? [])[1]?.replace(/<!\[CDATA\[|\]\]>/g, "").trim() ?? "";
+  return [...xml.matchAll(/<position>([\s\S]*?)<\/position>/g)].map(([, p]) => {
+    const office = tag(p, "office");
+    return { source: "personio", id: tag(p, "id"), company: slug, title: tag(p, "name"), location: office, remote: /remote/i.test(office),
+      posted: day(tag(p, "createdAt")), url: `https://${slug}.jobs.personio.com/job/${tag(p, "id")}`,
+      text: strip([...p.matchAll(/<value>([\s\S]*?)<\/value>/g)].map((m) => m[1].replace(/<!\[CDATA\[|\]\]>/g, "")).join(" ")) };
+  });
+}
+
+/** Himalayas: a remote-jobs board with an open API (it asks for a link back, given on the sources page). */
+export async function himalayas(pages = 25): Promise<RawJob[]> {
+  const out: RawJob[] = [];
+  for (let p = 0; p < pages; p++) { // the API returns at most 20 a page
+    const d = await getJSON(`https://himalayas.app/jobs/api?limit=20&offset=${p * 20}`);
+    const jobs = d.jobs ?? [];
+    for (const j of jobs)
+      out.push({ source: "himalayas", id: String(j.guid ?? j.applicationLink ?? j.title), company: j.companyName ?? "", title: j.title ?? "",
+        location: (j.locationRestrictions ?? []).join(", ") || "Remote", remote: true, posted: day(j.pubDate), url: j.applicationLink ?? j.guid ?? "",
+        text: strip(`${j.description ?? ""} ${j.excerpt ?? ""} ${(j.categories ?? []).join(" ")}`) });
+    if (jobs.length < 20) break;
+  }
+  return out;
+}
+
+/** Jobicy: a remote-jobs board with an open API (attribution on the sources page). The latest 50; AI titles are kept by run.ts. */
+export async function jobicy(): Promise<RawJob[]> {
+  const d = await getJSON("https://jobicy.com/api/v2/remote-jobs?count=50");
+  return (d.jobs ?? []).map((j: any) => ({ source: "jobicy", id: String(j.id), company: j.companyName ?? "", title: strip(j.jobTitle ?? ""), location: j.jobGeo ?? "Remote",
+    remote: true, posted: day(j.pubDate), url: j.url ?? "", text: strip(`${j.jobDescription ?? ""} ${j.jobExcerpt ?? ""}`) }));
+}
+
+/** Where a board's public career page lives, for the sources page. */
+export const boardUrl = (provider: string, slug: string, wd?: { tenant: string; host: string; site: string }): string => ({
+  greenhouse: `https://job-boards.greenhouse.io/${slug}`,
+  lever: `https://jobs.lever.co/${slug}`,
+  ashby: `https://jobs.ashbyhq.com/${slug}`,
+  workday: wd ? `https://${wd.tenant}.${wd.host}.myworkdayjobs.com/${wd.site}` : "",
+  smartrecruiters: `https://careers.smartrecruiters.com/${slug}`,
+  workable: `https://apply.workable.com/${slug}/`,
+  recruitee: `https://${slug}.recruitee.com/`,
+  personio: `https://${slug}.jobs.personio.com/`,
+} as Record<string, string>)[provider] ?? "";
