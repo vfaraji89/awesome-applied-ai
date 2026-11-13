@@ -13,6 +13,11 @@
  },
  "sources": [
   {
+   "id": "ashby",
+   "boards": 103,
+   "ai": 662
+  },
+  {
    "id": "greenhouse",
    "boards": 77,
    "ai": 1003
@@ -30,7 +35,7 @@
   {
    "id": "workday",
    "boards": 3,
-   "ai": 431
+   "ai": 430
   },
   {
    "id": "recruitee",
@@ -75,14 +80,6 @@
    "n": 285
   },
   {
-   "id": "himalayas",
-   "boards": 1,
-   "ai": 18
-  }
- ],
- "failed": 100,
- "roles": [
-  {
    "id": "ai-platform-engineer",
    "n": 278
   },
@@ -96,7 +93,7 @@
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 172
+   "n": 170
   },
   {
    "id": "applied-ai-engineer",
@@ -112,11 +109,7 @@
   },
   {
    "id": "ai-native-architect",
-   "n": 73
-  },
-  {
-   "id": "ai-solutions-architect",
-   "n": 72
+   "n": 52
   }
  ],
  "seniority": [
@@ -146,29 +139,29 @@
   },
   {
    "id": "Junior",
-   "n": 24
+   "n": 25
   },
   {
    "id": "Head",
-   "n": 14
+   "n": 18
   }
  ],
  "titles": [
   {
    "title": "Forward Deployed Engineer",
-   "n": 67
+   "n": 64
   },
   {
    "title": "Data Scientist",
    "n": 22
   },
   {
-   "title": "Applied AI Engineer",
+   "title": "AI Engineer",
    "n": 20
   },
   {
-   "title": "AI Engineer",
-   "n": 19
+   "title": "Applied AI Engineer",
+   "n": 18
   },
   {
    "title": "Senior Forward Deployed Engineer",
@@ -183,16 +176,8 @@
    "n": 14
   },
   {
-   "title": "Applied AI Architect",
-   "n": 14
-  },
-  {
-   "title": "Member of Technical Staff",
-   "n": 14
-  },
-  {
    "title": "Senior Data Scientist",
-   "n": 12
+   "n": 13
   },
   {
    "title": "Senior Machine Learning Engineer",
@@ -203,12 +188,8 @@
    "n": 9
   },
   {
-   "title": "Applied AI Engineer, Startups",
-   "n": 9
-  },
-  {
-   "title": "Applied AI Engineer, Codex",
-   "n": 9
+   "title": "Applied AI Architect",
+   "n": 8
   },
   {
    "title": "AI Research Engineer",
@@ -235,27 +216,11 @@
    "n": 6
   },
   {
-   "title": "Forward Deployed Software Engineer",
-   "n": 6
-  },
-  {
-   "title": "Manager, Applied AI Engineering",
-   "n": 6
-  },
-  {
    "title": "AI Forward Deployed Engineer",
    "n": 6
   },
   {
-   "title": "Research Scientist",
-   "n": 5
-  },
-  {
-   "title": "Manager, Applied AI Architects",
-   "n": 5
-  },
-  {
-   "title": "Research Engineer",
+   "title": "Research Staff, Voice AI Foundations",
    "n": 5
   },
   {
@@ -263,8 +228,36 @@
    "n": 5
   },
   {
-   "title": "Forward Deployed Engineer, Agentic Platform",
-   "n": 5
+   "title": "Research Scientist",
+   "n": 4
+  },
+  {
+   "title": "Research Engineer / Scientist, Data & Evals",
+   "n": 4
+  },
+  {
+   "title": "Research Engineer / Scientist, Reinforcement Learning",
+   "n": 4
+  },
+  {
+   "title": "Research Engineer, Infrastructure",
+   "n": 4
+  },
+  {
+   "title": "Staff Forward Deployed Engineer",
+   "n": 4
+  },
+  {
+   "title": "AI Engineer Intern",
+   "n": 4
+  },
+  {
+   "title": "Forward Deployed Software Engineer",
+   "n": 4
+  },
+  {
+   "title": "Research Engineer",
+   "n": 4
   },
   {
    "title": "Senior Applied Research Scientist",
@@ -383,8 +376,8 @@
   {
    "id": "scale",
    "name": "Scale and optimise infrastructure",
-   "n": 135,
-   "share": 13
+   "n": 155,
+   "share": 12
   },
   {
    "id": "customers",
@@ -399,12 +392,6 @@
    "share": 12
   },
   {
-   "id": "customers",
-   "name": "Work with customers",
-   "n": 104,
-   "share": 10
-  },
-  {
    "id": "retrieval",
    "name": "Build retrieval and search",
    "n": 59,
@@ -413,7 +400,7 @@
   {
    "id": "research",
    "name": "Research new methods",
-   "n": 43,
+   "n": 56,
    "share": 4
   }
  ],
@@ -422,7 +409,7 @@
    "name": "Python",
    "n": 970,
    "inStack": true,
-   "preferred": 53
+   "preferred": 59
   },
   {
    "name": "TypeScript",
@@ -434,7 +421,7 @@
    "name": "PyTorch",
    "n": 234,
    "inStack": false,
-   "preferred": 8
+   "preferred": 9
   },
   {
    "name": "RAG",
@@ -468,7 +455,7 @@
   },
   {
    "name": "LangChain",
-   "n": 123,
+   "n": 113,
    "inStack": true,
    "preferred": 28
   },
@@ -482,49 +469,37 @@
    "name": "JAX",
    "n": 59,
    "inStack": false,
-   "preferred": 7
-  },
-  {
-   "name": "Claude Code",
-   "n": 94,
-   "inStack": true,
-   "preferred": 7
-  },
-  {
-   "name": "LangGraph",
-   "n": 60,
-   "inStack": true,
-   "preferred": 11
+   "preferred": 3
   },
   {
    "name": "BigQuery",
+   "n": 57,
+   "inStack": true,
+   "preferred": 24
+  },
+  {
+   "name": "LangGraph",
    "n": 54,
    "inStack": true,
-   "preferred": 22
+   "preferred": 14
   },
   {
    "name": "LlamaIndex",
-   "n": 52,
+   "n": 53,
    "inStack": false,
    "preferred": 23
   },
   {
-   "name": "JAX",
-   "n": 52,
+   "name": "TensorRT-LLM",
+   "n": 42,
    "inStack": false,
-   "preferred": 3
+   "preferred": 1
   },
   {
    "name": "Hugging Face",
    "n": 39,
    "inStack": true,
    "preferred": 2
-  },
-  {
-   "name": "TensorRT-LLM",
-   "n": 39,
-   "inStack": false,
-   "preferred": 1
   },
   {
    "name": "Unity Catalog",
@@ -545,34 +520,10 @@
    "preferred": 1
   },
   {
-   "name": "GitHub Copilot",
-   "n": 26,
-   "inStack": false,
-   "preferred": 1
-  },
-  {
-   "name": "LangSmith",
-   "n": 21,
-   "inStack": false,
-   "preferred": 2
-  },
-  {
-   "name": "Perplexity AI Search",
-   "n": 21,
-   "inStack": true,
-   "preferred": 0
-  },
-  {
    "name": "Ray",
    "n": 24,
    "inStack": false,
    "preferred": 4
-  },
-  {
-   "name": "ElevenLabs",
-   "n": 19,
-   "inStack": true,
-   "preferred": 0
   },
   {
    "name": "A2A",
@@ -581,14 +532,8 @@
    "preferred": 5
   },
   {
-   "name": "Deep Agents",
-   "n": 18,
-   "inStack": true,
-   "preferred": 2
-  },
-  {
    "name": "Microsoft Agents SDK",
-   "n": 17,
+   "n": 18,
    "inStack": true,
    "preferred": 1
   },
@@ -618,7 +563,7 @@
   },
   {
    "name": "Scale AI",
-   "n": 14,
+   "n": 15,
    "inStack": false,
    "preferred": 0
   },
@@ -629,10 +574,34 @@
    "preferred": 1
   },
   {
+   "name": "Elasticsearch",
+   "n": 14,
+   "inStack": false,
+   "preferred": 2
+  },
+  {
+   "name": "Redis",
+   "n": 13,
+   "inStack": false,
+   "preferred": 0
+  },
+  {
    "name": "Next.js",
    "n": 13,
    "inStack": true,
    "preferred": 3
+  },
+  {
+   "name": "Claude Agent SDK",
+   "n": 13,
+   "inStack": true,
+   "preferred": 4
+  },
+  {
+   "name": "Agent Skills",
+   "n": 13,
+   "inStack": false,
+   "preferred": 2
   },
   {
    "name": "Semantic Kernel",
@@ -641,22 +610,10 @@
    "preferred": 0
   },
   {
-   "name": "Temporal",
+   "name": "OpenAI API",
    "n": 12,
    "inStack": false,
-   "preferred": 4
-  },
-  {
-   "name": "Claude Agent SDK",
-   "n": 12,
-   "inStack": true,
-   "preferred": 4
-  },
-  {
-   "name": "pgvector",
-   "n": 12,
-   "inStack": false,
-   "preferred": 1
+   "preferred": 0
   },
   {
    "name": "CrewAI",
@@ -665,10 +622,10 @@
    "preferred": 4
   },
   {
-   "name": "Agent Skills",
+   "name": "PEFT",
    "n": 11,
    "inStack": false,
-   "preferred": 0
+   "preferred": 1
   },
   {
    "name": "Azure AI Foundry",
@@ -677,35 +634,29 @@
    "preferred": 1
   },
   {
-   "name": "EU AI Act",
-   "n": 11,
-   "inStack": false,
-   "preferred": 0
-  },
-  {
-   "name": "PEFT",
+   "name": "Streamlit",
    "n": 10,
    "inStack": false,
    "preferred": 1
   },
   {
-   "name": "Amazon Bedrock",
-   "n": 9,
+   "name": "EU AI Act",
+   "n": 10,
    "inStack": false,
-   "preferred": 2
+   "preferred": 0
   }
  ],
  "years": {
-  "asked": 15,
+  "asked": 18,
   "median": 5,
   "bands": [
    {
     "id": "0-2",
-    "n": 34
+    "n": 41
    },
    {
     "id": "3-4",
-    "n": 58
+    "n": 71
    },
    {
     "id": "5-7",
@@ -723,14 +674,14 @@
    "n": 1534
   }
  ],
- "reposts": 7,
+ "reposts": 9,
  "insights": {
   "perAd": {
    "skills": 4.6,
    "wide": 50
   },
   "aiDev": {
-   "share": 10,
+   "share": 12,
    "tools": [
     "Cursor",
     "Claude Code",
@@ -741,14 +692,14 @@
   "junior": 7,
   "roleSkill": {
    "rows": [
-    "ai-platform-engineer",
     "rd-researcher",
+    "ai-platform-engineer",
     "forward-deployed-engineer",
     "agentic-ai-engineer",
     "applied-ai-engineer",
     "ai-native-developer",
-    "ai-native-architect",
-    "ai-solutions-architect"
+    "ai-solutions-architect",
+    "ai-native-architect"
    ],
    "cols": [
     "software",
@@ -761,8 +712,8 @@
     "architecture",
     "retrieval",
     "data",
-    "ai-dev",
-    "security"
+    "security",
+    "ai-dev"
    ],
    "n": [
     285,
@@ -787,15 +738,14 @@
      11,
      32,
      19,
-     16,
-     17
+     7
     ],
     [
-     67,
+     83,
+     53,
      41,
-     38,
-     59,
-     29,
+     67,
+     54,
      24,
      39,
      36,
@@ -844,10 +794,7 @@
      43,
      24,
      30,
-     23,
-     39,
-     24,
-     18
+     25
     ],
     [
      83,
@@ -864,57 +811,57 @@
      33
     ],
     [
-     60,
-     71,
+     70,
+     70,
      86,
+     70,
+     30,
+     27,
      12,
-     60,
-     55,
-     14,
-     44,
-     45,
-     8,
-     59,
-     49
-    ],
-    [
-     69,
-     69,
-     86,
-     71,
-     31,
-     26,
-     13,
-     28,
+     27,
      36,
      22,
-     15,
-     22
+     22,
+     15
+    ],
+    [
+     54,
+     60,
+     79,
+     19,
+     54,
+     42,
+     19,
+     29,
+     33,
+     12,
+     62,
+     40
     ]
    ]
   },
   "roleTask": {
    "rows": [
-    "ai-platform-engineer",
     "rd-researcher",
+    "ai-platform-engineer",
     "forward-deployed-engineer",
     "agentic-ai-engineer",
     "applied-ai-engineer",
     "ai-native-developer",
-    "ai-native-architect",
-    "ai-solutions-architect"
+    "ai-solutions-architect",
+    "ai-native-architect"
    ],
    "cols": [
     "lead",
     "agents",
     "prototype",
     "ship",
-    "integrate",
     "train",
-    "scale",
+    "integrate",
     "evaluate",
-    "data",
+    "scale",
     "customers",
+    "data",
     "retrieval",
     "research"
    ],
@@ -930,21 +877,11 @@
    ],
    "cells": [
     [
-     21,
-     10,
-     9,
-     12,
-     6,
-     11,
-     13,
-     7,
-     9,
-     1,
-     4,
-     1
-    ],
-    [
      14,
+     12,
+     20,
+     12,
+     24,
      7,
      18,
      12,
@@ -961,17 +898,20 @@
      13,
      10,
      10,
+     15,
      1,
      10,
      4,
      2
     ],
     [
-     17,
-     18,
-     9,
-     15,
-     17,
+     21,
+     21,
+     19,
+     26,
+     4,
+     23,
+     3,
      2,
      33,
      15,
@@ -979,21 +919,20 @@
      0
     ],
     [
-     23,
-     33,
-     9,
+     25,
+     39,
+     11,
+     19,
+     11,
+     13,
      15,
-     12,
-     10,
-     9,
-     12,
+     11,
+     6,
      5,
      3,
-     2,
      2
     ],
     [
-     8,
      15,
      20,
      29,
@@ -1004,53 +943,50 @@
      0,
      13,
      7,
-     11,
-     0,
-     14,
-     5,
-     6,
-     6,
+     8,
      1
     ],
     [
      15,
-     16,
+     21,
+     7,
+     20,
+     8,
+     18,
+     8,
+     15,
      6,
-     17,
-     13,
-     6,
-     14,
-     5,
-     4,
-     4,
+     8,
      3,
      0
     ],
     [
-     12,
-     7,
-     12,
-     5,
-     19,
-     4,
-     1,
-     15,
-     4,
-     16,
-     1,
-     1
-    ],
-    [
-     28,
+     27,
      18,
      32,
-     13,
+     12,
+     19,
      11,
+     0,
+     16,
+     22,
+     12,
+     8,
+     0
+    ],
+    [
+     27,
      19,
      27,
      10,
      8,
-     0
+     27,
+     23,
+     2,
+     35,
+     8,
+     2,
+     4
     ]
    ]
   },
@@ -1077,7 +1013,7 @@
     "lift": 1.48
    },
    {
-    "a": "ai-dev",
+    "a": "retrieval",
     "b": "security",
     "n": 114,
     "share": 7,
@@ -1102,28 +1038,14 @@
     "b": "retrieval",
     "n": 247,
     "share": 16,
-    "lift": 1.41
-   },
-   {
-    "a": "product",
-    "b": "retrieval",
-    "n": 188,
-    "share": 12,
-    "lift": 1.41
-   },
-   {
-    "a": "retrieval",
-    "b": "ai-dev",
-    "n": 121,
-    "share": 8,
-    "lift": 1.41
+    "lift": 1.4
    },
    {
     "a": "agents",
     "b": "retrieval",
     "n": 339,
     "share": 22,
-    "lift": 1.39
+    "lift": 1.38
    }
   ],
   "remoteByRole": [
@@ -1159,7 +1081,7 @@
    },
    {
     "id": "agentic-ai-engineer",
-    "n": 172,
+    "n": 170,
     "share": 19
    },
    {
@@ -1174,7 +1096,7 @@
     "n": 105,
     "median": 4,
     "low": 3,
-    "high": 6
+    "high": 5
    },
    {
     "id": "Senior",
@@ -1185,8 +1107,8 @@
    },
    {
     "id": "Staff",
-    "n": 68,
-    "median": 7,
+    "n": 73,
+    "median": 6,
     "low": 4,
     "high": 8
    }
@@ -1197,47 +1119,47 @@
    "skills": [
     {
      "id": "software",
-     "lab": 69,
-     "rest": 75
+     "lab": 71,
+     "rest": 76
     },
     {
      "id": "agents",
-     "lab": 38,
-     "rest": 63
+     "lab": 53,
+     "rest": 64
     },
     {
      "id": "customer",
-     "lab": 77,
-     "rest": 52
+     "lab": 75,
+     "rest": 48
     },
     {
      "id": "models",
-     "lab": 33,
-     "rest": 47
+     "lab": 37,
+     "rest": 50
     },
     {
      "id": "evals",
-     "lab": 69,
+     "lab": 60,
      "rest": 44
     },
     {
      "id": "product",
-     "lab": 46,
-     "rest": 33
+     "lab": 50,
+     "rest": 31
     },
     {
      "id": "context",
-     "lab": 23,
-     "rest": 28
+     "lab": 34,
+     "rest": 29
     },
     {
      "id": "architecture",
-     "lab": 18,
-     "rest": 27
+     "lab": 31,
+     "rest": 26
     },
     {
      "id": "retrieval",
-     "lab": 8,
+     "lab": 19,
      "rest": 26
     },
     {
@@ -1252,13 +1174,8 @@
     },
     {
      "id": "ai-dev",
-     "lab": 33,
-     "rest": 21
-    },
-    {
-     "id": "security",
-     "lab": 90,
-     "rest": 19
+     "lab": 22,
+     "rest": 20
     }
    ]
   },
@@ -1269,7 +1186,7 @@
     "share": 76,
     "topRole": {
      "id": "agentic-ai-engineer",
-     "share": 84
+     "share": 85
     },
     "with": [
      {
@@ -1278,8 +1195,8 @@
       "lift": 1.1
      },
      {
-      "id": "agents",
-      "share": 66,
+      "id": "evals",
+      "share": 50,
       "lift": 1.1
      }
     ],
@@ -1292,12 +1209,12 @@
     "toolLift": [
      {
       "name": "Python",
-      "share": 85,
+      "share": 83,
       "lift": 1.3
      },
      {
       "name": "TypeScript",
-      "share": 21,
+      "share": 22,
       "lift": 1.3
      },
      {
@@ -1327,21 +1244,21 @@
       "lift": 1.4
      },
      {
-      "id": "ai-dev",
-      "share": 30,
-      "lift": 1.4
+      "id": "context",
+      "share": 38,
+      "lift": 1.3
      }
     ],
     "tools": [
      "MCP",
      "LlamaIndex",
-     "Unity Catalog",
-     "A2A"
+     "A2A",
+     "Microsoft Agents SDK"
     ],
     "toolLift": [
      {
       "name": "MCP",
-      "share": 15,
+      "share": 16,
       "lift": 1.6
      },
      {
@@ -1351,6 +1268,11 @@
      },
      {
       "name": "A2A",
+      "share": 2,
+      "lift": 1.6
+     },
+     {
+      "name": "Microsoft Agents SDK",
       "share": 2,
       "lift": 1.6
      }
@@ -1367,7 +1289,7 @@
     "with": [
      {
       "id": "product",
-      "share": 44,
+      "share": 41,
       "lift": 1.3
      },
      {
@@ -1379,27 +1301,27 @@
     "tools": [
      "DSPy",
      "Claude API",
-     "PEFT",
-     "Streamlit"
+     "Lovable",
+     "OpenAI API"
     ],
     "toolLift": [
      {
       "name": "DSPy",
       "share": 1,
-      "lift": 1.9
+      "lift": 2
      },
      {
       "name": "Claude API",
       "share": 1,
-      "lift": 1.9
+      "lift": 2
      },
      {
-      "name": "PEFT",
+      "name": "Lovable",
       "share": 1,
-      "lift": 1.7
+      "lift": 1.8
      },
      {
-      "name": "Streamlit",
+      "name": "OpenAI API",
       "share": 1,
       "lift": 1.7
      }
@@ -1411,17 +1333,17 @@
     "share": 49,
     "topRole": {
      "id": "ai-solutions-architect",
-     "share": 71
+     "share": 70
     },
     "with": [
      {
       "id": "evals",
-      "share": 49,
+      "share": 52,
       "lift": 1.1
      },
      {
       "id": "context",
-      "share": 31,
+      "share": 32,
       "lift": 1.1
      }
     ],
@@ -1429,7 +1351,7 @@
      "PyTorch",
      "JAX",
      "TensorRT-LLM",
-     "DeepSpeed"
+     "Vapi"
     ],
     "toolLift": [
      {
@@ -1439,18 +1361,18 @@
      },
      {
       "name": "JAX",
-      "share": 7,
-      "lift": 2.2
+      "share": 8,
+      "lift": 2
      },
      {
       "name": "TensorRT-LLM",
-      "share": 5,
-      "lift": 2.2
+      "share": 6,
+      "lift": 2
      },
      {
-      "name": "DeepSpeed",
+      "name": "Vapi",
       "share": 1,
-      "lift": 2.2
+      "lift": 2
      }
     ]
    },
@@ -1460,7 +1382,7 @@
     "share": 45,
     "topRole": {
      "id": "agentic-ai-engineer",
-     "share": 67
+     "share": 71
     },
     "with": [
      {
@@ -1470,20 +1392,25 @@
      },
      {
       "id": "retrieval",
-      "share": 36,
+      "share": 35,
       "lift": 1.4
      }
     ],
     "tools": [
      "LangSmith",
+     "Braintrust",
      "Claude API",
-     "Langfuse",
-     "LiteLLM"
+     "Langfuse"
     ],
     "toolLift": [
      {
       "name": "LangSmith",
-      "share": 3,
+      "share": 2,
+      "lift": 2.2
+     },
+     {
+      "name": "Braintrust",
+      "share": 1,
       "lift": 2.2
      },
      {
@@ -1495,11 +1422,6 @@
       "name": "Langfuse",
       "share": 1,
       "lift": 2.2
-     },
-     {
-      "name": "LiteLLM",
-      "share": 1,
-      "lift": 2.2
      }
     ]
    },
@@ -1508,7 +1430,7 @@
     "n": 493,
     "share": 32,
     "topRole": {
-     "id": "ai-native-architect",
+     "id": "forward-deployed-engineer",
      "share": 55
     },
     "with": [
@@ -1519,7 +1441,7 @@
      },
      {
       "id": "customer",
-      "share": 68,
+      "share": 64,
       "lift": 1.3
      }
     ],
@@ -1527,18 +1449,18 @@
      "Streamlit",
      "DSPy",
      "Elasticsearch",
-     "PEFT"
+     "llama.cpp"
     ],
     "toolLift": [
      {
       "name": "Streamlit",
       "share": 2,
-      "lift": 3
+      "lift": 2.8
      },
      {
       "name": "DSPy",
       "share": 2,
-      "lift": 2.6
+      "lift": 2.8
      },
      {
       "name": "Elasticsearch",
@@ -1546,9 +1468,9 @@
       "lift": 2.2
      },
      {
-      "name": "PEFT",
+      "name": "llama.cpp",
       "share": 1,
-      "lift": 2.1
+      "lift": 2.2
      }
     ]
    },
@@ -1557,8 +1479,8 @@
     "n": 455,
     "share": 30,
     "topRole": {
-     "id": "applied-ai-engineer",
-     "share": 43
+     "id": "agentic-ai-engineer",
+     "share": 44
     },
     "with": [
      {
@@ -1573,30 +1495,30 @@
      }
     ],
     "tools": [
+     "Vapi",
+     "Deepgram",
      "LlamaIndex",
-     "OpenAI Codex",
-     "Weights & Biases",
-     "PEFT"
+     "Weights & Biases"
     ],
     "toolLift": [
      {
-      "name": "LlamaIndex",
-      "share": 10,
-      "lift": 3.1
+      "name": "Vapi",
+      "share": 2,
+      "lift": 3.4
      },
      {
-      "name": "OpenAI Codex",
-      "share": 1,
-      "lift": 3.1
+      "name": "Deepgram",
+      "share": 2,
+      "lift": 3.4
+     },
+     {
+      "name": "LlamaIndex",
+      "share": 10,
+      "lift": 2.9
      },
      {
       "name": "Weights & Biases",
       "share": 1,
-      "lift": 3.1
-     },
-     {
-      "name": "PEFT",
-      "share": 2,
       "lift": 2.9
      }
     ]
@@ -1612,28 +1534,22 @@
     "with": [
      {
       "id": "evals",
-      "share": 60,
+      "share": 59,
       "lift": 1.3
      },
      {
-      "id": "ai-dev",
-      "share": 27,
+      "id": "context",
+      "share": 38,
       "lift": 1.3
      }
     ],
     "tools": [
-     "Redis",
      "Weights & Biases",
      "NVIDIA Dynamo",
      "Temporal",
      "GitHub Copilot"
     ],
     "toolLift": [
-     {
-      "name": "Redis",
-      "share": 2,
-      "lift": 3.2
-     },
      {
       "name": "Weights & Biases",
       "share": 1,
@@ -1661,8 +1577,8 @@
     "n": 389,
     "share": 25,
     "topRole": {
-     "id": "ai-native-architect",
-     "share": 45
+     "id": "applied-ai-engineer",
+     "share": 43
     },
     "with": [
      {
@@ -1680,7 +1596,7 @@
      "RAG",
      "CrewAI",
      "OpenAI Agents SDK",
-     "Vector DB"
+     "Microsoft Agents SDK"
     ],
     "toolLift": [
      {
@@ -1711,7 +1627,7 @@
     "share": 24,
     "topRole": {
      "id": "forward-deployed-engineer",
-     "share": 39
+     "share": 40
     },
     "with": [
      {
@@ -1720,32 +1636,32 @@
       "lift": 1.3
      },
      {
-      "id": "retrieval",
-      "share": 32,
+      "id": "ai-dev",
+      "share": 25,
       "lift": 1.3
      }
     ],
     "tools": [
      "SQL",
      "BigQuery",
-     "Streamlit",
+     "Deep Agents",
      "Strands Agents"
     ],
     "toolLift": [
      {
       "name": "SQL",
-      "share": 50,
-      "lift": 4.4
+      "share": 48,
+      "lift": 4.1
      },
      {
       "name": "BigQuery",
       "share": 15,
-      "lift": 4.4
+      "lift": 4.1
      },
      {
-      "name": "Streamlit",
+      "name": "Deep Agents",
       "share": 2,
-      "lift": 4.4
+      "lift": 4.1
      },
      {
       "name": "Strands Agents",
@@ -1809,7 +1725,7 @@
     "share": 20,
     "topRole": {
      "id": "ai-native-architect",
-     "share": 59
+     "share": 40
     },
     "with": [
      {
@@ -1818,8 +1734,8 @@
       "lift": 1.5
      },
      {
-      "id": "agents",
-      "share": 86,
+      "id": "context",
+      "share": 42,
       "lift": 1.4
      }
     ],
@@ -1832,13 +1748,13 @@
     "toolLift": [
      {
       "name": "Cursor",
-      "share": 34,
-      "lift": 4.6
+      "share": 43,
+      "lift": 5.1
      },
      {
       "name": "Claude Code",
-      "share": 28,
-      "lift": 4.6
+      "share": 33,
+      "lift": 5.1
      },
      {
       "name": "GitHub Copilot",
@@ -1848,56 +1764,7 @@
      {
       "name": "Copilot Studio",
       "share": 3,
-      "lift": 4.6
-     }
-    ]
-   },
-   {
-    "id": "security",
-    "n": 327,
-    "share": 21,
-    "topRole": {
-     "id": "ai-native-architect",
-     "share": 49
-    },
-    "with": [
-     {
-      "id": "ai-dev",
-      "share": 32,
-      "lift": 1.5
-     },
-     {
-      "id": "evals",
-      "share": 61,
-      "lift": 1.4
-     }
-    ],
-    "tools": [
-     "Claude API",
-     "EU AI Act",
-     "Temporal",
-     "LiteLLM"
-    ],
-    "toolLift": [
-     {
-      "name": "Claude API",
-      "share": 3,
-      "lift": 4.8
-     },
-     {
-      "name": "EU AI Act",
-      "share": 3,
-      "lift": 3.9
-     },
-     {
-      "name": "Temporal",
-      "share": 3,
-      "lift": 3.6
-     },
-     {
-      "name": "LiteLLM",
-      "share": 2,
-      "lift": 3.4
+      "lift": 5.1
      }
     ]
    }
@@ -1910,23 +1777,23 @@
   },
   {
    "week": "2026-10-05",
-   "n": 66
+   "n": 97
   },
   {
    "week": "2026-10-12",
-   "n": 123
+   "n": 140
   },
   {
    "week": "2026-10-19",
-   "n": 110
+   "n": 142
   },
   {
    "week": "2026-10-26",
-   "n": 300
+   "n": 324
   },
   {
    "week": "2026-11-02",
-   "n": 624
+   "n": 434
   },
   {
    "week": "2026-11-09",
@@ -1960,7 +1827,7 @@
       "n": 158,
       "share": 12.5,
       "first": "2026-10-01",
-      "change": -4.4
+      "change": -1.1
      },
      {
       "name": "JavaScript",
@@ -1985,8 +1852,8 @@
      },
      {
       "name": "Go",
-      "n": 104,
-      "share": 9.9,
+      "n": 130,
+      "share": 10.3,
       "first": "2026-10-01",
       "change": -3.7
      },
@@ -1999,24 +1866,24 @@
      },
      {
       "name": "Rust",
-      "n": 57,
-      "share": 5.4,
+      "n": 71,
+      "share": 5.6,
       "first": "2026-10-01",
-      "change": 0.7
+      "change": 0
      },
      {
       "name": "Bash",
-      "n": 36,
-      "share": 3.4,
+      "n": 38,
+      "share": 3,
       "first": "2026-10-12",
-      "change": 2.1
+      "change": 2.2
      },
      {
       "name": "Scala",
       "n": 24,
-      "share": 2.3,
+      "share": 1.9,
       "first": "2026-10-12",
-      "change": 1.7
+      "change": 1.5
      },
      {
       "name": "C#",
@@ -2027,17 +1894,17 @@
      },
      {
       "name": "Kotlin",
-      "n": 16,
-      "share": 1.5,
+      "n": 17,
+      "share": 1.3,
       "first": "2026-10-06",
-      "change": -0.1
+      "change": 0.3
      },
      {
       "name": "Ruby",
-      "n": 12,
-      "share": 1.1,
+      "n": 13,
+      "share": 1,
       "first": "2026-10-07",
-      "change": 0.4
+      "change": 0.5
      },
      {
       "name": "C",
@@ -2084,27 +1951,28 @@
     "items": [
      {
       "name": "React",
-      "n": 60,
-      "share": 5.7,
+      "n": 85,
+      "share": 6.7,
       "first": "2026-10-02",
-      "change": 1.9
+      "change": 0.7
      },
      {
       "name": "Angular",
       "n": 14,
-      "share": 1.3,
+      "share": 1.1,
       "first": "2026-10-06",
-      "change": -2.1
+      "change": -1.3
      },
      {
       "name": "Next.js",
-      "n": 9,
-      "share": 0.9,
-      "first": "2026-10-07"
+      "n": 10,
+      "share": 0.8,
+      "first": "2026-10-07",
+      "change": 0.2
      },
      {
       "name": "React Native",
-      "n": 6,
+      "n": 7,
       "share": 0.6,
       "first": "2026-10-31"
      },
@@ -2183,28 +2051,28 @@
      },
      {
       "name": "Node.js",
-      "n": 28,
-      "share": 2.7,
+      "n": 33,
+      "share": 2.6,
       "first": "2026-10-07",
-      "change": -0.6
+      "change": 0.5
      },
      {
       "name": "FastAPI",
-      "n": 19,
-      "share": 1.8,
+      "n": 21,
+      "share": 1.7,
       "first": "2026-10-06",
-      "change": 1.1
+      "change": 1.2
      },
      {
       "name": "Express",
-      "n": 18,
-      "share": 1.7,
+      "n": 19,
+      "share": 1.5,
       "first": "2026-10-01",
-      "change": -2.6
+      "change": -2.2
      },
      {
       "name": "GraphQL",
-      "n": 14,
+      "n": 16,
       "share": 1.3,
       "first": "2026-10-07",
       "change": -1.1
@@ -2248,7 +2116,7 @@
       "first": "2026-10-15"
      },
      {
-      "name": "Django",
+      "name": "Protobuf",
       "n": 4,
       "share": 0.3,
       "first": "2026-10-02"
@@ -2286,8 +2154,8 @@
      },
      {
       "name": "Spark",
-      "n": 89,
-      "share": 8.5,
+      "n": 96,
+      "share": 7.6,
       "first": "2026-10-01",
       "change": -1
      },
@@ -2296,33 +2164,33 @@
       "n": 74,
       "share": 5.8,
       "first": "2026-10-05",
-      "change": 1.8
+      "change": 1
+     },
+     {
+      "name": "PostgreSQL",
+      "n": 41,
+      "share": 3.2,
+      "first": "2026-10-05",
+      "change": 0.5
      },
      {
       "name": "Kafka",
       "n": 35,
       "share": 2.8,
       "first": "2026-10-06",
-      "change": 1.7
+      "change": 1.9
      },
      {
       "name": "Airflow",
-      "n": 30,
-      "share": 2.8,
-      "first": "2026-10-06",
-      "change": -0.4
-     },
-     {
-      "name": "PostgreSQL",
-      "n": 27,
+      "n": 33,
       "share": 2.6,
-      "first": "2026-10-13",
-      "change": 2
+      "first": "2026-10-06",
+      "change": 0.5
      },
      {
       "name": "NumPy",
       "n": 17,
-      "share": 1.6,
+      "share": 1.3,
       "first": "2026-10-14",
       "change": 1.6
      },
@@ -2336,39 +2204,55 @@
      {
       "name": "MySQL",
       "n": 11,
-      "share": 1,
+      "share": 0.9,
       "first": "2026-10-14",
       "change": 1
      },
      {
       "name": "MongoDB",
       "n": 11,
-      "share": 1,
+      "share": 0.9,
       "first": "2026-10-06",
       "change": 0.3
      },
      {
+      "name": "Looker",
+      "n": 11,
+      "share": 0.9,
+      "first": "2026-10-13",
+      "change": -0.3
+     },
+     {
+      "name": "dbt",
+      "n": 10,
+      "share": 0.8,
+      "first": "2026-10-05",
+      "change": 0.2
+     },
+     {
+      "name": "ClickHouse",
+      "n": 10,
+      "share": 0.8,
+      "first": "2026-10-07",
+      "change": -0.4
+     },
+     {
       "name": "Pandas",
       "n": 10,
-      "share": 0.9,
+      "share": 0.8,
       "first": "2026-10-28",
       "change": 0.9
      },
      {
       "name": "Tableau",
-      "n": 9,
-      "share": 0.9,
-      "first": "2026-10-13"
+      "n": 10,
+      "share": 0.8,
+      "first": "2026-10-13",
+      "change": 0.2
      },
      {
       "name": "Power BI",
-      "n": 8,
-      "share": 0.8,
-      "first": "2026-10-13"
-     },
-     {
-      "name": "dbt",
-      "n": 7,
+      "n": 9,
       "share": 0.7,
       "first": "2026-10-13"
      },
@@ -2387,12 +2271,6 @@
      {
       "name": "Redshift",
       "n": 4,
-      "share": 0.4,
-      "first": "2026-10-29"
-     },
-     {
-      "name": "Supabase",
-      "n": 3,
       "share": 0.3,
       "first": "2026-10-29"
      },
@@ -2495,51 +2373,9 @@
       "change": 1.7
      },
      {
-      "name": "Azure",
-      "n": 127,
-      "share": 12.1,
-      "first": "2026-10-01",
-      "change": -0.7
-     },
-     {
-      "name": "GCP",
-      "n": 109,
-      "share": 10.4,
-      "first": "2026-10-01",
-      "change": -2.7
-     },
-     {
-      "name": "Linux",
-      "n": 90,
-      "share": 8.5,
-      "first": "2026-10-05",
-      "change": 2.5
-     },
-     {
-      "name": "Docker",
-      "n": 78,
-      "share": 7.4,
-      "first": "2026-10-06",
-      "change": 3
-     },
-     {
-      "name": "Terraform",
-      "n": 33,
-      "share": 3.1,
-      "first": "2026-10-06",
-      "change": 1.7
-     },
-     {
-      "name": "Slurm",
-      "n": 24,
-      "share": 2.3,
-      "first": "2026-10-12",
-      "change": 1.7
-     },
-     {
-      "name": "Ansible",
+      "name": "Grafana",
       "n": 22,
-      "share": 2.1,
+      "share": 1.7,
       "first": "2026-10-06",
       "change": -0.5
      },
@@ -2574,57 +2410,30 @@
      {
       "name": "Jenkins",
       "n": 18,
-      "share": 1.7,
+      "share": 1.4,
       "first": "2026-10-12",
-      "change": 0.1
-     },
-     {
-      "name": "Prometheus",
-      "n": 18,
-      "share": 1.7,
-      "first": "2026-10-06",
-      "change": -0.8
-     },
-     {
-      "name": "Helm",
-      "n": 16,
-      "share": 1.5,
-      "first": "2026-10-06",
-      "change": -0.1
-     },
-     {
-      "name": "GitHub Actions",
-      "n": 14,
-      "share": 1.3,
-      "first": "2026-10-12",
-      "change": 0.6
-     },
-     {
-      "name": "Grafana",
-      "n": 14,
-      "share": 1.3,
-      "first": "2026-10-07",
-      "change": -0.3
+      "change": 0.4
      },
      {
       "name": "Argo",
       "n": 13,
-      "share": 1.2,
+      "share": 1,
       "first": "2026-10-15",
       "change": 1.2
      },
      {
       "name": "Datadog",
-      "n": 12,
-      "share": 1.1,
+      "n": 13,
+      "share": 1,
       "first": "2026-10-07",
-      "change": -1.4
+      "change": -0.8
      },
      {
       "name": "OpenTelemetry",
-      "n": 7,
-      "share": 0.7,
-      "first": "2026-10-12"
+      "n": 10,
+      "share": 0.8,
+      "first": "2026-10-12",
+      "change": 0.2
      },
      {
       "name": "Cloudflare Workers",
@@ -2663,7 +2472,7 @@
       "n": 74,
       "share": 5.8,
       "first": "2026-10-03",
-      "change": 2
+      "change": 2.3
      },
      {
       "name": "vLLM",
@@ -2674,10 +2483,17 @@
      },
      {
       "name": "JAX",
-      "n": 52,
-      "share": 4.9,
+      "n": 59,
+      "share": 4.7,
       "first": "2026-10-05",
       "change": 2.9
+     },
+     {
+      "name": "Triton",
+      "n": 59,
+      "share": 4.7,
+      "first": "2026-10-02",
+      "change": 0.9
      },
      {
       "name": "NCCL",
@@ -2702,24 +2518,24 @@
      },
      {
       "name": "scikit-learn",
-      "n": 24,
-      "share": 2.3,
+      "n": 26,
+      "share": 2.1,
       "first": "2026-10-01",
-      "change": -1
+      "change": -0.2
      },
      {
       "name": "Megatron",
-      "n": 14,
-      "share": 1.3,
+      "n": 15,
+      "share": 1.2,
       "first": "2026-10-12",
-      "change": 0.6
+      "change": 0.7
      },
      {
       "name": "ONNX",
-      "n": 13,
-      "share": 1.2,
+      "n": 14,
+      "share": 1.1,
       "first": "2026-10-03",
-      "change": -0.4
+      "change": -0.7
      },
      {
       "name": "XGBoost",
@@ -2742,12 +2558,6 @@
      {
       "name": "llama.cpp",
       "n": 7,
-      "share": 0.7,
-      "first": "2026-10-12"
-     },
-     {
-      "name": "Transformers",
-      "n": 6,
       "share": 0.6,
       "first": "2026-10-12"
      },
@@ -2829,10 +2639,10 @@
    {
     "id": "data-eng",
     "name": "Data engineering",
-    "n": 40,
-    "any": 55,
+    "n": 62,
+    "any": 56,
     "build": 50,
-    "use": 38,
+    "use": 31,
     "terms": [
      "Agents",
      "AI coding tools",
@@ -2842,14 +2652,14 @@
    {
     "id": "design",
     "name": "Design",
-    "n": 88,
-    "any": 47,
-    "build": 28,
-    "use": 32,
+    "n": 130,
+    "any": 52,
+    "build": 35,
+    "use": 34,
     "terms": [
      "AI tools",
      "AI features",
-     "Generative AI"
+     "OpenAI or Claude"
     ]
    },
    {
@@ -2868,23 +2678,23 @@
    {
     "id": "pm",
     "name": "Product management",
-    "n": 220,
-    "any": 41,
-    "build": 30,
-    "use": 18,
+    "n": 276,
+    "any": 46,
+    "build": 36,
+    "use": 19,
     "terms": [
      "Agents",
-     "LLMs",
-     "AI features"
+     "AI features",
+     "LLMs"
     ]
    },
    {
     "id": "fullstack",
     "name": "Full-stack",
-    "n": 82,
-    "any": 40,
-    "build": 20,
-    "use": 29,
+    "n": 104,
+    "any": 44,
+    "build": 28,
+    "use": 26,
     "terms": [
      "AI coding tools",
      "AI features",
@@ -2920,27 +2730,14 @@
    {
     "id": "backend",
     "name": "Backend",
-    "n": 82,
-    "any": 37,
-    "build": 29,
+    "n": 103,
+    "any": 40,
+    "build": 32,
     "use": 16,
     "terms": [
      "AI coding tools",
      "Agents",
-     "Generative AI"
-    ]
-   },
-   {
-    "id": "software",
-    "name": "Software engineering (general)",
-    "n": 557,
-    "any": 35,
-    "build": 29,
-    "use": 18,
-    "terms": [
-     "Agents",
-     "LLMs",
-     "AI tools"
+     "LLMs"
     ]
    },
    {
@@ -2957,26 +2754,14 @@
     ]
    },
    {
-    "id": "frontend",
-    "name": "Frontend",
-    "n": 24,
-    "any": 25,
-    "build": 21,
-    "use": 13,
-    "terms": [
-     "Agents",
-     "AI coding tools",
-     "AI features"
-    ]
-   },
-   {
     "id": "mobile",
     "name": "Mobile",
-    "n": 41,
-    "any": 20,
-    "build": 17,
-    "use": 12,
+    "n": 57,
+    "any": 35,
+    "build": 32,
+    "use": 16,
     "terms": [
+     "AI features",
      "AI coding tools",
      "Agents"
     ]
@@ -2984,10 +2769,10 @@
    {
     "id": "qa",
     "name": "QA and testing",
-    "n": 114,
-    "any": 11,
-    "build": 4,
-    "use": 11,
+    "n": 121,
+    "any": 15,
+    "build": 7,
+    "use": 12,
     "terms": [
      "AI tools",
      "AI coding tools",
@@ -2999,7 +2784,7 @@
  "byMonth": [
   {
    "month": "2026-10",
-   "n": 620
+   "n": 737
   },
   {
    "month": "2026-11",

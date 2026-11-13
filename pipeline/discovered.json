@@ -1,6 +1,6 @@
 {
  "_note": "Written by pipeline/boards.ts. Career pages found for the map's tools and the AI labs. Do not edit; add boards by hand in companies.json.",
- "generatedAt": "2026-11-13T04:02:46.902Z",
+ "generatedAt": "2026-11-13T03:54:29.871Z",
  "probed": 2781,
  "boards": [
   {
@@ -14,6 +14,12 @@
    "slug": "arena",
    "name": "LMArena (Arena)",
    "tool": "lmarena"
+  },
+  {
+   "provider": "ashby",
+   "slug": "arthur-ai",
+   "name": "Arthur Engine",
+   "tool": "arthur-engine"
   },
   {
    "provider": "ashby",
@@ -86,6 +92,12 @@
    "slug": "hedra",
    "name": "Hedra Live Avatars",
    "tool": "hedra-live-avatars"
+  },
+  {
+   "provider": "ashby",
+   "slug": "judgmentlabs",
+   "name": "Judgment Labs judgeval",
+   "tool": "judgeval"
   },
   {
    "provider": "ashby",
@@ -170,6 +182,12 @@
    "slug": "runpod",
    "name": "RunPod",
    "tool": "runpod"
+  },
+  {
+   "provider": "ashby",
+   "slug": "sentry",
+   "name": "Sentry AI Agent Monitoring",
+   "tool": "sentry-ai-agent-monitoring"
   },
   {
    "provider": "ashby",
