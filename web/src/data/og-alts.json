@@ -15,6 +15,7 @@
  "certificates": "Certificates worth having: By track and level, each checked against the provider's own page, with what changed recently.",
  "docs": "The docs people skip, in motion: Short animations, everyday comparisons, real examples and the code you need.",
  "docs/claude-platform": "How your app talks to Claude: From the first request to the receipt that comes back, one animation at a time.",
+ "docs/mcp": "One plug for every tool: The Model Context Protocol in ten animated pages: hosts, servers, tools, the handshake, transports, OAuth and safety.",
  "jargon": "131 terms, in plain words: Flip cards: the plain meaning on the front, the deeper answer and the interview question on the back.",
  "contribute": "Spot something wrong? Tell me: Corrections, companies the tracker should follow, and terms or tools that are missing."
 }

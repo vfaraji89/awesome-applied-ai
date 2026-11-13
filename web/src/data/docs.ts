@@ -23,6 +23,14 @@ export const docs: Doc[] = [
   },
   { id: "vercel-ai-sdk", name: "Vercel AI SDK", logo: "Vercel AI SDK", oneLine: "Add AI to a TypeScript app: one way to call any model, streaming, tools and agents.", pages: [], status: "soon" },
   { id: "langchain", name: "LangChain & Deep Agents", logo: "LangChain", oneLine: "Agents from building blocks, and the harness that plans, delegates and keeps notes.", pages: [], status: "soon" },
-  { id: "mcp", name: "MCP", logo: "MCP", oneLine: "One standard plug between AI apps and the tools and data they use.", pages: [], status: "soon" },
+  {
+    id: "mcp",
+    name: "MCP",
+    logo: "MCP",
+    oneLine: "One standard plug between AI apps and the tools and data they use.",
+    pages: ["What it is: one plug for every tool", "Host, client and server", "What a server offers", "What the app offers back", "The handshake", "The messages", "Local or remote", "Who may call: authorization", "Staying safe", "Build your first server"],
+    status: "live",
+    href: "/docs/mcp/",
+  },
   { id: "datahub", name: "DataHub", logo: "DataHub", oneLine: "The metadata under your AI: what data you have, who owns it, where it came from and who may use it.", pages: [], status: "soon" },
 ];

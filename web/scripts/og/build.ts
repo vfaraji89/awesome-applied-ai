@@ -64,6 +64,8 @@ const cards: Card[] = [
     [[String(docs.filter((d) => d.status === "live").length), "live"], [String(docs.filter((d) => d.status !== "live").length), "coming"], [String(jargon.terms.length), "terms"]]),
   R("docs/claude-platform", "06 · Docs · Claude Platform", "How your app <mark>talks to Claude</mark>", "From the first request to the receipt that comes back, one animation at a time.",
     [["API", "requests"], ["Tools", "and agents"], ["Cost", "and caching"]]),
+  R("docs/mcp", "06 · Docs · MCP", "One plug for <mark>every tool</mark>", "The Model Context Protocol in ten animated pages: hosts, servers, tools, the handshake, transports, OAuth and safety.",
+    [["10", "pages"], ["Tools", "resources, prompts"], ["Free", "for everyone"]]),
   R("jargon", "06 · Docs · jargon", `${jargon.terms.length} terms, in <mark>plain words</mark>`, "Flip cards: the plain meaning on the front, the deeper answer and the interview question on the back.",
     [[String(jargon.terms.length), "terms"], [String((jargon as { fields: unknown[] }).fields.length), "fields"], ["Interview", "questions"]]),
   R("contribute", "07 · Feedback", "Spot something wrong? <mark>Tell me</mark>", "Corrections, companies the tracker should follow, and terms or tools that are missing.",
