@@ -23,7 +23,7 @@ const RECRUITING = [
 export default function Sources() {
   const m = market as unknown as { generatedAt: string; totals: { processed: number }; skills: Row[]; tasks?: Row[]; tools: Row[] };
   const ps = sources.providers as Provider[];
-  const ats = ps.filter((p) => p.kind === "ats"), boards = ps.filter((p) => p.kind === "board");
+  const ats = ps.filter((p) => p.kind === "ats" && p.boards.length > 0), boards = ps.filter((p) => p.kind === "board");
   const live = (p: Provider) => p.boards.filter((b) => b.ok !== false);
   const pages = ats.reduce((a, p) => a + live(p).length, 0);
   const updated = new Date(sources.generatedAt).toUTCString().slice(5, 16);

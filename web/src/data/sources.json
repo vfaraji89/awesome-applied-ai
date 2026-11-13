@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T03:34:40.102Z",
+ "generatedAt": "2026-11-13T03:36:36.668Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -981,56 +981,7 @@
    "kind": "ats",
    "site": "https://www.personio.com",
    "how": "XML job feed",
-   "boards": [
-    {
-     "slug": "aleph-alpha",
-     "url": "https://aleph-alpha.jobs.personio.com/",
-     "ok": null,
-     "ai": 0
-    },
-    {
-     "slug": "deepl",
-     "url": "https://deepl.jobs.personio.com/",
-     "ok": null,
-     "ai": 0
-    },
-    {
-     "slug": "parloa",
-     "url": "https://parloa.jobs.personio.com/",
-     "ok": null,
-     "ai": 0
-    },
-    {
-     "slug": "langdock",
-     "url": "https://langdock.jobs.personio.com/",
-     "ok": null,
-     "ai": 0
-    },
-    {
-     "slug": "black-forest-labs",
-     "url": "https://black-forest-labs.jobs.personio.com/",
-     "ok": null,
-     "ai": 0
-    },
-    {
-     "slug": "n8n",
-     "url": "https://n8n.jobs.personio.com/",
-     "ok": null,
-     "ai": 0
-    },
-    {
-     "slug": "celonis",
-     "url": "https://celonis.jobs.personio.com/",
-     "ok": null,
-     "ai": 0
-    },
-    {
-     "slug": "tacto",
-     "url": "https://tacto.jobs.personio.com/",
-     "ok": null,
-     "ai": 0
-    }
-   ],
+   "boards": [],
    "ok": false,
    "ai": 0,
    "processed": 0

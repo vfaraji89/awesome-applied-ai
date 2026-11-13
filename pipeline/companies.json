@@ -170,14 +170,5 @@
   "bunq",
   "channable"
  ],
- "personio": [
-  "aleph-alpha",
-  "deepl",
-  "parloa",
-  "langdock",
-  "black-forest-labs",
-  "n8n",
-  "celonis",
-  "tacto"
- ]
+ "personio": []
 }

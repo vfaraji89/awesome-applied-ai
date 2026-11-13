@@ -197,17 +197,11 @@ export async function himalayas(pages = 25): Promise<RawJob[]> {
   return out;
 }
 
-/** Jobicy: a remote-jobs board with an open API (attribution on the sources page). One call for the AI tags. */
+/** Jobicy: a remote-jobs board with an open API (attribution on the sources page). The latest 50; AI titles are kept by run.ts. */
 export async function jobicy(): Promise<RawJob[]> {
-  const out: RawJob[] = [];
-  const seen = new Set<string>();
-  for (const tag of ["ai", "machine-learning", "llm"]) {
-    const d = await getJSON(`https://jobicy.com/api/v2/remote-jobs?count=50&tag=${tag}`);
-    for (const j of d.jobs ?? [])
-      if (!seen.has(String(j.id)) && seen.add(String(j.id))) out.push({ source: "jobicy", id: String(j.id), company: j.companyName ?? "", title: strip(j.jobTitle ?? ""), location: j.jobGeo ?? "Remote",
-        remote: true, posted: day(j.pubDate), url: j.url ?? "", text: strip(`${j.jobDescription ?? ""} ${j.jobExcerpt ?? ""}`) });
-  }
-  return out;
+  const d = await getJSON("https://jobicy.com/api/v2/remote-jobs?count=50");
+  return (d.jobs ?? []).map((j: any) => ({ source: "jobicy", id: String(j.id), company: j.companyName ?? "", title: strip(j.jobTitle ?? ""), location: j.jobGeo ?? "Remote",
+    remote: true, posted: day(j.pubDate), url: j.url ?? "", text: strip(`${j.jobDescription ?? ""} ${j.jobExcerpt ?? ""}`) }));
 }
 
 /** Where a board's public career page lives, for the sources page. */
