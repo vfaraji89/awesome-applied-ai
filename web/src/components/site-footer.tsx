@@ -20,9 +20,9 @@ gsap.registerPlugin(useGSAP);
 
 /* For each section: the function name the model would call, the question it answers, and what
    comes back. {n} and friends are filled from HarnessCounts. */
-const UNITS: Record<string, string> = { market: "open", roles: "roles", architect: "layers", tools: "tools", certificates: "certs", docs: "live" };
+const UNITS: Record<string, string> = { market: "ads", roles: "roles", architect: "layers", tools: "tools", certificates: "certs", docs: "live" };
 const CALLS: Record<string, { fn: string; ask: string; ret: string }> = {
-  market: { fn: "market.pulse()", ask: "What are applied AI jobs asking for right now?", ret: "{n} open AI roles by skill, tool and level, from {all} tracked" },
+  market: { fn: "market.pulse()", ask: "What are applied AI jobs asking for right now?", ret: "{n} AI job ads since 1 Oct 2026, by skill, task, tool and level" },
   roles: { fn: "roles.compare()", ask: "Who does the work, and what does each role take?", ret: "{n} roles across {s} skills, with daily tasks and how each one grows" },
   architect: { fn: "architect.design()", ask: "How do you design AI into a real system?", ret: "{n} layers, {p} problems with fixes, and the agent harness" },
   tools: { fn: "tools.search()", ask: "What should I build with?", ret: "{n} tools in eleven areas, filterable by use case; {e} emerging" },

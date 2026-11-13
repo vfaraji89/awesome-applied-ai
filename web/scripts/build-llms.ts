@@ -19,6 +19,7 @@ import market from "../src/data/market.json";
 const SITE = "https://vfaraji89.github.io/awesome-applied-ai";
 const u = (p: string) => SITE + p;
 const day = String(market.generatedAt).slice(0, 10);
+const mtasks = (market.tasks ?? []) as { name: string; share: number }[];
 const emerging = tools.filter((t) => signals(t).isNew);
 const roleName = Object.fromEntries(fRoles.map((r) => [r.id, r.name]));
 const skillName = Object.fromEntries(skills.map((s) => [s.id, s.name]));
@@ -26,7 +27,7 @@ const skillName = Object.fromEntries(skills.map((s) => [s.id, s.name]));
 const about = `> A plain-language map of applied AI in seven steps: what the job market asks for, the roles and skills, the AI-native architect, a tool map, industry certificates, technical docs in motion, and feedback. Independent and non-commercial: no company pays to be listed. Curated by Vahid Faraji (https://vfaraji89.github.io/) as the companion to the book Applied AI, Simplified. Readable in English, Turkish, Spanish, Dutch and Japanese.`;
 
 const facts = [
-  `- Job tracker: ${market.totals.openNow} applied AI roles open and ${market.totals.allTime} tracked in total, read from public job boards (as of ${day}). Most open role family: ${roleName[market.roles[0].id] ?? market.roles[0].id}. Most asked-for skill: ${skillName[market.skills[0].id] ?? market.skills[0].id} (${market.skills[0].share}% of postings). Most named tool: ${market.tools[0].name}.`,
+  `- Job tracker: ${market.totals.processed} applied AI job ads processed since ${market.since}, read from public company career pages and job boards (as of ${day}; every site read: ${u("/market/sources/")}). Most common role family: ${roleName[market.roles[0].id] ?? market.roles[0].id}. Most asked-for skill: ${skillName[market.skills[0].id] ?? market.skills[0].id} (${market.skills[0].share}% of postings). Most named tool: ${market.tools[0].name}.${mtasks.length ? ` Most asked-for task: ${mtasks[0].name} (${mtasks[0].share}% of ads).` : ""}`,
   `- Tool map: ${tools.length} tools in ${areas.length} areas and ${new Set(tools.map((t) => t.category)).size} categories, filterable by ${useCases.length} use cases; ${emerging.length} emerging (launched in the last six months, as of ${statsDate}).`,
   `- Certificates: ${certs.length} industry certificates and ${courses.length} courses, each checked against the provider's own page on ${CHECKED}.`,
   `- Roles: ${fRoles.length} applied AI roles across ${skills.length} skills. Architecture: ${layers.length} layers and ${problems.length} common problems with worked answers. Jargon: ${jargon.terms.length} terms.`,
@@ -48,9 +49,10 @@ const short = [
 const md = (s: string) => s.replace(/\s+/g, " ").trim();
 const full: string[] = [
   "# awesome-applied-ai (full text)", "", about, "", `Generated ${day}. Short index: ${u("/llms.txt")}`, "", "## Key facts", "", ...facts, "",
-  "## Job market", "", `Source: ${u("/market/")}. Aggregate counts only; no posting, link or company is stored.`, "",
-  "Open roles by family: " + market.roles.slice(0, 8).map((r: { id: string; n: number }) => `${roleName[r.id] ?? r.id} ${r.n}`).join(", ") + ".",
+  "## Job market", "", `Source: ${u("/market/")}. Job ads published since ${market.since}. Aggregate counts only; no ad, link or description is stored. Sites read: ${u("/market/sources/")}.`, "",
+  "Job ads by role family: " + market.roles.slice(0, 8).map((r: { id: string; n: number }) => `${roleName[r.id] ?? r.id} ${r.n}`).join(", ") + ".",
   "Skills asked for (share of postings): " + market.skills.slice(0, 12).map((s: { id: string; share: number }) => `${skillName[s.id] ?? s.id} ${s.share}%`).join(", ") + ".",
+  ...(mtasks.length ? ["Tasks asked for (share of ads): " + mtasks.map((t) => `${t.name} ${t.share}%`).join(", ") + "."] : []),
   "Most named tools: " + market.tools.slice(0, 15).map((t: { name: string; n: number }) => `${t.name} (${t.n})`).join(", ") + ".",
   "Common titles: " + market.titles.slice(0, 10).map((t: { title: string }) => t.title).join("; ") + ".", "",
   "## Roles", "", `Source: ${u("/roles/")}`, "",

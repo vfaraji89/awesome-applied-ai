@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T03:25:06.996Z",
+ "generatedAt": "2026-11-13T03:28:43.965Z",
  "since": "2026-10-01",
  "totals": {
   "processed": 1091,
@@ -13,17 +13,17 @@
  "sources": [
   {
    "id": "greenhouse",
-   "boards": 1,
+   "boards": 10,
    "ai": 396
   },
   {
    "id": "ashby",
-   "boards": 1,
+   "boards": 8,
    "ai": 256
   },
   {
    "id": "lever",
-   "boards": 1,
+   "boards": 2,
    "ai": 90
   },
   {

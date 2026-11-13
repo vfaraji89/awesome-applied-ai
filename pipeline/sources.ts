@@ -168,29 +168,31 @@ export async function recruitee(slug: string): Promise<RawJob[]> {
 
 /** Personio: the XML feed every Personio career page publishes. */
 export async function personio(slug: string): Promise<RawJob[]> {
-  const r = await fetch(`https://${slug}.jobs.personio.de/xml?language=en`, { headers: UA });
+  // career pages live on .de or .com depending on the account's region
+  let r = await fetch(`https://${slug}.jobs.personio.com/xml?language=en`, { headers: UA });
+  if (!r.ok) r = await fetch(`https://${slug}.jobs.personio.de/xml?language=en`, { headers: UA });
   if (!r.ok) throw new Error(`${r.status} personio:${slug}`);
   const xml = await r.text();
   const tag = (s: string, t: string) => (s.match(new RegExp(`<${t}>([\\s\\S]*?)</${t}>`)) ?? [])[1]?.replace(/<!\[CDATA\[|\]\]>/g, "").trim() ?? "";
   return [...xml.matchAll(/<position>([\s\S]*?)<\/position>/g)].map(([, p]) => {
     const office = tag(p, "office");
     return { source: "personio", id: tag(p, "id"), company: slug, title: tag(p, "name"), location: office, remote: /remote/i.test(office),
-      posted: day(tag(p, "createdAt")), url: `https://${slug}.jobs.personio.de/job/${tag(p, "id")}`,
+      posted: day(tag(p, "createdAt")), url: `https://${slug}.jobs.personio.com/job/${tag(p, "id")}`,
       text: strip([...p.matchAll(/<value>([\s\S]*?)<\/value>/g)].map((m) => m[1].replace(/<!\[CDATA\[|\]\]>/g, "")).join(" ")) };
   });
 }
 
 /** Himalayas: a remote-jobs board with an open API (it asks for a link back, given on the sources page). */
-export async function himalayas(pages = 5): Promise<RawJob[]> {
+export async function himalayas(pages = 25): Promise<RawJob[]> {
   const out: RawJob[] = [];
-  for (let p = 0; p < pages; p++) {
-    const d = await getJSON(`https://himalayas.app/jobs/api?limit=100&offset=${p * 100}`);
+  for (let p = 0; p < pages; p++) { // the API returns at most 20 a page
+    const d = await getJSON(`https://himalayas.app/jobs/api?limit=20&offset=${p * 20}`);
     const jobs = d.jobs ?? [];
     for (const j of jobs)
       out.push({ source: "himalayas", id: String(j.guid ?? j.applicationLink ?? j.title), company: j.companyName ?? "", title: j.title ?? "",
         location: (j.locationRestrictions ?? []).join(", ") || "Remote", remote: true, posted: day(j.pubDate), url: j.applicationLink ?? j.guid ?? "",
         text: strip(`${j.description ?? ""} ${j.excerpt ?? ""} ${(j.categories ?? []).join(" ")}`) });
-    if (jobs.length < 100) break;
+    if (jobs.length < 20) break;
   }
   return out;
 }
@@ -200,7 +202,7 @@ export async function jobicy(): Promise<RawJob[]> {
   const out: RawJob[] = [];
   const seen = new Set<string>();
   for (const tag of ["ai", "machine-learning", "llm"]) {
-    const d = await getJSON(`https://jobicy.com/api/v2/remote-jobs?count=100&tag=${tag}`);
+    const d = await getJSON(`https://jobicy.com/api/v2/remote-jobs?count=50&tag=${tag}`);
     for (const j of d.jobs ?? [])
       if (!seen.has(String(j.id)) && seen.add(String(j.id))) out.push({ source: "jobicy", id: String(j.id), company: j.companyName ?? "", title: strip(j.jobTitle ?? ""), location: j.jobGeo ?? "Remote",
         remote: true, posted: day(j.pubDate), url: j.url ?? "", text: strip(`${j.jobDescription ?? ""} ${j.jobExcerpt ?? ""}`) });
@@ -217,5 +219,5 @@ export const boardUrl = (provider: string, slug: string, wd?: { tenant: string; 
   smartrecruiters: `https://careers.smartrecruiters.com/${slug}`,
   workable: `https://apply.workable.com/${slug}/`,
   recruitee: `https://${slug}.recruitee.com/`,
-  personio: `https://${slug}.jobs.personio.de/`,
+  personio: `https://${slug}.jobs.personio.com/`,
 } as Record<string, string>)[provider] ?? "";

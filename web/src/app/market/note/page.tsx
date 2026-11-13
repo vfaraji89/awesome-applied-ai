@@ -47,7 +47,7 @@ export default function Note() {
   const remote = fresh.length ? Math.round((fresh.filter((j) => j.remote).length / fresh.length) * 100) : 0;
   const pct = (n: number) => (fresh.length ? Math.round((n / fresh.length) * 100) : 0);
   const post = fresh.length
-    ? `Applied AI hiring, ${fmt(from)} to ${fmt(last!)}: ${fresh.length} new technical AI roles on the boards I track.\n\n` +
+    ? `Applied AI hiring, ${fmt(from)} to ${fmt(last!)}: ${fresh.length} new technical AI job ads on the career pages and boards I read.\n\n` +
       `Most common: ${roles.map(([r, n]) => `${roleEn(r)} (${n})`).join(", ")}.\n` +
       `Skills asked for most: ${sk.map(([s, n]) => `${skillName(s)} ${pct(n)}%`).join(", ")}.\n` +
       `Tools named most: ${tl.map(([t]) => t).join(", ")}.\n\n` +
@@ -67,7 +67,7 @@ export default function Note() {
             <div className="wn" aria-label="Weekly note card">
               <span className="wn-post l" /><span className="wn-post r" />
               <div className="wn-top"><Mark size={34} /><b>Applied AI<span className="dot">.</span></b><span className="kicker"><T k="wn.k" vars={{ from: fmt(from), to: fmt(last!) }}>{"market note · {from} to {to}"}</T></span></div>
-              <div className="wn-big"><b>{fresh.length}</b><span><T k="wn.new">new technical AI roles this week</T><br /><em><T k="wn.remote" vars={{ n: remote }}>{"{n}% remote"}</T></em></span></div>
+              <div className="wn-big"><b>{fresh.length}</b><span><T k="wn.new2">new AI job ads this week</T><br /><em><T k="wn.remote" vars={{ n: remote }}>{"{n}% remote"}</T></em></span></div>
               <div className="wn-cols">
                 <div><span className="kicker"><T k="mk.k_roles">Roles</T></span><ul>{roles.map(([r, n]) => <li key={r}><span className="bead" />{roleName(r) || <T k="mk.other">Other AI roles</T>}<i>{n}</i></li>)}</ul></div>
                 <div><span className="kicker"><T k="wn.skills">Skills asked for</T></span><ul>{sk.map(([s, n]) => <li key={s}><span className="bead ink" /><T k={`skill.${s}`}>{skillName(s)}</T><i>{pct(n)}%</i></li>)}</ul></div>

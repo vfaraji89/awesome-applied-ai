@@ -83,8 +83,12 @@ const ALIASES: Record<string, string[]> = {
   "Voyage": ["Voyage AI"], "Temporal": ["Temporal"], "Phoenix": ["Arize Phoenix"], "Weave": ["W&B Weave", "Weights & Biases Weave"],
 };
 /** Names that are also ordinary words or metrics: match the brand spelling only, or skip. */
-const EXACT_CASE = new Set(["Perplexity AI Search", "Temporal", "Cohere", "Chroma", "Vespa"]);
-const SKIP = new Set(["Unstructured", "Marker", "Outlines", "Instructor", "Hindsight", "Ax", "MemOS", "Context rot", "Lost in the middle"]);
+const EXACT_CASE = new Set(["Perplexity AI Search", "Temporal", "Cohere", "Chroma", "Vespa", "Ray", "Modal", "Replicate", "Runway", "Cursor", "Whisper",
+  "Exa", "Galileo", "Swarms", "goose", "Bifrost", "Lovable", "Cline", "Kiro", "Agno", "Mastra", "Haystack", "Inngest", "Hatchet", "Resonate"]);
+const SKIP = new Set(["Unstructured", "Marker", "Outlines", "Instructor", "Hindsight", "Ax", "MemOS", "Context rot", "Lost in the middle",
+  // ordinary words or first names that job ads use in their own sense ("daily standups", "Linux kernel", "career guidance")
+  "Amp", "Daily", "Kernel", "Guidance", "Pi", "Steel", "Beam", "Magnitude", "Absurd", "Restate", "Tenacity", "stamina", "Prodigy", "Raindrop",
+  "Docent", "Laminar", "Golem", "Martian", "Truss", "Cog", "Burr", "Rig", "Orca", "Feast", "Daft", "Tinker", "Flower", "Lambda", "Devin", "Serena"]);
 type Matcher = { name: string; inStack: boolean; re: RegExp };
 const stackNames = new Set(stack.flatMap((g) => g.tools.map((t) => t.name)));
 const matchers: Matcher[] = [];

@@ -2,6 +2,7 @@ import { Crumb } from "@/components/section-intro";
 import type { Metadata } from "next";
 import Link from "next/link";
 import market from "@/data/market.json";
+import sources from "@/data/sources.json";
 import { fRoles, skills } from "@/data/framework";
 import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
@@ -9,12 +10,12 @@ import { JsonLd } from "@/components/json-ld";
 import { marketLd } from "@/lib/seo";
 import { share } from "@/lib/share";
 
-export const metadata: Metadata = { ...share("market"), title: "Market pulse", description: "What the applied AI job market asks for: roles, levels, titles, skills and tools, updated weekly from public job boards." };
+export const metadata: Metadata = { ...share("market"), title: "Market pulse", description: "What applied AI job ads ask for since 1 October 2026: roles, levels, titles, skills, tasks and tools, read daily from public career pages and job boards." };
 
 type Row = { id?: string; name?: string; title?: string; month?: string; n: number; share?: number; inStack?: boolean };
 const roleName = (id: string) => fRoles.find((r) => r.id === id)?.name ?? "";
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
-const SOURCE: Record<string, string> = { greenhouse: "Greenhouse boards", lever: "Lever boards", ashby: "Ashby boards", remotive: "Remotive", arbeitnow: "Arbeitnow", hackernews: "Hacker News: Who is hiring?" };
+const SINCE_EN = "1 Oct 2026";
 
 function Bars({ rows, label, max }: { rows: Row[]; label: (r: Row) => React.ReactNode; max?: number }) {
   const top = max ?? Math.max(1, ...rows.map((r) => r.n));
@@ -32,9 +33,10 @@ function Bars({ rows, label, max }: { rows: Row[]; label: (r: Row) => React.Reac
 }
 
 export default function Market() {
-  const m = market as unknown as { generatedAt: string | null; totals: { allTime: number; openNow: number; newToday: number; remoteShare: number }; sources: { id: string; boards: number; ai: number }[];
-    roles: Row[]; seniority: Row[]; titles: Row[]; skills: Row[]; tools: Row[]; byMonth: Row[] };
-  const ready = !!m.generatedAt && m.totals.openNow > 0;
+  const m = market as unknown as { generatedAt: string | null; totals: { processed: number; listedNow: number; newToday: number; remoteShare: number }; sources: { id: string; boards: number; ai: number }[];
+    roles: Row[]; seniority: Row[]; titles: Row[]; skills: Row[]; tasks: Row[]; tools: Row[]; byMonth: Row[] };
+  const ready = !!m.generatedAt && m.totals.processed > 0;
+  const read = sources.providers.reduce((a, p) => a + (p.boards.length ? p.boards.filter((b) => b.ok !== false).length : p.ok ? 1 : 0), 0);
   const updated = m.generatedAt ? new Date(m.generatedAt).toUTCString().replace(/:\d\d GMT/, " UTC") : "";
   return (
     <>
@@ -43,12 +45,15 @@ export default function Market() {
         <div className="wrap">
           <Crumb id="market" page="Market pulse" />
           <h1 style={{ marginTop: 12 }}><TH k="market.h1">What the market asks for</TH><span className="dot">.</span></h1>
-          <p className="lead" style={{ marginTop: 16 }}><TH k="market.p1"><b>What AI jobs ask for</b>, read from public job boards and <b>updated every week</b>.</TH></p>
-          <More label="How it is collected"><p className="lead" style={{ marginTop: 12 }}><TH k="market.p2">Only the AI roles are kept. Each posting is reduced to its <b>role, level, skills and tools</b>; no posting, link or company is republished. This page is the gist.</TH></p></More>
+          <p className="lead" style={{ marginTop: 16 }}><TH k="market.p1b"><b>What AI job ads ask for</b>: every ad published since 1 October 2026 on the career pages and boards I read, <b>updated daily</b>.</TH></p>
+          <More label="How it is collected"><p className="lead" style={{ marginTop: 12 }}><TH k="market.p2b">Only AI job ads are kept. Each ad is reduced to its <b>role, level, skills, tasks and tools</b>; no ad or its link is republished. <Link href="/market/sources/">Every site read</Link> is listed.</TH></p></More>
           {ready ? (
             <div className="mk-totals">
-              {[["mk.open", "Open AI roles now", m.totals.openNow.toLocaleString("en-US")], ["mk.all", "Tracked all time", m.totals.allTime.toLocaleString("en-US")], ["mk.new", "New since yesterday", m.totals.newToday.toLocaleString("en-US")], ["mk.remote", "Remote", `${m.totals.remoteShare}%`]].map(([k, en, v]) => (
-                <div key={k} className="frame"><span className="count"><T k={k}>{en}</T></span><b className="mk-big">{v}</b></div>
+              {[["mk.processed", "AI job ads processed", m.totals.processed.toLocaleString("en-US"), <T key="s" k="mk.since" vars={{ d: SINCE_EN }}>{"since {d}"}</T>],
+                ["mk.read", "Career pages and boards read", String(read), <Link key="s" href="/market/sources/"><T k="mk.see_sources">see the list</T></Link>],
+                ["mk.new", "New since yesterday", m.totals.newToday.toLocaleString("en-US"), null],
+                ["mk.remote", "Remote", `${m.totals.remoteShare}%`, null]].map(([k, en, v, sub]) => (
+                <div key={k as string} className="frame"><span className="count"><T k={k as string}>{en as string}</T></span><b className="mk-big">{v as string}</b>{sub && <span className="count mk-sub">{sub}</span>}</div>
               ))}
             </div>
           ) : (
@@ -67,7 +72,7 @@ export default function Market() {
             <div className="wrap grid grid-2" style={{ gap: 36 }}>
               <div>
                 <span className="kicker"><T k="mk.k_roles">Roles</T></span>
-                <h2 style={{ marginTop: 10 }}><T k="mk.h_roles">Which jobs are open</T><span className="dot">.</span></h2>
+                <h2 style={{ marginTop: 10 }}><T k="mk.h_roles2">Which roles they hire for</T><span className="dot">.</span></h2>
                 <Bars rows={m.roles} label={(r) => <Link href="/roles/">{roleName(r.id!) || <T k="mk.other">Other AI roles</T>}</Link>} />
               </div>
               <div>
@@ -82,7 +87,7 @@ export default function Market() {
               <div>
                 <span className="kicker"><T k="mk.k_skills">Skills</T></span>
                 <h2 style={{ marginTop: 10 }}><T k="mk.h_skills">What postings ask for</T><span className="dot">.</span></h2>
-                <p className="muted" style={{ marginTop: 8 }}><T k="mk.skills_p">Share of open AI postings that mention each skill area.</T></p>
+                <p className="muted" style={{ marginTop: 8 }}><T k="mk.skills_p2">Share of AI job ads that mention each skill area.</T></p>
                 <Bars rows={m.skills} max={100} label={(r) => <T k={`skill.${r.id}`}>{skillName(r.id!)}</T>} />
               </div>
               <div>
@@ -93,7 +98,19 @@ export default function Market() {
               </div>
             </div>
           </section>
-          <section className="section">
+          <section className="section" id="tasks">
+            <div className="wrap">
+              <span className="kicker"><T k="mk.k_tasks">Tasks</T></span>
+              <h2 style={{ marginTop: 10 }}><T k="mk.h_tasks">What the job asks you to do</T><span className="dot">.</span></h2>
+              {m.tasks?.length ? (
+                <>
+                  <p className="muted" style={{ marginTop: 8 }}><T k="mk.tasks_p">Share of AI job ads whose description asks for each kind of work.</T></p>
+                  <div className="mk-tasks"><Bars rows={m.tasks} max={100} label={(r) => <T k={`task.${r.id}`}>{r.name ?? r.id ?? ""}</T>} /></div>
+                </>
+              ) : <p className="muted" style={{ marginTop: 8 }}><T k="mk.tasks_soon">Read from each ad's description from the next daily run on.</T></p>}
+            </div>
+          </section>
+          <section className="section" style={{ background: "var(--paper)" }}>
             <div className="wrap grid grid-2" style={{ gap: 36 }}>
               <div>
                 <span className="kicker"><T k="mk.k_titles">Titles</T></span>
@@ -102,7 +119,7 @@ export default function Market() {
               </div>
               <div>
                 <span className="kicker"><T k="mk.k_time">Over time</T></span>
-                <h2 style={{ marginTop: 10 }}><T k="mk.h_time">New AI roles per month</T><span className="dot">.</span></h2>
+                <h2 style={{ marginTop: 10 }}><T k="mk.h_time2">AI job ads per month</T><span className="dot">.</span></h2>
                 <div className="mk-months">
                   {m.byMonth.map((r) => {
                     const top = Math.max(1, ...m.byMonth.map((x) => x.n));
@@ -119,15 +136,18 @@ export default function Market() {
         <div className="wrap">
           <span className="kicker"><T k="mk.k_method">Method</T></span>
           <ul className="muted mk-method">
-            <li><T k="mk.m1" vars={{ list: m.sources.length ? m.sources.map((s) => `${SOURCE[s.id] ?? s.id} (${s.ai})`).join(" · ") : "Greenhouse, Lever, Ashby, Remotive, Arbeitnow, Hacker News" }}>{"Sources, with the AI roles each one gave: {list}. Big boards that forbid automated reading are not used."}</T></li>
-            <li><T k="mk.m2">A posting counts as an AI role when its title says so. Role family and level come from the title; skills and tools from the whole description.</T></li>
-            <li><T k="mk.m3">Only the role, level, skills, tools, remote flag and dates are kept. No posting, link, description or company is stored or shown.</T></li>
+            <li><TH k="mk.m1b" vars={{ n: read, p: sources.providers.length }}>{read} company career pages and job boards, across {sources.providers.length} hiring platforms, are read once a day. <Link href="/market/sources/">The full list</Link> says which, and why LinkedIn, Indeed and Glassdoor are not among them.</TH></li>
+            <li><T k="mk.m2b">An ad counts when its title names an AI role. Role family and level come from the title; skills, tasks and tools from the whole description.</T></li>
+            <li><T k="mk.m5">The count starts on 1 October 2026, by each board's own publish date. Tracking began on 7 November, so October ads count only if they were still listed then.</T></li>
+            <li><T k="mk.m3b">Only the role, level, skills, tasks, tools, remote flag and dates are kept. No ad, link or description is stored or shown.</T></li>
             <li><T k="mk.m4">The data covers the boards watched, not the whole market, and grows every week.</T></li>
           </ul>
         </div>
       </section>
       <style>{`
         .mk-totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 16px; margin-top: 30px; }
+        .mk-sub { display: block; margin-top: 4px; } .mk-sub a { color: inherit; }
+        .mk-tasks .mk-bars { grid-template-columns: repeat(auto-fit, minmax(min(100%, 420px), 1fr)); column-gap: 36px; }
         .mk-big { display: block; font-size: 2.6rem; font-weight: 800; letter-spacing: -.04em; margin-top: 6px; }
         .mk-totals .frame:first-child .mk-big { color: var(--rust); }
         .mk-bars { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 9px; }

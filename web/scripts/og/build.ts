@@ -23,6 +23,7 @@ const WEB = new URL("../../", import.meta.url).pathname;
 const URL_ = "vfaraji89.github.io/awesome-applied-ai";
 const plus = (n: number) => { const p = 10 ** Math.max(0, String(n).length - 2); return `${(Math.floor(n / p) * p).toLocaleString("en")}+`; };
 const boards = (market.sources ?? []).reduce((a: number, s: { boards?: number }) => a + (s.boards ?? 1), 0);
+const ads = plus(market.totals.processed);
 const providers = new Set(certs.map((c) => c.provider)).size;
 const radarN = Array.isArray(radar) ? radar.length : (radar as { items?: unknown[] }).items?.length ?? 0;
 
@@ -32,19 +33,21 @@ const R = (route: string, kicker: string, title: string, desc: string, stats: [s
 
 const cards: Card[] = [
   R("", "Companion to the book Applied AI, Simplified", "Applied AI, <mark>mapped</mark>", "From what the market asks for to the docs you need to build it: seven steps, free, in five languages.",
-    [[plus(tools.length), "tools"], [plus(market.totals.allTime), "roles tracked"], [String(certs.length), "certificates"]]),
-  R("market", "01 · The market", "What applied AI jobs <mark>ask for</mark>", "Roles, levels, skills and tools, read from public job boards and summarised every week.",
-    [[plus(market.totals.allTime), "roles tracked"], [String(boards), "job boards"], ["Weekly", "updates"]], ["wrrrw", "wwkkw", "wwwwk"]),
+    [[plus(tools.length), "tools"], [ads, "AI job ads"], [String(certs.length), "certificates"]]),
+  R("market", "01 · The market", "What applied AI jobs <mark>ask for</mark>", "Roles, levels, skills, tasks and tools from every AI job ad since 1 Oct 2026, read daily from public career pages.",
+    [[ads, "AI job ads"], [String(boards), "sites read"], ["Daily", "updates"]], ["wrrrw", "wwkkw", "wwwwk"]),
   R("market/note", "01 · The market · weekly note", "This week in applied AI <mark>hiring</mark>", "New roles, the skills they ask for and the tools they name, ready to share.",
-    [[plus(market.totals.allTime), "roles tracked"], [String(boards), "job boards"], ["Weekly", "note"]]),
+    [[ads, "AI job ads"], [String(boards), "sites read"], ["Weekly", "note"]]),
   R("fit", "01 · The market · role fit", "How ready are you for <mark>applied AI</mark>?", "Paste your CV or a job description. Scored against real postings, with what to learn next.",
-    [[plus(market.totals.allTime), "postings"], [String(skills.length), "skills scored"], ["Free", "in your browser"]], ["rrrrw", "rrkww", "rwwww"]),
+    [[ads, "job ads"], [String(skills.length), "skills scored"], ["Free", "in your browser"]], ["rrrrw", "rrkww", "rwwww"]),
+  R("market/sources", "01 · The market · sources", "Every site the tracker <mark>reads</mark>", "Company career pages and public job boards, the hiring platform behind each, and what the ads ask for.",
+    [[String(boards), "sites read"], [ads, "AI job ads"], ["3", "left out"]]),
   R("labs", "01 · The market · the labs", "What the labs <mark>ask for</mark>", "Applied AI roles at Anthropic, OpenAI and Google, side by side, from their public postings.",
     [["3", "labs"], ["5", "shared asks"], ["Linked", "sources"]]),
   R("roles", "02 · Roles and skills", "Who does the work, and <mark>what it takes</mark>", "Eight applied AI roles: their titles, daily tasks, stack and how each one grows.",
     [[String(fRoles.length), "roles"], [String(skills.length), "skills"], ["5", "families"]], ["wkkkw", "wrrww", "kwwww"]),
   R("skills", "02 · Roles and skills · skill map", "Which skills <mark>travel together</mark>", "The skills applied AI postings ask for, how often they appear together, and which opens the most doors.",
-    [[String(skills.length), "skills"], [plus(market.totals.allTime), "postings"], [String(fRoles.length), "roles"]]),
+    [[String(skills.length), "skills"], [ads, "job ads"], [String(fRoles.length), "roles"]]),
   R("architect", "03 · The AI-native architect", "The role that designs <mark>AI into systems</mark>", "The layers, the stack and the problems an AI-native architect owns.",
     [[String(layers.length), "layers"], [String(problems.length), "problems"], [plus(tools.length), "tools"]], ["wwrww", "wkkkw", "wwrww"]),
   R("architecture", "03 · Architecture", "Six layers of an <mark>AI system</mark>", "From guardrails to retrieval: one request animated through every layer, and the agent harness on top.",

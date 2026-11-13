@@ -87,10 +87,11 @@ export const marketLd = () => ({
   "@context": "https://schema.org",
   "@type": "Dataset", "@id": `${SITE_URL}/market/#dataset`, url: abs("/market/"), isPartOf,
   name: "Applied AI job market tracker",
-  description: `What applied AI job postings ask for: roles, levels, titles, skills and tools, read from public job boards. ${market.totals.openNow} AI roles open, ${market.totals.allTime} tracked in total. Only aggregate counts are kept; no posting, link or company is stored.`,
+  description: `What applied AI job ads ask for: roles, levels, titles, skills, tasks and tools, read from public company career pages and job boards. ${market.totals.processed} AI job ads processed since ${market.since}. Only aggregate counts are kept; no ad, link or description is stored.`,
+  temporalCoverage: `${market.since}/..`,
   creator: author, dateModified: String(market.generatedAt).slice(0, 10), inLanguage: "en", isAccessibleForFree: true,
-  variableMeasured: ["role family", "seniority", "job title", "skills", "tools", "remote share", "new roles per month"],
-  measurementTechnique: "Daily read of public job-board APIs; titles classified into role families; skills and tools matched in the description.",
+  variableMeasured: ["role family", "seniority", "job title", "skills", "tasks", "tools", "remote share", "job ads per month"],
+  measurementTechnique: "Daily read of public hiring-platform and job-board APIs (Greenhouse, Lever, Ashby, Workday, SmartRecruiters, Workable, Recruitee, Personio and open boards); titles classified into role families; skills, tasks and tools matched in the description.",
 });
 
 export const problemLd = (id: string) => {

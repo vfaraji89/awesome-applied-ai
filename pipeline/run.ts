@@ -8,7 +8,7 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { greenhouse, lever, ashby, workday, remotive, arbeitnow, hackerNews, smartrecruiters, workable, recruitee, personio, himalayas, jobicy, boardUrl } from "./sources";
-import { isAI, role, seniority, skillsOf, toolsOf, tasksOf, inStack } from "./taxonomy";
+import { isAI, role, seniority, skillsOf, toolsOf, tasksOf, TASKS, inStack } from "./taxonomy";
 import { writeWeekly } from "./weekly";
 import type { Job, RawJob } from "./types";
 
@@ -54,8 +54,8 @@ const tasks: Promise<RawJob[]>[] = [
   take("hackernews", hackerNews),
 ];
 const raw = fromStore ? [] : (await Promise.all(tasks)).flat();
+const prev = existsSync(SUMMARY) ? JSON.parse(readFileSync(SUMMARY, "utf8")) : { sources: [] };
 if (fromStore) { // the last run's per-source results, as far as the summary kept them
-  const prev = existsSync(SUMMARY) ? JSON.parse(readFileSync(SUMMARY, "utf8")) : { sources: [] };
   report.length = 0;
   for (const s of prev.sources ?? []) report.push({ source: s.id, ok: true, jobs: 0, ai: s.ai });
 }
@@ -113,13 +113,13 @@ const summary = {
   since: SINCE,
   totals: { processed: win.length, listedNow: open.length, newToday: added, allTime: all.length, openNow: open.length,
     remoteShare: pct(win.filter((j) => j.remote).length, win.length), dated: pct(win.filter((j) => j.posted).length, win.length) },
-  sources: count(report.filter((r) => r.ok), (r) => r.source.split(":")[0]).map(([k]) => ({ id: k, boards: report.filter((r) => r.ok && r.source.split(":")[0] === k).length, ai: report.filter((r) => r.ok && r.source.split(":")[0] === k).reduce((a, r) => a + r.ai, 0) })),
+  sources: fromStore ? prev.sources : count(report.filter((r) => r.ok), (r) => r.source.split(":")[0]).map(([k]) => ({ id: k, boards: report.filter((r) => r.ok && r.source.split(":")[0] === k).length, ai: report.filter((r) => r.ok && r.source.split(":")[0] === k).reduce((a, r) => a + r.ai, 0) })),
   failed: report.filter((r) => !r.ok).length,
   roles: count(win, (j) => j.role).map(([k, n]) => ({ id: k, n })),
   seniority: count(win, (j) => j.seniority).map(([k, n]) => ({ id: k, n })),
   titles: count(win, (j) => j.title).slice(0, 30).map(([k, n]) => ({ title: k, n })),
   skills: count(win, (j) => j.skills).map(([k, n]) => ({ id: k, n, share: pct(n, win.length) })),
-  tasks: count(win.filter((j) => j.tasks), (j) => j.tasks ?? []).map(([k, n]) => ({ id: k, n, share: pct(n, win.filter((j) => j.tasks).length) })),
+  tasks: count(win.filter((j) => j.tasks), (j) => j.tasks ?? []).map(([k, n]) => ({ id: k, name: TASKS.find((t) => t.id === k)?.name ?? k, n, share: pct(n, win.filter((j) => j.tasks).length) })),
   tools: count(win, (j) => j.tools).slice(0, 40).map(([k, n]) => ({ name: k, n, inStack: inStack(k) })),
   byMonth: months.map(([m, n]) => ({ month: m, n })),
 };

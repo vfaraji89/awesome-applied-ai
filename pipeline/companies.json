@@ -156,32 +156,19 @@
   }
  ],
  "smartrecruiters": [
-  "Visa",
   "BoschGroup",
   "ServiceNow",
   "Wise",
   "Canva",
-  "Delivery-Hero",
   "Experian",
   "Ubisoft2"
  ],
  "workable": [
-  "huggingface",
-  "stability-ai",
-  "deepset",
-  "synthesia",
-  "eleven-labs",
-  "photoroom",
-  "weaviate",
-  "lightricks"
+  "huggingface"
  ],
  "recruitee": [
   "bunq",
-  "mollie",
-  "messagebird",
-  "picnic",
-  "channable",
-  "adyen"
+  "channable"
  ],
  "personio": [
   "aleph-alpha",

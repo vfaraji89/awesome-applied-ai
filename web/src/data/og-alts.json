@@ -1,8 +1,9 @@
 {
  "": "Applied AI, mapped: From what the market asks for to the docs you need to build it: seven steps, free, in five languages.",
- "market": "What applied AI jobs ask for: Roles, levels, skills and tools, read from public job boards and summarised every week.",
+ "market": "What applied AI jobs ask for: Roles, levels, skills, tasks and tools from every AI job ad since 1 Oct 2026, read daily from public career pages.",
  "market/note": "This week in applied AI hiring: New roles, the skills they ask for and the tools they name, ready to share.",
  "fit": "How ready are you for applied AI?: Paste your CV or a job description. Scored against real postings, with what to learn next.",
+ "market/sources": "Every site the tracker reads: Company career pages and public job boards, the hiring platform behind each, and what the ads ask for.",
  "labs": "What the labs ask for: Applied AI roles at Anthropic, OpenAI and Google, side by side, from their public postings.",
  "roles": "Who does the work, and what it takes: Eight applied AI roles: their titles, daily tasks, stack and how each one grows.",
  "skills": "Which skills travel together: The skills applied AI postings ask for, how often they appear together, and which opens the most doors.",
