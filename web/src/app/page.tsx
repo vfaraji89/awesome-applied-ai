@@ -15,6 +15,9 @@ import { tools } from "@/data/tools";
 import { areas } from "@/data/areas";
 import type { Metadata } from "next";
 import { share } from "@/lib/share";
+import { M, sitesRead } from "@/lib/market-data";
+import { Aha } from "@/components/market-insights";
+import { signals } from "@/lib/tool-signals";
 
 export const metadata: Metadata = { ...share("") };
 
@@ -46,7 +49,7 @@ export default function Home() {
   const [mk, rs, ar, tl, ce, dc, co] = ["market", "roles", "architect", "tools", "certificates", "docs", "contribute"].map(sec);
   const areaCount = (id: string) => tools.filter((t) => t.area === id).length;
   const roleName = Object.fromEntries(fRoles.map((r) => [r.id, r.name]));
-  const topRoles = market.roles.slice(0, 4);
+  const topRoles = market.roles.filter((r) => r.id !== "other-ai").slice(0, 4);
   const max = topRoles[0]?.n ?? 1;
   return (
     <>
@@ -61,7 +64,24 @@ export default function Home() {
             <Link href="#market" className="btn"><T k="home.start">Start with the market</T> →</Link>
             <Link href="/docs/" className="btn ghost"><T k="home.docs">Read the docs</T></Link>
           </div>
-          <Link href="/fit/" className="frame home-fit rise" style={{ ["--i" as string]: 4 }}>
+          {M.insights && (
+            <div className="rise" style={{ ["--i" as string]: 4 }}>
+              <Aha only="ticker" ins={M.insights} total={M.totals.processed} roles={M.roles} skillsTop={M.skills} tasks={M.tasks} affected={M.affected} tech={M.tech} years={M.years} />
+            </div>
+          )}
+          <div className="home-glance">
+            {[
+              { k: "home.g_ads", en: "AI job ads read", n: M.totals.processed.toLocaleString("en"), sub: <><span className="home-q">{M.sinceQuarter ?? "2026 Q4"}</span> <T k="mk.since" vars={{ d: "1 Oct 2026" }}>{"since {d}"}</T></>, href: "/market/" },
+              { k: "home.g_sites", en: "career pages and boards", n: String(sitesRead), sub: <T k="home.g_sites_sub">every one listed on the sources page</T>, href: "/market/sources/" },
+              { k: "home.g_tools", en: "tools on the map", n: String(tools.length), sub: <T k="home.g_tools_sub" vars={{ n: tools.filter((t) => signals(t).isNew).length }}>{"{n} launched in the last six months"}</T>, href: "/tools/" },
+              { k: "home.g_certs", en: "industry certificates", n: String(certs.length), sub: <T k="home.g_certs_sub">each checked on the provider&apos;s own page</T>, href: "/certificates/" },
+            ].map((g, i) => (
+              <Link key={g.k} href={g.href} className="frame home-g rise" style={{ ["--i" as string]: 5 + i }}>
+                <b>{g.n}</b><span className="home-g-l"><T k={g.k}>{g.en}</T></span><span className="count">{g.sub}</span><span className="rod" />
+              </Link>
+            ))}
+          </div>
+          <Link href="/fit/" className="frame home-fit rise" style={{ ["--i" as string]: 9, maxWidth: "none" }}>
             <span className="hf-ic"><FitIcon size={28} /></span>
             <span><span className="kicker"><T k="page.role-fit">Role fit</T></span><b><T k="home.fit_b">How ready are you for applied AI roles?</T></b><span className="muted"><T k="home.fit_em2" vars={{ n: market.totals.processed.toLocaleString("en") }}>{"Paste your CV. Scored against {n} real job ads, with what to learn next."}</T></span></span>
             <span className="hf-go" aria-hidden="true">→</span>
@@ -74,14 +94,19 @@ export default function Home() {
       <Band s={mk} alt>
         <div className="frame show-market">
           <div className="sm-stats">
-            <div><b>{market.totals.processed.toLocaleString("en")}</b><span className="muted"><T k="home.st_ads">AI job ads processed since 1 Oct 2026</T></span></div>
             <div><b>{market.totals.remoteShare}%</b><span className="muted"><T k="home.st_remote">remote</T></span></div>
-            <div><b>{market.sources.reduce((a, x) => a + x.boards, 0)}</b><span className="muted"><T k="home.st_sites">career pages and boards read</T></span></div>
+            {M.years && M.years.asked > 0 && <div><b>{M.years.median}</b><span className="muted"><T k="home.st_years">years of experience, the median ask</T></span></div>}
+            {M.affected && <div><b>{M.affected.any}%</b><span className="muted"><T k="home.st_aff">of non-AI tech ads now ask for AI</T></span></div>}
           </div>
           <span className="kicker" style={{ display: "block", marginTop: 20 }}><T k="home.top_roles">Most asked-for roles</T></span>
           <ul className="sm-bars">
-            {topRoles.map((r) => <li key={r.id}><span>{roleName[r.id] ?? r.id}</span><i style={{ width: `${(r.n / max) * 100}%` }} /><span className="count">{r.n}</span></li>)}
+            {topRoles.map((r) => <li key={r.id}><span>{roleName[r.id] ?? r.id}</span><span className="rodbar ink"><i style={{ width: `${(r.n / max) * 100}%` }} /></span><span className="count">{r.n}</span></li>)}
           </ul>
+          <span className="kicker" style={{ display: "block", marginTop: 22 }}><T k="home.top_skills">Most asked-for skills</T></span>
+          <ul className="sm-bars">
+            {M.skills.slice(0, 5).map((k) => <li key={k.id}><span><T k={`skill.${k.id}`}>{skills.find((x) => x.id === k.id)?.name ?? k.id ?? ""}</T></span><span className="rodbar"><i style={{ width: `${k.share}%` }} /></span><span className="count">{k.share}%</span></li>)}
+          </ul>
+          <Link href="/market/" className="home-more"><T k="home.more_market">Heatmap, labs, the stack and AI beyond AI jobs</T> →</Link>
         </div>
       </Band>
 
@@ -101,7 +126,7 @@ export default function Home() {
       <Band s={tl}>
         <ul className="home-areas">
           {areas.map((a) => { const n = areaCount(a.id); return (
-            <li key={a.id}><Link href={`/tools/?area=${a.id}`}><b><T k={`tarea.${a.id}`}>{a.name}</T></b><span className="home-rod" aria-hidden="true"><i style={{ width: `${Math.min(100, (n / Math.max(...areas.map((x) => areaCount(x.id)))) * 100)}%` }} /></span><span className="mono count">{n}</span></Link></li>
+            <li key={a.id}><Link href={`/tools/?area=${a.id}`}><b><T k={`tarea.${a.id}`}>{a.name}</T></b><span className="rodbar" aria-hidden="true"><i style={{ width: `${Math.min(100, (n / Math.max(...areas.map((x) => areaCount(x.id)))) * 100)}%` }} /></span><span className="mono count">{n}</span></Link></li>
           ); })}
         </ul>
       </Band>
@@ -155,13 +180,21 @@ export default function Home() {
         .sm-stats .muted { font-size: .82rem; }
         .sm-bars { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 10px; }
         .sm-bars li { display: grid; grid-template-columns: 190px 1fr 44px; gap: 12px; align-items: center; font-size: .9rem; }
-        .sm-bars i { height: 10px; border-radius: 6px; background: linear-gradient(90deg, #e0301e, #ff8f80); }
-        @media (max-width: 560px) { .sm-bars li { grid-template-columns: 1fr 44px; } .sm-bars i { grid-column: 1 / -1; grid-row: 2; } }
+        .sm-bars .rodbar { margin-right: 6px; }
+        @media (max-width: 560px) { .sm-bars li { grid-template-columns: 1fr 44px; } .sm-bars .rodbar { grid-column: 1 / -1; grid-row: 2; } }
+        .home-more { display: inline-block; margin-top: 18px; font-size: .9rem; color: var(--rust-deep); text-decoration: none; } .home-more:hover { text-decoration: underline; }
+        .home-glance { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 18px; }
+        @media (max-width: 900px) { .home-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 420px) { .home-glance { grid-template-columns: 1fr; } }
+        .home-g { display: flex; flex-direction: column; gap: 2px; padding: 20px 24px 30px; }
+        .home-g b { font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.05; color: var(--rust); }
+        .home-g-l { font-weight: 700; } .home-g .count { font-size: .74rem; }
+        .home-q { display: inline-block; font-size: .62rem; letter-spacing: .1em; text-transform: uppercase; padding: 0 7px; border-radius: 999px; border: 1px dashed var(--rust); color: var(--rust-deep); }
         .chips-wrap { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
               .home-areas { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px 22px; }
         .home-areas a { display: grid; grid-template-columns: 110px minmax(0, 1fr) 34px; gap: 10px; align-items: center; padding: 8px 0; border-bottom: 1px solid var(--line); text-decoration: none; color: var(--ink); }
         .home-areas a:hover b { color: var(--rust-deep); }
-        .home-rod { position: relative; height: 4px; border-radius: 4px; background: var(--line); } .home-rod i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: linear-gradient(90deg, #e0301e, #ff9d8f); }
+        .home-areas .rodbar { margin-right: 6px; }
         @media (max-width: 560px) { .home-areas { grid-template-columns: 1fr; } }
 `}</style>
     </>
