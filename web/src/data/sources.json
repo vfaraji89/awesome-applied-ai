@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T03:40:56.424Z",
+ "generatedAt": "2026-11-13T03:43:07.747Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -361,6 +361,150 @@
      "url": "https://job-boards.greenhouse.io/figureai",
      "ok": null,
      "ai": 0
+    },
+    {
+     "slug": "assemblyai",
+     "url": "https://job-boards.greenhouse.io/assemblyai",
+     "ok": null,
+     "ai": 0,
+     "name": "AssemblyAI",
+     "tool": "assemblyai"
+    },
+    {
+     "slug": "baidu",
+     "url": "https://job-boards.greenhouse.io/baidu",
+     "ok": null,
+     "ai": 0,
+     "name": "Baidu USA",
+     "tool": "unlimited-ocr"
+    },
+    {
+     "slug": "brave",
+     "url": "https://job-boards.greenhouse.io/brave",
+     "ok": null,
+     "ai": 0,
+     "name": "Brave",
+     "tool": "brave-search-api"
+    },
+    {
+     "slug": "cline",
+     "url": "https://job-boards.greenhouse.io/cline",
+     "ok": null,
+     "ai": 0,
+     "name": "Cline",
+     "tool": "cline"
+    },
+    {
+     "slug": "comet",
+     "url": "https://job-boards.greenhouse.io/comet",
+     "ok": null,
+     "ai": 0,
+     "name": "Comet",
+     "tool": "opik-annotation-queues"
+    },
+    {
+     "slug": "galileo",
+     "url": "https://job-boards.greenhouse.io/galileo",
+     "ok": null,
+     "ai": 0,
+     "name": "Galileo",
+     "tool": "galileo"
+    },
+    {
+     "slug": "heygen",
+     "url": "https://job-boards.greenhouse.io/heygen",
+     "ok": null,
+     "ai": 0,
+     "name": "HeyGen",
+     "tool": "heygen-liveavatar"
+    },
+    {
+     "slug": "hiddenlayer",
+     "url": "https://job-boards.greenhouse.io/hiddenlayer",
+     "ok": null,
+     "ai": 0,
+     "name": "HiddenLayer",
+     "tool": "hiddenlayer"
+    },
+    {
+     "slug": "humansignal",
+     "url": "https://job-boards.greenhouse.io/humansignal",
+     "ok": null,
+     "ai": 0,
+     "name": "HumanSignal",
+     "tool": "label-studio"
+    },
+    {
+     "slug": "hume",
+     "url": "https://job-boards.greenhouse.io/hume",
+     "ok": null,
+     "ai": 0,
+     "name": "Hume",
+     "tool": "hume-evi"
+    },
+    {
+     "slug": "jetbrains",
+     "url": "https://job-boards.greenhouse.io/jetbrains",
+     "ok": null,
+     "ai": 0,
+     "name": "JetBrains",
+     "tool": "koog"
+    },
+    {
+     "slug": "neo4j",
+     "url": "https://job-boards.greenhouse.io/neo4j",
+     "ok": null,
+     "ai": 0,
+     "name": "Neo4j",
+     "tool": "neo4j-graphrag"
+    },
+    {
+     "slug": "resonate",
+     "url": "https://job-boards.greenhouse.io/resonate",
+     "ok": null,
+     "ai": 0,
+     "name": "Resonate",
+     "tool": "resonate"
+    },
+    {
+     "slug": "speechmatics",
+     "url": "https://job-boards.greenhouse.io/speechmatics",
+     "ok": null,
+     "ai": 0,
+     "name": "Speechmatics",
+     "tool": "speechmatics-flow"
+    },
+    {
+     "slug": "stabilityai",
+     "url": "https://job-boards.greenhouse.io/stabilityai",
+     "ok": null,
+     "ai": 0,
+     "name": "Stability AI",
+     "kind": "lab"
+    },
+    {
+     "slug": "stackblitz",
+     "url": "https://job-boards.greenhouse.io/stackblitz",
+     "ok": null,
+     "ai": 0,
+     "name": "Bolt.new",
+     "tool": "bolt"
+    },
+    {
+     "slug": "tavily",
+     "url": "https://job-boards.greenhouse.io/tavily",
+     "ok": null,
+     "ai": 0,
+     "name": "Tavily",
+     "tool": "tavily"
+    },
+    {
+     "slug": "vectara",
+     "url": "https://job-boards.greenhouse.io/vectara",
+     "ok": null,
+     "ai": 0,
+     "name": "Vectara",
+     "tool": "vectara"
     }
    ],
    "ok": true,
@@ -415,6 +559,22 @@
      "url": "https://jobs.lever.co/highspot",
      "ok": null,
      "ai": 0
+    },
+    {
+     "slug": "copilotkit",
+     "url": "https://jobs.lever.co/copilotkit",
+     "ok": null,
+     "ai": 0,
+     "name": "CopilotKit",
+     "tool": "copilotkit"
+    },
+    {
+     "slug": "superannotate",
+     "url": "https://jobs.lever.co/superannotate",
+     "ok": null,
+     "ai": 0,
+     "name": "SuperAnnotate",
+     "tool": "superannotate"
     }
    ],
    "ok": true,
@@ -847,6 +1007,294 @@
      "url": "https://jobs.ashbyhq.com/physicalintelligence",
      "ok": null,
      "ai": 0
+    },
+    {
+     "slug": "anam",
+     "url": "https://jobs.ashbyhq.com/anam",
+     "ok": null,
+     "ai": 0,
+     "name": "Anam",
+     "tool": "anam"
+    },
+    {
+     "slug": "arena",
+     "url": "https://jobs.ashbyhq.com/arena",
+     "ok": null,
+     "ai": 0,
+     "name": "LMArena (Arena)",
+     "tool": "lmarena"
+    },
+    {
+     "slug": "arthur-ai",
+     "url": "https://jobs.ashbyhq.com/arthur-ai",
+     "ok": null,
+     "ai": 0,
+     "name": "Arthur Engine",
+     "tool": "arthur-engine"
+    },
+    {
+     "slug": "artificialanalysis",
+     "url": "https://jobs.ashbyhq.com/artificialanalysis",
+     "ok": null,
+     "ai": 0,
+     "name": "Artificial Analysis",
+     "tool": "artificial-analysis"
+    },
+    {
+     "slug": "black-forest-labs",
+     "url": "https://jobs.ashbyhq.com/black-forest-labs",
+     "ok": null,
+     "ai": 0,
+     "name": "FLUX (Black Forest Labs)",
+     "tool": "flux"
+    },
+    {
+     "slug": "bolt",
+     "url": "https://jobs.ashbyhq.com/bolt",
+     "ok": null,
+     "ai": 0,
+     "name": "Bolt.new",
+     "tool": "bolt"
+    },
+    {
+     "slug": "cerebras",
+     "url": "https://jobs.ashbyhq.com/cerebras",
+     "ok": null,
+     "ai": 0,
+     "name": "Cerebras",
+     "kind": "lab"
+    },
+    {
+     "slug": "comfy-org",
+     "url": "https://jobs.ashbyhq.com/comfy-org",
+     "ok": null,
+     "ai": 0,
+     "name": "ComfyUI",
+     "tool": "comfyui"
+    },
+    {
+     "slug": "composio",
+     "url": "https://jobs.ashbyhq.com/composio",
+     "ok": null,
+     "ai": 0,
+     "name": "Composio",
+     "tool": "composio"
+    },
+    {
+     "slug": "credo",
+     "url": "https://jobs.ashbyhq.com/credo",
+     "ok": null,
+     "ai": 0,
+     "name": "Credo AI",
+     "tool": "credo-ai"
+    },
+    {
+     "slug": "encord",
+     "url": "https://jobs.ashbyhq.com/encord",
+     "ok": null,
+     "ai": 0,
+     "name": "Encord",
+     "tool": "encord"
+    },
+    {
+     "slug": "exa",
+     "url": "https://jobs.ashbyhq.com/exa",
+     "ok": null,
+     "ai": 0,
+     "name": "Exa",
+     "tool": "exa"
+    },
+    {
+     "slug": "firecrawl",
+     "url": "https://jobs.ashbyhq.com/firecrawl",
+     "ok": null,
+     "ai": 0,
+     "name": "Firecrawl",
+     "tool": "firecrawl"
+    },
+    {
+     "slug": "fireworks",
+     "url": "https://jobs.ashbyhq.com/fireworks",
+     "ok": null,
+     "ai": 0,
+     "name": "Fireworks AI",
+     "kind": "lab"
+    },
+    {
+     "slug": "hedra",
+     "url": "https://jobs.ashbyhq.com/hedra",
+     "ok": null,
+     "ai": 0,
+     "name": "Hedra Live Avatars",
+     "tool": "hedra-live-avatars"
+    },
+    {
+     "slug": "judgmentlabs",
+     "url": "https://jobs.ashbyhq.com/judgmentlabs",
+     "ok": null,
+     "ai": 0,
+     "name": "Judgment Labs judgeval",
+     "tool": "judgeval"
+    },
+    {
+     "slug": "juicebox",
+     "url": "https://jobs.ashbyhq.com/juicebox",
+     "ok": null,
+     "ai": 0,
+     "name": "Juicebox",
+     "kind": "recruiting"
+    },
+    {
+     "slug": "lancedb",
+     "url": "https://jobs.ashbyhq.com/lancedb",
+     "ok": null,
+     "ai": 0,
+     "name": "LanceDB",
+     "tool": "lancedb"
+    },
+    {
+     "slug": "lightning",
+     "url": "https://jobs.ashbyhq.com/lightning",
+     "ok": null,
+     "ai": 0,
+     "name": "PyTorch Lightning",
+     "tool": "lightning"
+    },
+    {
+     "slug": "midjourney",
+     "url": "https://jobs.ashbyhq.com/midjourney",
+     "ok": null,
+     "ai": 0,
+     "name": "Midjourney",
+     "tool": "midjourney"
+    },
+    {
+     "slug": "n8n",
+     "url": "https://jobs.ashbyhq.com/n8n",
+     "ok": null,
+     "ai": 0,
+     "name": "n8n",
+     "tool": "n8n"
+    },
+    {
+     "slug": "nousresearch",
+     "url": "https://jobs.ashbyhq.com/nousresearch",
+     "ok": null,
+     "ai": 0,
+     "name": "Hermes Agent",
+     "tool": "hermes-agent"
+    },
+    {
+     "slug": "ollama",
+     "url": "https://jobs.ashbyhq.com/ollama",
+     "ok": null,
+     "ai": 0,
+     "name": "Ollama",
+     "tool": "ollama"
+    },
+    {
+     "slug": "openhands",
+     "url": "https://jobs.ashbyhq.com/openhands",
+     "ok": null,
+     "ai": 0,
+     "name": "OpenHands",
+     "tool": "openhands"
+    },
+    {
+     "slug": "openrouter",
+     "url": "https://jobs.ashbyhq.com/openrouter",
+     "ok": null,
+     "ai": 0,
+     "name": "OpenRouter",
+     "tool": "openrouter"
+    },
+    {
+     "slug": "redis",
+     "url": "https://jobs.ashbyhq.com/redis",
+     "ok": null,
+     "ai": 0,
+     "name": "Redis",
+     "tool": "redis"
+    },
+    {
+     "slug": "reducto",
+     "url": "https://jobs.ashbyhq.com/reducto",
+     "ok": null,
+     "ai": 0,
+     "name": "Reducto",
+     "tool": "reducto"
+    },
+    {
+     "slug": "reka",
+     "url": "https://jobs.ashbyhq.com/reka",
+     "ok": null,
+     "ai": 0,
+     "name": "Reka",
+     "kind": "lab"
+    },
+    {
+     "slug": "roboflow",
+     "url": "https://jobs.ashbyhq.com/roboflow",
+     "ok": null,
+     "ai": 0,
+     "name": "Roboflow",
+     "tool": "roboflow"
+    },
+    {
+     "slug": "runpod",
+     "url": "https://jobs.ashbyhq.com/runpod",
+     "ok": null,
+     "ai": 0,
+     "name": "RunPod",
+     "tool": "runpod"
+    },
+    {
+     "slug": "sentry",
+     "url": "https://jobs.ashbyhq.com/sentry",
+     "ok": null,
+     "ai": 0,
+     "name": "Sentry AI Agent Monitoring",
+     "tool": "sentry-ai-agent-monitoring"
+    },
+    {
+     "slug": "tavus",
+     "url": "https://jobs.ashbyhq.com/tavus",
+     "ok": null,
+     "ai": 0,
+     "name": "Tavus CVI",
+     "tool": "tavus-cvi"
+    },
+    {
+     "slug": "trychroma",
+     "url": "https://jobs.ashbyhq.com/trychroma",
+     "ok": null,
+     "ai": 0,
+     "name": "Chroma",
+     "tool": "chroma"
+    },
+    {
+     "slug": "turbopuffer",
+     "url": "https://jobs.ashbyhq.com/turbopuffer",
+     "ok": null,
+     "ai": 0,
+     "name": "Turbopuffer",
+     "tool": "turbopuffer"
+    },
+    {
+     "slug": "ultralytics",
+     "url": "https://jobs.ashbyhq.com/ultralytics",
+     "ok": null,
+     "ai": 0,
+     "name": "Ultralytics YOLO",
+     "tool": "ultralytics"
+    },
+    {
+     "slug": "weaviate",
+     "url": "https://jobs.ashbyhq.com/weaviate",
+     "ok": null,
+     "ai": 0,
+     "name": "Weaviate",
+     "tool": "weaviate"
     }
    ],
    "ok": true,

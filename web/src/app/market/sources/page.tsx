@@ -30,7 +30,7 @@ export default function Sources() {
   const q = (market as unknown as { sinceQuarter?: string }).sinceQuarter ?? "2026 Q4";
   const flat = ats.flatMap((p) => p.boards.filter((b) => b.ok !== false).map((b) => ({ ...b, platform: p.name })));
   const labs = flat.filter((b) => b.kind === "lab").sort((a, b) => b.ai - a.ai);
-  const onMap = flat.filter((b) => b.tool);
+  const onMap = flat.filter((b, i, a) => b.tool && a.findIndex((x) => x.tool === b.tool) === i);
   const col = (k: string, en: string, rows: { key: string; label: React.ReactNode; v: string }[]) => (
     <div className="frame src-col">
       <span className="kicker"><T k={k}>{en}</T></span>
@@ -67,7 +67,7 @@ export default function Sources() {
             <h2 style={{ marginTop: 10 }}><T k="src.h_labs">Their own career pages</T><span className="dot">.</span></h2>
             <ul className="src-rows">
               {labs.map((b) => (
-                <li key={b.platform + b.slug}><a href={b.url} rel="noopener nofollow" target="_blank">{b.name ?? b.slug}</a><span className="count">{b.platform}</span><span className="mono src-n">{b.ai} <T k="src.ai_now">AI ads now</T></span></li>
+                <li key={b.platform + b.slug}><a href={b.url} rel="noopener nofollow" target="_blank">{b.name ?? b.slug}</a><span className="count">{b.platform}</span>{b.ok === true && <span className="mono src-n">{b.ai} <T k="src.ai_now">AI ads now</T></span>}</li>
               ))}
             </ul>
           </div>
