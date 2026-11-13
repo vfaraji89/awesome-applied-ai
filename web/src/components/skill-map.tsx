@@ -164,13 +164,13 @@ export function SkillMap() {
           </div>
           <div className="frame sm-result">
             <div className="sm-big"><b>{Math.round(cov.pct)}%</b><span><T k="sm.cov" vars={{ n: cov.total.toLocaleString("en"), m: cov.met.toLocaleString("en") }}>{"of {n} postings: you meet every skill ask in {m}."}</T></span></div>
-            <div className="sm-meter" aria-hidden="true"><span style={{ width: `${cov.pct}%` }} /></div>
+            <div className="rodbar sm-meter" aria-hidden="true"><i style={{ width: `${cov.pct}%` }} /></div>
             <span className="sm-sub"><T k="sm.add_next">Add next</T></span>
             <ol className="sm-gains">
               {gains.slice(0, 5).map((x, i) => (
                 <li key={x.id} className={i === 0 ? "best" : ""}>
                   <button onClick={() => toggle(x.id)} title={t("sm.add_it", "Add it")}>{nm(x.id)}</button>
-                  <span className="sm-gbar"><span style={{ width: `${Math.min(100, (x.pct / Math.max(1, gains[0].pct)) * 100)}%` }} /></span>
+                  <span className="rodbar sm-gbar"><i style={{ width: `${Math.min(100, (x.pct / Math.max(1, gains[0].pct)) * 100)}%` }} /></span>
                   <span className="mono">+{x.pct.toFixed(1)} <T k="sm.pts">pts</T></span>
                 </li>
               ))}
@@ -260,16 +260,18 @@ export function SkillMap() {
         .sm-big { display: flex; align-items: baseline; gap: 14px; flex-wrap: wrap; }
         .sm-big b { font-size: 3.2rem; line-height: 1; font-weight: 800; letter-spacing: -0.04em; color: var(--rust); }
         .sm-big span { font-size: 0.9rem; color: var(--sec); max-width: 22ch; }
-        .sm-meter { height: 10px; margin-top: 14px; border-radius: 10px; background: var(--paper); border: 1px solid var(--line); overflow: hidden; }
-        .sm-meter span { display: block; height: 100%; background: var(--rust); transition: width 0.6s var(--ease); }
+        .sm-meter { margin: 16px 6px 0 0; }
+        .sm-meter > i { transition: width 0.6s var(--ease); }
         .sm-gains { list-style: none; padding: 0; margin: 8px 0 0; }
         .sm-gains li { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) 4.8rem; gap: 10px; align-items: center; padding: 7px 0; border-bottom: 1px solid var(--line); font-size: 0.9rem; }
         .sm-gains button { border: 0; background: none; padding: 0; cursor: pointer; font: inherit; text-align: left; color: var(--ink); }
         .sm-gains li.best button { font-weight: 700; color: var(--rust-deep); }
         .sm-gains .mono { text-align: right; }
-        .sm-gbar { height: 6px; border-radius: 6px; background: var(--paper); overflow: hidden; }
-        .sm-gbar span { display: block; height: 100%; background: var(--ink); transition: width 0.5s var(--ease); }
-        .sm-gains li.best .sm-gbar span { background: var(--rust); }
+        .sm-gbar { margin-right: 6px; }
+        .sm-gbar > i { background: var(--ink); transition: width 0.5s var(--ease); }
+        .sm-gbar > i::after { background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%); }
+        .sm-gains li.best .sm-gbar > i { background: var(--rust); }
+        .sm-gains li.best .sm-gbar > i::after { background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); }
         .sm-path { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 8px 6px; align-items: center; }
         .sm-path li { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px 5px 5px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); font-size: 0.85rem; }
         .sm-bead { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--rust); color: #fff; font-family: var(--font-mono), monospace; font-size: 0.7rem; }
@@ -283,7 +285,7 @@ export function SkillMap() {
         .sm-pairs li .muted { grid-column: 1 / -1; font-size: 0.82rem; }
         @media (max-width: 900px) { .sm-con, .sm-doors { grid-template-columns: 1fr; } .sm-svg { max-width: 560px; margin: 0 auto; display: block; } }
         @media (max-width: 480px) { .sm-lbl { font-size: 24px; } .sm-pct { font-size: 17px; } }
-        @media (prefers-reduced-motion: reduce) { .sm-meter span, .sm-gbar span, .sm-pick i { transition: none; } }
+        @media (prefers-reduced-motion: reduce) { .sm-meter > i, .sm-gbar > i, .sm-pick i { transition: none; } }
       `}</style>
     </div>
   );

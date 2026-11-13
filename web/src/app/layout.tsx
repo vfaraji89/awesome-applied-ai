@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from "next";
+import { Broadcast } from "@/components/broadcast";
 import localFont from "next/font/local";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
@@ -61,6 +62,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <LangProvider>
           <SiteHeader />
           <main>{children}</main>
+          <Broadcast />
           <SiteFooter counts={harnessCounts()} />
           <Analytics />
         </LangProvider>

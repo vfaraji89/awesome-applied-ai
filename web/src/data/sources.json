@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T05:25:18.046Z",
+ "generatedAt": "2026-11-13T13:26:27.519Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -50,7 +50,7 @@
      "slug": "samsara",
      "url": "https://job-boards.greenhouse.io/samsara",
      "ok": true,
-     "ai": 13
+     "ai": 14
     },
     {
      "slug": "cloudflare",
@@ -68,13 +68,13 @@
      "slug": "datadog",
      "url": "https://job-boards.greenhouse.io/datadog",
      "ok": true,
-     "ai": 11
+     "ai": 13
     },
     {
      "slug": "stripe",
      "url": "https://job-boards.greenhouse.io/stripe",
      "ok": true,
-     "ai": 31
+     "ai": 32
     },
     {
      "slug": "coinbase",
@@ -158,7 +158,7 @@
      "slug": "airbnb",
      "url": "https://job-boards.greenhouse.io/airbnb",
      "ok": true,
-     "ai": 19
+     "ai": 18
     },
     {
      "slug": "discord",
@@ -516,8 +516,8 @@
     }
    ],
    "ok": true,
-   "ai": 1003,
-   "processed": 346
+   "ai": 1006,
+   "processed": 348
   },
   {
    "id": "lever",
@@ -536,7 +536,7 @@
      "slug": "spotify",
      "url": "https://jobs.lever.co/spotify",
      "ok": true,
-     "ai": 18
+     "ai": 17
     },
     {
      "slug": "zoox",
@@ -586,8 +586,8 @@
     }
    ],
    "ok": true,
-   "ai": 139,
-   "processed": 36
+   "ai": 138,
+   "processed": 37
   },
   {
    "id": "ashby",
@@ -1326,7 +1326,7 @@
      "slug": "salesforce",
      "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",
      "ok": true,
-     "ai": 93
+     "ai": 92
     },
     {
      "slug": "adobe",
@@ -1336,8 +1336,8 @@
     }
    ],
    "ok": true,
-   "ai": 430,
-   "processed": 390
+   "ai": 429,
+   "processed": 392
   },
   {
    "id": "smartrecruiters",
@@ -1380,12 +1380,12 @@
      "slug": "Ubisoft2",
      "url": "https://careers.smartrecruiters.com/Ubisoft2",
      "ok": true,
-     "ai": 10
+     "ai": 9
     }
    ],
    "ok": true,
-   "ai": 212,
-   "processed": 170
+   "ai": 211,
+   "processed": 171
   },
   {
    "id": "workable",
@@ -1450,8 +1450,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 22,
-   "processed": 19
+   "ai": 13,
+   "processed": 31
   },
   {
    "id": "jobicy",
@@ -1461,8 +1461,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 3,
-   "processed": 2
+   "ai": 2,
+   "processed": 3
   },
   {
    "id": "remotive",
@@ -1483,8 +1483,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 87,
-   "processed": 312
+   "ai": 85,
+   "processed": 319
   },
   {
    "id": "hackernews",
@@ -1494,8 +1494,8 @@
    "how": "Algolia HN API",
    "boards": [],
    "ok": true,
-   "ai": 42,
-   "processed": 42
+   "ai": 44,
+   "processed": 44
   }
  ],
  "excluded": [

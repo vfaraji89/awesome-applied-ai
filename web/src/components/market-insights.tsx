@@ -31,7 +31,7 @@ const Sk = ({ id }: { id: string }) => <T k={`skill.${id}`}>{skillName(id)}</T>;
 const Lvl = ({ id }: { id: string }) => <T k={`lvl.${id.toLowerCase()}`}>{id}</T>;
 
 /** Headline cards: one number, one plain sentence, the thing it is about. */
-export function Aha({ ins, total, roles, skillsTop, tasks, affected, tech, years }: { ins: Insights; total: number; roles: { id?: string; n: number }[]; skillsTop: { id?: string; share?: number }[]; tasks?: { id?: string; name?: string; share?: number }[];
+export function Aha({ ins, total, roles, skillsTop, tasks, affected, tech, years, only }: { only?: "ticker"; ins: Insights; total: number; roles: { id?: string; n: number }[]; skillsTop: { id?: string; share?: number }[]; tasks?: { id?: string; name?: string; share?: number }[];
   affected?: { any: number; ads: number; rows: { id: string; name: string; any: number; n: number }[] } | null; tech?: { cats: { id: string; items: { name: string; share: number; change?: number; isNew?: boolean }[] }[] } | null; years?: { asked: number; median: number } }) {
   const pct = (n: number) => Math.round((n / (total || 1)) * 100);
   const topSkill = skillsTop.find((s) => s.id !== "software") ?? skillsTop[0];
@@ -62,6 +62,7 @@ export function Aha({ ins, total, roles, skillsTop, tasks, affected, tech, years
   if (lang2) extra.push({ k: "lang2", big: `${lang2.share}%`, lead: <T k="aha.lang2">name the second language after Python:</T>, what: lang2.name });
   if (years && years.asked > 0) extra.push({ k: "yrs", big: String(years.median), lead: <T k="aha.yrs">years of experience is the median ask, in the</T>, what: <T k="aha.yrs_what" vars={{ p: years.asked }}>{"{p}% of ads that say"}</T> });
   const label = "Insights from the AI job ads";
+  if (only === "ticker") return <InsightTicker items={[...cards, ...extra]} label={label} />;
   return (
     <>
     <InsightTicker items={[...cards, ...extra]} label={label} />
@@ -252,7 +253,7 @@ export const insightCss = `
   .mi-chips { display: flex; flex-wrap: wrap; gap: 5px; }
   .mi-chips .chip, .mi-aff-terms .chip, .mi-rising .chip { padding: 2px 9px; font-size: .76rem; }
   .chip i.mono { font-style: normal; font-size: .68rem; color: var(--rust-deep); } .mi-prof dd i { font-style: normal; color: var(--muted); font-size: .74rem; }
-  @media (max-width: 640px) { .mi-pairs li, .mi-dumb li, .mi-years li { grid-template-columns: minmax(0, 1fr) 90px 44px; } .mi-tip { white-space: normal; width: max-content; max-width: 240px; } }
+  @media (max-width: 640px) { .mi-pairs li, .mi-dumb li, .mi-years li { grid-template-columns: minmax(0, 1fr) 90px 44px; } .mi-tip { white-space: normal; width: max-content; max-width: min(240px, 80vw); left: 0; transform: translate(0, 4px); } :is(td, li):is(:hover, :focus-visible) > .mi-tip, .mi-wk:is(:hover, :focus-visible) > .mi-tip { transform: none; } }
   @media (prefers-reduced-motion: reduce) { .mi-card, .mi-card > *, .mi-pairs li, .mi-prof, .mi-pair-t > span, .mi-prof-bar span { animation: none; } }
 `;
 

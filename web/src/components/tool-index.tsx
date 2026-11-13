@@ -247,7 +247,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
                 <span className="ta-lb-n mono">{String(i + 1).padStart(2, "0")}</span>
                 <Icon t={t} />
                 <a href={`https://github.com/${g.repo}`} target="_blank" rel="noreferrer" className="ta-lb-name">{t.name}<span className="mono">{g.repo}</span></a>
-                <span className="ta-lb-rod" aria-hidden="true"><i style={{ width: `${((g.stars ?? 0) / topMax) * 100}%` }} /></span>
+                <span className="rodbar ta-lb-rod" aria-hidden="true"><i style={{ width: `${((g.stars ?? 0) / topMax) * 100}%` }} /></span>
                 <span className="ta-lb-s mono">{fmtStars(g.stars ?? 0)}</span>
               </li>
             ); })}
@@ -358,7 +358,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
         .ta-lb-name { min-width: 0; display: flex; flex-direction: column; font-weight: 700; font-size: .9rem; color: var(--ink); text-decoration: none; }
         .ta-lb-name span { font-size: .68rem; font-weight: 400; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
         .ta-lb-name:hover { color: var(--rust-deep); }
-        .ta-lb-rod { position: relative; height: 4px; border-radius: 4px; background: var(--line); } .ta-lb-rod i { position: absolute; left: 0; top: 0; bottom: 0; border-radius: 4px; background: linear-gradient(90deg, #e0301e, #ff9d8f); }
+        .ta-lb-rod { margin-right: 6px; }
         .ta-lb-s { font-size: .78rem; font-weight: 700; text-align: right; }
         .ta-ranked { margin-top: 14px; }
         @media (max-width: 760px) { .ta-lb { grid-template-columns: 1fr; } .ta-lb li { grid-template-columns: 22px 30px minmax(0, 1fr) 60px 40px; } .ta-sort { margin-left: 0; } }
