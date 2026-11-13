@@ -253,7 +253,7 @@ export const insightCss = `
   .mi-chips { display: flex; flex-wrap: wrap; gap: 5px; }
   .mi-chips .chip, .mi-aff-terms .chip, .mi-rising .chip { padding: 2px 9px; font-size: .76rem; }
   .chip i.mono { font-style: normal; font-size: .68rem; color: var(--rust-deep); } .mi-prof dd i { font-style: normal; color: var(--muted); font-size: .74rem; }
-  @media (max-width: 640px) { .mi-pairs li, .mi-dumb li, .mi-years li { grid-template-columns: minmax(0, 1fr) 90px 44px; } .mi-tip { white-space: normal; width: max-content; max-width: 240px; } }
+  @media (max-width: 640px) { .mi-pairs li, .mi-dumb li, .mi-years li { grid-template-columns: minmax(0, 1fr) 90px 44px; } .mi-tip { white-space: normal; width: max-content; max-width: min(240px, 80vw); left: 0; transform: translate(0, 4px); } :is(td, li):is(:hover, :focus-visible) > .mi-tip, .mi-wk:is(:hover, :focus-visible) > .mi-tip { transform: none; } }
   @media (prefers-reduced-motion: reduce) { .mi-card, .mi-card > *, .mi-pairs li, .mi-prof, .mi-pair-t > span, .mi-prof-bar span { animation: none; } }
 `;
 
