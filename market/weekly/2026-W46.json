@@ -2,282 +2,343 @@
  "week": "2026-W46",
  "from": "2026-11-09",
  "to": "2026-11-15",
- "open": 1042,
- "new": 180,
- "remoteShare": 25,
+ "open": 2815,
+ "new": 1953,
+ "remoteShare": 23,
  "roles": [
   {
-   "id": "forward-deployed-engineer",
-   "n": 283
+   "id": "ai-platform-engineer",
+   "n": 563
   },
   {
    "id": "rd-researcher",
-   "n": 180
+   "n": 530
   },
   {
-   "id": "applied-ai-engineer",
-   "n": 121
-  },
-  {
-   "id": "ai-platform-engineer",
-   "n": 117
+   "id": "forward-deployed-engineer",
+   "n": 488
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 104
-  },
-  {
-   "id": "ai-native-architect",
-   "n": 79
+   "n": 321
   },
   {
    "id": "other-ai",
-   "n": 70
+   "n": 308
+  },
+  {
+   "id": "applied-ai-engineer",
+   "n": 212
   },
   {
    "id": "ai-native-developer",
-   "n": 54
+   "n": 198
+  },
+  {
+   "id": "ai-native-architect",
+   "n": 100
   },
   {
    "id": "ai-solutions-architect",
-   "n": 34
+   "n": 95
   }
  ],
  "newRoles": [
   {
-   "id": "rd-researcher",
-   "n": 38
-  },
-  {
-   "id": "applied-ai-engineer",
-   "n": 31
-  },
-  {
-   "id": "forward-deployed-engineer",
-   "n": 31
-  },
-  {
    "id": "ai-platform-engineer",
-   "n": 26
+   "n": 472
+  },
+  {
+   "id": "rd-researcher",
+   "n": 388
   },
   {
    "id": "other-ai",
-   "n": 19
+   "n": 257
+  },
+  {
+   "id": "forward-deployed-engineer",
+   "n": 236
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 12
-  },
-  {
-   "id": "ai-native-architect",
-   "n": 11
+   "n": 229
   },
   {
    "id": "ai-native-developer",
-   "n": 7
+   "n": 151
+  },
+  {
+   "id": "applied-ai-engineer",
+   "n": 122
   },
   {
    "id": "ai-solutions-architect",
-   "n": 5
+   "n": 66
+  },
+  {
+   "id": "ai-native-architect",
+   "n": 32
   }
  ],
  "seniority": [
   {
    "id": "Mid",
-   "n": 554
+   "n": 1209
   },
   {
    "id": "Senior",
-   "n": 190
+   "n": 692
   },
   {
    "id": "Staff",
-   "n": 112
+   "n": 427
   },
   {
    "id": "Lead",
-   "n": 106
+   "n": 205
   },
   {
    "id": "Intern",
-   "n": 35
-  },
-  {
-   "id": "Junior",
-   "n": 22
+   "n": 126
   },
   {
    "id": "Principal",
-   "n": 18
+   "n": 88
+  },
+  {
+   "id": "Junior",
+   "n": 44
   },
   {
    "id": "Head",
-   "n": 5
+   "n": 24
   }
  ],
  "skills": [
   {
    "id": "software",
-   "n": 776,
-   "share": 74
+   "n": 2145,
+   "share": 76
   },
   {
    "id": "agents",
-   "n": 669,
-   "share": 64
+   "n": 1741,
+   "share": 62
   },
   {
    "id": "customer",
-   "n": 665,
-   "share": 64
+   "n": 1440,
+   "share": 51
+  },
+  {
+   "id": "models",
+   "n": 1330,
+   "share": 47
   },
   {
    "id": "evals",
-   "n": 484,
+   "n": 1290,
    "share": 46
   },
   {
    "id": "product",
-   "n": 444,
-   "share": 43
-  },
-  {
-   "id": "models",
-   "n": 364,
-   "share": 35
-  },
-  {
-   "id": "security",
-   "n": 300,
-   "share": 29
-  },
-  {
-   "id": "retrieval",
-   "n": 277,
-   "share": 27
-  },
-  {
-   "id": "data",
-   "n": 259,
-   "share": 25
-  },
-  {
-   "id": "architecture",
-   "n": 254,
-   "share": 24
+   "n": 1010,
+   "share": 36
   },
   {
    "id": "context",
-   "n": 216,
-   "share": 21
+   "n": 785,
+   "share": 28
+  },
+  {
+   "id": "architecture",
+   "n": 722,
+   "share": 26
+  },
+  {
+   "id": "data",
+   "n": 709,
+   "share": 25
+  },
+  {
+   "id": "retrieval",
+   "n": 700,
+   "share": 25
+  },
+  {
+   "id": "security",
+   "n": 555,
+   "share": 20
   },
   {
    "id": "ai-dev",
-   "n": 192,
-   "share": 18
+   "n": 491,
+   "share": 17
   }
  ],
- "tasks": [],
+ "tasks": [
+  {
+   "id": "ship",
+   "n": 585,
+   "share": 23
+  },
+  {
+   "id": "prototype",
+   "n": 516,
+   "share": 20
+  },
+  {
+   "id": "agents",
+   "n": 497,
+   "share": 19
+  },
+  {
+   "id": "lead",
+   "n": 484,
+   "share": 19
+  },
+  {
+   "id": "customers",
+   "n": 428,
+   "share": 16
+  },
+  {
+   "id": "train",
+   "n": 424,
+   "share": 16
+  },
+  {
+   "id": "integrate",
+   "n": 423,
+   "share": 16
+  },
+  {
+   "id": "data",
+   "n": 354,
+   "share": 14
+  },
+  {
+   "id": "evaluate",
+   "n": 349,
+   "share": 13
+  },
+  {
+   "id": "scale",
+   "n": 321,
+   "share": 12
+  },
+  {
+   "id": "research",
+   "n": 109,
+   "share": 4
+  },
+  {
+   "id": "retrieval",
+   "n": 93,
+   "share": 4
+  }
+ ],
  "tools": [
   {
    "id": "Python",
-   "n": 654
+   "n": 1777
   },
   {
    "id": "TypeScript",
-   "n": 275
+   "n": 526
+  },
+  {
+   "id": "PyTorch",
+   "n": 471
   },
   {
    "id": "Google Cloud",
-   "n": 208
+   "n": 361
   },
   {
    "id": "RAG",
-   "n": 113
+   "n": 335
   },
   {
    "id": "SQL",
-   "n": 107
+   "n": 330
   },
   {
    "id": "MCP",
-   "n": 91
+   "n": 238
+  },
+  {
+   "id": "Cursor",
+   "n": 210
   },
   {
    "id": "LangChain",
-   "n": 69
+   "n": 176
+  },
+  {
+   "id": "JAX",
+   "n": 143
   },
   {
    "id": "Claude Code",
-   "n": 54
+   "n": 141
   },
   {
-   "id": "LangGraph",
-   "n": 41
-  },
-  {
-   "id": "Hugging Face",
-   "n": 33
-  },
-  {
-   "id": "Elasticsearch",
-   "n": 24
+   "id": "Unity Catalog",
+   "n": 112
   },
   {
    "id": "BigQuery",
-   "n": 24
+   "n": 95
   },
   {
-   "id": "Perplexity AI Search",
-   "n": 21
+   "id": "LlamaIndex",
+   "n": 83
   },
   {
-   "id": "LangSmith",
-   "n": 16
+   "id": "LangGraph",
+   "n": 81
   },
   {
-   "id": "ElevenLabs",
-   "n": 15
+   "id": "Scale AI",
+   "n": 77
+  },
+  {
+   "id": "Hugging Face",
+   "n": 70
+  },
+  {
+   "id": "Ray",
+   "n": 69
+  },
+  {
+   "id": "TensorRT-LLM",
+   "n": 59
   },
   {
    "id": "Vertex AI",
-   "n": 14
+   "n": 41
   },
   {
-   "id": "Agent Skills",
-   "n": 13
+   "id": "OpenAI API",
+   "n": 41
   },
   {
-   "id": "DSPy",
-   "n": 12
+   "id": "ElevenLabs",
+   "n": 38
   },
   {
-   "id": "Deep Agents",
-   "n": 12
+   "id": "GitHub Copilot",
+   "n": 37
   },
   {
-   "id": "AutoGen",
-   "n": 11
+   "id": "Temporal",
+   "n": 35
   },
   {
-   "id": "CrewAI",
-   "n": 11
-  },
-  {
-   "id": "Next.js",
-   "n": 11
-  },
-  {
-   "id": "Claude Agent SDK",
-   "n": 11
-  },
-  {
-   "id": "EU AI Act",
-   "n": 10
-  },
-  {
-   "id": "A2A",
-   "n": 9
+   "id": "Redis",
+   "n": 33
   }
  ]
 }

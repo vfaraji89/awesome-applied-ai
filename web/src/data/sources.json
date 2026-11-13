@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T04:05:21.559Z",
+ "generatedAt": "2026-11-13T05:25:18.046Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -1296,7 +1296,7 @@
      "slug": "nvidia",
      "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite",
      "ok": true,
-     "ai": 309
+     "ai": 308
     },
     {
      "slug": "salesforce",
@@ -1312,7 +1312,7 @@
     }
    ],
    "ok": true,
-   "ai": 431,
+   "ai": 430,
    "processed": 390
   },
   {
@@ -1426,8 +1426,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 18,
-   "processed": 15
+   "ai": 22,
+   "processed": 19
   },
   {
    "id": "jobicy",
@@ -1459,8 +1459,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 85,
-   "processed": 309
+   "ai": 87,
+   "processed": 312
   },
   {
    "id": "hackernews",
