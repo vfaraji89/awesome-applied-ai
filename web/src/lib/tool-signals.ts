@@ -6,8 +6,9 @@ import stats from "@/data/github-stats.json";
    - popular:  20,000 stars or more
    - trending: gained at least max(250, 1.5% of its stars) since last week's run, or, before
                there is a week to compare, a repo under six months old averaging 20 stars a day
-   - new:      launched (the sheet's `launched`, else the repo's creation) in the last six months,
-               labelled with its quarter, e.g. "Q3 2026" */
+   - emerging: launched in the last six months, by the sheet's `launched` month (checked against a
+               source). Counted from the weekly stats date, so a tool ages out on its own. A repo's
+               creation date is not used: repos get moved and recreated long after launch. */
 type Stat = { stars: number; prev?: number; created: string; pushed: string; archived?: boolean };
 const S = stats as { updated: string; repos: Record<string, Stat> };
 export const statsDate = S.updated;
@@ -22,7 +23,7 @@ const quarterOf = (ym: string) => `Q${Math.floor((Number(ym.slice(5, 7)) - 1) / 
 
 export function signals(t: Tool): Signals {
   const repo = repoOf(t), s = repo ? S.repos[repo] : undefined;
-  const launched = t.launched || s?.created?.slice(0, 7);
+  const launched = t.launched;
   const ageDays = launched ? (ref - new Date(launched + "-15T00:00:00Z").getTime()) / 864e5 : Infinity;
   const gain = s && s.prev !== undefined ? s.stars - s.prev : undefined;
   const createdDays = s ? (ref - new Date(s.created + "T00:00:00Z").getTime()) / 864e5 : Infinity;

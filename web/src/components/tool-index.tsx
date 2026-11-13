@@ -2,8 +2,8 @@
 /* The tool atlas: every tool on the map across eleven areas of applied AI.
    An area rail on top (one bead per area), search and two toggles (emerging, open source),
    then cards grouped by area and category. Each card carries the brand icon (Simple Icons)
-   or a monogram bead, the licence and how proven it is; an emerging tool says why, with a
-   dated source. Filters live in the URL so a view can be shared. */
+   or a monogram bead, the licence and how proven it is. Emerging means launched in the last six
+   months (lib/tool-signals.ts); where the sheet gives a reason, the tag opens it with its source. Filters live in the URL so a view can be shared. */
 import { useEffect, useMemo, useRef, useState } from "react";
 import type { Tool, ToolArea } from "@/lib/types";
 import { areas, catName } from "@/data/areas";
@@ -16,7 +16,7 @@ const MAT: Record<string, string> = { "production-common": "widely used", "produ
 const DEP: Record<string, string> = { "self-host": "self-host", saas: "cloud", both: "cloud or self-host" };
 const OPEN = new Set(["oss", "hybrid", "source-available"]);
 type Sort = "area" | "stars" | "trending" | "new";
-type Tag = "trending" | "new" | "popular";
+type Tag = "trending" | "popular";
 
 function lum(hex: string) {
   const n = parseInt(hex, 16), c = [n >> 16, (n >> 8) & 255, n & 255].map((v) => { v /= 255; return v <= 0.03928 ? v / 12.92 : ((v + 0.055) / 1.055) ** 2.4; });
@@ -50,7 +50,7 @@ function Badges({ t }: { t: Tool }) {
       )}
       {g.trending && <span className="ta-b ta-trend">↑ {g.gain !== undefined ? tr("tools.gain", "+{n} this week", { n: fmtStars(g.gain) }) : tr("tools.trending", "Trending")}</span>}
       {g.popular && <span className="ta-b ta-pop">{tr("tools.popular", "Popular")}</span>}
-      {g.isNew && g.quarter && <span className="ta-b ta-q">{tr("tools.new_q", "New · {q}", { q: g.quarter })}</span>}
+      {g.isNew && g.launched && <span className="ta-b ta-q" title={tr("tools.launched", "Launched")}>{g.quarter}</span>}
     </div>
   );
 }
@@ -58,23 +58,25 @@ function Badges({ t }: { t: Tool }) {
 function Card({ t, why, setWhy }: { t: Tool; why: string | null; setWhy: (id: string | null) => void }) {
   const tr = useT();
   const open = why === t.id;
+  const g = signals(t);
+  const label = tr("tools.emerging", "Emerging");
   return (
-    <li className={`ta-card${t.emerging ? " is-new" : ""}`}>
+    <li className={`ta-card${g.isNew ? " is-new" : ""}`}>
       <div className="ta-top">
         <Icon t={t} />
         <div className="ta-head">
           <a href={t.url} target="_blank" rel="noreferrer" className="ta-name">{t.name}<span className="ta-ext" aria-hidden="true">↗</span></a>
           <span className="ta-cat mono">{tr(`tcat.${t.category}`, catName(t.category))}</span>
         </div>
-        {t.emerging && (
+        {g.isNew && (t.emergingWhy ? (
           <button type="button" className={`ta-new${open ? " on" : ""}`} aria-expanded={open} onClick={() => setWhy(open ? null : t.id)}>
-            <span className="bead" />{tr("tools.emerging", "Emerging")}
+            <span className="bead" />{label}
           </button>
-        )}
+        ) : <span className="ta-new"><span className="bead" />{label}</span>)}
       </div>
       <Badges t={t} />
       <p className="ta-sum">{t.summary}</p>
-      {open && t.emergingWhy && (
+      {open && g.isNew && t.emergingWhy && (
         <p className="ta-why">{t.emergingWhy} {t.emergingSource && <a href={t.emergingSource} target="_blank" rel="noreferrer">{tr("tools.source", "Source")} ↗</a>}</p>
       )}
       <div className="ta-meta mono">
@@ -110,7 +112,9 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
     if (p.get("emerging") === "1") setFresh(true);
     if (p.get("open") === "1") setOpen(true);
     const so = p.get("sort"); if (so === "stars" || so === "trending" || so === "new") setSort(so);
-    const tg = (p.get("tags") ?? "").split(",").filter((x): x is Tag => x === "trending" || x === "new" || x === "popular"); if (tg.length) setTags(new Set(tg));
+    const tg = (p.get("tags") ?? "").split(",");
+    if (tg.includes("new")) setFresh(true); // the old "New" tag is the emerging toggle now
+    const kept = tg.filter((x): x is Tag => x === "trending" || x === "popular"); if (kept.length) setTags(new Set(kept));
     const key = (e: KeyboardEvent) => {
       if (e.key === "/" && !(e.target instanceof HTMLInputElement || e.target instanceof HTMLTextAreaElement)) { e.preventDefault(); search.current?.focus(); }
     };
@@ -135,16 +139,16 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
     const s = q.trim().toLowerCase();
     return tools.filter((t) => {
       const g = signals(t);
-      return (!fresh || t.emerging) && (!open || OPEN.has(t.model)) && (!tags.has("trending") || g.trending) && (!tags.has("new") || g.isNew) && (!tags.has("popular") || g.popular) &&
+      return (!fresh || g.isNew) && (!open || OPEN.has(t.model)) && (!tags.has("trending") || g.trending) && (!tags.has("popular") || g.popular) &&
         (!s || [t.name, t.summary, t.category, catName(t.category), tr(`tcat.${t.category}`, ""), t.license, g.repo, ...t.tags].join(" ").toLowerCase().includes(s));
     });
   }, [q, fresh, open, tags, tools, tr]);
   const inArea = area === "all" ? base : base.filter((t) => t.area === area);
   const hits = cat ? inArea.filter((t) => t.category === cat) : inArea;
   const cats = area === "all" ? [] : [...new Set(inArea.map((t) => t.category))].map((c) => [c, inArea.filter((t) => t.category === c).length] as const).sort((x, y) => y[1] - x[1]);
-  const nNew = tools.filter((t) => t.emerging).length;
+  const nNew = tools.filter((t) => signals(t).isNew).length;
   const quiet = area === "all" && !q.trim() && !fresh && !open && !tags.size && sort === "area";
-  const spotlight = quiet ? tools.filter((t) => t.emerging) : [];
+  const spotlight = quiet ? tools.filter((t) => signals(t).isNew).sort((a, b) => (signals(b).launched ?? "").localeCompare(signals(a).launched ?? "")) : [];
   // one row per repo: a feature of a project (say, vLLM prefix caching) does not take a second place
   const top = quiet ? tools.filter((t) => signals(t).stars).sort((a, b) => (signals(b).stars ?? 0) - (signals(a).stars ?? 0))
     .filter((t, i, a) => a.findIndex((x) => signals(x).repo === signals(t).repo) === i).slice(0, 10) : [];
@@ -155,7 +159,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
     if (sort === "trending") return Number(y.trending) - Number(x.trending) || (y.gain ?? 0) - (x.gain ?? 0) || (y.stars ?? 0) - (x.stars ?? 0);
     return (y.launched ?? "").localeCompare(x.launched ?? "") || (y.stars ?? 0) - (x.stars ?? 0);
   });
-  const nTag = (k: Tag) => tools.filter((t) => { const g = signals(t); return k === "trending" ? g.trending : k === "new" ? g.isNew : g.popular; }).length;
+  const nTag = (k: Tag) => tools.filter((t) => { const g = signals(t); return k === "trending" ? g.trending : g.popular; }).length;
 
   const pick = (a: ToolArea | "all") => { setArea(a); setCat(""); };
   // keep the chosen area in view on the rail (scrolls the rail only, never the page)
@@ -178,9 +182,9 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
           <button type="button" className={`ta-tog${open ? " on" : ""}`} aria-pressed={open} onClick={() => setOpen(!open)}><span className="bead ink" />{tr("tools.open_only", "Open source")}</button>
         </div>
         <div className="ta-tags">
-          {(["trending", "new", "popular"] as Tag[]).filter((k) => tags.has(k) || nTag(k) > 0).map((k) => (
+          {(["trending", "popular"] as Tag[]).filter((k) => tags.has(k) || nTag(k) > 0).map((k) => (
             <button key={k} type="button" className={`ta-chip ta-chip-${k}${tags.has(k) ? " on" : ""}`} aria-pressed={tags.has(k)} onClick={() => tog(k)}>
-              {k === "trending" ? "↑ " : k === "new" ? "✦ " : "★ "}{tr(`tools.tag.${k}`, k === "trending" ? "Trending" : k === "new" ? "New" : "Popular")} <span className="count">{nTag(k)}</span>
+              {k === "trending" ? "↑ " : "★ "}{tr(`tools.tag.${k}`, k === "trending" ? "Trending" : "Popular")} <span className="count">{nTag(k)}</span>
             </button>
           ))}
           <label className="ta-sort">
@@ -215,7 +219,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
 
       {spotlight.length > 0 && (
         <section className="ta-spot" aria-label={tr("tools.spot", "Emerging now")}>
-          <div className="ta-spot-h"><span className="bead" /><h3>{tr("tools.spot", "Emerging now")}<span className="dot">.</span></h3><span className="muted">{tr("tools.spot_p", "Launched recently and gaining adoption. Tap the tag to see why.")}</span></div>
+          <div className="ta-spot-h"><span className="bead" /><h3>{tr("tools.spot", "Emerging now")}<span className="dot">.</span></h3><span className="muted">{tr("tools.spot_p", "Launched in the last six months, newest first. Tap a tag to see why.")}</span></div>
           <ul className="ta-strip">{spotlight.map((t) => <Card key={t.id} t={t} why={why} setWhy={setWhy} />)}</ul>
         </section>
       )}
@@ -252,7 +256,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
             {cats.map((c) => (
               <div key={c} className="ta-cat-sec">
                 <div className="kicker">{tr(`tcat.${c}`, catName(c))} <span className="count">{at.filter((t) => t.category === c).length}</span></div>
-                <ul className="ta-grid">{at.filter((t) => t.category === c).sort((x, y) => Number(!!y.emerging) - Number(!!x.emerging) || x.name.localeCompare(y.name)).map((t) => <Card key={t.id} t={t} why={why} setWhy={setWhy} />)}</ul>
+                <ul className="ta-grid">{at.filter((t) => t.category === c).sort((x, y) => Number(signals(y).isNew) - Number(signals(x).isNew) || x.name.localeCompare(y.name)).map((t) => <Card key={t.id} t={t} why={why} setWhy={setWhy} />)}</ul>
               </div>
             ))}
           </section>
