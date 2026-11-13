@@ -13,5 +13,11 @@ if (latest) {
   const w = JSON.parse(readFileSync(new URL(latest, dir), "utf8"));
   out = { ...out, week: w.week, from: w.from, to: w.to, open: w.open, new: w.new, remoteShare: w.remoteShare };
 }
+// the map's own numbers, for the portfolio's "on the map" row
+const { tools } = await import("../src/data/tools");
+const { signals } = await import("../src/lib/tool-signals");
+const { certs } = await import("../src/data/certificates");
+const { useCases } = await import("../src/data/usecases");
+out = { ...out, tools: tools.length, emerging: tools.filter((t) => signals(t).isNew).length, useCases: useCases.length, certificates: certs.length };
 writeFileSync(new URL("../public/pulse.json", import.meta.url), JSON.stringify(out, null, 1) + "\n");
-console.log(`pulse.json: ${out.week ?? "no week"}, ${out.open ?? "?"} open, ${boards} boards`);
+console.log(`pulse.json: ${out.week ?? "no week"}, ${out.open ?? "?"} open, ${boards} boards, ${out.tools} tools`);

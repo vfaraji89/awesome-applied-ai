@@ -160,7 +160,7 @@ const row = (c: Cand) => ["id", "name", "area", "category", "layer", "summary", 
 const md = [
   `# Tool candidates, ${week.id} (${week.from} to ${week.to})`,
   "",
-  "Found automatically. **Nothing here is on the site.** To add one: check it, copy its row from the block at the end into the content sheet's `tools` tab, fill in maturity, deployment and icon, set `emerging` TRUE only with a dated reason and a source, and clear the `note` cell (it holds the signal), then run the sync. Untouched candidates are not shown again.",
+  "Found automatically. **Nothing here is on the site.** To add one: check it, copy its row from the block at the end into the content sheet's `tools` tab, fill in maturity, deployment and icon, and `launched` (YYYY-MM, checked against a source): a tool shows as emerging for six months after that month, and `emerging` TRUE with a reason and a source adds the why, and clear the `note` cell (it holds the signal), then run the sync. Untouched candidates are not shown again.",
   "",
   `## New this week (${fresh.length})`,
   "",

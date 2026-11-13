@@ -38,7 +38,7 @@ export const structure: Section[] = [
     line: "Every tool across applied AI in eleven areas, with what is emerging and why.",
     pages: [
       { label: "Tool map", href: "/tools/", note: "Eleven areas, from data to the landscape" },
-      { label: "Emerging", href: "/tools/?emerging=1", note: "New and gaining adoption, each with a dated source" },
+      { label: "Emerging", href: "/tools/?emerging=1", note: "Launched in the last six months" },
       { label: "Daily stack", href: "/tools/#stack", note: "The thirty tools I use every day" },
     ],
   },
