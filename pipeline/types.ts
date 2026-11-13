@@ -20,6 +20,8 @@ export interface Job {
   remote: boolean;
   skills: string[];
   tools: string[];
+  tasks?: string[]; // what the job asks people to do (taxonomy TASKS ids)
+  posted?: string; // the board's own publish date, when it gives one
   firstSeen: string;
   lastSeen: string;
 }

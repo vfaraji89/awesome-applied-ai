@@ -52,6 +52,7 @@ export function writeWeekly(all: Job[], onlyWeekOf?: string): string[] {
       newRoles: top(fresh.map((j) => j.role), 10),
       seniority: top(open.map((j) => j.seniority), 8),
       skills: top(open.flatMap((j) => j.skills), 12).map((s) => ({ ...s, share: pct(s.n, open.length) })),
+      tasks: top(open.flatMap((j) => j.tasks ?? []), 12).map((t) => ({ ...t, share: pct(t.n, open.filter((j) => j.tasks).length) })),
       tools: top(open.flatMap((j) => j.tools), 25),
     };
     writeFileSync(path.join(DIR, `${id}.json`), JSON.stringify(snap, null, 1) + "\n");

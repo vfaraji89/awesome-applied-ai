@@ -154,5 +154,43 @@
    "host": "wd5",
    "site": "external_experienced"
   }
+ ],
+ "smartrecruiters": [
+  "Visa",
+  "BoschGroup",
+  "ServiceNow",
+  "Wise",
+  "Canva",
+  "Delivery-Hero",
+  "Experian",
+  "Ubisoft2"
+ ],
+ "workable": [
+  "huggingface",
+  "stability-ai",
+  "deepset",
+  "synthesia",
+  "eleven-labs",
+  "photoroom",
+  "weaviate",
+  "lightricks"
+ ],
+ "recruitee": [
+  "bunq",
+  "mollie",
+  "messagebird",
+  "picnic",
+  "channable",
+  "adyen"
+ ],
+ "personio": [
+  "aleph-alpha",
+  "deepl",
+  "parloa",
+  "langdock",
+  "black-forest-labs",
+  "n8n",
+  "celonis",
+  "tacto"
  ]
 }

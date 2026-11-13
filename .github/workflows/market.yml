@@ -39,7 +39,7 @@ jobs:
         run: |
           git config user.name "market-tracker"
           git config user.email "market-tracker@users.noreply.github.com"
-          git add market/jobs.json market/weekly web/src/data/market.json
+          git add market/jobs.json market/weekly web/src/data/market.json web/src/data/sources.json
           if git diff --cached --quiet; then echo "No change"; exit 0; fi
           git commit -m "Market: $(date -u +%Y-%m-%d) update"
           # main may have moved while the boards were being read
