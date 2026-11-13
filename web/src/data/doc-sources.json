@@ -1,0 +1,35 @@
+{
+ "_note": "What each doc is written from, and what pipeline/docs-watch.ts last found there. The watch fills latest, checked and changes; edit sources by hand.",
+ "docs": [
+  {
+   "id": "mcp",
+   "states": "2025-06-18",
+   "latest": null,
+   "checked": null,
+   "sources": [
+    { "kind": "spec-versions", "repo": "modelcontextprotocol/modelcontextprotocol", "path": "schema" },
+    { "kind": "commits", "repo": "modelcontextprotocol/modelcontextprotocol", "path": "docs/specification" },
+    { "kind": "release", "repo": "modelcontextprotocol/python-sdk" },
+    { "kind": "release", "repo": "modelcontextprotocol/inspector" },
+    { "kind": "page", "url": "https://modelcontextprotocol.io/specification" }
+   ]
+  },
+  {
+   "id": "claude-platform",
+   "latest": null,
+   "checked": null,
+   "sources": [
+    { "kind": "page", "url": "https://platform.claude.com/docs/en/api/overview" },
+    { "kind": "release", "repo": "anthropics/anthropic-sdk-python" }
+   ]
+  },
+  {
+   "id": "datahub",
+   "latest": null,
+   "checked": null,
+   "sources": [
+    { "kind": "release", "repo": "datahub-project/datahub" }
+   ]
+  }
+ ]
+}

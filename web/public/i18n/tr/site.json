@@ -1139,6 +1139,8 @@
  "page.datahub": "DataHub",
  "note.datahub": "Yapay zekânızın altındaki üstveri",
  "dc.datahub": "YZ'nizin altındaki üstveri: hangi verinin olduğu, sahibinin kim olduğu, nereden geldiği ve kimin kullanabileceği.",
+ "sd.c_doc": "Dokümanı oku",
+ "sd.c_doc_l": "{d}: kaynaklarına bağlı {n} kısa animasyonlu sayfa.",
  "_review": {
   "_how": "Vahid: these are judgment calls for you to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'servisleme'; alternatives: 'model servisi', or keep 'serving'.",

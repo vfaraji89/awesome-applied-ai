@@ -1139,6 +1139,8 @@
  "page.datahub": "DataHub",
  "note.datahub": "De metadata onder je AI",
  "dc.datahub": "De metadata onder je AI: welke data je hebt, van wie die is, waar die vandaan komt en wie die mag gebruiken.",
+ "sd.c_doc": "Lees de gids",
+ "sd.c_doc_l": "{d}: {n} korte geanimeerde pagina's, elk gekoppeld aan de bronnen.",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Dutch reader). Delete a line once agreed, or change the value above it.",
   "area.serving": "'Serving', 'evals', 'retrieval', 'harness' kept in English, as Dutch tech teams say them.",
