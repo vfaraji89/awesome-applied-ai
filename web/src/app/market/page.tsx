@@ -5,6 +5,8 @@ import market from "@/data/market.json";
 import { fRoles, skills } from "@/data/framework";
 import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
+import { JsonLd } from "@/components/json-ld";
+import { marketLd } from "@/lib/seo";
 
 export const metadata: Metadata = { title: "Market pulse", description: "What the applied AI job market asks for: roles, levels, titles, skills and tools, updated weekly from public job boards." };
 
@@ -35,6 +37,7 @@ export default function Market() {
   const updated = m.generatedAt ? new Date(m.generatedAt).toUTCString().replace(/:\d\d GMT/, " UTC") : "";
   return (
     <>
+      <JsonLd data={marketLd()} />
       <section className="section">
         <div className="wrap">
           <Crumb id="market" page="Market pulse" />

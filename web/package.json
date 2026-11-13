@@ -4,14 +4,15 @@
   "private": true,
   "packageManager": "bun@1.4.4",
   "scripts": {
-    "data": "bun scripts/build-problems.mjs && bun scripts/build-fit.ts && bun scripts/build-pulse.ts && bun scripts/build-icons.ts",
+    "data": "bun scripts/build-problems.mjs && bun scripts/build-fit.ts && bun scripts/build-pulse.ts && bun scripts/build-icons.ts && bun scripts/build-llms.ts",
     "predev": "bun run data",
     "dev": "next dev",
     "prebuild": "bun run data",
     "build": "next build",
     "start": "next start",
     "pretypecheck": "bun run data",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "postbuild": "bun scripts/build-sitemap.ts"
   },
   "dependencies": {
     "@gsap/react": "2.1.2",

@@ -3,6 +3,8 @@ import localFont from "next/font/local";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { harnessCounts } from "@/lib/harness-counts";
+import { JsonLd } from "@/components/json-ld";
+import { websiteLd } from "@/lib/seo";
 import { Analytics } from "@/components/analytics";
 import { LangProvider } from "@/i18n/lang";
 import { site } from "@/lib/site";
@@ -32,7 +34,8 @@ export const metadata: Metadata = {
     icon: [{ url: `${basePath}/icon.svg`, type: "image/svg+xml" }, { url: `${basePath}/icon.png`, sizes: "64x64" }],
     apple: `${basePath}/apple-icon.png`,
   },
-  openGraph: { type: "website", siteName: "awesome-applied-ai", images: [{ url: `${basePath}/og.png`, width: 1200, height: 630, alt: "Applied AI: learn applied AI, one animation at a time" }] },
+  alternates: { canonical: "./" },
+  openGraph: { type: "website", url: "./", siteName: "awesome-applied-ai", locale: "en_US", images: [{ url: `${basePath}/og.png`, width: 1200, height: 630, alt: "Applied AI: learn applied AI, one animation at a time" }] },
   twitter: { card: "summary_large_image", images: [`${basePath}/og.png`] },
 };
 
@@ -50,6 +53,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta httpEquiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob: https://*.google-analytics.com https://*.googletagmanager.com; font-src 'self' data:; media-src 'self' blob: data:; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; worker-src 'self' blob:; object-src 'none'; base-uri 'self'; form-action 'self'; frame-src 'none'; upgrade-insecure-requests" />
         <meta name="referrer" content="strict-origin-when-cross-origin" />
+        <link rel="alternate" type="text/plain" href={`${basePath}/llms.txt`} title="llms.txt" />
+        <JsonLd data={websiteLd()} />
       </head>
       <body>
         <LangProvider>

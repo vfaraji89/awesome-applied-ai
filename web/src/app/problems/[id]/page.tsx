@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { problems, problemById } from "@/data/problems";
+import { JsonLd } from "@/components/json-ld";
+import { problemLd } from "@/lib/seo";
 import { problemBodies } from "@/data/problem-bodies";
 import { layers } from "@/data/layers";
 import { Prose } from "@/components/prose";
@@ -23,6 +25,7 @@ export default async function ProblemPage({ params }: { params: Promise<{ id: st
   const prev = problems[i - 1], next = problems[i + 1];
   return (
     <section className="section">
+      <JsonLd data={problemLd(p.id)} />
       <div className="wrap" style={{ maxWidth: 860 }}>
         <Link href="/problems/" className="count" style={{ textDecoration: "none" }}>← All problems</Link>
         <div className="kicker" style={{ marginTop: 18 }}>Problem {String(p.n).padStart(2, "0")} · <Link href={`/architecture/#${p.layer}`}>{layer?.name}</Link></div>

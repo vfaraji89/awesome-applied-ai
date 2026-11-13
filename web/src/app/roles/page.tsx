@@ -7,6 +7,8 @@ import { stack } from "@/data/stack";
 import { layers } from "@/data/layers";
 import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
+import { JsonLd } from "@/components/json-ld";
+import { rolesLd } from "@/lib/seo";
 
 export const metadata: Metadata = { title: "Roles and skills", description: "A framework for AI-native developers, forward deployed engineers, applied AI and product engineering roles: titles, tasks, skills, stacks." };
 
@@ -14,6 +16,7 @@ export default function Roles() {
   const layerNames = Object.fromEntries(layers.map((l) => [l.id, l.name]));
   return (
     <>
+      <JsonLd data={rolesLd()} />
       <section className="section" id="families">
         <div className="wrap">
           <SectionIntro id="roles" h1="Who builds it, and what they need" lead={"Eight role families across AI-native development, forward deployment, applied AI and product engineering. For each: the job titles you will see, the tasks, the stack, and twelve skills scored from aware to expert by what you can actually do."} />

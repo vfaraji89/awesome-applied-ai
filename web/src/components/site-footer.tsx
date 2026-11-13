@@ -140,6 +140,7 @@ export function SiteFooter({ counts }: { counts: HarnessCounts }) {
         <nav aria-label="Legal">
           <a href="/privacy.html"><T k="ft.privacy">Privacy</T></a>
           <a href="/terms.html"><T k="ft.terms">Terms and disclaimer</T></a>
+          <a href={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/llms.txt`}>llms.txt</a>
           <a href="#" onClick={(e) => { e.preventDefault(); try { localStorage.removeItem("vf-consent"); } catch { /* ignore */ } window.dispatchEvent(new Event("vf:consent-reset")); }}><T k="ft.consent">Analytics choice</T></a>
         </nav>
       </div>

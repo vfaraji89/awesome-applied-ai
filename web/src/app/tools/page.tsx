@@ -6,12 +6,15 @@ import { stack } from "@/data/stack";
 import { StackRows } from "@/components/stack-rows";
 import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
+import { JsonLd } from "@/components/json-ld";
+import { toolsLd } from "@/lib/seo";
 
 export const metadata: Metadata = { title: "Tool map", description: "The applied AI tool map: eleven areas from data to the apps built on it, with licence, maturity and what is emerging." };
 
 export default function Tools() {
   return (
     <section className="section">
+      <JsonLd data={toolsLd()} />
       <div className="wrap">
         <Crumb id="tools" page="Every tool" />
         <div id="map">
