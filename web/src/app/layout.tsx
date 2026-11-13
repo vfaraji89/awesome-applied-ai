@@ -28,15 +28,16 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: { default: `${site.title} · awesome-applied-ai`, template: `%s · awesome-applied-ai` },
-  description: "Learn applied AI with animations: the jargon, the architecture, the tools, the roles and the problems that come up in real projects. Curated by Vahid Faraji.",
+  description: "Applied AI, mapped in seven steps: what the job market asks for, the roles and skills, the AI-native architect, 600+ tools, industry certificates and docs in motion. Free, in five languages, curated by Vahid Faraji.",
   authors: [{ name: site.author.name, url: site.author.site }],
   icons: {
     icon: [{ url: `${basePath}/icon.svg`, type: "image/svg+xml" }, { url: `${basePath}/icon.png`, sizes: "64x64" }],
     apple: `${basePath}/apple-icon.png`,
   },
   alternates: { canonical: "./" },
-  openGraph: { type: "website", url: "./", siteName: "awesome-applied-ai", locale: "en_US", images: [{ url: `${basePath}/og.png`, width: 1200, height: 630, alt: "Applied AI: learn applied AI, one animation at a time" }] },
-  twitter: { card: "summary_large_image", images: [`${basePath}/og.png`] },
+  // share images: each page calls share() from lib/share.ts (images built by scripts/og/build.ts)
+  openGraph: { type: "website", url: "./", siteName: "awesome-applied-ai", locale: "en_US" },
+  twitter: { card: "summary_large_image", creator: "@vfaraji89" },
 };
 
 export const viewport: Viewport = {

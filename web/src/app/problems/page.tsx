@@ -7,8 +7,9 @@ import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
 import { JsonLd } from "@/components/json-ld";
 import { problemsLd } from "@/lib/seo";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Problems", description: "Common applied AI problems, the way they are asked, and how to solve them." };
+export const metadata: Metadata = { ...share("problems"), title: "Problems", description: "Common applied AI problems, the way they are asked, and how to solve them." };
 
 export default function Problems() {
   return (

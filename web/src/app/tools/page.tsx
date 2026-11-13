@@ -8,8 +8,9 @@ import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
 import { JsonLd } from "@/components/json-ld";
 import { toolsLd } from "@/lib/seo";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Tool map", description: "The applied AI tool map: eleven areas from data to the apps built on it, with licence, maturity and what is emerging." };
+export const metadata: Metadata = { ...share("tools"), title: "Tool map", description: "The applied AI tool map: eleven areas from data to the apps built on it, with licence, maturity and what is emerging." };
 
 export default function Tools() {
   return (

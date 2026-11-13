@@ -7,8 +7,9 @@ import { problems } from "@/data/problems";
 import { RequestFlow } from "@/components/request-flow";
 import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "AI-native architecture", description: "The six layers of an AI-native system, and the agent harness that runs on them." };
+export const metadata: Metadata = { ...share("architecture"), title: "AI-native architecture", description: "The six layers of an AI-native system, and the agent harness that runs on them." };
 
 const HARNESS = [
   { t: "Loop", d: "Plan, act, observe, repeat, with a budget and a way to stop.", layer: "orchestration" },

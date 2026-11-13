@@ -6,8 +6,9 @@ import { education } from "@/data/framework";
 import { CHECKED, courses, changes } from "@/data/certificates";
 import { JsonLd } from "@/components/json-ld";
 import { certificatesLd } from "@/lib/seo";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Certificates", description: "The industry certificates for applied AI, by track and level, each linked to the provider's official page." };
+export const metadata: Metadata = { ...share("certificates"), title: "Certificates", description: "The industry certificates for applied AI, by track and level, each linked to the provider's official page." };
 
 const TIPS = [
   { k: "ce.tip0", h: "Follow the stack in the job ad", p: "A certificate proves one provider's stack. Pick the cloud or platform the roles you want already use." },

@@ -9,8 +9,9 @@ import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
 import { JsonLd } from "@/components/json-ld";
 import { rolesLd } from "@/lib/seo";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Roles and skills", description: "A framework for AI-native developers, forward deployed engineers, applied AI and product engineering roles: titles, tasks, skills, stacks." };
+export const metadata: Metadata = { ...share("roles"), title: "Roles and skills", description: "A framework for AI-native developers, forward deployed engineers, applied AI and product engineering roles: titles, tasks, skills, stacks." };
 
 export default function Roles() {
   const layerNames = Object.fromEntries(layers.map((l) => [l.id, l.name]));

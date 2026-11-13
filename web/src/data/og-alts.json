@@ -1,0 +1,19 @@
+{
+ "": "Applied AI, mapped: From what the market asks for to the docs you need to build it: seven steps, free, in five languages.",
+ "market": "What applied AI jobs ask for: Roles, levels, skills and tools, read from public job boards and summarised every week.",
+ "market/note": "This week in applied AI hiring: New roles, the skills they ask for and the tools they name, ready to share.",
+ "fit": "How ready are you for applied AI?: Paste your CV or a job description. Scored against real postings, with what to learn next.",
+ "labs": "What the labs ask for: Applied AI roles at Anthropic, OpenAI and Google, side by side, from their public postings.",
+ "roles": "Who does the work, and what it takes: Eight applied AI roles: their titles, daily tasks, stack and how each one grows.",
+ "skills": "Which skills travel together: The skills applied AI postings ask for, how often they appear together, and which opens the most doors.",
+ "architect": "The role that designs AI into systems: The layers, the stack and the problems an AI-native architect owns.",
+ "architecture": "Six layers of an AI system: From guardrails to retrieval: one request animated through every layer, and the agent harness on top.",
+ "problems": "Problems teams actually hit: Asked the way a team would ask them, with worked answers, layer by layer.",
+ "radar": "What is new, and how far to trust it: Emerging applied AI tech on four rings: use now, pilot, evaluate, watch.",
+ "tools": "600+ tools across applied AI: 11 areas, 12 use cases, licence and maturity for each, and what launched in the last six months.",
+ "certificates": "Certificates worth having: By track and level, each checked against the provider's own page, with what changed recently.",
+ "docs": "The docs people skip, in motion: Short animations, everyday comparisons, real examples and the code you need.",
+ "docs/claude-platform": "How your app talks to Claude: From the first request to the receipt that comes back, one animation at a time.",
+ "jargon": "131 terms, in plain words: Flip cards: the plain meaning on the front, the deeper answer and the interview question on the back.",
+ "contribute": "Spot something wrong? Tell me: Corrections, companies the tracker should follow, and terms or tools that are missing."
+}

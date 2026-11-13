@@ -6,8 +6,9 @@ import { More } from "@/components/more";
 import { TH } from "@/i18n/lang";
 import { JsonLd } from "@/components/json-ld";
 import { jargonLd } from "@/lib/seo";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "Jargon", description: "Applied AI jargon in plain language: tap a card for the deeper answer." };
+export const metadata: Metadata = { ...share("jargon"), title: "Jargon", description: "Applied AI jargon in plain language: tap a card for the deeper answer." };
 
 export default function Jargon() {
   return (

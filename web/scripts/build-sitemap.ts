@@ -1,7 +1,7 @@
 // Builds out/sitemap.xml after the static export: one entry per exported page, so search and
 // answer engines find every page (the problems and docs pages included). The domain's robots.txt,
 // in the vfaraji89.github.io repository, points to it.
-import { readdirSync, statSync, writeFileSync } from "node:fs";
+import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const OUT = new URL("../out/", import.meta.url).pathname;
@@ -12,7 +12,7 @@ const pages: string[] = [];
   for (const f of readdirSync(dir)) {
     const p = join(dir, f);
     if (statSync(p).isDirectory()) { if (!f.startsWith("_") && f !== "i18n") walk(p, `${rel}${f}/`); }
-    else if (f === "index.html") pages.push(rel);
+    else if (f === "index.html" && !/<meta name="robots" content="[^"]*noindex/.test(readFileSync(p, "utf8"))) pages.push(rel);
   }
 })(OUT, "");
 const pri = (p: string) => (p === "" ? "1.0" : p.split("/").length <= 2 ? "0.8" : "0.6");

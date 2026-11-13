@@ -3,8 +3,9 @@ import Link from "next/link";
 import { ClaudeApiCourse } from "@/components/claude-platform-doc";
 import { CourseTrailerPlayer } from "@/components/remotion/players";
 import { docs } from "@/data/docs";
+import { share } from "@/lib/share";
 
-export const metadata: Metadata = { title: "How your app talks to Claude", description: "Claude Platform, an animated doc: requests, SDKs, cloud options, pages, limits and receipts, in plain words." };
+export const metadata: Metadata = { ...share("docs/claude-platform"), title: "How your app talks to Claude", description: "Claude Platform, an animated doc: requests, SDKs, cloud options, pages, limits and receipts, in plain words." };
 
 export default function ClaudePlatform() {
   const ci = docs.findIndex((c) => c.id === "claude-platform");
