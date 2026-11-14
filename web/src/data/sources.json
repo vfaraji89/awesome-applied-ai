@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-14T03:04:20.847Z",
+ "generatedAt": "2026-11-14T03:09:19.135Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -1326,7 +1326,7 @@
      "slug": "salesforce",
      "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",
      "ok": true,
-     "ai": 91
+     "ai": 93
     },
     {
      "slug": "adobe",
@@ -1336,7 +1336,7 @@
     }
    ],
    "ok": true,
-   "ai": 91,
+   "ai": 93,
    "processed": 390
   },
   {
@@ -1450,8 +1450,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 12,
-   "processed": 30
+   "ai": 16,
+   "processed": 34
   },
   {
    "id": "jobicy",
