@@ -90,7 +90,7 @@ export function SkillsExplorer({ roles, stack, layerNames }: { roles: FRole[]; s
         .se-skills { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 9px; }
         .se-skills li { display: grid; grid-template-columns: minmax(0, 1fr) 150px 74px; gap: 12px; align-items: center; font-size: .92rem; }
         .se-rod { position: relative; height: 16px; } .se-rod::before { content: ""; position: absolute; left: 0; right: 0; top: 6px; height: 4px; border-radius: 4px; background: var(--rod); }
-        .se-b { position: absolute; top: 0; width: 16px; height: 16px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #fff, #f1ede8 45%, #d6cfc7); box-shadow: inset 0 0 0 1px rgba(0,0,0,.06); transition: left .7s var(--spring), background .4s; }
+        .se-b { position: absolute; top: 0; width: 16px; height: 16px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #fff, #f1ede8 45%, #d6cfc7); outline: 1px solid rgba(0,0,0,.06); outline-offset: -1px; transition: left .7s var(--spring), background .4s; }
         .se-b.on { background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
         .se-lv { font-size: .72rem; color: var(--muted); }
         .se-grow { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; position: relative; }

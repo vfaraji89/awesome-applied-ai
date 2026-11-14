@@ -38,17 +38,20 @@ function BeadRod() {
 export function SiteHeader() {
   const path = usePathname() ?? "/";
   const t = useT();
+  // one section lights up: the one whose match is the longest prefix (/market/conferences/ is Events, not Market)
+  const best = nav.map((n) => ({ id: n.id, len: Math.max(0, ...n.match.filter((m) => path.startsWith(m)).map((m) => m.length)) })).sort((a, b) => b.len - a.len)[0];
+  const active = best && best.len > 0 ? best.id : null;
   return (
     <header className="site-header">
       <div className="wrap">
-        <Link href="/" className="brand" aria-label="awesome-applied-ai, home">
+        <Link href="/" className="brand" aria-label="Applied AI, Simplified, home">
           <Mark />
           <span>Applied AI<span className="dot">.</span></span>
-          <small>AWESOME-APPLIED-AI</small>
+          <small>SIMPLIFIED</small>
         </Link>
         <nav className="nav" aria-label="Sections">
           {nav.map((n) => (
-            <Link key={n.href} href={n.href} aria-current={n.match.some((m) => path.startsWith(m)) ? "page" : undefined}>
+            <Link key={n.href} href={n.href} aria-current={n.id === active ? "page" : undefined}>
               <T k={`sec.${n.id}.label`}>{n.label}</T>
             </Link>
           ))}

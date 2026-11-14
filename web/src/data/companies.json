@@ -1,0 +1,3767 @@
+{
+ "updated": "2026-11-14",
+ "companies": [
+  {
+   "id": "anthropic",
+   "name": "Anthropic",
+   "lab": true,
+   "hiring": {
+    "open": 111,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/anthropic",
+      "platform": "Greenhouse",
+      "open": 111
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 44
+     },
+     {
+      "id": "ai-native-architect",
+      "share": 24
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 11
+     }
+    ],
+    "skills": [
+     {
+      "id": "security",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 68
+     },
+     {
+      "id": "evals",
+      "share": 61
+     },
+     {
+      "id": "customer",
+      "share": 60
+     },
+     {
+      "id": "models",
+      "share": 44
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "anthropic-memory-tool",
+     "name": "Anthropic memory tool",
+     "area": "agents"
+    },
+    {
+     "id": "anthropic-context-editing",
+     "name": "Anthropic context editing",
+     "area": "agents"
+    },
+    {
+     "id": "anthropic-prompt-caching",
+     "name": "Anthropic prompt caching",
+     "area": "inference"
+    },
+    {
+     "id": "subagent-isolation",
+     "name": "Sub-agent context isolation",
+     "area": "agents"
+    },
+    {
+     "id": "anthropic-count-tokens",
+     "name": "Anthropic count_tokens",
+     "area": "inference"
+    },
+    {
+     "id": "claude-md",
+     "name": "CLAUDE.md",
+     "area": "agents"
+    },
+    {
+     "id": "claude-api",
+     "name": "Claude API",
+     "area": "models"
+    },
+    {
+     "id": "claude-code",
+     "name": "Claude Code",
+     "area": "builders"
+    },
+    {
+     "id": "anthropic-computer-use",
+     "name": "Anthropic computer use tool",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 34,
+    "talks": 34,
+    "source": "https://ai.engineer/orgs/anthropic"
+   },
+   "people": [
+    "eugene-yan",
+    "christopher-lovejoy"
+   ],
+   "initials": "A"
+  },
+  {
+   "id": "databricks",
+   "name": "Databricks",
+   "lab": false,
+   "hiring": {
+    "open": 126,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/databricks",
+      "platform": "Greenhouse",
+      "open": 126
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 53
+     },
+     {
+      "id": "ai-solutions-architect",
+      "share": 13
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 9
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 87
+     },
+     {
+      "id": "customer",
+      "share": 83
+     },
+     {
+      "id": "product",
+      "share": 77
+     },
+     {
+      "id": "software",
+      "share": 71
+     },
+     {
+      "id": "data",
+      "share": 70
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "databricks-mosaic-ai",
+     "name": "Databricks Mosaic AI",
+     "area": "training"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/databricks"
+   },
+   "people": [],
+   "initials": "D"
+  },
+  {
+   "id": "servicenow",
+   "name": "ServiceNow",
+   "lab": false,
+   "hiring": {
+    "open": 120,
+    "boards": [
+     {
+      "url": "https://careers.smartrecruiters.com/ServiceNow",
+      "platform": "SmartRecruiters",
+      "open": 120
+     }
+    ],
+    "roles": [
+     {
+      "id": "agentic-ai-engineer",
+      "share": 30
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 28
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 83
+     },
+     {
+      "id": "agents",
+      "share": 79
+     },
+     {
+      "id": "context",
+      "share": 62
+     },
+     {
+      "id": "evals",
+      "share": 62
+     },
+     {
+      "id": "architecture",
+      "share": 59
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/servicenow"
+   },
+   "people": [],
+   "initials": "S"
+  },
+  {
+   "id": "salesforce",
+   "name": "Salesforce",
+   "lab": false,
+   "hiring": {
+    "open": 91,
+    "boards": [
+     {
+      "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",
+      "platform": "Workday",
+      "open": 91
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 57
+     },
+     {
+      "id": "rd-researcher",
+      "share": 13
+     },
+     {
+      "id": "other-ai",
+      "share": 8
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 86
+     },
+     {
+      "id": "customer",
+      "share": 80
+     },
+     {
+      "id": "context",
+      "share": 71
+     },
+     {
+      "id": "data",
+      "share": 67
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/salesforce"
+   },
+   "people": [],
+   "initials": "S"
+  },
+  {
+   "id": "palantir",
+   "name": "Palantir",
+   "lab": false,
+   "hiring": {
+    "open": 71,
+    "boards": [
+     {
+      "url": "https://jobs.lever.co/palantir",
+      "platform": "Lever",
+      "open": 71
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 93
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 7
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 99
+     },
+     {
+      "id": "customer",
+      "share": 80
+     },
+     {
+      "id": "retrieval",
+      "share": 30
+     },
+     {
+      "id": "architecture",
+      "share": 30
+     },
+     {
+      "id": "evals",
+      "share": 24
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "P"
+  },
+  {
+   "id": "waymo",
+   "name": "Waymo",
+   "lab": false,
+   "hiring": {
+    "open": 66,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/waymo",
+      "platform": "Greenhouse",
+      "open": 66
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 65
+     },
+     {
+      "id": "rd-researcher",
+      "share": 20
+     },
+     {
+      "id": "other-ai",
+      "share": 12
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 82
+     },
+     {
+      "id": "models",
+      "share": 79
+     },
+     {
+      "id": "evals",
+      "share": 32
+     },
+     {
+      "id": "data",
+      "share": 23
+     },
+     {
+      "id": "context",
+      "share": 23
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/waymo"
+   },
+   "people": [],
+   "initials": "W"
+  },
+  {
+   "id": "anduril-industries",
+   "name": "Anduril Industries",
+   "lab": false,
+   "hiring": {
+    "open": 57,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/andurilindustries",
+      "platform": "Greenhouse",
+      "open": 57
+     }
+    ],
+    "roles": [
+     {
+      "id": "other-ai",
+      "share": 32
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 32
+     },
+     {
+      "id": "rd-researcher",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 72
+     },
+     {
+      "id": "product",
+      "share": 44
+     },
+     {
+      "id": "evals",
+      "share": 39
+     },
+     {
+      "id": "agents",
+      "share": 37
+     },
+     {
+      "id": "models",
+      "share": 33
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "AN"
+  },
+  {
+   "id": "scale-ai",
+   "name": "Scale AI",
+   "lab": false,
+   "hiring": {
+    "open": 47,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/scaleai",
+      "platform": "Greenhouse",
+      "open": 47
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 21
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 21
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 19
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 83
+     },
+     {
+      "id": "evals",
+      "share": 70
+     },
+     {
+      "id": "models",
+      "share": 70
+     },
+     {
+      "id": "agents",
+      "share": 68
+     },
+     {
+      "id": "customer",
+      "share": 53
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "scale-ai",
+     "name": "Scale AI",
+     "area": "data"
+    },
+    {
+     "id": "scale-seal",
+     "name": "Scale SEAL Leaderboards",
+     "area": "landscape"
+    }
+   ],
+   "stage": null,
+   "people": [],
+   "initials": "SA"
+  },
+  {
+   "id": "bosch",
+   "name": "Bosch",
+   "lab": false,
+   "hiring": {
+    "open": 46,
+    "boards": [
+     {
+      "url": "https://careers.smartrecruiters.com/BoschGroup",
+      "platform": "SmartRecruiters",
+      "open": 46
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 35
+     },
+     {
+      "id": "other-ai",
+      "share": 33
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 13
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 83
+     },
+     {
+      "id": "agents",
+      "share": 54
+     },
+     {
+      "id": "data",
+      "share": 52
+     },
+     {
+      "id": "retrieval",
+      "share": 39
+     },
+     {
+      "id": "customer",
+      "share": 39
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "B"
+  },
+  {
+   "id": "cloudflare",
+   "name": "Cloudflare",
+   "lab": false,
+   "hiring": {
+    "open": 28,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/cloudflare",
+      "platform": "Greenhouse",
+      "open": 28
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 29
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 21
+     },
+     {
+      "id": "rd-researcher",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 75
+     },
+     {
+      "id": "customer",
+      "share": 71
+     },
+     {
+      "id": "product",
+      "share": 61
+     },
+     {
+      "id": "evals",
+      "share": 61
+     },
+     {
+      "id": "agents",
+      "share": 57
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "cloudflare-workers-ai",
+     "name": "Cloudflare Workers AI",
+     "area": "inference"
+    },
+    {
+     "id": "cloudflare-ai-security",
+     "name": "Cloudflare AI Security for Apps",
+     "area": "governance"
+    }
+   ],
+   "stage": {
+    "speakers": 8,
+    "talks": 8,
+    "source": "https://ai.engineer/orgs/cloudflare"
+   },
+   "people": [],
+   "initials": "C"
+  },
+  {
+   "id": "stripe",
+   "name": "Stripe",
+   "lab": false,
+   "hiring": {
+    "open": 31,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/stripe",
+      "platform": "Greenhouse",
+      "open": 31
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 42
+     },
+     {
+      "id": "rd-researcher",
+      "share": 16
+     },
+     {
+      "id": "ai-solutions-architect",
+      "share": 16
+     }
+    ],
+    "skills": [
+     {
+      "id": "customer",
+      "share": 68
+     },
+     {
+      "id": "software",
+      "share": 55
+     },
+     {
+      "id": "data",
+      "share": 42
+     },
+     {
+      "id": "product",
+      "share": 35
+     },
+     {
+      "id": "agents",
+      "share": 32
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 5,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/stripe"
+   },
+   "people": [],
+   "initials": "S"
+  },
+  {
+   "id": "reddit",
+   "name": "Reddit",
+   "lab": false,
+   "hiring": {
+    "open": 34,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/reddit",
+      "platform": "Greenhouse",
+      "open": 34
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 56
+     },
+     {
+      "id": "rd-researcher",
+      "share": 29
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 6
+     }
+    ],
+    "skills": [
+     {
+      "id": "evals",
+      "share": 76
+     },
+     {
+      "id": "models",
+      "share": 76
+     },
+     {
+      "id": "software",
+      "share": 68
+     },
+     {
+      "id": "customer",
+      "share": 65
+     },
+     {
+      "id": "retrieval",
+      "share": 53
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/reddit"
+   },
+   "people": [
+    "andrew-orobator"
+   ],
+   "initials": "R"
+  },
+  {
+   "id": "microsoft",
+   "name": "Microsoft",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "azure-ai-search",
+     "name": "Azure AI Search",
+     "area": "retrieval"
+    },
+    {
+     "id": "azure-prompt-shields",
+     "name": "Azure Prompt Shields",
+     "area": "governance"
+    },
+    {
+     "id": "azure-content-understanding",
+     "name": "Azure Content Understanding",
+     "area": "modalities"
+    },
+    {
+     "id": "copilot-studio",
+     "name": "Microsoft Copilot Studio",
+     "area": "builders"
+    },
+    {
+     "id": "azure-voice-live",
+     "name": "Azure Voice Live API",
+     "area": "modalities"
+    },
+    {
+     "id": "aca-serverless-gpu",
+     "name": "Azure Container Apps serverless GPUs",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 28,
+    "talks": 34,
+    "source": "https://ai.engineer/orgs/microsoft"
+   },
+   "people": [
+    "pablo-castro"
+   ],
+   "initials": "M"
+  },
+  {
+   "id": "pinterest",
+   "name": "Pinterest",
+   "lab": false,
+   "hiring": {
+    "open": 31,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/pinterest",
+      "platform": "Greenhouse",
+      "open": 31
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 77
+     },
+     {
+      "id": "rd-researcher",
+      "share": 19
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 3
+     }
+    ],
+    "skills": [
+     {
+      "id": "data",
+      "share": 42
+     },
+     {
+      "id": "customer",
+      "share": 29
+     },
+     {
+      "id": "ai-dev",
+      "share": 29
+     },
+     {
+      "id": "retrieval",
+      "share": 26
+     },
+     {
+      "id": "product",
+      "share": 26
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 3,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/pinterest"
+   },
+   "people": [],
+   "initials": "P"
+  },
+  {
+   "id": "zoox",
+   "name": "Zoox",
+   "lab": false,
+   "hiring": {
+    "open": 32,
+    "boards": [
+     {
+      "url": "https://jobs.lever.co/zoox",
+      "platform": "Lever",
+      "open": 32
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 50
+     },
+     {
+      "id": "other-ai",
+      "share": 25
+     },
+     {
+      "id": "rd-researcher",
+      "share": 19
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 91
+     },
+     {
+      "id": "models",
+      "share": 56
+     },
+     {
+      "id": "evals",
+      "share": 41
+     },
+     {
+      "id": "agents",
+      "share": 28
+     },
+     {
+      "id": "context",
+      "share": 25
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "Z"
+  },
+  {
+   "id": "together-ai",
+   "name": "Together AI",
+   "lab": true,
+   "hiring": {
+    "open": 23,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/togetherai",
+      "platform": "Greenhouse",
+      "open": 23
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 35
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 22
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "models",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 91
+     },
+     {
+      "id": "ai-dev",
+      "share": 91
+     },
+     {
+      "id": "evals",
+      "share": 78
+     },
+     {
+      "id": "architecture",
+      "share": 61
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "together-ai",
+     "name": "Together AI",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 8,
+    "source": "https://ai.engineer/orgs/together-ai"
+   },
+   "people": [],
+   "initials": "TA"
+  },
+  {
+   "id": "arize",
+   "name": "Arize",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "phoenix",
+     "name": "Arize Phoenix",
+     "area": "evaluation"
+    },
+    {
+     "id": "arize-ax",
+     "name": "Arize AX",
+     "area": "evaluation"
+    },
+    {
+     "id": "phoenix-annotations",
+     "name": "Arize Phoenix Annotations",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 12,
+    "talks": 30,
+    "source": "https://ai.engineer/orgs/arize"
+   },
+   "people": [
+    "dat-ngo"
+   ],
+   "initials": "A"
+  },
+  {
+   "id": "openai",
+   "name": "OpenAI",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "openai-responses-state",
+     "name": "OpenAI Responses API state",
+     "area": "agents"
+    },
+    {
+     "id": "openai-prompt-caching",
+     "name": "OpenAI automatic caching",
+     "area": "inference"
+    },
+    {
+     "id": "openai-api",
+     "name": "OpenAI API",
+     "area": "models"
+    },
+    {
+     "id": "gpt-oss",
+     "name": "gpt-oss",
+     "area": "models"
+    },
+    {
+     "id": "openai-agentkit",
+     "name": "OpenAI AgentKit",
+     "area": "builders"
+    },
+    {
+     "id": "openai-apps-sdk",
+     "name": "OpenAI Apps SDK",
+     "area": "builders"
+    },
+    {
+     "id": "openai-sites",
+     "name": "OpenAI Sites",
+     "area": "builders"
+    },
+    {
+     "id": "openai-agents-api",
+     "name": "OpenAI Agents API",
+     "area": "agents"
+    },
+    {
+     "id": "openai-realtime-api",
+     "name": "OpenAI Realtime API",
+     "area": "modalities"
+    },
+    {
+     "id": "openai-computer-use",
+     "name": "OpenAI computer use tool",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 33,
+    "talks": 29,
+    "source": "https://ai.engineer/orgs/openai"
+   },
+   "people": [
+    "abhishek-bhardwaj"
+   ],
+   "initials": "O"
+  },
+  {
+   "id": "neo4j",
+   "name": "Neo4j",
+   "lab": false,
+   "hiring": {
+    "open": 5,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/neo4j",
+      "platform": "Greenhouse",
+      "open": 5
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-solutions-architect",
+      "share": 60
+     },
+     {
+      "id": "ai-native-architect",
+      "share": 20
+     },
+     {
+      "id": "rd-researcher",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "product",
+      "share": 100
+     },
+     {
+      "id": "data",
+      "share": 80
+     },
+     {
+      "id": "agents",
+      "share": 80
+     },
+     {
+      "id": "context",
+      "share": 80
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "neo4j",
+     "name": "Neo4j",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 14,
+    "talks": 23,
+    "source": "https://ai.engineer/orgs/neo4j"
+   },
+   "people": [
+    "zach-blumenfeld"
+   ],
+   "initials": "N"
+  },
+  {
+   "id": "coinbase",
+   "name": "Coinbase",
+   "lab": false,
+   "hiring": {
+    "open": 23,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/coinbase",
+      "platform": "Greenhouse",
+      "open": 23
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 52
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 22
+     },
+     {
+      "id": "rd-researcher",
+      "share": 13
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 91
+     },
+     {
+      "id": "customer",
+      "share": 87
+     },
+     {
+      "id": "agents",
+      "share": 74
+     },
+     {
+      "id": "evals",
+      "share": 70
+     },
+     {
+      "id": "architecture",
+      "share": 48
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 2,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/coinbase"
+   },
+   "people": [],
+   "initials": "C"
+  },
+  {
+   "id": "mongodb",
+   "name": "MongoDB",
+   "lab": false,
+   "hiring": {
+    "open": 20,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/mongodb",
+      "platform": "Greenhouse",
+      "open": 20
+     }
+    ],
+    "roles": [
+     {
+      "id": "agentic-ai-engineer",
+      "share": 40
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 25
+     },
+     {
+      "id": "rd-researcher",
+      "share": 15
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 90
+     },
+     {
+      "id": "agents",
+      "share": 70
+     },
+     {
+      "id": "architecture",
+      "share": 60
+     },
+     {
+      "id": "retrieval",
+      "share": 35
+     },
+     {
+      "id": "product",
+      "share": 30
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "atlas-vector-search",
+     "name": "MongoDB Atlas Vector Search",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 6,
+    "source": "https://ai.engineer/orgs/mongodb"
+   },
+   "people": [],
+   "initials": "M"
+  },
+  {
+   "id": "doordash",
+   "name": "DoorDash",
+   "lab": false,
+   "hiring": {
+    "open": 25,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/doordashusa",
+      "platform": "Greenhouse",
+      "open": 25
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 60
+     },
+     {
+      "id": "rd-researcher",
+      "share": 20
+     },
+     {
+      "id": "other-ai",
+      "share": 12
+     }
+    ],
+    "skills": [
+     {
+      "id": "models",
+      "share": 72
+     },
+     {
+      "id": "evals",
+      "share": 64
+     },
+     {
+      "id": "software",
+      "share": 56
+     },
+     {
+      "id": "ai-dev",
+      "share": 44
+     },
+     {
+      "id": "customer",
+      "share": 44
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "D"
+  },
+  {
+   "id": "elastic",
+   "name": "Elastic",
+   "lab": false,
+   "hiring": {
+    "open": 19,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/elastic",
+      "platform": "Greenhouse",
+      "open": 19
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-native-architect",
+      "share": 42
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 37
+     },
+     {
+      "id": "rd-researcher",
+      "share": 16
+     }
+    ],
+    "skills": [
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 89
+     },
+     {
+      "id": "agents",
+      "share": 84
+     },
+     {
+      "id": "retrieval",
+      "share": 79
+     },
+     {
+      "id": "context",
+      "share": 79
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "elasticsearch",
+     "name": "Elasticsearch",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/elastic"
+   },
+   "people": [],
+   "initials": "E"
+  },
+  {
+   "id": "experian",
+   "name": "Experian",
+   "lab": false,
+   "hiring": {
+    "open": 23,
+    "boards": [
+     {
+      "url": "https://careers.smartrecruiters.com/Experian",
+      "platform": "SmartRecruiters",
+      "open": 23
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 35
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 26
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 87
+     },
+     {
+      "id": "customer",
+      "share": 87
+     },
+     {
+      "id": "data",
+      "share": 57
+     },
+     {
+      "id": "agents",
+      "share": 39
+     },
+     {
+      "id": "retrieval",
+      "share": 30
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "E"
+  },
+  {
+   "id": "intercom",
+   "name": "Intercom",
+   "lab": false,
+   "hiring": {
+    "open": 19,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/intercom",
+      "platform": "Greenhouse",
+      "open": 19
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 32
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 21
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 21
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 63
+     },
+     {
+      "id": "customer",
+      "share": 58
+     },
+     {
+      "id": "data",
+      "share": 47
+     },
+     {
+      "id": "product",
+      "share": 32
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 2,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/intercom"
+   },
+   "people": [],
+   "initials": "I"
+  },
+  {
+   "id": "lyft",
+   "name": "Lyft",
+   "lab": false,
+   "hiring": {
+    "open": 19,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/lyft",
+      "platform": "Greenhouse",
+      "open": 19
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 47
+     },
+     {
+      "id": "other-ai",
+      "share": 21
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 16
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 95
+     },
+     {
+      "id": "models",
+      "share": 74
+     },
+     {
+      "id": "data",
+      "share": 58
+     },
+     {
+      "id": "evals",
+      "share": 47
+     },
+     {
+      "id": "product",
+      "share": 42
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 2,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/lyft"
+   },
+   "people": [],
+   "initials": "L"
+  },
+  {
+   "id": "nuro",
+   "name": "Nuro",
+   "lab": false,
+   "hiring": {
+    "open": 20,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/nuro",
+      "platform": "Greenhouse",
+      "open": 20
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 55
+     },
+     {
+      "id": "rd-researcher",
+      "share": 20
+     },
+     {
+      "id": "other-ai",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 90
+     },
+     {
+      "id": "agents",
+      "share": 40
+     },
+     {
+      "id": "architecture",
+      "share": 30
+     },
+     {
+      "id": "evals",
+      "share": 25
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "N"
+  },
+  {
+   "id": "spotify",
+   "name": "Spotify",
+   "lab": false,
+   "hiring": {
+    "open": 17,
+    "boards": [
+     {
+      "url": "https://jobs.lever.co/spotify",
+      "platform": "Lever",
+      "open": 17
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 53
+     },
+     {
+      "id": "rd-researcher",
+      "share": 41
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 6
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 71
+     },
+     {
+      "id": "models",
+      "share": 71
+     },
+     {
+      "id": "customer",
+      "share": 41
+     },
+     {
+      "id": "retrieval",
+      "share": 35
+     },
+     {
+      "id": "evals",
+      "share": 24
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 3,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/spotify"
+   },
+   "people": [
+    "jacqueline-wood"
+   ],
+   "initials": "S"
+  },
+  {
+   "id": "airbnb",
+   "name": "Airbnb",
+   "lab": false,
+   "hiring": {
+    "open": 18,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/airbnb",
+      "platform": "Greenhouse",
+      "open": 18
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 72
+     },
+     {
+      "id": "rd-researcher",
+      "share": 22
+     },
+     {
+      "id": "other-ai",
+      "share": 6
+     }
+    ],
+    "skills": [
+     {
+      "id": "models",
+      "share": 89
+     },
+     {
+      "id": "evals",
+      "share": 72
+     },
+     {
+      "id": "agents",
+      "share": 67
+     },
+     {
+      "id": "software",
+      "share": 56
+     },
+     {
+      "id": "data",
+      "share": 56
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "A"
+  },
+  {
+   "id": "snorkel-ai",
+   "name": "Snorkel AI",
+   "lab": false,
+   "hiring": {
+    "open": 12,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/snorkelai",
+      "platform": "Greenhouse",
+      "open": 12
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 42
+     },
+     {
+      "id": "rd-researcher",
+      "share": 33
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 8
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 75
+     },
+     {
+      "id": "models",
+      "share": 67
+     },
+     {
+      "id": "customer",
+      "share": 58
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "snorkel-ai",
+     "name": "Snorkel AI",
+     "area": "data"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 6,
+    "source": "https://ai.engineer/orgs/snorkel-ai"
+   },
+   "people": [],
+   "initials": "SA"
+  },
+  {
+   "id": "datadog",
+   "name": "Datadog",
+   "lab": false,
+   "hiring": {
+    "open": 13,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/datadog",
+      "platform": "Greenhouse",
+      "open": 13
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 54
+     },
+     {
+      "id": "other-ai",
+      "share": 15
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 15
+     }
+    ],
+    "skills": [
+     {
+      "id": "evals",
+      "share": 92
+     },
+     {
+      "id": "agents",
+      "share": 77
+     },
+     {
+      "id": "models",
+      "share": 77
+     },
+     {
+      "id": "software",
+      "share": 38
+     },
+     {
+      "id": "product",
+      "share": 31
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "datadog-llm",
+     "name": "Datadog LLM Observability",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/datadog"
+   },
+   "people": [],
+   "initials": "D"
+  },
+  {
+   "id": "coreweave",
+   "name": "CoreWeave",
+   "lab": false,
+   "hiring": {
+    "open": 16,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/coreweave",
+      "platform": "Greenhouse",
+      "open": 16
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 38
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 25
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 19
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 81
+     },
+     {
+      "id": "models",
+      "share": 81
+     },
+     {
+      "id": "evals",
+      "share": 75
+     },
+     {
+      "id": "architecture",
+      "share": 56
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "coreweave",
+     "name": "CoreWeave",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/coreweave"
+   },
+   "people": [],
+   "initials": "C"
+  },
+  {
+   "id": "braintrust",
+   "name": "Braintrust",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "braintrust",
+     "name": "Braintrust",
+     "area": "evaluation"
+    },
+    {
+     "id": "braintrust-human-review",
+     "name": "Braintrust Human Review",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 9,
+    "talks": 16,
+    "source": "https://ai.engineer/orgs/braintrust"
+   },
+   "people": [
+    "doug-guthrie"
+   ],
+   "initials": "B"
+  },
+  {
+   "id": "nvidia",
+   "name": "NVIDIA",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "nemotron",
+     "name": "NVIDIA Nemotron",
+     "area": "models"
+    },
+    {
+     "id": "nvidia-nim",
+     "name": "NVIDIA NIM",
+     "area": "inference"
+    },
+    {
+     "id": "nemotron-transcribe",
+     "name": "NVIDIA Nemotron 3.5 Transcribe",
+     "area": "modalities"
+    },
+    {
+     "id": "dgx-cloud-lepton",
+     "name": "NVIDIA DGX Cloud Lepton",
+     "area": "inference"
+    },
+    {
+     "id": "nemotron-safety-guard",
+     "name": "Llama 3.1 Nemotron Safety Guard",
+     "area": "governance"
+    }
+   ],
+   "stage": {
+    "speakers": 19,
+    "talks": 16,
+    "source": "https://ai.engineer/orgs/nvidia"
+   },
+   "people": [
+    "lovina-dmello"
+   ],
+   "initials": "N"
+  },
+  {
+   "id": "figma",
+   "name": "Figma",
+   "lab": false,
+   "hiring": {
+    "open": 12,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/figma",
+      "platform": "Greenhouse",
+      "open": 12
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-native-developer",
+      "share": 33
+     },
+     {
+      "id": "rd-researcher",
+      "share": 25
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "product",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 75
+     },
+     {
+      "id": "software",
+      "share": 67
+     },
+     {
+      "id": "evals",
+      "share": 67
+     },
+     {
+      "id": "models",
+      "share": 42
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 2,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/figma"
+   },
+   "people": [],
+   "initials": "F"
+  },
+  {
+   "id": "samsara",
+   "name": "Samsara",
+   "lab": false,
+   "hiring": {
+    "open": 14,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/samsara",
+      "platform": "Greenhouse",
+      "open": 14
+     }
+    ],
+    "roles": [
+     {
+      "id": "other-ai",
+      "share": 57
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 14
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "product",
+      "share": 93
+     },
+     {
+      "id": "retrieval",
+      "share": 86
+     },
+     {
+      "id": "agents",
+      "share": 79
+     },
+     {
+      "id": "ai-dev",
+      "share": 79
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "S"
+  },
+  {
+   "id": "vercel",
+   "name": "Vercel",
+   "lab": false,
+   "hiring": {
+    "open": 7,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/vercel",
+      "platform": "Greenhouse",
+      "open": 7
+     }
+    ],
+    "roles": [
+     {
+      "id": "agentic-ai-engineer",
+      "share": 43
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 29
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "product",
+      "share": 43
+     },
+     {
+      "id": "customer",
+      "share": 29
+     },
+     {
+      "id": "context",
+      "share": 29
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 7,
+    "talks": 7,
+    "source": "https://ai.engineer/orgs/vercel"
+   },
+   "people": [],
+   "initials": "V"
+  },
+  {
+   "id": "glean",
+   "name": "Glean",
+   "lab": false,
+   "hiring": {
+    "open": 14,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/gleanwork",
+      "platform": "Greenhouse",
+      "open": 14
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 29
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 21
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 71
+     },
+     {
+      "id": "software",
+      "share": 64
+     },
+     {
+      "id": "retrieval",
+      "share": 57
+     },
+     {
+      "id": "context",
+      "share": 43
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "G"
+  },
+  {
+   "id": "affirm",
+   "name": "Affirm",
+   "lab": false,
+   "hiring": {
+    "open": 14,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/affirm",
+      "platform": "Greenhouse",
+      "open": 14
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 86
+     },
+     {
+      "id": "other-ai",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 79
+     },
+     {
+      "id": "agents",
+      "share": 64
+     },
+     {
+      "id": "customer",
+      "share": 64
+     },
+     {
+      "id": "models",
+      "share": 50
+     },
+     {
+      "id": "architecture",
+      "share": 50
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "A"
+  },
+  {
+   "id": "wise",
+   "name": "Wise",
+   "lab": false,
+   "hiring": {
+    "open": 13,
+    "boards": [
+     {
+      "url": "https://careers.smartrecruiters.com/Wise",
+      "platform": "SmartRecruiters",
+      "open": 13
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 46
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 46
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 8
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 85
+     },
+     {
+      "id": "evals",
+      "share": 62
+     },
+     {
+      "id": "models",
+      "share": 54
+     },
+     {
+      "id": "customer",
+      "share": 54
+     },
+     {
+      "id": "data",
+      "share": 38
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/wise"
+   },
+   "people": [],
+   "initials": "W"
+  },
+  {
+   "id": "hugging-face",
+   "name": "Hugging Face",
+   "lab": true,
+   "hiring": {
+    "open": 5,
+    "boards": [
+     {
+      "url": "https://apply.workable.com/huggingface/",
+      "platform": "Workable",
+      "open": 5
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 40
+     },
+     {
+      "id": "other-ai",
+      "share": 40
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 60
+     },
+     {
+      "id": "customer",
+      "share": 40
+     },
+     {
+      "id": "context",
+      "share": 20
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "phi",
+     "name": "Microsoft Phi",
+     "area": "models"
+    },
+    {
+     "id": "hugging-face-hub",
+     "name": "Hugging Face Hub",
+     "area": "models"
+    },
+    {
+     "id": "hf-papers",
+     "name": "Hugging Face Papers",
+     "area": "landscape"
+    },
+    {
+     "id": "hf-inference-endpoints",
+     "name": "Hugging Face Inference Endpoints",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 9,
+    "source": "https://ai.engineer/orgs/hugging-face"
+   },
+   "people": [],
+   "initials": "HF"
+  },
+  {
+   "id": "okta",
+   "name": "Okta",
+   "lab": false,
+   "hiring": {
+    "open": 12,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/okta",
+      "platform": "Greenhouse",
+      "open": 12
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 50
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 42
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 8
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 92
+     },
+     {
+      "id": "data",
+      "share": 75
+     },
+     {
+      "id": "retrieval",
+      "share": 67
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "O"
+  },
+  {
+   "id": "gitlab",
+   "name": "GitLab",
+   "lab": false,
+   "hiring": {
+    "open": 11,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/gitlab",
+      "platform": "Greenhouse",
+      "open": 11
+     }
+    ],
+    "roles": [
+     {
+      "id": "agentic-ai-engineer",
+      "share": 27
+     },
+     {
+      "id": "rd-researcher",
+      "share": 18
+     },
+     {
+      "id": "ai-solutions-architect",
+      "share": 18
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 82
+     },
+     {
+      "id": "evals",
+      "share": 36
+     },
+     {
+      "id": "security",
+      "share": 36
+     },
+     {
+      "id": "ai-dev",
+      "share": 36
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "G"
+  },
+  {
+   "id": "robinhood",
+   "name": "Robinhood",
+   "lab": false,
+   "hiring": {
+    "open": 10,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/robinhood",
+      "platform": "Greenhouse",
+      "open": 10
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 40
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 20
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 90
+     },
+     {
+      "id": "data",
+      "share": 60
+     },
+     {
+      "id": "agents",
+      "share": 50
+     },
+     {
+      "id": "evals",
+      "share": 30
+     },
+     {
+      "id": "product",
+      "share": 30
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/robinhood"
+   },
+   "people": [],
+   "initials": "R"
+  },
+  {
+   "id": "chime",
+   "name": "Chime",
+   "lab": false,
+   "hiring": {
+    "open": 10,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/chime",
+      "platform": "Greenhouse",
+      "open": 10
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 40
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 40
+     },
+     {
+      "id": "rd-researcher",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 90
+     },
+     {
+      "id": "data",
+      "share": 50
+     },
+     {
+      "id": "evals",
+      "share": 50
+     },
+     {
+      "id": "architecture",
+      "share": 50
+     },
+     {
+      "id": "security",
+      "share": 40
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/chime"
+   },
+   "people": [],
+   "initials": "C"
+  },
+  {
+   "id": "tavily",
+   "name": "Tavily",
+   "lab": false,
+   "hiring": {
+    "open": 9,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/tavily",
+      "platform": "Greenhouse",
+      "open": 9
+     }
+    ],
+    "roles": [
+     {
+      "id": "agentic-ai-engineer",
+      "share": 67
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 33
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "retrieval",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "context",
+      "share": 67
+     },
+     {
+      "id": "customer",
+      "share": 56
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "tavily",
+     "name": "Tavily",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/tavily"
+   },
+   "people": [],
+   "initials": "T"
+  },
+  {
+   "id": "twilio",
+   "name": "Twilio",
+   "lab": false,
+   "hiring": {
+    "open": 5,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/twilio",
+      "platform": "Greenhouse",
+      "open": 5
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 80
+     },
+     {
+      "id": "other-ai",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 60
+     },
+     {
+      "id": "models",
+      "share": 60
+     },
+     {
+      "id": "retrieval",
+      "share": 40
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "twilio-conversationrelay",
+     "name": "Twilio ConversationRelay",
+     "area": "modalities"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/twilio"
+   },
+   "people": [],
+   "initials": "T"
+  },
+  {
+   "id": "assemblyai",
+   "name": "AssemblyAI",
+   "lab": false,
+   "hiring": {
+    "open": 7,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/assemblyai",
+      "platform": "Greenhouse",
+      "open": 7
+     }
+    ],
+    "roles": [
+     {
+      "id": "applied-ai-engineer",
+      "share": 43
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 43
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 100
+     },
+     {
+      "id": "ai-dev",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 86
+     },
+     {
+      "id": "customer",
+      "share": 71
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "assemblyai",
+     "name": "AssemblyAI",
+     "area": "modalities"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/assemblyai"
+   },
+   "people": [],
+   "initials": "A"
+  },
+  {
+   "id": "modal",
+   "name": "Modal",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "modal",
+     "name": "Modal",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 8,
+    "source": "https://ai.engineer/orgs/modal"
+   },
+   "people": [
+    "charles-frye"
+   ],
+   "initials": "M"
+  },
+  {
+   "id": "temporal",
+   "name": "Temporal",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "temporal",
+     "name": "Temporal",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 8,
+    "source": "https://ai.engineer/orgs/temporal"
+   },
+   "people": [
+    "cornelia-davis"
+   ],
+   "initials": "T"
+  },
+  {
+   "id": "amazon",
+   "name": "Amazon",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "bedrock-kb",
+     "name": "Bedrock Knowledge Bases",
+     "area": "retrieval"
+    },
+    {
+     "id": "amazon-bedrock",
+     "name": "Amazon Bedrock",
+     "area": "models"
+    },
+    {
+     "id": "sagemaker",
+     "name": "Amazon SageMaker",
+     "area": "training"
+    },
+    {
+     "id": "bedrock-agentcore",
+     "name": "Amazon Bedrock AgentCore",
+     "area": "agents"
+    },
+    {
+     "id": "amazon-textract",
+     "name": "Amazon Textract",
+     "area": "modalities"
+    },
+    {
+     "id": "amazon-nova-sonic",
+     "name": "Amazon Nova Sonic",
+     "area": "modalities"
+    },
+    {
+     "id": "amazon-nova-act",
+     "name": "Amazon Nova Act",
+     "area": "agents"
+    },
+    {
+     "id": "bedrock-guardrails",
+     "name": "Amazon Bedrock Guardrails",
+     "area": "governance"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 7,
+    "source": "https://ai.engineer/orgs/amazon"
+   },
+   "people": [],
+   "initials": "A"
+  },
+  {
+   "id": "cursor",
+   "name": "Cursor",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "cursor",
+     "name": "Cursor",
+     "area": "builders"
+    },
+    {
+     "id": "cursor-agent-sdk",
+     "name": "Cursor Agent SDK",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 7,
+    "source": "https://ai.engineer/orgs/cursor"
+   },
+   "people": [
+    "lee-robinson"
+   ],
+   "initials": "C"
+  },
+  {
+   "id": "daily",
+   "name": "Daily",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "daily",
+     "name": "Daily",
+     "area": "modalities"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 7,
+    "source": "https://ai.engineer/orgs/daily"
+   },
+   "people": [],
+   "initials": "D"
+  },
+  {
+   "id": "llamaindex",
+   "name": "LlamaIndex",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "llamaparse",
+     "name": "LlamaParse",
+     "area": "retrieval"
+    },
+    {
+     "id": "llamaindex",
+     "name": "LlamaIndex",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 7,
+    "source": "https://ai.engineer/orgs/llamaindex"
+   },
+   "people": [],
+   "initials": "L"
+  },
+  {
+   "id": "meta",
+   "name": "Meta",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "llama-guard",
+     "name": "Llama Guard / Prompt Guard",
+     "area": "governance"
+    },
+    {
+     "id": "llamafirewall",
+     "name": "LlamaFirewall",
+     "area": "governance"
+    }
+   ],
+   "stage": {
+    "speakers": 9,
+    "talks": 7,
+    "source": "https://ai.engineer/orgs/meta"
+   },
+   "people": [
+    "nishant-gupta"
+   ],
+   "initials": "M"
+  },
+  {
+   "id": "weights-biases",
+   "name": "Weights & Biases",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "wandb",
+     "name": "Weights & Biases",
+     "area": "training"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 7,
+    "source": "https://ai.engineer/orgs/weights-biases"
+   },
+   "people": [
+    "tim-sweeney"
+   ],
+   "initials": "W&"
+  },
+  {
+   "id": "xai",
+   "name": "xAI",
+   "lab": true,
+   "hiring": {
+    "open": 6,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/xai",
+      "platform": "Greenhouse",
+      "open": 6
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 83
+     },
+     {
+      "id": "other-ai",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 67
+     },
+     {
+      "id": "models",
+      "share": 67
+     },
+     {
+      "id": "agents",
+      "share": 33
+     },
+     {
+      "id": "customer",
+      "share": 33
+     },
+     {
+      "id": "data",
+      "share": 33
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "X"
+  },
+  {
+   "id": "cline",
+   "name": "Cline",
+   "lab": false,
+   "hiring": {
+    "open": 1,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/cline",
+      "platform": "Greenhouse",
+      "open": 1
+     }
+    ],
+    "roles": [
+     {
+      "id": "agentic-ai-engineer",
+      "share": 100
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "data",
+      "share": 100
+     },
+     {
+      "id": "retrieval",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "cline",
+     "name": "Cline",
+     "area": "builders"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/cline"
+   },
+   "people": [
+    "ara-khan"
+   ],
+   "initials": "C"
+  },
+  {
+   "id": "browserbase",
+   "name": "Browserbase",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "browserbase",
+     "name": "Browserbase",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 6,
+    "source": "https://ai.engineer/orgs/browserbase"
+   },
+   "people": [],
+   "initials": "B"
+  },
+  {
+   "id": "exa",
+   "name": "exa",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "exa",
+     "name": "Exa",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 6,
+    "source": "https://ai.engineer/orgs/exa"
+   },
+   "people": [],
+   "initials": "E"
+  },
+  {
+   "id": "langfuse",
+   "name": "Langfuse",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "langfuse",
+     "name": "Langfuse",
+     "area": "evaluation"
+    },
+    {
+     "id": "langfuse-annotation-queues",
+     "name": "Langfuse Annotation Queues",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 6,
+    "source": "https://ai.engineer/orgs/langfuse"
+   },
+   "people": [
+    "marc-klingen"
+   ],
+   "initials": "L"
+  },
+  {
+   "id": "labelbox",
+   "name": "Labelbox",
+   "lab": false,
+   "hiring": {
+    "open": 5,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/labelbox",
+      "platform": "Greenhouse",
+      "open": 5
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 80
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "evals",
+      "share": 80
+     },
+     {
+      "id": "software",
+      "share": 60
+     },
+     {
+      "id": "agents",
+      "share": 60
+     },
+     {
+      "id": "customer",
+      "share": 60
+     },
+     {
+      "id": "models",
+      "share": 60
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "labelbox",
+     "name": "Labelbox",
+     "area": "data"
+    }
+   ],
+   "stage": null,
+   "people": [],
+   "initials": "L"
+  },
+  {
+   "id": "baseten",
+   "name": "Baseten",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "baseten",
+     "name": "Baseten",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/baseten"
+   },
+   "people": [],
+   "initials": "B"
+  },
+  {
+   "id": "elevenlabs",
+   "name": "ElevenLabs",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "elevenlabs",
+     "name": "ElevenLabs",
+     "area": "modalities"
+    },
+    {
+     "id": "elevenlabs-agents",
+     "name": "ElevenLabs Agents",
+     "area": "modalities"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/elevenlabs"
+   },
+   "people": [],
+   "initials": "E"
+  },
+  {
+   "id": "langchain",
+   "name": "LangChain",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "langsmith",
+     "name": "LangSmith",
+     "area": "evaluation"
+    },
+    {
+     "id": "langsmith-annotation-queues",
+     "name": "LangSmith Annotation Queues",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/langchain"
+   },
+   "people": [],
+   "initials": "L"
+  },
+  {
+   "id": "sentry",
+   "name": "Sentry",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "sentry-ai-agent-monitoring",
+     "name": "Sentry AI Agent Monitoring",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/sentry"
+   },
+   "people": [],
+   "initials": "S"
+  },
+  {
+   "id": "unsloth",
+   "name": "Unsloth",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "unsloth",
+     "name": "Unsloth",
+     "area": "training"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/unsloth"
+   },
+   "people": [
+    "daniel-han"
+   ],
+   "initials": "U"
+  },
+  {
+   "id": "cerebras",
+   "name": "Cerebras",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "cerebras-inference",
+     "name": "Cerebras Inference",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/cerebras"
+   },
+   "people": [],
+   "initials": "C"
+  },
+  {
+   "id": "cohere",
+   "name": "Cohere",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "cohere",
+     "name": "Cohere Embed v4 / Rerank 4",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/cohere"
+   },
+   "people": [],
+   "initials": "C"
+  },
+  {
+   "id": "ibm",
+   "name": "IBM",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "watsonx-governance",
+     "name": "IBM watsonx.governance",
+     "area": "governance"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/ibm"
+   },
+   "people": [
+    "tejas-kumar"
+   ],
+   "initials": "I"
+  },
+  {
+   "id": "pydantic",
+   "name": "Pydantic",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "pydantic-ai",
+     "name": "Pydantic AI",
+     "area": "agents"
+    },
+    {
+     "id": "logfire",
+     "name": "Pydantic Logfire",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/pydantic"
+   },
+   "people": [],
+   "initials": "P"
+  },
+  {
+   "id": "raindrop",
+   "name": "Raindrop",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "raindrop",
+     "name": "Raindrop",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/raindrop"
+   },
+   "people": [],
+   "initials": "R"
+  },
+  {
+   "id": "reducto",
+   "name": "Reducto",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "reducto",
+     "name": "Reducto",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/reducto"
+   },
+   "people": [],
+   "initials": "R"
+  },
+  {
+   "id": "runpod",
+   "name": "RunPod",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "runpod",
+     "name": "RunPod",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/runpod"
+   },
+   "people": [],
+   "initials": "R"
+  },
+  {
+   "id": "amp",
+   "name": "Amp",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "amp",
+     "name": "Amp",
+     "area": "builders"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/amp"
+   },
+   "people": [],
+   "initials": "A"
+  },
+  {
+   "id": "fireworks-ai",
+   "name": "Fireworks AI",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "fireworks-ai",
+     "name": "Fireworks AI",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/fireworks-ai"
+   },
+   "people": [],
+   "initials": "FA"
+  },
+  {
+   "id": "mixedbread",
+   "name": "Mixedbread",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "mixedbread",
+     "name": "Mixedbread",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/mixedbread"
+   },
+   "people": [],
+   "initials": "M"
+  },
+  {
+   "id": "openrouter",
+   "name": "OpenRouter",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "openrouter",
+     "name": "OpenRouter",
+     "area": "inference"
+    },
+    {
+     "id": "openrouter-rankings",
+     "name": "OpenRouter Rankings",
+     "area": "landscape"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/openrouter"
+   },
+   "people": [],
+   "initials": "O"
+  },
+  {
+   "id": "posthog",
+   "name": "PostHog",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "posthog-llm-analytics",
+     "name": "PostHog LLM Analytics",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/posthog"
+   },
+   "people": [],
+   "initials": "P"
+  },
+  {
+   "id": "roboflow",
+   "name": "Roboflow",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "roboflow",
+     "name": "Roboflow",
+     "area": "modalities"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/roboflow"
+   },
+   "people": [],
+   "initials": "R"
+  },
+  {
+   "id": "turbopuffer",
+   "name": "turbopuffer",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "turbopuffer",
+     "name": "Turbopuffer",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/turbopuffer"
+   },
+   "people": [],
+   "initials": "T"
+  },
+  {
+   "id": "vectara",
+   "name": "Vectara",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "vectara",
+     "name": "Vectara",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/vectara"
+   },
+   "people": [],
+   "initials": "V"
+  },
+  {
+   "id": "zapier",
+   "name": "Zapier",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "zapier",
+     "name": "Zapier",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/zapier"
+   },
+   "people": [],
+   "initials": "Z"
+  },
+  {
+   "id": "zep",
+   "name": "Zep",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "zep",
+     "name": "Zep",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/zep"
+   },
+   "people": [],
+   "initials": "Z"
+  }
+ ]
+}

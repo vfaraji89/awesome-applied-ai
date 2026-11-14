@@ -218,7 +218,7 @@ export function SkillMap() {
         .sm-head { display: flex; flex-wrap: wrap; gap: 16px; align-items: end; justify-content: space-between; }
         .sm-toggle { display: inline-flex; padding: 4px; gap: 4px; border-radius: 12px; background: var(--paper); border: 1px solid var(--line); }
         .sm-toggle button { padding: 8px 14px; border: 0; border-radius: 9px; background: none; cursor: pointer; font: inherit; font-size: 0.86rem; color: var(--sec); }
-        .sm-toggle button[aria-selected="true"] { background: var(--card); color: var(--ink); box-shadow: 0 0 0 1px var(--line); }
+        .sm-toggle button[aria-selected="true"] { background: var(--card); color: var(--ink); outline: 1px solid var(--line); outline-offset: 0; }
         .sm-con { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 28px; align-items: start; margin-top: 24px; }
         .sm-svg { width: 100%; height: auto; overflow: visible; }
         .sm-orbit { fill: none; stroke: var(--line); stroke-dasharray: 2 6; }

@@ -1,0 +1,24 @@
+{
+ "title": "Applied AI job ads: what employers ask for",
+ "version": "2026-11-13",
+ "through": "2026-11-13",
+ "rows": 2488,
+ "allAds": 2862,
+ "rowPlatforms": [
+  "greenhouse",
+  "lever",
+  "ashby",
+  "workday",
+  "smartrecruiters",
+  "workable"
+ ],
+ "span": [
+  "2009-12-05",
+  "2026-11-13"
+ ],
+ "generatedAt": "2026-11-14T02:56:58.318Z",
+ "licence": "CC-BY-4.0",
+ "doi": null,
+ "conceptDoi": null,
+ "site": "https://vfaraji89.github.io/applied-ai-simplified/market/method/"
+}

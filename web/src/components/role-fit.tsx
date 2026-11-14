@@ -293,12 +293,12 @@ export function RoleFit() {
         .rf-tabs button { display: flex; flex-direction: column; align-items: flex-start; gap: 2px; padding: 9px 16px; border-radius: 12px; border: 0; background: transparent; cursor: pointer; font: inherit; color: var(--sec); text-align: left; transition: background .25s, transform .5s var(--rf-spring); }
         .rf-tabs button b { font-size: .95rem; color: inherit; }
         .rf-tabs button span { font-size: .75rem; color: var(--muted); }
-        .rf-tabs button[aria-selected="true"] { background: var(--card); color: var(--ink); box-shadow: 0 1px 2px rgba(28,28,30,.12), 0 0 0 1px var(--line); }
+        .rf-tabs button[aria-selected="true"] { background: var(--card); color: var(--ink); outline: 1px solid var(--line); outline-offset: 0; }
         .rf-tabs button:active { transform: scale(.97); }
 
         .rf-stage { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 20px; align-items: stretch; }
-        .rf-in { display: flex; flex-direction: column; border-radius: 20px; border: 1px solid var(--line-strong); background: var(--card); box-shadow: 0 18px 40px -28px rgba(28,28,30,.35); overflow: hidden; transition: border-color .3s, box-shadow .3s; }
-        .rf-in:focus-within { border-color: color-mix(in srgb, var(--rust) 50%, transparent); box-shadow: 0 0 0 4px color-mix(in srgb, var(--rust) 8%, transparent), 0 18px 40px -28px rgba(28,28,30,.35); }
+        .rf-in { display: flex; flex-direction: column; border-radius: 20px; border: 1px solid var(--line-strong); background: var(--card);  overflow: hidden; transition: border-color .3s; }
+        .rf-in:focus-within { border-color: color-mix(in srgb, var(--rust) 50%, transparent); outline: 4px solid color-mix(in srgb, var(--rust) 8%, transparent); outline-offset: 0; }
         .rf-in textarea { min-height: 190px; width: 100%; padding: 18px 20px 10px; border: 0; resize: vertical; background: transparent; color: var(--ink); font: inherit; font-size: .95rem; line-height: 1.55; }
         .rf-in textarea:focus { outline: none; }
         .rf-tray { display: flex; flex-wrap: wrap; gap: 6px; min-height: 44px; padding: 9px 16px 12px; border-top: 1px dashed var(--line-strong); align-content: flex-start; }
@@ -307,8 +307,8 @@ export function RoleFit() {
         .rf-chip i { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
         .rf-chip.on { background: var(--paper); border-color: color-mix(in srgb, var(--rust) 30%, transparent); } .rf-chip.on i { background: var(--rust); }
         .rf-samples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
-        .rf-samples button { padding: 8px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer; transition: border-color .25s, transform .5s var(--rf-spring), box-shadow .25s; }
-        .rf-samples button:hover { border-color: var(--rust); transform: translateY(-2px); box-shadow: 0 10px 20px -14px color-mix(in srgb, var(--rust) 60%, transparent); }
+        .rf-samples button { padding: 8px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer; transition: border-color .25s, transform .5s var(--rf-spring); }
+        .rf-samples button:hover { border-color: var(--rust); transform: translateY(-2px);  }
         .rf-samples button[aria-pressed="true"] { border-color: var(--rust); background: var(--paper); }
         .rf-note { margin-top: 10px; font-size: .8rem; color: var(--muted); }
 
@@ -361,7 +361,7 @@ export function RoleFit() {
         .rf-rod { position: relative; display: flex; align-items: center; gap: 4px; padding: 0 2px; height: 18px; }
         .rf-rod::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: var(--rod); border-radius: 2px; }
         .rf-rod i { position: relative; width: 13px; height: 13px; border-radius: 50%; background: var(--card); border: 1.5px solid var(--line-strong); opacity: 0; transform: translateX(18px); animation: rf-slide .5s var(--rf-spring) forwards; }
-        .rf-rod i.on { border: 0; background: var(--ink); box-shadow: inset -2px -2px 0 rgba(0,0,0,.25); }
+        .rf-rod i.on { border: 0; background: var(--ink);  }
         .rf-rod.hot i.on { background: var(--rust); }
         .rf-next { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; margin: 10px 4px 4px; font-size: .85rem; }
         .rf-gap { padding: 3px 10px; border-radius: 999px; border: 1.5px dashed var(--line-strong); color: var(--ink); text-decoration: none; white-space: normal; animation: rf-pop .5s var(--rf-spring) both; }
@@ -372,7 +372,7 @@ export function RoleFit() {
         .rp { margin-top: 26px; padding: 20px 22px; border-radius: 18px; background: var(--paper); border: 1px solid var(--line); }
         .rp-steps { list-style: none; padding: 0; margin: 14px 0 0; display: flex; flex-direction: column; gap: 14px; }
         .rp-steps li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 12px; align-items: start; animation: rf-rise .5s var(--rf-spring) both; }
-        .rp-n { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--rust); color: #fff; font-family: var(--font-mono), monospace; font-size: .8rem; box-shadow: inset -2px -2px 0 rgba(0,0,0,.2); }
+        .rp-n { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; background: var(--rust); color: #fff; font-family: var(--font-mono), monospace; font-size: .8rem;  }
         .rp-steps b { font-size: .98rem; } .rp-steps .muted { font-size: .85rem; }
         .rp-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
         .rp-links .chip { white-space: normal; max-width: 100%; }

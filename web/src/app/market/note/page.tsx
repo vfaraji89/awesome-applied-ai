@@ -51,7 +51,7 @@ export default function Note() {
       `Most common: ${roles.map(([r, n]) => `${roleEn(r)} (${n})`).join(", ")}.\n` +
       `Skills asked for most: ${sk.map(([s, n]) => `${skillName(s)} ${pct(n)}%`).join(", ")}.\n` +
       `Tools named most: ${tl.map(([t]) => t).join(", ")}.\n\n` +
-      `Updated weekly from public job boards: vfaraji89.github.io/awesome-applied-ai/market/`
+      `Updated weekly from public job boards: vfaraji89.github.io/applied-ai-simplified/market/`
     : "";
   return (
     <section className="section">
@@ -73,7 +73,7 @@ export default function Note() {
                 <div><span className="kicker"><T k="wn.skills">Skills asked for</T></span><ul>{sk.map(([s, n]) => <li key={s}><span className="bead ink" /><T k={`skill.${s}`}>{skillName(s)}</T><i>{pct(n)}%</i></li>)}</ul></div>
                 <div><span className="kicker"><T k="wn.tools">Tools named</T></span><ul>{tl.map(([t, n]) => <li key={t}><span className="bead white" />{t}<i>{n}</i></li>)}</ul></div>
               </div>
-              <div className="wn-foot mono">vfaraji89.github.io/awesome-applied-ai/market</div>
+              <div className="wn-foot mono">vfaraji89.github.io/applied-ai-simplified/market</div>
             </div>
             <h2 style={{ marginTop: 44 }}><T k="wn.post">As a post, in English</T><span className="dot">.</span></h2>
             <pre className="wn-text">{post}</pre>
@@ -81,7 +81,7 @@ export default function Note() {
               <>
                 <h2 style={{ marginTop: 44 }}><T k="wn.weeks">Week by week</T><span className="dot">.</span></h2>
                 <table className="wn-hist">
-                  <thead><tr><th><T k="wn.th_week">Week</T></th><th><T k="wn.th_dates">Dates</T></th><th><T k="wn.th_open">Open roles</T></th><th><T k="wn.th_new">New</T></th><th><T k="mk.remote">Remote</T></th></tr></thead>
+                  <thead><tr><th><T k="wn.th_week">Week</T></th><th><T k="wn.th_dates">Dates</T></th><th><T k="wn.th_open">Active roles</T></th><th><T k="wn.th_new">New</T></th><th><T k="mk.remote">Remote</T></th></tr></thead>
                   <tbody>{hist.slice().reverse().map((w) => <tr key={w.week}><td className="mono">{w.week}</td><td>{fmt(w.from)} – {fmt(w.to)}</td><td>{w.open}</td><td>{w.new}</td><td>{w.remoteShare}%</td></tr>)}</tbody>
                 </table>
               </>

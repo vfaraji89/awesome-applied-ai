@@ -140,7 +140,8 @@ export default function Sources() {
                 <li key={x.name} className="col"><a href={x.site} rel="noopener nofollow" target="_blank">{x.name}</a><span className="muted"><T k={`src.why.${x.name.toLowerCase()}`}>{x.why}</T></span></li>
               ))}
             </ul>
-            <p className="muted" style={{ marginTop: 14 }}><TH k="src.suggest">A company missing? <Link href="/contribute/">Suggest its career page</Link>.</TH></p>
+            <p className="muted" style={{ marginTop: 14 }}><Link href="/market/method/"><T k="src.method">How each ad is read, how often it is wrong, and the open dataset</T> →</Link></p>
+            <p className="muted" style={{ marginTop: 8 }}><TH k="src.suggest">A company missing? <Link href="/contribute/">Suggest its career page</Link>.</TH></p>
           </div>
         </div>
       </section>

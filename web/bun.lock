@@ -3,7 +3,7 @@
   "configVersion": 1,
   "workspaces": {
     "": {
-      "name": "awesome-applied-ai",
+      "name": "applied-ai-simplified",
       "dependencies": {
         "@gsap/react": "2.1.2",
         "@remotion/player": "4.0.541",

@@ -278,8 +278,8 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
       })}
       <style>{`
         .ta-bar { position: sticky; top: 64px; z-index: 5; background: color-mix(in srgb, var(--bg) 92%, transparent); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px); padding: 12px 0 10px; display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 12px; border-bottom: 1px solid var(--line); }
-        .ta-search { display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--card); color: var(--muted); transition: border-color .3s var(--ease), box-shadow .3s var(--ease); }
-        .ta-search:focus-within { border-color: var(--rust); box-shadow: 0 0 0 4px color-mix(in srgb, var(--rust) 14%, transparent); }
+        .ta-search { display: flex; align-items: center; gap: 10px; height: 44px; padding: 0 12px; border: 1px solid var(--line-strong); border-radius: 12px; background: var(--card); color: var(--muted); transition: border-color .3s var(--ease); }
+        .ta-search:focus-within { border-color: var(--rust); outline: 4px solid color-mix(in srgb, var(--rust) 14%, transparent); outline-offset: 0; }
         .ta-search input { flex: 1; min-width: 0; border: 0; outline: 0; background: none; font: inherit; font-size: .95rem; color: var(--ink); }
         .ta-search kbd { font-size: .72rem; border: 1px solid var(--line-strong); border-radius: 6px; padding: 1px 6px; }
         .ta-toggles { display: flex; gap: 8px; }
@@ -306,8 +306,8 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
         .ta-area-h h3 { font-size: 1.7rem; font-weight: 800; letter-spacing: -.02em; } .ta-area-h p { font-size: .92rem; }
         .ta-cat-sec { margin-top: 20px; } .ta-cat-sec .kicker { display: flex; gap: 8px; align-items: baseline; }
         .ta-grid { list-style: none; margin: 10px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 10px; }
-        .ta-card { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); animation: rise .5s var(--ease) both; transition: border-color .35s var(--ease), box-shadow .35s var(--ease), transform .45s var(--ease); }
-        .ta-card:hover { border-color: var(--line-strong); box-shadow: 0 14px 28px -22px rgba(28,28,30,.45); transform: translateY(-2px); }
+        .ta-card { display: flex; flex-direction: column; gap: 8px; padding: 14px; border-radius: 14px; border: 1px solid var(--line); background: var(--card); animation: rise .5s var(--ease) both; transition: border-color .35s var(--ease), transform .45s var(--ease); }
+        .ta-card:hover { border-color: var(--line-strong);  transform: translateY(-2px); }
         .ta-card.is-new { border-color: color-mix(in srgb, var(--rust) 30%, var(--line)); }
         .ta-top { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 10px; align-items: start; }
         .ta-top .ta-new { margin-top: 2px; }

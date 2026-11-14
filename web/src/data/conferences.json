@@ -1,0 +1,3852 @@
+{
+ "updated": "2026-11-14",
+ "editions": [
+  {
+   "id": "ai-engineer-summit-2023",
+   "series": "AI Engineer",
+   "name": "AI Engineer Summit 2023",
+   "start": "2023-10-08",
+   "end": "2023-10-10",
+   "location": "San Francisco",
+   "url": "https://ai.engineer/summit/2023",
+   "source": "https://ai.engineer/llms.txt",
+   "kinds": {
+    "talk": 41,
+    "workshop": 0,
+    "keynote": 0,
+    "panel": 0
+   },
+   "talks": 41,
+   "skills": [
+    {
+     "id": "retrieval",
+     "n": 15,
+     "share": 36.6
+    },
+    {
+     "id": "agents",
+     "n": 11,
+     "share": 26.8
+    },
+    {
+     "id": "models",
+     "n": 9,
+     "share": 22
+    },
+    {
+     "id": "evals",
+     "n": 9,
+     "share": 22
+    },
+    {
+     "id": "software",
+     "n": 8,
+     "share": 19.5
+    },
+    {
+     "id": "context",
+     "n": 7,
+     "share": 17.1
+    },
+    {
+     "id": "customer",
+     "n": 6,
+     "share": 14.6
+    },
+    {
+     "id": "data",
+     "n": 2,
+     "share": 4.9
+    },
+    {
+     "id": "security",
+     "n": 2,
+     "share": 4.9
+    },
+    {
+     "id": "ai-dev",
+     "n": 2,
+     "share": 4.9
+    },
+    {
+     "id": "product",
+     "n": 1,
+     "share": 2.4
+    }
+   ],
+   "tasks": [
+    {
+     "id": "retrieval",
+     "n": 8,
+     "share": 19.5
+    },
+    {
+     "id": "train",
+     "n": 5,
+     "share": 12.2
+    },
+    {
+     "id": "integrate",
+     "n": 2,
+     "share": 4.9
+    },
+    {
+     "id": "evaluate",
+     "n": 2,
+     "share": 4.9
+    },
+    {
+     "id": "prototype",
+     "n": 2,
+     "share": 4.9
+    },
+    {
+     "id": "ship",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "id": "agents",
+     "n": 1,
+     "share": 2.4
+    }
+   ],
+   "tools": [
+    {
+     "name": "RAG",
+     "n": 8,
+     "share": 19.5
+    },
+    {
+     "name": "TypeScript",
+     "n": 3,
+     "share": 7.3
+    },
+    {
+     "name": "Python",
+     "n": 2,
+     "share": 4.9
+    },
+    {
+     "name": "LangChain",
+     "n": 2,
+     "share": 4.9
+    },
+    {
+     "name": "LlamaIndex",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "OpenCV",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Roboflow",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "OpenAI API",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Perplexity AI Search",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Replit",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "SQL",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "LangSmith",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Weaviate",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Streamlit",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "llama.cpp",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Chroma",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Whisper",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Vector DB",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "pgvector",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Qdrant",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Pinecone",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Midjourney",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "GitHub Copilot",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Text-to-SQL",
+     "n": 1,
+     "share": 2.4
+    },
+    {
+     "name": "Guardrails AI",
+     "n": 1,
+     "share": 2.4
+    }
+   ],
+   "tracks": []
+  },
+  {
+   "id": "ai-engineer-world-s-fair-2024",
+   "series": "AI Engineer",
+   "name": "AI Engineer World's Fair 2024",
+   "start": "2024-06-25",
+   "end": "2024-06-27",
+   "location": "San Francisco",
+   "url": "https://ai.engineer/worldsfair/2024",
+   "source": "https://ai.engineer/llms.txt",
+   "kinds": {
+    "talk": 110,
+    "workshop": 0,
+    "keynote": 0,
+    "panel": 0
+   },
+   "talks": 110,
+   "skills": [
+    {
+     "id": "retrieval",
+     "n": 47,
+     "share": 42.7
+    },
+    {
+     "id": "models",
+     "n": 38,
+     "share": 34.5
+    },
+    {
+     "id": "agents",
+     "n": 38,
+     "share": 34.5
+    },
+    {
+     "id": "customer",
+     "n": 26,
+     "share": 23.6
+    },
+    {
+     "id": "evals",
+     "n": 21,
+     "share": 19.1
+    },
+    {
+     "id": "software",
+     "n": 19,
+     "share": 17.3
+    },
+    {
+     "id": "ai-dev",
+     "n": 15,
+     "share": 13.6
+    },
+    {
+     "id": "context",
+     "n": 11,
+     "share": 10
+    },
+    {
+     "id": "security",
+     "n": 8,
+     "share": 7.3
+    },
+    {
+     "id": "data",
+     "n": 6,
+     "share": 5.5
+    },
+    {
+     "id": "product",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "id": "architecture",
+     "n": 1,
+     "share": 0.9
+    }
+   ],
+   "tasks": [
+    {
+     "id": "retrieval",
+     "n": 16,
+     "share": 14.5
+    },
+    {
+     "id": "train",
+     "n": 14,
+     "share": 12.7
+    },
+    {
+     "id": "agents",
+     "n": 12,
+     "share": 10.9
+    },
+    {
+     "id": "prototype",
+     "n": 9,
+     "share": 8.2
+    },
+    {
+     "id": "ship",
+     "n": 3,
+     "share": 2.7
+    },
+    {
+     "id": "integrate",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "id": "data",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "id": "evaluate",
+     "n": 1,
+     "share": 0.9
+    }
+   ],
+   "tools": [
+    {
+     "name": "RAG",
+     "n": 33,
+     "share": 30
+    },
+    {
+     "name": "Python",
+     "n": 13,
+     "share": 11.8
+    },
+    {
+     "name": "LangChain",
+     "n": 7,
+     "share": 6.4
+    },
+    {
+     "name": "Gemma",
+     "n": 5,
+     "share": 4.5
+    },
+    {
+     "name": "GitHub Copilot",
+     "n": 4,
+     "share": 3.6
+    },
+    {
+     "name": "Hugging Face",
+     "n": 3,
+     "share": 2.7
+    },
+    {
+     "name": "Unsloth",
+     "n": 3,
+     "share": 2.7
+    },
+    {
+     "name": "LangSmith",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Google Cloud",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Deepgram",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "SQL",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Amazon Bedrock",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "TypeScript",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "TensorRT-LLM",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Fireworks AI",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Mistral AI",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Weights & Biases",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Vertex AI",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Azure AI Search",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Azure AI Foundry",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "LiteLLM",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "Together AI",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "ElevenLabs",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "LangGraph",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "Groq",
+     "n": 1,
+     "share": 0.9
+    }
+   ],
+   "tracks": []
+  },
+  {
+   "id": "ai-engineer-summit-2025",
+   "series": "AI Engineer",
+   "name": "AI Engineer Summit 2025",
+   "start": "2025-02-19",
+   "end": "2025-02-22",
+   "location": "New York",
+   "url": "https://ai.engineer/summit/2025",
+   "source": "https://ai.engineer/llms.txt",
+   "kinds": {
+    "talk": 60,
+    "workshop": 2,
+    "keynote": 2,
+    "panel": 0
+   },
+   "talks": 64,
+   "skills": [
+    {
+     "id": "agents",
+     "n": 49,
+     "share": 76.6
+    },
+    {
+     "id": "retrieval",
+     "n": 16,
+     "share": 25
+    },
+    {
+     "id": "models",
+     "n": 16,
+     "share": 25
+    },
+    {
+     "id": "evals",
+     "n": 14,
+     "share": 21.9
+    },
+    {
+     "id": "context",
+     "n": 7,
+     "share": 10.9
+    },
+    {
+     "id": "software",
+     "n": 7,
+     "share": 10.9
+    },
+    {
+     "id": "customer",
+     "n": 6,
+     "share": 9.4
+    },
+    {
+     "id": "ai-dev",
+     "n": 6,
+     "share": 9.4
+    },
+    {
+     "id": "data",
+     "n": 3,
+     "share": 4.7
+    },
+    {
+     "id": "security",
+     "n": 2,
+     "share": 3.1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "agents",
+     "n": 21,
+     "share": 32.8
+    },
+    {
+     "id": "integrate",
+     "n": 5,
+     "share": 7.8
+    },
+    {
+     "id": "train",
+     "n": 5,
+     "share": 7.8
+    },
+    {
+     "id": "retrieval",
+     "n": 4,
+     "share": 6.3
+    },
+    {
+     "id": "ship",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "id": "data",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "id": "customers",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "id": "prototype",
+     "n": 1,
+     "share": 1.6
+    }
+   ],
+   "tools": [
+    {
+     "name": "RAG",
+     "n": 11,
+     "share": 17.2
+    },
+    {
+     "name": "Python",
+     "n": 3,
+     "share": 4.7
+    },
+    {
+     "name": "LangChain",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "name": "LangGraph",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "name": "CrewAI",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "name": "AutoGen",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "name": "GitHub Copilot",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "name": "Cursor",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "name": "SQL",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "name": "Deepgram",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "name": "TypeScript",
+     "n": 2,
+     "share": 3.1
+    },
+    {
+     "name": "MCP",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "Next.js",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "Neo4j",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "Pydantic AI",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "Modal",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "Pinecone",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "Vectara",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "llms.txt",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "Vercel AI SDK",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "OpenAI Realtime API",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "Pipecat",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "TensorZero",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "PyTorch",
+     "n": 1,
+     "share": 1.6
+    },
+    {
+     "name": "Qwen",
+     "n": 1,
+     "share": 1.6
+    }
+   ],
+   "tracks": []
+  },
+  {
+   "id": "ai-engineer-world-s-fair-2025",
+   "series": "AI Engineer",
+   "name": "AI Engineer World's Fair 2025",
+   "start": "2025-06-03",
+   "end": "2025-06-05",
+   "location": "San Francisco",
+   "url": "https://ai.engineer/worldsfair/2025",
+   "source": "https://ai.engineer/llms.txt",
+   "kinds": {
+    "talk": 289,
+    "workshop": 8,
+    "keynote": 1,
+    "panel": 0
+   },
+   "talks": 298,
+   "skills": [
+    {
+     "id": "agents",
+     "n": 195,
+     "share": 65.4
+    },
+    {
+     "id": "customer",
+     "n": 67,
+     "share": 22.5
+    },
+    {
+     "id": "models",
+     "n": 63,
+     "share": 21.1
+    },
+    {
+     "id": "retrieval",
+     "n": 63,
+     "share": 21.1
+    },
+    {
+     "id": "evals",
+     "n": 57,
+     "share": 19.1
+    },
+    {
+     "id": "software",
+     "n": 47,
+     "share": 15.8
+    },
+    {
+     "id": "ai-dev",
+     "n": 39,
+     "share": 13.1
+    },
+    {
+     "id": "context",
+     "n": 31,
+     "share": 10.4
+    },
+    {
+     "id": "security",
+     "n": 18,
+     "share": 6
+    },
+    {
+     "id": "product",
+     "n": 12,
+     "share": 4
+    },
+    {
+     "id": "data",
+     "n": 7,
+     "share": 2.3
+    },
+    {
+     "id": "architecture",
+     "n": 2,
+     "share": 0.7
+    }
+   ],
+   "tasks": [
+    {
+     "id": "agents",
+     "n": 33,
+     "share": 11.1
+    },
+    {
+     "id": "train",
+     "n": 24,
+     "share": 8.1
+    },
+    {
+     "id": "prototype",
+     "n": 23,
+     "share": 7.7
+    },
+    {
+     "id": "retrieval",
+     "n": 16,
+     "share": 5.4
+    },
+    {
+     "id": "integrate",
+     "n": 12,
+     "share": 4
+    },
+    {
+     "id": "evaluate",
+     "n": 10,
+     "share": 3.4
+    },
+    {
+     "id": "ship",
+     "n": 8,
+     "share": 2.7
+    },
+    {
+     "id": "data",
+     "n": 3,
+     "share": 1
+    },
+    {
+     "id": "lead",
+     "n": 3,
+     "share": 1
+    },
+    {
+     "id": "customers",
+     "n": 2,
+     "share": 0.7
+    },
+    {
+     "id": "scale",
+     "n": 1,
+     "share": 0.3
+    }
+   ],
+   "tools": [
+    {
+     "name": "MCP",
+     "n": 53,
+     "share": 17.8
+    },
+    {
+     "name": "RAG",
+     "n": 36,
+     "share": 12.1
+    },
+    {
+     "name": "Python",
+     "n": 16,
+     "share": 5.4
+    },
+    {
+     "name": "TypeScript",
+     "n": 10,
+     "share": 3.4
+    },
+    {
+     "name": "Neo4j",
+     "n": 9,
+     "share": 3
+    },
+    {
+     "name": "GitHub Copilot",
+     "n": 9,
+     "share": 3
+    },
+    {
+     "name": "Braintrust",
+     "n": 8,
+     "share": 2.7
+    },
+    {
+     "name": "Cursor",
+     "n": 7,
+     "share": 2.3
+    },
+    {
+     "name": "Microsoft Agents SDK",
+     "n": 6,
+     "share": 2
+    },
+    {
+     "name": "SWE-bench",
+     "n": 5,
+     "share": 1.7
+    },
+    {
+     "name": "Pipecat",
+     "n": 5,
+     "share": 1.7
+    },
+    {
+     "name": "LangChain",
+     "n": 4,
+     "share": 1.3
+    },
+    {
+     "name": "LangGraph",
+     "n": 4,
+     "share": 1.3
+    },
+    {
+     "name": "Voyage AI",
+     "n": 4,
+     "share": 1.3
+    },
+    {
+     "name": "Pydantic AI",
+     "n": 4,
+     "share": 1.3
+    },
+    {
+     "name": "SQL",
+     "n": 4,
+     "share": 1.3
+    },
+    {
+     "name": "Amazon Bedrock",
+     "n": 4,
+     "share": 1.3
+    },
+    {
+     "name": "LlamaIndex",
+     "n": 4,
+     "share": 1.3
+    },
+    {
+     "name": "Claude Code",
+     "n": 3,
+     "share": 1
+    },
+    {
+     "name": "Zapier",
+     "n": 3,
+     "share": 1
+    },
+    {
+     "name": "Jupyter",
+     "n": 3,
+     "share": 1
+    },
+    {
+     "name": "Strands Agents",
+     "n": 3,
+     "share": 1
+    },
+    {
+     "name": "Google Colab",
+     "n": 3,
+     "share": 1
+    },
+    {
+     "name": "pgvector",
+     "n": 3,
+     "share": 1
+    },
+    {
+     "name": "Next.js",
+     "n": 3,
+     "share": 1
+    }
+   ],
+   "tracks": []
+  },
+  {
+   "id": "pytorch-conference-2025",
+   "series": "PyTorch Conference",
+   "name": "PyTorch Conference 2025",
+   "start": "2025-10-21",
+   "end": "2025-10-24",
+   "location": "San Francisco",
+   "url": "https://events.linuxfoundation.org/pytorch-conference-2025/",
+   "source": "https://pytorchconference.sched.com/all.ics",
+   "kinds": {
+    "talk": 107,
+    "workshop": 0,
+    "keynote": 23,
+    "panel": 0
+   },
+   "talks": 130,
+   "skills": [
+    {
+     "id": "models",
+     "n": 94,
+     "share": 72.3
+    },
+    {
+     "id": "software",
+     "n": 24,
+     "share": 18.5
+    },
+    {
+     "id": "agents",
+     "n": 16,
+     "share": 12.3
+    },
+    {
+     "id": "evals",
+     "n": 12,
+     "share": 9.2
+    },
+    {
+     "id": "customer",
+     "n": 11,
+     "share": 8.5
+    },
+    {
+     "id": "context",
+     "n": 11,
+     "share": 8.5
+    },
+    {
+     "id": "product",
+     "n": 7,
+     "share": 5.4
+    },
+    {
+     "id": "data",
+     "n": 5,
+     "share": 3.8
+    },
+    {
+     "id": "retrieval",
+     "n": 5,
+     "share": 3.8
+    },
+    {
+     "id": "security",
+     "n": 3,
+     "share": 2.3
+    },
+    {
+     "id": "ai-dev",
+     "n": 1,
+     "share": 0.8
+    }
+   ],
+   "tasks": [
+    {
+     "id": "scale",
+     "n": 20,
+     "share": 15.4
+    },
+    {
+     "id": "train",
+     "n": 19,
+     "share": 14.6
+    },
+    {
+     "id": "integrate",
+     "n": 17,
+     "share": 13.1
+    },
+    {
+     "id": "agents",
+     "n": 5,
+     "share": 3.8
+    },
+    {
+     "id": "ship",
+     "n": 4,
+     "share": 3.1
+    },
+    {
+     "id": "data",
+     "n": 3,
+     "share": 2.3
+    },
+    {
+     "id": "retrieval",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "id": "research",
+     "n": 1,
+     "share": 0.8
+    }
+   ],
+   "tools": [
+    {
+     "name": "PyTorch",
+     "n": 74,
+     "share": 56.9
+    },
+    {
+     "name": "Python",
+     "n": 10,
+     "share": 7.7
+    },
+    {
+     "name": "Hugging Face",
+     "n": 6,
+     "share": 4.6
+    },
+    {
+     "name": "ExecuTorch",
+     "n": 5,
+     "share": 3.8
+    },
+    {
+     "name": "Qwen",
+     "n": 4,
+     "share": 3.1
+    },
+    {
+     "name": "PyTorch Foundation",
+     "n": 3,
+     "share": 2.3
+    },
+    {
+     "name": "DeepSpeed",
+     "n": 3,
+     "share": 2.3
+    },
+    {
+     "name": "Ray",
+     "n": 3,
+     "share": 2.3
+    },
+    {
+     "name": "DeepSeek",
+     "n": 3,
+     "share": 2.3
+    },
+    {
+     "name": "Unsloth",
+     "n": 3,
+     "share": 2.3
+    },
+    {
+     "name": "RAG",
+     "n": 2,
+     "share": 1.5
+    },
+    {
+     "name": "MCP",
+     "n": 2,
+     "share": 1.5
+    },
+    {
+     "name": "TRL",
+     "n": 2,
+     "share": 1.5
+    },
+    {
+     "name": "Together AI",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "LlamaIndex",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "Baseten",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "TensorRT-LLM",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "Azure AI Foundry",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "GitHub Copilot",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "Jupyter",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "Whisper",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "OpenVINO",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "PyTorch Lightning",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "Groq",
+     "n": 1,
+     "share": 0.8
+    },
+    {
+     "name": "Hugging Face Transformers",
+     "n": 1,
+     "share": 0.8
+    }
+   ],
+   "tracks": [
+    {
+     "name": "Keynote Sessions",
+     "n": 23,
+     "share": 17.7
+    },
+    {
+     "name": "Dlcs & Kernel Authoring & Accelerators",
+     "n": 17,
+     "share": 13.1
+    },
+    {
+     "name": "Pytorch At Scale",
+     "n": 16,
+     "share": 12.3
+    },
+    {
+     "name": "Llms",
+     "n": 13,
+     "share": 10
+    },
+    {
+     "name": "Pytorch In Industry",
+     "n": 13,
+     "share": 10
+    },
+    {
+     "name": "Foundation Projects/ecosystem",
+     "n": 11,
+     "share": 8.5
+    },
+    {
+     "name": "Edge",
+     "n": 8,
+     "share": 6.2
+    },
+    {
+     "name": "Poster Sessions",
+     "n": 8,
+     "share": 6.2
+    },
+    {
+     "name": "Birds Of A Feather",
+     "n": 4,
+     "share": 3.1
+    },
+    {
+     "name": "Meet The Experts",
+     "n": 4,
+     "share": 3.1
+    },
+    {
+     "name": "Pytorch In Academia",
+     "n": 4,
+     "share": 3.1
+    },
+    {
+     "name": "Legal / Compliance",
+     "n": 3,
+     "share": 2.3
+    },
+    {
+     "name": "Reinforcement Learning",
+     "n": 3,
+     "share": 2.3
+    },
+    {
+     "name": "Data",
+     "n": 2,
+     "share": 1.5
+    },
+    {
+     "name": "Startup Showcase",
+     "n": 1,
+     "share": 0.8
+    }
+   ]
+  },
+  {
+   "id": "ai-engineer-code-2025",
+   "series": "AI Engineer",
+   "name": "AI Engineer Code 2025",
+   "start": "2025-11-19",
+   "end": "2025-11-22",
+   "location": "New York",
+   "url": "https://ai.engineer/code/2025",
+   "source": "https://ai.engineer/llms.txt",
+   "kinds": {
+    "talk": 80,
+    "workshop": 1,
+    "keynote": 0,
+    "panel": 0
+   },
+   "talks": 81,
+   "skills": [
+    {
+     "id": "agents",
+     "n": 63,
+     "share": 77.8
+    },
+    {
+     "id": "ai-dev",
+     "n": 32,
+     "share": 39.5
+    },
+    {
+     "id": "customer",
+     "n": 26,
+     "share": 32.1
+    },
+    {
+     "id": "models",
+     "n": 17,
+     "share": 21
+    },
+    {
+     "id": "evals",
+     "n": 17,
+     "share": 21
+    },
+    {
+     "id": "context",
+     "n": 11,
+     "share": 13.6
+    },
+    {
+     "id": "software",
+     "n": 11,
+     "share": 13.6
+    },
+    {
+     "id": "retrieval",
+     "n": 10,
+     "share": 12.3
+    },
+    {
+     "id": "product",
+     "n": 2,
+     "share": 2.5
+    },
+    {
+     "id": "data",
+     "n": 2,
+     "share": 2.5
+    },
+    {
+     "id": "security",
+     "n": 1,
+     "share": 1.2
+    }
+   ],
+   "tasks": [
+    {
+     "id": "train",
+     "n": 13,
+     "share": 16
+    },
+    {
+     "id": "agents",
+     "n": 10,
+     "share": 12.3
+    },
+    {
+     "id": "prototype",
+     "n": 3,
+     "share": 3.7
+    },
+    {
+     "id": "ship",
+     "n": 2,
+     "share": 2.5
+    },
+    {
+     "id": "integrate",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "id": "evaluate",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "id": "data",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "id": "scale",
+     "n": 1,
+     "share": 1.2
+    }
+   ],
+   "tools": [
+    {
+     "name": "MCP",
+     "n": 12,
+     "share": 14.8
+    },
+    {
+     "name": "Claude Code",
+     "n": 9,
+     "share": 11.1
+    },
+    {
+     "name": "Cursor",
+     "n": 7,
+     "share": 8.6
+    },
+    {
+     "name": "Python",
+     "n": 4,
+     "share": 4.9
+    },
+    {
+     "name": "PyTorch",
+     "n": 3,
+     "share": 3.7
+    },
+    {
+     "name": "GEPA",
+     "n": 3,
+     "share": 3.7
+    },
+    {
+     "name": "Temporal",
+     "n": 3,
+     "share": 3.7
+    },
+    {
+     "name": "Replit",
+     "n": 2,
+     "share": 2.5
+    },
+    {
+     "name": "Amazon Bedrock",
+     "n": 2,
+     "share": 2.5
+    },
+    {
+     "name": "OpenCode",
+     "n": 2,
+     "share": 2.5
+    },
+    {
+     "name": "Ray",
+     "n": 2,
+     "share": 2.5
+    },
+    {
+     "name": "DSPy",
+     "n": 2,
+     "share": 2.5
+    },
+    {
+     "name": "Cline",
+     "n": 2,
+     "share": 2.5
+    },
+    {
+     "name": "SWE-bench",
+     "n": 2,
+     "share": 2.5
+    },
+    {
+     "name": "Claude Agent SDK",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "name": "OpenAI Codex",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "name": "v0",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "name": "OpenHands",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "name": "Vercel AI SDK",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "name": "Microsoft Agents SDK",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "name": "OpenAI Agents SDK",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "name": "Gemini API",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "name": "Modal",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "name": "Qwen",
+     "n": 1,
+     "share": 1.2
+    },
+    {
+     "name": "llama.cpp",
+     "n": 1,
+     "share": 1.2
+    }
+   ],
+   "tracks": []
+  },
+  {
+   "id": "pytorch-conference-europe-2026",
+   "series": "PyTorch Conference",
+   "name": "PyTorch Conference Europe 2026",
+   "start": "2026-04-07",
+   "end": "2026-04-08",
+   "location": "Paris",
+   "url": "https://events.linuxfoundation.org/pytorch-conference-europe/",
+   "source": "https://pytorchconferenceeu2026.sched.com/all.ics",
+   "kinds": {
+    "talk": 102,
+    "workshop": 0,
+    "keynote": 12,
+    "panel": 0
+   },
+   "talks": 114,
+   "skills": [
+    {
+     "id": "models",
+     "n": 100,
+     "share": 87.7
+    },
+    {
+     "id": "software",
+     "n": 34,
+     "share": 29.8
+    },
+    {
+     "id": "context",
+     "n": 18,
+     "share": 15.8
+    },
+    {
+     "id": "agents",
+     "n": 16,
+     "share": 14
+    },
+    {
+     "id": "evals",
+     "n": 16,
+     "share": 14
+    },
+    {
+     "id": "product",
+     "n": 12,
+     "share": 10.5
+    },
+    {
+     "id": "customer",
+     "n": 7,
+     "share": 6.1
+    },
+    {
+     "id": "retrieval",
+     "n": 4,
+     "share": 3.5
+    },
+    {
+     "id": "architecture",
+     "n": 3,
+     "share": 2.6
+    },
+    {
+     "id": "security",
+     "n": 3,
+     "share": 2.6
+    },
+    {
+     "id": "ai-dev",
+     "n": 2,
+     "share": 1.8
+    }
+   ],
+   "tasks": [
+    {
+     "id": "integrate",
+     "n": 20,
+     "share": 17.5
+    },
+    {
+     "id": "train",
+     "n": 13,
+     "share": 11.4
+    },
+    {
+     "id": "scale",
+     "n": 12,
+     "share": 10.5
+    },
+    {
+     "id": "ship",
+     "n": 10,
+     "share": 8.8
+    },
+    {
+     "id": "agents",
+     "n": 3,
+     "share": 2.6
+    },
+    {
+     "id": "prototype",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "id": "retrieval",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "id": "research",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "id": "evaluate",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "id": "data",
+     "n": 1,
+     "share": 0.9
+    }
+   ],
+   "tools": [
+    {
+     "name": "PyTorch",
+     "n": 79,
+     "share": 69.3
+    },
+    {
+     "name": "Hugging Face",
+     "n": 11,
+     "share": 9.6
+    },
+    {
+     "name": "Python",
+     "n": 10,
+     "share": 8.8
+    },
+    {
+     "name": "ExecuTorch",
+     "n": 9,
+     "share": 7.9
+    },
+    {
+     "name": "llm-d",
+     "n": 6,
+     "share": 5.3
+    },
+    {
+     "name": "PyTorch Foundation",
+     "n": 3,
+     "share": 2.6
+    },
+    {
+     "name": "Hugging Face Transformers",
+     "n": 3,
+     "share": 2.6
+    },
+    {
+     "name": "Ray",
+     "n": 3,
+     "share": 2.6
+    },
+    {
+     "name": "Scale AI",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "EU AI Act",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "RAG",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "KServe",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Gemma",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "DeepSeek",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Qwen",
+     "n": 2,
+     "share": 1.8
+    },
+    {
+     "name": "Mistral AI",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "Temporal",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "PyTorch Lightning",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "TensorRT-LLM",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "llama.cpp",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "MLX",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "Docling",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "JAX",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "Diffusers",
+     "n": 1,
+     "share": 0.9
+    },
+    {
+     "name": "verl",
+     "n": 1,
+     "share": 0.9
+    }
+   ],
+   "tracks": [
+    {
+     "name": "Frameworks & Compilers",
+     "n": 26,
+     "share": 22.8
+    },
+    {
+     "name": "Inference & Production",
+     "n": 24,
+     "share": 21.1
+    },
+    {
+     "name": "Training Systems",
+     "n": 17,
+     "share": 14.9
+    },
+    {
+     "name": "Keynote Sessions",
+     "n": 12,
+     "share": 10.5
+    },
+    {
+     "name": "Genai & Multimodal",
+     "n": 7,
+     "share": 6.1
+    },
+    {
+     "name": "Applications & Case Studies",
+     "n": 6,
+     "share": 5.3
+    },
+    {
+     "name": "Poster Presentations",
+     "n": 5,
+     "share": 4.4
+    },
+    {
+     "name": "Meet The Developers",
+     "n": 4,
+     "share": 3.5
+    },
+    {
+     "name": "Security & Privacy",
+     "n": 4,
+     "share": 3.5
+    },
+    {
+     "name": "Birds Of A Feather",
+     "n": 3,
+     "share": 2.6
+    },
+    {
+     "name": "Agents & Interop",
+     "n": 3,
+     "share": 2.6
+    },
+    {
+     "name": "Responsible Ai & Compliance",
+     "n": 3,
+     "share": 2.6
+    }
+   ]
+  },
+  {
+   "id": "ai-engineer-europe-2026",
+   "series": "AI Engineer",
+   "name": "AI Engineer Europe 2026",
+   "start": "2026-04-08",
+   "end": "2026-04-10",
+   "location": "London",
+   "url": "https://ai.engineer/europe/2026",
+   "source": "https://ai.engineer/europe/2026/sessions.json",
+   "kinds": {
+    "talk": 102,
+    "workshop": 26,
+    "keynote": 28,
+    "panel": 1
+   },
+   "talks": 157,
+   "skills": [
+    {
+     "id": "agents",
+     "n": 96,
+     "share": 61.1
+    },
+    {
+     "id": "evals",
+     "n": 23,
+     "share": 14.6
+    },
+    {
+     "id": "ai-dev",
+     "n": 21,
+     "share": 13.4
+    },
+    {
+     "id": "customer",
+     "n": 15,
+     "share": 9.6
+    },
+    {
+     "id": "software",
+     "n": 11,
+     "share": 7
+    },
+    {
+     "id": "models",
+     "n": 9,
+     "share": 5.7
+    },
+    {
+     "id": "retrieval",
+     "n": 8,
+     "share": 5.1
+    },
+    {
+     "id": "product",
+     "n": 6,
+     "share": 3.8
+    },
+    {
+     "id": "context",
+     "n": 5,
+     "share": 3.2
+    },
+    {
+     "id": "security",
+     "n": 5,
+     "share": 3.2
+    },
+    {
+     "id": "architecture",
+     "n": 2,
+     "share": 1.3
+    },
+    {
+     "id": "data",
+     "n": 1,
+     "share": 0.6
+    }
+   ],
+   "tasks": [
+    {
+     "id": "agents",
+     "n": 25,
+     "share": 15.9
+    },
+    {
+     "id": "ship",
+     "n": 9,
+     "share": 5.7
+    },
+    {
+     "id": "prototype",
+     "n": 8,
+     "share": 5.1
+    },
+    {
+     "id": "evaluate",
+     "n": 6,
+     "share": 3.8
+    },
+    {
+     "id": "train",
+     "n": 6,
+     "share": 3.8
+    },
+    {
+     "id": "data",
+     "n": 3,
+     "share": 1.9
+    },
+    {
+     "id": "integrate",
+     "n": 2,
+     "share": 1.3
+    },
+    {
+     "id": "scale",
+     "n": 1,
+     "share": 0.6
+    }
+   ],
+   "tools": [
+    {
+     "name": "MCP",
+     "n": 18,
+     "share": 11.5
+    },
+    {
+     "name": "OpenClaw",
+     "n": 9,
+     "share": 5.7
+    },
+    {
+     "name": "Claude Code",
+     "n": 5,
+     "share": 3.2
+    },
+    {
+     "name": "Cursor",
+     "n": 4,
+     "share": 2.5
+    },
+    {
+     "name": "MCP Apps",
+     "n": 4,
+     "share": 2.5
+    },
+    {
+     "name": "Agent Skills",
+     "n": 3,
+     "share": 1.9
+    },
+    {
+     "name": "RAG",
+     "n": 3,
+     "share": 1.9
+    },
+    {
+     "name": "Gemma",
+     "n": 3,
+     "share": 1.9
+    },
+    {
+     "name": "Braintrust",
+     "n": 2,
+     "share": 1.3
+    },
+    {
+     "name": "Claude Agent SDK",
+     "n": 2,
+     "share": 1.3
+    },
+    {
+     "name": "Hugging Face",
+     "n": 2,
+     "share": 1.3
+    },
+    {
+     "name": "MLX",
+     "n": 2,
+     "share": 1.3
+    },
+    {
+     "name": "Gemini CLI",
+     "n": 2,
+     "share": 1.3
+    },
+    {
+     "name": "TypeScript",
+     "n": 2,
+     "share": 1.3
+    },
+    {
+     "name": "Vercel AI SDK",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "Pydantic AI",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "GEPA",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "n8n",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "CLAUDE.md",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "Langfuse",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "AGENTS.md",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "Together AI",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "Haystack",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "v0",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "Swarms",
+     "n": 1,
+     "share": 0.6
+    }
+   ],
+   "tracks": [
+    {
+     "name": "Google DeepMind/Gemini",
+     "n": 13,
+     "share": 8.3
+    },
+    {
+     "name": "Harness Engineering",
+     "n": 9,
+     "share": 5.7
+    },
+    {
+     "name": "Claws & Personal Agents",
+     "n": 8,
+     "share": 5.1
+    },
+    {
+     "name": "Evals & Observability",
+     "n": 8,
+     "share": 5.1
+    },
+    {
+     "name": "Context Engineering",
+     "n": 8,
+     "share": 5.1
+    },
+    {
+     "name": "AI Architects",
+     "n": 8,
+     "share": 5.1
+    },
+    {
+     "name": "Coding Agents",
+     "n": 8,
+     "share": 5.1
+    },
+    {
+     "name": "MCP",
+     "n": 8,
+     "share": 5.1
+    },
+    {
+     "name": "Hallway Track",
+     "n": 8,
+     "share": 5.1
+    },
+    {
+     "name": "GPUs & LLM Infrastructure",
+     "n": 7,
+     "share": 4.5
+    },
+    {
+     "name": "Voice & Vision",
+     "n": 7,
+     "share": 4.5
+    },
+    {
+     "name": "Generative Media",
+     "n": 5,
+     "share": 3.2
+    },
+    {
+     "name": "Expo Sessions (Wordsworth)",
+     "n": 5,
+     "share": 3.2
+    },
+    {
+     "name": "Expo Sessions (Shelley)",
+     "n": 5,
+     "share": 3.2
+    },
+    {
+     "name": "Expo Sessions (Wesley)",
+     "n": 4,
+     "share": 2.5
+    },
+    {
+     "name": "GPUs & LLM Infra",
+     "n": 1,
+     "share": 0.6
+    },
+    {
+     "name": "Expo Sessions (Moore)",
+     "n": 1,
+     "share": 0.6
+    }
+   ]
+  },
+  {
+   "id": "microsoft-build-2026",
+   "series": "Microsoft Build",
+   "name": "Microsoft Build 2026",
+   "start": "2026-06-02",
+   "end": "2026-06-04",
+   "location": "San Francisco",
+   "url": "https://build.microsoft.com/",
+   "source": "https://build.microsoft.com/api/session/all/en-US",
+   "kinds": {
+    "talk": 445,
+    "workshop": 0,
+    "keynote": 2,
+    "panel": 0
+   },
+   "talks": 447,
+   "skills": [
+    {
+     "id": "agents",
+     "n": 286,
+     "share": 64
+    },
+    {
+     "id": "ai-dev",
+     "n": 105,
+     "share": 23.5
+    },
+    {
+     "id": "models",
+     "n": 48,
+     "share": 10.7
+    },
+    {
+     "id": "software",
+     "n": 43,
+     "share": 9.6
+    },
+    {
+     "id": "evals",
+     "n": 42,
+     "share": 9.4
+    },
+    {
+     "id": "context",
+     "n": 42,
+     "share": 9.4
+    },
+    {
+     "id": "retrieval",
+     "n": 39,
+     "share": 8.7
+    },
+    {
+     "id": "product",
+     "n": 32,
+     "share": 7.2
+    },
+    {
+     "id": "security",
+     "n": 27,
+     "share": 6
+    },
+    {
+     "id": "data",
+     "n": 17,
+     "share": 3.8
+    },
+    {
+     "id": "customer",
+     "n": 14,
+     "share": 3.1
+    },
+    {
+     "id": "architecture",
+     "n": 7,
+     "share": 1.6
+    }
+   ],
+   "tasks": [
+    {
+     "id": "agents",
+     "n": 74,
+     "share": 16.6
+    },
+    {
+     "id": "ship",
+     "n": 46,
+     "share": 10.3
+    },
+    {
+     "id": "integrate",
+     "n": 31,
+     "share": 6.9
+    },
+    {
+     "id": "prototype",
+     "n": 28,
+     "share": 6.3
+    },
+    {
+     "id": "train",
+     "n": 22,
+     "share": 4.9
+    },
+    {
+     "id": "retrieval",
+     "n": 14,
+     "share": 3.1
+    },
+    {
+     "id": "scale",
+     "n": 11,
+     "share": 2.5
+    },
+    {
+     "id": "data",
+     "n": 4,
+     "share": 0.9
+    },
+    {
+     "id": "lead",
+     "n": 1,
+     "share": 0.2
+    },
+    {
+     "id": "evaluate",
+     "n": 1,
+     "share": 0.2
+    }
+   ],
+   "tools": [
+    {
+     "name": "GitHub Copilot",
+     "n": 59,
+     "share": 13.2
+    },
+    {
+     "name": "Microsoft Foundry",
+     "n": 56,
+     "share": 12.5
+    },
+    {
+     "name": "MCP",
+     "n": 50,
+     "share": 11.2
+    },
+    {
+     "name": "RAG",
+     "n": 24,
+     "share": 5.4
+    },
+    {
+     "name": "Azure AI Foundry",
+     "n": 13,
+     "share": 2.9
+    },
+    {
+     "name": "SQL",
+     "n": 11,
+     "share": 2.5
+    },
+    {
+     "name": "OpenClaw",
+     "n": 8,
+     "share": 1.8
+    },
+    {
+     "name": "Python",
+     "n": 8,
+     "share": 1.8
+    },
+    {
+     "name": "Agent Skills",
+     "n": 7,
+     "share": 1.6
+    },
+    {
+     "name": "Microsoft Agent Framework",
+     "n": 6,
+     "share": 1.3
+    },
+    {
+     "name": "Copilot Studio",
+     "n": 6,
+     "share": 1.3
+    },
+    {
+     "name": "Scale AI",
+     "n": 5,
+     "share": 1.1
+    },
+    {
+     "name": "Azure AI Search",
+     "n": 5,
+     "share": 1.1
+    },
+    {
+     "name": "Claude Code",
+     "n": 5,
+     "share": 1.1
+    },
+    {
+     "name": "Ray",
+     "n": 4,
+     "share": 0.9
+    },
+    {
+     "name": "ONNX Runtime",
+     "n": 4,
+     "share": 0.9
+    },
+    {
+     "name": "Runway",
+     "n": 4,
+     "share": 0.9
+    },
+    {
+     "name": "Fireworks AI",
+     "n": 3,
+     "share": 0.7
+    },
+    {
+     "name": "Azure DevOps",
+     "n": 3,
+     "share": 0.7
+    },
+    {
+     "name": "PyTorch",
+     "n": 3,
+     "share": 0.7
+    },
+    {
+     "name": "NVIDIA Nemotron",
+     "n": 3,
+     "share": 0.7
+    },
+    {
+     "name": "Unsloth",
+     "n": 3,
+     "share": 0.7
+    },
+    {
+     "name": "Elasticsearch",
+     "n": 3,
+     "share": 0.7
+    },
+    {
+     "name": "LangChain",
+     "n": 3,
+     "share": 0.7
+    },
+    {
+     "name": "TypeScript",
+     "n": 2,
+     "share": 0.4
+    }
+   ],
+   "tracks": []
+  },
+  {
+   "id": "ai-engineer-world-s-fair-2026",
+   "series": "AI Engineer",
+   "name": "AI Engineer World's Fair 2026",
+   "start": "2026-06-29",
+   "end": "2026-07-02",
+   "location": "San Francisco",
+   "url": "https://ai.engineer/worldsfair/2026",
+   "source": "https://ai.engineer/worldsfair/2026/sessions.json",
+   "kinds": {
+    "talk": 491,
+    "workshop": 27,
+    "keynote": 25,
+    "panel": 0
+   },
+   "talks": 543,
+   "skills": [
+    {
+     "id": "agents",
+     "n": 365,
+     "share": 67.2
+    },
+    {
+     "id": "evals",
+     "n": 94,
+     "share": 17.3
+    },
+    {
+     "id": "customer",
+     "n": 93,
+     "share": 17.1
+    },
+    {
+     "id": "models",
+     "n": 75,
+     "share": 13.8
+    },
+    {
+     "id": "ai-dev",
+     "n": 74,
+     "share": 13.6
+    },
+    {
+     "id": "context",
+     "n": 60,
+     "share": 11
+    },
+    {
+     "id": "retrieval",
+     "n": 42,
+     "share": 7.7
+    },
+    {
+     "id": "security",
+     "n": 34,
+     "share": 6.3
+    },
+    {
+     "id": "software",
+     "n": 34,
+     "share": 6.3
+    },
+    {
+     "id": "product",
+     "n": 23,
+     "share": 4.2
+    },
+    {
+     "id": "data",
+     "n": 10,
+     "share": 1.8
+    },
+    {
+     "id": "architecture",
+     "n": 4,
+     "share": 0.7
+    }
+   ],
+   "tasks": [
+    {
+     "id": "agents",
+     "n": 98,
+     "share": 18
+    },
+    {
+     "id": "train",
+     "n": 39,
+     "share": 7.2
+    },
+    {
+     "id": "ship",
+     "n": 30,
+     "share": 5.5
+    },
+    {
+     "id": "evaluate",
+     "n": 22,
+     "share": 4.1
+    },
+    {
+     "id": "data",
+     "n": 17,
+     "share": 3.1
+    },
+    {
+     "id": "integrate",
+     "n": 14,
+     "share": 2.6
+    },
+    {
+     "id": "retrieval",
+     "n": 9,
+     "share": 1.7
+    },
+    {
+     "id": "prototype",
+     "n": 9,
+     "share": 1.7
+    },
+    {
+     "id": "scale",
+     "n": 8,
+     "share": 1.5
+    },
+    {
+     "id": "research",
+     "n": 2,
+     "share": 0.4
+    },
+    {
+     "id": "customers",
+     "n": 1,
+     "share": 0.2
+    }
+   ],
+   "tools": [
+    {
+     "name": "MCP",
+     "n": 41,
+     "share": 7.6
+    },
+    {
+     "name": "Claude Code",
+     "n": 19,
+     "share": 3.5
+    },
+    {
+     "name": "RAG",
+     "n": 15,
+     "share": 2.8
+    },
+    {
+     "name": "OpenClaw",
+     "n": 9,
+     "share": 1.7
+    },
+    {
+     "name": "Python",
+     "n": 8,
+     "share": 1.5
+    },
+    {
+     "name": "Cursor",
+     "n": 8,
+     "share": 1.5
+    },
+    {
+     "name": "Claude Agent SDK",
+     "n": 5,
+     "share": 0.9
+    },
+    {
+     "name": "Agent Skills",
+     "n": 5,
+     "share": 0.9
+    },
+    {
+     "name": "MCP Apps",
+     "n": 5,
+     "share": 0.9
+    },
+    {
+     "name": "Neo4j",
+     "n": 4,
+     "share": 0.7
+    },
+    {
+     "name": "LangGraph",
+     "n": 4,
+     "share": 0.7
+    },
+    {
+     "name": "GitHub Copilot",
+     "n": 4,
+     "share": 0.7
+    },
+    {
+     "name": "Ray",
+     "n": 4,
+     "share": 0.7
+    },
+    {
+     "name": "Hugging Face",
+     "n": 4,
+     "share": 0.7
+    },
+    {
+     "name": "Microsoft Foundry",
+     "n": 3,
+     "share": 0.6
+    },
+    {
+     "name": "Amazon Bedrock",
+     "n": 3,
+     "share": 0.6
+    },
+    {
+     "name": "Strands Agents",
+     "n": 3,
+     "share": 0.6
+    },
+    {
+     "name": "llm-d",
+     "n": 3,
+     "share": 0.6
+    },
+    {
+     "name": "SQL",
+     "n": 3,
+     "share": 0.6
+    },
+    {
+     "name": "PyTorch",
+     "n": 3,
+     "share": 0.6
+    },
+    {
+     "name": "A2A",
+     "n": 3,
+     "share": 0.6
+    },
+    {
+     "name": "Microsoft Agents SDK",
+     "n": 3,
+     "share": 0.6
+    },
+    {
+     "name": "Gemini Live API",
+     "n": 3,
+     "share": 0.6
+    },
+    {
+     "name": "LangChain",
+     "n": 2,
+     "share": 0.4
+    },
+    {
+     "name": "Qwen",
+     "n": 2,
+     "share": 0.4
+    }
+   ],
+   "tracks": [
+    {
+     "name": "Workshops Day 1",
+     "n": 37,
+     "share": 6.8
+    },
+    {
+     "name": "Software Factories",
+     "n": 22,
+     "share": 4.1
+    },
+    {
+     "name": "AI-Native Enterprises",
+     "n": 22,
+     "share": 4.1
+    },
+    {
+     "name": "Track M",
+     "n": 19,
+     "share": 3.5
+    },
+    {
+     "name": "Autoresearch",
+     "n": 16,
+     "share": 2.9
+    },
+    {
+     "name": "Workshops Day 2",
+     "n": 13,
+     "share": 2.4
+    },
+    {
+     "name": "Harness Engineering",
+     "n": 13,
+     "share": 2.4
+    },
+    {
+     "name": "Agentic Commerce",
+     "n": 12,
+     "share": 2.2
+    },
+    {
+     "name": "Agentic Engineering",
+     "n": 12,
+     "share": 2.2
+    },
+    {
+     "name": "Inference",
+     "n": 12,
+     "share": 2.2
+    },
+    {
+     "name": "Posttraining & Midtraining",
+     "n": 11,
+     "share": 2
+    },
+    {
+     "name": "Claws & Personal Agents",
+     "n": 11,
+     "share": 2
+    },
+    {
+     "name": "Sandbox & Platform Engineering",
+     "n": 11,
+     "share": 2
+    },
+    {
+     "name": "Memory & Continual Learning",
+     "n": 11,
+     "share": 2
+    },
+    {
+     "name": "Context Engineering",
+     "n": 11,
+     "share": 2
+    },
+    {
+     "name": "Graphs",
+     "n": 11,
+     "share": 2
+    },
+    {
+     "name": "Expo Stage 2",
+     "n": 10,
+     "share": 1.8
+    },
+    {
+     "name": "Security",
+     "n": 10,
+     "share": 1.8
+    },
+    {
+     "name": "AI Architects: Show my Workflow",
+     "n": 10,
+     "share": 1.8
+    },
+    {
+     "name": "Evals",
+     "n": 10,
+     "share": 1.8
+    },
+    {
+     "name": "Design Engineering",
+     "n": 10,
+     "share": 1.8
+    },
+    {
+     "name": "AI in Finance",
+     "n": 10,
+     "share": 1.8
+    },
+    {
+     "name": "AI in GTM",
+     "n": 10,
+     "share": 1.8
+    },
+    {
+     "name": "AI in Healthcare",
+     "n": 10,
+     "share": 1.8
+    },
+    {
+     "name": "Vision & OCR",
+     "n": 9,
+     "share": 1.7
+    },
+    {
+     "name": "Search & Retrieval",
+     "n": 9,
+     "share": 1.7
+    },
+    {
+     "name": "Voice & Realtime AI",
+     "n": 9,
+     "share": 1.7
+    },
+    {
+     "name": "LLM Recsys",
+     "n": 9,
+     "share": 1.7
+    },
+    {
+     "name": "Forward Deployed Engineering",
+     "n": 9,
+     "share": 1.7
+    },
+    {
+     "name": "Data Quality",
+     "n": 9,
+     "share": 1.7
+    }
+   ]
+  },
+  {
+   "id": "ai-engineer-code-summit-2026",
+   "series": "AI Engineer",
+   "name": "AI Engineer Code Summit 2026",
+   "start": "2026-11-10",
+   "end": "2026-11-12",
+   "location": "San Francisco",
+   "url": "https://ai.engineer/code/2026",
+   "source": "https://ai.engineer/code/2026/sessions.json",
+   "kinds": {
+    "talk": 58,
+    "workshop": 32,
+    "keynote": 0,
+    "panel": 0
+   },
+   "talks": 90,
+   "skills": [
+    {
+     "id": "agents",
+     "n": 61,
+     "share": 67.8
+    },
+    {
+     "id": "ai-dev",
+     "n": 22,
+     "share": 24.4
+    },
+    {
+     "id": "customer",
+     "n": 11,
+     "share": 12.2
+    },
+    {
+     "id": "evals",
+     "n": 7,
+     "share": 7.8
+    },
+    {
+     "id": "models",
+     "n": 6,
+     "share": 6.7
+    },
+    {
+     "id": "software",
+     "n": 6,
+     "share": 6.7
+    },
+    {
+     "id": "security",
+     "n": 4,
+     "share": 4.4
+    },
+    {
+     "id": "data",
+     "n": 4,
+     "share": 4.4
+    },
+    {
+     "id": "context",
+     "n": 4,
+     "share": 4.4
+    },
+    {
+     "id": "retrieval",
+     "n": 3,
+     "share": 3.3
+    },
+    {
+     "id": "product",
+     "n": 2,
+     "share": 2.2
+    },
+    {
+     "id": "architecture",
+     "n": 1,
+     "share": 1.1
+    }
+   ],
+   "tasks": [
+    {
+     "id": "agents",
+     "n": 14,
+     "share": 15.6
+    },
+    {
+     "id": "train",
+     "n": 3,
+     "share": 3.3
+    },
+    {
+     "id": "evaluate",
+     "n": 2,
+     "share": 2.2
+    },
+    {
+     "id": "integrate",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "id": "scale",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "id": "prototype",
+     "n": 1,
+     "share": 1.1
+    }
+   ],
+   "tools": [
+    {
+     "name": "Claude Code",
+     "n": 4,
+     "share": 4.4
+    },
+    {
+     "name": "MCP",
+     "n": 4,
+     "share": 4.4
+    },
+    {
+     "name": "Kiro",
+     "n": 3,
+     "share": 3.3
+    },
+    {
+     "name": "TypeScript",
+     "n": 2,
+     "share": 2.2
+    },
+    {
+     "name": "Google Antigravity",
+     "n": 2,
+     "share": 2.2
+    },
+    {
+     "name": "Gemini Live API",
+     "n": 2,
+     "share": 2.2
+    },
+    {
+     "name": "Exa",
+     "n": 2,
+     "share": 2.2
+    },
+    {
+     "name": "SQL",
+     "n": 2,
+     "share": 2.2
+    },
+    {
+     "name": "AGENTS.md",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "name": "Cursor",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "name": "Browser Use",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "name": "Swarms",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "name": "llm-d",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "name": "NVIDIA Dynamo",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "name": "Python",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "name": "Lovable",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "name": "OpenClaw",
+     "n": 1,
+     "share": 1.1
+    },
+    {
+     "name": "Next.js",
+     "n": 1,
+     "share": 1.1
+    }
+   ],
+   "tracks": []
+  }
+ ],
+ "recent": {
+  "from": "2025-06-01",
+  "editions": 8,
+  "talks": 1860,
+  "skills": [
+   {
+    "id": "agents",
+    "n": 1098,
+    "share": 59
+   },
+   {
+    "id": "models",
+    "n": 412,
+    "share": 22.2
+   },
+   {
+    "id": "ai-dev",
+    "n": 296,
+    "share": 15.9
+   },
+   {
+    "id": "evals",
+    "n": 268,
+    "share": 14.4
+   },
+   {
+    "id": "customer",
+    "n": 244,
+    "share": 13.1
+   },
+   {
+    "id": "software",
+    "n": 210,
+    "share": 11.3
+   },
+   {
+    "id": "context",
+    "n": 182,
+    "share": 9.8
+   },
+   {
+    "id": "retrieval",
+    "n": 174,
+    "share": 9.4
+   },
+   {
+    "id": "product",
+    "n": 96,
+    "share": 5.2
+   },
+   {
+    "id": "security",
+    "n": 95,
+    "share": 5.1
+   },
+   {
+    "id": "data",
+    "n": 46,
+    "share": 2.5
+   },
+   {
+    "id": "architecture",
+    "n": 19,
+    "share": 1
+   }
+  ],
+  "tasks": [
+   {
+    "id": "agents",
+    "n": 262,
+    "share": 14.1
+   },
+   {
+    "id": "train",
+    "n": 139,
+    "share": 7.5
+   },
+   {
+    "id": "ship",
+    "n": 109,
+    "share": 5.9
+   },
+   {
+    "id": "integrate",
+    "n": 98,
+    "share": 5.3
+   },
+   {
+    "id": "prototype",
+    "n": 74,
+    "share": 4
+   },
+   {
+    "id": "scale",
+    "n": 55,
+    "share": 3
+   },
+   {
+    "id": "evaluate",
+    "n": 43,
+    "share": 2.3
+   },
+   {
+    "id": "retrieval",
+    "n": 42,
+    "share": 2.3
+   },
+   {
+    "id": "data",
+    "n": 32,
+    "share": 1.7
+   },
+   {
+    "id": "research",
+    "n": 5,
+    "share": 0.3
+   },
+   {
+    "id": "lead",
+    "n": 4,
+    "share": 0.2
+   },
+   {
+    "id": "customers",
+    "n": 3,
+    "share": 0.2
+   }
+  ],
+  "tools": [
+   {
+    "name": "MCP",
+    "n": 181,
+    "share": 9.7
+   },
+   {
+    "name": "PyTorch",
+    "n": 164,
+    "share": 8.8
+   },
+   {
+    "name": "RAG",
+    "n": 83,
+    "share": 4.5
+   },
+   {
+    "name": "GitHub Copilot",
+    "n": 74,
+    "share": 4
+   },
+   {
+    "name": "Microsoft Foundry",
+    "n": 59,
+    "share": 3.2
+   },
+   {
+    "name": "Python",
+    "n": 58,
+    "share": 3.1
+   },
+   {
+    "name": "Claude Code",
+    "n": 45,
+    "share": 2.4
+   },
+   {
+    "name": "Cursor",
+    "n": 29,
+    "share": 1.6
+   },
+   {
+    "name": "OpenClaw",
+    "n": 27,
+    "share": 1.5
+   },
+   {
+    "name": "Hugging Face",
+    "n": 24,
+    "share": 1.3
+   },
+   {
+    "name": "SQL",
+    "n": 21,
+    "share": 1.1
+   },
+   {
+    "name": "TypeScript",
+    "n": 17,
+    "share": 0.9
+   },
+   {
+    "name": "Azure AI Foundry",
+    "n": 17,
+    "share": 0.9
+   },
+   {
+    "name": "Ray",
+    "n": 17,
+    "share": 0.9
+   },
+   {
+    "name": "Agent Skills",
+    "n": 16,
+    "share": 0.9
+   },
+   {
+    "name": "Neo4j",
+    "n": 14,
+    "share": 0.8
+   },
+   {
+    "name": "ExecuTorch",
+    "n": 14,
+    "share": 0.8
+   },
+   {
+    "name": "Qwen",
+    "n": 12,
+    "share": 0.6
+   },
+   {
+    "name": "Unsloth",
+    "n": 11,
+    "share": 0.6
+   },
+   {
+    "name": "Braintrust",
+    "n": 11,
+    "share": 0.6
+   },
+   {
+    "name": "llm-d",
+    "n": 11,
+    "share": 0.6
+   },
+   {
+    "name": "MCP Apps",
+    "n": 11,
+    "share": 0.6
+   },
+   {
+    "name": "LangGraph",
+    "n": 10,
+    "share": 0.5
+   },
+   {
+    "name": "Microsoft Agents SDK",
+    "n": 10,
+    "share": 0.5
+   },
+   {
+    "name": "Temporal",
+    "n": 10,
+    "share": 0.5
+   }
+  ],
+  "tracks": [
+   {
+    "name": "Workshops Day 1",
+    "n": 37,
+    "share": 2
+   },
+   {
+    "name": "Keynote Sessions",
+    "n": 35,
+    "share": 1.9
+   },
+   {
+    "name": "Frameworks & Compilers",
+    "n": 26,
+    "share": 1.4
+   },
+   {
+    "name": "Inference & Production",
+    "n": 24,
+    "share": 1.3
+   },
+   {
+    "name": "Harness Engineering",
+    "n": 22,
+    "share": 1.2
+   },
+   {
+    "name": "Software Factories",
+    "n": 22,
+    "share": 1.2
+   },
+   {
+    "name": "AI-Native Enterprises",
+    "n": 22,
+    "share": 1.2
+   },
+   {
+    "name": "Claws & Personal Agents",
+    "n": 19,
+    "share": 1
+   },
+   {
+    "name": "Context Engineering",
+    "n": 19,
+    "share": 1
+   },
+   {
+    "name": "Track M",
+    "n": 19,
+    "share": 1
+   },
+   {
+    "name": "Dlcs & Kernel Authoring & Accelerators",
+    "n": 17,
+    "share": 0.9
+   },
+   {
+    "name": "Training Systems",
+    "n": 17,
+    "share": 0.9
+   },
+   {
+    "name": "Pytorch At Scale",
+    "n": 16,
+    "share": 0.9
+   },
+   {
+    "name": "Autoresearch",
+    "n": 16,
+    "share": 0.9
+   },
+   {
+    "name": "Generative Media",
+    "n": 14,
+    "share": 0.8
+   },
+   {
+    "name": "Llms",
+    "n": 13,
+    "share": 0.7
+   },
+   {
+    "name": "Pytorch In Industry",
+    "n": 13,
+    "share": 0.7
+   },
+   {
+    "name": "Google DeepMind/Gemini",
+    "n": 13,
+    "share": 0.7
+   },
+   {
+    "name": "Workshops Day 2",
+    "n": 13,
+    "share": 0.7
+   },
+   {
+    "name": "Agentic Commerce",
+    "n": 12,
+    "share": 0.6
+   },
+   {
+    "name": "Agentic Engineering",
+    "n": 12,
+    "share": 0.6
+   },
+   {
+    "name": "Inference",
+    "n": 12,
+    "share": 0.6
+   },
+   {
+    "name": "Foundation Projects/ecosystem",
+    "n": 11,
+    "share": 0.6
+   },
+   {
+    "name": "Posttraining & Midtraining",
+    "n": 11,
+    "share": 0.6
+   },
+   {
+    "name": "Sandbox & Platform Engineering",
+    "n": 11,
+    "share": 0.6
+   },
+   {
+    "name": "Memory & Continual Learning",
+    "n": 11,
+    "share": 0.6
+   },
+   {
+    "name": "Graphs",
+    "n": 11,
+    "share": 0.6
+   },
+   {
+    "name": "Expo Stage 2",
+    "n": 10,
+    "share": 0.5
+   },
+   {
+    "name": "Security",
+    "n": 10,
+    "share": 0.5
+   },
+   {
+    "name": "AI Architects: Show my Workflow",
+    "n": 10,
+    "share": 0.5
+   }
+  ]
+ },
+ "upcoming": [
+  {
+   "name": "AI Engineer Europe 2027",
+   "series": "AI Engineer",
+   "start": "2027-02-17",
+   "end": "2027-02-19",
+   "location": "London",
+   "url": "https://ai.engineer/europe/2027"
+  },
+  {
+   "name": "AI Engineer Miami 2027",
+   "series": "AI Engineer",
+   "start": "2027-04-26",
+   "end": "2027-04-27",
+   "location": "Miami",
+   "url": "https://ai.engineer/miami/2027"
+  }
+ ],
+ "aieYears": {
+  "2023": 41,
+  "2024": 112,
+  "2025": 446,
+  "2026": 666
+ },
+ "aieTopics": [
+  {
+   "id": "coding-agents",
+   "name": "Coding agents",
+   "n": 532,
+   "byYear": {
+    "2023": 19,
+    "2024": 40,
+    "2025": 182,
+    "2026": 256
+   }
+  },
+  {
+   "id": "infrastructure-and-deployment",
+   "name": "Infrastructure & deployment",
+   "n": 528,
+   "byYear": {
+    "2023": 16,
+    "2024": 56,
+    "2025": 191,
+    "2026": 239
+   }
+  },
+  {
+   "id": "rag-and-knowledge",
+   "name": "Retrieval-augmented generation",
+   "n": 515,
+   "byYear": {
+    "2023": 28,
+    "2024": 65,
+    "2025": 200,
+    "2026": 212
+   }
+  },
+  {
+   "id": "agent-engineering",
+   "name": "Agent engineering",
+   "n": 460,
+   "byYear": {
+    "2023": 6,
+    "2024": 12,
+    "2025": 133,
+    "2026": 268
+   }
+  },
+  {
+   "id": "evals",
+   "name": "Evals",
+   "n": 402,
+   "byYear": {
+    "2023": 11,
+    "2024": 30,
+    "2025": 112,
+    "2026": 203
+   }
+  },
+  {
+   "id": "model-context-protocol",
+   "name": "MCP",
+   "n": 374,
+   "byYear": {
+    "2023": 10,
+    "2024": 25,
+    "2025": 147,
+    "2026": 168
+   }
+  },
+  {
+   "id": "safety-and-governance",
+   "name": "Safety & governance",
+   "n": 293,
+   "byYear": {
+    "2023": 2,
+    "2024": 24,
+    "2025": 82,
+    "2026": 165
+   }
+  },
+  {
+   "id": "machine-learning-fundamentals",
+   "name": "ML fundamentals",
+   "n": 271,
+   "byYear": {
+    "2023": 14,
+    "2024": 38,
+    "2025": 110,
+    "2026": 107
+   }
+  },
+  {
+   "id": "observability-and-reliability",
+   "name": "Observability & reliability",
+   "n": 267,
+   "byYear": {
+    "2023": 4,
+    "2024": 16,
+    "2025": 63,
+    "2026": 143
+   }
+  },
+  {
+   "id": "enterprise-ai",
+   "name": "Enterprise AI",
+   "n": 263,
+   "byYear": {
+    "2023": 9,
+    "2024": 26,
+    "2025": 89,
+    "2026": 122
+   }
+  },
+  {
+   "id": "developer-workflows-and-testing",
+   "name": "Developer workflows & testing",
+   "n": 240,
+   "byYear": {
+    "2023": 8,
+    "2024": 20,
+    "2025": 72,
+    "2026": 121
+   }
+  },
+  {
+   "id": "ai-engineering-leadership",
+   "name": "AI engineering leadership",
+   "n": 212,
+   "byYear": {
+    "2023": 6,
+    "2024": 19,
+    "2025": 87,
+    "2026": 93
+   }
+  },
+  {
+   "id": "context-engineering",
+   "name": "Context engineering",
+   "n": 121,
+   "byYear": {
+    "2023": 4,
+    "2024": 9,
+    "2025": 27,
+    "2026": 61
+   }
+  },
+  {
+   "id": "ai-in-finance",
+   "name": "AI in finance",
+   "n": 120,
+   "byYear": {
+    "2024": 8,
+    "2025": 23,
+    "2026": 65
+   }
+  },
+  {
+   "id": "fine-tuning",
+   "name": "Fine-tuning",
+   "n": 106,
+   "byYear": {
+    "2023": 3,
+    "2024": 12,
+    "2025": 33,
+    "2026": 54
+   }
+  },
+  {
+   "id": "vision-and-video",
+   "name": "Vision & video",
+   "n": 106,
+   "byYear": {
+    "2023": 5,
+    "2024": 11,
+    "2025": 36,
+    "2026": 53
+   }
+  },
+  {
+   "id": "voice-ai",
+   "name": "Voice AI",
+   "n": 105,
+   "byYear": {
+    "2023": 3,
+    "2024": 10,
+    "2025": 37,
+    "2026": 43
+   }
+  },
+  {
+   "id": "ai-security",
+   "name": "AI security",
+   "n": 91,
+   "byYear": {
+    "2023": 4,
+    "2024": 5,
+    "2025": 19,
+    "2026": 42
+   }
+  },
+  {
+   "id": "harness-engineering",
+   "name": "Harness engineering",
+   "n": 90,
+   "byYear": {
+    "2023": 3,
+    "2024": 1,
+    "2025": 28,
+    "2026": 42
+   }
+  },
+  {
+   "id": "human-in-the-loop-validation",
+   "name": "Human-in-the-loop validation",
+   "n": 86,
+   "byYear": {
+    "2026": 56
+   }
+  },
+  {
+   "id": "agent-memory",
+   "name": "Agent memory",
+   "n": 80,
+   "byYear": {
+    "2023": 2,
+    "2024": 2,
+    "2025": 19,
+    "2026": 42
+   }
+  },
+  {
+   "id": "design-engineering-and-ai-interfaces",
+   "name": "AI interface design",
+   "n": 77,
+   "byYear": {
+    "2024": 1,
+    "2025": 28,
+    "2026": 31
+   }
+  },
+  {
+   "id": "workflow-automation",
+   "name": "Workflow automation",
+   "n": 77,
+   "byYear": {
+    "2024": 1,
+    "2025": 18,
+    "2026": 45
+   }
+  },
+  {
+   "id": "ai-cost-and-performance-engineering",
+   "name": "AI cost & performance",
+   "n": 75,
+   "byYear": {
+    "2023": 2,
+    "2024": 2,
+    "2025": 11,
+    "2026": 29
+   }
+  },
+  {
+   "id": "generative-media",
+   "name": "Generative media",
+   "n": 72,
+   "byYear": {
+    "2023": 5,
+    "2024": 2,
+    "2025": 22,
+    "2026": 40
+   }
+  },
+  {
+   "id": "search-and-retrieval",
+   "name": "Search & retrieval",
+   "n": 71,
+   "byYear": {
+    "2023": 5,
+    "2024": 7,
+    "2025": 23,
+    "2026": 27
+   }
+  },
+  {
+   "id": "local-inference",
+   "name": "Local inference",
+   "n": 70,
+   "byYear": {
+    "2023": 3,
+    "2024": 8,
+    "2025": 21,
+    "2026": 38
+   }
+  },
+  {
+   "id": "inference",
+   "name": "Inference",
+   "n": 67,
+   "byYear": {
+    "2023": 3,
+    "2024": 9,
+    "2025": 17,
+    "2026": 32
+   }
+  },
+  {
+   "id": "software-factories",
+   "name": "Software factories",
+   "n": 62,
+   "byYear": {
+    "2024": 2,
+    "2025": 21,
+    "2026": 30
+   }
+  },
+  {
+   "id": "post-training",
+   "name": "Post-training",
+   "n": 59,
+   "byYear": {
+    "2023": 1,
+    "2024": 3,
+    "2025": 23,
+    "2026": 31
+   }
+  }
+ ],
+ "sources": [
+  "https://ai.engineer/llms.txt",
+  "https://ai.engineer/api/data/talks?format=json",
+  "https://pytorchconference.sched.com/all.ics",
+  "https://pytorchconferenceeu2026.sched.com/all.ics",
+  "https://build.microsoft.com/api/session/all/en-US"
+ ]
+}

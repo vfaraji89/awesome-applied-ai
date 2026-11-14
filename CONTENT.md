@@ -25,7 +25,7 @@ lowercase-with-hyphens, links https or a path on this site. A failure names the 
 and nothing is written. The site's own checks then confirm every internal link resolves.
 
 ## One-time setup
-1. In Google Sheets: **File → Import → Upload** `awesome-applied-ai-content.xlsx`
+1. In Google Sheets: **File → Import → Upload** `awesome-applied-ai-content.xlsx` (the file name from before the rename)
    (or regenerate the CSVs with `bun scripts/content.ts export`), "Create new spreadsheet".
 2. **Share → General access → Anyone with the link → Viewer.** Editors are only the people you add.
 3. Copy the sheet id: the long part of its URL between `/d/` and `/edit`.

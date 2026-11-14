@@ -255,9 +255,9 @@ button:hover > .rb-tip, button:focus-visible > .rb-tip { opacity: 1; transform: 
 .rb-fam.on .rb-lab { color: var(--ink); font-weight: 700; }
 .rb-rod { position: relative; display: flex; gap: 14px; align-items: center; height: 26px; padding: 0 10px; }
 .rb-rod::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 4px; margin-top: -2px; border-radius: 2px; background: var(--rod); }
-.rb-bead { position: relative; width: 22px; height: 22px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: radial-gradient(circle at 34% 30%, #fff 0%, #f1ede8 45%, #d6cfc7 100%); box-shadow: inset 0 0 0 1px rgba(0,0,0,.08), 0 2px 3px rgba(0,0,0,.12); transition: transform .45s var(--spring), background .3s; }
+.rb-bead { position: relative; width: 22px; height: 22px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: radial-gradient(circle at 34% 30%, #fff 0%, #f1ede8 45%, #d6cfc7 100%); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; transition: transform .45s var(--spring), background .3s; }
 .rb-fam.on .rb-bead { background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%); }
-.rb-bead.on, .rb-fam.on .rb-bead.on { background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); transform: scale(1.3); box-shadow: 0 0 0 4px color-mix(in srgb, var(--rust) 18%, transparent), 0 2px 4px rgba(0,0,0,.2); }
+.rb-bead.on, .rb-fam.on .rb-bead.on { background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); transform: scale(1.3); outline: 4px solid color-mix(in srgb, var(--rust) 18%, transparent); outline-offset: 0; }
 .rb-hero .rb-bead { width: 28px; height: 28px; } .rb-hero .rb-rod { height: 34px; gap: 18px; }
 
 /* matrix: a bead per role and skill, its size the level */
@@ -275,7 +275,7 @@ button:hover > .rb-tip, button:focus-visible > .rb-tip { opacity: 1; transform: 
 .rb-orbit { fill: none; stroke: var(--line); stroke-dasharray: 2 6; }
 .rb-edge { fill: none; stroke: var(--rust); stroke-opacity: .12; transition: stroke-opacity .5s, stroke-width .5s; }
 .rb-edge.on { stroke-opacity: .85; }
-.rb-run { fill: #e0301e; filter: drop-shadow(0 1px 2px rgba(158,26,12,.5)); }
+.rb-run { fill: #e0301e;  }
 .rb-node { cursor: pointer; outline: none; }
 .rb-node circle { fill: var(--card); stroke: var(--line-strong); stroke-width: 1.5; transition: fill .4s, stroke .4s, r .4s; }
 .rb-node.near circle { stroke: var(--ink); stroke-width: 2; }

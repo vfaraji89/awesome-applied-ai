@@ -8,7 +8,7 @@ import { readFileSync, writeFileSync, existsSync } from "node:fs";
 import path from "node:path";
 import { createHash } from "node:crypto";
 import { greenhouse, lever, ashby, workday, remotive, arbeitnow, hackerNews, smartrecruiters, workable, recruitee, personio, himalayas, jobicy, boardUrl } from "./sources";
-import { isAI, role, seniority, TASKS, inStack } from "./taxonomy";
+import { isAI, role, seniority, TASKS, inStack, SEEKER } from "./taxonomy";
 import { writeWeekly } from "./weekly";
 import { extract, jobPart } from "./extract";
 import { TECH, familyOf, FAMILIES, BUILD_AI, USE_AI, AI_TERMS } from "./tech";
@@ -33,13 +33,22 @@ for (const d of discovered) {
   companies[d.provider] ??= [];
   if (!companies[d.provider].some((s: string) => s.toLowerCase() === d.slug)) companies[d.provider].push(d.slug);
 }
-const prevStore: Job[] = existsSync(path.join(root, "market", "jobs.json")) ? JSON.parse(readFileSync(path.join(root, "market", "jobs.json"), "utf8")) : [];
+const decode = (t: string) => t.replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16))).replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(+d)).replace(/&amp;/g, "&");
+// stored rows from before the fixes: Hacker News posts by people looking for work are dropped,
+// and titles keep no HTML entities
+const prevStore: Job[] = (existsSync(path.join(root, "market", "jobs.json")) ? JSON.parse(readFileSync(path.join(root, "market", "jobs.json"), "utf8")) as Job[] : [])
+  .filter((j) => !(j.source === "hackernews" && SEEKER.test(j.title))).map((j) => ({ ...j, title: decode(j.title) }));
 const today = fromStore ? (prevStore.map((j) => j.lastSeen).sort().at(-1) ?? "") : new Date().toISOString().slice(0, 10);
 
 const report: { source: string; ok: boolean; jobs: number; ai: number; note?: string }[] = [];
 /** Non-AI tech ads from company career pages, kept in memory only for "how AI reaches other jobs".
  *  Reduced to family and three flags right away; nothing about them is stored per ad. */
 const others: { family: string; posted: string; build: boolean; use: boolean; terms: string[] }[] = [];
+// EVAL_SAMPLE=200: also write a sample of this run's ads for checking by hand (eval/), see eval/README.md
+const EVAL_N = Number(process.env.EVAL_SAMPLE ?? 0);
+const NEAR = /engineer|scientist|research|developer|architect|data|platform|machine|model/i; // tech titles the AI rule left out
+const AGG = new Set(["himalayas", "jobicy", "remotive", "arbeitnow", "hackernews"]);
+const nearMiss: RawJob[] = [];
 async function take(source: string, fn: () => Promise<RawJob[]>): Promise<RawJob[]> {
   try {
     const all = await fn();
@@ -50,7 +59,8 @@ async function take(source: string, fn: () => Promise<RawJob[]>): Promise<RawJob
       const part = jobPart(j.text);
       others.push({ family, posted: j.posted, build: BUILD_AI.test(part), use: USE_AI.test(part), terms: AI_TERMS.filter(([, re]) => re.test(part)).map(([n]) => n) });
     }
-    const ai = all.filter((j) => isAI(j.title));
+    const ai = all.filter((j) => isAI(j.title)).map((j) => ({ ...j, board: source }));
+    if (EVAL_N) for (const j of all) if (!isAI(j.title) && NEAR.test(j.title) && !AGG.has(j.source)) nearMiss.push(j);
     report.push({ source, ok: true, jobs: all.length, ai: ai.length });
     return ai;
   } catch (e) {
@@ -95,8 +105,19 @@ const AGGREGATORS = new Set(["himalayas", "jobicy", "remotive", "arbeitnow", "ha
 const ckOf = (j: RawJob) => hash(`${j.company.toLowerCase().replace(/[^a-z0-9]/g, "")}|${normTitle(j.title).toLowerCase()}`);
 const direct = new Set(raw.filter((j) => !AGGREGATORS.has(j.source)).map(ckOf));
 const reposts = raw.filter((j) => AGGREGATORS.has(j.source) && direct.has(ckOf(j))).length;
-const fresh: Job[] = raw.filter((j) => !(AGGREGATORS.has(j.source) && direct.has(ckOf(j)))).map((j) => {
+const keptRaw = raw.filter((j) => !(AGGREGATORS.has(j.source) && direct.has(ckOf(j))));
+// per career page: the company's own name and what its AI ads ask for, for the companies pages
+// (totals only; nothing per ad is kept with a company)
+const perBoard = new Map<string, { company: Map<string, number>; roles: Map<string, number>; skills: Map<string, number>; n: number }>();
+const fresh: Job[] = keptRaw.map((j) => {
   const x = extract(j.title, j.text);
+  if (j.board && !AGGREGATORS.has(j.source)) {
+    const b = perBoard.get(j.board) ?? { company: new Map(), roles: new Map(), skills: new Map(), n: 0 };
+    b.n++; b.company.set(j.company, (b.company.get(j.company) ?? 0) + 1);
+    const r = role(j.title); b.roles.set(r, (b.roles.get(r) ?? 0) + 1);
+    for (const s of x.skills) b.skills.set(s, (b.skills.get(s) ?? 0) + 1);
+    perBoard.set(j.board, b);
+  }
   return { key: hash(`${j.source}:${j.id}`), source: j.source, title: normTitle(j.title), role: role(j.title), seniority: seniority(j.title),
     remote: j.remote, skills: x.skills, tools: x.tools, tasks: x.tasks, ...(x.tech.length ? { tech: x.tech } : {}), ...(x.toolsPreferred.length ? { toolsPreferred: x.toolsPreferred } : {}),
     ...(x.years ? { years: x.years } : {}), ...(!AGGREGATORS.has(j.source) && labOf(j.company)?.kind === "lab" ? { lab: true } : {}), ck: ckOf(j), ...(j.posted ? { posted: j.posted } : {}), firstSeen: today, lastSeen: today };
@@ -308,7 +329,9 @@ const sources = {
       : (companies[p.id] ?? []).map((s: string) => ({ slug: s }));
     const boards = slugs.map(({ slug, wd }) => { const r = status.get(`${p.id}:${slug}`);
       const m = meta.get(`${p.id}:${slug}`), lab = labOf(slug);
+      const pb = perBoard.get(`${p.id}:${slug}`), top = (m2?: Map<string, number>, k = 3) => m2 ? [...m2.entries()].sort((a, b2) => b2[1] - a[1]).slice(0, k).map(([id, n]) => ({ id, share: Math.round((100 * n) / (pb?.n || 1)) })) : [];
       return { slug, url: boardUrl(p.id, slug, wd), ok: fromStore ? null : (r?.ok ?? false), ai: r?.ai ?? 0,
+        ...(pb ? { company: [...pb.company.entries()].sort((a, b2) => b2[1] - a[1])[0]?.[0], roles: top(pb.roles), skills: top(pb.skills, 5) } : {}),
         ...(lab ? { name: lab.name, kind: lab.kind } : m ? { name: m.name, ...(m.kind ? { kind: m.kind } : {}) } : {}), ...(m?.tool ? { tool: m.tool } : {}) }; });
     const self = status.get(p.id);
     return { ...p, boards, ok: self ? self.ok : boards.some((b) => b.ok) || (fromStore && win.some((j) => j.source === p.id)), ai: self ? self.ai : boards.reduce((a, b) => a + b.ai, 0),
@@ -329,6 +352,7 @@ console.log("affected:", summary.affected ? summary.affected.rows.map((r: { id: 
 console.log(`reposts dropped: ${reposts}; years asked in ${summary.years.asked}% (median ${summary.years.median})`);
 console.log("tasks:", summary.tasks.map((t) => `${t.id} ${t.share}%`).join(", "));
 console.log("tools:", summary.tools.slice(0, 20).map((t) => `${t.name} ${t.n}`).join(", "));
+if (EVAL_N) writeEvalSample();
 // --out DIR: also write what a real run would write, into DIR (for a dry run's artifact)
 const outDir = process.argv.includes("--out") ? process.argv[process.argv.indexOf("--out") + 1] : "";
 if (outDir) {
@@ -345,4 +369,34 @@ if (!dry) {
   writeFileSync(SOURCES, JSON.stringify(sources, null, 1) + "\n");
   console.log("wrote", path.relative(root, STORE), path.relative(root, SUMMARY), "and", path.relative(root, SOURCES));
   console.log("weekly snapshot:", writeWeekly(all, fromStore ? undefined : today).join(", "));
+}
+
+/** A sample for checking by hand: ads the rules kept (spread across roles) and tech ads the AI rule
+ *  left out, each with a link to read it at the source and what the rules decided. No ad text. */
+function writeEvalSample() {
+  const { mkdirSync } = require("node:fs") as typeof import("node:fs");
+  const month = today.slice(0, 7);
+  let seed = [...month].reduce((a, c) => (a * 31 + c.charCodeAt(0)) >>> 0, 7);
+  const rnd = () => ((seed = (seed * 1664525 + 1013904223) >>> 0) / 2 ** 32);
+  const shuffle = <T,>(xs: T[]) => { const a = xs.slice(); for (let i = a.length - 1; i > 0; i--) { const k = Math.floor(rnd() * (i + 1)); [a[i], a[k]] = [a[k], a[i]]; } return a; };
+  const kept = keptRaw.map((r, i) => ({ r, j: fresh[i] })).filter((x) => x.r.url && !AGG.has(x.r.source));
+  const nKept = Math.round(EVAL_N * 0.8), nNear = EVAL_N - nKept;
+  const byRole = new Map<string, typeof kept>();
+  for (const x of shuffle(kept)) byRole.set(x.j.role, [...(byRole.get(x.j.role) ?? []), x]);
+  // every role at least a few, the rest in proportion
+  const pick: typeof kept = [];
+  const floor = Math.min(6, Math.floor(nKept / Math.max(1, byRole.size)));
+  for (const xs of byRole.values()) pick.push(...xs.slice(0, floor));
+  const rest = shuffle(kept.filter((x) => !pick.includes(x)));
+  pick.push(...rest.slice(0, Math.max(0, nKept - pick.length)));
+  const near = shuffle(nearMiss.filter((j) => j.url)).slice(0, nNear);
+  const items = [
+    ...pick.map(({ r, j }) => ({ key: j.key, source: r.source, company: r.company, title: r.title, url: r.url, pred: { ai: true, role: j.role, seniority: j.seniority, skills: j.skills, tasks: j.tasks ?? [] } })),
+    ...near.map((r) => ({ key: hash(`${r.source}:${r.id}`), source: r.source, company: r.company, title: r.title, url: r.url, pred: { ai: false, role: "", seniority: seniority(r.title), skills: [], tasks: [] } })),
+  ];
+  const dir = path.join(root, "eval");
+  mkdirSync(dir, { recursive: true });
+  const file = path.join(dir, `sample-${month}.json`);
+  writeFileSync(file, JSON.stringify({ month, created: today, kept: pick.length, nearMiss: near.length, items: shuffle(items) }, null, 1) + "\n");
+  console.log(`eval sample: ${pick.length} kept and ${near.length} left out, to ${path.relative(root, file)}`);
 }

@@ -8,6 +8,7 @@ export interface RawJob {
   posted: string; // ISO date
   url: string;
   text: string; // plain description, used for tagging only, never stored
+  board?: string; // "greenhouse:anthropic": the career page it was read from, for per-company totals
 }
 
 /** What is kept per posting: only what the market summary needs. No URL, description or company. */

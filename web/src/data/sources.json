@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T15:06:58.447Z",
+ "generatedAt": "2026-11-14T04:02:02.386Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -12,7 +12,44 @@
      "slug": "anthropic",
      "url": "https://job-boards.greenhouse.io/anthropic",
      "ok": true,
-     "ai": 115,
+     "ai": 111,
+     "company": "anthropic",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 44
+      },
+      {
+       "id": "ai-native-architect",
+       "share": 24
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 11
+      }
+     ],
+     "skills": [
+      {
+       "id": "security",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 68
+      },
+      {
+       "id": "evals",
+       "share": 61
+      },
+      {
+       "id": "customer",
+       "share": 60
+      },
+      {
+       "id": "models",
+       "share": 44
+      }
+     ],
      "name": "Anthropic",
      "kind": "lab"
     },
@@ -20,19 +57,130 @@
      "slug": "scaleai",
      "url": "https://job-boards.greenhouse.io/scaleai",
      "ok": true,
-     "ai": 47
+     "ai": 47,
+     "company": "scaleai",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 21
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 21
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 19
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 83
+      },
+      {
+       "id": "evals",
+       "share": 70
+      },
+      {
+       "id": "models",
+       "share": 70
+      },
+      {
+       "id": "agents",
+       "share": 68
+      },
+      {
+       "id": "customer",
+       "share": 53
+      }
+     ]
     },
     {
      "slug": "databricks",
      "url": "https://job-boards.greenhouse.io/databricks",
      "ok": true,
-     "ai": 139
+     "ai": 126,
+     "company": "databricks",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 53
+      },
+      {
+       "id": "ai-solutions-architect",
+       "share": 13
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 9
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 87
+      },
+      {
+       "id": "customer",
+       "share": 83
+      },
+      {
+       "id": "product",
+       "share": 77
+      },
+      {
+       "id": "software",
+       "share": 71
+      },
+      {
+       "id": "data",
+       "share": 70
+      }
+     ]
     },
     {
      "slug": "figma",
      "url": "https://job-boards.greenhouse.io/figma",
      "ok": true,
-     "ai": 12
+     "ai": 12,
+     "company": "figma",
+     "roles": [
+      {
+       "id": "ai-native-developer",
+       "share": 33
+      },
+      {
+       "id": "rd-researcher",
+       "share": 25
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 17
+      }
+     ],
+     "skills": [
+      {
+       "id": "product",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 75
+      },
+      {
+       "id": "software",
+       "share": 67
+      },
+      {
+       "id": "evals",
+       "share": 67
+      },
+      {
+       "id": "models",
+       "share": 42
+      }
+     ]
     },
     {
      "slug": "airtable",
@@ -44,151 +192,1044 @@
      "slug": "gitlab",
      "url": "https://job-boards.greenhouse.io/gitlab",
      "ok": true,
-     "ai": 11
+     "ai": 11,
+     "company": "gitlab",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 27
+      },
+      {
+       "id": "rd-researcher",
+       "share": 18
+      },
+      {
+       "id": "ai-solutions-architect",
+       "share": 18
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 82
+      },
+      {
+       "id": "evals",
+       "share": 36
+      },
+      {
+       "id": "security",
+       "share": 36
+      },
+      {
+       "id": "ai-dev",
+       "share": 36
+      }
+     ]
     },
     {
      "slug": "samsara",
      "url": "https://job-boards.greenhouse.io/samsara",
      "ok": true,
-     "ai": 14
+     "ai": 14,
+     "company": "samsara",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 57
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 14
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 93
+      },
+      {
+       "id": "retrieval",
+       "share": 86
+      },
+      {
+       "id": "agents",
+       "share": 79
+      },
+      {
+       "id": "ai-dev",
+       "share": 79
+      }
+     ]
     },
     {
      "slug": "cloudflare",
      "url": "https://job-boards.greenhouse.io/cloudflare",
      "ok": true,
-     "ai": 29
+     "ai": 28,
+     "company": "cloudflare",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 29
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 21
+      },
+      {
+       "id": "rd-researcher",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 75
+      },
+      {
+       "id": "customer",
+       "share": 71
+      },
+      {
+       "id": "product",
+       "share": 61
+      },
+      {
+       "id": "evals",
+       "share": 61
+      },
+      {
+       "id": "agents",
+       "share": 57
+      }
+     ]
     },
     {
      "slug": "elastic",
      "url": "https://job-boards.greenhouse.io/elastic",
      "ok": true,
-     "ai": 19
+     "ai": 19,
+     "company": "elastic",
+     "roles": [
+      {
+       "id": "ai-native-architect",
+       "share": 42
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 37
+      },
+      {
+       "id": "rd-researcher",
+       "share": 16
+      }
+     ],
+     "skills": [
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 89
+      },
+      {
+       "id": "agents",
+       "share": 84
+      },
+      {
+       "id": "retrieval",
+       "share": 79
+      },
+      {
+       "id": "context",
+       "share": 79
+      }
+     ]
     },
     {
      "slug": "datadog",
      "url": "https://job-boards.greenhouse.io/datadog",
      "ok": true,
-     "ai": 13
+     "ai": 13,
+     "company": "datadog",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 54
+      },
+      {
+       "id": "other-ai",
+       "share": 15
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 15
+      }
+     ],
+     "skills": [
+      {
+       "id": "evals",
+       "share": 92
+      },
+      {
+       "id": "agents",
+       "share": 77
+      },
+      {
+       "id": "models",
+       "share": 77
+      },
+      {
+       "id": "software",
+       "share": 38
+      },
+      {
+       "id": "product",
+       "share": 31
+      }
+     ]
     },
     {
      "slug": "stripe",
      "url": "https://job-boards.greenhouse.io/stripe",
      "ok": true,
-     "ai": 32
+     "ai": 31,
+     "company": "stripe",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 42
+      },
+      {
+       "id": "rd-researcher",
+       "share": 16
+      },
+      {
+       "id": "ai-solutions-architect",
+       "share": 16
+      }
+     ],
+     "skills": [
+      {
+       "id": "customer",
+       "share": 68
+      },
+      {
+       "id": "software",
+       "share": 55
+      },
+      {
+       "id": "data",
+       "share": 42
+      },
+      {
+       "id": "product",
+       "share": 35
+      },
+      {
+       "id": "agents",
+       "share": 32
+      }
+     ]
     },
     {
      "slug": "coinbase",
      "url": "https://job-boards.greenhouse.io/coinbase",
      "ok": true,
-     "ai": 23
+     "ai": 23,
+     "company": "coinbase",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 52
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 22
+      },
+      {
+       "id": "rd-researcher",
+       "share": 13
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 91
+      },
+      {
+       "id": "customer",
+       "share": 87
+      },
+      {
+       "id": "agents",
+       "share": 74
+      },
+      {
+       "id": "evals",
+       "share": 70
+      },
+      {
+       "id": "architecture",
+       "share": 48
+      }
+     ]
     },
     {
      "slug": "robinhood",
      "url": "https://job-boards.greenhouse.io/robinhood",
      "ok": true,
-     "ai": 10
+     "ai": 10,
+     "company": "robinhood",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 40
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 20
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 90
+      },
+      {
+       "id": "data",
+       "share": 60
+      },
+      {
+       "id": "agents",
+       "share": 50
+      },
+      {
+       "id": "evals",
+       "share": 30
+      },
+      {
+       "id": "product",
+       "share": 30
+      }
+     ]
     },
     {
      "slug": "brex",
      "url": "https://job-boards.greenhouse.io/brex",
      "ok": true,
-     "ai": 4
+     "ai": 5,
+     "company": "brex",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 40
+      },
+      {
+       "id": "rd-researcher",
+       "share": 40
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "customer",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 80
+      },
+      {
+       "id": "evals",
+       "share": 80
+      },
+      {
+       "id": "agents",
+       "share": 60
+      },
+      {
+       "id": "product",
+       "share": 40
+      }
+     ]
     },
     {
      "slug": "gusto",
      "url": "https://job-boards.greenhouse.io/gusto",
      "ok": true,
-     "ai": 7
+     "ai": 7,
+     "company": "gusto",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 29
+      },
+      {
+       "id": "rd-researcher",
+       "share": 14
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "customer",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 86
+      },
+      {
+       "id": "agents",
+       "share": 71
+      },
+      {
+       "id": "retrieval",
+       "share": 43
+      },
+      {
+       "id": "ai-dev",
+       "share": 29
+      }
+     ]
     },
     {
      "slug": "mongodb",
      "url": "https://job-boards.greenhouse.io/mongodb",
      "ok": true,
-     "ai": 19
+     "ai": 20,
+     "company": "mongodb",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 40
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 25
+      },
+      {
+       "id": "rd-researcher",
+       "share": 15
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 90
+      },
+      {
+       "id": "agents",
+       "share": 70
+      },
+      {
+       "id": "architecture",
+       "share": 60
+      },
+      {
+       "id": "retrieval",
+       "share": 35
+      },
+      {
+       "id": "product",
+       "share": 30
+      }
+     ]
     },
     {
      "slug": "twilio",
      "url": "https://job-boards.greenhouse.io/twilio",
      "ok": true,
-     "ai": 5
+     "ai": 5,
+     "company": "twilio",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 80
+      },
+      {
+       "id": "other-ai",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 60
+      },
+      {
+       "id": "models",
+       "share": 60
+      },
+      {
+       "id": "retrieval",
+       "share": 40
+      }
+     ]
     },
     {
      "slug": "okta",
      "url": "https://job-boards.greenhouse.io/okta",
      "ok": true,
-     "ai": 12
+     "ai": 12,
+     "company": "okta",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 50
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 42
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 8
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 92
+      },
+      {
+       "id": "data",
+       "share": 75
+      },
+      {
+       "id": "retrieval",
+       "share": 67
+      }
+     ]
     },
     {
      "slug": "asana",
      "url": "https://job-boards.greenhouse.io/asana",
      "ok": true,
-     "ai": 7
+     "ai": 7,
+     "company": "asana",
+     "roles": [
+      {
+       "id": "ai-native-developer",
+       "share": 57
+      },
+      {
+       "id": "rd-researcher",
+       "share": 29
+      },
+      {
+       "id": "other-ai",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 86
+      },
+      {
+       "id": "product",
+       "share": 71
+      },
+      {
+       "id": "customer",
+       "share": 71
+      },
+      {
+       "id": "software",
+       "share": 57
+      },
+      {
+       "id": "evals",
+       "share": 57
+      }
+     ]
     },
     {
      "slug": "dropbox",
      "url": "https://job-boards.greenhouse.io/dropbox",
      "ok": true,
-     "ai": 2
+     "ai": 2,
+     "company": "dropbox",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "security",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "pinterest",
      "url": "https://job-boards.greenhouse.io/pinterest",
      "ok": true,
-     "ai": 31
+     "ai": 31,
+     "company": "pinterest",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 77
+      },
+      {
+       "id": "rd-researcher",
+       "share": 19
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 3
+      }
+     ],
+     "skills": [
+      {
+       "id": "data",
+       "share": 42
+      },
+      {
+       "id": "customer",
+       "share": 29
+      },
+      {
+       "id": "ai-dev",
+       "share": 29
+      },
+      {
+       "id": "retrieval",
+       "share": 26
+      },
+      {
+       "id": "product",
+       "share": 26
+      }
+     ]
     },
     {
      "slug": "reddit",
      "url": "https://job-boards.greenhouse.io/reddit",
      "ok": true,
-     "ai": 34
+     "ai": 34,
+     "company": "reddit",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 56
+      },
+      {
+       "id": "rd-researcher",
+       "share": 29
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 6
+      }
+     ],
+     "skills": [
+      {
+       "id": "evals",
+       "share": 76
+      },
+      {
+       "id": "models",
+       "share": 76
+      },
+      {
+       "id": "software",
+       "share": 68
+      },
+      {
+       "id": "customer",
+       "share": 65
+      },
+      {
+       "id": "retrieval",
+       "share": 53
+      }
+     ]
     },
     {
      "slug": "lyft",
      "url": "https://job-boards.greenhouse.io/lyft",
      "ok": true,
-     "ai": 21
+     "ai": 19,
+     "company": "lyft",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 47
+      },
+      {
+       "id": "other-ai",
+       "share": 21
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 16
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 95
+      },
+      {
+       "id": "models",
+       "share": 74
+      },
+      {
+       "id": "data",
+       "share": 58
+      },
+      {
+       "id": "evals",
+       "share": 47
+      },
+      {
+       "id": "product",
+       "share": 42
+      }
+     ]
     },
     {
      "slug": "instacart",
      "url": "https://job-boards.greenhouse.io/instacart",
      "ok": true,
-     "ai": 8
+     "ai": 8,
+     "company": "instacart",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 50
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 25
+      },
+      {
+       "id": "other-ai",
+       "share": 13
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 88
+      },
+      {
+       "id": "models",
+       "share": 88
+      },
+      {
+       "id": "evals",
+       "share": 63
+      },
+      {
+       "id": "customer",
+       "share": 63
+      },
+      {
+       "id": "context",
+       "share": 50
+      }
+     ]
     },
     {
      "slug": "airbnb",
      "url": "https://job-boards.greenhouse.io/airbnb",
      "ok": true,
-     "ai": 18
+     "ai": 18,
+     "company": "airbnb",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 72
+      },
+      {
+       "id": "rd-researcher",
+       "share": 22
+      },
+      {
+       "id": "other-ai",
+       "share": 6
+      }
+     ],
+     "skills": [
+      {
+       "id": "models",
+       "share": 89
+      },
+      {
+       "id": "evals",
+       "share": 72
+      },
+      {
+       "id": "agents",
+       "share": 67
+      },
+      {
+       "id": "software",
+       "share": 56
+      },
+      {
+       "id": "data",
+       "share": 56
+      }
+     ]
     },
     {
      "slug": "discord",
      "url": "https://job-boards.greenhouse.io/discord",
      "ok": true,
-     "ai": 4
+     "ai": 4,
+     "company": "discord",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 50
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 50
+      }
+     ],
+     "skills": [
+      {
+       "id": "product",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 75
+      },
+      {
+       "id": "models",
+       "share": 75
+      },
+      {
+       "id": "customer",
+       "share": 75
+      },
+      {
+       "id": "data",
+       "share": 50
+      }
+     ]
     },
     {
      "slug": "duolingo",
      "url": "https://job-boards.greenhouse.io/duolingo",
      "ok": true,
-     "ai": 6
+     "ai": 6,
+     "company": "duolingo",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 83
+      },
+      {
+       "id": "models",
+       "share": 50
+      },
+      {
+       "id": "product",
+       "share": 33
+      },
+      {
+       "id": "data",
+       "share": 33
+      },
+      {
+       "id": "context",
+       "share": 17
+      }
+     ]
     },
     {
      "slug": "intercom",
      "url": "https://job-boards.greenhouse.io/intercom",
      "ok": true,
-     "ai": 19
+     "ai": 19,
+     "company": "intercom",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 32
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 21
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 21
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 63
+      },
+      {
+       "id": "customer",
+       "share": 58
+      },
+      {
+       "id": "data",
+       "share": 47
+      },
+      {
+       "id": "product",
+       "share": 32
+      }
+     ]
     },
     {
      "slug": "vercel",
      "url": "https://job-boards.greenhouse.io/vercel",
      "ok": true,
-     "ai": 7
+     "ai": 7,
+     "company": "vercel",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 43
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 29
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 43
+      },
+      {
+       "id": "customer",
+       "share": 29
+      },
+      {
+       "id": "context",
+       "share": 29
+      }
+     ]
     },
     {
      "slug": "togetherai",
      "url": "https://job-boards.greenhouse.io/togetherai",
      "ok": true,
      "ai": 23,
+     "company": "togetherai",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 35
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 22
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 17
+      }
+     ],
+     "skills": [
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 91
+      },
+      {
+       "id": "ai-dev",
+       "share": 91
+      },
+      {
+       "id": "evals",
+       "share": 78
+      },
+      {
+       "id": "architecture",
+       "share": 61
+      }
+     ],
      "name": "Together AI",
      "kind": "lab"
     },
@@ -196,13 +1237,83 @@
      "slug": "gleanwork",
      "url": "https://job-boards.greenhouse.io/gleanwork",
      "ok": true,
-     "ai": 14
+     "ai": 14,
+     "company": "gleanwork",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 29
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 21
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 71
+      },
+      {
+       "id": "software",
+       "share": 64
+      },
+      {
+       "id": "retrieval",
+       "share": 57
+      },
+      {
+       "id": "context",
+       "share": 43
+      }
+     ]
     },
     {
      "slug": "xai",
      "url": "https://job-boards.greenhouse.io/xai",
      "ok": true,
      "ai": 6,
+     "company": "xai",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 83
+      },
+      {
+       "id": "other-ai",
+       "share": 17
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 67
+      },
+      {
+       "id": "models",
+       "share": 67
+      },
+      {
+       "id": "agents",
+       "share": 33
+      },
+      {
+       "id": "customer",
+       "share": 33
+      },
+      {
+       "id": "data",
+       "share": 33
+      }
+     ],
      "name": "xAI",
      "kind": "lab"
     },
@@ -210,43 +1321,286 @@
      "slug": "nuro",
      "url": "https://job-boards.greenhouse.io/nuro",
      "ok": true,
-     "ai": 20
+     "ai": 20,
+     "company": "nuro",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 55
+      },
+      {
+       "id": "rd-researcher",
+       "share": 20
+      },
+      {
+       "id": "other-ai",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 90
+      },
+      {
+       "id": "agents",
+       "share": 40
+      },
+      {
+       "id": "architecture",
+       "share": 30
+      },
+      {
+       "id": "evals",
+       "share": 25
+      }
+     ]
     },
     {
      "slug": "waymo",
      "url": "https://job-boards.greenhouse.io/waymo",
      "ok": true,
-     "ai": 67
+     "ai": 66,
+     "company": "waymo",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 65
+      },
+      {
+       "id": "rd-researcher",
+       "share": 20
+      },
+      {
+       "id": "other-ai",
+       "share": 12
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 82
+      },
+      {
+       "id": "models",
+       "share": 79
+      },
+      {
+       "id": "evals",
+       "share": 32
+      },
+      {
+       "id": "data",
+       "share": 23
+      },
+      {
+       "id": "context",
+       "share": 23
+      }
+     ]
     },
     {
      "slug": "affirm",
      "url": "https://job-boards.greenhouse.io/affirm",
      "ok": true,
-     "ai": 14
+     "ai": 14,
+     "company": "affirm",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 86
+      },
+      {
+       "id": "other-ai",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 79
+      },
+      {
+       "id": "agents",
+       "share": 64
+      },
+      {
+       "id": "customer",
+       "share": 64
+      },
+      {
+       "id": "models",
+       "share": 50
+      },
+      {
+       "id": "architecture",
+       "share": 50
+      }
+     ]
     },
     {
      "slug": "chime",
      "url": "https://job-boards.greenhouse.io/chime",
      "ok": true,
-     "ai": 9
+     "ai": 10,
+     "company": "chime",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 40
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 40
+      },
+      {
+       "id": "rd-researcher",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 90
+      },
+      {
+       "id": "data",
+       "share": 50
+      },
+      {
+       "id": "evals",
+       "share": 50
+      },
+      {
+       "id": "architecture",
+       "share": 50
+      },
+      {
+       "id": "security",
+       "share": 40
+      }
+     ]
     },
     {
      "slug": "mixpanel",
      "url": "https://job-boards.greenhouse.io/mixpanel",
      "ok": true,
-     "ai": 1
+     "ai": 1,
+     "company": "mixpanel",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "fivetran",
      "url": "https://job-boards.greenhouse.io/fivetran",
      "ok": true,
-     "ai": 3
+     "ai": 3,
+     "company": "fivetran",
+     "roles": [
+      {
+       "id": "ai-native-developer",
+       "share": 33
+      },
+      {
+       "id": "rd-researcher",
+       "share": 33
+      },
+      {
+       "id": "ai-native-architect",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 67
+      },
+      {
+       "id": "agents",
+       "share": 67
+      },
+      {
+       "id": "customer",
+       "share": 67
+      },
+      {
+       "id": "security",
+       "share": 33
+      }
+     ]
     },
     {
      "slug": "pagerduty",
      "url": "https://job-boards.greenhouse.io/pagerduty",
      "ok": true,
-     "ai": 4
+     "ai": 4,
+     "company": "pagerduty",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 75
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 25
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "security",
+       "share": 100
+      },
+      {
+       "id": "architecture",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "newrelic",
@@ -276,55 +1630,348 @@
      "slug": "grafanalabs",
      "url": "https://job-boards.greenhouse.io/grafanalabs",
      "ok": true,
-     "ai": 2
+     "ai": 2,
+     "company": "grafanalabs",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "labelbox",
      "url": "https://job-boards.greenhouse.io/labelbox",
      "ok": true,
-     "ai": 4
+     "ai": 5,
+     "company": "labelbox",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 80
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "evals",
+       "share": 80
+      },
+      {
+       "id": "software",
+       "share": 60
+      },
+      {
+       "id": "agents",
+       "share": 60
+      },
+      {
+       "id": "customer",
+       "share": 60
+      },
+      {
+       "id": "models",
+       "share": 60
+      }
+     ]
     },
     {
      "slug": "snorkelai",
      "url": "https://job-boards.greenhouse.io/snorkelai",
      "ok": true,
-     "ai": 11
+     "ai": 12,
+     "company": "snorkelai",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 42
+      },
+      {
+       "id": "rd-researcher",
+       "share": 33
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 8
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 75
+      },
+      {
+       "id": "models",
+       "share": 67
+      },
+      {
+       "id": "customer",
+       "share": 58
+      }
+     ]
     },
     {
      "slug": "abnormalsecurity",
      "url": "https://job-boards.greenhouse.io/abnormalsecurity",
      "ok": true,
-     "ai": 1
+     "ai": 1,
+     "company": "abnormalsecurity",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "security",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "verkada",
      "url": "https://job-boards.greenhouse.io/verkada",
      "ok": true,
-     "ai": 3
+     "ai": 3,
+     "company": "verkada",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 33
+      },
+      {
+       "id": "other-ai",
+       "share": 33
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 67
+      },
+      {
+       "id": "evals",
+       "share": 67
+      },
+      {
+       "id": "product",
+       "share": 67
+      }
+     ]
     },
     {
      "slug": "flexport",
      "url": "https://job-boards.greenhouse.io/flexport",
      "ok": true,
-     "ai": 3
+     "ai": 3,
+     "company": "flexport",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 67
+      },
+      {
+       "id": "rd-researcher",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "architecture",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 67
+      },
+      {
+       "id": "agents",
+       "share": 67
+      }
+     ]
     },
     {
      "slug": "gemini",
      "url": "https://job-boards.greenhouse.io/gemini",
      "ok": true,
-     "ai": 1
+     "ai": 1,
+     "company": "gemini",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "block",
      "url": "https://job-boards.greenhouse.io/block",
      "ok": true,
-     "ai": 3
+     "ai": 4,
+     "company": "block",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 50
+      },
+      {
+       "id": "rd-researcher",
+       "share": 25
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 25
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 50
+      },
+      {
+       "id": "ai-dev",
+       "share": 50
+      }
+     ]
     },
     {
      "slug": "doordashusa",
      "url": "https://job-boards.greenhouse.io/doordashusa",
      "ok": true,
-     "ai": 24
+     "ai": 25,
+     "company": "doordashusa",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 60
+      },
+      {
+       "id": "rd-researcher",
+       "share": 20
+      },
+      {
+       "id": "other-ai",
+       "share": 12
+      }
+     ],
+     "skills": [
+      {
+       "id": "models",
+       "share": 72
+      },
+      {
+       "id": "evals",
+       "share": 64
+      },
+      {
+       "id": "software",
+       "share": 56
+      },
+      {
+       "id": "ai-dev",
+       "share": 44
+      },
+      {
+       "id": "customer",
+       "share": 44
+      }
+     ]
     },
     {
      "slug": "lattice",
@@ -342,31 +1989,212 @@
      "slug": "sambanovasystems",
      "url": "https://job-boards.greenhouse.io/sambanovasystems",
      "ok": true,
-     "ai": 7
+     "ai": 7,
+     "company": "sambanovasystems",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 57
+      },
+      {
+       "id": "other-ai",
+       "share": 29
+      },
+      {
+       "id": "ai-native-architect",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 86
+      },
+      {
+       "id": "context",
+       "share": 86
+      },
+      {
+       "id": "architecture",
+       "share": 57
+      }
+     ]
     },
     {
      "slug": "coreweave",
      "url": "https://job-boards.greenhouse.io/coreweave",
      "ok": true,
-     "ai": 15
+     "ai": 16,
+     "company": "coreweave",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 38
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 25
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 19
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 81
+      },
+      {
+       "id": "models",
+       "share": 81
+      },
+      {
+       "id": "evals",
+       "share": 75
+      },
+      {
+       "id": "architecture",
+       "share": 56
+      }
+     ]
     },
     {
      "slug": "andurilindustries",
      "url": "https://job-boards.greenhouse.io/andurilindustries",
      "ok": true,
-     "ai": 58
+     "ai": 57,
+     "company": "andurilindustries",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 32
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 32
+      },
+      {
+       "id": "rd-researcher",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 72
+      },
+      {
+       "id": "product",
+       "share": 44
+      },
+      {
+       "id": "evals",
+       "share": 39
+      },
+      {
+       "id": "agents",
+       "share": 37
+      },
+      {
+       "id": "models",
+       "share": 33
+      }
+     ]
     },
     {
      "slug": "figureai",
      "url": "https://job-boards.greenhouse.io/figureai",
      "ok": true,
-     "ai": 8
+     "ai": 8,
+     "company": "figureai",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 75
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 25
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 75
+      },
+      {
+       "id": "models",
+       "share": 50
+      },
+      {
+       "id": "agents",
+       "share": 38
+      },
+      {
+       "id": "evals",
+       "share": 38
+      },
+      {
+       "id": "data",
+       "share": 25
+      }
+     ]
     },
     {
      "slug": "assemblyai",
      "url": "https://job-boards.greenhouse.io/assemblyai",
      "ok": true,
      "ai": 7,
+     "company": "assemblyai",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 43
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 43
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "ai-dev",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 86
+      },
+      {
+       "id": "customer",
+       "share": 71
+      }
+     ],
      "name": "AssemblyAI",
      "tool": "assemblyai"
     },
@@ -375,6 +2203,39 @@
      "url": "https://job-boards.greenhouse.io/baidu",
      "ok": true,
      "ai": 3,
+     "company": "baidu",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 67
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 67
+      },
+      {
+       "id": "product",
+       "share": 67
+      },
+      {
+       "id": "software",
+       "share": 33
+      },
+      {
+       "id": "retrieval",
+       "share": 33
+      }
+     ],
      "name": "Baidu USA",
      "tool": "unlimited-ocr"
     },
@@ -383,6 +2244,35 @@
      "url": "https://job-boards.greenhouse.io/brave",
      "ok": true,
      "ai": 2,
+     "company": "brave",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "security",
+       "share": 50
+      },
+      {
+       "id": "product",
+       "share": 50
+      }
+     ],
      "name": "Brave",
      "tool": "brave-search-api"
     },
@@ -391,6 +2281,35 @@
      "url": "https://job-boards.greenhouse.io/cline",
      "ok": true,
      "ai": 1,
+     "company": "cline",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      }
+     ],
      "name": "Cline",
      "tool": "cline"
     },
@@ -415,6 +2334,39 @@
      "url": "https://job-boards.greenhouse.io/heygen",
      "ok": true,
      "ai": 2,
+     "company": "heygen",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 50
+      },
+      {
+       "id": "rd-researcher",
+       "share": 50
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 50
+      },
+      {
+       "id": "evals",
+       "share": 50
+      }
+     ],
      "name": "HeyGen",
      "tool": "heygen-liveavatar"
     },
@@ -422,7 +2374,7 @@
      "slug": "hiddenlayer",
      "url": "https://job-boards.greenhouse.io/hiddenlayer",
      "ok": true,
-     "ai": 1,
+     "ai": 0,
      "name": "HiddenLayer",
      "tool": "hiddenlayer"
     },
@@ -447,6 +2399,35 @@
      "url": "https://job-boards.greenhouse.io/jetbrains",
      "ok": true,
      "ai": 1,
+     "company": "jetbrains",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "ai-dev",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 100
+      }
+     ],
      "name": "JetBrains",
      "tool": "koog"
     },
@@ -463,6 +2444,43 @@
      "url": "https://job-boards.greenhouse.io/neo4j",
      "ok": true,
      "ai": 5,
+     "company": "neo4j",
+     "roles": [
+      {
+       "id": "ai-solutions-architect",
+       "share": 60
+      },
+      {
+       "id": "ai-native-architect",
+       "share": 20
+      },
+      {
+       "id": "rd-researcher",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 80
+      },
+      {
+       "id": "agents",
+       "share": 80
+      },
+      {
+       "id": "context",
+       "share": 80
+      }
+     ],
      "name": "Neo4j",
      "tool": "neo4j-graphrag"
     },
@@ -479,6 +2497,35 @@
      "url": "https://job-boards.greenhouse.io/speechmatics",
      "ok": true,
      "ai": 4,
+     "company": "speechmatics",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "security",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 50
+      },
+      {
+       "id": "data",
+       "share": 50
+      }
+     ],
      "name": "Speechmatics",
      "tool": "speechmatics-flow"
     },
@@ -495,6 +2542,35 @@
      "url": "https://job-boards.greenhouse.io/stackblitz",
      "ok": true,
      "ai": 2,
+     "company": "stackblitz",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 50
+      }
+     ],
      "name": "Bolt.new",
      "tool": "bolt"
     },
@@ -503,6 +2579,39 @@
      "url": "https://job-boards.greenhouse.io/tavily",
      "ok": true,
      "ai": 9,
+     "company": "tavily",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 67
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 67
+      },
+      {
+       "id": "customer",
+       "share": 56
+      }
+     ],
      "name": "Tavily",
      "tool": "tavily"
     },
@@ -516,8 +2625,8 @@
     }
    ],
    "ok": true,
-   "ai": 1006,
-   "processed": 348
+   "ai": 990,
+   "processed": 359
   },
   {
    "id": "lever",
@@ -530,31 +2639,171 @@
      "slug": "palantir",
      "url": "https://jobs.lever.co/palantir",
      "ok": true,
-     "ai": 70
+     "ai": 71,
+     "company": "palantir",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 93
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 7
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 99
+      },
+      {
+       "id": "customer",
+       "share": 80
+      },
+      {
+       "id": "retrieval",
+       "share": 30
+      },
+      {
+       "id": "architecture",
+       "share": 30
+      },
+      {
+       "id": "evals",
+       "share": 24
+      }
+     ]
     },
     {
      "slug": "spotify",
      "url": "https://jobs.lever.co/spotify",
      "ok": true,
-     "ai": 17
+     "ai": 17,
+     "company": "spotify",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 53
+      },
+      {
+       "id": "rd-researcher",
+       "share": 41
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 6
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 71
+      },
+      {
+       "id": "models",
+       "share": 71
+      },
+      {
+       "id": "customer",
+       "share": 41
+      },
+      {
+       "id": "retrieval",
+       "share": 35
+      },
+      {
+       "id": "evals",
+       "share": 24
+      }
+     ]
     },
     {
      "slug": "zoox",
      "url": "https://jobs.lever.co/zoox",
      "ok": true,
-     "ai": 32
+     "ai": 32,
+     "company": "zoox",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 50
+      },
+      {
+       "id": "other-ai",
+       "share": 25
+      },
+      {
+       "id": "rd-researcher",
+       "share": 19
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 91
+      },
+      {
+       "id": "models",
+       "share": 56
+      },
+      {
+       "id": "evals",
+       "share": 41
+      },
+      {
+       "id": "agents",
+       "share": 28
+      },
+      {
+       "id": "context",
+       "share": 25
+      }
+     ]
     },
     {
      "slug": "shieldai",
      "url": "https://jobs.lever.co/shieldai",
      "ok": true,
-     "ai": 15
+     "ai": 0
     },
     {
      "slug": "outreach",
      "url": "https://jobs.lever.co/outreach",
      "ok": true,
-     "ai": 3
+     "ai": 3,
+     "company": "outreach",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 67
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 67
+      },
+      {
+       "id": "retrieval",
+       "share": 67
+      },
+      {
+       "id": "product",
+       "share": 67
+      }
+     ]
     },
     {
      "slug": "wealthsimple",
@@ -581,12 +2830,37 @@
      "url": "https://jobs.lever.co/superannotate",
      "ok": true,
      "ai": 1,
+     "company": "superannotate",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 100
+      }
+     ],
      "name": "SuperAnnotate",
      "tool": "superannotate"
     }
    ],
    "ok": true,
-   "ai": 138,
+   "ai": 124,
    "processed": 37
   },
   {
@@ -599,195 +2873,195 @@
     {
      "slug": "openai",
      "url": "https://jobs.ashbyhq.com/openai",
-     "ok": true,
-     "ai": 174,
+     "ok": false,
+     "ai": 0,
      "name": "OpenAI",
      "kind": "lab"
     },
     {
      "slug": "cohere",
      "url": "https://jobs.ashbyhq.com/cohere",
-     "ok": true,
-     "ai": 24,
+     "ok": false,
+     "ai": 0,
      "name": "Cohere",
      "kind": "lab"
     },
     {
      "slug": "elevenlabs",
      "url": "https://jobs.ashbyhq.com/elevenlabs",
-     "ok": true,
-     "ai": 10
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "langchain",
      "url": "https://jobs.ashbyhq.com/langchain",
-     "ok": true,
-     "ai": 11
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "perplexity",
      "url": "https://jobs.ashbyhq.com/perplexity",
-     "ok": true,
-     "ai": 20,
+     "ok": false,
+     "ai": 0,
      "name": "Perplexity",
      "kind": "lab"
     },
     {
      "slug": "notion",
      "url": "https://jobs.ashbyhq.com/notion",
-     "ok": true,
-     "ai": 13
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "replit",
      "url": "https://jobs.ashbyhq.com/replit",
-     "ok": true,
-     "ai": 3
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "linear",
      "url": "https://jobs.ashbyhq.com/linear",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "unify",
      "url": "https://jobs.ashbyhq.com/unify",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "harvey",
      "url": "https://jobs.ashbyhq.com/harvey",
-     "ok": true,
-     "ai": 20
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "cursor",
      "url": "https://jobs.ashbyhq.com/cursor",
-     "ok": true,
-     "ai": 11
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "ramp",
      "url": "https://jobs.ashbyhq.com/ramp",
-     "ok": true,
-     "ai": 10
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "deel",
      "url": "https://jobs.ashbyhq.com/deel",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "modal",
      "url": "https://jobs.ashbyhq.com/modal",
-     "ok": true,
-     "ai": 5
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "baseten",
      "url": "https://jobs.ashbyhq.com/baseten",
-     "ok": true,
-     "ai": 11
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "pinecone",
      "url": "https://jobs.ashbyhq.com/pinecone",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "llamaindex",
      "url": "https://jobs.ashbyhq.com/llamaindex",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "supabase",
      "url": "https://jobs.ashbyhq.com/supabase",
-     "ok": true,
-     "ai": 5
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "posthog",
      "url": "https://jobs.ashbyhq.com/posthog",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "sierra",
      "url": "https://jobs.ashbyhq.com/sierra",
-     "ok": true,
-     "ai": 36
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "decagon",
      "url": "https://jobs.ashbyhq.com/decagon",
-     "ok": true,
-     "ai": 24
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "cognition",
      "url": "https://jobs.ashbyhq.com/cognition",
-     "ok": true,
-     "ai": 18
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "writer",
      "url": "https://jobs.ashbyhq.com/writer",
-     "ok": true,
-     "ai": 9
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "rogo",
      "url": "https://jobs.ashbyhq.com/rogo",
-     "ok": true,
-     "ai": 2
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "claylabs",
      "url": "https://jobs.ashbyhq.com/claylabs",
-     "ok": true,
-     "ai": 3
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "mercor",
      "url": "https://jobs.ashbyhq.com/mercor",
-     "ok": true,
-     "ai": 21
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "runway",
      "url": "https://jobs.ashbyhq.com/runway",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "pika",
      "url": "https://jobs.ashbyhq.com/pika",
-     "ok": true,
-     "ai": 5
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "suno",
      "url": "https://jobs.ashbyhq.com/suno",
-     "ok": true,
-     "ai": 12
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "character",
      "url": "https://jobs.ashbyhq.com/character",
-     "ok": true,
-     "ai": 7,
+     "ok": false,
+     "ai": 0,
      "name": "Character.AI",
      "kind": "lab"
     },
     {
      "slug": "poolside",
      "url": "https://jobs.ashbyhq.com/poolside",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Poolside",
      "kind": "lab"
@@ -795,7 +3069,7 @@
     {
      "slug": "magic",
      "url": "https://jobs.ashbyhq.com/magic",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Magic",
      "kind": "lab"
@@ -803,201 +3077,201 @@
     {
      "slug": "lovable",
      "url": "https://jobs.ashbyhq.com/lovable",
-     "ok": true,
-     "ai": 11
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "factory",
      "url": "https://jobs.ashbyhq.com/factory",
-     "ok": true,
-     "ai": 2
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "mintlify",
      "url": "https://jobs.ashbyhq.com/mintlify",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "airbyte",
      "url": "https://jobs.ashbyhq.com/airbyte",
-     "ok": true,
-     "ai": 2
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "temporal",
      "url": "https://jobs.ashbyhq.com/temporal",
-     "ok": true,
-     "ai": 2
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "inngest",
      "url": "https://jobs.ashbyhq.com/inngest",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "browserbase",
      "url": "https://jobs.ashbyhq.com/browserbase",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "e2b",
      "url": "https://jobs.ashbyhq.com/e2b",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "letta",
      "url": "https://jobs.ashbyhq.com/letta",
-     "ok": true,
-     "ai": 4
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "mem0",
      "url": "https://jobs.ashbyhq.com/mem0",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "braintrust",
      "url": "https://jobs.ashbyhq.com/braintrust",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "langfuse",
      "url": "https://jobs.ashbyhq.com/langfuse",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "patronus",
      "url": "https://jobs.ashbyhq.com/patronus",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "1password",
      "url": "https://jobs.ashbyhq.com/1password",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "zapier",
      "url": "https://jobs.ashbyhq.com/zapier",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "attio",
      "url": "https://jobs.ashbyhq.com/attio",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "hightouch",
      "url": "https://jobs.ashbyhq.com/hightouch",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "hex",
      "url": "https://jobs.ashbyhq.com/hex",
-     "ok": true,
-     "ai": 4
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "vanta",
      "url": "https://jobs.ashbyhq.com/vanta",
-     "ok": true,
-     "ai": 8
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "drata",
      "url": "https://jobs.ashbyhq.com/drata",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "abridge",
      "url": "https://jobs.ashbyhq.com/abridge",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "gamma",
      "url": "https://jobs.ashbyhq.com/gamma",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "granola",
      "url": "https://jobs.ashbyhq.com/granola",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "synthesia",
      "url": "https://jobs.ashbyhq.com/synthesia",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "elicit",
      "url": "https://jobs.ashbyhq.com/elicit",
-     "ok": true,
-     "ai": 3
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "cartesia",
      "url": "https://jobs.ashbyhq.com/cartesia",
-     "ok": true,
-     "ai": 2
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "deepgram",
      "url": "https://jobs.ashbyhq.com/deepgram",
-     "ok": true,
-     "ai": 17
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "livekit",
      "url": "https://jobs.ashbyhq.com/livekit",
-     "ok": true,
-     "ai": 6
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "vapi",
      "url": "https://jobs.ashbyhq.com/vapi",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "bland",
      "url": "https://jobs.ashbyhq.com/bland",
-     "ok": true,
-     "ai": 3
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "crusoe",
      "url": "https://jobs.ashbyhq.com/crusoe",
-     "ok": true,
-     "ai": 11
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "reflectionai",
      "url": "https://jobs.ashbyhq.com/reflectionai",
-     "ok": true,
-     "ai": 2,
+     "ok": false,
+     "ai": 0,
      "name": "Reflection AI",
      "kind": "lab"
     },
     {
      "slug": "ssi",
      "url": "https://jobs.ashbyhq.com/ssi",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Safe Superintelligence",
      "kind": "lab"
@@ -1005,21 +3279,21 @@
     {
      "slug": "thinkingmachines",
      "url": "https://jobs.ashbyhq.com/thinkingmachines",
-     "ok": true,
-     "ai": 7,
+     "ok": false,
+     "ai": 0,
      "name": "Thinking Machines Lab",
      "kind": "lab"
     },
     {
      "slug": "physicalintelligence",
      "url": "https://jobs.ashbyhq.com/physicalintelligence",
-     "ok": true,
-     "ai": 7
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "anam",
      "url": "https://jobs.ashbyhq.com/anam",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Anam",
      "tool": "anam"
@@ -1027,39 +3301,31 @@
     {
      "slug": "arena",
      "url": "https://jobs.ashbyhq.com/arena",
-     "ok": true,
-     "ai": 3,
+     "ok": false,
+     "ai": 0,
      "name": "LMArena (Arena)",
      "tool": "lmarena"
     },
     {
-     "slug": "arthur-ai",
-     "url": "https://jobs.ashbyhq.com/arthur-ai",
-     "ok": true,
-     "ai": 1,
-     "name": "Arthur Engine",
-     "tool": "arthur-engine"
-    },
-    {
      "slug": "artificialanalysis",
      "url": "https://jobs.ashbyhq.com/artificialanalysis",
-     "ok": true,
-     "ai": 5,
+     "ok": false,
+     "ai": 0,
      "name": "Artificial Analysis",
      "tool": "artificial-analysis"
     },
     {
      "slug": "black-forest-labs",
      "url": "https://jobs.ashbyhq.com/black-forest-labs",
-     "ok": true,
-     "ai": 2,
+     "ok": false,
+     "ai": 0,
      "name": "FLUX (Black Forest Labs)",
      "tool": "flux"
     },
     {
      "slug": "bolt",
      "url": "https://jobs.ashbyhq.com/bolt",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Bolt.new",
      "tool": "bolt"
@@ -1067,15 +3333,15 @@
     {
      "slug": "cerebras",
      "url": "https://jobs.ashbyhq.com/cerebras",
-     "ok": true,
-     "ai": 24,
+     "ok": false,
+     "ai": 0,
      "name": "Cerebras",
      "kind": "lab"
     },
     {
      "slug": "comfy-org",
      "url": "https://jobs.ashbyhq.com/comfy-org",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "ComfyUI",
      "tool": "comfyui"
@@ -1083,15 +3349,15 @@
     {
      "slug": "composio",
      "url": "https://jobs.ashbyhq.com/composio",
-     "ok": true,
-     "ai": 6,
+     "ok": false,
+     "ai": 0,
      "name": "Composio",
      "tool": "composio"
     },
     {
      "slug": "credo",
      "url": "https://jobs.ashbyhq.com/credo",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Credo AI",
      "tool": "credo-ai"
@@ -1099,55 +3365,47 @@
     {
      "slug": "encord",
      "url": "https://jobs.ashbyhq.com/encord",
-     "ok": true,
-     "ai": 4,
+     "ok": false,
+     "ai": 0,
      "name": "Encord",
      "tool": "encord"
     },
     {
      "slug": "exa",
      "url": "https://jobs.ashbyhq.com/exa",
-     "ok": true,
-     "ai": 8,
+     "ok": false,
+     "ai": 0,
      "name": "Exa",
      "tool": "exa"
     },
     {
      "slug": "firecrawl",
      "url": "https://jobs.ashbyhq.com/firecrawl",
-     "ok": true,
-     "ai": 4,
+     "ok": false,
+     "ai": 0,
      "name": "Firecrawl",
      "tool": "firecrawl"
     },
     {
      "slug": "fireworks",
      "url": "https://jobs.ashbyhq.com/fireworks",
-     "ok": true,
-     "ai": 12,
+     "ok": false,
+     "ai": 0,
      "name": "Fireworks AI",
      "kind": "lab"
     },
     {
      "slug": "hedra",
      "url": "https://jobs.ashbyhq.com/hedra",
-     "ok": true,
-     "ai": 2,
+     "ok": false,
+     "ai": 0,
      "name": "Hedra Live Avatars",
      "tool": "hedra-live-avatars"
     },
     {
-     "slug": "judgmentlabs",
-     "url": "https://jobs.ashbyhq.com/judgmentlabs",
-     "ok": true,
-     "ai": 1,
-     "name": "Judgment Labs judgeval",
-     "tool": "judgeval"
-    },
-    {
      "slug": "juicebox",
      "url": "https://jobs.ashbyhq.com/juicebox",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Juicebox",
      "kind": "recruiting"
@@ -1155,55 +3413,55 @@
     {
      "slug": "lancedb",
      "url": "https://jobs.ashbyhq.com/lancedb",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "LanceDB",
      "tool": "lancedb"
     },
     {
      "slug": "lightning",
      "url": "https://jobs.ashbyhq.com/lightning",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "PyTorch Lightning",
      "tool": "lightning"
     },
     {
      "slug": "midjourney",
      "url": "https://jobs.ashbyhq.com/midjourney",
-     "ok": true,
-     "ai": 2,
+     "ok": false,
+     "ai": 0,
      "name": "Midjourney",
      "tool": "midjourney"
     },
     {
      "slug": "n8n",
      "url": "https://jobs.ashbyhq.com/n8n",
-     "ok": true,
-     "ai": 3,
+     "ok": false,
+     "ai": 0,
      "name": "n8n",
      "tool": "n8n"
     },
     {
      "slug": "nousresearch",
      "url": "https://jobs.ashbyhq.com/nousresearch",
-     "ok": true,
-     "ai": 2,
+     "ok": false,
+     "ai": 0,
      "name": "Hermes Agent",
      "tool": "hermes-agent"
     },
     {
      "slug": "ollama",
      "url": "https://jobs.ashbyhq.com/ollama",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "Ollama",
      "tool": "ollama"
     },
     {
      "slug": "openhands",
      "url": "https://jobs.ashbyhq.com/openhands",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "OpenHands",
      "tool": "openhands"
@@ -1211,15 +3469,15 @@
     {
      "slug": "openrouter",
      "url": "https://jobs.ashbyhq.com/openrouter",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "OpenRouter",
      "tool": "openrouter"
     },
     {
      "slug": "redis",
      "url": "https://jobs.ashbyhq.com/redis",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Redis",
      "tool": "redis"
@@ -1227,55 +3485,47 @@
     {
      "slug": "reducto",
      "url": "https://jobs.ashbyhq.com/reducto",
-     "ok": true,
-     "ai": 5,
+     "ok": false,
+     "ai": 0,
      "name": "Reducto",
      "tool": "reducto"
     },
     {
      "slug": "reka",
      "url": "https://jobs.ashbyhq.com/reka",
-     "ok": true,
-     "ai": 3,
+     "ok": false,
+     "ai": 0,
      "name": "Reka",
      "kind": "lab"
     },
     {
      "slug": "roboflow",
      "url": "https://jobs.ashbyhq.com/roboflow",
-     "ok": true,
-     "ai": 5,
+     "ok": false,
+     "ai": 0,
      "name": "Roboflow",
      "tool": "roboflow"
     },
     {
      "slug": "runpod",
      "url": "https://jobs.ashbyhq.com/runpod",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "RunPod",
      "tool": "runpod"
     },
     {
-     "slug": "sentry",
-     "url": "https://jobs.ashbyhq.com/sentry",
-     "ok": true,
-     "ai": 3,
-     "name": "Sentry AI Agent Monitoring",
-     "tool": "sentry-ai-agent-monitoring"
-    },
-    {
      "slug": "tavus",
      "url": "https://jobs.ashbyhq.com/tavus",
-     "ok": true,
-     "ai": 4,
+     "ok": false,
+     "ai": 0,
      "name": "Tavus CVI",
      "tool": "tavus-cvi"
     },
     {
      "slug": "trychroma",
      "url": "https://jobs.ashbyhq.com/trychroma",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Chroma",
      "tool": "chroma"
@@ -1283,7 +3533,7 @@
     {
      "slug": "turbopuffer",
      "url": "https://jobs.ashbyhq.com/turbopuffer",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Turbopuffer",
      "tool": "turbopuffer"
@@ -1291,22 +3541,22 @@
     {
      "slug": "ultralytics",
      "url": "https://jobs.ashbyhq.com/ultralytics",
-     "ok": true,
-     "ai": 3,
+     "ok": false,
+     "ai": 0,
      "name": "Ultralytics YOLO",
      "tool": "ultralytics"
     },
     {
      "slug": "weaviate",
      "url": "https://jobs.ashbyhq.com/weaviate",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Weaviate",
      "tool": "weaviate"
     }
    ],
-   "ok": true,
-   "ai": 662,
+   "ok": false,
+   "ai": 0,
    "processed": 216
   },
   {
@@ -1319,25 +3569,62 @@
     {
      "slug": "nvidia",
      "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite",
-     "ok": true,
-     "ai": 307
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "salesforce",
      "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",
      "ok": true,
-     "ai": 92
+     "ai": 91,
+     "company": "salesforce",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 57
+      },
+      {
+       "id": "rd-researcher",
+       "share": 13
+      },
+      {
+       "id": "other-ai",
+       "share": 8
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 86
+      },
+      {
+       "id": "customer",
+       "share": 80
+      },
+      {
+       "id": "context",
+       "share": 71
+      },
+      {
+       "id": "data",
+       "share": 67
+      }
+     ]
     },
     {
      "slug": "adobe",
      "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced",
-     "ok": true,
-     "ai": 29
+     "ok": false,
+     "ai": 0
     }
    ],
    "ok": true,
-   "ai": 428,
-   "processed": 392
+   "ai": 91,
+   "processed": 390
   },
   {
    "id": "smartrecruiters",
@@ -1350,42 +3637,248 @@
      "slug": "BoschGroup",
      "url": "https://careers.smartrecruiters.com/BoschGroup",
      "ok": true,
-     "ai": 47
+     "ai": 46,
+     "company": "BoschGroup",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 35
+      },
+      {
+       "id": "other-ai",
+       "share": 33
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 13
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 83
+      },
+      {
+       "id": "agents",
+       "share": 54
+      },
+      {
+       "id": "data",
+       "share": 52
+      },
+      {
+       "id": "retrieval",
+       "share": 39
+      },
+      {
+       "id": "customer",
+       "share": 39
+      }
+     ]
     },
     {
      "slug": "ServiceNow",
      "url": "https://careers.smartrecruiters.com/ServiceNow",
      "ok": true,
-     "ai": 118
+     "ai": 120,
+     "company": "ServiceNow",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 30
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 28
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 17
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 83
+      },
+      {
+       "id": "agents",
+       "share": 79
+      },
+      {
+       "id": "context",
+       "share": 62
+      },
+      {
+       "id": "evals",
+       "share": 62
+      },
+      {
+       "id": "architecture",
+       "share": 59
+      }
+     ]
     },
     {
      "slug": "Wise",
      "url": "https://careers.smartrecruiters.com/Wise",
      "ok": true,
-     "ai": 14
+     "ai": 13,
+     "company": "Wise",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 46
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 46
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 8
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 85
+      },
+      {
+       "id": "evals",
+       "share": 62
+      },
+      {
+       "id": "models",
+       "share": 54
+      },
+      {
+       "id": "customer",
+       "share": 54
+      },
+      {
+       "id": "data",
+       "share": 38
+      }
+     ]
     },
     {
      "slug": "Canva",
      "url": "https://careers.smartrecruiters.com/Canva",
      "ok": true,
-     "ai": 1
+     "ai": 1,
+     "company": "Canva",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "security",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "Experian",
      "url": "https://careers.smartrecruiters.com/Experian",
      "ok": true,
-     "ai": 22
+     "ai": 23,
+     "company": "Experian",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 35
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 26
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 17
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 87
+      },
+      {
+       "id": "customer",
+       "share": 87
+      },
+      {
+       "id": "data",
+       "share": 57
+      },
+      {
+       "id": "agents",
+       "share": 39
+      },
+      {
+       "id": "retrieval",
+       "share": 30
+      }
+     ]
     },
     {
      "slug": "Ubisoft2",
      "url": "https://careers.smartrecruiters.com/Ubisoft2",
      "ok": true,
-     "ai": 9
+     "ai": 9,
+     "company": "Ubisoft2",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 33
+      },
+      {
+       "id": "other-ai",
+       "share": 22
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 22
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 56
+      },
+      {
+       "id": "models",
+       "share": 56
+      },
+      {
+       "id": "agents",
+       "share": 44
+      },
+      {
+       "id": "evals",
+       "share": 44
+      }
+     ]
     }
    ],
    "ok": true,
-   "ai": 211,
-   "processed": 172
+   "ai": 212,
+   "processed": 184
   },
   {
    "id": "workable",
@@ -1399,6 +3892,43 @@
      "url": "https://apply.workable.com/huggingface/",
      "ok": true,
      "ai": 5,
+     "company": "huggingface",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 40
+      },
+      {
+       "id": "other-ai",
+       "share": 40
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 60
+      },
+      {
+       "id": "customer",
+       "share": 40
+      },
+      {
+       "id": "context",
+       "share": 20
+      }
+     ],
      "name": "Hugging Face",
      "kind": "lab"
     }
@@ -1450,8 +3980,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 13,
-   "processed": 31
+   "ai": 16,
+   "processed": 34
   },
   {
    "id": "jobicy",
@@ -1461,8 +3991,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 1,
-   "processed": 3
+   "ai": 2,
+   "processed": 4
   },
   {
    "id": "remotive",
@@ -1483,8 +4013,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 83,
-   "processed": 322
+   "ai": 82,
+   "processed": 352
   },
   {
    "id": "hackernews",
@@ -1494,7 +4024,7 @@
    "how": "Algolia HN API",
    "boards": [],
    "ok": true,
-   "ai": 44,
+   "ai": 42,
    "processed": 44
   }
  ],

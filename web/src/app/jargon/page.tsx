@@ -1,9 +1,10 @@
+import Link from "next/link";
 import { Crumb } from "@/components/section-intro";
 import type { Metadata } from "next";
 import { JargonBrowser } from "@/components/jargon-browser";
 import { fields, terms } from "@/data/dictionary";
 import { More } from "@/components/more";
-import { TH } from "@/i18n/lang";
+import { T, TH } from "@/i18n/lang";
 import { JsonLd } from "@/components/json-ld";
 import { jargonLd } from "@/lib/seo";
 import { share } from "@/lib/share";
@@ -19,6 +20,12 @@ export default function Jargon() {
         <h1 style={{ marginTop: 12 }}><TH k="jargon.h1">The words, made easy</TH><span className="dot">.</span></h1>
         <p className="lead" style={{ marginTop: 16 }}><TH k="jargon.p1" vars={{ v1: terms.length }}><b>{terms.length} terms</b> you will hear in AI teams, <b>in plain language</b>.</TH></p>
         <More><p className="lead" style={{ marginTop: 12 }}><TH k="jargon.p2">The front of each card says it plainly; <b>turn it over</b> for what a good interview answer adds.</TH></p></More>
+        <Link href="/jargon/coined/" className="frame jg-coined">
+          <span className="kicker"><T k="cd.k">New this year, and last</T></span>
+          <b><T k="cd.tile">Coined &amp; decoded</T> →</b>
+          <span className="muted"><T k="cd.tile_p">Vibe coding, context engineering, harness engineering: who coined each new word, when, and what it plainly means.</T></span>
+          <style>{`.jg-coined { display: grid; gap: 4px; margin-top: 22px; max-width: 640px; } .jg-coined b { font-size: 1.2rem; } .jg-coined:hover b { color: var(--rust-deep); }`}</style>
+        </Link>
         <div style={{ marginTop: 28 }}><JargonBrowser terms={terms} fields={fields} /></div>
       </div>
     </section>

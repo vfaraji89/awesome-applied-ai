@@ -28,8 +28,8 @@ const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: { default: `${site.title} · awesome-applied-ai`, template: `%s · awesome-applied-ai` },
-  description: "Applied AI, mapped in seven steps: what the job market asks for, the roles and skills, the AI-native architect, 600+ tools, industry certificates and docs in motion. Free, in five languages, curated by Vahid Faraji.",
+  title: { default: site.title, template: `%s · ${site.title}` },
+  description: "Applied AI is made to sound harder than it is. What the job market asks for, the roles and skills, the people who build it, the events, the AI-native architect, 600+ tools and the docs, said plainly. Free, in five languages, curated by Vahid Faraji.",
   authors: [{ name: site.author.name, url: site.author.site }],
   icons: {
     icon: [{ url: `${basePath}/icon.svg`, type: "image/svg+xml" }, { url: `${basePath}/icon.png`, sizes: "64x64" }],
@@ -37,7 +37,7 @@ export const metadata: Metadata = {
   },
   alternates: { canonical: "./" },
   // share images: each page calls share() from lib/share.ts (images built by scripts/og/build.ts)
-  openGraph: { type: "website", url: "./", siteName: "awesome-applied-ai", locale: "en_US" },
+  openGraph: { type: "website", url: "./", siteName: "Applied AI, Simplified", locale: "en_US" },
   twitter: { card: "summary_large_image", creator: "@vfaraji89" },
 };
 

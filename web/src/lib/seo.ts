@@ -11,7 +11,7 @@ import { problems } from "@/data/problems";
 import jargon from "@/data/content/jargon.json";
 import { statsDate } from "@/lib/tool-signals";
 
-export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://vfaraji89.github.io/awesome-applied-ai").replace(/\/$/, "");
+export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://vfaraji89.github.io/applied-ai-simplified").replace(/\/$/, "");
 export const abs = (path: string) => SITE_URL + (path.startsWith("/") ? path : "/" + path);
 const LANGS = ["en", "tr", "es", "nl", "ja"];
 
@@ -22,9 +22,9 @@ export const websiteLd = () => ({
   "@context": "https://schema.org",
   "@graph": [
     {
-      "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: "awesome-applied-ai",
-      alternateName: "Applied AI, mapped",
-      description: "A plain-language map of applied AI in seven steps: the job market, roles and skills, the AI-native architect, a tool map, industry certificates, technical docs in motion, and feedback.",
+      "@type": "WebSite", "@id": `${SITE_URL}/#website`, url: `${SITE_URL}/`, name: "Applied AI, Simplified",
+      alternateName: "applied-ai-simplified",
+      description: "Applied AI, said plainly, in seven sections: the job market, roles and skills, people and companies, events, the AI-native architect, the tool map, and learning it plainly.",
       inLanguage: LANGS, author, publisher: author, isAccessibleForFree: true,
       about: ["Applied artificial intelligence", "AI engineering", "AI agents", "Large language models", "AI careers"],
     },

@@ -20,7 +20,7 @@ import market from "../../src/data/market.json";
 import { signals } from "../../src/lib/tool-signals";
 
 const WEB = new URL("../../", import.meta.url).pathname;
-const URL_ = "vfaraji89.github.io/awesome-applied-ai";
+const URL_ = "vfaraji89.github.io/applied-ai-simplified";
 const plus = (n: number) => { const p = 10 ** Math.max(0, String(n).length - 2); return `${(Math.floor(n / p) * p).toLocaleString("en")}+`; };
 const boards = (market.sources ?? []).reduce((a: number, s: { boards?: number }) => a + (s.boards ?? 1), 0);
 const ads = plus(market.totals.processed);
@@ -32,7 +32,7 @@ const R = (route: string, kicker: string, title: string, desc: string, stats: [s
   ({ route, kicker, title, desc, stats: stats.map(([n, l]) => ({ n, l })), alt: `${title.replace(/<[^>]+>/g, "")}: ${desc}`, rows });
 
 const cards: Card[] = [
-  R("", "Companion to the book Applied AI, Simplified", "Applied AI, <mark>mapped</mark>", "From what the market asks for to the docs you need to build it: seven steps, free, in five languages.",
+  R("", "Companion to the book Applied AI, Simplified", "Applied AI, <mark>simplified</mark>", "Applied AI is made to sound harder than it is. The job ads, the tools, the people and the docs, said plainly. Free, in five languages.",
     [[plus(tools.length), "tools"], [ads, "AI job ads"], [String(certs.length), "certificates"]]),
   R("market", "01 · The market", "What applied AI jobs <mark>ask for</mark>", "Roles, levels, skills, tasks and tools from every AI job ad since 1 Oct 2026, read daily from public career pages.",
     [[ads, "AI job ads"], [String(boards), "sites read"], ["Daily", "updates"]], ["wrrrw", "wwkkw", "wwwwk"]),
@@ -42,6 +42,14 @@ const cards: Card[] = [
     [[ads, "job ads"], [String(skills.length), "skills scored"], ["Free", "in your browser"]], ["rrrrw", "rrkww", "rwwww"]),
   R("market/sources", "01 · The market · sources", "Every site the tracker <mark>reads</mark>", "Company career pages and public job boards, the hiring platform behind each, and what the ads ask for.",
     [[String(boards), "sites read"], [ads, "AI job ads"], ["3", "left out"]]),
+  R("jargon/coined", "07 · Learn · coined & decoded", "Coined <mark>& decoded</mark>", "The new words of applied AI: who coined them, when, and what they plainly mean. Most are old ideas with a better name.",
+    [["13", "new words"], ["2010–2026", "coined"], ["Sourced", "every one"]], ["kwrwk", "wrkrw", "kwrwk"]),
+  R("events", "04 · Events · calendar", "The year in <mark>applied AI events</mark>", "The major AI engineering, AI software and AI platform events coming up: official dates only, add any to your calendar.",
+    [["15", "events dated"], ["12", "months ahead"], ["Official", "dates only"]], ["rwkwr", "wrwkw", "kwrwr"]),
+  R("market/conferences", "04 · Events · conferences", "On stage, and <mark>in the job</mark>", "What applied AI conferences talk about, set against what AI job ads ask for: AI Engineer, PyTorch Conference and Microsoft Build.",
+    [["2,000+", "talks read"], [ads, "AI job ads"], ["Monthly", "updates"]], ["kkrrw", "wkrrw", "wwkrr"]),
+  R("market/method", "01 · The market · method and data", "How the numbers are made, and <mark>how wrong they are</mark>", "How AI job ads are read and classified, error rates checked by hand every month, and an open dataset under CC BY 4.0.",
+    [[ads, "AI job ads"], ["Monthly", "hand checks"], ["CC BY", "open data"]], ["rrkww", "wkkrw", "wwwrr"]),
   R("labs", "01 · The market · the labs", "What the labs <mark>ask for</mark>", "Applied AI roles at Anthropic, OpenAI and Google, side by side, from their public postings.",
     [["3", "labs"], ["5", "shared asks"], ["Linked", "sources"]]),
   R("roles", "02 · Roles and skills", "Who does the work, and <mark>what it takes</mark>", "Eight applied AI roles: their titles, daily tasks, stack and how each one grows.",
@@ -52,29 +60,33 @@ const cards: Card[] = [
     [[String(skills.length), "skills"], [String(fRoles.length), "roles"], ["4", "levels"]], ["rrkkw", "rkkww", "kwwww"]),
   R("roles/tasks", "02 · Roles and skills · tasks", "What the work <mark>actually is</mark>", "The tasks AI job ads ask you to do, which role does each most, and every role's daily work.",
     [[ads, "AI job ads"], ["12", "tasks"], [String(fRoles.length), "roles"]], ["rrrrw", "wkkkw", "wwrww"]),
+  R("companies", "03 · People and companies · companies", "The companies <mark>behind applied AI</mark>", "Who is hiring AI roles now, what they build and what they bring to the stage.",
+    [["80+", "companies"], [ads, "AI job ads"], ["Daily", "hiring data"]], ["kwkwk", "wkwkw", "kwkwk"]),
+  R("people", "03 · People and companies", "The people <mark>building applied AI</mark>", "Engineers, researchers and quiet builders, not the famous names: where they work, what they build and what they talk about.",
+    [["50", "people"], ["2023–2026", "on stage"], ["Linked", "sources"]], ["rwrwr", "wrwrw", "rwrwr"]),
   R("skills", "02 · Roles and skills · skill map", "Which skills <mark>travel together</mark>", "The skills applied AI postings ask for, how often they appear together, and which opens the most doors.",
     [[String(skills.length), "skills"], [ads, "job ads"], [String(fRoles.length), "roles"]]),
-  R("architect", "03 · The AI-native architect", "The role that designs <mark>AI into systems</mark>", "The layers, the stack and the problems an AI-native architect owns.",
+  R("architect", "05 · The AI-native architect", "The role that designs <mark>AI into systems</mark>", "The layers, the stack and the problems an AI-native architect owns.",
     [[String(layers.length), "layers"], [String(problems.length), "problems"], [plus(tools.length), "tools"]], ["wwrww", "wkkkw", "wwrww"]),
-  R("architecture", "03 · Architecture", "Six layers of an <mark>AI system</mark>", "From guardrails to retrieval: one request animated through every layer, and the agent harness on top.",
+  R("architecture", "05 · Architecture", "Six layers of an <mark>AI system</mark>", "From guardrails to retrieval: one request animated through every layer, and the agent harness on top.",
     [[String(layers.length), "layers"], ["1", "harness"], [String(problems.length), "problems"]]),
-  R("problems", "03 · Problems", "Problems teams <mark>actually hit</mark>", "Asked the way a team would ask them, with worked answers, layer by layer.",
+  R("problems", "05 · Problems", "Problems teams <mark>actually hit</mark>", "Asked the way a team would ask them, with worked answers, layer by layer.",
     [[String(problems.length), "problems"], [String(layers.length), "layers"], ["Worked", "answers"]]),
-  R("radar", "03 · Emerging tech radar", "What is new, and <mark>how far to trust it</mark>", "Emerging applied AI tech on four rings: use now, pilot, evaluate, watch.",
+  R("radar", "05 · Emerging tech radar", "What is new, and <mark>how far to trust it</mark>", "Emerging applied AI tech on four rings: use now, pilot, evaluate, watch.",
     [[String(radarN), "entries"], ["4", "rings"], ["Dated", "sources"]]),
-  R("tools", "04 · The tool map", `${plus(tools.length)} tools across <mark>applied AI</mark>`, `${areas.length} areas, ${useCases.length} use cases, licence and maturity for each, and what launched in the last six months.`,
+  R("tools", "06 · The tool map", `${plus(tools.length)} tools across <mark>applied AI</mark>`, `${areas.length} areas, ${useCases.length} use cases, licence and maturity for each, and what launched in the last six months.`,
     [[plus(tools.length), "tools"], [String(areas.length), "areas"], [String(tools.filter((t) => signals(t).isNew).length), "emerging"]], ["rrrww", "wkkkw", "wwrkw"]),
-  R("certificates", "05 · Industry certificates", "Certificates worth <mark>having</mark>", "By track and level, each checked against the provider's own page, with what changed recently.",
+  R("certificates", "07 · Learn · certificates", "Certificates worth <mark>having</mark>", "By track and level, each checked against the provider's own page, with what changed recently.",
     [[String(certs.length), "certificates"], [String(providers), "providers"], [String(courses.length), "courses"]], ["wwwrw", "wkkrw", "rrrrw"]),
-  R("docs", "06 · Technical docs, in motion", "The docs people <mark>skip</mark>, in motion", "Short animations, everyday comparisons, real examples and the code you need.",
+  R("docs", "07 · Learn", "The docs people <mark>skip</mark>, in motion", "Short animations, everyday comparisons, real examples and the code you need.",
     [[String(docs.filter((d) => d.status === "live").length), "live"], [String(docs.filter((d) => d.status !== "live").length), "coming"], [String(jargon.terms.length), "terms"]]),
-  R("docs/claude-platform", "06 · Docs · Claude Platform", "How your app <mark>talks to Claude</mark>", "From the first request to the receipt that comes back, one animation at a time.",
+  R("docs/claude-platform", "07 · Learn · Claude Platform", "How your app <mark>talks to Claude</mark>", "From the first request to the receipt that comes back, one animation at a time.",
     [["API", "requests"], ["Tools", "and agents"], ["Cost", "and caching"]]),
-  R("docs/mcp", "06 · Docs · MCP", "One plug for <mark>every tool</mark>", "The Model Context Protocol in ten animated pages: hosts, servers, tools, the handshake, transports, OAuth and safety.",
+  R("docs/mcp", "07 · Learn · MCP", "One plug for <mark>every tool</mark>", "The Model Context Protocol in ten animated pages: hosts, servers, tools, the handshake, transports, OAuth and safety.",
     [["10", "pages"], ["Tools", "resources, prompts"], ["Free", "for everyone"]]),
-  R("jargon", "06 · Docs · jargon", `${jargon.terms.length} terms, in <mark>plain words</mark>`, "Flip cards: the plain meaning on the front, the deeper answer and the interview question on the back.",
+  R("jargon", "07 · Learn · jargon", `${jargon.terms.length} terms, in <mark>plain words</mark>`, "Flip cards: the plain meaning on the front, the deeper answer and the interview question on the back.",
     [[String(jargon.terms.length), "terms"], [String((jargon as { fields: unknown[] }).fields.length), "fields"], ["Interview", "questions"]]),
-  R("contribute", "07 · Feedback", "Spot something wrong? <mark>Tell me</mark>", "Corrections, companies the tracker should follow, and terms or tools that are missing.",
+  R("contribute", "08 · Feedback", "Spot something wrong? <mark>Tell me</mark>", "Corrections, companies the tracker should follow, and terms or tools that are missing.",
     [["Credited", "fixes"], ["Weekly", "updates"], ["Open", "to all"]]),
 ];
 

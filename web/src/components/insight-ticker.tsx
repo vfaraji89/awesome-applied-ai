@@ -67,11 +67,11 @@ const css = `
   .itk { position: relative; height: 92px; margin-top: 26px; border-radius: var(--radius); outline: none; isolation: isolate; }
   .itk::before { content: ""; position: absolute; inset: 0; border-radius: inherit; z-index: -1;
     background: linear-gradient(180deg, color-mix(in oklab, var(--ink) 92%, var(--rust)), var(--ink));
-    box-shadow: 0 22px 40px -30px rgba(0,0,0,.6);
+    
     clip-path: inset(0 50% 0 50% round var(--radius)); transition: clip-path ${OPEN}ms cubic-bezier(.77,0,.18,1); }
   .itk.open::before, .itk.hold::before { clip-path: inset(0 0 0 0 round var(--radius)); }
   .itk.close::before { clip-path: inset(0 50% 0 50% round var(--radius)); transition-duration: ${CLOSE}ms; }
-  .itk-post { position: absolute; top: -6px; bottom: -6px; width: 8px; border-radius: 4px; background: var(--dowel); box-shadow: 0 2px 6px rgba(0,0,0,.25);
+  .itk-post { position: absolute; top: -6px; bottom: -6px; width: 8px; border-radius: 4px; background: var(--dowel); 
     left: calc(50% - 4px); transition: left ${OPEN}ms cubic-bezier(.77,0,.18,1); }
   .itk.open .itk-post.l, .itk.hold .itk-post.l { left: -4px; }
   .itk.open .itk-post.r, .itk.hold .itk-post.r { left: calc(100% - 4px); }
@@ -90,7 +90,7 @@ const css = `
   .itk.hold .itk-rod span { animation: itk-fill ${HOLD}ms linear forwards; }
   .itk:is(:hover, :focus-visible) .itk-rod span { animation-play-state: paused; }
   @keyframes itk-fill { to { transform: none; } }
-  @media (prefers-color-scheme: dark) { .itk::before { background: linear-gradient(180deg, #2a2523, #1b1918); box-shadow: 0 0 0 1px var(--line) inset; } }
+  @media (prefers-color-scheme: dark) { .itk::before { background: linear-gradient(180deg, #2a2523, #1b1918); outline: 1px solid var(--line) inset; outline-offset: 0; } }
   @media (max-width: 640px) { .itk { height: auto; min-height: 112px; } .itk-body { position: relative; grid-template-columns: auto 1fr; padding: 18px 24px 26px; gap: 14px; } .itk-n { display: none; } .itk-big { font-size: 2rem; } }
   @media (prefers-reduced-motion: reduce) {
     .itk::before { clip-path: none !important; transition: none; }
