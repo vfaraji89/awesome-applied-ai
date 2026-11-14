@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-14T03:19:55.731Z",
+ "generatedAt": "2026-11-14T03:25:38.304Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -599,195 +599,195 @@
     {
      "slug": "openai",
      "url": "https://jobs.ashbyhq.com/openai",
-     "ok": true,
-     "ai": 173,
+     "ok": false,
+     "ai": 0,
      "name": "OpenAI",
      "kind": "lab"
     },
     {
      "slug": "cohere",
      "url": "https://jobs.ashbyhq.com/cohere",
-     "ok": true,
-     "ai": 23,
+     "ok": false,
+     "ai": 0,
      "name": "Cohere",
      "kind": "lab"
     },
     {
      "slug": "elevenlabs",
      "url": "https://jobs.ashbyhq.com/elevenlabs",
-     "ok": true,
-     "ai": 11
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "langchain",
      "url": "https://jobs.ashbyhq.com/langchain",
-     "ok": true,
-     "ai": 11
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "perplexity",
      "url": "https://jobs.ashbyhq.com/perplexity",
-     "ok": true,
-     "ai": 19,
+     "ok": false,
+     "ai": 0,
      "name": "Perplexity",
      "kind": "lab"
     },
     {
      "slug": "notion",
      "url": "https://jobs.ashbyhq.com/notion",
-     "ok": true,
-     "ai": 14
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "replit",
      "url": "https://jobs.ashbyhq.com/replit",
-     "ok": true,
-     "ai": 3
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "linear",
      "url": "https://jobs.ashbyhq.com/linear",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "unify",
      "url": "https://jobs.ashbyhq.com/unify",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "harvey",
      "url": "https://jobs.ashbyhq.com/harvey",
-     "ok": true,
-     "ai": 21
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "cursor",
      "url": "https://jobs.ashbyhq.com/cursor",
-     "ok": true,
-     "ai": 10
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "ramp",
      "url": "https://jobs.ashbyhq.com/ramp",
-     "ok": true,
-     "ai": 10
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "deel",
      "url": "https://jobs.ashbyhq.com/deel",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "modal",
      "url": "https://jobs.ashbyhq.com/modal",
-     "ok": true,
-     "ai": 5
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "baseten",
      "url": "https://jobs.ashbyhq.com/baseten",
-     "ok": true,
-     "ai": 11
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "pinecone",
      "url": "https://jobs.ashbyhq.com/pinecone",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "llamaindex",
      "url": "https://jobs.ashbyhq.com/llamaindex",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "supabase",
      "url": "https://jobs.ashbyhq.com/supabase",
-     "ok": true,
-     "ai": 5
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "posthog",
      "url": "https://jobs.ashbyhq.com/posthog",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "sierra",
      "url": "https://jobs.ashbyhq.com/sierra",
-     "ok": true,
-     "ai": 36
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "decagon",
      "url": "https://jobs.ashbyhq.com/decagon",
-     "ok": true,
-     "ai": 22
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "cognition",
      "url": "https://jobs.ashbyhq.com/cognition",
-     "ok": true,
-     "ai": 18
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "writer",
      "url": "https://jobs.ashbyhq.com/writer",
-     "ok": true,
-     "ai": 9
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "rogo",
      "url": "https://jobs.ashbyhq.com/rogo",
-     "ok": true,
-     "ai": 2
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "claylabs",
      "url": "https://jobs.ashbyhq.com/claylabs",
-     "ok": true,
-     "ai": 3
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "mercor",
      "url": "https://jobs.ashbyhq.com/mercor",
-     "ok": true,
-     "ai": 21
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "runway",
      "url": "https://jobs.ashbyhq.com/runway",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "pika",
      "url": "https://jobs.ashbyhq.com/pika",
-     "ok": true,
-     "ai": 5
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "suno",
      "url": "https://jobs.ashbyhq.com/suno",
-     "ok": true,
-     "ai": 12
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "character",
      "url": "https://jobs.ashbyhq.com/character",
-     "ok": true,
-     "ai": 7,
+     "ok": false,
+     "ai": 0,
      "name": "Character.AI",
      "kind": "lab"
     },
     {
      "slug": "poolside",
      "url": "https://jobs.ashbyhq.com/poolside",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Poolside",
      "kind": "lab"
@@ -795,7 +795,7 @@
     {
      "slug": "magic",
      "url": "https://jobs.ashbyhq.com/magic",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Magic",
      "kind": "lab"
@@ -803,201 +803,201 @@
     {
      "slug": "lovable",
      "url": "https://jobs.ashbyhq.com/lovable",
-     "ok": true,
-     "ai": 11
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "factory",
      "url": "https://jobs.ashbyhq.com/factory",
-     "ok": true,
-     "ai": 2
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "mintlify",
      "url": "https://jobs.ashbyhq.com/mintlify",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "airbyte",
      "url": "https://jobs.ashbyhq.com/airbyte",
-     "ok": true,
-     "ai": 2
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "temporal",
      "url": "https://jobs.ashbyhq.com/temporal",
-     "ok": true,
-     "ai": 2
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "inngest",
      "url": "https://jobs.ashbyhq.com/inngest",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "browserbase",
      "url": "https://jobs.ashbyhq.com/browserbase",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "e2b",
      "url": "https://jobs.ashbyhq.com/e2b",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "letta",
      "url": "https://jobs.ashbyhq.com/letta",
-     "ok": true,
-     "ai": 4
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "mem0",
      "url": "https://jobs.ashbyhq.com/mem0",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "braintrust",
      "url": "https://jobs.ashbyhq.com/braintrust",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "langfuse",
      "url": "https://jobs.ashbyhq.com/langfuse",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "patronus",
      "url": "https://jobs.ashbyhq.com/patronus",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "1password",
      "url": "https://jobs.ashbyhq.com/1password",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "zapier",
      "url": "https://jobs.ashbyhq.com/zapier",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "attio",
      "url": "https://jobs.ashbyhq.com/attio",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "hightouch",
      "url": "https://jobs.ashbyhq.com/hightouch",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "hex",
      "url": "https://jobs.ashbyhq.com/hex",
-     "ok": true,
-     "ai": 4
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "vanta",
      "url": "https://jobs.ashbyhq.com/vanta",
-     "ok": true,
-     "ai": 8
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "drata",
      "url": "https://jobs.ashbyhq.com/drata",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "abridge",
      "url": "https://jobs.ashbyhq.com/abridge",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "gamma",
      "url": "https://jobs.ashbyhq.com/gamma",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "granola",
      "url": "https://jobs.ashbyhq.com/granola",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "synthesia",
      "url": "https://jobs.ashbyhq.com/synthesia",
-     "ok": true,
-     "ai": 1
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "elicit",
      "url": "https://jobs.ashbyhq.com/elicit",
-     "ok": true,
-     "ai": 3
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "cartesia",
      "url": "https://jobs.ashbyhq.com/cartesia",
-     "ok": true,
-     "ai": 2
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "deepgram",
      "url": "https://jobs.ashbyhq.com/deepgram",
-     "ok": true,
-     "ai": 17
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "livekit",
      "url": "https://jobs.ashbyhq.com/livekit",
-     "ok": true,
-     "ai": 6
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "vapi",
      "url": "https://jobs.ashbyhq.com/vapi",
-     "ok": true,
+     "ok": false,
      "ai": 0
     },
     {
      "slug": "bland",
      "url": "https://jobs.ashbyhq.com/bland",
-     "ok": true,
-     "ai": 3
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "crusoe",
      "url": "https://jobs.ashbyhq.com/crusoe",
-     "ok": true,
-     "ai": 11
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "reflectionai",
      "url": "https://jobs.ashbyhq.com/reflectionai",
-     "ok": true,
-     "ai": 2,
+     "ok": false,
+     "ai": 0,
      "name": "Reflection AI",
      "kind": "lab"
     },
     {
      "slug": "ssi",
      "url": "https://jobs.ashbyhq.com/ssi",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Safe Superintelligence",
      "kind": "lab"
@@ -1005,21 +1005,21 @@
     {
      "slug": "thinkingmachines",
      "url": "https://jobs.ashbyhq.com/thinkingmachines",
-     "ok": true,
-     "ai": 7,
+     "ok": false,
+     "ai": 0,
      "name": "Thinking Machines Lab",
      "kind": "lab"
     },
     {
      "slug": "physicalintelligence",
      "url": "https://jobs.ashbyhq.com/physicalintelligence",
-     "ok": true,
-     "ai": 7
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "anam",
      "url": "https://jobs.ashbyhq.com/anam",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Anam",
      "tool": "anam"
@@ -1027,39 +1027,39 @@
     {
      "slug": "arena",
      "url": "https://jobs.ashbyhq.com/arena",
-     "ok": true,
-     "ai": 4,
+     "ok": false,
+     "ai": 0,
      "name": "LMArena (Arena)",
      "tool": "lmarena"
     },
     {
      "slug": "arthur-ai",
      "url": "https://jobs.ashbyhq.com/arthur-ai",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "Arthur Engine",
      "tool": "arthur-engine"
     },
     {
      "slug": "artificialanalysis",
      "url": "https://jobs.ashbyhq.com/artificialanalysis",
-     "ok": true,
-     "ai": 5,
+     "ok": false,
+     "ai": 0,
      "name": "Artificial Analysis",
      "tool": "artificial-analysis"
     },
     {
      "slug": "black-forest-labs",
      "url": "https://jobs.ashbyhq.com/black-forest-labs",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "FLUX (Black Forest Labs)",
      "tool": "flux"
     },
     {
      "slug": "bolt",
      "url": "https://jobs.ashbyhq.com/bolt",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Bolt.new",
      "tool": "bolt"
@@ -1067,15 +1067,15 @@
     {
      "slug": "cerebras",
      "url": "https://jobs.ashbyhq.com/cerebras",
-     "ok": true,
-     "ai": 24,
+     "ok": false,
+     "ai": 0,
      "name": "Cerebras",
      "kind": "lab"
     },
     {
      "slug": "comfy-org",
      "url": "https://jobs.ashbyhq.com/comfy-org",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "ComfyUI",
      "tool": "comfyui"
@@ -1083,15 +1083,15 @@
     {
      "slug": "composio",
      "url": "https://jobs.ashbyhq.com/composio",
-     "ok": true,
-     "ai": 6,
+     "ok": false,
+     "ai": 0,
      "name": "Composio",
      "tool": "composio"
     },
     {
      "slug": "credo",
      "url": "https://jobs.ashbyhq.com/credo",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Credo AI",
      "tool": "credo-ai"
@@ -1099,55 +1099,47 @@
     {
      "slug": "encord",
      "url": "https://jobs.ashbyhq.com/encord",
-     "ok": true,
-     "ai": 4,
+     "ok": false,
+     "ai": 0,
      "name": "Encord",
      "tool": "encord"
     },
     {
      "slug": "exa",
      "url": "https://jobs.ashbyhq.com/exa",
-     "ok": true,
-     "ai": 8,
+     "ok": false,
+     "ai": 0,
      "name": "Exa",
      "tool": "exa"
     },
     {
      "slug": "firecrawl",
      "url": "https://jobs.ashbyhq.com/firecrawl",
-     "ok": true,
-     "ai": 4,
+     "ok": false,
+     "ai": 0,
      "name": "Firecrawl",
      "tool": "firecrawl"
     },
     {
      "slug": "fireworks",
      "url": "https://jobs.ashbyhq.com/fireworks",
-     "ok": true,
-     "ai": 12,
+     "ok": false,
+     "ai": 0,
      "name": "Fireworks AI",
      "kind": "lab"
     },
     {
      "slug": "hedra",
      "url": "https://jobs.ashbyhq.com/hedra",
-     "ok": true,
-     "ai": 2,
+     "ok": false,
+     "ai": 0,
      "name": "Hedra Live Avatars",
      "tool": "hedra-live-avatars"
     },
     {
-     "slug": "judgmentlabs",
-     "url": "https://jobs.ashbyhq.com/judgmentlabs",
-     "ok": true,
-     "ai": 1,
-     "name": "Judgment Labs judgeval",
-     "tool": "judgeval"
-    },
-    {
      "slug": "juicebox",
      "url": "https://jobs.ashbyhq.com/juicebox",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Juicebox",
      "kind": "recruiting"
@@ -1155,55 +1147,55 @@
     {
      "slug": "lancedb",
      "url": "https://jobs.ashbyhq.com/lancedb",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "LanceDB",
      "tool": "lancedb"
     },
     {
      "slug": "lightning",
      "url": "https://jobs.ashbyhq.com/lightning",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "PyTorch Lightning",
      "tool": "lightning"
     },
     {
      "slug": "midjourney",
      "url": "https://jobs.ashbyhq.com/midjourney",
-     "ok": true,
-     "ai": 2,
+     "ok": false,
+     "ai": 0,
      "name": "Midjourney",
      "tool": "midjourney"
     },
     {
      "slug": "n8n",
      "url": "https://jobs.ashbyhq.com/n8n",
-     "ok": true,
-     "ai": 3,
+     "ok": false,
+     "ai": 0,
      "name": "n8n",
      "tool": "n8n"
     },
     {
      "slug": "nousresearch",
      "url": "https://jobs.ashbyhq.com/nousresearch",
-     "ok": true,
-     "ai": 2,
+     "ok": false,
+     "ai": 0,
      "name": "Hermes Agent",
      "tool": "hermes-agent"
     },
     {
      "slug": "ollama",
      "url": "https://jobs.ashbyhq.com/ollama",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "Ollama",
      "tool": "ollama"
     },
     {
      "slug": "openhands",
      "url": "https://jobs.ashbyhq.com/openhands",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "OpenHands",
      "tool": "openhands"
@@ -1211,15 +1203,15 @@
     {
      "slug": "openrouter",
      "url": "https://jobs.ashbyhq.com/openrouter",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "OpenRouter",
      "tool": "openrouter"
     },
     {
      "slug": "redis",
      "url": "https://jobs.ashbyhq.com/redis",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Redis",
      "tool": "redis"
@@ -1227,55 +1219,47 @@
     {
      "slug": "reducto",
      "url": "https://jobs.ashbyhq.com/reducto",
-     "ok": true,
-     "ai": 5,
+     "ok": false,
+     "ai": 0,
      "name": "Reducto",
      "tool": "reducto"
     },
     {
      "slug": "reka",
      "url": "https://jobs.ashbyhq.com/reka",
-     "ok": true,
-     "ai": 3,
+     "ok": false,
+     "ai": 0,
      "name": "Reka",
      "kind": "lab"
     },
     {
      "slug": "roboflow",
      "url": "https://jobs.ashbyhq.com/roboflow",
-     "ok": true,
-     "ai": 5,
+     "ok": false,
+     "ai": 0,
      "name": "Roboflow",
      "tool": "roboflow"
     },
     {
      "slug": "runpod",
      "url": "https://jobs.ashbyhq.com/runpod",
-     "ok": true,
-     "ai": 1,
+     "ok": false,
+     "ai": 0,
      "name": "RunPod",
      "tool": "runpod"
     },
     {
-     "slug": "sentry",
-     "url": "https://jobs.ashbyhq.com/sentry",
-     "ok": true,
-     "ai": 3,
-     "name": "Sentry AI Agent Monitoring",
-     "tool": "sentry-ai-agent-monitoring"
-    },
-    {
      "slug": "tavus",
      "url": "https://jobs.ashbyhq.com/tavus",
-     "ok": true,
-     "ai": 4,
+     "ok": false,
+     "ai": 0,
      "name": "Tavus CVI",
      "tool": "tavus-cvi"
     },
     {
      "slug": "trychroma",
      "url": "https://jobs.ashbyhq.com/trychroma",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Chroma",
      "tool": "chroma"
@@ -1283,7 +1267,7 @@
     {
      "slug": "turbopuffer",
      "url": "https://jobs.ashbyhq.com/turbopuffer",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Turbopuffer",
      "tool": "turbopuffer"
@@ -1291,23 +1275,23 @@
     {
      "slug": "ultralytics",
      "url": "https://jobs.ashbyhq.com/ultralytics",
-     "ok": true,
-     "ai": 3,
+     "ok": false,
+     "ai": 0,
      "name": "Ultralytics YOLO",
      "tool": "ultralytics"
     },
     {
      "slug": "weaviate",
      "url": "https://jobs.ashbyhq.com/weaviate",
-     "ok": true,
+     "ok": false,
      "ai": 0,
      "name": "Weaviate",
      "tool": "weaviate"
     }
    ],
-   "ok": true,
-   "ai": 658,
-   "processed": 220
+   "ok": false,
+   "ai": 0,
+   "processed": 216
   },
   {
    "id": "workday",
@@ -1484,7 +1468,7 @@
    "boards": [],
    "ok": true,
    "ai": 81,
-   "processed": 348
+   "processed": 350
   },
   {
    "id": "hackernews",
