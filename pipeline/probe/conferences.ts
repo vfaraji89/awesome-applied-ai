@@ -22,7 +22,8 @@ for (const url of URLS) {
     } else {
       const lines = body.split("\n");
       console.log("headings:", lines.filter((l) => /^#{1,3} /.test(l)).slice(0, 40).join(" | ").slice(0, 2500));
-      const full = /data\.md|terms|licen/i.test(url);
+      if (/data\.md/.test(url)) { console.log("terms lines:\n" + lines.filter((l) => /licen|terms|attribut|commercial|permission|copyright|scrap|rate limit|allowed|reuse|redistribut|cite/i.test(l)).join("\n").slice(0, 6000)); continue; }
+      const full = /terms|licen/i.test(url);
       console.log("first lines:\n" + lines.slice(0, full ? 400 : 60).join("\n").slice(0, full ? 12000 : 3500));
       const links = [...body.matchAll(/https?:\/\/[^\s)"'<>]+/g)].map((m) => m[0]).filter((u) => /json|llms|schedule|sessions|speakers|talks|agenda|\.md\b|\.ics/i.test(u));
       console.log("data-looking links:", [...new Set(links)].slice(0, 40).join("\n"));

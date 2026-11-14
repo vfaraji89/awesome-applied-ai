@@ -23,13 +23,11 @@ jobs:
         env:
           PROBE_URLS: >-
             https://ai.engineer/data.md
-            https://ai.engineer/code/2026/organization-affiliations.json
-            https://ai.engineer/europe/2026/sessions.json
-            https://ai.engineer/code/2026/sessions.json
-            https://pytorchconferenceeu2026.sched.com/all.ics
-            https://pytorchconference2026.sched.com/all.ics
-            https://pytorch2026.sched.com/all.ics
-            https://build.microsoft.com/api/session/all/en-US
-            https://raysummit.anyscale.com/llms.txt
-            https://io.google/llms.txt
+            https://ai.engineer/api/data/talks?format=json
+            https://ai.engineer/api/data/speakers?format=json
+            https://ai.engineer/api/data/topics?format=json
+            https://ai.engineer/api/data/organizations?format=json
+            https://ai.engineer/terms
+            https://pytorchconference.sched.com/all.ics
+            https://pytorchconferencena2026.sched.com/all.ics
         run: bun pipeline/probe/conferences.ts
