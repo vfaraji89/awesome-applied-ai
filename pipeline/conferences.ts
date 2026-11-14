@@ -62,9 +62,11 @@ report.push(`ai.engineer: ${editionRows.length} editions listed`);
 type ApiTalk = { slug: string; title: string; url: string; event: string | null; speakers: { name: string }[]; topics: { slug: string; name: string }[]; summary?: string };
 const apiTalks = (await get(`${AIE}/api/data/talks?format=json`)) as ApiTalk[];
 const aieTopics = new Map<string, { name: string; byYear: Map<string, number>; n: number }>();
+const aieYears = new Map<string, number>();
 for (const t of apiTalks) {
   const ed = t.event ? editions.get(t.event) : undefined;
   const year = ed?.start.slice(0, 4) ?? t.event?.match(/\d{4}/)?.[0];
+  if (year) aieYears.set(year, (aieYears.get(year) ?? 0) + 1);
   for (const tp of t.topics ?? []) {
     const x = aieTopics.get(tp.slug) ?? { name: tp.name, byYear: new Map(), n: 0 };
     x.n++; if (year) x.byYear.set(year, (x.byYear.get(year) ?? 0) + 1);
@@ -153,6 +155,7 @@ const out = {
   editions: withTalks.map((e) => ({ id: e.id, series: e.series, name: e.name, start: e.start, end: e.end, location: e.location, url: e.url, source: e.source, kinds: Object.fromEntries(["talk", "workshop", "keynote", "panel"].map((k) => [k, e.talks.filter((t) => t.kind === k).length])), ...profile(e.talks) })),
   recent: { from: "2025-06-01", editions: recent.length, ...profile(recent.flatMap((e) => e.talks)) },
   upcoming: upcoming.sort((a, b) => a.start.localeCompare(b.start)),
+  aieYears: Object.fromEntries([...aieYears.entries()].sort()),
   aieTopics: [...aieTopics.entries()].sort((a, b) => b[1].n - a[1].n).slice(0, 30).map(([id, x]) => ({ id, name: x.name, n: x.n, byYear: Object.fromEntries([...x.byYear.entries()].sort()) })),
   sources: [`${AIE}/llms.txt`, `${AIE}/api/data/talks?format=json`, ...ICS.map((c) => c.url), "https://build.microsoft.com/api/session/all/en-US"],
 };

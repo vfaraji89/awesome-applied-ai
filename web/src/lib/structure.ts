@@ -12,6 +12,7 @@ export const structure: Section[] = [
       { label: "What the labs ask for", href: "/labs/", note: "Anthropic, OpenAI and Google, side by side" },
       { label: "Weekly note", href: "/market/note/", note: "What changed this week, ready to share" },
       { label: "Sources", href: "/market/sources/", note: "Every career page and job board read, and what the ads ask for" },
+      { label: "Conferences", href: "/market/conferences/", note: "What applied AI conferences talk about, against what jobs ask for" },
       { label: "Method and data", href: "/market/method/", note: "How ads are classified, how often it is wrong, and the open dataset" },
     ],
   },
