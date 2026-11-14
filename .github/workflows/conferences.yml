@@ -1,0 +1,41 @@
+name: Track conferences
+
+# Once a month: reads the official schedules and talk archives of applied AI conferences (AI Engineer,
+# PyTorch Conference, Microsoft Build), runs each talk through the same rules as the job ads, and
+# writes web/src/data/conferences.json plus the people and organisation candidates in conferences/.
+# Only counts, titles, names, organisations and links are kept, each with its source.
+# On a branch push it runs too and commits the files to that branch, so the page can be built on them.
+on:
+  schedule:
+    - cron: "37 6 3 * *"
+  workflow_dispatch:
+  push:
+    branches-ignore: [main]
+    paths: ["pipeline/conferences.ts", ".github/workflows/conferences.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market
+  cancel-in-progress: false
+
+jobs:
+  track:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6  # v2
+        with:
+          bun-version: 1.4.4
+      - run: bun pipeline/conferences.ts
+      - name: Commit
+        run: |
+          git config user.name "conference-tracker"
+          git config user.email "conference-tracker@users.noreply.github.com"
+          git add web/src/data/conferences.json conferences
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git commit -m "Conferences: $(date -u +%Y-%m-%d) update"
+          git pull --rebase origin "$GITHUB_REF_NAME" || { git rebase --abort; echo "Branch moved; skipping"; exit 0; }
+          git push origin HEAD:"$GITHUB_REF_NAME" || echo "Push refused; skipping"
