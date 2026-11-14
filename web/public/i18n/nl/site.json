@@ -1175,6 +1175,8 @@
  "rt.k_heat": "Rol per taak",
  "rt.h_heat": "Welke rollen welk werk doen",
  "rt.heat_p": "Lees een rij om te zien waar een rol zijn dagen aan besteedt, een kolom om te zien wie een taak het meest doet. Ga over een cel voor het getal.",
+ "rb.c_k": "samen gevraagd, in {n} vacatures",
+ "rb.c_with": "Het vaakst gevraagd samen met",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Dutch reader). Delete a line once agreed, or change the value above it.",
   "area.serving": "'Serving', 'evals', 'retrieval', 'harness' kept in English, as Dutch tech teams say them.",

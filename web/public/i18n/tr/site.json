@@ -1175,6 +1175,8 @@
  "rt.k_heat": "Role göre görev",
  "rt.h_heat": "Hangi rol hangi işi yapıyor",
  "rt.heat_p": "Bir rolün günlerini neye harcadığını görmek için satırı, bir görevi en çok kimin yaptığını görmek için sütunu okuyun. Sayı için bir hücrenin üzerine gelin.",
+ "rb.c_k": "{n} ilanda birlikte istenenler",
+ "rb.c_with": "En sık birlikte istendiği beceriler",
  "_review": {
   "_how": "Vahid: these are judgment calls for you to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'servisleme'; alternatives: 'model servisi', or keep 'serving'.",

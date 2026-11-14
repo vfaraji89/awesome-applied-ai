@@ -4,6 +4,7 @@ import Link from "next/link";
 import { T } from "@/i18n/lang";
 import { fRoles, skills, LEVELS } from "@/data/framework";
 import { M } from "@/lib/market-data";
+import graph from "@/data/skill-graph.json";
 import { slug } from "@/i18n/slug";
 import { ROLE_PAGES as BANNER_PAGES } from "@/data/roles-pages";
 
@@ -112,31 +113,58 @@ function Matrix({ size, sync }: { size: "card" | "hero"; sync?: boolean }) {
   );
 }
 
+type GPair = { a: string; b: string; n: number; lift: number };
+const SG = graph as unknown as { postings: number; skills: string[]; n: number[]; pairs: GPair[] };
+const SSHARE = Object.fromEntries(SG.skills.map((id, i) => [id, Math.round((100 * SG.n[i]) / SG.postings)])) as Record<string, number>;
+const glift = (a: string, b: string) => SG.pairs.find((p) => (p.a === a && p.b === b) || (p.a === b && p.b === a))?.lift ?? 1;
+// same circle as the skill map below it: skills asked together sit side by side
+const SORDER = (() => {
+  const left = new Set(SG.skills); const out: string[] = [];
+  let cur = SG.skills.slice().sort((a, b) => SSHARE[b] - SSHARE[a])[0];
+  while (cur) { out.push(cur); left.delete(cur); cur = [...left].sort((a, b) => glift(cur, b) - glift(cur, a))[0]; }
+  return out;
+})();
+const SR = 200;
+const SPOS = Object.fromEntries(SORDER.map((id, i) => { const a = (i / SORDER.length) * Math.PI * 2 - Math.PI / 2; return [id, { x: Math.cos(a) * SR, y: Math.sin(a) * SR, a }]; })) as Record<string, { x: number; y: number; a: number }>;
+const SEDGES = SG.pairs.filter((p) => p.lift >= 1.2 && p.n >= 40);
+const sshort = (id: string) => skillName(id).replace(/ and .*/, "").replace("AI-assisted development", "AI-assisted dev").replace("Software fundamentals", "Software").replace("Product judgement", "Product");
+
 function Skills({ size }: { size: "card" | "hero" }) {
-  const rows = M.skills.filter((s) => s.id).slice(0, size === "card" ? 6 : 12);
-  const max = Math.max(...rows.map((s) => s.share ?? 0), 1);
-  const { i, pick, ref } = useCycle(rows.length);
-  const s = rows[i];
-  const prof = M.insights?.skills.find((p) => p.id === s?.id);
-  if (!s) return null;
+  const { i, pick, ref } = useCycle(SORDER.length, 3200);
+  const sel = SORDER[i];
+  const near = SG.pairs.filter((p) => p.a === sel || p.b === sel).map((p) => ({ id: p.a === sel ? p.b : p.a, lift: p.lift })).sort((a, b) => b.lift - a.lift);
+  const partners = new Set(near.filter((x) => x.lift >= 1.2).map((x) => x.id));
+  const curve = (A: { x: number; y: number }, B: { x: number; y: number }) => `M${A.x},${A.y} Q${(A.x + B.x) * 0.2},${(A.y + B.y) * 0.2} ${B.x},${B.y}`;
   return (
     <div ref={ref} className={`rb rb-${size}`}>
-      <ul className="rb-viz rb-bars">
-        {rows.map((x, k) => (
-          <li key={x.id}>
-            <button type="button" className={k === i ? "on" : ""} onClick={() => pick(k)} onMouseEnter={() => pick(k)} aria-pressed={k === i}>
-              <span className="rb-lab"><T k={`skill.${x.id}`}>{skillName(x.id!)}</T></span>
-              <span className={`rodbar${k === i ? "" : " ink"}`}><i style={{ width: `${((x.share ?? 0) / max) * 100}%` }} /></span>
-              <span className="count">{x.share}%</span>
-            </button>
-          </li>
-        ))}
-      </ul>
-      <div className="rb-read" key={s.id} aria-live="polite">
-        <span className="count"><T k="rb.s_rank" vars={{ r: i + 1 }}>{"number {r} in the ads"}</T></span>
-        <b className="rb-big"><span className="rb-num">{s.share}%</span> <T k={`skill.${s.id}`}>{skillName(s.id!)}</T></b>
-        <p className="rb-line"><T k="rb.s_line" vars={{ n: (s.n ?? 0).toLocaleString("en-US") }}>{"of AI job ads ask for it, {n} since 1 October."}</T>{prof?.topRole && <> <T k="rb.s_role" vars={{ r: roleName(prof.topRole.id), p: prof.topRole.share }}>{"Asked most by {r}, in {p}% of their ads."}</T></>}</p>
-        <Link href={`/skills/${s.id}/`} className="rb-go"><T k="rb.s_open">Open the skill</T> →</Link>
+      <svg viewBox="-400 -265 800 530" className="rb-viz rb-con" role="img" aria-label="Skills asked together">
+        <circle r={SR} className="rb-orbit" />
+        {SEDGES.map((p) => { const on = p.a === sel || p.b === sel; return <path key={p.a + p.b} d={curve(SPOS[p.a], SPOS[p.b])} className={`rb-edge${on ? " on" : ""}`} strokeWidth={1 + (p.lift - 1) * (on ? 12 : 7)} />; })}
+        {SEDGES.filter((p) => p.a === sel || p.b === sel).map((p, k) => {
+          const from = p.a === sel ? SPOS[p.a] : SPOS[p.b], to = p.a === sel ? SPOS[p.b] : SPOS[p.a];
+          return <circle key={`${sel}-${k}`} r={6} className="rb-run"><animateMotion dur="1.6s" begin={`${k * 0.25}s`} repeatCount="indefinite" path={curve(from, to)} /></circle>;
+        })}
+        {SORDER.map((id, k) => {
+          const P = SPOS[id]; const r = 9 + Math.sqrt(SSHARE[id]) * 2.4; const on = id === sel;
+          const lx = Math.cos(P.a) * (SR + r + 12), ly = Math.sin(P.a) * (SR + r + 12);
+          return (
+            <g key={id} className={`rb-node${on ? " on" : partners.has(id) ? " near" : ""}`} onClick={() => pick(k)} onMouseEnter={() => pick(k)} role="button" tabIndex={0} aria-label={`${skillName(id)}: ${SSHARE[id]}%`}
+               onKeyDown={(e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); pick(k); } }}>
+              <circle cx={P.x} cy={P.y} r={r} />
+              <text x={P.x} y={P.y + 5} className="rb-pct">{SSHARE[id]}</text>
+              <text x={lx} y={ly + 5} className="rb-lbl" textAnchor={Math.abs(Math.cos(P.a)) < 0.2 ? "middle" : Math.cos(P.a) > 0 ? "start" : "end"}><T k={`skillshort.${id}`}>{sshort(id)}</T></text>
+            </g>
+          );
+        })}
+      </svg>
+      <div className="rb-read" key={sel} aria-live="polite">
+        <span className="count"><T k="rb.c_k" vars={{ n: SG.postings.toLocaleString("en-US") }}>{"asked together, across {n} postings"}</T></span>
+        <b className="rb-big"><span className="rb-num">{SSHARE[sel]}%</span> <T k={`skill.${sel}`}>{skillName(sel)}</T></b>
+        <p className="rb-line"><T k="rb.c_with">Most often asked with</T></p>
+        <ul className="rb-with">
+          {near.slice(0, 3).map((x) => <li key={x.id}><T k={`skill.${x.id}`}>{skillName(x.id)}</T><span className="count">{x.lift.toFixed(2)}×</span></li>)}
+        </ul>
+        <Link href={`/skills/${sel}/`} className="rb-go"><T k="rb.s_open">Open the skill</T> →</Link>
       </div>
     </div>
   );
@@ -243,7 +271,26 @@ button:hover > .rb-tip, button:focus-visible > .rb-tip { opacity: 1; transform: 
 .rb-dot.on { background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); transform: scale(1.15); }
 .rb-card .rb-grid .rb-lab { font-size: .7rem; }
 
-/* skills and tasks: a rod per row */
+.rb-con { width: 100%; height: auto; overflow: visible; }
+.rb-orbit { fill: none; stroke: var(--line); stroke-dasharray: 2 6; }
+.rb-edge { fill: none; stroke: var(--rust); stroke-opacity: .12; transition: stroke-opacity .5s, stroke-width .5s; }
+.rb-edge.on { stroke-opacity: .85; }
+.rb-run { fill: #e0301e; filter: drop-shadow(0 1px 2px rgba(158,26,12,.5)); }
+.rb-node { cursor: pointer; outline: none; }
+.rb-node circle { fill: var(--card); stroke: var(--line-strong); stroke-width: 1.5; transition: fill .4s, stroke .4s, r .4s; }
+.rb-node.near circle { stroke: var(--ink); stroke-width: 2; }
+.rb-node.on circle { fill: #e0301e; stroke: #9e1a0c; }
+.rb-node:focus-visible circle { stroke: var(--rust); stroke-width: 3; }
+.rb-pct { font-family: var(--font-mono), monospace; font-size: 13px; text-anchor: middle; fill: var(--muted); pointer-events: none; }
+.rb-node.on .rb-pct { fill: #fff; font-weight: 700; }
+.rb-lbl { font-size: 17px; fill: var(--sec); }
+.rb-card .rb-lbl { font-size: 22px; }
+.rb-node.on .rb-lbl, .rb-node.near .rb-lbl { fill: var(--ink); font-weight: 700; }
+.rb-with { list-style: none; margin: 8px 0 0; padding: 0; display: grid; gap: 6px; max-width: 360px; }
+.rb-with li { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 6px; }
+.rb-with .count { color: var(--rust-deep); }
+
+/* tasks: a rod per row */
 .rb-bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 2px; }
 .rb-bars button { width: 100%; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) 40px; gap: 12px; align-items: center; padding: 6px 4px; border: 0; background: none; text-align: left; cursor: pointer; border-radius: 8px; font: inherit; color: inherit; }
 .rb-bars button.on .rb-lab { color: var(--ink); font-weight: 700; }

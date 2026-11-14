@@ -1177,6 +1177,8 @@
  "rt.k_heat": "職種×仕事",
  "rt.h_heat": "どの職種がどの仕事をするか",
  "rt.heat_p": "行を読むと職種が日々何に時間を使うか、列を読むと誰がその仕事を最も多く行うかがわかります。数値はセルにカーソルを合わせると表示されます。",
+ "rb.c_k": "{n}件の求人で一緒に求められるもの",
+ "rb.c_with": "よく一緒に求められるスキル",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Japanese reader). Delete a line once agreed, or change the value above it.",
   "fit.h1": "'採用市場に、どこまで届いているか' is a free rendering of 'How ready are you for the market'.",

@@ -1175,6 +1175,8 @@
  "rt.k_heat": "Rol por tarea",
  "rt.h_heat": "Qué roles hacen qué trabajo",
  "rt.heat_p": "Lee una fila para ver en qué pasa sus días un rol, una columna para ver quién hace más una tarea. Pasa sobre una celda para ver el número.",
+ "rb.c_k": "pedidas juntas, en {n} anuncios",
+ "rb.c_with": "Se pide más a menudo con",
  "_review": {
   "_how": "Vahid: judgment calls to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'inferencia'; alternative: keep 'serving'.",
