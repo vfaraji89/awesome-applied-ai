@@ -54,8 +54,8 @@ export function CertBoard() {
         .cb-card { display: flex; flex-direction: column; gap: 10px; }
         .cb-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
         .cb-level { display: inline-flex; align-items: center; gap: 3px; font-family: var(--font-mono), monospace; font-size: .7rem; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
-        .cb-level i { width: 7px; height: 7px; border-radius: 50%; background: var(--line-strong); }
-        .cb-level i.on { background: var(--rust); }
+        .cb-level i { width: 9px; height: 9px; border-radius: 50%; background: var(--bead-white); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; }
+        .cb-level i.on { background: var(--bead-red); outline: 0; }
         .cb-level i:last-of-type { margin-right: 6px; }
         .cb-name { font-size: 1.12rem; font-weight: 800; line-height: 1.25; margin: 0; }
         .cb-what { font-size: .92rem; color: var(--sec); margin: 0; line-height: 1.5; }
@@ -64,7 +64,6 @@ export function CertBoard() {
         .cb-status.changing { color: #a5650a; }
         .cb-link { margin-top: auto; padding-top: 6px; font-weight: 700; font-size: .88rem; color: var(--rust-deep); text-decoration: none; }
         .cb-link:hover { text-decoration: underline; text-underline-offset: 3px; }
-        @media (prefers-color-scheme: dark) { .cb-status.changing { color: #f0b04a; } }
       `}</style>
     </div>
   );

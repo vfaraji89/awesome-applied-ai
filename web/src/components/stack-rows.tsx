@@ -37,8 +37,8 @@ export function StackRows({ groups }: { groups: StackGroup[] }) {
         <a href={tool.url} target="_blank" rel="noreferrer" className="count">{tool.url.replace(/^https?:\/\//, "").replace(/\/$/, "")} ↗</a>
       </div>
       <style>{`
-        .sr-frame { position: relative; padding: 8px 26px; border-radius: 14px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-          background-image: var(--dowel), var(--dowel); background-size: 7px 100%, 7px 100%; background-position: left center, right center; background-repeat: no-repeat; }
+        .sr-frame { position: relative; padding: 8px 26px; border-radius: 4px; background-image: var(--rod), var(--rod); background-size: 100% 3px, 100% 3px; background-position: center top, center bottom; background-repeat: no-repeat; }
+        .sr-frame::before, .sr-frame::after { content: ""; position: absolute; top: -5px; bottom: -5px; width: 7px; border-radius: 4px; background: var(--dowel); pointer-events: none; } .sr-frame::before { left: -4px; } .sr-frame::after { right: -4px; }
         .sr-row { position: relative; display: grid; grid-template-columns: 170px 1fr; gap: 12px; padding: 14px 0; }
         .sr-row + .sr-row { border-top: 1px dashed var(--line); }
         .sr-row::before { content: ""; position: absolute; left: -19px; right: -19px; top: calc(14px + 20px); height: 4px; margin-top: -2px; border-radius: 4px; background: var(--rod); }

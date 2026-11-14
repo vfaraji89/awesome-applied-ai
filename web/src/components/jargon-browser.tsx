@@ -55,7 +55,7 @@ export function JargonBrowser({ terms, fields }: { terms: Term[]; fields: Field[
       </div>
       <style>{`
         .jb-bar { display: flex; flex-direction: column; gap: 14px; position: sticky; top: 64px; z-index: 5; background: var(--bg); padding: 12px 0; }
-        .jb-bar .chip { cursor: pointer; font: inherit; font-size: .82rem; }
+        .jb-bar .chip { cursor: pointer; }
         .jb-card { all: unset; display: block; cursor: pointer; perspective: 1400px; min-height: 270px; animation: rise .55s var(--ease) both; animation-delay: calc(var(--i) * 35ms); }
         .jb-card:focus-visible { outline: 2px solid var(--rust); outline-offset: 4px; border-radius: 14px; }
         .jb-inner { position: relative; display: grid; height: 100%; min-height: 270px; transform-style: preserve-3d; transition: transform .7s var(--spring); }

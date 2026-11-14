@@ -32,17 +32,23 @@ function Wired() {
     <div>
       <span className="kicker">Where MCP shows up on this site</span>
       <h2 style={{ marginTop: 10 }}>From the doc to the job<span className="dot">.</span></h2>
-      <div className="wd-grid">
+      <div className="frame wd-grid">
         {cards.map((c) => (
-          <Link key={c.href} href={c.href} className="frame wd-card">
-            <b>{c.n}</b><span className="wd-l">{c.l} <span aria-hidden="true">→</span></span><span className="count">{c.s}</span><span className="rod" />
+          <Link key={c.href} href={c.href} className="wd-card">
+            <b>{c.n}</b><span className="wd-l">{c.l} <span aria-hidden="true">→</span></span><span className="count">{c.s}</span>
           </Link>
         ))}
       </div>
       <style>{`
-        .wd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; margin-top: 20px; }
-        .wd-card { display: flex; flex-direction: column; gap: 4px; padding: 20px 24px 30px; }
-        .wd-card b { font-size: 2.2rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; color: var(--rust); }
+        /* one abacus frame, cells split by hairlines; only the headline number is red */
+        .wd-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); padding: 6px 8px; margin-top: 22px; }
+        @media (max-width: 860px) { .wd-grid { grid-template-columns: minmax(0, 1fr); } }
+        .wd-card { display: flex; flex-direction: column; gap: 4px; padding: 20px 22px; text-decoration: none; color: inherit; border-radius: 4px; transition: background .2s; }
+        .wd-card:hover { background: var(--paper); } .wd-card:hover .wd-l { color: var(--rust-deep); }
+        @media (min-width: 861px) { .wd-card:not(:nth-child(3n+1)) { border-left: 1px solid var(--line); } .wd-card:nth-child(n+4) { border-top: 1px solid var(--line); } }
+        @media (max-width: 860px) { .wd-card + .wd-card { border-top: 1px solid var(--line); } }
+        .wd-card b { font-size: 2.2rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; color: var(--ink); }
+        .wd-card:first-child b { color: var(--rust); }
         .wd-l { font-weight: 700; } .wd-l span { color: var(--rust); } .wd-card .count { font-size: .74rem; }
       `}</style>
     </div>

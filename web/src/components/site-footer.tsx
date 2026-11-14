@@ -165,7 +165,7 @@ export function SiteFooter({ counts }: { counts: HarnessCounts }) {
         .fh-wire { position: relative; height: 2px; background: var(--line-strong); --fill: 0; }
         .fh-wire::after { content: ""; position: absolute; inset: 0; background: var(--rust); transform-origin: left; transform: scaleX(var(--fill)); opacity: 0; transition: opacity .3s; }
         .fh-row.on .fh-wire::after { opacity: 1; }
-        .fh-call { position: absolute; top: -4px; left: 0; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: #e0301e; opacity: 0; }
+        .fh-call { position: absolute; top: -4px; left: 0; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: var(--bead-red); opacity: 0; }
         .fh-tool { display: grid; grid-template-columns: 34px auto 1fr auto; gap: 12px; align-items: baseline; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); transition: border-color .3s, background .3s; }
         .fh-row.on .fh-tool { border-color: var(--rust); outline: 4px solid var(--mark); outline-offset: 0; }
         .fh-n { font-size: .7rem; color: var(--muted); letter-spacing: .1em; } .fh-row.on .fh-n { color: var(--rust); }

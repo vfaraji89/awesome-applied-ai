@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Brand system</title>
+<!-- Applied AI, Simplified: the brand system, and the decisions to make before it is applied site-wide.
+     Open this file in a browser. Every piece is drawn with the site's own tokens; nothing has a shadow. -->
+<style>
+@font-face{font-family:"Vahid Sora";src:url("../web/src/app/fonts/VahidSora-Regular.woff2");font-weight:400}
+@font-face{font-family:"Vahid Sora";src:url("../web/src/app/fonts/VahidSora-SemiBold.woff2");font-weight:600}
+@font-face{font-family:"Vahid Sora";src:url("../web/src/app/fonts/VahidSora-Bold.woff2");font-weight:700}
+@font-face{font-family:"Vahid Sora";src:url("../web/src/app/fonts/VahidSora-ExtraBold.woff2");font-weight:800}
+@font-face{font-family:"Geist Mono";src:url("../web/src/app/fonts/GeistMono-Variable.woff2");font-weight:100 900}
+:root{
+  --ink:#1c1c1e;--sec:#55555a;--muted:#8a8a90;--rust:#e0301e;--rust-deep:#b4200f;--mark:#ffdcd6;--paper:#fff6f4;--bg:#fff;--card:#fff;
+  --line:rgba(28,28,30,.12);--line-strong:rgba(28,28,30,.22);
+  --dowel:linear-gradient(90deg,#b48a5c 0%,#d8bb94 24%,#f1e3cc 48%,#dcc29e 70%,#ad8455 100%);
+  --rod:linear-gradient(180deg,#e9d8bd 0%,#f4eadb 35%,#d2b48d 75%,#b8946a 100%);
+  --bead-red:radial-gradient(circle at 34% 30%,#ff9d8f,#e0301e 45%,#9e1a0c);
+  --bead-white:radial-gradient(circle at 34% 30%,#fff,#f1ede8 45%,#d6cfc7);
+  --bead-ink:radial-gradient(circle at 34% 30%,#6a6a70,#1c1c1e 50%,#000);
+  /* categorical, validated (scripts/validate_palette.js): light passes all checks, amber needs a label */
+  --c1:#e0301e;--c2:#2f6fd0;--c3:#e09b00;--c4:#d6517f;--c5:#1597a8;--c6:#6b4fd8;--c7:#1f9a5c;
+  --sans:"Vahid Sora",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:56px 24px 96px}
+h1{font-size:clamp(2.2rem,5vw,3.4rem);font-weight:800;letter-spacing:-.045em;line-height:1.02;margin:14px 0 10px}
+h2{font-size:1.7rem;font-weight:800;letter-spacing:-.035em;margin:0}
+h3{font-size:1rem;font-weight:700;margin:0 0 4px}
+.dot{color:var(--rust)}
+mark{background:linear-gradient(transparent 58%,var(--mark) 58%,var(--mark) 92%,transparent 92%);color:inherit}
+p{margin:0}
+.lead{color:var(--sec);font-size:1.05rem;max-width:62ch}
+.muted{color:var(--muted)} .sec{color:var(--sec)} .mono{font-family:var(--mono)}
+section{margin-top:72px}
+.sh{display:flex;align-items:baseline;gap:14px;margin-bottom:6px}
+.sh .n{font:600 .8rem var(--mono);color:var(--rust-deep)}
+.note{color:var(--sec);max-width:70ch;margin:6px 0 22px}
+
+/* the label pill (kicker), as on the site now */
+.kicker{display:inline-flex;align-items:center;gap:7px;width:fit-content;padding:4px 11px 4px 9px;border-radius:999px;line-height:1.3;
+  background:color-mix(in srgb,var(--rust) 7%,var(--card));border:1px solid color-mix(in srgb,var(--rust) 22%,transparent);
+  font:400 .72rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--rust-deep)}
+.kicker::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--bead-red)}
+
+/* the frame: wooden dowels at the sides, hairlines top and bottom */
+.frame{position:relative;background:var(--card);border-radius:14px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:20px 24px;
+  background-image:var(--dowel),var(--dowel);background-size:6px 100%,6px 100%;background-position:left center,right center;background-repeat:no-repeat}
+
+/* decision blocks */
+.decide{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:16px}
+.opt{border:1px solid var(--line);border-radius:14px;padding:18px 20px 20px;display:flex;flex-direction:column;gap:14px;background:var(--card)}
+.opt.rec{border-color:color-mix(in srgb,var(--rust) 45%,var(--line))}
+.opt-h{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.opt-h b{font-size:.95rem}
+.tag{font:500 .7rem var(--mono);color:var(--muted)}
+.opt.rec .tag{color:var(--rust-deep)}
+.stage{background:var(--paper);border-radius:10px;padding:18px;display:flex;flex-wrap:wrap;gap:10px;align-items:center;min-height:96px}
+.why{font-size:.86rem;color:var(--sec)}
+
+/* chips: current */
+.chip-now{display:inline-flex;align-items:center;gap:6px;padding:4px 11px;border-radius:999px;border:1px solid var(--line-strong);font-size:.8rem;color:var(--sec);background:var(--card)}
+.chip-now.on{border-color:var(--rust);color:var(--rust-deep);background:var(--paper)}
+.chip-now.s1{font-size:.72rem}.chip-now.s2{font-size:.85rem;padding:2px 9px}
+.soon-now{font:.68rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--rust-deep);border:1px dashed var(--rust);border-radius:999px;padding:3px 9px}
+/* chips: proposed. One size, one hairline, ink on hover, the bead marks "on" */
+.chip{display:inline-flex;align-items:center;gap:6px;padding:5px 12px;border-radius:999px;border:1px solid var(--line);background:var(--card);
+  font:500 .78rem/1.2 var(--sans);color:var(--sec);white-space:nowrap;transition:border-color .2s,color .2s}
+.chip:hover{border-color:var(--line-strong);color:var(--ink)}
+.chip.on{color:var(--rust-deep);border-color:color-mix(in srgb,var(--rust) 35%,transparent);background:color-mix(in srgb,var(--rust) 6%,var(--card))}
+.chip.on::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--bead-red)}
+.chip b{color:var(--ink);font-weight:700}
+.chip .k{font:.7rem var(--mono);color:var(--muted)}
+.chip.soon{color:var(--muted);border-style:dashed}
+
+/* date tiles */
+.t-now{width:64px;height:64px;display:grid;justify-items:center;align-content:center;border-radius:14px;background:var(--paper);border-top:4px solid var(--c2)}
+.t-now span{font:.66rem var(--mono);text-transform:uppercase;color:var(--muted)}.t-now b{font-size:1.05rem;font-weight:800}
+.t-a{width:58px;display:grid;justify-items:center;padding:7px 0 8px;border-radius:12px;border:1px solid var(--line);background:var(--card)}
+.t-a span{font:500 .62rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--rust-deep)}
+.t-a b{font-size:1.45rem;font-weight:800;letter-spacing:-.04em;line-height:1.05}
+.t-a i{width:6px;height:6px;border-radius:50%;margin-top:4px;background:var(--c2)}
+.t-b{display:grid;grid-template-columns:3px auto;gap:10px;align-items:stretch}
+.t-b::before{content:"";border-radius:2px;background:var(--c2)}
+.t-b div{display:grid;line-height:1.05}.t-b span{font:500 .62rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}.t-b b{font-size:1.45rem;font-weight:800;letter-spacing:-.04em}
+.ev{display:flex;gap:14px;align-items:center}
+.ev .who b{display:block;font-size:.95rem}.ev .who span{font-size:.8rem;color:var(--sec)}
+/* calendar month cells */
+.cal{display:grid;grid-template-columns:repeat(7,30px);gap:4px}
+.cal span{height:30px;display:grid;place-items:center;font-size:.78rem;border-radius:50%;position:relative}
+.cal .td{outline:1.5px solid var(--rust);outline-offset:-1.5px;color:var(--rust-deep);font-weight:700}
+.cal .ev1::after,.cal .ev2::after{content:"";position:absolute;bottom:1px;width:4px;height:4px;border-radius:50%;background:var(--c2)}
+.cal .ev2::after{background:var(--c1)}
+.cal .sel{background:var(--ink);color:#fff}
+
+/* doc page stats */
+.st-now{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;width:100%}
+.st-now div{background:var(--card);border-radius:10px;padding:10px 12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background-image:var(--dowel),var(--dowel);background-size:4px 100%,4px 100%;background-position:left,right;background-repeat:no-repeat}
+.st-now b,.st b{display:block;font-size:1.3rem;font-weight:800;letter-spacing:-.04em;color:var(--rust)}
+.st-now span,.st span{font-size:.72rem;font-weight:600}
+.st-now i,.st i{display:block;font:.62rem var(--mono);font-style:normal;color:var(--muted)}
+.st{width:100%;display:grid;grid-template-columns:repeat(3,1fr);background:var(--card);border-radius:12px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);
+  background-image:var(--dowel),var(--dowel);background-size:5px 100%,5px 100%;background-position:left,right;background-repeat:no-repeat;padding:4px 10px}
+.st div{padding:12px 14px}.st div:not(:nth-child(3n+1)){border-left:1px solid var(--line)}.st div:nth-child(n+4){border-top:1px solid var(--line)}
+.st b{color:var(--ink)}.st div:first-child b{color:var(--rust)}
+
+/* theme swatches */
+.sw{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.sw div{border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--card)}
+.sw i{display:block;height:64px}.sw p{padding:8px 10px;font:.72rem var(--mono);color:var(--sec)}.sw p b{display:block;font:600 .8rem var(--sans);color:var(--ink)}
+.mini{border-radius:12px;padding:14px 16px;display:grid;gap:8px;min-width:220px;flex:1}
+.mini.l{background:#fff;border:1px solid var(--line)}.mini.d{background:#141312;color:#f2efe9;border:1px solid #2a2725}
+.mini b{font-size:1.1rem;font-weight:800;letter-spacing:-.03em}.mini .r{color:#e0301e}.mini.d .r{color:#ff5a44}
+.mini small{font-size:.72rem;opacity:.7}
+
+/* icons */
+.icons{display:grid;grid-template-columns:repeat(auto-fill,minmax(112px,1fr));gap:18px 16px;padding:0 4px}
+.icons div{border:1px solid var(--line);border-radius:12px;padding:14px 8px 10px;display:grid;justify-items:center;gap:8px;background:var(--card)}
+.icons svg{width:32px;height:32px;color:var(--ink)}
+.icons span{font:.68rem var(--mono);color:var(--sec)}
+.ic-row{display:flex;gap:18px;align-items:center}.ic-row svg{color:var(--ink)}
+
+/* charts */
+.chart{width:100%}
+.lg{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.76rem;color:var(--sec);margin-top:10px}.lg i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:5px}
+.pal{display:flex;gap:6px;flex-wrap:wrap}.pal span{display:grid;gap:4px;justify-items:center;font:.66rem var(--mono);color:var(--sec)}.pal i{width:44px;height:28px;border-radius:7px}
+.rules{columns:2 300px;gap:28px;font-size:.9rem;color:var(--sec);margin:18px 0 0;padding-left:18px}.rules li{margin-bottom:6px}
+.answer{margin-top:72px;padding:22px 24px}
+.answer ol{margin:10px 0 0;padding-left:20px;color:var(--sec)}.answer li{margin:4px 0}.answer b{color:var(--ink)}
+
+/* D0 frames: the card as a minimal abacus */
+.fr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));gap:16px}
+.fr-stage{background:var(--paper);border-radius:10px;padding:26px 22px;display:grid;gap:22px}
+.fx{position:relative;background:var(--card);border-radius:12px;padding:16px 20px}
+.fx b{display:block;font-size:1.7rem;font-weight:800;letter-spacing:-.04em;color:var(--rust);line-height:1.05}
+.fx span{font-weight:700;font-size:.9rem}.fx small{display:block;font:.68rem var(--mono);color:var(--muted);margin-top:2px}
+/* now: wood painted inside the card's edge */
+.f-now{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background-image:var(--dowel),var(--dowel);background-size:6px 100%,6px 100%;background-position:left,right;background-repeat:no-repeat}
+/* A: posts, as on the broadcast bar: free-standing dowels just outside the card, overhanging it */
+.f-a{border:1px solid var(--line);border-radius:10px}
+.f-a::before,.f-a::after,.f-b::before,.f-b::after,.f-c::before,.f-c::after{content:"";position:absolute;top:-7px;bottom:-7px;width:7px;border-radius:4px;background:var(--dowel)}
+.f-a::before,.f-b::before,.f-c::before{left:-4px}.f-a::after,.f-b::after,.f-c::after{right:-4px}
+/* B: the whole abacus: posts plus a wooden rod top and bottom, no hairlines */
+.f-b,.f-c{border-radius:4px;background-image:var(--rod),var(--rod);background-size:100% 3px,100% 3px;background-position:top,bottom;background-repeat:no-repeat;background-color:var(--card)}
+/* C: B, and the card's one bead on the top rod: red when it is the one, white otherwise */
+.f-c .bd{position:absolute;top:-4.5px;left:18px;width:11px;height:11px;border-radius:50%;background:var(--bead-red)}
+.f-c.w .bd{background:var(--bead-white);outline:1px solid rgba(0,0,0,.08);outline-offset:-1px}
+.fr-ev{display:flex;gap:12px;align-items:center}.fr-ev .t-a{width:50px}
+
+.icons div{border:0;background:var(--card);border-radius:4px;position:relative;
+  background-image:var(--rod),var(--rod);background-size:100% 2px,100% 2px;background-position:top,bottom;background-repeat:no-repeat}
+.icons div::before,.icons div::after{content:"";position:absolute;top:-3px;bottom:-3px;width:5px;border-radius:3px;background:var(--dowel)}
+.icons div::before{left:-2px}.icons div::after{right:-2px}
+.ifr-row{display:flex;flex-wrap:wrap;gap:22px}
+.ifr{display:grid;justify-items:center;gap:8px;font:.68rem var(--mono);color:var(--sec)}
+.ifr i{position:relative;width:52px;height:52px;display:grid;place-items:center;background:var(--card);border-radius:3px;color:var(--ink);
+  background-image:var(--rod),var(--rod);background-size:100% 2px,100% 2px;background-position:top,bottom;background-repeat:no-repeat}
+.ifr i::before,.ifr i::after{content:"";position:absolute;top:-4px;bottom:-4px;width:5px;border-radius:3px;background:var(--dowel)}
+.ifr i::before{left:-3px}.ifr i::after{right:-3px}
+.ic-row{flex-wrap:wrap}
+
+.bchip{display:inline-flex;align-items:center;gap:6px;padding:5px 13px;border-radius:999px;font:600 .78rem/1.2 var(--sans);color:var(--ink);white-space:nowrap;cursor:pointer;
+  background:radial-gradient(120% 140% at 30% 0%,#fff 0%,#fbf8f5 45%,#e9e1d9 100%);outline:1px solid rgba(28,28,30,.07);outline-offset:-1px;transition:transform .25s cubic-bezier(.22,1,.36,1)}
+.bchip:hover{transform:translateX(2px)}
+.bchip.on{color:#fff;outline:0;background:radial-gradient(120% 140% at 30% 0%,#ffb3a8 0%,#ff7a66 14%,#e0301e 52%,#a31b0d 100%)}
+.bchip.ink{color:#fff;outline:0;background:radial-gradient(120% 140% at 30% 0%,#8a8a90 0%,#3a3a40 30%,#1c1c1e 60%,#000 100%)}
+.bchip.soon{color:var(--muted);opacity:.75}
+.bchip .k{font:500 .68rem var(--mono);color:var(--muted)}
+.strung{min-height:0;padding:22px 18px}
+.rodrow{position:relative;display:flex;gap:8px;flex-wrap:nowrap;padding:0 14px;width:fit-content;max-width:100%}
+.rodrow::before{content:"";position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;border-radius:2px;background:var(--rod)}
+.rodrow::after{content:"";position:absolute;inset:-8px -2px;background:var(--dowel),var(--dowel);background-size:5px 100%,5px 100%;background-position:left,right;background-repeat:no-repeat;border-radius:3px;pointer-events:none}
+.rodrow .bchip{position:relative}
+.chip.on2{color:var(--rust-deep);border-color:color-mix(in srgb,var(--rust) 40%,transparent);background:color-mix(in srgb,var(--rust) 6%,var(--card))}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="kicker">Brand system · v1 · to decide</span>
+  <h1>Applied AI, <mark>simplified</mark><span class="dot">.</span></h1>
+  <p class="lead">One look across the site before it is applied everywhere: paper, ink and one rust red; Vahid Sora for words, Geist Mono for data; wooden abacus frames, rods and beads; never a shadow. Each block below shows what the site does now and what I propose. Pick one per block.</p>
+
+
+  <!-- D0 frames -->
+  <section>
+    <div class="sh"><span class="n">D0</span><h2>Frames<span class="dot">.</span></h2></div>
+    <p class="note">The card every section sits in. Today the wood is painted inside the card's edge. The broadcast bar instead stands two wooden posts just outside its panel, overhanging it, like the uprights of an abacus. These options take that further.</p>
+    <div class="fr-grid">
+      <div class="opt"><div class="opt-h"><b>Now · edge strips</b><span class="tag">wood inside the edge</span></div>
+        <div class="fr-stage"><div class="fx f-now"><b>1,621</b><span>AI job ads read</span><small>since 1 Oct 2026</small></div>
+          <div class="fx f-now fr-ev"><div class="t-a"><span>Nov</span><b style="font-size:1.25rem;color:var(--ink)">30</b><i></i></div><div><span>AWS re:Invent 2026</span><small>30 Nov to 4 Dec · Las Vegas</small></div></div></div>
+        <p class="why">The wood is clipped by the card's corners, so it reads as a coloured border, not a frame.</p></div>
+      <div class="opt"><div class="opt-h"><b>A · Posts</b><span class="tag">as the broadcast bar</span></div>
+        <div class="fr-stage"><div class="fx f-a"><b>1,621</b><span>AI job ads read</span><small>since 1 Oct 2026</small></div>
+          <div class="fx f-a fr-ev"><div class="t-a"><span>Nov</span><b style="font-size:1.25rem;color:var(--ink)">30</b><i></i></div><div><span>AWS re:Invent 2026</span><small>30 Nov to 4 Dec · Las Vegas</small></div></div></div>
+        <p class="why">Two free-standing dowels, rounded, overhanging the card by a few pixels; a hairline holds the card. The same posts that open the broadcast bar.</p></div>
+      <div class="opt rec"><div class="opt-h"><b>B · Abacus frame</b><span class="tag">recommended</span></div>
+        <div class="fr-stage"><div class="fx f-b"><b>1,621</b><span>AI job ads read</span><small>since 1 Oct 2026</small></div>
+          <div class="fx f-b fr-ev"><div class="t-a"><span>Nov</span><b style="font-size:1.25rem;color:var(--ink)">30</b><i></i></div><div><span>AWS re:Invent 2026</span><small>30 Nov to 4 Dec · Las Vegas</small></div></div></div>
+        <p class="why">Posts plus a thin wooden rod across the top and bottom: every card is a small abacus. No hairlines at all; the wood is the frame.</p></div>
+      <div class="opt"><div class="opt-h"><b>C · Abacus with a bead</b><span class="tag">the most ours</span></div>
+        <div class="fr-stage"><div class="fx f-c"><span class="bd"></span><b>1,621</b><span>AI job ads read</span><small>since 1 Oct 2026</small></div>
+          <div class="fx f-c w fr-ev"><span class="bd"></span><div class="t-a"><span>Nov</span><b style="font-size:1.25rem;color:var(--ink)">30</b><i></i></div><div><span>AWS re:Invent 2026</span><small>30 Nov to 4 Dec · Las Vegas</small></div></div></div>
+        <p class="why">B, with one bead on the top rod: red on the card that matters (the headline, the next event), white on the rest. On hover the bead slides along the rod.</p></div>
+    </div>
+    <p class="note" style="margin-top:14px">Whichever you pick keeps the broadcast motion: frames open from the centre out as they scroll in, the posts arriving first.</p>
+  </section>
+
+  <!-- D1 theme -->
+  <section>
+    <div class="sh"><span class="n">D1</span><h2>Theme<span class="dot">.</span></h2></div>
+    <p class="note">The site follows the reader's system setting into a dark theme, but much of the dark side was never designed, so some parts (the Tokalator panel, charts, the calendar) read oddly in it.</p>
+    <div class="decide">
+      <div class="opt rec"><div class="opt-h"><b>A · Light only, for now</b><span class="tag">recommended</span></div>
+        <div class="stage"><div class="mini l"><small class="mono">PAPER · INK · RUST</small><b>1,621 <span class="r">AI job ads</span></b><small>One theme, every page checked.</small></div></div>
+        <p class="why">One theme done well. Dark comes back as its own designed pass later, every colour stepped for the dark surface.</p></div>
+      <div class="opt"><div class="opt-h"><b>B · Light and dark, both designed now</b><span class="tag">more work</span></div>
+        <div class="stage"><div class="mini l"><b>1,621 <span class="r">ads</span></b><small>light</small></div><div class="mini d"><b>1,621 <span class="r">ads</span></b><small>dark</small></div></div>
+        <p class="why">Follows the reader's setting. Every component needs a dark pass and a check; slower to ship.</p></div>
+    </div>
+    <div class="sw" style="margin-top:18px">
+      <div><i style="background:#1c1c1e"></i><p><b>Ink</b>#1c1c1e · text, marks</p></div>
+      <div><i style="background:#e0301e"></i><p><b>Rust</b>#e0301e · the one accent</p></div>
+      <div><i style="background:#b4200f"></i><p><b>Rust deep</b>#b4200f · red text</p></div>
+      <div><i style="background:#ffdcd6"></i><p><b>Mark</b>#ffdcd6 · highlight</p></div>
+      <div><i style="background:#fff6f4"></i><p><b>Paper</b>#fff6f4 · bands, stages</p></div>
+      <div><i style="background:var(--dowel)"></i><p><b>Wood</b>dowels and rods</p></div>
+    </div>
+  </section>
+
+  <!-- D2 chips -->
+  <section>
+    <div class="sh"><span class="n">D2</span><h2>Chips<span class="dot">.</span></h2></div>
+    <p class="note">Today chips come in about seven font sizes and three paddings, and status tags use a dashed uppercase style of their own.</p>
+    <div class="decide">
+      <div class="opt"><div class="opt-h"><b>Now</b><span class="tag">7 sizes, 2 status styles</span></div>
+        <div class="stage"><span class="chip-now">Agents and tool use</span><span class="chip-now s1">Evals</span><span class="chip-now s2">Retrieval and RAG</span><span class="chip-now on">Live</span><span class="soon-now">Coming soon</span><span class="chip-now">VS Code v4.2.0</span></div>
+        <p class="why">Each page set its own size; the eye reads it as noise.</p></div>
+      <div class="opt rec"><div class="opt-h"><b>A · Bead chips</b><span class="tag">recommended</span></div>
+        <div class="stage"><span class="bchip">Agents and tool use</span><span class="bchip">Evals</span><span class="bchip on">Retrieval and RAG</span><span class="bchip ink">Live</span><span class="bchip soon">Soon</span><span class="bchip"><span class="k">VS Code</span>v4.2.0</span></div>
+        <div class="stage strung"><div class="rodrow"><span class="bchip">Agents</span><span class="bchip on">Evals</span><span class="bchip">RAG</span><span class="bchip">Context</span><span class="bchip">Security</span></div></div>
+        <p class="why">The chip is the bead: polished white for a tag, red for the one chosen, ink for a state like Live. No dot inside, no outline pill. A row of filters can sit strung on a thin wooden rod, like beads on the abacus.</p></div>
+      <div class="opt"><div class="opt-h"><b>B · Hairline chip</b><span class="tag">quieter</span></div>
+        <div class="stage"><span class="chip">Agents and tool use</span><span class="chip">Evals</span><span class="chip on2">Retrieval and RAG</span><span class="chip"><span class="k">VS Code</span><b>v4.2.0</b></span><span class="chip soon">Soon</span></div>
+        <p class="why">One size and one hairline; the chosen one in rust. Calm, but it is the pill every site has.</p></div>
+    </div>
+  </section>
+
+  <!-- D3 calendar -->
+  <section>
+    <div class="sh"><span class="n">D3</span><h2>Calendar dates<span class="dot">.</span></h2></div>
+    <p class="note">The event date tile and the month grid.</p>
+    <div class="decide">
+      <div class="opt"><div class="opt-h"><b>Now</b><span class="tag">filled tile, coloured cap</span></div>
+        <div class="stage"><div class="ev"><div class="t-now"><span>Nov</span><b>30</b></div><div class="who"><b>AWS re:Invent 2026</b><span>30 Nov – 4 Dec · Las Vegas</span></div></div></div></div>
+      <div class="opt rec"><div class="opt-h"><b>A · Hairline tile</b><span class="tag">recommended</span></div>
+        <div class="stage"><div class="ev"><div class="t-a"><span>Nov</span><b>30</b><i></i></div><div class="who"><b>AWS re:Invent 2026</b><span>30 Nov – 4 Dec · Las Vegas</span></div></div></div>
+        <p class="why">White tile, one hairline, the month in rust mono, a bigger day, and the event type as one bead.</p></div>
+      <div class="opt"><div class="opt-h"><b>B · No tile</b><span class="tag">most minimal</span></div>
+        <div class="stage"><div class="ev"><div class="t-b"><div><span>Nov</span><b>30</b></div></div><div class="who"><b>AWS re:Invent 2026</b><span>30 Nov – 4 Dec · Las Vegas</span></div></div></div>
+        <p class="why">Just the date, with a thin type-coloured rod at its side.</p></div>
+    </div>
+    <div class="decide" style="margin-top:16px">
+      <div class="opt rec"><div class="opt-h"><b>Month grid · proposed</b><span class="tag">beads, not bars</span></div>
+        <div class="stage" style="justify-content:center"><div class="cal">
+          <span class="muted">M</span><span class="muted">T</span><span class="muted">W</span><span class="muted">T</span><span class="muted">F</span><span class="muted">S</span><span class="muted">S</span>
+          <span>9</span><span>10</span><span>11</span><span>12</span><span>13</span><span class="td">14</span><span>15</span>
+          <span>16</span><span class="ev2">17</span><span>18</span><span>19</span><span>20</span><span>21</span><span>22</span>
+          <span>23</span><span>24</span><span>25</span><span>26</span><span>27</span><span>28</span><span>29</span>
+          <span class="ev1 sel">30</span><span></span><span></span><span></span><span></span><span></span><span></span></div></div>
+        <p class="why">Today gets a red ring, the chosen day an ink circle, and each event day one small bead in its type colour instead of thick run bars.</p></div>
+    </div>
+  </section>
+
+  <!-- D4 doc page -->
+  <section>
+    <div class="sh"><span class="n">D4</span><h2>Inside a doc, after the banner<span class="dot">.</span></h2></div>
+    <p class="note">"From the doc to the job": six numbers that link the doc to the market.</p>
+    <div class="decide">
+      <div class="opt"><div class="opt-h"><b>Now</b><span class="tag">six framed cards</span></div>
+        <div class="stage"><div class="st-now">
+          <div><b>158</b><span>AI job ads name MCP</span><i>10% of 1,621</i></div><div><b>63%</b><span>ask for agents</span><i>MCP's skill</i></div><div><b>24</b><span>MCP tools on the map</span><i>servers, SDKs</i></div>
+          <div><b>3</b><span>terms to know</span><i>MCP, A2A</i></div><div><b>2</b><span>certificates</span><i>Claude Certified</i></div><div><b>08</b><span>Claude Platform pages</span><i>the API</i></div></div></div></div>
+      <div class="opt rec"><div class="opt-h"><b>Proposed · one frame</b><span class="tag">recommended</span></div>
+        <div class="stage"><div class="st">
+          <div><b>158</b><span>AI job ads name MCP</span><i>10% of 1,621</i></div><div><b>63%</b><span>ask for agents</span><i>MCP's skill</i></div><div><b>24</b><span>MCP tools on the map</span><i>servers, SDKs</i></div>
+          <div><b>3</b><span>terms to know</span><i>MCP, A2A</i></div><div><b>2</b><span>certificates</span><i>Claude Certified</i></div><div><b>08</b><span>Claude Platform pages</span><i>the API</i></div></div></div>
+        <p class="why">One wooden frame, cells split by hairlines, only the headline number in red. Same facts, half the visual weight.</p></div>
+    </div>
+  </section>
+
+  <!-- D5 icons -->
+  <section>
+    <div class="sh"><span class="n">D5</span><h2>Icons<span class="dot">.</span></h2></div>
+    <p class="note">Drawn to match the frames: a 24px grid, 1.6 stroke, round ends, ink line, and one bead each, the same shaded red bead as the labels and the logo. Where the drawing allows, the bead sits on a rod, so every icon reads as a small abacus.</p>
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><radialGradient id="bg" cx=".34" cy=".3" r=".75"><stop offset="0" stop-color="#ff9d8f"/><stop offset=".45" stop-color="#e0301e"/><stop offset="1" stop-color="#9e1a0c"/></radialGradient></defs></svg>
+    <div class="icons"><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20h17"/><path d="M7 20v-6M12 20V8M17 20v-9"/><circle cx="17" cy="8.6" r="2.3" fill="url(#bg)"/></svg><span>market</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.2" r="3.2"/><path d="M5.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M14.5 3.6h5"/><circle cx="19.5" cy="3.6" r="2.3" fill="url(#bg)"/></svg><span>roles</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="9" r="2.6"/><circle cx="15.5" cy="9" r="2.6"/><path d="M3.5 19.5c.6-2.8 2.5-4.3 5-4.3s4.4 1.5 5 4.3M10.5 19.5c.6-2.8 2.5-4.3 5-4.3s4.4 1.5 5 4.3"/><path d="M5 4h14"/><circle cx="12" cy="4" r="2.3" fill="url(#bg)"/></svg><span>people</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5h17"/><path d="M5 7.5v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-11"/><path d="M5 4v6M19 4v6"/><path d="M9 14.5h2"/><circle cx="15" cy="14.5" r="2.3" fill="url(#bg)"/></svg><span>events</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 3.5 8.5 12 13l8.5-4.5z"/><path d="M3.5 12.5 12 17l8.5-4.5M3.5 16.5 12 21l8.5-4.5"/><circle cx="12" cy="8.5" r="2.3" fill="url(#bg)"/></svg><span>architect</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h16"/><circle cx="9" cy="12" r="2.1" fill="currentColor" stroke="none"/><circle cx="14" cy="17.5" r="2.1" fill="currentColor" stroke="none"/><circle cx="16" cy="6.5" r="2.3" fill="url(#bg)"/></svg><span>tools</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5c2.7-.9 5.4-.6 8 1v13c-2.6-1.6-5.3-1.9-8-1z"/><path d="M20 5.5c-2.7-.9-5.4-.6-8 1v13c2.6-1.6 5.3-1.9 8-1z"/><path d="M14.5 10.5l3.5-1"/><circle cx="18" cy="9.4" r="2.3" fill="url(#bg)"/></svg><span>learn</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8l4 4V20a.5.5 0 0 1-.5.5h-11A.5.5 0 0 1 6 20z"/><path d="M14 3.5V8h4"/><path d="M9 12.5h6M9 16h6"/><circle cx="12" cy="16" r="2.3" fill="url(#bg)"/></svg><span>docs</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 6.5a2 2 0 0 1 2-2h11a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H11l-4 3.5v-3.5h-.5a2 2 0 0 1-2-2z"/><path d="M8 10h8"/><circle cx="13.5" cy="10" r="2.3" fill="url(#bg)"/></svg><span>jargon</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="9.5" r="5.2"/><path d="m8.8 14 -1.3 6.5L12 18l4.5 2.5L15.2 14"/><circle cx="12" cy="9.5" r="2.3" fill="url(#bg)"/></svg><span>certificates</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="6" rx="7" ry="2.5"/><path d="M5 6v12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5V6M5 12c0 1.4 3.1 2.5 7 2.5s7-1.1 7-2.5"/><circle cx="16" cy="14.2" r="2.3" fill="url(#bg)"/></svg><span>dataset</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3.5h8l4 4V20a.5.5 0 0 1-.5.5h-11A.5.5 0 0 1 6 20z"/><path d="M14 3.5V8h4"/><path d="m9 13.5 2 2 4-4.5"/><circle cx="18" cy="18" r="2.3" fill="url(#bg)"/></svg><span>role fit</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 8h16M4 16h16"/><circle cx="15" cy="16" r="2.3" fill="currentColor" stroke="none"/><circle cx="9" cy="8" r="2.3" fill="url(#bg)"/></svg><span>filter</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6"/><path d="m15 15 5 5"/><circle cx="10.5" cy="10.5" r="2.3" fill="url(#bg)"/></svg><span>search</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 14v4.5a1.5 1.5 0 0 1-1.5 1.5h-10A1.5 1.5 0 0 1 4 18.5v-10A1.5 1.5 0 0 1 5.5 7H10"/><path d="M11 13l8-8M14 5h5v5"/><circle cx="19" cy="5" r="2.3" fill="url(#bg)"/></svg><span>external</span></div><div><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5h17"/><path d="M5 7.5v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-11"/><path d="M5 4v6M19 4v6"/><path d="M12 11.5v6M9 14.5h6"/><circle cx="19" cy="4" r="2.3" fill="url(#bg)"/></svg><span>add to calendar</span></div></div>
+    <h3 style="margin-top:26px">In a frame</h3>
+    <p class="note" style="margin-bottom:14px">For section headings and the home page's category cards: the icon inside the abacus frame in miniature, posts and rods.</p>
+    <div class="ifr-row"><div class="ifr"><i><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20h17"/><path d="M7 20v-6M12 20V8M17 20v-9"/><circle cx="17" cy="8.6" r="2.3" fill="url(#bg)"/></svg></i><span>market</span></div><div class="ifr"><i><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8.2" r="3.2"/><path d="M5.5 20c.8-3.6 3.3-5.5 6.5-5.5s5.7 1.9 6.5 5.5"/><path d="M14.5 3.6h5"/><circle cx="19.5" cy="3.6" r="2.3" fill="url(#bg)"/></svg></i><span>roles</span></div><div class="ifr"><i><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="8.5" cy="9" r="2.6"/><circle cx="15.5" cy="9" r="2.6"/><path d="M3.5 19.5c.6-2.8 2.5-4.3 5-4.3s4.4 1.5 5 4.3M10.5 19.5c.6-2.8 2.5-4.3 5-4.3s4.4 1.5 5 4.3"/><path d="M5 4h14"/><circle cx="12" cy="4" r="2.3" fill="url(#bg)"/></svg></i><span>people</span></div><div class="ifr"><i><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 7.5h17"/><path d="M5 7.5v11a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2v-11"/><path d="M5 4v6M19 4v6"/><path d="M9 14.5h2"/><circle cx="15" cy="14.5" r="2.3" fill="url(#bg)"/></svg></i><span>events</span></div><div class="ifr"><i><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4 3.5 8.5 12 13l8.5-4.5z"/><path d="M3.5 12.5 12 17l8.5-4.5M3.5 16.5 12 21l8.5-4.5"/><circle cx="12" cy="8.5" r="2.3" fill="url(#bg)"/></svg></i><span>architect</span></div><div class="ifr"><i><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6.5h16M4 12h16M4 17.5h16"/><circle cx="9" cy="12" r="2.1" fill="currentColor" stroke="none"/><circle cx="14" cy="17.5" r="2.1" fill="currentColor" stroke="none"/><circle cx="16" cy="6.5" r="2.3" fill="url(#bg)"/></svg></i><span>tools</span></div><div class="ifr"><i><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 5.5c2.7-.9 5.4-.6 8 1v13c-2.6-1.6-5.3-1.9-8-1z"/><path d="M20 5.5c-2.7-.9-5.4-.6-8 1v13c2.6-1.6 5.3-1.9 8-1z"/><path d="M14.5 10.5l3.5-1"/><circle cx="18" cy="9.4" r="2.3" fill="url(#bg)"/></svg></i><span>learn</span></div></div>
+    <div class="ic-row" style="margin-top:20px"><span class="muted" style="font-size:.85rem">Sizes</span><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20h17"/><path d="M7 20v-6M12 20V8M17 20v-9"/><circle cx="17" cy="8.6" r="2.3" fill="url(#bg)"/></svg><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20h17"/><path d="M7 20v-6M12 20V8M17 20v-9"/><circle cx="17" cy="8.6" r="2.3" fill="url(#bg)"/></svg><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20h17"/><path d="M7 20v-6M12 20V8M17 20v-9"/><circle cx="17" cy="8.6" r="2.3" fill="url(#bg)"/></svg><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20h17"/><path d="M7 20v-6M12 20V8M17 20v-9"/><circle cx="17" cy="8.6" r="2.3" fill="url(#bg)"/></svg><svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3.5 20h17"/><path d="M7 20v-6M12 20V8M17 20v-9"/><circle cx="17" cy="8.6" r="2.3" fill="url(#bg)"/></svg><span class="muted" style="font-size:.85rem">16 · 20 · 24 · 32 · 48; the stroke thins slightly as the icon grows.</span></div>
+  </section>
+
+  <!-- D6 charts -->
+  <section>
+    <div class="sh"><span class="n">D6</span><h2>Visualisations<span class="dot">.</span></h2></div>
+    <p class="note">How every chart on the site looks: the bars, the colours, the labels.</p>
+    <div class="decide">
+      <div class="opt rec"><div class="opt-h"><b>A · Bead bars</b><span class="tag">recommended</span></div>
+        <div class="stage" style="display:block">
+          <svg class="chart" viewBox="0 0 360 150" role="img" aria-label="Example: share of AI job ads asking for each skill">
+            <g font-family="Vahid Sora, system-ui" font-size="11" fill="#55555a">
+              <text x="0" y="22">Agents and tool use</text><text x="0" y="52">Evals</text><text x="0" y="82">Retrieval and RAG</text><text x="0" y="112">Context and cost</text></g>
+            <g>
+              <rect x="130" y="16" width="190" height="3" rx="1.5" fill="#d2b48d"/><rect x="130" y="15" width="168" height="5" rx="2.5" fill="#1c1c1e"/><circle cx="298" cy="17.5" r="6" fill="#e0301e"/>
+              <rect x="130" y="46" width="190" height="3" rx="1.5" fill="#d2b48d"/><rect x="130" y="45" width="118" height="5" rx="2.5" fill="#1c1c1e"/><circle cx="248" cy="47.5" r="6" fill="#1c1c1e"/>
+              <rect x="130" y="76" width="190" height="3" rx="1.5" fill="#d2b48d"/><rect x="130" y="75" width="92" height="5" rx="2.5" fill="#1c1c1e"/><circle cx="222" cy="77.5" r="6" fill="#1c1c1e"/>
+              <rect x="130" y="106" width="190" height="3" rx="1.5" fill="#d2b48d"/><rect x="130" y="105" width="51" height="5" rx="2.5" fill="#1c1c1e"/><circle cx="181" cy="107.5" r="6" fill="#1c1c1e"/></g>
+            <g font-family="Geist Mono, monospace" font-size="11" fill="#1c1c1e" text-anchor="end"><text x="360" y="22">63%</text><text x="360" y="52">44%</text><text x="360" y="82">34%</text><text x="360" y="112">19%</text></g>
+            <text x="0" y="142" font-family="Geist Mono, monospace" font-size="9.5" fill="#8a8a90">Example values. The red bead marks the top row only.</text>
+          </svg></div>
+        <p class="why">Each bar is a wooden rod with an ink fill and a bead at its end: the abacus, read as data. Only the headline row is red; numbers in mono, right-aligned.</p></div>
+      <div class="opt"><div class="opt-h"><b>B · Plain bars</b><span class="tag">quieter</span></div>
+        <div class="stage" style="display:block">
+          <svg class="chart" viewBox="0 0 360 150" role="img" aria-label="Example: the same values as plain bars">
+            <g font-family="Vahid Sora, system-ui" font-size="11" fill="#55555a"><text x="0" y="22">Agents and tool use</text><text x="0" y="52">Evals</text><text x="0" y="82">Retrieval and RAG</text><text x="0" y="112">Context and cost</text></g>
+            <rect x="130" y="12" width="168" height="12" rx="4" fill="#e0301e"/><rect x="130" y="42" width="118" height="12" rx="4" fill="#1c1c1e"/><rect x="130" y="72" width="92" height="12" rx="4" fill="#1c1c1e"/><rect x="130" y="102" width="51" height="12" rx="4" fill="#1c1c1e"/>
+            <g font-family="Geist Mono, monospace" font-size="11" fill="#1c1c1e" text-anchor="end"><text x="360" y="22">63%</text><text x="360" y="52">44%</text><text x="360" y="82">34%</text><text x="360" y="112">19%</text></g>
+          </svg></div>
+        <p class="why">Rounded data ends, one red bar. Reads faster in dense tables, less of the brand.</p></div>
+    </div>
+    <h3 style="margin-top:24px">Category colours, checked for colour blindness</h3>
+    <p class="note" style="margin-bottom:12px">For anything with categories (event types, tool areas, agents). Fixed order, never cycled; red stays first. Passes every check on white; the amber always carries a text label. Today's set fails (ink and warm grey read as grey, the green is dull).</p>
+    <div class="pal">
+      <span><i style="background:var(--c1)"></i>1 rust</span><span><i style="background:var(--c2)"></i>2 blue</span><span><i style="background:var(--c3)"></i>3 amber</span><span><i style="background:var(--c4)"></i>4 rose</span><span><i style="background:var(--c5)"></i>5 teal</span><span><i style="background:var(--c6)"></i>6 violet</span><span><i style="background:var(--c7)"></i>7 green</span>
+    </div>
+    <ul class="rules">
+      <li>One axis, never two scales in one chart.</li>
+      <li>Thin marks; the grid is a hairline or absent.</li>
+      <li>A legend whenever there are two or more series, plus direct labels on up to four.</li>
+      <li>Text stays ink, grey or muted; colour sits on the mark beside it.</li>
+      <li>Numbers in Geist Mono; words in Vahid Sora.</li>
+      <li>Every chart has a hover tooltip and a table view.</li>
+      <li>Red means "this one": the headline, the live, the today. Never "series 4".</li>
+      <li>No shadows, no 3D, no gradients on data except the bead's own shine.</li>
+    </ul>
+  </section>
+
+  <div class="frame answer">
+    <span class="kicker">Your call</span>
+    <h2 style="margin-top:12px">Reply with seven letters<span class="dot">.</span></h2>
+    <ol>
+      <li><b>D0 Frames</b>: A posts, B abacus frame, or C abacus with a bead</li>
+      <li><b>D1 Theme</b>: A light only, or B light and dark</li>
+      <li><b>D2 Chips</b>: A bead chips, or B hairline chip</li>
+      <li><b>D3 Dates</b>: A hairline tile, or B no tile; and the bead month grid</li>
+      <li><b>D4 Doc page</b>: one frame, or keep six cards</li>
+      <li><b>D5 Icons</b>: adopt the set, or change the accent or stroke</li>
+      <li><b>D6 Charts</b>: A bead bars, or B plain bars; and the new category colours</li>
+    </ol>
+    <p class="muted" style="margin-top:10px;font-size:.88rem">My picks: B frames · A · A bead chips · A with the bead grid · one frame · adopt · A with the new colours.</p>
+  </div>
+</div>
+</body>
+</html>

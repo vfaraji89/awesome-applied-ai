@@ -59,7 +59,7 @@ export default function CoinedPage() {
         .cd-plain { font-size: 1rem; color: var(--ink); margin-top: 4px; }
         .cd-was { color: var(--sec); font-size: .92rem; } .cd-was span { margin-right: 6px; }
         .cd-note { font-size: .8rem; color: var(--muted); }
-        .cd-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; } .cd-links .chip { font-size: .74rem; }
+        .cd-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; } .cd-links .chip { }
       `}</style>
     </>
   );

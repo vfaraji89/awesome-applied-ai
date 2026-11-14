@@ -62,7 +62,7 @@ export function RequestFlow() {
         .rf-bead { position: absolute; left: 4px; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c);  transition: top .7s var(--spring); }
         .rf-say { display: flex; flex-direction: column; gap: 14px; }
         .rf-text { font-size: clamp(1.3rem, 2.4vw, 1.8rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.25; animation: rise .6s var(--ease) both; }
-        .rf-ctl { display: flex; gap: 8px; } .rf-ctl .chip { cursor: pointer; font: inherit; font-size: .8rem; }
+        .rf-ctl { display: flex; gap: 8px; } .rf-ctl .chip { cursor: pointer; }
         @media (max-width: 820px) { .rf { grid-template-columns: 1fr; } }
       `}</style>
     </div>

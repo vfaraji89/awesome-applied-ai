@@ -106,7 +106,7 @@ export default async function SkillPage({ params }: { params: Promise<{ id: stri
       <section className="section">
         <div className="wrap">
           <Crumb id="roles" page="Skill map" />
-          <p style={{ marginTop: 12 }}><span className="sd-tag">{M.sinceQuarter ?? "2026 Q4"}</span> <span className="count"><T k="sd.kicker" vars={{ i: String(i + 1).padStart(2, "0"), n: skills.length }}>{"skill {i} of {n}"}</T></span></p>
+          <p style={{ marginTop: 12 }}><span className="soon">{M.sinceQuarter ?? "2026 Q4"}</span> <span className="count"><T k="sd.kicker" vars={{ i: String(i + 1).padStart(2, "0"), n: skills.length }}>{"skill {i} of {n}"}</T></span></p>
           <h1 style={{ marginTop: 8 }}><Sk id={id} /><span className="dot">.</span></h1>
           <p className="lead" style={{ marginTop: 14, maxWidth: "62ch" }}><T k={`skillwhat.${id}`}>{s.what}</T></p>
           <div className="sd-actions">

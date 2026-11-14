@@ -61,7 +61,7 @@ export default function Architect() {
       <style>{`
         .ar-list { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; } .ar-list li { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
         .ar-list .bead { width: 10px; height: 10px; flex: none; }
-        .mx-beads { display: inline-flex; gap: 3px; } .mx-beads i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
+        .mx-beads { display: inline-flex; gap: 3px; } .mx-beads i { width: 10px; height: 10px; border-radius: 50%; background: var(--bead-white); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; }
         .mx-beads i.on { background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
         .ar-grow { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; counter-reset: g; }
         .ar-grow li { display: grid; grid-template-columns: 110px 1fr; gap: 10px; font-size: .92rem; }

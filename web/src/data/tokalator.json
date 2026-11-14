@@ -1,0 +1,5 @@
+{
+ "_note": "Tokalator, the author's own tool, on the home page. version: the VS Code extension's package.json on main, refreshed weekly by pipeline/github-stats.ts; stars come from github-stats.json.",
+ "version": "4.2.0",
+ "checked": "2026-11-14"
+}

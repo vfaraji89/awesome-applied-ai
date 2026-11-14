@@ -269,9 +269,9 @@ export function SkillMap() {
         .sm-gains .mono { text-align: right; }
         .sm-gbar { margin-right: 6px; }
         .sm-gbar > i { background: var(--ink); transition: width 0.5s var(--ease); }
-        .sm-gbar > i::after { background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%); }
+        .sm-gbar > i::after { background: var(--bead-ink); }
         .sm-gains li.best .sm-gbar > i { background: var(--rust); }
-        .sm-gains li.best .sm-gbar > i::after { background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); }
+        .sm-gains li.best .sm-gbar > i::after { background: var(--bead-red); }
         .sm-path { list-style: none; padding: 0; margin: 10px 0 0; display: flex; flex-wrap: wrap; gap: 8px 6px; align-items: center; }
         .sm-path li { display: inline-flex; align-items: center; gap: 6px; padding: 5px 12px 5px 5px; border-radius: 999px; background: var(--paper); border: 1px solid var(--line); font-size: 0.85rem; }
         .sm-bead { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: var(--rust); color: #fff; font-family: var(--font-mono), monospace; font-size: 0.7rem; }

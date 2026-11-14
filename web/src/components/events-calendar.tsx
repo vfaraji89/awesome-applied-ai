@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { Icon } from "./icons";
 import { T, useT } from "@/i18n/lang";
 
 /* The events calendar, in the abacus language:
@@ -83,7 +84,7 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
             <span className="muted">{range(next)} · {next.city}</span>
           </div>
           <div className="ec-acts">
-            <button type="button" className="btn" onClick={() => ics(next)}><T k="ec.add">Add to calendar</T></button>
+            <button type="button" className="btn ec-addbtn" onClick={() => ics(next)}><Icon name="addcal" size={18} /><T k="ec.add">Add to calendar</T></button>
             <a className="chip" href={next.url} target="_blank" rel="noreferrer"><T k="ec.site">Official site</T> ↗</a>
           </div>
         </div>
@@ -152,7 +153,7 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
             <ul>
               {agenda.map((e) => (
                 <li key={e.name} className={`frame ec-card${sel === e.name ? " on" : ""}`} onMouseEnter={() => setSel(e.name)}>
-                  <div className={`ec-tile t-${e.type}`}><span>{fmt(e.start, { month: "short" })}</span><b>{fmt(e.start, { day: "numeric" })}{e.end !== e.start && mKey(e.end) === mKey(e.start) ? `–${fmt(e.end, { day: "numeric" })}` : ""}</b></div>
+                  <div className={`ec-tile t-${e.type}`}><span>{fmt(e.start, { month: "short" })}</span><b>{fmt(e.start, { day: "numeric" })}</b>{e.end !== e.start ? <small>→ {fmt(e.end, mKey(e.end) === mKey(e.start) ? { day: "numeric" } : { day: "numeric", month: "short" })}</small> : null}<i aria-hidden="true" /></div>
                   <div className="ec-body">
                     <b>{e.name}</b>
                     <span className="muted">{range(e)} · {e.city}</span>
@@ -176,29 +177,21 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
       </div>
 
       <style>{`
-        .ec { --t-aieng: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); --c-aieng: #e0301e;
-          --t-dev: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); --c-dev: #1c1c1e;
-          --t-platform: radial-gradient(circle at 34% 30%, #9db7dc, #3f66a3 50%, #1f3a66); --c-platform: #3f66a3;
-          --t-data: radial-gradient(circle at 34% 30%, #f6d79a, #d39a3a 50%, #8f5f14); --c-data: #d39a3a;
-          --t-infra: radial-gradient(circle at 34% 30%, #a9d1b5, #4f8a63 50%, #2b5539); --c-infra: #4f8a63;
-          --t-research: radial-gradient(circle at 34% 30%, #fff, #f1ede8 45%, #cfc6bb); --c-research: #b9ad9f;
-          --t-acm: radial-gradient(circle at 34% 30%, #c3b4e6, #6b4fa3 50%, #3e2a6b); --c-acm: #6b4fa3; }
-        .t-aieng { --b: var(--t-aieng); --c: var(--c-aieng); } .t-dev { --b: var(--t-dev); --c: var(--c-dev); } .t-platform { --b: var(--t-platform); --c: var(--c-platform); }
         .t-data { --b: var(--t-data); --c: var(--c-data); } .t-infra { --b: var(--t-infra); --c: var(--c-infra); } .t-research { --b: var(--t-research); --c: var(--c-research); } .t-acm { --b: var(--t-acm); --c: var(--c-acm); }
         .ec-dot { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: var(--b); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; flex: none; } .ec-dot.sm { width: 10px; height: 10px; }
         .ec-next { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 20px 24px; }
         .ec-next > div:nth-child(2) { display: grid; gap: 2px; } .ec-next-name { font-size: 1.4rem; font-weight: 800; letter-spacing: -.01em; }
         @media (max-width: 680px) { .ec-next { grid-template-columns: auto 1fr; } .ec-next .ec-acts { grid-column: 1 / -1; } }
-        .ec-acts { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ec-acts .chip { cursor: pointer; font: inherit; font-size: .78rem; } .ec-acts .btn { border: 0; cursor: pointer; font: inherit; }
+        .ec-acts { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ec-acts .chip { cursor: pointer; } .ec-acts .btn { border: 0; cursor: pointer; font: inherit; }
         .ec-filters { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin: 22px 0 14px; }
-        .ec-fl { display: flex; flex-wrap: wrap; gap: 6px; } .ec-fl .chip { cursor: pointer; font: inherit; font-size: .8rem; } .ec-sep { width: 1px; background: var(--line); margin: 2px 4px; }
+        .ec-fl { display: flex; flex-wrap: wrap; gap: 6px; } .ec-fl .chip { cursor: pointer; } .ec-sep { width: 1px; background: var(--line); margin: 2px 4px; }
         .ec-year { padding: 30px 28px 26px; }
         .ec-rod { position: relative; height: 74px; margin: 0 8px; }
         .ec-rod::before { content: ""; position: absolute; left: 0; right: 0; top: 30px; height: 4px; border-radius: 2px; background: var(--rod); }
         .ec-tick { position: absolute; top: 46px; transform: translateX(-2px); } .ec-tick::before { content: ""; position: absolute; left: 1px; top: -12px; width: 1px; height: 8px; background: var(--line-strong); }
         .ec-tick button { border: 0; background: none; padding: 2px 4px; font: .72rem var(--font-mono), monospace; color: var(--muted); cursor: pointer; text-transform: uppercase; display: grid; }
         .ec-tick button i { font-style: normal; font-size: .62rem; } .ec-tick.on button { color: var(--rust-deep); font-weight: 700; }
-        .ec-today { position: absolute; top: 18px; width: 2px; height: 28px; background: var(--rust); border-radius: 1px; } .ec-today::after { content: ""; position: absolute; top: -6px; left: -3px; width: 8px; height: 8px; border-radius: 50%; background: var(--rust); }
+        .ec-today { position: absolute; top: 18px; width: 2px; height: 28px; background: var(--rust); border-radius: 1px; } .ec-today::after { content: ""; position: absolute; top: -7px; left: -4px; width: 10px; height: 10px; border-radius: 50%; background: var(--bead-red); }
         .ec-bead { position: absolute; top: calc(22px - var(--s) * 14px); width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: var(--b); outline: 1px solid rgba(0,0,0,.06); outline-offset: -1px; transition: transform .35s var(--spring); }
         .ec-bead:hover, .ec-bead.on { transform: scale(1.35); z-index: 3; } .ec-bead.on { outline: 4px solid color-mix(in srgb, var(--c) 25%, transparent); outline-offset: 0; }
         .ec-tip { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translate(-50%, 4px); display: grid; gap: 1px; white-space: nowrap; font-size: .7rem; background: var(--ink); color: var(--bg); padding: 5px 9px; border-radius: 7px; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
@@ -211,29 +204,38 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
         .ec-pills { display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; margin: 14px 0 12px; }
         .ec-pill { display: grid; justify-items: center; gap: 3px; padding: 5px 0 6px; border-radius: 8px; border: 1px solid transparent; background: none; cursor: pointer; font: .7rem var(--font-mono), monospace; color: var(--muted); }
         .ec-pill.has { color: var(--ink); } .ec-pill.on { border-color: var(--rust); background: var(--paper); color: var(--rust-deep); font-weight: 700; }
-        .ec-pill span { display: flex; gap: 2px; height: 5px; } .ec-pill i { width: 5px; height: 5px; border-radius: 50%; background: var(--rust); }
+        .ec-pill span { display: flex; gap: 2px; height: 7px; } .ec-pill i { width: 7px; height: 7px; border-radius: 50%; background: var(--bead-red); }
         .ec-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 3px; }
         .ec-dow { text-align: center; font-size: .66rem; padding-bottom: 4px; }
         .ec-cell { position: relative; aspect-ratio: 1 / .92; border: 0; border-radius: 9px; background: none; cursor: pointer; display: grid; align-content: start; justify-items: center; padding: 6px 0 0; font: inherit; color: var(--ink); }
         .ec-cell.empty { cursor: default; } .ec-cell:not(.empty):hover { background: var(--paper); }
-        .ec-cell.today .ec-n {  color: var(--rust-deep); font-weight: 700; }
-        .ec-cell.on { background: var(--ink); } .ec-cell.on .ec-n { color: var(--bg); }
+        .ec-cell.today .ec-n { outline: 1.5px solid var(--rust); outline-offset: -1.5px; color: var(--rust-deep); font-weight: 700; }
+        .ec-cell.on .ec-n { background: var(--ink); color: var(--bg); outline: 0; }
         .ec-n { width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; font-size: .84rem; }
-        .ec-runs { position: absolute; left: 0; right: 0; bottom: 7px; display: grid; gap: 3px; }
-        .ec-runs i { display: block; height: 5px; background: var(--c); opacity: .75; margin: 0 -2px; }
-        .ec-runs i.s { margin-left: 30%; border-radius: 3px 0 0 3px; } .ec-runs i.e { margin-right: 30%; border-radius: 0 3px 3px 0; } .ec-runs i.s.e { border-radius: 3px; }
-        .ec-runs i.s::before { content: ""; position: absolute; width: 9px; height: 9px; margin: -2px 0 0 -4px; border-radius: 50%; background: var(--b); }
-        .ec-runs i.sel { opacity: 1; height: 6px; }
+        .ec-runs { position: absolute; left: 0; right: 0; bottom: 4px; display: flex; justify-content: center; gap: 3px; }
+        .ec-runs i { width: 8px; height: 8px; border-radius: 50%; background: var(--b); }
+        .ec-runs i.sel { transform: scale(1.4); }
         .ec-hint { margin-top: 10px; }
         .ec-agenda > .kicker { display: flex; gap: 10px; align-items: center; }
         .ec-clear { border: 0; background: var(--paper); border-radius: 999px; padding: 2px 9px; font: inherit; font-size: .7rem; cursor: pointer; color: var(--rust-deep); text-transform: none; letter-spacing: 0; }
-        .ec-agenda ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 12px; }
-        .ec-card { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; padding: 16px 18px; } .ec-card.on { outline: 1.5px solid var(--rust); outline-offset: 0; }
-        .ec-tile { display: grid; justify-items: center; align-content: center; height: 64px; border-radius: 14px; background: var(--paper); border-top: 4px solid var(--c); }
-        .ec-tile span { font: .66rem var(--font-mono), monospace; text-transform: uppercase; color: var(--muted); } .ec-tile b { font-size: 1.05rem; font-weight: 800; }
+        .ec-agenda ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 18px; }
+        .ec-card { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 16px; padding: 16px 18px; } .ec-card.on { outline: 1.5px solid var(--rust); outline-offset: 0; }
+        /* the date card: a small calendar page hung from a wooden rod with two short posts, the
+           frame in miniature. Month in rust mono, the day large, the end day after an arrow,
+           and the event type as one bead. */
+        .ec-tile { position: relative; align-self: start; display: grid; justify-items: center; width: 58px; padding: 10px 0 8px; margin-top: 3px;
+          border: 1px solid var(--line); border-top: 0; border-radius: 2px 2px 12px 12px; background-color: var(--card);
+          background-image: var(--rod); background-size: 100% 3px; background-position: top; background-repeat: no-repeat; }
+        .ec-tile::before, .ec-tile::after { content: ""; position: absolute; top: -3px; height: 10px; width: 5px; border-radius: 3px; background: var(--dowel); }
+        .ec-tile::before { left: -3px; } .ec-tile::after { right: -3px; }
+        .ec-tile span { font: 500 .62rem var(--font-mono), monospace; letter-spacing: .12em; text-transform: uppercase; color: var(--rust-deep); }
+        .ec-tile b { font-size: 1.5rem; font-weight: 800; letter-spacing: -.04em; line-height: 1.05; }
+        .ec-tile small { font: .62rem var(--font-mono), monospace; color: var(--muted); margin-top: 1px; white-space: nowrap; }
+        .ec-tile i { width: 10px; height: 10px; border-radius: 50%; margin-top: 5px; background: var(--b); }
         .ec-body { display: grid; gap: 4px; min-width: 0; } .ec-body > b { font-size: 1.05rem; } .ec-body .muted { font-size: .86rem; }
         .ec-type { display: inline-flex; gap: 6px; align-items: center; font-size: .76rem; color: var(--sec); }
         .ec-tracks { gap: 6px; }
+        .ec-addbtn { display: inline-flex; align-items: center; gap: 8px; } .ec-addbtn .ic { color: #fff; }
         .ec-note { font-size: .86rem; color: var(--sec); margin: 2px 0 4px; }
         .ec-none { margin-top: 14px; }
       `}</style>

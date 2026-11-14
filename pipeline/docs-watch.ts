@@ -16,7 +16,7 @@ const dry = process.argv.includes("--dry");
 const today = new Date().toISOString().slice(0, 10);
 const TOKEN = process.env.GITHUB_TOKEN ?? "";
 const REPO = process.env.GITHUB_REPOSITORY ?? "vfaraji89/applied-ai-simplified";
-const UA = { "User-Agent": "applied-ai-simplified docs watch (+https://github.com/vfaraji89/applied-ai-simplified)" };
+const UA = { "User-Agent": "applied-ai-simplified docs watch (+https://vfaraji89.github.io/applied-ai-simplified/)" };
 const gh = async (p: string) => {
   const r = await fetch(`https://api.github.com/${p}`, { headers: { ...UA, Accept: "application/vnd.github+json", ...(TOKEN ? { Authorization: `Bearer ${TOKEN}` } : {}) } });
   if (!r.ok) throw new Error(`${r.status} github ${p}`);

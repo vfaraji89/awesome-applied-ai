@@ -101,7 +101,7 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
       </section>
       <style>{`
         .ps-hero { display: flex; gap: 28px; align-items: center; margin-top: 22px; flex-wrap: wrap; }
-        .ps-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; } .ps-links .chip { font-size: .8rem; }
+        .ps-links { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; } .ps-links .chip { }
         .ps-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 14px; margin-top: 30px; max-width: 780px; }
         .ps-stats .frame { display: grid; gap: 6px; align-content: center; } .ps-stats b { font-size: 2rem; font-weight: 800; color: var(--rust); line-height: 1; }
         .ps-grid { display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 30px; }
@@ -111,7 +111,7 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
         .ps-talks li::before { content: counter(t, decimal-leading-zero); position: absolute; left: 0; top: 2px; font: 700 .72rem var(--font-mono), monospace; color: var(--rust); }
         .ps-talks a { text-decoration: none; color: var(--ink); } .ps-talks a:hover b { color: var(--rust-deep); }
         .ps-side { display: grid; gap: 14px; align-content: start; }
-        .ps-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; } .ps-chips .chip { font-size: .76rem; }
+        .ps-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; } .ps-chips .chip { }
         .ps-rel { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 12px; margin-top: 14px; }
         .ps-rcard { display: flex; gap: 12px; align-items: center; } .ps-rcard span { display: grid; } .ps-rcard .muted { font-size: .82rem; } .ps-rcard:hover b { color: var(--rust-deep); }
       `}</style>

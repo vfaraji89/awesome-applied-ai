@@ -1,7 +1,7 @@
 import type { RawJob } from "./types";
 import { isAI, SEEKER } from "./taxonomy";
 
-const UA = { "User-Agent": "applied-ai-simplified job-market collector (+https://github.com/vfaraji89/applied-ai-simplified)" };
+const UA = { "User-Agent": "applied-ai-simplified job-market collector (+https://vfaraji89.github.io/applied-ai-simplified/)" };
 
 export const strip = (html: string) =>
   (html || "")

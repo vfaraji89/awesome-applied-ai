@@ -71,7 +71,7 @@ writeFileSync(metaPath, JSON.stringify(meta, null, 1) + "\n");
 writeFileSync(path.join(root, "web/src/data/dataset-meta.json"), JSON.stringify(meta, null, 1) + "\n");
 
 const count = (f: (r: (typeof rows)[number]) => string) => { const m = new Map<string, number>(); for (const r of rows) m.set(f(r), (m.get(f(r)) ?? 0) + 1); return [...m.entries()].sort((a, b) => b[1] - a[1]); };
-const cite = `Faraji, V. (${through.slice(0, 4)}). Applied AI job ads: what employers ask for (version ${version}) [Data set].${meta.conceptDoi ? ` https://doi.org/${meta.conceptDoi}` : " https://github.com/vfaraji89/applied-ai-simplified/tree/main/dataset"}`;
+const cite = `Faraji, V. (${through.slice(0, 4)}). Applied AI job ads: what employers ask for (version ${version}) [Data set].${meta.conceptDoi ? ` https://doi.org/${meta.conceptDoi}` : " https://vfaraji89.github.io/applied-ai-simplified/market/method/"}`;
 const size = rows.length < 1e4 ? "1K<n<10K" : rows.length < 1e5 ? "10K<n<100K" : "100K<n<1M";
 // the front matter is for Hugging Face, which reads the licence and the data files from it
 writeFileSync(path.join(OUT, "README.md"), `---

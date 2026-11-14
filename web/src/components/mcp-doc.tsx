@@ -86,7 +86,7 @@ function Primitives() {
     <div className="pm">
       {PRIMS.map(([n, who, what, ex], i) => (
         <div key={n} className={`pm-card${i === s ? " on" : ""}`}>
-          <span className="pm-who">{who}</span>
+          <span className="soon pm-who">{who}</span>
           <b>{n}</b>
           <span className="muted">{what}</span>
           <code className="mono">{ex}</code>
@@ -327,7 +327,7 @@ const animCss = `
         .pm-card { display: flex; flex-direction: column; gap: 6px; padding: 16px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); opacity: .4; transform: translateY(6px); transition: all .5s var(--spring); }
         .pm-card.on { opacity: 1; transform: none; border-color: var(--rust); outline: 4px solid var(--mark); outline-offset: 0; }
         .pm-card b { font-size: 1.15rem; } .pm-card .muted { font-size: .88rem; }
-        .pm-who { align-self: flex-start; font: .64rem var(--font-mono), monospace; letter-spacing: .08em; text-transform: uppercase; padding: 2px 8px; border-radius: 999px; border: 1px dashed var(--rust); color: var(--rust-deep); }
+        .pm-who { align-self: flex-start; }
         .pm-card code { font-size: .74rem; color: var(--rust-deep); margin-top: auto; }
 
         .bc-row { display: grid; grid-template-columns: auto 1fr auto; gap: 12px; align-items: center; }
