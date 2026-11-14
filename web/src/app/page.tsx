@@ -8,6 +8,8 @@ import { share } from "@/lib/share";
 import { M } from "@/lib/market-data";
 import people from "@/data/people.json";
 import events from "@/data/events.json";
+import tok from "@/data/tokalator.json";
+import gh from "@/data/github-stats.json";
 
 export const metadata: Metadata = { ...share("") };
 
@@ -36,6 +38,32 @@ function Card({ s, wide }: { s: Section; wide?: boolean }) {
   );
 }
 
+/* Tokalator is the author's own tool, so the card says so first. Version from the extension's
+   package.json and stars from GitHub, both refreshed weekly (pipeline/github-stats.ts). */
+function Tokalator() {
+  const stars = (gh as { repos: Record<string, { stars: number }> }).repos["vfaraji89/tokalator"]?.stars;
+  const MARKET = "https://marketplace.visualstudio.com/items?itemName=vfaraji89.tokalator";
+  return (
+    <aside className="frame tok rise" style={{ ["--i" as string]: 3 }} aria-label="Tokalator">
+      <span className="kicker"><T k="tok.k">From the author · open source</T></span>
+      <div className="tok-top">
+        <img src={`${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/brand/tokalator-icon.png`} width={48} height={48} alt="" />
+        <div>
+          <b className="tok-name">Tokalator</b>
+          <span className="tok-what"><T k="tok.what">See every token your AI coding assistant spends.</T></span>
+        </div>
+      </div>
+      <p className="muted tok-line"><T k="tok.line">Context budget, usage and cost for Claude Code, Copilot and Codex: a VS Code extension, an MCP server and a CLI. A plain answer to what the model reads, and what it costs.</T></p>
+      <div className="chips tok-chips">
+        {tok.version && <a className="chip" href={MARKET} target="_blank" rel="noreferrer"><T k="tok.vs">VS Code</T> v{tok.version}</a>}
+        {stars !== undefined && <a className="chip" href="https://github.com/vfaraji89/tokalator" target="_blank" rel="noreferrer" aria-label={`${stars} GitHub stars`}>★ {stars} <T k="tok.stars">stars</T></a>}
+        <span className="chip">AGPL-3.0</span>
+      </div>
+      <a className="btn tok-go" href="https://tokalator.ai" target="_blank" rel="noreferrer">tokalator.ai ↗</a>
+    </aside>
+  );
+}
+
 export default function Home() {
   const today = new Date().toISOString().slice(0, 10);
   const upcoming = events.events.filter((e) => e.end >= today).length;
@@ -50,6 +78,8 @@ export default function Home() {
     <>
       <section className="section home-hero">
         <div className="wrap">
+          <div className="home-top">
+          <div>
           <span className="kicker rise">Applied AI, Simplified</span>
           <h1 className="rise" style={{ ["--i" as string]: 1, marginTop: 14 }}><TH k="home.h1s">Applied AI, <mark>simplified</mark></TH><span className="dot">.</span></h1>
           <p className="lead rise" style={{ ["--i" as string]: 2, marginTop: 18 }}>
@@ -58,6 +88,9 @@ export default function Home() {
           <div className="rise home-cta" style={{ ["--i" as string]: 3 }}>
             <Link href="/market/" className="btn"><T k="home.cta_market">See what the market asks for</T> →</Link>
             <Link href="/fit/" className="btn ghost"><T k="home.cta_fit">Check your role fit</T></Link>
+          </div>
+          </div>
+          <Tokalator />
           </div>
           <div className="home-glance">
             {glance.map((g, i) => (
@@ -79,6 +112,17 @@ export default function Home() {
       </section>
 
       <style>{`
+        .home-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 360px); gap: 48px; align-items: center; }
+        @media (max-width: 960px) { .home-top { grid-template-columns: minmax(0, 1fr); gap: 32px; } }
+        .tok { display: flex; flex-direction: column; gap: 14px; padding: 24px 28px; }
+        .tok-top { display: flex; gap: 14px; align-items: center; }
+        .tok-top img { flex: none; border-radius: 12px; }
+        .tok-top > div { display: grid; gap: 2px; min-width: 0; }
+        .tok-name { font-size: 1.35rem; font-weight: 800; letter-spacing: -.02em; }
+        .tok-what { font-weight: 600; font-size: .95rem; color: var(--ink); }
+        .tok-line { margin: 0; font-size: .9rem; }
+        .tok-chips { gap: 6px; } .tok-chips a.chip:hover { border-color: var(--rust); color: var(--rust-deep); }
+        .tok-go { align-self: flex-start; }
         .home-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
         .home-glance { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 40px; }
         @media (max-width: 900px) { .home-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); } }

@@ -74,3 +74,17 @@ for (const r of missing) if (old.repos[r]) repos2[r] = old.repos[r];
 const out: File = { updated: today, repos: Object.fromEntries(Object.entries(repos2).sort()) };
 console.log(`github-stats: ${Object.keys(repos2).length} of ${repos.length} repos` + (missing.length ? `; not found: ${missing.join(", ")}` : ""));
 if (!dry) writeFileSync(OUT, JSON.stringify(out, null, 1) + "\n");
+
+/* Tokalator, the author's own tool, shown on the home page: its VS Code extension version, read
+   from the extension's package.json on the main branch. A failed read keeps the last version. */
+{
+  const TOK = path.join(root, "web", "src", "data", "tokalator.json");
+  const prev = existsSync(TOK) ? JSON.parse(readFileSync(TOK, "utf8")) : {};
+  let version = prev.version ?? null;
+  try {
+    const pkg = await (await fetch("https://raw.githubusercontent.com/vfaraji89/tokalator/main/tokalator-extension-vs/package.json", { signal: AbortSignal.timeout(20000) })).json();
+    if (typeof pkg.version === "string") version = pkg.version;
+  } catch { /* keep the last version */ }
+  console.log(`tokalator: v${version}`);
+  if (!dry) writeFileSync(TOK, JSON.stringify({ ...prev, version, checked: today }, null, 1) + "\n");
+}

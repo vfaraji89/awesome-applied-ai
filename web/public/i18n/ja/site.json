@@ -1442,6 +1442,11 @@
  "pb.talk1": "講演1件",
  "md.dl_totals": "月別の合計",
  "md.cite_n2": "ライセンス：CC BY 4.0（データセットのみ）。コードとサイトはオープンソースではありません。",
+ "tok.k": "作者のツール · オープンソース",
+ "tok.what": "AIコーディングアシスタントが使うトークンを、すべて見える化。",
+ "tok.line": "Claude Code、Copilot、Codexのコンテキスト予算・使用量・コスト。VS Code拡張機能、MCPサーバー、CLIで提供。モデルが何を読み、いくらかかるのかに平易に答えます。",
+ "tok.vs": "VS Code",
+ "tok.stars": "スター",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Japanese reader). Delete a line once agreed, or change the value above it.",
   "fit.h1": "'採用市場に、どこまで届いているか' is a free rendering of 'How ready are you for the market'.",

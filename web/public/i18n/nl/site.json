@@ -1440,6 +1440,11 @@
  "pb.talk1": "1 talk",
  "md.dl_totals": "Maandtotalen",
  "md.cite_n2": "Licentie: CC BY 4.0, alleen voor de dataset. De code en de site zijn niet open source.",
+ "tok.k": "Van de maker · open source",
+ "tok.what": "Zie elke token die je AI-codeerassistent uitgeeft.",
+ "tok.line": "Contextbudget, gebruik en kosten voor Claude Code, Copilot en Codex: een VS Code-extensie, een MCP-server en een CLI. Een helder antwoord op wat het model leest en wat dat kost.",
+ "tok.vs": "VS Code",
+ "tok.stars": "sterren",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Dutch reader). Delete a line once agreed, or change the value above it.",
   "area.serving": "'Serving', 'evals', 'retrieval', 'harness' kept in English, as Dutch tech teams say them.",

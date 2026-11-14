@@ -1440,6 +1440,11 @@
  "pb.talk1": "1 charla",
  "md.dl_totals": "Totales mensuales",
  "md.cite_n2": "Licencia: CC BY 4.0, solo para el conjunto de datos. El código y el sitio no son de código abierto.",
+ "tok.k": "Del autor · código abierto",
+ "tok.what": "Mira cada token que gasta tu asistente de programación con IA.",
+ "tok.line": "Presupuesto de contexto, uso y coste para Claude Code, Copilot y Codex: una extensión de VS Code, un servidor MCP y una CLI. Una respuesta clara a qué lee el modelo y cuánto cuesta.",
+ "tok.vs": "VS Code",
+ "tok.stars": "estrellas",
  "_review": {
   "_how": "Vahid: judgment calls to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'inferencia'; alternative: keep 'serving'.",

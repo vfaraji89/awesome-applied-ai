@@ -1440,6 +1440,11 @@
  "pb.talk1": "1 konuşma",
  "md.dl_totals": "Aylık toplamlar",
  "md.cite_n2": "Lisans: CC BY 4.0, yalnızca veri seti için. Kod ve site açık kaynak değildir.",
+ "tok.k": "Yazardan · açık kaynak",
+ "tok.what": "Yapay zekâ kodlama asistanınızın harcadığı her token'ı görün.",
+ "tok.line": "Claude Code, Copilot ve Codex için bağlam bütçesi, kullanım ve maliyet: bir VS Code eklentisi, bir MCP sunucusu ve bir CLI. Modelin ne okuduğuna ve bunun neye mal olduğuna sade bir yanıt.",
+ "tok.vs": "VS Code",
+ "tok.stars": "yıldız",
  "_review": {
   "_how": "Vahid: these are judgment calls for you to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'servisleme'; alternatives: 'model servisi', or keep 'serving'.",
