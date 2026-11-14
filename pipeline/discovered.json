@@ -1,6 +1,6 @@
 {
  "_note": "Written by pipeline/boards.ts. Career pages found for the map's tools and the AI labs. Do not edit; add boards by hand in companies.json.",
- "generatedAt": "2026-11-14T03:24:37.137Z",
+ "generatedAt": "2026-11-14T03:29:21.627Z",
  "probed": 2781,
  "boards": [
   {
@@ -95,6 +95,12 @@
   },
   {
    "provider": "ashby",
+   "slug": "judgmentlabs",
+   "name": "Judgment Labs judgeval",
+   "tool": "judgeval"
+  },
+  {
+   "provider": "ashby",
    "slug": "juicebox",
    "name": "Juicebox",
    "kind": "recruiting"
@@ -176,6 +182,12 @@
    "slug": "runpod",
    "name": "RunPod",
    "tool": "runpod"
+  },
+  {
+   "provider": "ashby",
+   "slug": "sentry",
+   "name": "Sentry AI Agent Monitoring",
+   "tool": "sentry-ai-agent-monitoring"
   },
   {
    "provider": "ashby",
