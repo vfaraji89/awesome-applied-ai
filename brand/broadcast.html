@@ -106,6 +106,69 @@ section{margin-top:64px}
 .bc-row.hot .bc-num{color:var(--rust)}
 .c-on .bc-lab i{transform:none}.c-on .bc-rod::before{transform:none}.c-on .bc-rod span{opacity:1}.c-on .bc-num{opacity:1;transform:none}
 
+
+/* ============ D · MATCH CENTRE: the labs against everyone else, as a full stats panel ============ */
+.mc-wrap{position:relative;padding:8px 6px}
+.mc-wrap .post{position:absolute;top:0;bottom:0;width:9px;border-radius:5px;background:var(--dowel);z-index:3;left:calc(50% - 4.5px);transition:left .9s var(--wipe)}
+.mc{position:relative;overflow:hidden;border-radius:6px;background:#141312;color:#f2efe9;padding:26px 30px 28px;clip-path:inset(0 50% 0 50%);transition:clip-path .9s var(--wipe);
+  background-image:linear-gradient(180deg,#1d1a19 0%,#141312 60%),var(--rod),var(--rod);background-size:100% 100%,100% 3px,100% 3px;background-position:0 0,top,bottom;background-repeat:no-repeat}
+.mc .fade{opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .6s var(--in)}
+.mc-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font:.68rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#a8a19a}
+.mc-top .live{display:inline-flex;align-items:center;gap:7px;color:#fff}.mc-top .live i{width:9px;height:9px;border-radius:50%;background:var(--bead-red)}
+/* scoreboard */
+.mc-score{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:22px;margin:18px 0 6px}
+.mc-team{display:flex;align-items:center;gap:14px}.mc-team.r{justify-content:flex-end;text-align:right}
+.mc-crest{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center}
+.mc-crest.lab{background:var(--bead-red)}.mc-crest.rest{background:radial-gradient(circle at 34% 30%,#fff 0%,#e8e2db 40%,#a59c92 100%)}
+.mc-team b{display:block;font-size:1.15rem;font-weight:800;letter-spacing:-.02em}.mc-team small{font:.66rem var(--mono);color:#a8a19a;letter-spacing:.08em;text-transform:uppercase}
+.mc-board{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.mc-board .reels{height:52px;margin:0;font-size:2.9rem;line-height:52px;color:#fff}.mc-board .reel,.mc-board .reels .sym{height:52px}.mc-board .reel b{height:52px}
+.mc-board .sep{width:14px;height:3px;border-radius:2px;background:var(--rod)}
+/* possession-style split */
+.mc-split{margin:20px 0 6px}
+.mc-split .lbl{display:flex;justify-content:space-between;font:.68rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#a8a19a;margin-bottom:8px}
+.mc-split .lbl b{font:800 1.05rem var(--sans);letter-spacing:-.02em;color:#fff}
+.mc-bar{position:relative;display:flex;height:10px;border-radius:6px;overflow:hidden;background:#2a2624}
+.mc-bar .a{background:linear-gradient(90deg,#9e1a0c,#e0301e);width:0;transition:width 1s var(--in)}
+.mc-bar .b{margin-left:auto;background:linear-gradient(90deg,#d8d1c9,#f2efe9);width:0;transition:width 1s var(--in)}
+/* mirrored stat rows */
+.mc-rows{display:grid;gap:12px;margin-top:22px}
+.mc-row{display:grid;grid-template-columns:52px minmax(0,1fr) 52px;gap:12px;align-items:center}
+.mc-row .t{grid-column:1/-1;text-align:center;font-size:.8rem;color:#cfc8c0;margin-bottom:-4px}
+.mc-row .v{font-weight:800;font-size:1.05rem;font-variant-numeric:tabular-nums;color:#8a837c}.mc-row .v.r{text-align:right}
+.mc-row .v.win{color:#fff}
+.mc-row .bars{display:grid;grid-template-columns:1fr 1fr;gap:4px;height:7px}
+.mc-row .bars span{position:relative;background:#2a2624;border-radius:4px;overflow:hidden}
+.mc-row .bars i{position:absolute;top:0;bottom:0;width:0;border-radius:4px;transition:width .9s var(--in)}
+.mc-row .bars span:first-child i{right:0;background:#6e2a22}.mc-row .bars span:last-child i{left:0;background:#5d5853}
+.mc-row .bars span:first-child i.win{background:linear-gradient(270deg,#e0301e,#ff7a66)}.mc-row .bars span:last-child i.win{background:linear-gradient(90deg,#d8d1c9,#fff)}
+/* momentum and key moments */
+.mc-low{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08)}
+.mc-h{font:.68rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#a8a19a;margin-bottom:12px}
+.mc-mom{display:flex;align-items:flex-end;gap:10px;height:120px}
+.mc-mom div{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end}
+.mc-mom .col{position:relative;width:100%;max-width:26px;height:0;border-radius:4px 4px 2px 2px;background:linear-gradient(180deg,#5d5853,#3a3633);transition:height .8s var(--in)}
+.mc-mom .col::after{content:"";position:absolute;left:50%;top:-6px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#fff 0%,#e8e2db 40%,#a59c92 100%)}
+.mc-mom .peak .col{background:linear-gradient(180deg,#e0301e,#7a1a10)}.mc-mom .peak .col::after{background:var(--bead-red)}
+.mc-mom .part .col{background:repeating-linear-gradient(180deg,#4a4542 0 4px,transparent 4px 7px)}
+.mc-mom small{font:.6rem var(--mono);color:#8a837c}
+.mc-mom em{font:normal 700 .74rem var(--sans);color:#fff;font-variant-numeric:tabular-nums}
+.mc-tl{position:relative;padding-left:22px;display:grid;gap:14px}
+.mc-tl::before{content:"";position:absolute;left:6px;top:4px;bottom:4px;width:3px;border-radius:2px;background:var(--rod)}
+.mc-tl div{position:relative}
+.mc-tl div::before{content:"";position:absolute;left:-22px;top:3px;width:15px;height:15px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#fff 0%,#e8e2db 40%,#a59c92 100%)}
+.mc-tl div.hot::before{background:var(--bead-red)}
+.mc-tl b{display:block;font-size:.9rem}.mc-tl small{font:.66rem var(--mono);color:#a8a19a;letter-spacing:.06em}
+/* the player card: the biggest gap */
+.mc-card{display:flex;align-items:center;gap:16px;margin-top:22px;padding:14px 18px;border-radius:6px;background:linear-gradient(90deg,rgba(224,48,30,.22),rgba(224,48,30,.04));
+  transform:translateX(-24px);opacity:0;transition:transform .7s var(--in),opacity .4s}
+.mc-card .big{font-size:2.2rem;font-weight:800;letter-spacing:-.04em;color:#ff7a66;font-variant-numeric:tabular-nums}
+.mc-card b{display:block}.mc-card small{font:.66rem var(--mono);color:#cfc8c0;letter-spacing:.08em;text-transform:uppercase}
+.mc-glint{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.07) 48%,transparent 62%);transform:translateX(-120%)}
+.d-on .post.l{left:-2px}.d-on .post.r{left:calc(100% - 7px)}.d-on .mc{clip-path:inset(0 0 0 0)}.d-on .mc .fade{opacity:1;transform:none}
+.d-on .mc-card{transform:none;opacity:1}.d-on .mc-glint{animation:glint 1.4s var(--in) 3s both}
+@media (max-width:760px){.mc{padding:20px 16px}.mc-score{grid-template-columns:1fr;justify-items:center;text-align:center}.mc-team,.mc-team.r{justify-content:center;text-align:center}.mc-low{grid-template-columns:1fr}}
+
 .rules{margin:16px 0 0;padding-left:18px;color:var(--sec);columns:2 300px;gap:28px;font-size:.92rem}.rules li{margin-bottom:6px}
 .pick{margin-top:56px;padding:22px 24px;border-radius:4px;position:relative;background:#fff;background-image:var(--rod),var(--rod);background-size:100% 3px,100% 3px;background-position:top,bottom;background-repeat:no-repeat}
 .pick::before{content:"";position:absolute;top:-5px;bottom:-5px;left:-4px;right:-4px;pointer-events:none;background:var(--dowel) left/7px 100% no-repeat,var(--dowel) right/7px 100% no-repeat;border-radius:4px}
@@ -149,8 +212,55 @@ section{margin-top:64px}
     </div></div>
   </section>
 
+
   <section>
-    <h2>The rules all three keep<span class="dot">.</span></h2>
+    <div class="sh"><div><span class="n">D</span><h2 style="display:inline">Match centre<span class="dot">.</span></h2></div><button class="replay" data-k="d">Replay</button></div>
+    <p class="note">The full stats panel, for the market's big comparisons. Here the AI labs face everyone else, with real numbers from the tracker (snapshot of 14 Nov 2026): a scoreline, a possession-style split, head-to-head skill rows growing from the centre, the weekly momentum, the key moments, and a "player card" for the biggest gap.</p>
+    <div class="mc-wrap" id="d"><span class="post l"></span><span class="post r"></span>
+      <div class="mc">
+        <div class="mc-top fade"><span>AI job ads · since 1 Oct 2026</span><span class="live"><i></i>Live</span></div>
+        <div class="mc-score fade">
+          <div class="mc-team"><span class="mc-crest lab"></span><div><b>AI labs</b><small>OpenAI, Anthropic, DeepMind and more</small></div></div>
+          <div class="mc-board"><div class="reels" data-v="115"></div><span class="sep"></span><div class="reels" data-v="1,506"></div></div>
+          <div class="mc-team r"><div><b>Everyone else</b><small>career pages and boards</small></div><span class="mc-crest rest"></span></div>
+        </div>
+        <div class="mc-split fade"><div class="lbl"><b>7%</b><span>Share of AI job ads</span><b>93%</b></div><div class="mc-bar"><span class="a" data-w="7"></span><span class="b" data-w="93"></span></div></div>
+        <div class="mc-rows">
+          <div class="mc-row fade" data-a="75" data-b="48"><span class="t">Customers and adoption</span><span class="v">75%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">48%</span></div>
+          <div class="mc-row fade" data-a="60" data-b="44"><span class="t">Evals and observability</span><span class="v">60%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">44%</span></div>
+          <div class="mc-row fade" data-a="53" data-b="64"><span class="t">Agents and tool use</span><span class="v">53%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">64%</span></div>
+          <div class="mc-row fade" data-a="50" data-b="31"><span class="t">Product judgement</span><span class="v">50%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">31%</span></div>
+          <div class="mc-row fade" data-a="43" data-b="19"><span class="t">Security and governance</span><span class="v">43%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">19%</span></div>
+          <div class="mc-row fade" data-a="12" data-b="26"><span class="t">Data and SQL</span><span class="v">12%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">26%</span></div>
+        </div>
+        <div class="mc-low">
+          <div class="fade"><div class="mc-h">Momentum · new AI ads a week</div>
+            <div class="mc-mom" id="mom">
+              <div data-n="35"><em>35</em><span class="col"></span><small>1 Oct</small></div>
+              <div data-n="97"><em>97</em><span class="col"></span><small>5 Oct</small></div>
+              <div data-n="140"><em>140</em><span class="col"></span><small>12 Oct</small></div>
+              <div data-n="144"><em>144</em><span class="col"></span><small>19 Oct</small></div>
+              <div data-n="324"><em>324</em><span class="col"></span><small>26 Oct</small></div>
+              <div data-n="431" class="peak"><em>431</em><span class="col"></span><small>2 Nov</small></div>
+              <div data-n="450" class="part"><em>450</em><span class="col"></span><small>9 Nov*</small></div>
+            </div></div>
+          <div class="fade"><div class="mc-h">Key moments</div>
+            <div class="mc-tl">
+              <div><b>Tracking starts</b><small>1 OCT · 35 ADS THAT WEEK</small></div>
+              <div class="hot"><b>Biggest jump, +125%</b><small>WEEK OF 26 OCT · 144 TO 324</small></div>
+              <div><b>Busiest full week</b><small>WEEK OF 2 NOV · 431 ADS</small></div>
+              <div><b>This week, still counting</b><small>9 NOV · 450 SO FAR</small></div>
+            </div></div>
+        </div>
+        <div class="mc-card"><span class="big">+27</span><div><b>Customers and adoption</b><small>the labs' biggest lead · 75% against 48%</small></div></div>
+        <span class="mc-glint"></span>
+      </div>
+    </div>
+    <p class="cap">* the current week is partial. Shares are of each side's own ads.</p>
+  </section>
+
+  <section>
+    <h2>The rules all four keep<span class="dot">.</span></h2>
     <ul class="rules">
       <li>Choreography: posts, then frame, then label, then number, then the note; 80 to 120ms apart.</li>
       <li>One easing family: in fast and landing soft; out quicker than in. No bounce.</li>
@@ -166,7 +276,7 @@ section{margin-top:64px}
   <div class="pick">
     <span class="kicker">Your call</span>
     <h2 style="margin-top:12px">Pick one, or a mix<span class="dot">.</span></h2>
-    <p class="lead" style="margin-top:8px">My pick: <b>A for the headline numbers</b>, <b>B for the one insight</b> (Worth knowing, the next event), and <b>C for the ranked charts</b>. The three share the same easing family and choreography, so together they read as one broadcast package.</p>
+    <p class="lead" style="margin-top:8px">My pick: <b>A for the headline numbers</b>, <b>B for the one insight</b> (Worth knowing, the next event), <b>C for the ranked charts</b>, and <b>D for the big comparisons</b> (the labs page, Market, a role against the market in Role fit). All four share the same easing family and choreography, so together they read as one broadcast package.</p>
   </div>
 </div>
 <script>
@@ -217,6 +327,29 @@ function playC(){
   }));
 }
 const play={a:playA,b:playB,c:playC};
+/* D: the match centre, in broadcast order */
+function playD(){
+  const d=document.getElementById("d");d.classList.remove("d-on");
+  d.querySelectorAll(".reels").forEach(buildReels);
+  const f=[...d.querySelectorAll(".fade")];f.forEach((el,i)=>el.style.transitionDelay=(450+i*90)+"ms");
+  d.querySelectorAll(".mc-bar span").forEach(x=>{x.style.transition="none";x.style.width=0});
+  d.querySelectorAll(".mc-row i").forEach(x=>{x.style.transition="none";x.style.width=0});
+  d.querySelectorAll(".mc-mom .col").forEach(x=>{x.style.transition="none";x.style.height=0});
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    d.classList.add("d-on");
+    d.querySelectorAll(".reels").forEach((r,ri)=>r.querySelectorAll(".reel i").forEach((c,k)=>{c.style.transitionDelay=(700+ri*150+k*90)+"ms";c.style.transform=`translateY(-${c.dataset.to*52}px)`}));
+    d.querySelectorAll(".mc-bar span").forEach(x=>{x.style.transition="width 1s cubic-bezier(.16,1,.3,1) 1100ms";x.style.width=x.dataset.w+"%"});
+    d.querySelectorAll(".mc-row").forEach((r,i)=>{const a=+r.dataset.a,b=+r.dataset.b,[ia,ib]=r.querySelectorAll("i"),[va,vb]=r.querySelectorAll(".v");
+      ia.classList.toggle("win",a>b);ib.classList.toggle("win",b>a);va.classList.toggle("win",a>b);vb.classList.toggle("win",b>a);
+      [ia,ib].forEach(x=>x.style.transition=`width .9s cubic-bezier(.16,1,.3,1) ${1400+i*90}ms`);ia.style.width=a+"%";ib.style.width=b+"%"});
+    const mx=Math.max(...[...d.querySelectorAll("#mom > div")].map(x=>+x.dataset.n));
+    d.querySelectorAll("#mom > div").forEach((x,i)=>{const c=x.querySelector(".col");c.style.transition=`height .8s cubic-bezier(.16,1,.3,1) ${2100+i*70}ms`;c.style.height=(+x.dataset.n/mx*78)+"%"});
+    d.querySelector(".mc-card").style.transitionDelay="2700ms";
+  }));
+}
+play.d=playD;
+addEventListener("load",()=>playD());
+
 document.querySelectorAll(".replay").forEach(b=>b.addEventListener("click",()=>play[b.dataset.k]()));
 addEventListener("load",()=>{playA();playB();playC()});
 </script>
