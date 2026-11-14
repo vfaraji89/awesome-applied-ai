@@ -213,10 +213,10 @@ li:first-child > .rodbar:not(.ink):not(.sm-gbar) > i, li:first-child > * > .rodb
 li:first-child > .rodbar:not(.ink):not(.sm-gbar) > i::after, li:first-child > * > .rodbar:not(.ink):not(.sm-gbar) > i::after, .rodbar.red > i::after { background: var(--bead-red); }
 @keyframes rod-grow { from { transform: scaleX(0); } to { transform: none; } }
 
-.bc-wait { clip-path: inset(0 50% 0 50% round var(--radius)); }
+.bc-wait { clip-path: inset(0 calc(50% - 1px) 0 calc(50% - 1px) round var(--radius)); }
 .bc-wait > * { opacity: 0; transform: translateY(10px); }
-.bc-open { clip-path: inset(0 0 0 0 round var(--radius)); transition: clip-path .9s cubic-bezier(.77, 0, .18, 1); transition-delay: var(--bc-d, 0ms); }
-.bc-open > * { opacity: 1; transform: none; transition: opacity .45s ease, transform .55s var(--ease); transition-delay: calc(var(--bc-d, 0ms) + 480ms); }
+.bc-open { clip-path: inset(0 0 0 0 round var(--radius)); transition: clip-path .62s cubic-bezier(.77, 0, .18, 1); transition-delay: var(--bc-d, 0ms); }
+.bc-open > * { opacity: 1; transform: none; transition: opacity .35s ease, transform .45s var(--ease); transition-delay: calc(var(--bc-d, 0ms) + 260ms); }
 .bc-chip { opacity: 0; transform: scale(.6); filter: blur(3px); }
 .bc-chip.bc-pop { opacity: 1; transform: none; filter: none; transition: opacity .35s ease, transform .5s cubic-bezier(.34, 1.56, .64, 1), filter .4s ease; transition-delay: var(--bc-d, 0ms); }
 @media (prefers-reduced-motion: reduce) {

@@ -15,7 +15,7 @@ export function StatBroadcast({ items, cols = 4 }: { items: Stat[]; cols?: numbe
   useEffect(() => {
     const el = ref.current; if (!el) return;
     if (!("IntersectionObserver" in window)) { setOn(true); return; }
-    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setOn(true); io.disconnect(); } }, { threshold: 0.3 });
+    const io = new IntersectionObserver(([e]) => { if (e.isIntersecting) { setOn(true); io.disconnect(); } }, { threshold: 0.12 });
     io.observe(el); return () => io.disconnect();
   }, []);
   return (
@@ -25,7 +25,7 @@ export function StatBroadcast({ items, cols = 4 }: { items: Stat[]; cols?: numbe
           <>
             <span className="sb-post l" aria-hidden="true" /><span className="sb-post r" aria-hidden="true" />
             <span className="sb-face">
-              <b className={x.hot || i === 0 ? "hot" : ""}><Odometer value={x.n} run={on} delay={i * 110 + 520} /></b>
+              <b className={x.hot || i === 0 ? "hot" : ""}><Odometer value={x.n} run={on} delay={i * 90 + 380} /></b>
               <span className="sb-l">{x.label}</span>
             </span>
           </>
@@ -40,11 +40,11 @@ export function StatBroadcast({ items, cols = 4 }: { items: Stat[]; cols?: numbe
         @media (max-width: 900px) { .sb { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
         .sb-tile { position: relative; display: block; text-decoration: none; color: inherit; }
         .sb-post { position: absolute; top: -5px; bottom: -5px; width: 7px; border-radius: 4px; background: var(--dowel); left: calc(50% - 3.5px); z-index: 1;
-          transition: left .85s cubic-bezier(.77, 0, .18, 1); transition-delay: calc(var(--i) * 110ms); }
+          transition: left .65s cubic-bezier(.77, 0, .18, 1); transition-delay: calc(var(--i) * 90ms); }
         .sb-face { display: grid; gap: 4px; padding: 20px 24px 22px; border-radius: 4px; background-color: var(--card);
           background-image: var(--rod), var(--rod); background-size: 100% 3px, 100% 3px; background-position: center top, center bottom; background-repeat: no-repeat;
-          clip-path: inset(0 50% 0 50%); transition: clip-path .85s cubic-bezier(.77, 0, .18, 1); transition-delay: calc(var(--i) * 110ms); }
-        .sb-face > * { opacity: 0; transform: translateY(8px); transition: opacity .45s ease, transform .55s var(--ease); transition-delay: calc(var(--i) * 110ms + 520ms); }
+          clip-path: inset(0 50% 0 50%); transition: clip-path .65s cubic-bezier(.77, 0, .18, 1); transition-delay: calc(var(--i) * 90ms); }
+        .sb-face > * { opacity: 0; transform: translateY(8px); transition: opacity .45s ease, transform .55s var(--ease); transition-delay: calc(var(--i) * 90ms + 380ms); }
         .sb.on .sb-post.l { left: -4px; } .sb.on .sb-post.r { left: calc(100% - 3px); }
         .sb.on .sb-face { clip-path: inset(0 0 0 0); } .sb.on .sb-face > * { opacity: 1; transform: none; }
         .sb-face b { font-size: clamp(1.9rem, 3.4vw, 2.6rem); font-weight: 800; letter-spacing: -.04em; line-height: 1; color: var(--ink); font-variant-numeric: tabular-nums; }
