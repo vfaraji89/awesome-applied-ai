@@ -59,7 +59,7 @@ async function take(source: string, fn: () => Promise<RawJob[]>): Promise<RawJob
       const part = jobPart(j.text);
       others.push({ family, posted: j.posted, build: BUILD_AI.test(part), use: USE_AI.test(part), terms: AI_TERMS.filter(([, re]) => re.test(part)).map(([n]) => n) });
     }
-    const ai = all.filter((j) => isAI(j.title));
+    const ai = all.filter((j) => isAI(j.title)).map((j) => ({ ...j, board: source }));
     if (EVAL_N) for (const j of all) if (!isAI(j.title) && NEAR.test(j.title) && !AGG.has(j.source)) nearMiss.push(j);
     report.push({ source, ok: true, jobs: all.length, ai: ai.length });
     return ai;
@@ -106,8 +106,18 @@ const ckOf = (j: RawJob) => hash(`${j.company.toLowerCase().replace(/[^a-z0-9]/g
 const direct = new Set(raw.filter((j) => !AGGREGATORS.has(j.source)).map(ckOf));
 const reposts = raw.filter((j) => AGGREGATORS.has(j.source) && direct.has(ckOf(j))).length;
 const keptRaw = raw.filter((j) => !(AGGREGATORS.has(j.source) && direct.has(ckOf(j))));
+// per career page: the company's own name and what its AI ads ask for, for the companies pages
+// (totals only; nothing per ad is kept with a company)
+const perBoard = new Map<string, { company: Map<string, number>; roles: Map<string, number>; skills: Map<string, number>; n: number }>();
 const fresh: Job[] = keptRaw.map((j) => {
   const x = extract(j.title, j.text);
+  if (j.board && !AGGREGATORS.has(j.source)) {
+    const b = perBoard.get(j.board) ?? { company: new Map(), roles: new Map(), skills: new Map(), n: 0 };
+    b.n++; b.company.set(j.company, (b.company.get(j.company) ?? 0) + 1);
+    const r = role(j.title); b.roles.set(r, (b.roles.get(r) ?? 0) + 1);
+    for (const s of x.skills) b.skills.set(s, (b.skills.get(s) ?? 0) + 1);
+    perBoard.set(j.board, b);
+  }
   return { key: hash(`${j.source}:${j.id}`), source: j.source, title: normTitle(j.title), role: role(j.title), seniority: seniority(j.title),
     remote: j.remote, skills: x.skills, tools: x.tools, tasks: x.tasks, ...(x.tech.length ? { tech: x.tech } : {}), ...(x.toolsPreferred.length ? { toolsPreferred: x.toolsPreferred } : {}),
     ...(x.years ? { years: x.years } : {}), ...(!AGGREGATORS.has(j.source) && labOf(j.company)?.kind === "lab" ? { lab: true } : {}), ck: ckOf(j), ...(j.posted ? { posted: j.posted } : {}), firstSeen: today, lastSeen: today };
@@ -319,7 +329,9 @@ const sources = {
       : (companies[p.id] ?? []).map((s: string) => ({ slug: s }));
     const boards = slugs.map(({ slug, wd }) => { const r = status.get(`${p.id}:${slug}`);
       const m = meta.get(`${p.id}:${slug}`), lab = labOf(slug);
+      const pb = perBoard.get(`${p.id}:${slug}`), top = (m2?: Map<string, number>, k = 3) => m2 ? [...m2.entries()].sort((a, b2) => b2[1] - a[1]).slice(0, k).map(([id, n]) => ({ id, share: Math.round((100 * n) / (pb?.n || 1)) })) : [];
       return { slug, url: boardUrl(p.id, slug, wd), ok: fromStore ? null : (r?.ok ?? false), ai: r?.ai ?? 0,
+        ...(pb ? { company: [...pb.company.entries()].sort((a, b2) => b2[1] - a[1])[0]?.[0], roles: top(pb.roles), skills: top(pb.skills, 5) } : {}),
         ...(lab ? { name: lab.name, kind: lab.kind } : m ? { name: m.name, ...(m.kind ? { kind: m.kind } : {}) } : {}), ...(m?.tool ? { tool: m.tool } : {}) }; });
     const self = status.get(p.id);
     return { ...p, boards, ok: self ? self.ok : boards.some((b) => b.ok) || (fromStore && win.some((j) => j.source === p.id)), ai: self ? self.ai : boards.reduce((a, b) => a + b.ai, 0),
