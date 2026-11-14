@@ -41,7 +41,7 @@ await call("PUT", `/deposit/depositions/${draft.id}`, { metadata: {
   creators: [{ name: "Faraji, Vahid" }], license: "cc-by-4.0", access_right: "open",
   description: "One row per AI job ad read from public company career pages, with the role, level, skills, tasks, tools, stack and years of experience each ad asks for. Derived fields only: no title, company, link or ad text. Method and error rates: " + meta.site,
   keywords: ["applied AI", "job market", "skills", "AI engineering", "labour market data"],
-  related_identifiers: [{ identifier: "https://github.com/vfaraji89/applied-ai-simplified", relation: "isSupplementTo", resource_type: "software" }, { identifier: meta.site, relation: "isDocumentedBy", resource_type: "publication-other" }],
+  related_identifiers: [{ identifier: meta.site, relation: "isDocumentedBy", resource_type: "publication-other" }],
 } });
 const done = await call("POST", `/deposit/depositions/${draft.id}/actions/publish`);
 meta.zenodoId = done.id;

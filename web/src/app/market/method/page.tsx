@@ -14,7 +14,9 @@ type Rate = { pct: number | null; low: number | null; high: number | null; k: nu
 type Multi = { precision: Rate; recall: Rate; per: { id: string; precision: Rate; recall: Rate; asked: number }[] };
 type Month = { month: string; sampled: number; labelled: number; gone: number; scored: boolean; kept?: Rate; missed?: Rate; role?: Rate & { confusions: { said: string; was: string; n: number }[] }; seniority?: Rate; skills?: Multi; tasks?: Multi };
 
-const REPO = "https://github.com/vfaraji89/applied-ai-simplified";
+// the repo is private: the dataset is served by the site itself, under /dataset/
+const DATA = `${process.env.NEXT_PUBLIC_BASE_PATH ?? ""}/dataset`;
+const SITE = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://vfaraji89.github.io/applied-ai-simplified").replace(/\/$/, "");
 const roleName = (id: string) => fRoles.find((r) => r.id === id)?.name ?? (id === "other-ai" ? "Other AI role" : id);
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
 
@@ -33,7 +35,7 @@ export default function Method() {
   const months = (ev as { months: Month[] }).months;
   const last = [...months].reverse().find((m) => m.scored);
   const pending = [...months].reverse().find((m) => !m.scored);
-  const csv = `${REPO}/raw/main/dataset/applied-ai-job-ads.csv`;
+  const csv = `${DATA}/applied-ai-job-ads.csv`;
   const steps = [
     { n: "01", k: "md.s1", en: "Read", line: <T k="md.s1_l" vars={{ n: sitesRead }}>{"{n} company career pages and job boards, once a day, through their public job feeds."}</T> },
     { n: "02", k: "md.s2", en: "Keep", line: <T k="md.s2_l">Only ads whose title names an AI role, and only technical ones: no sales, marketing, recruiting or legal titles.</T> },
@@ -94,7 +96,6 @@ export default function Method() {
               <p className="muted"><T k="md.wait_p2">Until then, read the numbers on this site as what the rules found, not yet as measured fact.</T></p>
             </div>
           )}
-          <p className="count" style={{ marginTop: 14 }}><T k="md.how_label">How the labelling works:</T> <a href={`${REPO}/tree/main/eval`}>eval/README.md</a></p>
         </div>
       </section>
 
@@ -146,15 +147,16 @@ export default function Method() {
               <span className="muted"><T k="md.dl_rows" vars={{ a: ds.allAds.toLocaleString("en-US") }}>{"ads row by row, from company career pages; {a} in the monthly totals, job boards included"}</T></span>
               <div className="md-btns">
                 <a className="btn" href={csv}><T k="md.dl_csv">Download CSV</T></a>
-                <a className="chip" href={`${REPO}/tree/main/dataset`}><T k="md.dl_card">Data card and columns</T></a>
-                <a className="chip" href={`${REPO}/releases`}><T k="md.dl_rel">Every version</T></a>
+                <a className="chip" href={`${DATA}/applied-ai-job-ads.json`}>JSON</a>
+                <a className="chip" href={`${DATA}/data-card.md`}><T k="md.dl_card">Data card and columns</T></a>
+                <a className="chip" href={`${DATA}/monthly-totals.csv`}><T k="md.dl_totals">Monthly totals</T></a>
                 {ds.conceptDoi && <a className="chip" href={`https://doi.org/${ds.conceptDoi}`}>DOI {ds.conceptDoi}</a>}
               </div>
             </div>
             <div className="frame">
               <span className="kicker"><T k="md.cite_k">How to cite</T></span>
-              <p className="md-cite">Faraji, V. ({ds.through.slice(0, 4)}). <i>Applied AI job ads: what employers ask for</i> (version {ds.version}) [Data set]. {ds.conceptDoi ? `https://doi.org/${ds.conceptDoi}` : `${REPO}/tree/main/dataset`}</p>
-              <p className="count"><T k="md.cite_n">Or use "Cite this repository" on GitHub. Licence: CC BY 4.0, for the dataset only.</T></p>
+              <p className="md-cite">Faraji, V. ({ds.through.slice(0, 4)}). <i>Applied AI job ads: what employers ask for</i> (version {ds.version}) [Data set]. {ds.conceptDoi ? `https://doi.org/${ds.conceptDoi}` : `${SITE}/market/method/`}</p>
+              <p className="count"><T k="md.cite_n2">Licence: CC BY 4.0, for the dataset only. The code and the site are not open source.</T></p>
             </div>
           </div>
         </div>

@@ -78,6 +78,6 @@ often the reading is wrong, measured by hand on a sample every month.
 
 [CC BY 4.0](LICENSE): use it for anything, including commercial work, with credit. Please cite:
 
-> Faraji, V. (2026). Applied AI job ads: what employers ask for (version 2026-11-13) [Data set]. https://github.com/vfaraji89/applied-ai-simplified/tree/main/dataset
+> Faraji, V. (2026). Applied AI job ads: what employers ask for (version 2026-11-13) [Data set]. https://vfaraji89.github.io/applied-ai-simplified/market/method/
 
 The website, its text and its code are not covered by this licence.

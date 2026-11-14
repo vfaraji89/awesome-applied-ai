@@ -1438,6 +1438,8 @@
  "ft.events.unit": "etkinlik",
  "pp.how3": "AI Engineer'da konuşmuş herkes arasından seçildi, sonra elle kontrol edildi. Herkesin teknik bir rolü ve 2025'ten beri bir konuşması var. Yapıcılar: iki ya da daha fazla etkinlik veya üç ya da daha fazla konuşma, bir GitHub bağlantısı, şirket başına en çok iki kişi. Sessiz yapıcılar: tek etkinlik ve bir ya da iki konuşma, başka bir şart yok; fikirlerine göre, yani konuşmalarının konularını ne kadar az konuşmacının paylaştığına göre sıralı, şirket başına bir kişi.",
  "pb.talk1": "1 konuşma",
+ "md.dl_totals": "Aylık toplamlar",
+ "md.cite_n2": "Lisans: CC BY 4.0, yalnızca veri seti için. Kod ve site açık kaynak değildir.",
  "_review": {
   "_how": "Vahid: these are judgment calls for you to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'servisleme'; alternatives: 'model servisi', or keep 'serving'.",

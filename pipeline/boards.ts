@@ -14,7 +14,7 @@ import { SKIP } from "./taxonomy";
 const root = path.resolve(import.meta.dir, "..");
 const OUT = path.join(import.meta.dir, "discovered.json");
 const dry = process.argv.includes("--dry");
-const UA = { "User-Agent": "applied-ai-simplified job-market collector (+https://github.com/vfaraji89/applied-ai-simplified)" };
+const UA = { "User-Agent": "applied-ai-simplified job-market collector (+https://vfaraji89.github.io/applied-ai-simplified/)" };
 const tools: { id: string; name: string; url: string; github?: string; model?: string }[] =
   JSON.parse(readFileSync(path.join(root, "web/src/data/content/tools.json"), "utf8"));
 const companies = JSON.parse(readFileSync(path.join(import.meta.dir, "companies.json"), "utf8"));

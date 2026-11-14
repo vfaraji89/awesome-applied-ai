@@ -1438,6 +1438,8 @@
  "ft.events.unit": "eventos",
  "pp.how3": "Elegidos entre todos los que han hablado en AI Engineer y revisados a mano. Todos tienen un rol técnico y una charla desde 2025. Constructores: dos o más ediciones o tres o más charlas, un enlace a GitHub, como mucho dos por empresa. Constructores discretos: una edición y una o dos charlas, sin más requisitos; ordenados por su idea, es decir, por cuántos pocos ponentes comparten los temas de su charla, uno por empresa.",
  "pb.talk1": "1 charla",
+ "md.dl_totals": "Totales mensuales",
+ "md.cite_n2": "Licencia: CC BY 4.0, solo para el conjunto de datos. El código y el sitio no son de código abierto.",
  "_review": {
   "_how": "Vahid: judgment calls to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'inferencia'; alternative: keep 'serving'.",
