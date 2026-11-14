@@ -42,7 +42,13 @@ img, svg { display: block; max-width: 100%; }
 
 .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 20px; }
 .mono { font-family: var(--font-mono), ui-monospace, monospace; }
-.kicker { font-family: var(--font-mono), monospace; font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rust-deep); }
+/* the red label: one pill everywhere, a soft rust wash with a hairline, led by the abacus bead */
+.kicker { display: inline-flex; align-items: center; gap: 7px; width: fit-content; max-width: 100%;
+  padding: 4px 11px 4px 9px; border-radius: 999px; line-height: 1.3;
+  background: color-mix(in srgb, var(--rust) 7%, var(--card)); border: 1px solid color-mix(in srgb, var(--rust) 22%, transparent);
+  font-family: var(--font-mono), monospace; font-size: 0.72rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--rust-deep); }
+.kicker::before { content: ""; flex: none; width: 7px; height: 7px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
+.kicker.crumb, .si > .kicker { padding-left: 4px; } .kicker.crumb::before, .si > .kicker::before { display: none; }
 .dot { color: var(--rust); }
 mark, .hl { background: linear-gradient(transparent 58%, var(--mark) 58%, var(--mark) 92%, transparent 92%); color: inherit; }
 h1, h2, h3 { letter-spacing: -0.03em; line-height: 1.05; margin: 0; }
