@@ -1,0 +1,35 @@
+name: Probe conference data
+
+# One-off: prints what conference sites publish in machine-readable form, to the job log only.
+on:
+  workflow_dispatch:
+  push:
+    branches-ignore: [main]
+    paths: ["pipeline/probe/**", ".github/workflows/probe.yml"]
+
+permissions:
+  contents: read
+
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6  # v2
+        with:
+          bun-version: 1.4.4
+      - name: Probe
+        env:
+          PROBE_URLS: >-
+            https://ai.engineer/llms.txt
+            https://www.ai.engineer/llms.txt
+            https://ai.engineer/wf/llms.md
+            https://www.ai.engineer/worldsfair/2026/llms.md
+            https://ai.engineer/worldsfair/2026/speakers.json
+            https://ai.engineer/worldsfair/2026/sessions.json
+            https://ai.engineer/worldsfair/2026/schedule.json
+            https://www.ai.engineer/worldsfair/2025/speakers.json
+            https://www.ai.engineer/summit/2026/llms.md
+            https://www.ai.engineer/events
+        run: bun pipeline/probe/conferences.ts
