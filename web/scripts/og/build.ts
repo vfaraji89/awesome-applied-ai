@@ -42,6 +42,8 @@ const cards: Card[] = [
     [[ads, "job ads"], [String(skills.length), "skills scored"], ["Free", "in your browser"]], ["rrrrw", "rrkww", "rwwww"]),
   R("market/sources", "01 · The market · sources", "Every site the tracker <mark>reads</mark>", "Company career pages and public job boards, the hiring platform behind each, and what the ads ask for.",
     [[String(boards), "sites read"], [ads, "AI job ads"], ["3", "left out"]]),
+  R("events", "01 · The market · events calendar", "The year in <mark>applied AI events</mark>", "The major AI engineering, AI software and AI platform events coming up: official dates only, add any to your calendar.",
+    [["15", "events dated"], ["12", "months ahead"], ["Official", "dates only"]], ["rwkwr", "wrwkw", "kwrwr"]),
   R("market/conferences", "01 · The market · conferences", "On stage, and <mark>in the job</mark>", "What applied AI conferences talk about, set against what AI job ads ask for: AI Engineer, PyTorch Conference and Microsoft Build.",
     [["2,000+", "talks read"], [ads, "AI job ads"], ["Monthly", "updates"]], ["kkrrw", "wkrrw", "wwkrr"]),
   R("market/method", "01 · The market · method and data", "How the numbers are made, and <mark>how wrong they are</mark>", "How AI job ads are read and classified, error rates checked by hand every month, and an open dataset under CC BY 4.0.",

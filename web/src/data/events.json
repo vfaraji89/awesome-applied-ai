@@ -1,0 +1,36 @@
+{
+ "_note": "Official applied AI events for the calendar. Only dates the organiser has published; each with its official page as source and the day it was checked. AI Engineer editions also come in automatically from conferences.json. 'notDated' lists events the organiser has announced for the year without dates: no date is guessed.",
+ "checked": "2026-11-14",
+ "types": {
+  "aieng": "AI engineering",
+  "dev": "Software and developers",
+  "platform": "Platforms and cloud",
+  "data": "Data and ML",
+  "infra": "Infrastructure",
+  "research": "Research"
+ },
+ "events": [
+  { "name": "AWS re:Invent 2026", "type": "platform", "start": "2026-11-30", "end": "2026-12-04", "city": "Las Vegas", "region": "na", "url": "https://reinvent.awsevents.com/", "note": "AWS's yearly conference: new AI and agent services, keynotes and 2,000+ sessions." },
+  { "name": "AI Dev NYC 2026", "type": "aieng", "start": "2026-11-30", "end": "2026-12-01", "city": "New York", "region": "na", "url": "https://ai-dev.deeplearning.ai/", "note": "DeepLearning.AI's conference for developers building with AI." },
+  { "name": "NeurIPS 2026", "type": "research", "start": "2026-12-07", "end": "2026-12-12", "city": "Sydney, with satellites in Atlanta and Paris", "region": "apac", "url": "https://neurips.cc/Conferences/2026/Dates", "note": "Tutorials on 7 December, main conference 8 to 10, workshops 11 and 12." },
+  { "name": "KubeCon + CloudNativeCon Europe 2027", "type": "infra", "start": "2027-03-15", "end": "2027-03-18", "city": "Barcelona", "region": "eu", "url": "https://events.linuxfoundation.org/kubecon-cloudnativecon-europe/", "note": "Co-located AI days on 15 March, main conference 16 to 18." },
+  { "name": "NVIDIA GTC 2027", "type": "infra", "start": "2027-03-15", "end": "2027-03-18", "city": "San Jose", "region": "na", "url": "https://www.nvidia.com/gtc/", "note": "NVIDIA's AI conference. Its FAQ gives 14 to 18 March; the home page says 15 to 18." },
+  { "name": "QCon London 2027", "type": "dev", "start": "2027-04-13", "end": "2027-04-15", "city": "London", "region": "eu", "url": "https://qconlondon.com/", "note": "Senior software engineering, with tracks on the AI-era software lifecycle." },
+  { "name": "ICLR 2027", "type": "research", "start": "2027-04-26", "end": "2027-04-30", "city": "San Francisco", "region": "na", "url": "https://iclr.cc/Conferences/2027/Dates", "note": "Main conference 26 to 28 April, workshops after." },
+  { "name": "ODSC AI East 2027", "type": "data", "start": "2027-05-10", "end": "2027-05-12", "city": "Boston", "region": "na", "url": "https://opendatascience.com/odsc-ai-east-2027-boston-conference-guide/", "note": "Open Data Science Conference: AI engineering, agents, ML and data, in person and online." },
+  { "name": "Snowflake Summit 2027", "type": "data", "start": "2027-06-07", "end": "2027-06-10", "city": "San Francisco", "region": "na", "url": "https://www.snowflake.com/en/summit/", "note": "Snowflake's data and AI conference." },
+  { "name": "Data + AI Summit 2027", "type": "data", "start": "2027-06-21", "end": "2027-06-24", "city": "San Francisco", "region": "na", "url": "https://www.databricks.com/dataaisummit", "note": "Databricks' data and AI conference, in person and online." },
+  { "name": "AI Engineer World's Fair 2027", "type": "aieng", "start": "2027-06-29", "end": "2027-07-01", "city": "San Francisco", "region": "na", "url": "https://www.ai.engineer/worldsfair/2027", "note": "The largest AI engineering conference: tracks on agents, evals, coding agents and more." }
+ ],
+ "recent": [
+  { "name": "AI Engineer Code Summit 2026", "type": "aieng", "start": "2026-11-10", "end": "2026-11-12", "city": "San Francisco", "region": "na", "url": "https://ai.engineer/code/2026" },
+  { "name": "AI Engineer Shanghai 2026", "type": "aieng", "start": "2026-11-05", "end": "2026-11-06", "city": "Shanghai", "region": "apac", "url": "https://ai.engineer/shanghai/2026" }
+ ],
+ "notDated": [
+  { "name": "Google I/O 2027", "type": "platform", "url": "https://io.google/", "last": "19 to 20 May 2026, Mountain View" },
+  { "name": "Microsoft Build 2027", "type": "platform", "url": "https://build.microsoft.com/", "last": "2 to 3 June 2026, San Francisco" },
+  { "name": "LangChain Interrupt 2027", "type": "aieng", "url": "https://interrupt.langchain.com/", "last": "13 to 14 May 2026, San Francisco" },
+  { "name": "PyTorch Conference North America 2027", "type": "data", "url": "https://events.linuxfoundation.org/", "last": "October 2026" },
+  { "name": "AI Native DevCon 2027", "type": "dev", "url": "https://tessl.io/devcon", "last": "2 to 4 November 2026, New York" }
+ ]
+}

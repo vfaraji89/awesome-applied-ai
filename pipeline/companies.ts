@@ -12,7 +12,8 @@ import path from "node:path";
 
 const root = path.resolve(import.meta.dir, "..");
 const read = (p: string) => JSON.parse(readFileSync(path.join(root, p), "utf8"));
-const norm = (s: string) => s.toLowerCase().replace(/\b(inc|llc|ltd|gmbh|corp|corporation|labs?|ai|hq|technologies|technology)\b/g, "").replace(/[^a-z0-9]/g, "");
+// one key for every spelling of a company: "Together AI", "togetherai" and "Together" meet at "together"
+const norm = (s: string) => s.toLowerCase().replace(/\b(inc|llc|ltd|gmbh|corp|corporation|labs?|ai|hq|technologies|technology)\b/g, "").replace(/[^a-z0-9]/g, "").replace(/(.{3,})(ai|labs?|hq|inc)$/, "$1");
 const slug = (s: string) => s.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
 const pretty = (s: string) => s.replace(/[-_]+/g, " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
@@ -58,12 +59,22 @@ for (const t of tools) {
 }
 for (const p of people) { const c = p.org ? all.get(norm(p.org)) : undefined; if (c) c.people.push(p.id); }
 
+// boards whose platform gives only a slug for the company name
+const NAMES: Record<string, string> = { andurilindustries: "Anduril Industries", scaleai: "Scale AI", boschgroup: "Bosch", doordashusa: "DoorDash", gleanwork: "Glean", snorkelai: "Snorkel AI", gitlab: "GitLab", livekit: "LiveKit" };
+for (const c of all.values()) { const n = NAMES[c.name.toLowerCase().replace(/[^a-z0-9]/g, "")]; if (n) c.name = n; }
+// the nicest spelling we have: AI Engineer's or the tool map's, else the board's if it is not just a slug
+const proper = new Map<string, string>([...tools.map((t) => [norm(t.name), t.name] as const), ...orgs.map((o) => [norm(o.name), o.name] as const)]);
+for (const c of all.values()) {
+  const better = proper.get(c.key);
+  if (better && (c.name === c.name.toLowerCase() || /^[A-Z][a-z]+$/.test(c.name) || c.name.replace(/\s/g, "").toLowerCase() === c.key)) c.name = better;
+  else if (c.name === c.name.toLowerCase()) c.name = c.name.replace(/\b\w/g, (x) => x.toUpperCase());
+}
 const list = [...all.values()].filter((c) => {
   const sides = (c.hiring && c.hiring.open >= 5 ? 1 : 0) + (c.products.length ? 1 : 0) + (c.stage && c.stage.talks >= 3 ? 1 : 0);
   return (sides >= 2 || (c.lab && c.hiring) || (c.hiring?.open ?? 0) >= 10) && !hidden.has(slug(c.name));
 }).map((c) => ({
   id: slug(c.name), name: c.name, lab: c.lab, hiring: c.hiring, products: c.products, stage: c.stage, people: c.people,
-  initials: c.name.split(/[\s.-]+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase(),
+  initials: ((i) => (i === "AI" ? c.name.slice(0, 2) : i))(c.name.split(/[\s.-]+/).filter(Boolean).map((w) => w[0]).slice(0, 2).join("").toUpperCase()).toUpperCase(),
 })).sort((a, b) => (b.hiring?.open ?? 0) + (b.stage?.talks ?? 0) - ((a.hiring?.open ?? 0) + (a.stage?.talks ?? 0)));
 
 writeFileSync(path.join(root, "web/src/data/companies.json"), JSON.stringify({ updated: sources.generatedAt?.slice(0, 10) ?? null, companies: list }, null, 1) + "\n");

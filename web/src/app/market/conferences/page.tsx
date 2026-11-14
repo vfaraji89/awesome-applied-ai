@@ -115,6 +115,7 @@ export default function Conferences() {
                     {C.upcoming.map((u) => <li key={u.name}><a href={u.url} target="_blank" rel="noreferrer"><b>{u.name}</b> ↗</a><span className="count">{when(u.start, u.end)} · {u.location}</span></li>)}
                     {!C.upcoming.length && <li className="muted"><T k="cf.no_next">No upcoming editions announced in the sources read.</T></li>}
                   </ul>
+                  <Link href="/events/" className="btn" style={{ marginTop: 16 }}><T k="cf.to_cal">The full events calendar</T> →</Link>
                 </div>
                 <div>
                   <span className="kicker"><T k="cf.k_read">Read so far</T></span>

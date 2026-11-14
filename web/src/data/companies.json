@@ -224,7 +224,7 @@
   },
   {
    "id": "databricks",
-   "name": "databricks",
+   "name": "Databricks",
    "lab": false,
    "hiring": {
     "open": 126,
@@ -348,7 +348,7 @@
   },
   {
    "id": "salesforce",
-   "name": "salesforce",
+   "name": "Salesforce",
    "lab": false,
    "hiring": {
     "open": 91,
@@ -407,7 +407,7 @@
   },
   {
    "id": "palantir",
-   "name": "palantir",
+   "name": "Palantir",
    "lab": false,
    "hiring": {
     "open": 71,
@@ -458,7 +458,7 @@
   },
   {
    "id": "waymo",
-   "name": "waymo",
+   "name": "Waymo",
    "lab": false,
    "hiring": {
     "open": 66,
@@ -516,8 +516,8 @@
    "initials": "W"
   },
   {
-   "id": "andurilindustries",
-   "name": "andurilindustries",
+   "id": "anduril-industries",
+   "name": "Anduril Industries",
    "lab": false,
    "hiring": {
     "open": 57,
@@ -568,11 +568,11 @@
    "products": [],
    "stage": null,
    "people": [],
-   "initials": "A"
+   "initials": "AN"
   },
   {
-   "id": "scaleai",
-   "name": "scaleai",
+   "id": "scale-ai",
+   "name": "Scale AI",
    "lab": false,
    "hiring": {
     "open": 47,
@@ -620,14 +620,25 @@
      }
     ]
    },
-   "products": [],
+   "products": [
+    {
+     "id": "scale-ai",
+     "name": "Scale AI",
+     "area": "data"
+    },
+    {
+     "id": "scale-seal",
+     "name": "Scale SEAL Leaderboards",
+     "area": "landscape"
+    }
+   ],
    "stage": null,
    "people": [],
-   "initials": "S"
+   "initials": "SA"
   },
   {
-   "id": "boschgroup",
-   "name": "BoschGroup",
+   "id": "bosch",
+   "name": "Bosch",
    "lab": false,
    "hiring": {
     "open": 46,
@@ -682,7 +693,7 @@
   },
   {
    "id": "sierra",
-   "name": "sierra",
+   "name": "Sierra",
    "lab": false,
    "hiring": {
     "open": 36,
@@ -737,7 +748,7 @@
   },
   {
    "id": "cloudflare",
-   "name": "cloudflare",
+   "name": "Cloudflare",
    "lab": false,
    "hiring": {
     "open": 28,
@@ -807,7 +818,7 @@
   },
   {
    "id": "stripe",
-   "name": "stripe",
+   "name": "Stripe",
    "lab": false,
    "hiring": {
     "open": 31,
@@ -866,7 +877,7 @@
   },
   {
    "id": "reddit",
-   "name": "reddit",
+   "name": "Reddit",
    "lab": false,
    "hiring": {
     "open": 34,
@@ -970,7 +981,7 @@
   },
   {
    "id": "pinterest",
-   "name": "pinterest",
+   "name": "Pinterest",
    "lab": false,
    "hiring": {
     "open": 31,
@@ -1029,7 +1040,7 @@
   },
   {
    "id": "zoox",
-   "name": "zoox",
+   "name": "Zoox",
    "lab": false,
    "hiring": {
     "open": 32,
@@ -1081,6 +1092,73 @@
    "stage": null,
    "people": [],
    "initials": "Z"
+  },
+  {
+   "id": "together-ai",
+   "name": "Together AI",
+   "lab": true,
+   "hiring": {
+    "open": 23,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/togetherai",
+      "platform": "Greenhouse",
+      "open": 23
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 35
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 22
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "models",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 91
+     },
+     {
+      "id": "ai-dev",
+      "share": 91
+     },
+     {
+      "id": "evals",
+      "share": 78
+     },
+     {
+      "id": "architecture",
+      "share": 61
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "together-ai",
+     "name": "Together AI",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 8,
+    "source": "https://ai.engineer/orgs/together-ai"
+   },
+   "people": [
+    "hassan-el-mghari"
+   ],
+   "initials": "TA"
   },
   {
    "id": "arize",
@@ -1317,7 +1395,7 @@
   },
   {
    "id": "cognition",
-   "name": "cognition",
+   "name": "Cognition",
    "lab": false,
    "hiring": {
     "open": 18,
@@ -1376,7 +1454,7 @@
   },
   {
    "id": "coinbase",
-   "name": "coinbase",
+   "name": "Coinbase",
    "lab": false,
    "hiring": {
     "open": 23,
@@ -1435,7 +1513,7 @@
   },
   {
    "id": "mongodb",
-   "name": "mongodb",
+   "name": "MongoDB",
    "lab": false,
    "hiring": {
     "open": 20,
@@ -1499,8 +1577,8 @@
    "initials": "M"
   },
   {
-   "id": "doordashusa",
-   "name": "doordashusa",
+   "id": "doordash",
+   "name": "DoorDash",
    "lab": false,
    "hiring": {
     "open": 25,
@@ -1555,7 +1633,7 @@
   },
   {
    "id": "elastic",
-   "name": "elastic",
+   "name": "Elastic",
    "lab": false,
    "hiring": {
     "open": 19,
@@ -1619,63 +1697,8 @@
    "initials": "E"
   },
   {
-   "id": "together-ai",
-   "name": "Together AI",
-   "lab": true,
-   "hiring": {
-    "open": 23,
-    "boards": [
-     {
-      "url": "https://job-boards.greenhouse.io/togetherai",
-      "platform": "Greenhouse",
-      "open": 23
-     }
-    ],
-    "roles": [
-     {
-      "id": "ai-platform-engineer",
-      "share": 35
-     },
-     {
-      "id": "agentic-ai-engineer",
-      "share": 22
-     },
-     {
-      "id": "ai-native-developer",
-      "share": 17
-     }
-    ],
-    "skills": [
-     {
-      "id": "models",
-      "share": 100
-     },
-     {
-      "id": "software",
-      "share": 91
-     },
-     {
-      "id": "ai-dev",
-      "share": 91
-     },
-     {
-      "id": "evals",
-      "share": 78
-     },
-     {
-      "id": "architecture",
-      "share": 61
-     }
-    ]
-   },
-   "products": [],
-   "stage": null,
-   "people": [],
-   "initials": "TA"
-  },
-  {
    "id": "harvey",
-   "name": "harvey",
+   "name": "Harvey",
    "lab": false,
    "hiring": {
     "open": 21,
@@ -1734,7 +1757,7 @@
   },
   {
    "id": "decagon",
-   "name": "decagon",
+   "name": "Decagon",
    "lab": false,
    "hiring": {
     "open": 22,
@@ -1848,7 +1871,7 @@
   },
   {
    "id": "intercom",
-   "name": "intercom",
+   "name": "Intercom",
    "lab": false,
    "hiring": {
     "open": 19,
@@ -1907,7 +1930,7 @@
   },
   {
    "id": "mercor",
-   "name": "mercor",
+   "name": "Mercor",
    "lab": false,
    "hiring": {
     "open": 21,
@@ -1962,7 +1985,7 @@
   },
   {
    "id": "lyft",
-   "name": "lyft",
+   "name": "Lyft",
    "lab": false,
    "hiring": {
     "open": 19,
@@ -2021,7 +2044,7 @@
   },
   {
    "id": "nuro",
-   "name": "nuro",
+   "name": "Nuro",
    "lab": false,
    "hiring": {
     "open": 20,
@@ -2076,7 +2099,7 @@
   },
   {
    "id": "spotify",
-   "name": "spotify",
+   "name": "Spotify",
    "lab": false,
    "hiring": {
     "open": 17,
@@ -2196,7 +2219,7 @@
   },
   {
    "id": "notion",
-   "name": "notion",
+   "name": "Notion",
    "lab": false,
    "hiring": {
     "open": 14,
@@ -2255,7 +2278,7 @@
   },
   {
    "id": "deepgram",
-   "name": "deepgram",
+   "name": "Deepgram",
    "lab": false,
    "hiring": {
     "open": 17,
@@ -2325,7 +2348,7 @@
   },
   {
    "id": "airbnb",
-   "name": "airbnb",
+   "name": "Airbnb",
    "lab": false,
    "hiring": {
     "open": 18,
@@ -2379,8 +2402,73 @@
    "initials": "A"
   },
   {
+   "id": "snorkel-ai",
+   "name": "Snorkel AI",
+   "lab": false,
+   "hiring": {
+    "open": 12,
+    "boards": [
+     {
+      "url": "https://job-boards.greenhouse.io/snorkelai",
+      "platform": "Greenhouse",
+      "open": 12
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 42
+     },
+     {
+      "id": "rd-researcher",
+      "share": 33
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 8
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 75
+     },
+     {
+      "id": "models",
+      "share": 67
+     },
+     {
+      "id": "customer",
+      "share": 58
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "snorkel-ai",
+     "name": "Snorkel AI",
+     "area": "data"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 6,
+    "source": "https://ai.engineer/orgs/snorkel-ai"
+   },
+   "people": [],
+   "initials": "SA"
+  },
+  {
    "id": "datadog",
-   "name": "datadog",
+   "name": "Datadog",
    "lab": false,
    "hiring": {
     "open": 13,
@@ -2428,7 +2516,13 @@
      }
     ]
    },
-   "products": [],
+   "products": [
+    {
+     "id": "datadog-llm",
+     "name": "Datadog LLM Observability",
+     "area": "evaluation"
+    }
+   ],
    "stage": {
     "speakers": 4,
     "talks": 4,
@@ -2439,7 +2533,7 @@
   },
   {
    "id": "coreweave",
-   "name": "coreweave",
+   "name": "CoreWeave",
    "lab": false,
    "hiring": {
     "open": 16,
@@ -2504,7 +2598,7 @@
   },
   {
    "id": "cursor",
-   "name": "cursor",
+   "name": "Cursor",
    "lab": false,
    "hiring": {
     "open": 10,
@@ -2572,7 +2666,7 @@
   },
   {
    "id": "elevenlabs",
-   "name": "elevenlabs",
+   "name": "ElevenLabs",
    "lab": false,
    "hiring": {
     "open": 11,
@@ -2642,7 +2736,7 @@
   },
   {
    "id": "langchain",
-   "name": "langchain",
+   "name": "LangChain",
    "lab": false,
    "hiring": {
     "open": 11,
@@ -2704,7 +2798,7 @@
   },
   {
    "id": "baseten",
-   "name": "baseten",
+   "name": "Baseten",
    "lab": false,
    "hiring": {
     "open": 11,
@@ -2838,7 +2932,7 @@
   },
   {
    "id": "ramp",
-   "name": "ramp",
+   "name": "Ramp",
    "lab": false,
    "hiring": {
     "open": 10,
@@ -2962,7 +3056,7 @@
   },
   {
    "id": "figma",
-   "name": "figma",
+   "name": "Figma",
    "lab": false,
    "hiring": {
     "open": 12,
@@ -3021,7 +3115,7 @@
   },
   {
    "id": "samsara",
-   "name": "samsara",
+   "name": "Samsara",
    "lab": false,
    "hiring": {
     "open": 14,
@@ -3076,7 +3170,7 @@
   },
   {
    "id": "vercel",
-   "name": "vercel",
+   "name": "Vercel",
    "lab": false,
    "hiring": {
     "open": 7,
@@ -3134,8 +3228,8 @@
    "initials": "V"
   },
   {
-   "id": "gleanwork",
-   "name": "gleanwork",
+   "id": "glean",
+   "name": "Glean",
    "lab": false,
    "hiring": {
     "open": 14,
@@ -3190,7 +3284,7 @@
   },
   {
    "id": "affirm",
-   "name": "affirm",
+   "name": "Affirm",
    "lab": false,
    "hiring": {
     "open": 14,
@@ -3241,7 +3335,7 @@
   },
   {
    "id": "exa",
-   "name": "Exa",
+   "name": "exa",
    "lab": false,
    "hiring": {
     "open": 8,
@@ -3443,7 +3537,7 @@
   },
   {
    "id": "modal",
-   "name": "modal",
+   "name": "Modal",
    "lab": false,
    "hiring": {
     "open": 5,
@@ -3510,7 +3604,7 @@
   },
   {
    "id": "crusoe",
-   "name": "crusoe",
+   "name": "Crusoe",
    "lab": false,
    "hiring": {
     "open": 11,
@@ -3569,7 +3663,7 @@
   },
   {
    "id": "okta",
-   "name": "okta",
+   "name": "Okta",
    "lab": false,
    "hiring": {
     "open": 12,
@@ -3623,63 +3717,8 @@
    "initials": "O"
   },
   {
-   "id": "snorkelai",
-   "name": "snorkelai",
-   "lab": false,
-   "hiring": {
-    "open": 12,
-    "boards": [
-     {
-      "url": "https://job-boards.greenhouse.io/snorkelai",
-      "platform": "Greenhouse",
-      "open": 12
-     }
-    ],
-    "roles": [
-     {
-      "id": "forward-deployed-engineer",
-      "share": 42
-     },
-     {
-      "id": "rd-researcher",
-      "share": 33
-     },
-     {
-      "id": "applied-ai-engineer",
-      "share": 8
-     }
-    ],
-    "skills": [
-     {
-      "id": "agents",
-      "share": 100
-     },
-     {
-      "id": "evals",
-      "share": 100
-     },
-     {
-      "id": "software",
-      "share": 75
-     },
-     {
-      "id": "models",
-      "share": 67
-     },
-     {
-      "id": "customer",
-      "share": 58
-     }
-    ]
-   },
-   "products": [],
-   "stage": null,
-   "people": [],
-   "initials": "S"
-  },
-  {
    "id": "suno",
-   "name": "suno",
+   "name": "Suno",
    "lab": false,
    "hiring": {
     "open": 12,
@@ -3734,7 +3773,7 @@
   },
   {
    "id": "lovable",
-   "name": "lovable",
+   "name": "Lovable",
    "lab": false,
    "hiring": {
     "open": 11,
@@ -3799,7 +3838,7 @@
   },
   {
    "id": "gitlab",
-   "name": "gitlab",
+   "name": "GitLab",
    "lab": false,
    "hiring": {
     "open": 11,
@@ -3854,7 +3893,7 @@
   },
   {
    "id": "robinhood",
-   "name": "robinhood",
+   "name": "Robinhood",
    "lab": false,
    "hiring": {
     "open": 10,
@@ -3913,7 +3952,7 @@
   },
   {
    "id": "chime",
-   "name": "chime",
+   "name": "Chime",
    "lab": false,
    "hiring": {
     "open": 10,
@@ -4033,7 +4072,7 @@
   },
   {
    "id": "temporal",
-   "name": "temporal",
+   "name": "Temporal",
    "lab": false,
    "hiring": {
     "open": 2,
@@ -4155,7 +4194,7 @@
   },
   {
    "id": "livekit",
-   "name": "livekit",
+   "name": "Livekit",
    "lab": false,
    "hiring": {
     "open": 6,
@@ -4279,7 +4318,7 @@
   },
   {
    "id": "twilio",
-   "name": "twilio",
+   "name": "Twilio",
    "lab": false,
    "hiring": {
     "open": 5,
@@ -4405,7 +4444,7 @@
   },
   {
    "id": "supabase",
-   "name": "supabase",
+   "name": "Supabase",
    "lab": false,
    "hiring": {
     "open": 5,
@@ -4719,30 +4758,8 @@
    "initials": "SA"
   },
   {
-   "id": "together-ai",
-   "name": "Together AI",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "together-ai",
-     "name": "Together AI",
-     "area": "inference"
-    }
-   ],
-   "stage": {
-    "speakers": 6,
-    "talks": 8,
-    "source": "https://ai.engineer/orgs/together-ai"
-   },
-   "people": [
-    "hassan-el-mghari"
-   ],
-   "initials": "TA"
-  },
-  {
    "id": "browserbase",
-   "name": "browserbase",
+   "name": "Browserbase",
    "lab": false,
    "hiring": {
     "open": 1,
@@ -5147,28 +5164,8 @@
    "initials": "L"
   },
   {
-   "id": "snorkel-ai",
-   "name": "Snorkel AI",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "snorkel-ai",
-     "name": "Snorkel AI",
-     "area": "data"
-    }
-   ],
-   "stage": {
-    "speakers": 5,
-    "talks": 6,
-    "source": "https://ai.engineer/orgs/snorkel-ai"
-   },
-   "people": [],
-   "initials": "SA"
-  },
-  {
    "id": "labelbox",
-   "name": "labelbox",
+   "name": "Labelbox",
    "lab": false,
    "hiring": {
     "open": 5,
@@ -5304,7 +5301,7 @@
   },
   {
    "id": "posthog",
-   "name": "posthog",
+   "name": "PostHog",
    "lab": false,
    "hiring": {
     "open": 1,
@@ -5358,6 +5355,63 @@
    },
    "people": [],
    "initials": "P"
+  },
+  {
+   "id": "reflection-ai",
+   "name": "Reflection AI",
+   "lab": true,
+   "hiring": {
+    "open": 2,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/reflectionai",
+      "platform": "Ashby",
+      "open": 2
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 100
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "context",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "security",
+      "share": 100
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "reflection-beam",
+     "name": "Reflection Beam",
+     "area": "models"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/reflection-ai"
+   },
+   "people": [],
+   "initials": "RA"
   },
   {
    "id": "openrouter",
@@ -5668,53 +5722,6 @@
     "daniel-chalef"
    ],
    "initials": "Z"
-  },
-  {
-   "id": "reflection-ai",
-   "name": "Reflection AI",
-   "lab": true,
-   "hiring": {
-    "open": 2,
-    "boards": [
-     {
-      "url": "https://jobs.ashbyhq.com/reflectionai",
-      "platform": "Ashby",
-      "open": 2
-     }
-    ],
-    "roles": [
-     {
-      "id": "forward-deployed-engineer",
-      "share": 100
-     }
-    ],
-    "skills": [
-     {
-      "id": "software",
-      "share": 100
-     },
-     {
-      "id": "agents",
-      "share": 100
-     },
-     {
-      "id": "context",
-      "share": 100
-     },
-     {
-      "id": "evals",
-      "share": 100
-     },
-     {
-      "id": "security",
-      "share": 100
-     }
-    ]
-   },
-   "products": [],
-   "stage": null,
-   "people": [],
-   "initials": "RA"
   }
  ]
 }
