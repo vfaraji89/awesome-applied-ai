@@ -3,7 +3,6 @@ import { Broadcast } from "@/components/broadcast";
 import localFont from "next/font/local";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
-import { harnessCounts } from "@/lib/harness-counts";
 import { JsonLd } from "@/components/json-ld";
 import { websiteLd } from "@/lib/seo";
 import { Analytics } from "@/components/analytics";
@@ -60,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <SiteHeader />
           <main>{children}</main>
           <Broadcast />
-          <SiteFooter counts={harnessCounts()} />
+          <SiteFooter />
           <Analytics />
         </LangProvider>
       </body>
