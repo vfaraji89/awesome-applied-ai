@@ -22,14 +22,14 @@ jobs:
       - name: Probe
         env:
           PROBE_URLS: >-
-            https://ai.engineer/llms.txt
-            https://www.ai.engineer/llms.txt
-            https://ai.engineer/wf/llms.md
-            https://www.ai.engineer/worldsfair/2026/llms.md
-            https://ai.engineer/worldsfair/2026/speakers.json
-            https://ai.engineer/worldsfair/2026/sessions.json
-            https://ai.engineer/worldsfair/2026/schedule.json
-            https://www.ai.engineer/worldsfair/2025/speakers.json
-            https://www.ai.engineer/summit/2026/llms.md
-            https://www.ai.engineer/events
+            https://ai.engineer/data.md
+            https://ai.engineer/code/2026/organization-affiliations.json
+            https://ai.engineer/europe/2026/sessions.json
+            https://ai.engineer/code/2026/sessions.json
+            https://pytorchconferenceeu2026.sched.com/all.ics
+            https://pytorchconference2026.sched.com/all.ics
+            https://pytorch2026.sched.com/all.ics
+            https://build.microsoft.com/api/session/all/en-US
+            https://raysummit.anyscale.com/llms.txt
+            https://io.google/llms.txt
         run: bun pipeline/probe/conferences.ts

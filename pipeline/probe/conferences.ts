@@ -18,10 +18,12 @@ for (const url of URLS) {
       console.log("shape:", shape(j));
       const arr = Array.isArray(j) ? j : (Object.values(j).find(Array.isArray) as unknown[] | undefined);
       if (arr) for (const x of arr.slice(0, 2)) console.log("sample:", JSON.stringify(x).slice(0, 900));
+      if (arr) console.log("count:", arr.length);
     } else {
       const lines = body.split("\n");
       console.log("headings:", lines.filter((l) => /^#{1,3} /.test(l)).slice(0, 40).join(" | ").slice(0, 2500));
-      console.log("first lines:\n" + lines.slice(0, 60).join("\n").slice(0, 3500));
+      const full = /data\.md|terms|licen/i.test(url);
+      console.log("first lines:\n" + lines.slice(0, full ? 400 : 60).join("\n").slice(0, full ? 12000 : 3500));
       const links = [...body.matchAll(/https?:\/\/[^\s)"'<>]+/g)].map((m) => m[0]).filter((u) => /json|llms|schedule|sessions|speakers|talks|agenda|\.md\b|\.ics/i.test(u));
       console.log("data-looking links:", [...new Set(links)].slice(0, 40).join("\n"));
     }
