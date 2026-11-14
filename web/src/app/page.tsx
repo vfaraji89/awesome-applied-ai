@@ -17,6 +17,7 @@ import type { Metadata } from "next";
 import { share } from "@/lib/share";
 import { M, sitesRead } from "@/lib/market-data";
 import { Aha } from "@/components/market-insights";
+import { RoleBannerTabs } from "@/components/role-banners";
 import { signals } from "@/lib/tool-signals";
 
 export const metadata: Metadata = { ...share("") };
@@ -111,12 +112,7 @@ export default function Home() {
       </Band>
 
       <Band s={rs}>
-        <div className="frame">
-          <span className="kicker"><T k="home.rs_count" vars={{ r: fRoles.length, s: skills.length }}>{"{r} role families · {s} skills"}</T></span>
-          <div className="chips-wrap">{fRoles.map((r) => <Link key={r.id} href="/roles/" className={`chip${r.id === "ai-native-architect" ? " on" : ""}`}>{r.name}</Link>)}</div>
-          <span className="kicker" style={{ display: "block", marginTop: 20 }}><T k="ui.skills">Skills</T></span>
-          <div className="chips-wrap">{skills.map((k) => <Link key={k.id} href={`/skills/${k.id}/`} className="chip"><T k={`skill.${k.id}`}>{k.name}</T></Link>)}</div>
-        </div>
+        <RoleBannerTabs />
       </Band>
 
       <Band s={ar} alt>

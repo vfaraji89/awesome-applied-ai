@@ -1,5 +1,6 @@
 "use client";
-import { useState } from "react";
+import { useCallback, useEffect, useState } from "react";
+import { pickRole, useRolePick } from "@/components/role-banners";
 import Link from "next/link";
 import { T } from "@/i18n/lang";
 import { LEVELS, skills, type FRole } from "@/data/framework";
@@ -8,6 +9,8 @@ import type { StackGroup } from "@/data/stack";
 /* Pick a role: every skill is an abacus rod with four beads, and the red beads slide over to its level. */
 export function SkillsExplorer({ roles, stack, layerNames }: { roles: FRole[]; stack: StackGroup[]; layerNames: Record<string, string> }) {
   const [id, setId] = useState(roles[0].id);
+  useRolePick(useCallback((x: string) => setId(x), []));
+  useEffect(() => { const q = new URLSearchParams(location.search).get("role"); if (q && roles.some((r) => r.id === q)) pickRole(q); }, [roles]);
   const r = roles.find((x) => x.id === id) ?? roles[0];
   const logo = (name: string) => stack.flatMap((g) => g.tools).find((t) => t.name === name);
   const families = Array.from(new Set(roles.map((x) => x.family)));
@@ -19,7 +22,7 @@ export function SkillsExplorer({ roles, stack, layerNames }: { roles: FRole[]; s
             <span className="kicker"><T k={`fam.${f.toLowerCase()}`}>{f}</T></span>
             <div className="chips">
               {roles.filter((x) => x.family === f).map((x) => (
-                <button key={x.id} type="button" className={`chip${x.id === id ? " on" : ""}`} onClick={() => setId(x.id)} aria-pressed={x.id === id}>{x.name}</button>
+                <button key={x.id} type="button" className={`chip${x.id === id ? " on" : ""}`} onClick={() => { setId(x.id); pickRole(x.id); }} aria-pressed={x.id === id}>{x.name}</button>
               ))}
             </div>
           </div>

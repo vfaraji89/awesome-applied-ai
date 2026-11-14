@@ -11,7 +11,7 @@ import { usePathname } from "next/navigation";
 const FRAMES = ".frame, .mi-prof, .mi-cat, .src-p";
 const CHIPS = ".chip, .src-chip";
 // frames that run their own entrance, or sit in a sticky or fixed bar, are left alone
-const SKIP = ".mi-card, .itk, .cc, .site-header, .site-footer, header, footer, nav, [hidden]"; // .cc: the docs' lesson panels animate with GSAP
+const SKIP = ".mi-card, .itk, .cc, .ds, .site-header, .site-footer, header, footer, nav, [hidden]"; // .cc, .ds: the docs animate their own pages
 
 export function Broadcast() {
   const path = usePathname();

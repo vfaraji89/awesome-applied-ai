@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T14:15:45.189Z",
+ "generatedAt": "2026-11-13T15:06:58.447Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -1320,7 +1320,7 @@
      "slug": "nvidia",
      "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite",
      "ok": true,
-     "ai": 308
+     "ai": 307
     },
     {
      "slug": "salesforce",
@@ -1336,7 +1336,7 @@
     }
    ],
    "ok": true,
-   "ai": 429,
+   "ai": 428,
    "processed": 392
   },
   {
@@ -1350,7 +1350,7 @@
      "slug": "BoschGroup",
      "url": "https://careers.smartrecruiters.com/BoschGroup",
      "ok": true,
-     "ai": 48
+     "ai": 47
     },
     {
      "slug": "ServiceNow",
@@ -1384,7 +1384,7 @@
     }
    ],
    "ok": true,
-   "ai": 212,
+   "ai": 211,
    "processed": 172
   },
   {
@@ -1461,7 +1461,7 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 2,
+   "ai": 1,
    "processed": 3
   },
   {
@@ -1483,8 +1483,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 84,
-   "processed": 321
+   "ai": 83,
+   "processed": 322
   },
   {
    "id": "hackernews",

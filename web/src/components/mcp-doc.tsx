@@ -1,11 +1,6 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-import { LessonCardPlayer } from "./remotion/players";
-import { courseBaseCss } from "./claude-platform-doc";
-
-gsap.registerPlugin(useGSAP);
+import { useEffect, useState } from "react";
+import { DocShell, type DocPage } from "./doc-shell";
 
 /* MCP, the Model Context Protocol, as an animated doc. Free and open to everyone.
    Facts follow the specification at modelcontextprotocol.io (dated versions such as 2025-06-18);
@@ -248,122 +243,59 @@ function Build() {
   );
 }
 
-type Body = { h: string; anim: React.ReactNode; analogy: string; p: string[]; hint: string };
-const BODY: Body[] = [
-  { h: "One plug for every tool", anim: <Tangle />,
-    analogy: "Before USB, every printer, camera and keyboard came with its own cable and its own port. USB-C made one plug that fits them all. MCP does that for AI apps and the tools they use.",
-    p: ["MCP, the Model Context Protocol, is an open standard for connecting AI applications to tools and data: your files, your code host, your database, your calendar.",
+const PAGES: DocPage[] = [
+  { title: MCP_LESSONS[0].title, caption: "MCP is one open standard that lets any AI app use any tool or data source.", analogy: "Like USB-C: one plug instead of a drawer full of cables.", hint: "If a tool already has an MCP server, every MCP app can use it. No glue code.",
+    more: ["MCP, the Model Context Protocol, is an open standard for connecting AI applications to tools and data: your files, your code host, your database, your calendar.",
       "Without it, every app needs a custom connector for every tool, so three apps and four tools mean twelve pieces of glue to build and keep working. With it, each app speaks MCP once and each tool speaks MCP once.",
-      "Anthropic introduced it in November 2024 and published it openly, with a specification and official SDKs, so any app or tool maker can use it."],
-    hint: "If a tool you rely on already has an MCP server, any MCP-capable app can use it, and you write no connector at all." },
-  { h: "Host, client and server", anim: <Roles />,
-    analogy: "Think of a laptop with a row of ports. The laptop is the host, each port is a client, and each device you plug in is a server.",
-    p: ["The host is the AI application you work in, such as Claude Desktop, an IDE or your own agent. It decides what the model sees and asks you for permission.",
+      "Anthropic introduced it in November 2024 and published it openly, with a specification and official SDKs, so any app or tool maker can use it."], anim: <Tangle /> },
+  { title: MCP_LESSONS[1].title, caption: "Your app is the host. Inside it, one client per server. Each server does one job.", analogy: "A laptop, its ports, and the devices you plug in.", hint: "Something broke? Ask which of the three: the host, the client or the server.",
+    more: ["The host is the AI application you work in, such as Claude Desktop, an IDE or your own agent. It decides what the model sees and asks you for permission.",
       "Inside the host, a client keeps one connection to one server. Three servers means three clients, each in its own lane, so one server cannot read another's traffic.",
-      "A server is a program that offers capabilities: it can be a small script on your laptop or a service run by a company."],
-    hint: "When something fails, ask which of the three it is: the host's settings, the client's connection, or the server itself. The Inspector (page 10) tests the server alone." },
-  { h: "What a server offers", anim: <Primitives />,
-    analogy: "A good workshop has three things: tools on the wall that a skilled worker picks up when needed, reference books on the shelf that the manager hands over, and order forms the customer fills in.",
-    p: ["Tools are actions, each with a name, a description and a JSON Schema for its inputs. The model chooses when to call one, and the host can ask you first.",
+      "A server is a program that offers capabilities: it can be a small script on your laptop or a service run by a company."], anim: <Roles /> },
+  { title: MCP_LESSONS[2].title, caption: "A server offers tools to act, resources to read and prompts to pick.", analogy: "Tools on the wall, books on the shelf, order forms at the desk.", hint: "Write tool descriptions for the model: when to use it and what each input means.",
+    more: ["Tools are actions, each with a name, a description and a JSON Schema for its inputs. The model chooses when to call one, and the host can ask you first.",
       "Resources are context the app can read, each with an address such as file:///notes/today.md. The app decides which ones to attach.",
-      "Prompts are templates you choose, often shown as slash commands, that fill in a well-made request for a common job."],
-    hint: "Write tool descriptions for the model, not for people: say when to use the tool, what each input means and what comes back. A clear description is the biggest single gain in tool use." },
-  { h: "What the app offers back", anim: <BackChannel />,
-    analogy: "A contractor working in your house sometimes needs to borrow your ladder, asks which rooms they may enter, and checks with you before choosing a colour.",
-    p: ["Sampling lets a server ask the host's model to write something, so the server needs no model or API key of its own. The host stays in control and can show you the request first.",
+      "Prompts are templates you choose, often shown as slash commands, that fill in a well-made request for a common job."], anim: <Primitives /> },
+  { title: MCP_LESSONS[3].title, caption: "Requests can flow back too: borrow the model, set the bounds, ask you a question.", analogy: "A contractor borrows your ladder, asks which rooms, checks the colour with you.", hint: "Rely on these only when the app declared them in the handshake.",
+    more: ["Sampling lets a server ask the host's model to write something, so the server needs no model or API key of its own. The host stays in control and can show you the request first.",
       "Roots let the host tell a server which folders or addresses it may work within, so a files server does not wander through your whole disk.",
-      "Elicitation, added in the 2025-06-18 version of the specification, lets a server ask you a short structured question in the middle of a task, through the host's own interface."],
-    hint: "These only work when the host says it supports them during the handshake. A server should check before relying on them, and carry on gracefully when one is missing." },
-  { h: "The handshake", anim: <Handshake />,
-    analogy: "Two people meeting for a project first agree on a language and say what each can do. Only then do they start the work.",
-    p: ["The client opens with initialize: the protocol version it speaks, the features it supports and its name. The server answers with the version it will use and its own features.",
+      "Elicitation, added in the 2025-06-18 version of the specification, lets a server ask you a short structured question in the middle of a task, through the host's own interface."], anim: <BackChannel /> },
+  { title: MCP_LESSONS[4].title, caption: "Before any work, both sides agree a version and say what they can do.", analogy: "Agree the language first, then start the project.", hint: "Declare only the capabilities you really implement.",
+    more: ["The client opens with initialize: the protocol version it speaks, the features it supports and its name. The server answers with the version it will use and its own features.",
       "The client confirms with an initialized notification, and normal work begins: listing tools, reading resources, calling tools.",
-      "Versions are dates, such as 2025-06-18. If the two sides cannot agree on a version, they should stop rather than guess."],
-    hint: "Declare only the capabilities you really implement. The other side plans around them, and a claimed feature that is missing fails in confusing ways later." },
-  { h: "The messages", anim: <Messages />,
-    analogy: "A request is a numbered order slip. The reply comes back with the same number, so you know which order it answers. A notification is a note on the door: read it, no answer needed.",
-    p: ["MCP messages use JSON-RPC 2.0, a small and widely used format for remote calls.",
+      "Versions are dates, such as 2025-06-18. If the two sides cannot agree on a version, they should stop rather than guess."], anim: <Handshake /> },
+  { title: MCP_LESSONS[5].title, caption: "Every message is a small JSON note: a request, its reply, or a heads-up.", analogy: "Numbered order slips, matching receipts, a note on the door.", hint: "A failing tool still answers, error marked, so the model can try another way.",
+    more: ["MCP messages use JSON-RPC 2.0, a small and widely used format for remote calls.",
       "A request has an id and a method, such as tools/call. Its response carries the same id with either a result or an error.",
-      "A notification has a method and no id, and gets no reply. Servers use one to say, for example, that their list of tools has changed."],
-    hint: "Errors come back inside the response. A tool that fails at its job should still answer, with the error marked in its result, so the model can read what went wrong and try another way." },
-  { h: "Local or remote", anim: <Transports />,
-    analogy: "A local server is a colleague at the next desk: you just turn and talk. A remote server is one in another office: you send a message over the network and wait for the reply.",
-    p: ["With stdio, the host starts the server as a program on your machine and they exchange messages over its standard input and output. It is simple, fast and needs no network.",
+      "A notification has a method and no id, and gets no reply. Servers use one to say, for example, that their list of tools has changed."], anim: <Messages /> },
+  { title: MCP_LESSONS[6].title, caption: "Local servers talk over stdin and stdout; remote ones over one HTTP address.", analogy: "A colleague at the next desk, or one in another office.", hint: "On stdio, log to stderr. Anything else on stdout breaks the conversation.",
+    more: ["With stdio, the host starts the server as a program on your machine and they exchange messages over its standard input and output. It is simple, fast and needs no network.",
       "With Streamable HTTP, the server lives at one web address. The client sends each message as an HTTP POST, and the server can answer directly or stream its answer back as it works.",
-      "Streamable HTTP replaced the older HTTP plus Server-Sent Events transport in the 2025-03-26 version of the specification."],
-    hint: "A local stdio server must write only protocol messages to standard output. Send your logs to standard error, or they will corrupt the conversation." },
-  { h: "Who may call: authorization", anim: <Auth />,
-    analogy: "A hotel key card: you show your ID once at the front desk, get a card that opens one room for a few days, and tap it at the door every time.",
-    p: ["Remote servers use OAuth 2.1, the same sign-in standard behind “Sign in with…” buttons. The MCP server acts as a resource server and accepts tokens issued by an authorization server.",
+      "Streamable HTTP replaced the older HTTP plus Server-Sent Events transport in the 2025-03-26 version of the specification."], anim: <Transports /> },
+  { title: MCP_LESSONS[7].title, caption: "Remote servers use OAuth: sign in once, and the app carries a token for that one server.", analogy: "A hotel key card: show your ID once, then tap the door.", hint: "Accept only tokens issued for your server, and never pass one on.",
+    more: ["Remote servers use OAuth 2.1, the same sign-in standard behind “Sign in with…” buttons. The MCP server acts as a resource server and accepts tokens issued by an authorization server.",
       "The client discovers where to sign in from the server's protected-resource metadata, sends you to sign in and agree, and receives a token meant for that one server.",
-      "Local stdio servers do not use this flow. They usually read their credentials, such as an API key, from the environment the host starts them in."],
-    hint: "A server must only accept tokens issued for itself, and must never pass a token it received on to another service. Token passthrough is a well-known hole." },
-  { h: "Staying safe", anim: <Safety />,
-    analogy: "Giving an agent tools is like giving a new assistant the office keys. You start with the keys they need, and you ask them to check with you before anything that cannot be undone.",
-    p: ["Tools can send emails, change code and delete data. The specification asks hosts to keep a person in the loop: show what will run and let you approve or deny it.",
+      "Local stdio servers do not use this flow. They usually read their credentials, such as an API key, from the environment the host starts them in."], anim: <Auth /> },
+  { title: MCP_LESSONS[8].title, caption: "Tools act in the real world, so a person approves what matters.", analogy: "A new assistant gets only the keys they need.", hint: "Start read-only, one folder, a test database. Widen it later.",
+    more: ["Tools can send emails, change code and delete data. The specification asks hosts to keep a person in the loop: show what will run and let you approve or deny it.",
       "A tool's description and its results are text the model reads, so a malicious or compromised server can hide instructions in them. Treat everything a server sends as untrusted.",
-      "Servers can mark tools with annotations such as read-only or destructive. They help the host decide what to ask, but they come from the server, so they are hints, not promises."],
-    hint: "Run new servers with the narrowest access first: read-only tokens, a single folder as the root, a test database. Widen it only once you have seen what they do." },
-  { h: "Build your first server", anim: <Build />,
-    analogy: "Like opening a market stall: set up the table, put out what you sell with a clear label, test it with a friend, then tell people where to find you.",
-    p: ["Official SDKs exist for many languages, including Python and TypeScript. In Python, FastMCP turns a normal function into a tool: the type hints become the input schema and the docstring becomes the description.",
+      "Servers can mark tools with annotations such as read-only or destructive. They help the host decide what to ask, but they come from the server, so they are hints, not promises."], anim: <Safety /> },
+  { title: MCP_LESSONS[9].title, caption: "Ten lines of Python, a test in the Inspector, one entry in your app's settings.", analogy: "Set up the stall, label what you sell, try it with a friend first.", hint: "Start with one read-only tool, then add the ones that change things.",
+    more: ["Official SDKs exist for many languages, including Python and TypeScript. In Python, FastMCP turns a normal function into a tool: the type hints become the input schema and the docstring becomes the description.",
       "The MCP Inspector, a free tool you run with npx, connects to your server and lets you list and call its tools by hand before any model touches them.",
-      "To use it in an app, add the server to the app's MCP settings: a name, the command that starts it, and its arguments. Restart the app and its tools appear."],
-    hint: "Start with one read-only tool and test it in the Inspector. Add tools that change things only after the read-only one behaves, and give every tool a description written for the model." },
+      "To use it in an app, add the server to the app's MCP settings: a name, the command that starts it, and its arguments. Restart the app and its tools appear."], anim: <Build /> },
 ];
 
-export function McpCourse() {
-  const [i, setI] = useState(0);
-  useEffect(() => {
-    const n = Number(window.location.hash.replace("#lesson-", ""));
-    if (n >= 1 && n <= MCP_LESSONS.length) setI(n - 1);
-  }, []);
-  const go = (n: number) => { setI(n); history.replaceState(null, "", `#lesson-${n + 1}`); };
-  const l = MCP_LESSONS[i], b = BODY[i];
-  const root = useRef<HTMLDivElement>(null);
-  useGSAP(() => {
-    const mm = gsap.matchMedia();
-    mm.add("(prefers-reduced-motion: no-preference)", () => {
-      gsap.timeline({ defaults: { ease: "power3.out" } })
-        .from(".cc-panel", { y: 24, autoAlpha: 0, duration: .5 })
-        .from(".cc-panel .cc-step", { y: 22, autoAlpha: 0, duration: .55, stagger: .09 }, "-=.25")
-        .from(".cc-item.on .bead", { scale: 0, duration: .6, ease: "expo.out" }, 0);
-    });
-    return () => mm.revert();
-  }, { scope: root, dependencies: [i] });
-  useGSAP(() => {
-    gsap.matchMedia().add("(prefers-reduced-motion: no-preference)", () => {
-      gsap.from(".cc-item", { x: -16, autoAlpha: 0, stagger: .05, duration: .45, ease: "power2.out" });
-    });
-  }, { scope: root });
+export function McpCourse({ end }: { end?: React.ReactNode }) {
   return (
-    <div className="cc" ref={root}>
-      <nav className="cc-list" aria-label="Pages">
-        {MCP_LESSONS.map((x, k) => (
-          <button key={x.title} type="button" className={`cc-item${k === i ? " on" : ""}`} onClick={() => go(k)} aria-current={k === i ? "step" : undefined}>
-            <span className={`bead${k <= i ? "" : " white"}`} />
-            <span className="mono count">{String(k + 1).padStart(2, "0")}</span>
-            <span className="cc-t">{x.title}</span>
-          </button>
-        ))}
-        <p className="count" style={{ margin: "14px 0 0" }}>{MCP_LESSONS.length} pages · free, open to everyone</p>
-      </nav>
+    <>
+      <DocShell pages={PAGES} label="MCP" end={end} />
+      <style>{animCss}</style>
+    </>
+  );
+}
 
-      <article key={i} className="cc-panel frame">
-        <div className="cc-step cc-open"><LessonCardPlayer n={i + 1} total={MCP_LESSONS.length} title={b.h} analogy={l.teaser} /></div>
-        <h2 className="sr-only">Page {i + 1}: {b.h}</h2>
-        <div className="cc-step cc-box analogy"><span className="cc-ico" aria-hidden="true">≈</span><div><span className="kicker">Think of it like this</span><p>{b.analogy}</p></div></div>
-        <div className="cc-step cc-anim">{b.anim}</div>
-        {b.p.map((t) => <p key={t} className="cc-step cc-p">{t}</p>)}
-        <div className="cc-step cc-box hint"><span className="cc-ico" aria-hidden="true">✦</span><div><span className="kicker">Useful hint</span><p>{b.hint}</p></div></div>
-        <div className="cc-nav">
-          <button type="button" className="chip" disabled={i === 0} onClick={() => go(i - 1)}>← Previous</button>
-          <button type="button" className="chip" disabled={i === MCP_LESSONS.length - 1} onClick={() => go(i + 1)}>Next →</button>
-        </div>
-      </article>
-
-      <style>{`
-        ${courseBaseCss}
+const animCss = `
         .bead-r { background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
 
         .tg svg { width: 100%; height: auto; display: block; }
@@ -456,7 +388,4 @@ export function McpCourse() {
         .bd-step.on { opacity: 1; border-color: var(--rust); box-shadow: 0 0 0 4px var(--mark); }
         .bd-step code, .bd-step pre { margin: 0; font-size: .76rem; color: var(--rust-deep); white-space: pre; overflow-x: auto; }
         @media (prefers-reduced-motion: reduce) { .rl-wire.on i, .hs-msg.cur .hs-arrow i { animation: none; } }
-      `}</style>
-    </div>
-  );
-}
+`;

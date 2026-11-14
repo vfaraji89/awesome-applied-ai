@@ -5,6 +5,8 @@ import { SkillMap } from "@/components/skill-map";
 import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
 import { share } from "@/lib/share";
+import { RoleBanner } from "@/components/role-banners";
+import { RolesNav } from "@/components/roles-nav";
 import { M } from "@/lib/market-data";
 import { Aha, Heatmap, LabsVsRest, SkillProfiles, insightCss, insightCss2 } from "@/components/market-insights";
 
@@ -22,6 +24,7 @@ export default function Skills() {
           <More>
             <p className="lead" style={{ marginTop: 12 }}><TH k="skills.p2">Everything here is read from real job postings: which skills employers ask for together, which pairs are <b>rare in one person</b>, and which single skill would open the most postings for you next.</TH></p>
           </More>
+          <div className="frame" style={{ marginTop: 28, padding: "28px 30px" }}><RoleBanner kind="skills" size="hero" /></div>
           {ins && <Aha only="ticker" ins={ins} total={M.totals.processed} roles={M.roles} skillsTop={M.skills} tasks={M.tasks} affected={M.affected} tech={M.tech} years={M.years} />}
           <div style={{ marginTop: 34 }}><SkillMap /></div>
         </div>
@@ -65,6 +68,7 @@ export default function Skills() {
           </section>
         </>
       )}
+      <RolesNav here="skills" />
       <style>{insightCss}</style>
       <style>{insightCss2}</style>
     </>

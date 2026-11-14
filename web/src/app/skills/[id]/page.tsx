@@ -93,6 +93,7 @@ export default async function SkillPage({ params }: { params: Promise<{ id: stri
 
   const ctas = [
     { href: "/fit/", k: "sd.c_fit", en: "Check your fit", line: <T k="sd.c_fit_l">Paste your CV and see how it scores on this skill and the rest, with what to learn next.</T>, primary: true },
+    ...(links?.doc ? [{ href: links.doc.href, k: "sd.c_doc", en: "Read the doc", line: <T k="sd.c_doc_l" vars={{ d: links.doc.name, n: links.doc.pages }}>{"{d}: {n} short animated pages, each linked to its sources."}</T> }] : []),
     ...(useIds.length ? [{ href: `/tools/?use=${useIds[0]}`, k: "sd.c_tools", en: "Practise with the tools", line: <T k="sd.c_tools_l" vars={{ n: toolCount, u: useCases.find((u) => u.id === useIds[0])?.name ?? "" }}>{"{n} tools on the map for this, starting with {u}."}</T> }] : []),
     ...(track ? [{ href: `/certificates/?track=${track.id}`, k: "sd.c_cert", en: "Prove it", line: <T k="sd.c_cert_l" vars={{ n: certCount, t: track.name }}>{"{n} certificates in the track {t}, each checked on the provider's page."}</T> }] : []),
     ...(jFields.length ? [{ href: `/jargon/?field=${jFields[0].id}`, k: "sd.c_jargon", en: "Learn the words", line: <T k="sd.c_jargon_l" vars={{ n: termCount, f: jFields.map((f) => f.name).join(", ") }}>{"{n} terms in plain words: {f}."}</T> }] : []),
@@ -131,7 +132,7 @@ export default async function SkillPage({ params }: { params: Promise<{ id: stri
             <ul className="sd-roles">
               {roleRows.map((r) => (
                 <li key={r.id}>
-                  <Link href="/roles/" className="sd-role">{roleName(r.id)}</Link>
+                  <Link href={`/roles/families/?role=${r.id}`} className="sd-role">{roleName(r.id)}</Link>
                   <span className="rodbar">{r.share !== null && <i style={{ width: `${r.share}%` }} />}</span>
                   <span className="mono sd-n">{r.share !== null ? `${r.share}%` : "–"}</span>
                   <span className="sd-level" title={SKILL_LEVELS[r.level]}>

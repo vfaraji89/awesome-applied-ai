@@ -1,69 +1,48 @@
 import { SectionIntro } from "@/components/section-intro";
 import Link from "next/link";
 import type { Metadata } from "next";
-import { SkillsExplorer } from "@/components/skills-explorer";
-import { fRoles, skills, LEVELS, SOURCES } from "@/data/framework";
-import { stack } from "@/data/stack";
-import { layers } from "@/data/layers";
-import { More } from "@/components/more";
-import { T, TH } from "@/i18n/lang";
+import { fRoles, skills, SOURCES } from "@/data/framework";
+import { T } from "@/i18n/lang";
+import { slug } from "@/i18n/slug";
 import { JsonLd } from "@/components/json-ld";
 import { rolesLd } from "@/lib/seo";
 import { share } from "@/lib/share";
+import { M } from "@/lib/market-data";
+import { RoleBanner } from "@/components/role-banners";
+import { ROLE_PAGES } from "@/data/roles-pages";
 
-export const metadata: Metadata = { ...share("roles"), title: "Roles and skills", description: "A framework for AI-native developers, forward deployed engineers, applied AI and product engineering roles: titles, tasks, skills, stacks." };
+export const metadata: Metadata = { ...share("roles"), title: "Roles and skills", description: "A framework for AI-native developers, forward deployed engineers, applied AI and product engineering roles: role families, a skills matrix, a skill map and the tasks each role does." };
 
 export default function Roles() {
-  const layerNames = Object.fromEntries(layers.map((l) => [l.id, l.name]));
+  const fams = new Set(fRoles.map((r) => r.family)).size;
+  const stat: Record<string, { n: string; l: React.ReactNode }> = {
+    families: { n: String(fRoles.length), l: <T k="rh.s_fam" vars={{ f: fams }}>{"roles in {f} families"}</T> },
+    matrix: { n: String(skills.length), l: <T k="rh.s_mx">skills scored for every role, aware to expert</T> },
+    skills: { n: `${M.skills[0]?.share ?? 0}%`, l: <T k="rh.s_sk">of AI job ads ask for the top skill</T> },
+    tasks: { n: String(M.tasks.length), l: <T k="rh.s_tk" vars={{ n: M.totals.processed.toLocaleString("en-US") }}>{"tasks read from {n} AI job ads"}</T> },
+  };
   return (
     <>
       <JsonLd data={rolesLd()} />
-      <section className="section" id="families">
+      <section className="section">
         <div className="wrap">
-          <SectionIntro id="roles" h1="Who builds it, and what they need" lead={"Eight role families across AI-native development, forward deployment, applied AI and product engineering. For each: the job titles you will see, the tasks, the stack, and twelve skills scored from aware to expert by what you can actually do."} />
-          <div style={{ marginTop: 32 }}><SkillsExplorer roles={fRoles} stack={stack} layerNames={layerNames} /></div>
-        </div>
-      </section>
-
-      <section className="section" id="matrix">
-        <div className="wrap">
-          <span className="kicker"><T k="rl.matrix">The whole matrix</T></span>
-          <h2 style={{ marginTop: 10 }}><T k="rl.matrix_h">Eight roles, twelve skills</T><span className="dot">.</span></h2>
-          <p className="lead" style={{ marginTop: 12 }}><TH k="roles.p1"><b>Red beads</b> show the level each role needs.</TH></p>
-          <More label="Levels and the skill map"><p className="lead" style={{ marginTop: 12 }}><TH k="roles.p2" vars={{ v1: LEVELS.slice(1).join(", ").toLowerCase() }}>The levels run {LEVELS.slice(1).join(", ").toLowerCase()}. To see which skills postings ask for <b>together</b>, and which one <b>opens the most doors</b>, open the <Link href="/skills/">skill map</Link>.</TH></p></More>
-          <div className="mx-wrap">
-            <table className="mx">
-              <thead><tr><th><T k="rl.skill">Skill</T></th>{fRoles.map((r) => <th key={r.id}><span>{r.name}</span></th>)}</tr></thead>
-              <tbody>
-                {skills.map((s) => (
-                  <tr key={s.id}>
-                    <th scope="row"><b><T k={`skill.${s.id}`}>{s.name}</T></b><span className="muted"><T k={`skillwhat.${s.id}`}>{s.what}</T></span></th>
-                    {fRoles.map((r) => {
-                      const lv = r.levels[s.id] ?? 0;
-                      return <td key={r.id} title={`${r.name} · ${s.name}: ${LEVELS[lv]}`}><span className="mx-beads">{[0, 1, 2, 3].map((b) => <i key={b} className={b < lv ? "on" : ""} />)}</span></td>;
-                    })}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      <section className="section" id="tasks" style={{ background: "var(--paper)" }}>
-        <div className="wrap">
-          <span className="kicker"><T k="rl.tasks">Tasks</T></span>
-          <h2 style={{ marginTop: 10 }}><T k="rl.tasks_h">What each role does all day</T><span className="dot">.</span></h2>
-          <div className="grid grid-2" style={{ marginTop: 26 }}>
-            {fRoles.map((r) => (
-              <div key={r.id} className="frame">
-                <span className="count"><T k={`fam.${r.family.toLowerCase()}`}>{r.family}</T></span>
-                <h3 style={{ fontSize: "1.25rem", fontWeight: 800, marginTop: 6 }}>{r.name}<span className="dot">.</span></h3>
-                <ul className="ed">{r.tasks.map((t, i) => <li key={t}><span className="bead" /><T k={`role.${r.id}.task.${i}`}>{t}</T></li>)}</ul>
-              </div>
+          <SectionIntro id="roles" h1="Who builds it, and what they need" lead={"Eight role families across AI-native development, forward deployment, applied AI and product engineering. Four ways in: the roles, the matrix of skills, the map of what the ads ask for together, and the work itself."} />
+          <div className="rh-grid">
+            {ROLE_PAGES.map((p, i) => (
+              <article key={p.kind} className="frame rh-card">
+                <header className="rh-head">
+                  <span className="rh-n">{String(i + 1).padStart(2, "0")}</span>
+                  <div>
+                    <h2><Link href={p.href}><T k={`page.${slug(p.label)}`}>{p.label}</T></Link><span className="dot">.</span></h2>
+                    <p className="muted"><T k={`note.${slug(p.label)}`}>{p.note}</T></p>
+                  </div>
+                  <div className="rh-stat"><b>{stat[p.kind].n}</b><span className="count">{stat[p.kind].l}</span></div>
+                </header>
+                <RoleBanner kind={p.kind} />
+                <Link href={p.href} className="btn rh-btn"><T k="rh.open" vars={{ p: p.label }}>{"Open {p}"}</T> →</Link>
+              </article>
             ))}
           </div>
-          <p className="count" style={{ marginTop: 22 }}><T k="rl.certs">Certificates and degrees have their own page:</T> <Link href="/certificates/"><T k="page.certificates">Certificates</T></Link>.</p>
         </div>
       </section>
 
@@ -75,14 +54,15 @@ export default function Roles() {
         </div>
       </section>
       <style>{`
-        .mx-wrap { margin-top: 24px; overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; }
-        .mx { border-collapse: collapse; width: 100%; min-width: 980px; font-size: .88rem; }
-        .mx th, .mx td { padding: 10px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: middle; }
-        .mx thead th { font-family: var(--font-mono), monospace; font-size: .7rem; letter-spacing: .04em; color: var(--sec); font-weight: 400; vertical-align: bottom; }
-        .mx tbody th { display: flex; flex-direction: column; gap: 2px; font-weight: 400; min-width: 220px; } .mx tbody th .muted { font-size: .78rem; }
-        .mx-beads { display: inline-flex; gap: 3px; } .mx-beads i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); }
-        .mx-beads i.on { background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
-        .ed { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 8px; } .ed li { display: flex; gap: 10px; align-items: baseline; } .ed .bead { width: 10px; height: 10px; flex: none; }
+        .rh-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 520px), 1fr)); gap: 22px; margin-top: 34px; }
+        .rh-card { display: flex; flex-direction: column; gap: 20px; padding: 24px 28px 26px; }
+        .rh-head { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 14px; align-items: start; }
+        .rh-n { display: inline-grid; place-items: center; min-width: 30px; height: 24px; padding: 0 6px; border-radius: 6px; background: var(--rust); color: #fff; font-family: var(--font-mono), monospace; font-size: .78rem; margin-top: 4px; }
+        .rh-head h2 { font-size: 1.6rem; } .rh-head h2 a { color: inherit; text-decoration: none; } .rh-head h2 a:hover { color: var(--rust-deep); }
+        .rh-head .muted { margin-top: 4px; font-size: .9rem; }
+        .rh-stat { text-align: right; display: grid; max-width: 150px; } .rh-stat b { font-size: 1.8rem; font-weight: 800; color: var(--rust); line-height: 1; } .rh-stat .count { font-size: .7rem; margin-top: 4px; }
+        .rh-btn { align-self: flex-start; margin-top: auto; }
+        @media (max-width: 520px) { .rh-head { grid-template-columns: auto minmax(0, 1fr); } .rh-stat { grid-column: 1 / -1; text-align: left; } }
         .src { margin: 14px 0 0; padding-left: 18px; display: grid; gap: 6px; color: var(--sec); } .src a { text-decoration: none; } .src a:hover { color: var(--rust-deep); }
       `}</style>
     </>
