@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-14T04:02:02.386Z",
+ "generatedAt": "2026-11-14T05:24:03.578Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -2873,195 +2873,1084 @@
     {
      "slug": "openai",
      "url": "https://jobs.ashbyhq.com/openai",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 173,
+     "company": "openai",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 27
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 20
+      },
+      {
+       "id": "rd-researcher",
+       "share": 17
+      }
+     ],
+     "skills": [
+      {
+       "id": "customer",
+       "share": 71
+      },
+      {
+       "id": "software",
+       "share": 66
+      },
+      {
+       "id": "product",
+       "share": 55
+      },
+      {
+       "id": "agents",
+       "share": 54
+      },
+      {
+       "id": "evals",
+       "share": 54
+      }
+     ],
      "name": "OpenAI",
      "kind": "lab"
     },
     {
      "slug": "cohere",
      "url": "https://jobs.ashbyhq.com/cohere",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 23,
+     "company": "cohere",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 43
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 26
+      },
+      {
+       "id": "other-ai",
+       "share": 13
+      }
+     ],
+     "skills": [
+      {
+       "id": "customer",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 96
+      },
+      {
+       "id": "agents",
+       "share": 83
+      },
+      {
+       "id": "models",
+       "share": 57
+      },
+      {
+       "id": "evals",
+       "share": 52
+      }
+     ],
      "name": "Cohere",
      "kind": "lab"
     },
     {
      "slug": "elevenlabs",
      "url": "https://jobs.ashbyhq.com/elevenlabs",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 11,
+     "company": "elevenlabs",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 36
+      },
+      {
+       "id": "rd-researcher",
+       "share": 18
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 18
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 82
+      },
+      {
+       "id": "customer",
+       "share": 55
+      },
+      {
+       "id": "architecture",
+       "share": 45
+      },
+      {
+       "id": "models",
+       "share": 27
+      }
+     ]
     },
     {
      "slug": "langchain",
      "url": "https://jobs.ashbyhq.com/langchain",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 11,
+     "company": "langchain",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 82
+      },
+      {
+       "id": "product",
+       "share": 36
+      },
+      {
+       "id": "architecture",
+       "share": 18
+      }
+     ]
     },
     {
      "slug": "perplexity",
      "url": "https://jobs.ashbyhq.com/perplexity",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 19,
+     "company": "perplexity",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 42
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 26
+      },
+      {
+       "id": "rd-researcher",
+       "share": 11
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 74
+      },
+      {
+       "id": "agents",
+       "share": 74
+      },
+      {
+       "id": "models",
+       "share": 68
+      },
+      {
+       "id": "evals",
+       "share": 58
+      },
+      {
+       "id": "retrieval",
+       "share": 53
+      }
+     ],
      "name": "Perplexity",
      "kind": "lab"
     },
     {
      "slug": "notion",
      "url": "https://jobs.ashbyhq.com/notion",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 14,
+     "company": "notion",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 71
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 14
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 7
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 79
+      },
+      {
+       "id": "customer",
+       "share": 79
+      },
+      {
+       "id": "ai-dev",
+       "share": 57
+      },
+      {
+       "id": "software",
+       "share": 43
+      }
+     ]
     },
     {
      "slug": "replit",
      "url": "https://jobs.ashbyhq.com/replit",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 3,
+     "company": "replit",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 67
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 67
+      },
+      {
+       "id": "product",
+       "share": 67
+      },
+      {
+       "id": "retrieval",
+       "share": 67
+      },
+      {
+       "id": "evals",
+       "share": 67
+      }
+     ]
     },
     {
      "slug": "linear",
      "url": "https://jobs.ashbyhq.com/linear",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 1,
+     "company": "linear",
+     "roles": [
+      {
+       "id": "ai-native-developer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "unify",
      "url": "https://jobs.ashbyhq.com/unify",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 1,
+     "company": "unify",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "harvey",
      "url": "https://jobs.ashbyhq.com/harvey",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 21,
+     "company": "harvey",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 43
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 38
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 95
+      },
+      {
+       "id": "models",
+       "share": 67
+      },
+      {
+       "id": "context",
+       "share": 52
+      }
+     ]
     },
     {
      "slug": "cursor",
      "url": "https://jobs.ashbyhq.com/cursor",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 10,
+     "company": "cursor",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 80
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "product",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 80
+      },
+      {
+       "id": "customer",
+       "share": 80
+      },
+      {
+       "id": "agents",
+       "share": 70
+      },
+      {
+       "id": "evals",
+       "share": 70
+      }
+     ]
     },
     {
      "slug": "ramp",
      "url": "https://jobs.ashbyhq.com/ramp",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 10,
+     "company": "ramp",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 30
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 20
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 80
+      },
+      {
+       "id": "software",
+       "share": 70
+      },
+      {
+       "id": "customer",
+       "share": 70
+      },
+      {
+       "id": "models",
+       "share": 50
+      },
+      {
+       "id": "data",
+       "share": 40
+      }
+     ]
     },
     {
      "slug": "deel",
      "url": "https://jobs.ashbyhq.com/deel",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "modal",
      "url": "https://jobs.ashbyhq.com/modal",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 5,
+     "company": "modal",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 60
+      },
+      {
+       "id": "other-ai",
+       "share": 20
+      },
+      {
+       "id": "rd-researcher",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "models",
+       "share": 80
+      },
+      {
+       "id": "customer",
+       "share": 60
+      },
+      {
+       "id": "context",
+       "share": 20
+      },
+      {
+       "id": "software",
+       "share": 20
+      },
+      {
+       "id": "agents",
+       "share": 20
+      }
+     ]
     },
     {
      "slug": "baseten",
      "url": "https://jobs.ashbyhq.com/baseten",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 11,
+     "company": "baseten",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 27
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 18
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 18
+      }
+     ],
+     "skills": [
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "ai-dev",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 73
+      },
+      {
+       "id": "agents",
+       "share": 73
+      }
+     ]
     },
     {
      "slug": "pinecone",
      "url": "https://jobs.ashbyhq.com/pinecone",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "llamaindex",
      "url": "https://jobs.ashbyhq.com/llamaindex",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "supabase",
      "url": "https://jobs.ashbyhq.com/supabase",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 5,
+     "company": "supabase",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 40
+      },
+      {
+       "id": "ai-solutions-architect",
+       "share": 20
+      },
+      {
+       "id": "ai-native-architect",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 80
+      }
+     ]
     },
     {
      "slug": "posthog",
      "url": "https://jobs.ashbyhq.com/posthog",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 1,
+     "company": "posthog",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "sierra",
      "url": "https://jobs.ashbyhq.com/sierra",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 36,
+     "company": "sierra",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 97
+      },
+      {
+       "id": "rd-researcher",
+       "share": 3
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 94
+      },
+      {
+       "id": "retrieval",
+       "share": 92
+      },
+      {
+       "id": "evals",
+       "share": 92
+      },
+      {
+       "id": "context",
+       "share": 89
+      }
+     ]
     },
     {
      "slug": "decagon",
      "url": "https://jobs.ashbyhq.com/decagon",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 22,
+     "company": "decagon",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 68
+      },
+      {
+       "id": "rd-researcher",
+       "share": 27
+      },
+      {
+       "id": "other-ai",
+       "share": 5
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 73
+      },
+      {
+       "id": "customer",
+       "share": 64
+      },
+      {
+       "id": "software",
+       "share": 59
+      },
+      {
+       "id": "security",
+       "share": 45
+      }
+     ]
     },
     {
      "slug": "cognition",
      "url": "https://jobs.ashbyhq.com/cognition",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 18,
+     "company": "cognition",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 61
+      },
+      {
+       "id": "rd-researcher",
+       "share": 17
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 17
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "ai-dev",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 78
+      },
+      {
+       "id": "software",
+       "share": 72
+      },
+      {
+       "id": "product",
+       "share": 56
+      }
+     ]
     },
     {
      "slug": "writer",
      "url": "https://jobs.ashbyhq.com/writer",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 9,
+     "company": "writer",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 33
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 22
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 22
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 78
+      },
+      {
+       "id": "customer",
+       "share": 56
+      },
+      {
+       "id": "retrieval",
+       "share": 44
+      }
+     ]
     },
     {
      "slug": "rogo",
      "url": "https://jobs.ashbyhq.com/rogo",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 2,
+     "company": "rogo",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 100
+      }
+     ],
+     "skills": []
     },
     {
      "slug": "claylabs",
      "url": "https://jobs.ashbyhq.com/claylabs",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 4,
+     "company": "claylabs",
+     "roles": [
+      {
+       "id": "ai-native-developer",
+       "share": 50
+      },
+      {
+       "id": "rd-researcher",
+       "share": 25
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 25
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 75
+      },
+      {
+       "id": "evals",
+       "share": 75
+      },
+      {
+       "id": "models",
+       "share": 75
+      },
+      {
+       "id": "ai-dev",
+       "share": 50
+      }
+     ]
     },
     {
      "slug": "mercor",
      "url": "https://jobs.ashbyhq.com/mercor",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 21,
+     "company": "mercor",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 43
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 24
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 71
+      },
+      {
+       "id": "agents",
+       "share": 71
+      },
+      {
+       "id": "data",
+       "share": 29
+      }
+     ]
     },
     {
      "slug": "runway",
      "url": "https://jobs.ashbyhq.com/runway",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "pika",
      "url": "https://jobs.ashbyhq.com/pika",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 5,
+     "company": "pika",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 40
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 20
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 40
+      },
+      {
+       "id": "software",
+       "share": 20
+      },
+      {
+       "id": "data",
+       "share": 20
+      },
+      {
+       "id": "product",
+       "share": 20
+      }
+     ]
     },
     {
      "slug": "suno",
      "url": "https://jobs.ashbyhq.com/suno",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 12,
+     "company": "suno",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 42
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 42
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 17
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 67
+      },
+      {
+       "id": "agents",
+       "share": 67
+      },
+      {
+       "id": "customer",
+       "share": 58
+      },
+      {
+       "id": "data",
+       "share": 50
+      },
+      {
+       "id": "evals",
+       "share": 42
+      }
+     ]
     },
     {
      "slug": "character",
      "url": "https://jobs.ashbyhq.com/character",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 7,
+     "company": "character",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 57
+      },
+      {
+       "id": "other-ai",
+       "share": 29
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 86
+      },
+      {
+       "id": "models",
+       "share": 71
+      },
+      {
+       "id": "agents",
+       "share": 57
+      },
+      {
+       "id": "evals",
+       "share": 57
+      },
+      {
+       "id": "data",
+       "share": 29
+      }
+     ],
      "name": "Character.AI",
      "kind": "lab"
     },
     {
      "slug": "poolside",
      "url": "https://jobs.ashbyhq.com/poolside",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Poolside",
      "kind": "lab"
@@ -3069,7 +3958,7 @@
     {
      "slug": "magic",
      "url": "https://jobs.ashbyhq.com/magic",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Magic",
      "kind": "lab"
@@ -3077,201 +3966,849 @@
     {
      "slug": "lovable",
      "url": "https://jobs.ashbyhq.com/lovable",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 11,
+     "company": "lovable",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 45
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 45
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 9
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 91
+      },
+      {
+       "id": "agents",
+       "share": 82
+      },
+      {
+       "id": "product",
+       "share": 64
+      },
+      {
+       "id": "customer",
+       "share": 55
+      },
+      {
+       "id": "data",
+       "share": 45
+      }
+     ]
     },
     {
      "slug": "factory",
      "url": "https://jobs.ashbyhq.com/factory",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 2,
+     "company": "factory",
+     "roles": [
+      {
+       "id": "ai-native-developer",
+       "share": 50
+      },
+      {
+       "id": "rd-researcher",
+       "share": 50
+      }
+     ],
+     "skills": [
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 50
+      },
+      {
+       "id": "retrieval",
+       "share": 50
+      },
+      {
+       "id": "product",
+       "share": 50
+      }
+     ]
     },
     {
      "slug": "mintlify",
      "url": "https://jobs.ashbyhq.com/mintlify",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "airbyte",
      "url": "https://jobs.ashbyhq.com/airbyte",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 2,
+     "company": "airbyte",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "temporal",
      "url": "https://jobs.ashbyhq.com/temporal",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 2,
+     "company": "temporal",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 50
+      },
+      {
+       "id": "rd-researcher",
+       "share": 50
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 50
+      },
+      {
+       "id": "models",
+       "share": 50
+      },
+      {
+       "id": "ai-dev",
+       "share": 50
+      }
+     ]
     },
     {
      "slug": "inngest",
      "url": "https://jobs.ashbyhq.com/inngest",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "browserbase",
      "url": "https://jobs.ashbyhq.com/browserbase",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 1,
+     "company": "browserbase",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "architecture",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "e2b",
      "url": "https://jobs.ashbyhq.com/e2b",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "letta",
      "url": "https://jobs.ashbyhq.com/letta",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 4,
+     "company": "letta",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 75
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 25
+      }
+     ],
+     "skills": [
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 50
+      },
+      {
+       "id": "models",
+       "share": 50
+      },
+      {
+       "id": "evals",
+       "share": 25
+      }
+     ]
     },
     {
      "slug": "mem0",
      "url": "https://jobs.ashbyhq.com/mem0",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "braintrust",
      "url": "https://jobs.ashbyhq.com/braintrust",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "langfuse",
      "url": "https://jobs.ashbyhq.com/langfuse",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "patronus",
      "url": "https://jobs.ashbyhq.com/patronus",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "1password",
      "url": "https://jobs.ashbyhq.com/1password",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "zapier",
      "url": "https://jobs.ashbyhq.com/zapier",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "attio",
      "url": "https://jobs.ashbyhq.com/attio",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "hightouch",
      "url": "https://jobs.ashbyhq.com/hightouch",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "hex",
      "url": "https://jobs.ashbyhq.com/hex",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 4,
+     "company": "hex",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 50
+      },
+      {
+       "id": "rd-researcher",
+       "share": 25
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 25
+      }
+     ],
+     "skills": [
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 75
+      },
+      {
+       "id": "models",
+       "share": 75
+      },
+      {
+       "id": "ai-dev",
+       "share": 50
+      }
+     ]
     },
     {
      "slug": "vanta",
      "url": "https://jobs.ashbyhq.com/vanta",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 8,
+     "company": "vanta",
+     "roles": [
+      {
+       "id": "ai-native-developer",
+       "share": 75
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 13
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 13
+      }
+     ],
+     "skills": [
+      {
+       "id": "product",
+       "share": 88
+      },
+      {
+       "id": "customer",
+       "share": 88
+      },
+      {
+       "id": "agents",
+       "share": 75
+      },
+      {
+       "id": "software",
+       "share": 63
+      },
+      {
+       "id": "evals",
+       "share": 50
+      }
+     ]
     },
     {
      "slug": "drata",
      "url": "https://jobs.ashbyhq.com/drata",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 1,
+     "company": "drata",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "abridge",
      "url": "https://jobs.ashbyhq.com/abridge",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 1,
+     "company": "abridge",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "architecture",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "gamma",
      "url": "https://jobs.ashbyhq.com/gamma",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 1,
+     "company": "gamma",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "granola",
      "url": "https://jobs.ashbyhq.com/granola",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 1,
+     "company": "granola",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "synthesia",
      "url": "https://jobs.ashbyhq.com/synthesia",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 1,
+     "company": "synthesia",
+     "roles": [
+      {
+       "id": "ai-native-architect",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "architecture",
+       "share": 100
+      }
+     ]
     },
     {
      "slug": "elicit",
      "url": "https://jobs.ashbyhq.com/elicit",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 3,
+     "company": "elicit",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 33
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 33
+      },
+      {
+       "id": "rd-researcher",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 67
+      },
+      {
+       "id": "agents",
+       "share": 67
+      },
+      {
+       "id": "product",
+       "share": 67
+      },
+      {
+       "id": "architecture",
+       "share": 67
+      },
+      {
+       "id": "retrieval",
+       "share": 33
+      }
+     ]
     },
     {
      "slug": "cartesia",
      "url": "https://jobs.ashbyhq.com/cartesia",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 2,
+     "company": "cartesia",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 50
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 50
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 50
+      },
+      {
+       "id": "context",
+       "share": 50
+      },
+      {
+       "id": "evals",
+       "share": 50
+      },
+      {
+       "id": "ai-dev",
+       "share": 50
+      }
+     ]
     },
     {
      "slug": "deepgram",
      "url": "https://jobs.ashbyhq.com/deepgram",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 17,
+     "company": "deepgram",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 53
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 18
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 12
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 82
+      },
+      {
+       "id": "software",
+       "share": 71
+      },
+      {
+       "id": "evals",
+       "share": 59
+      }
+     ]
     },
     {
      "slug": "livekit",
      "url": "https://jobs.ashbyhq.com/livekit",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 6,
+     "company": "livekit",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 67
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 17
+      },
+      {
+       "id": "rd-researcher",
+       "share": 17
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 83
+      },
+      {
+       "id": "customer",
+       "share": 67
+      },
+      {
+       "id": "architecture",
+       "share": 67
+      }
+     ]
     },
     {
      "slug": "vapi",
      "url": "https://jobs.ashbyhq.com/vapi",
-     "ok": false,
+     "ok": true,
      "ai": 0
     },
     {
      "slug": "bland",
      "url": "https://jobs.ashbyhq.com/bland",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 3,
+     "company": "bland",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 67
+      },
+      {
+       "id": "ai-solutions-architect",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 67
+      },
+      {
+       "id": "models",
+       "share": 67
+      },
+      {
+       "id": "evals",
+       "share": 33
+      },
+      {
+       "id": "software",
+       "share": 33
+      }
+     ]
     },
     {
      "slug": "crusoe",
      "url": "https://jobs.ashbyhq.com/crusoe",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 11,
+     "company": "crusoe",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 45
+      },
+      {
+       "id": "rd-researcher",
+       "share": 36
+      },
+      {
+       "id": "ai-native-developer",
+       "share": 9
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 91
+      },
+      {
+       "id": "customer",
+       "share": 82
+      },
+      {
+       "id": "models",
+       "share": 73
+      },
+      {
+       "id": "context",
+       "share": 45
+      },
+      {
+       "id": "data",
+       "share": 36
+      }
+     ]
     },
     {
      "slug": "reflectionai",
      "url": "https://jobs.ashbyhq.com/reflectionai",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 2,
+     "company": "reflectionai",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "security",
+       "share": 100
+      }
+     ],
      "name": "Reflection AI",
      "kind": "lab"
     },
     {
      "slug": "ssi",
      "url": "https://jobs.ashbyhq.com/ssi",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Safe Superintelligence",
      "kind": "lab"
@@ -3279,21 +4816,95 @@
     {
      "slug": "thinkingmachines",
      "url": "https://jobs.ashbyhq.com/thinkingmachines",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 7,
+     "company": "thinkingmachines",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 57
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 29
+      },
+      {
+       "id": "rd-researcher",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 71
+      },
+      {
+       "id": "agents",
+       "share": 71
+      },
+      {
+       "id": "evals",
+       "share": 71
+      },
+      {
+       "id": "product",
+       "share": 29
+      }
+     ],
      "name": "Thinking Machines Lab",
      "kind": "lab"
     },
     {
      "slug": "physicalintelligence",
      "url": "https://jobs.ashbyhq.com/physicalintelligence",
-     "ok": false,
-     "ai": 0
+     "ok": true,
+     "ai": 7,
+     "company": "physicalintelligence",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 57
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 14
+      },
+      {
+       "id": "rd-researcher",
+       "share": 14
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 71
+      },
+      {
+       "id": "evals",
+       "share": 57
+      },
+      {
+       "id": "models",
+       "share": 43
+      },
+      {
+       "id": "architecture",
+       "share": 43
+      },
+      {
+       "id": "agents",
+       "share": 43
+      }
+     ]
     },
     {
      "slug": "anam",
      "url": "https://jobs.ashbyhq.com/anam",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Anam",
      "tool": "anam"
@@ -3301,31 +4912,134 @@
     {
      "slug": "arena",
      "url": "https://jobs.ashbyhq.com/arena",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 4,
+     "company": "arena",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 50
+      },
+      {
+       "id": "rd-researcher",
+       "share": 25
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 25
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 75
+      },
+      {
+       "id": "context",
+       "share": 50
+      },
+      {
+       "id": "architecture",
+       "share": 50
+      }
+     ],
      "name": "LMArena (Arena)",
      "tool": "lmarena"
     },
     {
      "slug": "artificialanalysis",
      "url": "https://jobs.ashbyhq.com/artificialanalysis",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 5,
+     "company": "artificialanalysis",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 40
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 40
+      },
+      {
+       "id": "rd-researcher",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 60
+      },
+      {
+       "id": "models",
+       "share": 60
+      },
+      {
+       "id": "agents",
+       "share": 40
+      }
+     ],
      "name": "Artificial Analysis",
      "tool": "artificial-analysis"
     },
     {
      "slug": "black-forest-labs",
      "url": "https://jobs.ashbyhq.com/black-forest-labs",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 1,
+     "company": "black-forest-labs",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      }
+     ],
      "name": "FLUX (Black Forest Labs)",
      "tool": "flux"
     },
     {
      "slug": "bolt",
      "url": "https://jobs.ashbyhq.com/bolt",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Bolt.new",
      "tool": "bolt"
@@ -3333,15 +5047,52 @@
     {
      "slug": "cerebras",
      "url": "https://jobs.ashbyhq.com/cerebras",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 24,
+     "company": "cerebras",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 42
+      },
+      {
+       "id": "other-ai",
+       "share": 33
+      },
+      {
+       "id": "rd-researcher",
+       "share": 8
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 96
+      },
+      {
+       "id": "evals",
+       "share": 58
+      }
+     ],
      "name": "Cerebras",
      "kind": "lab"
     },
     {
      "slug": "comfy-org",
      "url": "https://jobs.ashbyhq.com/comfy-org",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "ComfyUI",
      "tool": "comfyui"
@@ -3349,15 +5100,52 @@
     {
      "slug": "composio",
      "url": "https://jobs.ashbyhq.com/composio",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 6,
+     "company": "composio",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 50
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 33
+      },
+      {
+       "id": "rd-researcher",
+       "share": 17
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 67
+      },
+      {
+       "id": "evals",
+       "share": 50
+      },
+      {
+       "id": "security",
+       "share": 50
+      },
+      {
+       "id": "product",
+       "share": 33
+      }
+     ],
      "name": "Composio",
      "tool": "composio"
     },
     {
      "slug": "credo",
      "url": "https://jobs.ashbyhq.com/credo",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Credo AI",
      "tool": "credo-ai"
@@ -3365,47 +5153,208 @@
     {
      "slug": "encord",
      "url": "https://jobs.ashbyhq.com/encord",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 4,
+     "company": "encord",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 25
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 25
+      },
+      {
+       "id": "rd-researcher",
+       "share": 25
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 75
+      },
+      {
+       "id": "architecture",
+       "share": 75
+      },
+      {
+       "id": "product",
+       "share": 75
+      },
+      {
+       "id": "customer",
+       "share": 50
+      }
+     ],
      "name": "Encord",
      "tool": "encord"
     },
     {
      "slug": "exa",
      "url": "https://jobs.ashbyhq.com/exa",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 8,
+     "company": "exa",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 50
+      },
+      {
+       "id": "rd-researcher",
+       "share": 50
+      }
+     ],
+     "skills": [
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 50
+      },
+      {
+       "id": "customer",
+       "share": 50
+      },
+      {
+       "id": "models",
+       "share": 50
+      }
+     ],
      "name": "Exa",
      "tool": "exa"
     },
     {
      "slug": "firecrawl",
      "url": "https://jobs.ashbyhq.com/firecrawl",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 4,
+     "company": "firecrawl",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 50
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 25
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 25
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 75
+      },
+      {
+       "id": "evals",
+       "share": 50
+      },
+      {
+       "id": "customer",
+       "share": 25
+      },
+      {
+       "id": "agents",
+       "share": 25
+      },
+      {
+       "id": "context",
+       "share": 25
+      }
+     ],
      "name": "Firecrawl",
      "tool": "firecrawl"
     },
     {
      "slug": "fireworks",
      "url": "https://jobs.ashbyhq.com/fireworks",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 12,
+     "company": "fireworks",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 50
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 42
+      },
+      {
+       "id": "rd-researcher",
+       "share": 8
+      }
+     ],
+     "skills": [
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 75
+      },
+      {
+       "id": "customer",
+       "share": 67
+      },
+      {
+       "id": "agents",
+       "share": 58
+      }
+     ],
      "name": "Fireworks AI",
      "kind": "lab"
     },
     {
      "slug": "hedra",
      "url": "https://jobs.ashbyhq.com/hedra",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 2,
+     "company": "hedra",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      }
+     ],
      "name": "Hedra Live Avatars",
      "tool": "hedra-live-avatars"
     },
     {
      "slug": "juicebox",
      "url": "https://jobs.ashbyhq.com/juicebox",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Juicebox",
      "kind": "recruiting"
@@ -3413,55 +5362,225 @@
     {
      "slug": "lancedb",
      "url": "https://jobs.ashbyhq.com/lancedb",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 1,
+     "company": "lancedb",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      }
+     ],
      "name": "LanceDB",
      "tool": "lancedb"
     },
     {
      "slug": "lightning",
      "url": "https://jobs.ashbyhq.com/lightning",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 1,
+     "company": "lightning",
+     "roles": [
+      {
+       "id": "ai-native-developer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "ai-dev",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 100
+      }
+     ],
      "name": "PyTorch Lightning",
      "tool": "lightning"
     },
     {
      "slug": "midjourney",
      "url": "https://jobs.ashbyhq.com/midjourney",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 2,
+     "company": "midjourney",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 50
+      },
+      {
+       "id": "security",
+       "share": 50
+      },
+      {
+       "id": "agents",
+       "share": 50
+      }
+     ],
      "name": "Midjourney",
      "tool": "midjourney"
     },
     {
      "slug": "n8n",
      "url": "https://jobs.ashbyhq.com/n8n",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 3,
+     "company": "n8n",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 67
+      },
+      {
+       "id": "agentic-ai-engineer",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "customer",
+       "share": 100
+      },
+      {
+       "id": "software",
+       "share": 67
+      },
+      {
+       "id": "retrieval",
+       "share": 33
+      },
+      {
+       "id": "product",
+       "share": 33
+      }
+     ],
      "name": "n8n",
      "tool": "n8n"
     },
     {
      "slug": "nousresearch",
      "url": "https://jobs.ashbyhq.com/nousresearch",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 2,
+     "company": "nousresearch",
+     "roles": [
+      {
+       "id": "ai-platform-engineer",
+       "share": 50
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 50
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "security",
+       "share": 50
+      }
+     ],
      "name": "Hermes Agent",
      "tool": "hermes-agent"
     },
     {
      "slug": "ollama",
      "url": "https://jobs.ashbyhq.com/ollama",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 1,
+     "company": "ollama",
+     "roles": [
+      {
+       "id": "agentic-ai-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "product",
+       "share": 100
+      }
+     ],
      "name": "Ollama",
      "tool": "ollama"
     },
     {
      "slug": "openhands",
      "url": "https://jobs.ashbyhq.com/openhands",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "OpenHands",
      "tool": "openhands"
@@ -3469,15 +5588,44 @@
     {
      "slug": "openrouter",
      "url": "https://jobs.ashbyhq.com/openrouter",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 1,
+     "company": "openrouter",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      }
+     ],
      "name": "OpenRouter",
      "tool": "openrouter"
     },
     {
      "slug": "redis",
      "url": "https://jobs.ashbyhq.com/redis",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Redis",
      "tool": "redis"
@@ -3485,47 +5633,220 @@
     {
      "slug": "reducto",
      "url": "https://jobs.ashbyhq.com/reducto",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 5,
+     "company": "reducto",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 40
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 40
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "evals",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 80
+      }
+     ],
      "name": "Reducto",
      "tool": "reducto"
     },
     {
      "slug": "reka",
      "url": "https://jobs.ashbyhq.com/reka",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 3,
+     "company": "reka",
+     "roles": [
+      {
+       "id": "other-ai",
+       "share": 33
+      },
+      {
+       "id": "applied-ai-engineer",
+       "share": 33
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "models",
+       "share": 67
+      },
+      {
+       "id": "software",
+       "share": 33
+      },
+      {
+       "id": "data",
+       "share": 33
+      },
+      {
+       "id": "context",
+       "share": 33
+      },
+      {
+       "id": "product",
+       "share": 33
+      }
+     ],
      "name": "Reka",
      "kind": "lab"
     },
     {
      "slug": "roboflow",
      "url": "https://jobs.ashbyhq.com/roboflow",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 5,
+     "company": "roboflow",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 40
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 40
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 20
+      }
+     ],
+     "skills": [
+      {
+       "id": "models",
+       "share": 60
+      },
+      {
+       "id": "customer",
+       "share": 60
+      },
+      {
+       "id": "software",
+       "share": 60
+      },
+      {
+       "id": "data",
+       "share": 40
+      },
+      {
+       "id": "context",
+       "share": 40
+      }
+     ],
      "name": "Roboflow",
      "tool": "roboflow"
     },
     {
      "slug": "runpod",
      "url": "https://jobs.ashbyhq.com/runpod",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 1,
+     "company": "runpod",
+     "roles": [
+      {
+       "id": "forward-deployed-engineer",
+       "share": 100
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "data",
+       "share": 100
+      },
+      {
+       "id": "retrieval",
+       "share": 100
+      },
+      {
+       "id": "agents",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      }
+     ],
      "name": "RunPod",
      "tool": "runpod"
     },
     {
      "slug": "tavus",
      "url": "https://jobs.ashbyhq.com/tavus",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 4,
+     "company": "tavus",
+     "roles": [
+      {
+       "id": "rd-researcher",
+       "share": 75
+      },
+      {
+       "id": "forward-deployed-engineer",
+       "share": 25
+      }
+     ],
+     "skills": [
+      {
+       "id": "models",
+       "share": 75
+      },
+      {
+       "id": "context",
+       "share": 75
+      },
+      {
+       "id": "software",
+       "share": 50
+      },
+      {
+       "id": "product",
+       "share": 50
+      },
+      {
+       "id": "customer",
+       "share": 25
+      }
+     ],
      "name": "Tavus CVI",
      "tool": "tavus-cvi"
     },
     {
      "slug": "trychroma",
      "url": "https://jobs.ashbyhq.com/trychroma",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Chroma",
      "tool": "chroma"
@@ -3533,7 +5854,7 @@
     {
      "slug": "turbopuffer",
      "url": "https://jobs.ashbyhq.com/turbopuffer",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Turbopuffer",
      "tool": "turbopuffer"
@@ -3541,23 +5862,60 @@
     {
      "slug": "ultralytics",
      "url": "https://jobs.ashbyhq.com/ultralytics",
-     "ok": false,
-     "ai": 0,
+     "ok": true,
+     "ai": 3,
+     "company": "ultralytics",
+     "roles": [
+      {
+       "id": "applied-ai-engineer",
+       "share": 33
+      },
+      {
+       "id": "ai-platform-engineer",
+       "share": 33
+      },
+      {
+       "id": "other-ai",
+       "share": 33
+      }
+     ],
+     "skills": [
+      {
+       "id": "software",
+       "share": 100
+      },
+      {
+       "id": "models",
+       "share": 100
+      },
+      {
+       "id": "context",
+       "share": 67
+      },
+      {
+       "id": "evals",
+       "share": 67
+      },
+      {
+       "id": "retrieval",
+       "share": 33
+      }
+     ],
      "name": "Ultralytics YOLO",
      "tool": "ultralytics"
     },
     {
      "slug": "weaviate",
      "url": "https://jobs.ashbyhq.com/weaviate",
-     "ok": false,
+     "ok": true,
      "ai": 0,
      "name": "Weaviate",
      "tool": "weaviate"
     }
    ],
-   "ok": false,
-   "ai": 0,
-   "processed": 216
+   "ok": true,
+   "ai": 654,
+   "processed": 221
   },
   {
    "id": "workday",
@@ -3980,8 +6338,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 16,
-   "processed": 34
+   "ai": 11,
+   "processed": 29
   },
   {
    "id": "jobicy",
@@ -4013,7 +6371,7 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 82,
+   "ai": 85,
    "processed": 352
   },
   {

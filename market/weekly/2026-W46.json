@@ -2,37 +2,37 @@
  "week": "2026-W46",
  "from": "2026-11-09",
  "to": "2026-11-15",
- "open": 2815,
- "new": 1953,
- "remoteShare": 23,
+ "open": 2908,
+ "new": 2048,
+ "remoteShare": 22,
  "roles": [
   {
    "id": "ai-platform-engineer",
-   "n": 563
+   "n": 578
   },
   {
    "id": "rd-researcher",
-   "n": 530
+   "n": 556
   },
   {
    "id": "forward-deployed-engineer",
-   "n": 488
+   "n": 499
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 321
+   "n": 332
   },
   {
    "id": "other-ai",
-   "n": 308
+   "n": 318
   },
   {
    "id": "applied-ai-engineer",
-   "n": 212
+   "n": 225
   },
   {
    "id": "ai-native-developer",
-   "n": 198
+   "n": 204
   },
   {
    "id": "ai-native-architect",
@@ -40,41 +40,41 @@
   },
   {
    "id": "ai-solutions-architect",
-   "n": 95
+   "n": 96
   }
  ],
  "newRoles": [
   {
    "id": "ai-platform-engineer",
-   "n": 472
+   "n": 487
   },
   {
    "id": "rd-researcher",
-   "n": 388
+   "n": 414
   },
   {
    "id": "other-ai",
-   "n": 257
+   "n": 268
   },
   {
    "id": "forward-deployed-engineer",
-   "n": 236
+   "n": 247
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 229
+   "n": 240
   },
   {
    "id": "ai-native-developer",
-   "n": 151
+   "n": 159
   },
   {
    "id": "applied-ai-engineer",
-   "n": 122
+   "n": 134
   },
   {
    "id": "ai-solutions-architect",
-   "n": 66
+   "n": 67
   },
   {
    "id": "ai-native-architect",
@@ -84,23 +84,23 @@
  "seniority": [
   {
    "id": "Mid",
-   "n": 1209
+   "n": 1247
   },
   {
    "id": "Senior",
-   "n": 692
+   "n": 719
   },
   {
    "id": "Staff",
-   "n": 427
+   "n": 439
   },
   {
    "id": "Lead",
-   "n": 205
+   "n": 211
   },
   {
    "id": "Intern",
-   "n": 126
+   "n": 130
   },
   {
    "id": "Principal",
@@ -108,124 +108,124 @@
   },
   {
    "id": "Junior",
-   "n": 44
+   "n": 49
   },
   {
    "id": "Head",
-   "n": 24
+   "n": 25
   }
  ],
  "skills": [
   {
    "id": "software",
-   "n": 2145,
+   "n": 2213,
    "share": 76
   },
   {
    "id": "agents",
-   "n": 1741,
+   "n": 1795,
    "share": 62
   },
   {
    "id": "customer",
-   "n": 1440,
+   "n": 1484,
    "share": 51
   },
   {
    "id": "models",
-   "n": 1330,
+   "n": 1369,
    "share": 47
   },
   {
    "id": "evals",
-   "n": 1290,
+   "n": 1333,
    "share": 46
   },
   {
    "id": "product",
-   "n": 1010,
+   "n": 1039,
    "share": 36
   },
   {
    "id": "context",
-   "n": 785,
+   "n": 801,
    "share": 28
   },
   {
-   "id": "architecture",
-   "n": 722,
-   "share": 26
+   "id": "data",
+   "n": 736,
+   "share": 25
   },
   {
-   "id": "data",
-   "n": 709,
+   "id": "architecture",
+   "n": 733,
    "share": 25
   },
   {
    "id": "retrieval",
-   "n": 700,
+   "n": 715,
    "share": 25
   },
   {
    "id": "security",
-   "n": 555,
+   "n": 573,
    "share": 20
   },
   {
    "id": "ai-dev",
-   "n": 491,
-   "share": 17
+   "n": 509,
+   "share": 18
   }
  ],
  "tasks": [
   {
    "id": "ship",
-   "n": 585,
-   "share": 23
+   "n": 595,
+   "share": 22
   },
   {
    "id": "prototype",
-   "n": 516,
+   "n": 529,
    "share": 20
   },
   {
    "id": "agents",
-   "n": 497,
+   "n": 507,
    "share": 19
   },
   {
    "id": "lead",
-   "n": 484,
-   "share": 19
-  },
-  {
-   "id": "customers",
-   "n": 428,
-   "share": 16
+   "n": 496,
+   "share": 18
   },
   {
    "id": "train",
-   "n": 424,
+   "n": 438,
    "share": 16
   },
   {
    "id": "integrate",
-   "n": 423,
+   "n": 438,
+   "share": 16
+  },
+  {
+   "id": "customers",
+   "n": 437,
    "share": 16
   },
   {
    "id": "data",
-   "n": 354,
+   "n": 368,
    "share": 14
   },
   {
    "id": "evaluate",
-   "n": 349,
+   "n": 357,
    "share": 13
   },
   {
    "id": "scale",
-   "n": 321,
+   "n": 325,
    "share": 12
   },
   {
@@ -235,86 +235,86 @@
   },
   {
    "id": "retrieval",
-   "n": 93,
-   "share": 4
+   "n": 94,
+   "share": 3
   }
  ],
  "tools": [
   {
    "id": "Python",
-   "n": 1777
+   "n": 1832
   },
   {
    "id": "TypeScript",
-   "n": 526
+   "n": 542
   },
   {
    "id": "PyTorch",
-   "n": 471
+   "n": 486
   },
   {
    "id": "Google Cloud",
-   "n": 361
-  },
-  {
-   "id": "RAG",
-   "n": 335
+   "n": 372
   },
   {
    "id": "SQL",
-   "n": 330
+   "n": 347
+  },
+  {
+   "id": "RAG",
+   "n": 345
   },
   {
    "id": "MCP",
-   "n": 238
+   "n": 247
   },
   {
    "id": "Cursor",
-   "n": 210
+   "n": 218
   },
   {
    "id": "LangChain",
-   "n": 176
-  },
-  {
-   "id": "JAX",
-   "n": 143
+   "n": 182
   },
   {
    "id": "Claude Code",
-   "n": 141
+   "n": 146
+  },
+  {
+   "id": "JAX",
+   "n": 145
   },
   {
    "id": "Unity Catalog",
-   "n": 112
+   "n": 115
   },
   {
    "id": "BigQuery",
-   "n": 95
+   "n": 97
+  },
+  {
+   "id": "LangGraph",
+   "n": 83
   },
   {
    "id": "LlamaIndex",
    "n": 83
   },
   {
-   "id": "LangGraph",
-   "n": 81
-  },
-  {
    "id": "Scale AI",
-   "n": 77
+   "n": 78
   },
   {
    "id": "Hugging Face",
-   "n": 70
+   "n": 75
   },
   {
    "id": "Ray",
-   "n": 69
+   "n": 71
   },
   {
    "id": "TensorRT-LLM",
-   "n": 59
+   "n": 61
   },
   {
    "id": "Vertex AI",
@@ -326,19 +326,19 @@
   },
   {
    "id": "ElevenLabs",
-   "n": 38
+   "n": 39
   },
   {
    "id": "GitHub Copilot",
    "n": 37
   },
   {
-   "id": "Temporal",
+   "id": "Redis",
    "n": 35
   },
   {
-   "id": "Redis",
-   "n": 33
+   "id": "Temporal",
+   "n": 35
   }
  ]
 }
