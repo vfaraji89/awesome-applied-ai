@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-14T03:35:46.669Z",
+ "generatedAt": "2026-11-14T03:44:19.645Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -3499,14 +3499,6 @@
      "tool": "runpod"
     },
     {
-     "slug": "tavus",
-     "url": "https://jobs.ashbyhq.com/tavus",
-     "ok": false,
-     "ai": 0,
-     "name": "Tavus CVI",
-     "tool": "tavus-cvi"
-    },
-    {
      "slug": "trychroma",
      "url": "https://jobs.ashbyhq.com/trychroma",
      "ok": false,
@@ -3997,7 +3989,7 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 81,
+   "ai": 79,
    "processed": 350
   },
   {
