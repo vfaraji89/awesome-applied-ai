@@ -251,7 +251,7 @@ export function ClaudeApiCourse() {
       <style>{`
         .rt { display: grid; grid-template-columns: 1fr 1.4fr 1fr; gap: 14px; align-items: center; }
         .rt-node { display: flex; flex-direction: column; gap: 6px; padding: 18px; border-radius: 14px; background: var(--card); border: 1px solid var(--line); transition: all .4s var(--ease); }
-        .rt-node.api.busy { border-color: var(--rust); box-shadow: 0 0 0 5px var(--mark); }
+        .rt-node.api.busy { border-color: var(--rust); outline: 5px solid var(--mark); outline-offset: 0; }
         .rt-wire { position: relative; height: 90px; }
         .rt-wire::before { content: ""; position: absolute; left: 0; right: 0; top: 43px; height: 4px; border-radius: 4px; background: var(--rod); }
         .rt-bead { position: absolute; top: 34px; left: 0; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); transition: left 1.1s var(--ease); }
@@ -276,7 +276,7 @@ export function ClaudeApiCourse() {
         .hp { display: flex; flex-direction: column; gap: 8px; }
         .hp-row { display: grid; grid-template-columns: 28px 1fr; gap: 12px; align-items: start; padding: 10px 12px; border-radius: 12px; background: var(--card); border: 1px solid var(--line); opacity: .3; transition: all .4s var(--ease); }
         .hp-row div { display: flex; flex-direction: column; gap: 2px; font-size: .92rem; }
-        .hp-row.on { opacity: 1; } .hp-row.cur { border-color: var(--rust); box-shadow: 0 0 0 4px var(--mark); }
+        .hp-row.on { opacity: 1; } .hp-row.cur { border-color: var(--rust); outline: 4px solid var(--mark); outline-offset: 0; }
         .hp-tick { width: 26px; height: 26px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 800; font-size: .8rem; background: var(--line); transition: background .4s; }
         .hp-row.on .hp-tick { background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
         .hp-left { margin-top: 6px; padding: 10px 12px; border-radius: 12px; border: 1.5px dashed var(--rust); font-size: .92rem; opacity: .3; transition: opacity .4s; } .hp-left.on { opacity: 1; }

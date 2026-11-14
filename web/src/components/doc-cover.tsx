@@ -28,19 +28,19 @@ export function DocCover({ course, index }: { course: Doc; index: number }) {
       <style>{`
         .cv { position: relative; aspect-ratio: 16 / 9; border-radius: 12px; overflow: hidden; background: var(--paper); display: flex; flex-direction: column; justify-content: space-between; padding: 8% 9%; }
         .cv::before { content: ""; position: absolute; inset: 0; background-image: radial-gradient(rgba(28,28,30,.08) 1.2px, transparent 1.4px); background-size: 18px 18px; }
-        .cv-post { position: absolute; top: 7%; bottom: 7%; width: 12px; border-radius: 999px; background: var(--dowel); box-shadow: 0 12px 18px -12px rgba(60,40,20,.5); z-index: 2; }
+        .cv-post { position: absolute; top: 7%; bottom: 7%; width: 12px; border-radius: 999px; background: var(--dowel);  z-index: 2; }
         .cv-post.l { left: 5%; } .cv-post.r { right: 5%; }
         .cv-rod { position: relative; z-index: 1; display: flex; align-items: center; gap: 4px; height: 22px; }
         .cv-rod::before { content: ""; position: absolute; left: -4%; right: -4%; top: 9px; height: 4px; border-radius: 4px; background: var(--rod); }
         .cv-gap { flex: 1; }
         .cv-b { position: relative; width: 22px; height: 22px; border-radius: 50%; flex: none; transition: transform .6s var(--spring); transition-delay: calc(var(--k, 0) * 40ms); }
         .cv-b.red { background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
-        .cv-b.white { background: radial-gradient(circle at 34% 30%, #fff, #f1ede8 45%, #d6cfc7); box-shadow: inset 0 0 0 1px rgba(0,0,0,.06); }
+        .cv-b.white { background: radial-gradient(circle at 34% 30%, #fff, #f1ede8 45%, #d6cfc7); outline: 1px solid rgba(0,0,0,.06); outline-offset: -1px; }
         .cv-b.ink { background: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); }
         a:hover .cv-rod.top .cv-b.red { transform: translateX(14px); }
         a:hover .cv-rod.bottom .cv-b.white:last-child { transform: translateX(-14px); }
         .cv-mid { position: relative; z-index: 1; display: flex; align-items: center; gap: 16px; }
-        .cv-logo { width: 64px; height: 64px; flex: none; border-radius: 50%; display: grid; place-items: center; color: #1c1c1e; background: radial-gradient(circle at 34% 28%, #fff 0%, #f6f3f0 40%, #dcd6d0 100%); box-shadow: inset -4px -5px 9px -4px rgba(0,0,0,.16), 0 10px 16px -10px rgba(40,20,10,.5); transition: transform .6s var(--spring); }
+        .cv-logo { width: 64px; height: 64px; flex: none; border-radius: 50%; display: grid; place-items: center; color: #1c1c1e; background: radial-gradient(circle at 34% 28%, #fff 0%, #f6f3f0 40%, #dcd6d0 100%);  transition: transform .6s var(--spring); }
         .cv-logo svg { width: 30px; height: 30px; }
         a:hover .cv-logo { transform: rotate(-12deg) scale(1.06); }
         .cv-k { display: block; font-family: var(--font-mono), monospace; font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; color: var(--rust-deep); }

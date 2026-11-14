@@ -13,7 +13,7 @@
   --card: #ffffff;
   --line: rgba(28, 28, 30, 0.12);
   --line-strong: rgba(28, 28, 30, 0.22);
-  --dowel: linear-gradient(90deg, #b48a5c 0%, #d8bb94 24%, #f1e3cc 48%, #dcc29e 70%, #ad8455 100%);
+  --dowel: var(--rod); /* abacus uprights: flat, no shading */
   --rod: linear-gradient(180deg, #e9d8bd 0%, #f4eadb 35%, #d2b48d 75%, #b8946a 100%);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --spring: cubic-bezier(0.22, 1, 0.36, 1);
@@ -75,15 +75,13 @@ p { margin: 0; }
   .brand small { display: none; }
 }
 
-/* ---- the abacus frame: wooden dowels at the sides, a rod that fills on hover ---- */
+/* ---- the card: one hairline, no edges, no shadow; the border warms to rust on hover ---- */
 .frame {
   position: relative; display: block; background: var(--card); border-radius: var(--radius);
-  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-  padding: 22px 26px; text-decoration: none; color: inherit;
-  background-image: var(--dowel), var(--dowel); background-size: 6px 100%, 6px 100%; background-position: left center, right center; background-repeat: no-repeat;
-  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease);
+  border: 1px solid var(--line); padding: 22px 26px; text-decoration: none; color: inherit;
+  transition: border-color 0.25s var(--ease);
 }
-a.frame:hover { transform: translateY(-3px); box-shadow: 0 22px 36px -28px rgba(28, 28, 30, 0.55); }
+a.frame:hover { border-color: color-mix(in srgb, var(--rust) 50%, var(--line)); }
 .frame .rod { position: absolute; left: 6px; right: 6px; bottom: 14px; height: 3px; border-radius: 3px; background: var(--rod); opacity: 0.6; overflow: hidden; }
 .frame .rod::after { content: ""; position: absolute; inset: 0; background: var(--rust); transform: scaleX(0); transform-origin: left; transition: transform 0.6s var(--ease); }
 a.frame:hover .rod::after { transform: scaleX(1); }
@@ -99,13 +97,13 @@ a.chip:hover { border-color: var(--rust); color: var(--rust-deep); }
 .chips { display: flex; flex-wrap: wrap; gap: 8px; }
 .bead { width: 14px; height: 14px; border-radius: 50%; flex: none; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); }
 .bead.ink { background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%); }
-.bead.white { background: radial-gradient(circle at 34% 30%, #fff 0%, #f1ede8 45%, #d6cfc7 100%); box-shadow: inset 0 0 0 1px rgba(0,0,0,0.08); }
+.bead.white { background: radial-gradient(circle at 34% 30%, #fff 0%, #f1ede8 45%, #d6cfc7 100%); outline: 1px solid rgba(0,0,0,0.08); outline-offset: -1px; }
 .count { font-family: var(--font-mono), monospace; font-size: 0.8rem; color: var(--muted); }
 .btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 999px; background: var(--ink); color: var(--bg); text-decoration: none; font-weight: 600; transition: transform 0.25s var(--spring); }
 .btn:hover { transform: translateY(-2px); }
 .btn.ghost { background: transparent; color: var(--ink); border: 1px solid var(--line-strong); }
 .field { width: 100%; padding: 13px 18px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--card); color: var(--ink); font: inherit; }
-.field:focus { outline: none; border-color: var(--rust); box-shadow: 0 0 0 4px var(--mark); }
+.field:focus { outline: none; border-color: var(--rust); outline: 4px solid var(--mark); outline-offset: 0; }
 .soon { font-family: var(--font-mono), monospace; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--rust-deep); border: 1px dashed var(--rust); border-radius: 999px; padding: 3px 9px; }
 
 /* ---- motion: everything here is CSS, and all of it rests when reduced motion is asked for ---- */
@@ -125,9 +123,9 @@ a.chip:hover { border-color: var(--rust); color: var(--rust-deep); }
 @media (prefers-reduced-motion: reduce) { .mk .mk-call, .mk .mk-tool { animation: none !important; } }
 
 /* ---- the fit chip: same icon and shape as on vfaraji89.github.io ---- */
-.hdr-fit { display: inline-flex; align-items: center; gap: 7px; flex: none; height: 34px; padding: 0 13px 0 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--rust) 45%, transparent); background: var(--paper); color: var(--ink); text-decoration: none; font-size: 0.86rem; font-weight: 650; white-space: nowrap; transition: border-color 0.2s, box-shadow 0.2s; }
+.hdr-fit { display: inline-flex; align-items: center; gap: 7px; flex: none; height: 34px; padding: 0 13px 0 9px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--rust) 45%, transparent); background: var(--paper); color: var(--ink); text-decoration: none; font-size: 0.86rem; font-weight: 650; white-space: nowrap; transition: border-color 0.2s; }
 .hdr-fit em { font-style: normal; color: var(--rust-deep); }
-.hdr-fit:hover, .hdr-fit[aria-current="page"] { border-color: var(--rust); box-shadow: 0 4px 12px -6px color-mix(in srgb, var(--rust) 60%, transparent); }
+.hdr-fit:hover, .hdr-fit[aria-current="page"] { border-color: var(--rust);  }
 .fit-ic { flex: none; }
 .fit-ic .fb { transition: transform 0.45s var(--spring); transform-box: view-box; }
 .hdr-fit:hover .fb-1, .home-fit:hover .fb-1 { transform: translateX(4.5px); }
@@ -157,11 +155,11 @@ a.chip:hover { border-color: var(--rust); color: var(--rust-deep); }
 .lgp-btn[aria-expanded="true"] .lgp-glyph { color: var(--bg, #fff); }
 .lgp-glyph { font: 600 15px/1 var(--font-sans), "Hiragino Sans", "Noto Sans JP", "Yu Gothic", sans-serif; color: var(--ink); animation: lgp-swap .5s cubic-bezier(0.22, 1, 0.36, 1); }
 @keyframes lgp-swap { 0% { transform: translateY(5px); opacity: 0; } 100% { transform: none; opacity: 1; } }
-.lgp-pop { position: absolute; right: 0; top: calc(100% + 10px); z-index: 60; width: 230px; display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 16px; background: var(--card); border: 1px solid var(--line); box-shadow: 0 24px 48px -24px rgba(28,28,30,.45); animation: lgp-drop .45s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.lgp-pop { position: absolute; right: 0; top: calc(100% + 10px); z-index: 60; width: 230px; display: flex; flex-direction: column; gap: 6px; padding: 12px; border-radius: 16px; background: var(--card); border: 1px solid var(--line);  animation: lgp-drop .45s cubic-bezier(0.22, 1, 0.36, 1) both; }
 @keyframes lgp-drop { from { opacity: 0; transform: translateY(-6px) scale(.97); } to { opacity: 1; transform: none; } }
 .lgp-k { font-family: var(--font-mono), monospace; font-size: .64rem; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 2px 4px; }
 .lgp-bead { display: flex; align-items: center; gap: 10px; padding: 5px 12px 5px 5px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: .88rem; font-weight: 600; text-align: left; cursor: pointer; transition: border-color .2s, background .2s; }
-.lgp-bead i { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; font-style: normal; font: 600 .95rem/1 var(--font-sans), "Hiragino Sans", "Noto Sans JP", sans-serif; background: var(--paper); box-shadow: inset -2px -2px 0 rgba(0,0,0,.08); transition: transform .5s cubic-bezier(0.22, 1, 0.36, 1); }
+.lgp-bead i { display: grid; place-items: center; width: 28px; height: 28px; border-radius: 50%; font-style: normal; font: 600 .95rem/1 var(--font-sans), "Hiragino Sans", "Noto Sans JP", sans-serif; background: var(--paper);  transition: transform .5s cubic-bezier(0.22, 1, 0.36, 1); }
 .lgp-bead:hover { border-color: var(--rust); } .lgp-bead:hover i { transform: rotate(-12deg) scale(1.08); }
 .lgp-bead[aria-pressed="true"] { background: var(--ink); color: var(--bg, #fff); border-color: var(--ink); }
 .lgp-bead[aria-pressed="true"] i { background: var(--rust); color: #fff; }
@@ -179,7 +177,7 @@ html[lang="ja"] p { word-break: auto-phrase; }
 .bead-rod { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; pointer-events: none; opacity: 0; transition: opacity .6s cubic-bezier(0.22, 1, 0.36, 1); }
 .bead-rod.on { opacity: 1; }
 .bead-rod::before { content: ""; position: absolute; left: 0; top: 0; height: 2px; width: calc(var(--p, 0) * 100%); background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--rust) 55%, transparent)); }
-.bead-rod i { position: absolute; top: -3px; left: calc(4px + var(--p, 0) * (100% - 8px)); width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); box-shadow: 0 2px 4px -1px rgba(158, 26, 12, .5); }
+.bead-rod i { position: absolute; top: -3px; left: calc(4px + var(--p, 0) * (100% - 8px)); width: 8px; height: 8px; margin-left: -4px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c);  }
 @media (prefers-reduced-motion: reduce) { .bead-rod { display: none; } }
 
 /* ---------- The design pattern (from the market page), shared by every page ----------
@@ -189,7 +187,7 @@ html[lang="ja"] p { word-break: auto-phrase; }
    their row outwards; components/broadcast.tsx adds the classes, so pages need nothing. */
 .rodbar { position: relative; display: block; height: 6px; border-radius: 3px; background: var(--rod); }
 .rodbar > i { position: relative; display: block; height: 100%; border-radius: 3px; background: var(--rust); transform-origin: left; animation: rod-grow .9s var(--ease) both; }
-.rodbar > i::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); box-shadow: 0 1px 2px rgba(0,0,0,.25); }
+.rodbar > i::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%);  }
 .rodbar.ink > i { background: var(--ink); }
 .rodbar.ink > i::after { background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%); }
 @keyframes rod-grow { from { transform: scaleX(0); } to { transform: none; } }

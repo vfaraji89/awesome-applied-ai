@@ -57,9 +57,9 @@ export function RequestFlow() {
         .rf-stack { position: relative; display: grid; grid-template-rows: repeat(6, 1fr); gap: 8px; padding-left: 34px; }
         .rf-stack::before { content: ""; position: absolute; left: 13px; top: 6px; bottom: 6px; width: 4px; border-radius: 4px; background: var(--rod); }
         .rf-layer { display: flex; align-items: center; gap: 14px; padding: 14px 18px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); color: var(--sec); font: inherit; text-align: left; cursor: pointer; transition: all .45s var(--ease); }
-        .rf-layer.on { color: var(--ink); border-color: var(--rust); background: var(--paper); transform: translateX(6px); box-shadow: 0 16px 26px -22px rgba(158,26,12,.7); }
+        .rf-layer.on { color: var(--ink); border-color: var(--rust); background: var(--paper); transform: translateX(6px);  }
         .rf-n { font-size: .75rem; color: var(--muted); } .rf-layer.on .rf-n { color: var(--rust-deep); }
-        .rf-bead { position: absolute; left: 4px; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); box-shadow: 0 5px 10px -4px rgba(158,26,12,.6); transition: top .7s var(--spring); }
+        .rf-bead { position: absolute; left: 4px; width: 22px; height: 22px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c);  transition: top .7s var(--spring); }
         .rf-say { display: flex; flex-direction: column; gap: 14px; }
         .rf-text { font-size: clamp(1.3rem, 2.4vw, 1.8rem); font-weight: 700; letter-spacing: -.02em; line-height: 1.25; animation: rise .6s var(--ease) both; }
         .rf-ctl { display: flex; gap: 8px; } .rf-ctl .chip { cursor: pointer; font: inherit; font-size: .8rem; }

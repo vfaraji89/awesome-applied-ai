@@ -276,7 +276,7 @@ export default function Market() {
         .mk-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } .mk-label a { text-decoration: none; } .mk-label a:hover { color: var(--rust-deep); }
         .mk-track { height: 6px; border-radius: 3px; background: var(--rod); }
         .mk-fill { position: relative; display: block; height: 100%; border-radius: 3px; background: var(--ink); transform-origin: left; animation: mk-grow .9s var(--ease) both; }
-        .mk-fill::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%); box-shadow: 0 1px 2px rgba(0,0,0,.25); }
+        .mk-fill::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%);  }
         .mk-fill.mine { background: var(--rust); }
         .mk-fill.mine::after { background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); }
         @keyframes mk-grow { from { transform: scaleX(0); } to { transform: none; } }

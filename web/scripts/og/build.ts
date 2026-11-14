@@ -42,6 +42,8 @@ const cards: Card[] = [
     [[ads, "job ads"], [String(skills.length), "skills scored"], ["Free", "in your browser"]], ["rrrrw", "rrkww", "rwwww"]),
   R("market/sources", "01 · The market · sources", "Every site the tracker <mark>reads</mark>", "Company career pages and public job boards, the hiring platform behind each, and what the ads ask for.",
     [[String(boards), "sites read"], [ads, "AI job ads"], ["3", "left out"]]),
+  R("jargon/coined", "06 · Docs · coined & decoded", "Coined <mark>& decoded</mark>", "The new words of applied AI: who coined them, when, and what they plainly mean. Most are old ideas with a better name.",
+    [["13", "new words"], ["2010–2026", "coined"], ["Sourced", "every one"]], ["kwrwk", "wrkrw", "kwrwk"]),
   R("events", "01 · The market · events calendar", "The year in <mark>applied AI events</mark>", "The major AI engineering, AI software and AI platform events coming up: official dates only, add any to your calendar.",
     [["15", "events dated"], ["12", "months ahead"], ["Official", "dates only"]], ["rwkwr", "wrwkw", "kwrwr"]),
   R("market/conferences", "01 · The market · conferences", "On stage, and <mark>in the job</mark>", "What applied AI conferences talk about, set against what AI job ads ask for: AI Engineer, PyTorch Conference and Microsoft Build.",

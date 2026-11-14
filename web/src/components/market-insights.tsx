@@ -198,10 +198,10 @@ export const insightCss = `
   /* every bar is an abacus rod: a wooden track, a rust fill, a bead where the value ends */
   .mi-rodtrack, .mi-pair-t, .mi-prof-bar, .mi-cat-t, .mi-aff-bars > span { position: relative; height: 6px; border-radius: 3px; background: var(--rod); overflow: visible; }
   .mi-fill, .mi-pair-t > span, .mi-prof-bar span, .mi-cat-t span, .mi-aff-bars > span > span { position: relative; display: block; height: 100%; border-radius: 3px; background: var(--rust); transform-origin: left; animation: mk-grow .9s var(--ease) both; }
-  .mi-fill::after, .mi-pair-t > span::after, .mi-prof-bar span::after, .mi-cat-t span::after, .mi-aff-bars > span > span::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); box-shadow: 0 1px 2px rgba(0,0,0,.25); }
+  .mi-fill::after, .mi-pair-t > span::after, .mi-prof-bar span::after, .mi-cat-t span::after, .mi-aff-bars > span > span::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%);  }
   .mi-aff-bars .u > span { background: var(--ink); }
   .mi-aff-bars .u > span::after { background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%); }
-  .mi-b { position: absolute; width: 14px; height: 14px; top: 50%; margin: -7px 0 0 -7px; box-shadow: 0 1px 2px rgba(0,0,0,.25); transition: transform .15s; }
+  .mi-b { position: absolute; width: 14px; height: 14px; top: 50%; margin: -7px 0 0 -7px;  transition: transform .15s; }
   .mi-legend .mi-b { position: static; margin: 0; display: inline-block; }
   .mi-aha { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 14px; margin-top: 26px; }
   .mi-card { display: flex; flex-direction: column; gap: 4px; padding: 22px 26px 30px; animation: mi-open .9s cubic-bezier(.77,0,.18,1) both; animation-delay: calc(var(--i) * 110ms + .2s); }
@@ -209,7 +209,7 @@ export const insightCss = `
   /* opens from the centre to the edges, like a score graphic */
   @keyframes mi-open { from { clip-path: inset(0 50% 0 50% round var(--radius)); } to { clip-path: inset(0 0 0 0 round var(--radius)); } }
   @keyframes mi-in { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: none; } }
-  .mi-card:hover, .mi-prof:hover, .mi-cat:hover { transform: translateY(-3px); box-shadow: 0 22px 36px -28px rgba(28, 28, 30, .55); }
+  .mi-card:hover, .mi-prof:hover, .mi-cat:hover { transform: translateY(-3px);  }
   :is(.mi-card, .mi-prof):hover .rod::after { transform: scaleX(1); }
   .mi-big { font-size: 2.6rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; color: var(--rust); }
   .mi-lead { color: var(--sec); font-size: .92rem; margin-top: 6px; }
@@ -225,9 +225,9 @@ export const insightCss = `
   .mi-heat tbody th { text-align: left; font-weight: 500; font-size: .88rem; white-space: nowrap; padding-right: 12px; }
   .mi-heat tbody th a { text-decoration: none; } .mi-heat tbody th a:hover { color: var(--rust-deep); }
   .mi-heat tbody th i { font-style: normal; font-size: .7rem; color: var(--muted); margin-left: 8px; }
-  .mi-heat td { position: relative; height: 34px; min-width: 40px; border-radius: 9px; text-align: center; font-size: .74rem; font-weight: 600; background: color-mix(in oklab, var(--rust) calc(var(--v) * 1%), var(--paper)); color: var(--ink); cursor: default; transition: transform .15s var(--ease), box-shadow .15s; }
+  .mi-heat td { position: relative; height: 34px; min-width: 40px; border-radius: 9px; text-align: center; font-size: .74rem; font-weight: 600; background: color-mix(in oklab, var(--rust) calc(var(--v) * 1%), var(--paper)); color: var(--ink); cursor: default; transition: transform .15s var(--ease); }
   .mi-heat td.hi { color: #fff; }
-  .mi-heat td:is(:hover, :focus-visible) { transform: scale(1.12); box-shadow: 0 0 0 2px var(--bg), 0 6px 18px rgba(0,0,0,.18); z-index: 4; outline: none; }
+  .mi-heat td:is(:hover, :focus-visible) { transform: scale(1.12); outline: 2px solid var(--bg); outline-offset: 0; z-index: 4; outline: none; }
   .mi-scale { display: flex; align-items: center; gap: 8px; margin-top: 12px; flex-wrap: wrap; }
   .mi-scale i { width: 140px; height: 6px; border-radius: 3px; background: linear-gradient(90deg, var(--paper), var(--rust)); }
   .mi-scale-note { margin-left: 8px; }
@@ -358,7 +358,7 @@ export const insightCss2 = `
   .mi-weeks::after { content: ""; position: absolute; left: 0; right: 0; bottom: 20px; height: 4px; border-radius: 2px; background: var(--rod); }
   .mi-wk { position: relative; flex: 1; height: 100%; display: flex; align-items: end; outline: none; }
   .mi-wk-bar { position: relative; display: block; width: 100%; max-width: 34px; margin: 0 auto; border-radius: 6px 6px 2px 2px; background: linear-gradient(180deg, var(--rust), var(--rust-deep)); transform-origin: bottom; animation: mk-up .8s var(--ease) both; animation-delay: calc(var(--i) * 45ms); }
-  .mi-wk-bar::before { content: ""; position: absolute; left: 50%; top: -7px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); box-shadow: 0 1px 2px rgba(0,0,0,.25); }
+  .mi-wk-bar::before { content: ""; position: absolute; left: 50%; top: -7px; width: 14px; height: 14px; margin-left: -7px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%);  }
   .mi-wk.partial .mi-wk-bar { background: repeating-linear-gradient(135deg, var(--rust) 0 4px, color-mix(in oklab, var(--rust) 45%, var(--bg)) 4px 8px); }
   .mi-wk:is(:hover, :focus-visible) .mi-wk-bar { filter: brightness(1.12); }
   .mi-wk:is(:hover, :focus-visible) > .mi-tip { opacity: 1; transform: translate(-50%, 0); }

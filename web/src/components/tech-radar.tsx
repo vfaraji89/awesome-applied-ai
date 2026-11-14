@@ -154,8 +154,8 @@ export function TechRadar() {
         .tr-index button:hover { color: var(--rust-deep); }
         .tr-index .mono { display: inline-block; min-width: 1.6em; color: var(--muted); }
         .tr-cards { margin-top: 40px; }
-        .tr-card { padding: 20px 24px 36px; scroll-margin-top: 90px; transition: box-shadow 0.3s; }
-        .tr-card.open { box-shadow: 0 0 0 2px var(--rust); }
+        .tr-card { padding: 20px 24px 36px; scroll-margin-top: 90px; }
+        .tr-card.open { outline: 2px solid var(--rust); outline-offset: 0; }
         .tr-card-top { display: flex; align-items: center; gap: 10px; }
         .tr-num { display: grid; place-items: center; width: 26px; height: 26px; border-radius: 50%; font-family: var(--font-mono), monospace; font-size: 0.75rem; font-weight: 600; }
         .tr-card h3 { font-size: 1.3rem; font-weight: 800; margin-top: 10px; }

@@ -21,7 +21,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const id = (await params).id;
   const c = companies.find((x) => x.id === id);
   if (!c) return {};
-  return { ...share("companies"), title: c.name, description: `${c.name}${c.lab ? ", an AI lab" : ""}: ${c.hiring ? `${c.hiring.open} AI roles open on its career page, ` : ""}${c.products.length ? `${c.products.length} products on the tool map, ` : ""}${c.stage ? `${c.stage.talks} talks at AI Engineer` : ""}.` };
+  return { ...share("companies"), title: c.name, description: `${c.name}${c.lab ? ", an AI lab" : ""}: ${c.hiring ? `${c.hiring.open} active AI roles on its career page, ` : ""}${c.products.length ? `${c.products.length} products on the tool map, ` : ""}${c.stage ? `${c.stage.talks} talks at AI Engineer` : ""}.` };
 }
 
 export default async function CompanyPage({ params }: { params: Promise<{ id: string }> }) {
@@ -42,7 +42,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ id: st
             </div>
           </div>
           <div className="cs-stats">
-            <div className="frame"><b>{c.hiring?.open ?? "–"}</b><span className="count"><T k="cp.s_open">open AI roles</T></span></div>
+            <div className="frame"><b>{c.hiring?.open ?? "–"}</b><span className="count"><T k="cp.s_open">active AI roles</T></span></div>
             <div className="frame"><b>{c.products.length || "–"}</b><span className="count"><T k="cs.products">products on the map</T></span></div>
             <div className="frame"><b>{c.stage?.talks ?? "–"}</b><span className="count"><T k="cs.talks" vars={{ n: c.stage?.speakers ?? 0 }}>{"talks at AI Engineer, by {n} speakers"}</T></span></div>
           </div>
@@ -90,7 +90,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ id: st
 
       <section className="section">
         <div className="wrap">
-          <p className="muted" style={{ maxWidth: "78ch", fontSize: ".9rem" }}><T k="cs.src" vars={{ d: data.updated ?? "" }}>{"Open roles and what they ask for: the AI job ads on the career page above, at the tracker's last read ({d}), counted, never stored with the company. Products: the tool map. Stage: AI Engineer's public data."}</T> <Link href="/contribute/"><T k="cs.fix">Something wrong?</T></Link></p>
+          <p className="muted" style={{ maxWidth: "78ch", fontSize: ".9rem" }}><T k="cs.src" vars={{ d: data.updated ?? "" }}>{"Active roles and what they ask for: the AI job ads on the career page above, at the tracker's last read ({d}), counted, never stored with the company. Products: the tool map. Stage: AI Engineer's public data."}</T> <Link href="/contribute/"><T k="cs.fix">Something wrong?</T></Link></p>
           <p style={{ marginTop: 14 }}><Link href="/companies/" className="btn"><T k="cs.all">All companies</T> →</Link></p>
         </div>
       </section>

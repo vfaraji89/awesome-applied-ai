@@ -1,9 +1,9 @@
 /* The companies pages' data: applied AI companies seen from three sides, each with its source.
-   - Hiring: the AI roles open on their own career page at the tracker's last run, and the roles and
+   - Hiring: the active AI roles on their own career page at the tracker's last run, and the roles and
      skills those ads ask for (web/src/data/sources.json, totals only).
    - Building: their products on the tool map (tools named like the company).
    - On stage: their speakers and talks at AI Engineer (conferences/orgs.json, from ai.engineer).
-   A company is listed when at least two sides show it, when it has 10 or more AI roles open, or when it
+   A company is listed when at least two sides show it, when it has 10 or more active AI roles, or when it
    is an AI lab hiring now.
    web/src/data/companies-hidden.json lists ids to leave out.
    bun pipeline/companies.ts */

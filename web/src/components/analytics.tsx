@@ -107,7 +107,7 @@ export function Analytics() {
       <button type="button" onClick={() => choose("no")} aria-label={t("consent.no_aria", "No, do not use an analytics cookie")}>{t("consent.no", "No")}</button>
       <button type="button" className="yes" onClick={() => choose("yes")} aria-label={t("consent.yes_aria", "Sure, use an analytics cookie")}>{t("consent.yes", "Sure")}</button>
       <style>{`
-        .consent { position: fixed; left: 16px; bottom: 16px; z-index: 90; max-width: calc(100vw - 32px); display: flex; align-items: center; gap: 10px; padding: 7px 8px 7px 12px; border-radius: 999px; background: var(--paper); color: var(--ink); border: 1px solid rgba(180,138,92,.45); box-shadow: 0 12px 26px -16px rgba(60,30,10,.55); font-size: 12.5px; font-weight: 500; animation: consent-in .5s cubic-bezier(0.22, 1, 0.36, 1) both; }
+        .consent { position: fixed; left: 16px; bottom: 16px; z-index: 90; max-width: calc(100vw - 32px); display: flex; align-items: center; gap: 10px; padding: 7px 8px 7px 12px; border-radius: 999px; background: var(--paper); color: var(--ink); border: 1px solid rgba(180,138,92,.45);  font-size: 12.5px; font-weight: 500; animation: consent-in .5s cubic-bezier(0.22, 1, 0.36, 1) both; }
         .consent-bead { flex: none; width: 14px; height: 14px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
         .consent button { font: inherit; font-size: 12px; font-weight: 600; padding: 7px 12px; border-radius: 999px; cursor: pointer; background: transparent; color: var(--sec); border: 1px solid transparent; }
         .consent .more { font-size: 12px; color: var(--sec); text-decoration: underline; text-underline-offset: 2px; white-space: nowrap; }

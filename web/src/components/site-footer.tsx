@@ -158,15 +158,15 @@ export function SiteFooter({ counts }: { counts: HarnessCounts }) {
         .fh-diagram { display: grid; grid-template-columns: 120px 1fr; }
         .fh-box { position: relative; border: 2px solid var(--ink); border-radius: 22px; background: var(--bg); }
         .fh-label { position: absolute; bottom: 12px; left: 0; right: 0; text-align: center; font-size: .66rem; letter-spacing: .12em; text-transform: uppercase; color: var(--muted); }
-        .fh-model { position: absolute; left: calc(50% - 20px); top: -20px; width: 40px; height: 40px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); box-shadow: 0 8px 14px -6px rgba(158,26,12,.6); }
+        .fh-model { position: absolute; left: calc(50% - 20px); top: -20px; width: 40px; height: 40px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c);  }
         .fh-rows { list-style: none; margin: 0; padding: 10px 0; display: grid; gap: 8px; }
         .fh-row { display: grid; grid-template-columns: 56px 1fr; align-items: center; margin-left: -2px; }
         .fh-wire { position: relative; height: 2px; background: var(--line-strong); --fill: 0; }
         .fh-wire::after { content: ""; position: absolute; inset: 0; background: var(--rust); transform-origin: left; transform: scaleX(var(--fill)); opacity: 0; transition: opacity .3s; }
         .fh-row.on .fh-wire::after { opacity: 1; }
         .fh-call { position: absolute; top: -4px; left: 0; width: 10px; height: 10px; margin-left: -5px; border-radius: 50%; background: #e0301e; opacity: 0; }
-        .fh-tool { display: grid; grid-template-columns: 34px auto 1fr auto; gap: 12px; align-items: baseline; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); transition: border-color .3s, box-shadow .3s, background .3s; }
-        .fh-row.on .fh-tool { border-color: var(--rust); box-shadow: 0 0 0 4px var(--mark); }
+        .fh-tool { display: grid; grid-template-columns: 34px auto 1fr auto; gap: 12px; align-items: baseline; padding: 12px 16px; border-radius: 12px; border: 1px solid var(--line); background: var(--bg); transition: border-color .3s, background .3s; }
+        .fh-row.on .fh-tool { border-color: var(--rust); outline: 4px solid var(--mark); outline-offset: 0; }
         .fh-n { font-size: .7rem; color: var(--muted); letter-spacing: .1em; } .fh-row.on .fh-n { color: var(--rust); }
         .fh-tool b { color: var(--ink); font-size: 1rem; white-space: nowrap; }
         .fh-line { font-size: .84rem; color: var(--sec); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
@@ -179,7 +179,7 @@ export function SiteFooter({ counts }: { counts: HarnessCounts }) {
         .fh-read-go { justify-self: end; font-weight: 700; font-size: .84rem; color: var(--rust-deep); }
         @media (max-width: 640px) { .fh-diagram { grid-template-columns: 56px 1fr; } .fh-label { display: none; } .fh-model { width: 30px; height: 30px; left: calc(50% - 15px); top: -15px; } .fh-row { grid-template-columns: 22px 1fr; } .fh-tool { grid-template-columns: 26px 1fr auto; } .fh-line { display: none; } }
         .ft-about { display: grid; grid-template-columns: 112px minmax(0, 1fr); gap: 28px; align-items: start; padding-top: 44px; padding-bottom: 44px; border-top: 1px solid var(--line); scroll-margin-top: 90px; }
-        .ft-photo { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; border: 3px solid var(--bg); box-shadow: 0 0 0 1px var(--line), 0 14px 28px -16px rgba(28,28,30,.5); }
+        .ft-photo { width: 112px; height: 112px; border-radius: 50%; object-fit: cover; border: 3px solid var(--bg); outline: 1px solid var(--line); outline-offset: 0; }
         .ft-about-h { font-size: clamp(1.5rem, 3vw, 2rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.1; color: var(--ink); margin: 8px 0 12px; }
         .ft-about-p { max-width: 62ch; font-size: 1rem; line-height: 1.6; color: var(--sec); } .ft-about-p + .ft-about-p { margin-top: 8px; }
         .ft-about-p b { color: var(--ink); }

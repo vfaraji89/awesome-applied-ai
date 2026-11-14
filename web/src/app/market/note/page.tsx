@@ -81,7 +81,7 @@ export default function Note() {
               <>
                 <h2 style={{ marginTop: 44 }}><T k="wn.weeks">Week by week</T><span className="dot">.</span></h2>
                 <table className="wn-hist">
-                  <thead><tr><th><T k="wn.th_week">Week</T></th><th><T k="wn.th_dates">Dates</T></th><th><T k="wn.th_open">Open roles</T></th><th><T k="wn.th_new">New</T></th><th><T k="mk.remote">Remote</T></th></tr></thead>
+                  <thead><tr><th><T k="wn.th_week">Week</T></th><th><T k="wn.th_dates">Dates</T></th><th><T k="wn.th_open">Active roles</T></th><th><T k="wn.th_new">New</T></th><th><T k="mk.remote">Remote</T></th></tr></thead>
                   <tbody>{hist.slice().reverse().map((w) => <tr key={w.week}><td className="mono">{w.week}</td><td>{fmt(w.from)} – {fmt(w.to)}</td><td>{w.open}</td><td>{w.new}</td><td>{w.remoteShare}%</td></tr>)}</tbody>
                 </table>
               </>

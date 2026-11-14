@@ -116,18 +116,17 @@ const css = `
   .ds-post { position: absolute; top: 4px; bottom: 4px; width: 8px; border-radius: 4px; background: var(--dowel); }
   .ds-post.l { left: -4px; } .ds-post.r { right: -4px; }
   .ds-bead { all: unset; cursor: pointer; position: absolute; top: 15px; width: 24px; height: 24px; margin-left: -12px; border-radius: 50%;
-    background: radial-gradient(circle at 34% 30%, #fff 0%, #f1ede8 45%, #d6cfc7 100%); box-shadow: inset 0 0 0 1px rgba(0,0,0,.08), 0 2px 4px rgba(0,0,0,.18);
+    background: radial-gradient(circle at 34% 30%, #fff 0%, #f1ede8 45%, #d6cfc7 100%); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px;
     transition: left .8s cubic-bezier(.77,0,.18,1), transform .25s var(--spring), background .4s; }
   .ds-bead.seen { background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%); }
-  .ds-bead.on { width: 30px; height: 30px; top: 12px; margin-left: -15px; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); box-shadow: 0 0 0 6px var(--mark), 0 3px 6px rgba(158,26,12,.35); }
+  .ds-bead.on { width: 30px; height: 30px; top: 12px; margin-left: -15px; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); outline: 6px solid var(--mark); outline-offset: 0; }
   .ds-bead:hover, .ds-bead:focus-visible { transform: scale(1.18); }
   .ds-bead:focus-visible { outline: 2px solid var(--rust); outline-offset: 3px; }
   .ds-tip { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translate(-50%, 4px); white-space: nowrap; padding: 5px 10px; border-radius: 8px; background: var(--ink); color: var(--bg); font-size: .76rem; opacity: 0; pointer-events: none; transition: opacity .15s, transform .15s; z-index: 3; }
   .ds-bead:hover .ds-tip, .ds-bead:focus-visible .ds-tip { opacity: 1; transform: translate(-50%, 0); }
 
   .ds-stage { position: relative; display: flex; flex-direction: column; padding: 30px 34px 34px; border-radius: var(--radius); background: var(--card);
-    background-image: var(--dowel), var(--dowel); background-size: 8px 100%, 8px 100%; background-position: left center, right center; background-repeat: no-repeat;
-    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    border: 1px solid var(--line);
     animation: ds-open .8s cubic-bezier(.77,0,.18,1) both; }
   @keyframes ds-open { from { clip-path: inset(0 50% 0 50% round var(--radius)); } to { clip-path: inset(0 0 0 0 round var(--radius)); } }
   .ds-stage > * { animation: ds-in .55s var(--ease) both; }
@@ -152,7 +151,7 @@ const css = `
 
   .ds-ctrl { display: flex; align-items: center; gap: 10px; margin-top: 18px; }
   .ds-btn { all: unset; cursor: pointer; width: 46px; height: 46px; border-radius: 50%; display: grid; place-items: center; font-weight: 800; color: var(--ink);
-    background: radial-gradient(circle at 34% 30%, #fff 0%, #f1ede8 45%, #d6cfc7 100%); box-shadow: inset 0 0 0 1px rgba(0,0,0,.08), 0 3px 6px rgba(0,0,0,.16); transition: transform .2s var(--spring); }
+    background: radial-gradient(circle at 34% 30%, #fff 0%, #f1ede8 45%, #d6cfc7 100%); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; transition: transform .2s var(--spring); }
   .ds-btn:hover:not(:disabled) { transform: scale(1.08); } .ds-btn:disabled { opacity: .35; cursor: default; }
   .ds-btn:focus-visible { outline: 2px solid var(--rust); outline-offset: 3px; }
   .ds-btn.play { width: 56px; height: 56px; color: #fff; font-size: .9rem; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }

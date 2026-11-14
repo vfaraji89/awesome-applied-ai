@@ -10,7 +10,7 @@ import { T, useT } from "@/i18n/lang";
    - the agenda beside it: a date tile per event, its official page, and add-to-calendar (an .ics file
      made in the browser, or Google Calendar).
    All dates are whole days as the organiser publishes them; nothing is converted between time zones. */
-export type Ev = { name: string; type: string; start: string; end: string; city: string; region: string; url: string; note?: string };
+export type Ev = { name: string; type: string; start: string; end: string; city: string; region: string; url: string; note?: string; tracks?: string[] };
 type Props = { events: Ev[]; recent: Ev[]; types: Record<string, string>; today: string };
 
 const REGIONS: Record<string, string> = { na: "North America", eu: "Europe", apac: "Asia-Pacific" };
@@ -47,9 +47,10 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
   const events = all.filter((e) => e.end >= today);
   const [type, setType] = useState<string | null>(null);
   const [region, setRegion] = useState<string | null>(null);
+  const [track, setTrack] = useState<"demo" | "workshop" | null>(null);
   const [sel, setSel] = useState<string | null>(null); // selected event name
   const [day, setDay] = useState<string | null>(null);
-  const shown = events.filter((e) => (!type || e.type === type) && (!region || e.region === region)).sort((a, b) => a.start.localeCompare(b.start));
+  const shown = events.filter((e) => (!type || e.type === type) && (!region || e.region === region) && (!track || (e.tracks ?? []).some((x) => x.toLowerCase().includes(track)))).sort((a, b) => a.start.localeCompare(b.start));
   // twelve months from this one
   const months = useMemo(() => Array.from({ length: 12 }, (_, i) => { const d = d0(`${today.slice(0, 7)}-01`); d.setUTCMonth(d.getUTCMonth() + i); return iso(d).slice(0, 7); }), [today]);
   const firstWith = months.find((m) => shown.some((e) => mKey(e.start) <= m && mKey(e.end) >= m)) ?? months[0];
@@ -96,6 +97,8 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
           ))}
         </div>
         <div className="ec-fl">
+          {([["demo", "ec.tr_demo", "Demos"], ["workshop", "ec.tr_workshop", "Workshops"]] as const).map(([id, k, en]) => <button key={id} type="button" className={`chip${track === id ? " on" : ""}`} onClick={() => setTrack(track === id ? null : id)}><T k={k}>{en}</T></button>)}
+          <span className="ec-sep" aria-hidden="true" />
           {Object.entries(REGIONS).map(([id, name]) => <button key={id} type="button" className={`chip${region === id ? " on" : ""}`} onClick={() => setRegion(region === id ? null : id)}><T k={`ec.r_${id}`}>{name}</T></button>)}
         </div>
       </div>
@@ -154,6 +157,7 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
                     <b>{e.name}</b>
                     <span className="muted">{range(e)} · {e.city}</span>
                     <span className="ec-type"><span className={`ec-dot sm t-${e.type}`} /><T k={`ec.t_${e.type}`}>{types[e.type] ?? e.type}</T></span>
+                    {e.tracks && <span className="ec-tracks">{e.tracks.map((x) => <i key={x}>{x}</i>)}</span>}
                     {e.note && <p className="ec-note">{e.note}</p>}
                     <div className="ec-acts">
                       <a className="chip" href={e.url} target="_blank" rel="noreferrer"><T k="ec.site">Official site</T> ↗</a>
@@ -177,16 +181,17 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
           --t-platform: radial-gradient(circle at 34% 30%, #9db7dc, #3f66a3 50%, #1f3a66); --c-platform: #3f66a3;
           --t-data: radial-gradient(circle at 34% 30%, #f6d79a, #d39a3a 50%, #8f5f14); --c-data: #d39a3a;
           --t-infra: radial-gradient(circle at 34% 30%, #a9d1b5, #4f8a63 50%, #2b5539); --c-infra: #4f8a63;
-          --t-research: radial-gradient(circle at 34% 30%, #fff, #f1ede8 45%, #cfc6bb); --c-research: #b9ad9f; }
+          --t-research: radial-gradient(circle at 34% 30%, #fff, #f1ede8 45%, #cfc6bb); --c-research: #b9ad9f;
+          --t-acm: radial-gradient(circle at 34% 30%, #c3b4e6, #6b4fa3 50%, #3e2a6b); --c-acm: #6b4fa3; }
         .t-aieng { --b: var(--t-aieng); --c: var(--c-aieng); } .t-dev { --b: var(--t-dev); --c: var(--c-dev); } .t-platform { --b: var(--t-platform); --c: var(--c-platform); }
-        .t-data { --b: var(--t-data); --c: var(--c-data); } .t-infra { --b: var(--t-infra); --c: var(--c-infra); } .t-research { --b: var(--t-research); --c: var(--c-research); }
-        .ec-dot { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: var(--b); box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); flex: none; } .ec-dot.sm { width: 10px; height: 10px; }
+        .t-data { --b: var(--t-data); --c: var(--c-data); } .t-infra { --b: var(--t-infra); --c: var(--c-infra); } .t-research { --b: var(--t-research); --c: var(--c-research); } .t-acm { --b: var(--t-acm); --c: var(--c-acm); }
+        .ec-dot { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: var(--b); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; flex: none; } .ec-dot.sm { width: 10px; height: 10px; }
         .ec-next { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 20px 24px; }
         .ec-next > div:nth-child(2) { display: grid; gap: 2px; } .ec-next-name { font-size: 1.4rem; font-weight: 800; letter-spacing: -.01em; }
         @media (max-width: 680px) { .ec-next { grid-template-columns: auto 1fr; } .ec-next .ec-acts { grid-column: 1 / -1; } }
         .ec-acts { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ec-acts .chip { cursor: pointer; font: inherit; font-size: .78rem; } .ec-acts .btn { border: 0; cursor: pointer; font: inherit; }
         .ec-filters { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin: 22px 0 14px; }
-        .ec-fl { display: flex; flex-wrap: wrap; gap: 6px; } .ec-fl .chip { cursor: pointer; font: inherit; font-size: .8rem; }
+        .ec-fl { display: flex; flex-wrap: wrap; gap: 6px; } .ec-fl .chip { cursor: pointer; font: inherit; font-size: .8rem; } .ec-sep { width: 1px; background: var(--line); margin: 2px 4px; }
         .ec-year { padding: 30px 28px 26px; }
         .ec-rod { position: relative; height: 74px; margin: 0 8px; }
         .ec-rod::before { content: ""; position: absolute; left: 0; right: 0; top: 30px; height: 4px; border-radius: 2px; background: var(--rod); }
@@ -194,8 +199,8 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
         .ec-tick button { border: 0; background: none; padding: 2px 4px; font: .72rem var(--font-mono), monospace; color: var(--muted); cursor: pointer; text-transform: uppercase; display: grid; }
         .ec-tick button i { font-style: normal; font-size: .62rem; } .ec-tick.on button { color: var(--rust-deep); font-weight: 700; }
         .ec-today { position: absolute; top: 18px; width: 2px; height: 28px; background: var(--rust); border-radius: 1px; } .ec-today::after { content: ""; position: absolute; top: -6px; left: -3px; width: 8px; height: 8px; border-radius: 50%; background: var(--rust); }
-        .ec-bead { position: absolute; top: calc(22px - var(--s) * 14px); width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: var(--b); box-shadow: 0 2px 4px rgba(0,0,0,.18), inset 0 0 0 1px rgba(0,0,0,.06); transition: transform .35s var(--spring); }
-        .ec-bead:hover, .ec-bead.on { transform: scale(1.35); z-index: 3; } .ec-bead.on { box-shadow: 0 0 0 4px color-mix(in srgb, var(--c) 25%, transparent), 0 2px 4px rgba(0,0,0,.2); }
+        .ec-bead { position: absolute; top: calc(22px - var(--s) * 14px); width: 20px; height: 20px; margin-left: -10px; border-radius: 50%; border: 0; padding: 0; cursor: pointer; background: var(--b); outline: 1px solid rgba(0,0,0,.06); outline-offset: -1px; transition: transform .35s var(--spring); }
+        .ec-bead:hover, .ec-bead.on { transform: scale(1.35); z-index: 3; } .ec-bead.on { outline: 4px solid color-mix(in srgb, var(--c) 25%, transparent); outline-offset: 0; }
         .ec-tip { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translate(-50%, 4px); display: grid; gap: 1px; white-space: nowrap; font-size: .7rem; background: var(--ink); color: var(--bg); padding: 5px 9px; border-radius: 7px; opacity: 0; pointer-events: none; transition: opacity .2s, transform .2s; }
         .ec-tip b { font-size: .76rem; } .ec-bead:hover .ec-tip, .ec-bead:focus-visible .ec-tip { opacity: 1; transform: translate(-50%, 0); }
         .ec-main { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: 22px; margin-top: 18px; align-items: start; }
@@ -211,7 +216,7 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
         .ec-dow { text-align: center; font-size: .66rem; padding-bottom: 4px; }
         .ec-cell { position: relative; aspect-ratio: 1 / .92; border: 0; border-radius: 9px; background: none; cursor: pointer; display: grid; align-content: start; justify-items: center; padding: 6px 0 0; font: inherit; color: var(--ink); }
         .ec-cell.empty { cursor: default; } .ec-cell:not(.empty):hover { background: var(--paper); }
-        .ec-cell.today .ec-n { box-shadow: inset 0 0 0 1.5px var(--rust); color: var(--rust-deep); font-weight: 700; }
+        .ec-cell.today .ec-n {  color: var(--rust-deep); font-weight: 700; }
         .ec-cell.on { background: var(--ink); } .ec-cell.on .ec-n { color: var(--bg); }
         .ec-n { width: 26px; height: 26px; display: grid; place-items: center; border-radius: 50%; font-size: .84rem; }
         .ec-runs { position: absolute; left: 0; right: 0; bottom: 7px; display: grid; gap: 3px; }
@@ -223,11 +228,12 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
         .ec-agenda > .kicker { display: flex; gap: 10px; align-items: center; }
         .ec-clear { border: 0; background: var(--paper); border-radius: 999px; padding: 2px 9px; font: inherit; font-size: .7rem; cursor: pointer; color: var(--rust-deep); text-transform: none; letter-spacing: 0; }
         .ec-agenda ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 12px; }
-        .ec-card { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; padding: 16px 18px; transition: box-shadow .3s; } .ec-card.on { box-shadow: 0 0 0 1.5px var(--rust); }
+        .ec-card { display: grid; grid-template-columns: 64px minmax(0, 1fr); gap: 16px; padding: 16px 18px; } .ec-card.on { outline: 1.5px solid var(--rust); outline-offset: 0; }
         .ec-tile { display: grid; justify-items: center; align-content: center; height: 64px; border-radius: 14px; background: var(--paper); border-top: 4px solid var(--c); }
         .ec-tile span { font: .66rem var(--font-mono), monospace; text-transform: uppercase; color: var(--muted); } .ec-tile b { font-size: 1.05rem; font-weight: 800; }
         .ec-body { display: grid; gap: 4px; min-width: 0; } .ec-body > b { font-size: 1.05rem; } .ec-body .muted { font-size: .86rem; }
         .ec-type { display: inline-flex; gap: 6px; align-items: center; font-size: .76rem; color: var(--sec); }
+        .ec-tracks { display: flex; flex-wrap: wrap; gap: 4px; } .ec-tracks i { font: .66rem var(--font-mono), monospace; font-style: normal; text-transform: uppercase; letter-spacing: .06em; padding: 2px 7px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--c) 45%, var(--line)); color: var(--sec); }
         .ec-note { font-size: .86rem; color: var(--sec); margin: 2px 0 4px; }
         .ec-none { margin-top: 14px; }
       `}</style>

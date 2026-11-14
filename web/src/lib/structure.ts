@@ -63,6 +63,7 @@ export const structure: Section[] = [
       { label: "MCP", href: "/docs/mcp/", note: "One plug for every tool" },
       { label: "DataHub", href: "/docs/#datahub", note: "The metadata under your AI", soon: true },
       { label: "Jargon", href: "/jargon/", note: "The words, in plain language" },
+      { label: "Coined & decoded", href: "/jargon/coined/", note: "New words: who coined them, when, and what they plainly mean" },
     ],
   },
   {

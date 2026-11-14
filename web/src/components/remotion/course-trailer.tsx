@@ -25,7 +25,7 @@ function Rod({ y, beads }: { y: number; beads: { x: number; c: keyof typeof BEAD
     <>
       <div style={{ position: "absolute", left: 40, right: 40, top: y, height: 6, borderRadius: 6, background: ROD }} />
       {beads.map((b, i) => (
-        <div key={i} style={{ position: "absolute", top: y - 15, left: b.x, width: 36, height: 36, borderRadius: 99, background: BEAD[b.c], transform: `scale(${b.s ?? 1})`, boxShadow: "0 8px 12px -8px rgba(40,20,10,.5)" }} />
+        <div key={i} style={{ position: "absolute", top: y - 15, left: b.x, width: 36, height: 36, borderRadius: 99, background: BEAD[b.c], transform: `scale(${b.s ?? 1})`, }} />
       ))}
     </>
   );

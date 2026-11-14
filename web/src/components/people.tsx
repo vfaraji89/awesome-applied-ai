@@ -15,7 +15,7 @@ export function Monogram({ p, size = 56 }: { p: Pick<Person, "initials" | "talkC
       {p.initials}
       <style>{`
         .mono-bead { flex: none; display: inline-grid; place-items: center; border-radius: 50%; color: #fff; font-weight: 800; letter-spacing: .02em;
-          background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); box-shadow: 0 4px 10px -4px rgba(158,26,12,.55), inset 0 -3px 6px rgba(0,0,0,.18); }
+          background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%);  }
       `}</style>
     </span>
   );
@@ -28,7 +28,7 @@ export function YearRod({ years, span }: { years: string[]; span: string[] }) {
       <style>{`
         .yr { position: relative; display: inline-flex; gap: 10px; align-items: center; padding: 0 4px; }
         .yr::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: var(--rod); }
-        .yr i { position: relative; width: 9px; height: 9px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #fff, #f1ede8 45%, #d6cfc7); box-shadow: inset 0 0 0 1px rgba(0,0,0,.08); }
+        .yr i { position: relative; width: 9px; height: 9px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #fff, #f1ede8 45%, #d6cfc7); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; }
         .yr i.on { background: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); }
       `}</style>
     </span>

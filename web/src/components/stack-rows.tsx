@@ -37,8 +37,7 @@ export function StackRows({ groups }: { groups: StackGroup[] }) {
         <a href={tool.url} target="_blank" rel="noreferrer" className="count">{tool.url.replace(/^https?:\/\//, "").replace(/\/$/, "")} ↗</a>
       </div>
       <style>{`
-        .sr-frame { position: relative; padding: 8px 26px; border-radius: 14px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-          background-image: var(--dowel), var(--dowel); background-size: 7px 100%, 7px 100%; background-position: left center, right center; background-repeat: no-repeat; }
+        .sr-frame { position: relative; padding: 8px 26px; border-radius: 14px; border: 1px solid var(--line); }
         .sr-row { position: relative; display: grid; grid-template-columns: 170px 1fr; gap: 12px; padding: 14px 0; }
         .sr-row + .sr-row { border-top: 1px dashed var(--line); }
         .sr-row::before { content: ""; position: absolute; left: -19px; right: -19px; top: calc(14px + 20px); height: 4px; margin-top: -2px; border-radius: 4px; background: var(--rod); }
@@ -47,12 +46,12 @@ export function StackRows({ groups }: { groups: StackGroup[] }) {
         .sr-beads li { animation: sr-drop .7s var(--spring) both; animation-delay: calc(var(--k) * 30ms); }
         @keyframes sr-drop { from { transform: translateY(-10px); opacity: 0; } to { transform: none; opacity: 1; } }
         .sr-bead { all: unset; cursor: pointer; display: flex; flex-direction: column; align-items: center; gap: 6px; width: 78px; }
-        .sr-ball { width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #1c1c1e; background: radial-gradient(circle at 34% 28%, #fff 0%, #f6f3f0 40%, #dcd6d0 100%); box-shadow: inset -3px -4px 7px -3px rgba(0,0,0,.14), 0 6px 10px -6px rgba(40,20,10,.45); transition: transform .5s var(--spring), box-shadow .3s; }
+        .sr-ball { width: 40px; height: 40px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; color: #1c1c1e; background: radial-gradient(circle at 34% 28%, #fff 0%, #f6f3f0 40%, #dcd6d0 100%);  transition: transform .5s var(--spring); }
         .sr-ball svg { width: 19px; height: 19px; }
         .sr-ball.sm { width: 34px; height: 34px; margin-right: 10px; vertical-align: -8px; } .sr-ball.sm svg { width: 17px; height: 17px; }
         .sr-name { font-family: var(--font-mono), monospace; font-size: .62rem; line-height: 1.25; color: var(--sec); text-align: center; }
         .sr-bead:hover .sr-ball { transform: translateX(6px) rotate(20deg); }
-        .sr-bead.on .sr-ball { transform: translateX(8px); box-shadow: 0 0 0 3px var(--rust), 0 10px 14px -8px rgba(224,48,30,.5); }
+        .sr-bead.on .sr-ball { transform: translateX(8px); outline: 3px solid var(--rust); outline-offset: 0; }
         .sr-bead.on .sr-name { color: var(--rust-deep); }
         .sr-bead:focus-visible .sr-ball { outline: 2px solid var(--rust); outline-offset: 3px; }
         .sr-card { margin-top: 18px; display: flex; flex-direction: column; gap: 8px; animation: rise .5s var(--ease) both; }

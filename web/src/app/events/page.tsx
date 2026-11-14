@@ -21,7 +21,7 @@ export default function Events() {
       <div className="wrap">
         <Crumb id="market" page="Events calendar" />
         <h1 style={{ marginTop: 12 }}><TH k="ev.h1">The year in <mark>applied AI events</mark></TH><span className="dot">.</span></h1>
-        <p className="lead" style={{ marginTop: 16 }}><T k="ev.lead">The major AI engineering, AI software and AI platform events coming up. Official dates only: if an organiser has not published them, the event waits below until it does.</T></p>
+        <p className="lead" style={{ marginTop: 16 }}><T k="ev.lead">The major AI engineering, AI software and AI platform events coming up, and the top ACM conferences with their demo and workshop tracks. Official dates only: if an organiser has not published them, the event waits below until it does.</T></p>
         <div style={{ marginTop: 30 }}><EventsCalendar events={events} recent={data.recent as Ev[]} types={data.types} today={today} /></div>
 
         <div className="ev-wait">
@@ -42,7 +42,7 @@ export default function Events() {
         .ev-wait li { display: flex; gap: 12px; align-items: center; padding: 14px 18px; } .ev-wait li div { display: grid; gap: 2px; } .ev-wait a { text-decoration: none; } .ev-wait a:hover b { color: var(--rust-deep); }
         .ev-dot { width: 12px; height: 12px; border-radius: 50%; flex: none; background: var(--b, var(--rust)); }
         .ev-dot.t-aieng { --b: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); } .ev-dot.t-dev { --b: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); }
-        .ev-dot.t-platform { --b: radial-gradient(circle at 34% 30%, #9db7dc, #3f66a3 50%, #1f3a66); } .ev-dot.t-data { --b: radial-gradient(circle at 34% 30%, #f6d79a, #d39a3a 50%, #8f5f14); }
+        .ev-dot.t-acm { --b: radial-gradient(circle at 34% 30%, #c3b4e6, #6b4fa3 50%, #3e2a6b); } .ev-dot.t-platform { --b: radial-gradient(circle at 34% 30%, #9db7dc, #3f66a3 50%, #1f3a66); } .ev-dot.t-data { --b: radial-gradient(circle at 34% 30%, #f6d79a, #d39a3a 50%, #8f5f14); }
       `}</style>
     </section>
   );

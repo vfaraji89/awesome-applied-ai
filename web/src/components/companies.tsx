@@ -3,7 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { T, useT } from "@/i18n/lang";
 
-/* The companies directory: who is hiring now on top as an abacus (a rod per company, its open AI roles
+/* The companies directory: who is hiring now on top as an abacus (a rod per company, its active AI roles
    as the bead's place; touch one to read what its ads ask for), then filters and a card per company. */
 export type Company = { id: string; name: string; lab: boolean; initials: string; hiring: { open: number; roles: { id: string; share: number }[]; skills: { id: string; share: number }[] } | null; products: { id: string; name: string }[]; stage: { speakers: number; talks: number } | null; people: string[] };
 
@@ -13,7 +13,7 @@ export function Badge({ c, size = 52 }: { c: Pick<Company, "initials" | "lab">; 
       {c.initials}
       <style>{`
         .co-badge { flex: none; display: inline-grid; place-items: center; border-radius: 14px; color: #fff; font-weight: 800; letter-spacing: .02em;
-          background: radial-gradient(circle at 30% 25%, #6a6a70 0%, #1c1c1e 55%, #000 100%); box-shadow: 0 4px 10px -4px rgba(0,0,0,.5), inset 0 -3px 6px rgba(0,0,0,.25); }
+          background: radial-gradient(circle at 30% 25%, #6a6a70 0%, #1c1c1e 55%, #000 100%);  }
         .co-badge.lab { background: radial-gradient(circle at 30% 25%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); }
       `}</style>
     </span>
@@ -53,7 +53,7 @@ export function CompaniesBrowser({ companies, skillNames, roleNames }: { compani
             ))}
           </ul>
           <div className="cpb-read" key={cur.id}>
-            <span className="count"><T k="cp.open_k">AI roles open on their career page now</T></span>
+            <span className="count"><T k="cp.open_k">Active AI roles on their career page now</T></span>
             <b className="cpb-big"><span className="cpb-num">{cur.hiring!.open}</span> {cur.name}</b>
             {cur.hiring!.roles.length > 0 && <p className="cpb-line"><T k="cp.mostly">Mostly</T> {cur.hiring!.roles.slice(0, 2).map((r) => `${roleNames[r.id] ?? r.id} (${r.share}%)`).join(", ")}.</p>}
             {cur.hiring!.skills.length > 0 && <p className="cpb-line"><T k="cp.asks">Their ads ask for</T> {cur.hiring!.skills.slice(0, 3).map((s) => `${(skillNames[s.id] ?? s.id).toLowerCase()} ${s.share}%`).join(", ")}.</p>}
@@ -71,7 +71,7 @@ export function CompaniesBrowser({ companies, skillNames, roleNames }: { compani
             <Link href={`/companies/${c.id}/`} className="frame cpb-card">
               <div className="cpb-top"><Badge c={c} /><div><b>{c.name}</b>{c.lab && <span className="cpb-tag"><T k="cp.lab">AI lab</T></span>}</div></div>
               <dl className="cpb-stats">
-                <div><dt className="count"><T k="cp.s_open">open AI roles</T></dt><dd>{c.hiring?.open ?? "–"}</dd></div>
+                <div><dt className="count"><T k="cp.s_open">active AI roles</T></dt><dd>{c.hiring?.open ?? "–"}</dd></div>
                 <div><dt className="count"><T k="cp.s_talks">talks on stage</T></dt><dd>{c.stage?.talks ?? "–"}</dd></div>
                 <div><dt className="count"><T k="cp.s_map">on the map</T></dt><dd>{c.products.length || "–"}</dd></div>
               </dl>

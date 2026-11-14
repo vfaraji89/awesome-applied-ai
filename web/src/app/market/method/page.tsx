@@ -170,7 +170,7 @@ export default function Method() {
         .md-rate-l { display: grid; } .md-rate-l .muted { font-size: .8rem; }
         .md-rate-bar { position: relative; height: 6px; border-radius: 3px; background: var(--rod); }
         .md-range { position: absolute; top: 0; height: 100%; border-radius: 3px; background: color-mix(in srgb, var(--rust) 35%, transparent); }
-        .md-dot { position: absolute; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); box-shadow: 0 1px 3px rgba(0,0,0,.25); }
+        .md-dot { position: absolute; top: 50%; width: 14px; height: 14px; margin: -7px 0 0 -7px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c);  }
         .md-rate-n { display: grid; justify-items: end; gap: 2px; } .md-rate-n b { font-size: 1.15rem; } .md-rate-n .count { font-size: .72rem; white-space: nowrap; }
         @media (max-width: 640px) { .md-rate { grid-template-columns: 1fr auto; } .md-rate-bar { grid-column: 1 / -1; grid-row: 2; } }
         .md-conf { list-style: none; margin: 10px 0 0; padding: 0; display: grid; gap: 6px; max-width: 720px; }
