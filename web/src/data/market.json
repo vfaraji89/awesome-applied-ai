@@ -1,13 +1,13 @@
 {
- "generatedAt": "2026-11-14T03:35:46.669Z",
+ "generatedAt": "2026-11-14T03:44:19.645Z",
  "since": "2026-10-01",
  "sinceQuarter": "2026 Q4",
  "totals": {
   "processed": 1619,
-  "listedNow": 1563,
+  "listedNow": 1559,
   "newToday": 92,
   "allTime": 2954,
-  "openNow": 1563,
+  "openNow": 1559,
   "remoteShare": 20,
   "dated": 84
  },
@@ -55,7 +55,7 @@
   {
    "id": "arbeitnow",
    "boards": 1,
-   "ai": 81
+   "ai": 79
   },
   {
    "id": "himalayas",
@@ -68,7 +68,7 @@
    "ai": 91
   }
  ],
- "failed": 100,
+ "failed": 99,
  "roles": [
   {
    "id": "rd-researcher",
@@ -5474,7 +5474,7 @@
     "terms": [
      "Agents",
      "AI coding tools",
-     "Generative AI"
+     "Cursor"
     ]
    },
    {
