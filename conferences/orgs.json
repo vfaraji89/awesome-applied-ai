@@ -1,0 +1,5186 @@
+{
+ "updated": "2026-11-14",
+ "source": "https://ai.engineer/api/data/organizations?format=json",
+ "orgs": [
+  {
+   "id": "google-deepmind",
+   "name": "Google DeepMind",
+   "source": "https://ai.engineer/orgs/google-deepmind",
+   "speakers": 38,
+   "talks": 40
+  },
+  {
+   "id": "anthropic",
+   "name": "Anthropic",
+   "source": "https://ai.engineer/orgs/anthropic",
+   "speakers": 34,
+   "talks": 34
+  },
+  {
+   "id": "microsoft",
+   "name": "Microsoft",
+   "source": "https://ai.engineer/orgs/microsoft",
+   "speakers": 28,
+   "talks": 34
+  },
+  {
+   "id": "arize",
+   "name": "Arize",
+   "source": "https://ai.engineer/orgs/arize",
+   "speakers": 12,
+   "talks": 30
+  },
+  {
+   "id": "openai",
+   "name": "OpenAI",
+   "source": "https://ai.engineer/orgs/openai",
+   "speakers": 33,
+   "talks": 29
+  },
+  {
+   "id": "aws",
+   "name": "Amazon Web Services (AWS)",
+   "source": "https://ai.engineer/orgs/aws",
+   "speakers": 25,
+   "talks": 26
+  },
+  {
+   "id": "neo4j",
+   "name": "Neo4j",
+   "source": "https://ai.engineer/orgs/neo4j",
+   "speakers": 14,
+   "talks": 23
+  },
+  {
+   "id": "workos",
+   "name": "WorkOS",
+   "source": "https://ai.engineer/orgs/workos",
+   "speakers": 7,
+   "talks": 17
+  },
+  {
+   "id": "braintrust",
+   "name": "Braintrust",
+   "source": "https://ai.engineer/orgs/braintrust",
+   "speakers": 9,
+   "talks": 16
+  },
+  {
+   "id": "github",
+   "name": "GitHub",
+   "source": "https://ai.engineer/orgs/github",
+   "speakers": 15,
+   "talks": 16
+  },
+  {
+   "id": "nvidia",
+   "name": "NVIDIA",
+   "source": "https://ai.engineer/orgs/nvidia",
+   "speakers": 19,
+   "talks": 16
+  },
+  {
+   "id": "google",
+   "name": "Google",
+   "source": "https://ai.engineer/orgs/google",
+   "speakers": 11,
+   "talks": 12
+  },
+  {
+   "id": "sonar",
+   "name": "Sonar",
+   "source": "https://ai.engineer/orgs/sonar",
+   "speakers": 8,
+   "talks": 11
+  },
+  {
+   "id": "ai-engineer",
+   "name": "AI Engineer",
+   "source": "https://ai.engineer/orgs/ai-engineer",
+   "speakers": 2,
+   "talks": 10
+  },
+  {
+   "id": "cognition",
+   "name": "Cognition",
+   "source": "https://ai.engineer/orgs/cognition",
+   "speakers": 9,
+   "talks": 9
+  },
+  {
+   "id": "hugging-face",
+   "name": "Hugging Face",
+   "source": "https://ai.engineer/orgs/hugging-face",
+   "speakers": 6,
+   "talks": 9
+  },
+  {
+   "id": "cloudflare",
+   "name": "Cloudflare",
+   "source": "https://ai.engineer/orgs/cloudflare",
+   "speakers": 8,
+   "talks": 8
+  },
+  {
+   "id": "factory",
+   "name": "Factory",
+   "source": "https://ai.engineer/orgs/factory",
+   "speakers": 7,
+   "talks": 8
+  },
+  {
+   "id": "modal",
+   "name": "Modal",
+   "source": "https://ai.engineer/orgs/modal",
+   "speakers": 5,
+   "talks": 8
+  },
+  {
+   "id": "oracle",
+   "name": "Oracle",
+   "source": "https://ai.engineer/orgs/oracle",
+   "speakers": 8,
+   "talks": 8
+  },
+  {
+   "id": "temporal",
+   "name": "Temporal",
+   "source": "https://ai.engineer/orgs/temporal",
+   "speakers": 6,
+   "talks": 8
+  },
+  {
+   "id": "together-ai",
+   "name": "Together AI",
+   "source": "https://ai.engineer/orgs/together-ai",
+   "speakers": 6,
+   "talks": 8
+  },
+  {
+   "id": "amazon",
+   "name": "Amazon",
+   "source": "https://ai.engineer/orgs/amazon",
+   "speakers": 4,
+   "talks": 7
+  },
+  {
+   "id": "cursor",
+   "name": "Cursor",
+   "source": "https://ai.engineer/orgs/cursor",
+   "speakers": 5,
+   "talks": 7
+  },
+  {
+   "id": "daily",
+   "name": "Daily",
+   "source": "https://ai.engineer/orgs/daily",
+   "speakers": 4,
+   "talks": 7
+  },
+  {
+   "id": "keycard",
+   "name": "Keycard",
+   "source": "https://ai.engineer/orgs/keycard",
+   "speakers": 5,
+   "talks": 7
+  },
+  {
+   "id": "latent-space",
+   "name": "Latent.Space",
+   "source": "https://ai.engineer/orgs/latent-space",
+   "speakers": 3,
+   "talks": 7
+  },
+  {
+   "id": "llamaindex",
+   "name": "LlamaIndex",
+   "source": "https://ai.engineer/orgs/llamaindex",
+   "speakers": 3,
+   "talks": 7
+  },
+  {
+   "id": "meta",
+   "name": "Meta",
+   "source": "https://ai.engineer/orgs/meta",
+   "speakers": 9,
+   "talks": 7
+  },
+  {
+   "id": "prime-intellect",
+   "name": "Prime Intellect",
+   "source": "https://ai.engineer/orgs/prime-intellect",
+   "speakers": 3,
+   "talks": 7
+  },
+  {
+   "id": "qodo",
+   "name": "Qodo",
+   "source": "https://ai.engineer/orgs/qodo",
+   "speakers": 5,
+   "talks": 7
+  },
+  {
+   "id": "sourcegraph",
+   "name": "Sourcegraph",
+   "source": "https://ai.engineer/orgs/sourcegraph",
+   "speakers": 6,
+   "talks": 7
+  },
+  {
+   "id": "unblocked",
+   "name": "Unblocked",
+   "source": "https://ai.engineer/orgs/unblocked",
+   "speakers": 3,
+   "talks": 7
+  },
+  {
+   "id": "vercel",
+   "name": "Vercel",
+   "source": "https://ai.engineer/orgs/vercel",
+   "speakers": 7,
+   "talks": 7
+  },
+  {
+   "id": "warp",
+   "name": "Warp",
+   "source": "https://ai.engineer/orgs/warp",
+   "speakers": 4,
+   "talks": 7
+  },
+  {
+   "id": "weights-biases",
+   "name": "Weights & Biases",
+   "source": "https://ai.engineer/orgs/weights-biases",
+   "speakers": 5,
+   "talks": 7
+  },
+  {
+   "id": "amazon-agi-lab",
+   "name": "Amazon AGI Lab",
+   "source": "https://ai.engineer/orgs/amazon-agi-lab",
+   "speakers": 7,
+   "talks": 6
+  },
+  {
+   "id": "browserbase",
+   "name": "Browserbase",
+   "source": "https://ai.engineer/orgs/browserbase",
+   "speakers": 6,
+   "talks": 6
+  },
+  {
+   "id": "exa",
+   "name": "exa",
+   "source": "https://ai.engineer/orgs/exa",
+   "speakers": 6,
+   "talks": 6
+  },
+  {
+   "id": "langfuse",
+   "name": "Langfuse",
+   "source": "https://ai.engineer/orgs/langfuse",
+   "speakers": 3,
+   "talks": 6
+  },
+  {
+   "id": "mongodb",
+   "name": "MongoDB",
+   "source": "https://ai.engineer/orgs/mongodb",
+   "speakers": 5,
+   "talks": 6
+  },
+  {
+   "id": "snorkel-ai",
+   "name": "Snorkel AI",
+   "source": "https://ai.engineer/orgs/snorkel-ai",
+   "speakers": 5,
+   "talks": 6
+  },
+  {
+   "id": "augment-code",
+   "name": "Augment Code",
+   "source": "https://ai.engineer/orgs/augment-code",
+   "speakers": 4,
+   "talks": 5
+  },
+  {
+   "id": "baseten",
+   "name": "Baseten",
+   "source": "https://ai.engineer/orgs/baseten",
+   "speakers": 5,
+   "talks": 5
+  },
+  {
+   "id": "bright-data",
+   "name": "Bright Data",
+   "source": "https://ai.engineer/orgs/bright-data",
+   "speakers": 3,
+   "talks": 5
+  },
+  {
+   "id": "cline",
+   "name": "Cline",
+   "source": "https://ai.engineer/orgs/cline",
+   "speakers": 3,
+   "talks": 5
+  },
+  {
+   "id": "elevenlabs",
+   "name": "ElevenLabs",
+   "source": "https://ai.engineer/orgs/elevenlabs",
+   "speakers": 6,
+   "talks": 5
+  },
+  {
+   "id": "humanlayer",
+   "name": "HumanLayer",
+   "source": "https://ai.engineer/orgs/humanlayer",
+   "speakers": 2,
+   "talks": 5
+  },
+  {
+   "id": "kepler",
+   "name": "Kepler",
+   "source": "https://ai.engineer/orgs/kepler",
+   "speakers": 1,
+   "talks": 5
+  },
+  {
+   "id": "langchain",
+   "name": "LangChain",
+   "source": "https://ai.engineer/orgs/langchain",
+   "speakers": 5,
+   "talks": 5
+  },
+  {
+   "id": "minimax",
+   "name": "MiniMax",
+   "source": "https://ai.engineer/orgs/minimax",
+   "speakers": 2,
+   "talks": 5
+  },
+  {
+   "id": "notion",
+   "name": "Notion",
+   "source": "https://ai.engineer/orgs/notion",
+   "speakers": 4,
+   "talks": 5
+  },
+  {
+   "id": "ramp",
+   "name": "Ramp",
+   "source": "https://ai.engineer/orgs/ramp",
+   "speakers": 6,
+   "talks": 5
+  },
+  {
+   "id": "sentry",
+   "name": "Sentry",
+   "source": "https://ai.engineer/orgs/sentry",
+   "speakers": 5,
+   "talks": 5
+  },
+  {
+   "id": "snyk",
+   "name": "Snyk",
+   "source": "https://ai.engineer/orgs/snyk",
+   "speakers": 7,
+   "talks": 5
+  },
+  {
+   "id": "stripe",
+   "name": "Stripe",
+   "source": "https://ai.engineer/orgs/stripe",
+   "speakers": 5,
+   "talks": 5
+  },
+  {
+   "id": "unsloth",
+   "name": "Unsloth",
+   "source": "https://ai.engineer/orgs/unsloth",
+   "speakers": 1,
+   "talks": 5
+  },
+  {
+   "id": "ai-hero",
+   "name": "AI Hero",
+   "source": "https://ai.engineer/orgs/ai-hero",
+   "speakers": 1,
+   "talks": 4
+  },
+  {
+   "id": "ai21-labs",
+   "name": "AI21 Labs",
+   "source": "https://ai.engineer/orgs/ai21-labs",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "akamai",
+   "name": "Akamai",
+   "source": "https://ai.engineer/orgs/akamai",
+   "speakers": 5,
+   "talks": 4
+  },
+  {
+   "id": "alixpartners",
+   "name": "AlixPartners",
+   "source": "https://ai.engineer/orgs/alixpartners",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "all-hands-ai",
+   "name": "All Hands AI",
+   "source": "https://ai.engineer/orgs/all-hands-ai",
+   "speakers": 2,
+   "talks": 4
+  },
+  {
+   "id": "anterior",
+   "name": "Anterior",
+   "source": "https://ai.engineer/orgs/anterior",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "apify",
+   "name": "Apify",
+   "source": "https://ai.engineer/orgs/apify",
+   "speakers": 1,
+   "talks": 4
+  },
+  {
+   "id": "cerebras",
+   "name": "Cerebras",
+   "source": "https://ai.engineer/orgs/cerebras",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "cohere",
+   "name": "Cohere",
+   "source": "https://ai.engineer/orgs/cohere",
+   "speakers": 4,
+   "talks": 4
+  },
+  {
+   "id": "datadog",
+   "name": "Datadog",
+   "source": "https://ai.engineer/orgs/datadog",
+   "speakers": 4,
+   "talks": 4
+  },
+  {
+   "id": "elastic",
+   "name": "Elastic",
+   "source": "https://ai.engineer/orgs/elastic",
+   "speakers": 4,
+   "talks": 4
+  },
+  {
+   "id": "ibm",
+   "name": "IBM",
+   "source": "https://ai.engineer/orgs/ibm",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "krea",
+   "name": "Krea",
+   "source": "https://ai.engineer/orgs/krea",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "linkedin",
+   "name": "LinkedIn",
+   "source": "https://ai.engineer/orgs/linkedin",
+   "speakers": 6,
+   "talks": 4
+  },
+  {
+   "id": "netflix",
+   "name": "Netflix",
+   "source": "https://ai.engineer/orgs/netflix",
+   "speakers": 5,
+   "talks": 4
+  },
+  {
+   "id": "paypal",
+   "name": "PayPal",
+   "source": "https://ai.engineer/orgs/paypal",
+   "speakers": 6,
+   "talks": 4
+  },
+  {
+   "id": "pydantic",
+   "name": "Pydantic",
+   "source": "https://ai.engineer/orgs/pydantic",
+   "speakers": 1,
+   "talks": 4
+  },
+  {
+   "id": "raindrop",
+   "name": "Raindrop",
+   "source": "https://ai.engineer/orgs/raindrop",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "red-hat",
+   "name": "Red Hat",
+   "source": "https://ai.engineer/orgs/red-hat",
+   "speakers": 5,
+   "talks": 4
+  },
+  {
+   "id": "reducto",
+   "name": "Reducto",
+   "source": "https://ai.engineer/orgs/reducto",
+   "speakers": 4,
+   "talks": 4
+  },
+  {
+   "id": "runpod",
+   "name": "RunPod",
+   "source": "https://ai.engineer/orgs/runpod",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "stanford-university",
+   "name": "Stanford University",
+   "source": "https://ai.engineer/orgs/stanford-university",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "superlinked",
+   "name": "Superlinked",
+   "source": "https://ai.engineer/orgs/superlinked",
+   "speakers": 2,
+   "talks": 4
+  },
+  {
+   "id": "tessl",
+   "name": "Tessl",
+   "source": "https://ai.engineer/orgs/tessl",
+   "speakers": 2,
+   "talks": 4
+  },
+  {
+   "id": "towards-ai",
+   "name": "Towards AI",
+   "source": "https://ai.engineer/orgs/towards-ai",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "uber",
+   "name": "Uber",
+   "source": "https://ai.engineer/orgs/uber",
+   "speakers": 8,
+   "talks": 4
+  },
+  {
+   "id": "uc-berkeley",
+   "name": "UC Berkeley",
+   "source": "https://ai.engineer/orgs/uc-berkeley",
+   "speakers": 3,
+   "talks": 4
+  },
+  {
+   "id": "zed",
+   "name": "Zed",
+   "source": "https://ai.engineer/orgs/zed",
+   "speakers": 4,
+   "talks": 4
+  },
+  {
+   "id": "amp",
+   "name": "Amp",
+   "source": "https://ai.engineer/orgs/amp",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "amplify-partners",
+   "name": "Amplify Partners",
+   "source": "https://ai.engineer/orgs/amplify-partners",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "applied-compute",
+   "name": "Applied Compute",
+   "source": "https://ai.engineer/orgs/applied-compute",
+   "speakers": 4,
+   "talks": 3
+  },
+  {
+   "id": "bloomberg",
+   "name": "Bloomberg",
+   "source": "https://ai.engineer/orgs/bloomberg",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "coinbase",
+   "name": "Coinbase",
+   "source": "https://ai.engineer/orgs/coinbase",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "databricks",
+   "name": "Databricks",
+   "source": "https://ai.engineer/orgs/databricks",
+   "speakers": 6,
+   "talks": 3
+  },
+  {
+   "id": "docker",
+   "name": "Docker",
+   "source": "https://ai.engineer/orgs/docker",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "every",
+   "name": "Every",
+   "source": "https://ai.engineer/orgs/every",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "evil-martians",
+   "name": "Evil Martians",
+   "source": "https://ai.engineer/orgs/evil-martians",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "featherless-ai",
+   "name": "Featherless.ai",
+   "source": "https://ai.engineer/orgs/featherless-ai",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "fireworks-ai",
+   "name": "Fireworks AI",
+   "source": "https://ai.engineer/orgs/fireworks-ai",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "gitar",
+   "name": "Gitar",
+   "source": "https://ai.engineer/orgs/gitar",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "hex",
+   "name": "Hex",
+   "source": "https://ai.engineer/orgs/hex",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "hypermode",
+   "name": "Hypermode",
+   "source": "https://ai.engineer/orgs/hypermode",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "jellyfish",
+   "name": "Jellyfish",
+   "source": "https://ai.engineer/orgs/jellyfish",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "linear",
+   "name": "Linear",
+   "source": "https://ai.engineer/orgs/linear",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "livekit",
+   "name": "Livekit",
+   "source": "https://ai.engineer/orgs/livekit",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "microsoft-research",
+   "name": "Microsoft Research",
+   "source": "https://ai.engineer/orgs/microsoft-research",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "mixedbread",
+   "name": "Mixedbread",
+   "source": "https://ai.engineer/orgs/mixedbread",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "morgan-stanley",
+   "name": "Morgan Stanley",
+   "source": "https://ai.engineer/orgs/morgan-stanley",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "openpipe",
+   "name": "OpenPipe",
+   "source": "https://ai.engineer/orgs/openpipe",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "openprose",
+   "name": "OpenProse",
+   "source": "https://ai.engineer/orgs/openprose",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "openrouter",
+   "name": "OpenRouter",
+   "source": "https://ai.engineer/orgs/openrouter",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "orb",
+   "name": "Orb",
+   "source": "https://ai.engineer/orgs/orb",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "parlance-labs",
+   "name": "Parlance Labs",
+   "source": "https://ai.engineer/orgs/parlance-labs",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "poolside",
+   "name": "Poolside",
+   "source": "https://ai.engineer/orgs/poolside",
+   "speakers": 5,
+   "talks": 3
+  },
+  {
+   "id": "posthog",
+   "name": "PostHog",
+   "source": "https://ai.engineer/orgs/posthog",
+   "speakers": 4,
+   "talks": 3
+  },
+  {
+   "id": "prefect",
+   "name": "Prefect",
+   "source": "https://ai.engineer/orgs/prefect",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "rexmore",
+   "name": "Rexmore",
+   "source": "https://ai.engineer/orgs/rexmore",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "roboflow",
+   "name": "Roboflow",
+   "source": "https://ai.engineer/orgs/roboflow",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "semianalysis",
+   "name": "SemiAnalysis",
+   "source": "https://ai.engineer/orgs/semianalysis",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "sierra",
+   "name": "Sierra",
+   "source": "https://ai.engineer/orgs/sierra",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "supabase",
+   "name": "Supabase",
+   "source": "https://ai.engineer/orgs/supabase",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "the-pragmatic-engineer",
+   "name": "The Pragmatic Engineer",
+   "source": "https://ai.engineer/orgs/the-pragmatic-engineer",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "tldraw",
+   "name": "tldraw",
+   "source": "https://ai.engineer/orgs/tldraw",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "turbopuffer",
+   "name": "turbopuffer",
+   "source": "https://ai.engineer/orgs/turbopuffer",
+   "speakers": 3,
+   "talks": 3
+  },
+  {
+   "id": "twilio",
+   "name": "Twilio",
+   "source": "https://ai.engineer/orgs/twilio",
+   "speakers": 4,
+   "talks": 3
+  },
+  {
+   "id": "vectara",
+   "name": "Vectara",
+   "source": "https://ai.engineer/orgs/vectara",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "wisedocs",
+   "name": "Wisedocs",
+   "source": "https://ai.engineer/orgs/wisedocs",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "yutori",
+   "name": "Yutori",
+   "source": "https://ai.engineer/orgs/yutori",
+   "speakers": 2,
+   "talks": 3
+  },
+  {
+   "id": "zapier",
+   "name": "Zapier",
+   "source": "https://ai.engineer/orgs/zapier",
+   "speakers": 4,
+   "talks": 3
+  },
+  {
+   "id": "zep",
+   "name": "Zep",
+   "source": "https://ai.engineer/orgs/zep",
+   "speakers": 1,
+   "talks": 3
+  },
+  {
+   "id": "txt-outlines",
+   "name": ".txt (Outlines)",
+   "source": "https://ai.engineer/orgs/txt-outlines",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "abundant",
+   "name": "Abundant",
+   "source": "https://ai.engineer/orgs/abundant",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "accenture",
+   "name": "Accenture",
+   "source": "https://ai.engineer/orgs/accenture",
+   "speakers": 3,
+   "talks": 2
+  },
+  {
+   "id": "adobe",
+   "name": "Adobe",
+   "source": "https://ai.engineer/orgs/adobe",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "agentic-ai-foundation",
+   "name": "Agentic AI Foundation",
+   "source": "https://ai.engineer/orgs/agentic-ai-foundation",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "agentuity",
+   "name": "Agentuity",
+   "source": "https://ai.engineer/orgs/agentuity",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "alithea-bio",
+   "name": "Alithea Bio",
+   "source": "https://ai.engineer/orgs/alithea-bio",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "allos-ai",
+   "name": "Allos AI",
+   "source": "https://ai.engineer/orgs/allos-ai",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "arcee-ai",
+   "name": "Arcee AI",
+   "source": "https://ai.engineer/orgs/arcee-ai",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "artificial-analysis",
+   "name": "Artificial Analysis",
+   "source": "https://ai.engineer/orgs/artificial-analysis",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "audible",
+   "name": "Audible",
+   "source": "https://ai.engineer/orgs/audible",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "automattic",
+   "name": "Automattic",
+   "source": "https://ai.engineer/orgs/automattic",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "band",
+   "name": "Band",
+   "source": "https://ai.engineer/orgs/band",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "bespoke-labs",
+   "name": "Bespoke Labs",
+   "source": "https://ai.engineer/orgs/bespoke-labs",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "best-buy",
+   "name": "Best Buy",
+   "source": "https://ai.engineer/orgs/best-buy",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "bismuth",
+   "name": "Bismuth",
+   "source": "https://ai.engineer/orgs/bismuth",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "block",
+   "name": "Block",
+   "source": "https://ai.engineer/orgs/block",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "box",
+   "name": "Box",
+   "source": "https://ai.engineer/orgs/box",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "bridgewater-associates",
+   "name": "Bridgewater Associates",
+   "source": "https://ai.engineer/orgs/bridgewater-associates",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "cais",
+   "name": "CAIS",
+   "source": "https://ai.engineer/orgs/cais",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "capital-one",
+   "name": "Capital One",
+   "source": "https://ai.engineer/orgs/capital-one",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "cartesia",
+   "name": "Cartesia",
+   "source": "https://ai.engineer/orgs/cartesia",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "catio",
+   "name": "Catio",
+   "source": "https://ai.engineer/orgs/catio",
+   "speakers": 3,
+   "talks": 2
+  },
+  {
+   "id": "character-ai",
+   "name": "Character.ai",
+   "source": "https://ai.engineer/orgs/character-ai",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "chroma",
+   "name": "Chroma",
+   "source": "https://ai.engineer/orgs/chroma",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "circle",
+   "name": "Circle",
+   "source": "https://ai.engineer/orgs/circle",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "cisco",
+   "name": "Cisco",
+   "source": "https://ai.engineer/orgs/cisco",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "coder",
+   "name": "Coder",
+   "source": "https://ai.engineer/orgs/coder",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "comet-ml-openclaw",
+   "name": "Comet ML / OpenClaw",
+   "source": "https://ai.engineer/orgs/comet-ml-openclaw",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "composio",
+   "name": "Composio",
+   "source": "https://ai.engineer/orgs/composio",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "conductor",
+   "name": "Conductor",
+   "source": "https://ai.engineer/orgs/conductor",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "contextual-ai",
+   "name": "Contextual AI",
+   "source": "https://ai.engineer/orgs/contextual-ai",
+   "speakers": 3,
+   "talks": 2
+  },
+  {
+   "id": "convex",
+   "name": "Convex",
+   "source": "https://ai.engineer/orgs/convex",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "coval",
+   "name": "Coval",
+   "source": "https://ai.engineer/orgs/coval",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "crusoe",
+   "name": "Crusoe",
+   "source": "https://ai.engineer/orgs/crusoe",
+   "speakers": 4,
+   "talks": 2
+  },
+  {
+   "id": "dagger",
+   "name": "DAgger",
+   "source": "https://ai.engineer/orgs/dagger",
+   "speakers": 3,
+   "talks": 2
+  },
+  {
+   "id": "datologyai",
+   "name": "DatologyAI",
+   "source": "https://ai.engineer/orgs/datologyai",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "daytona",
+   "name": "Daytona",
+   "source": "https://ai.engineer/orgs/daytona",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "decoding-ai",
+   "name": "Decoding AI",
+   "source": "https://ai.engineer/orgs/decoding-ai",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "deepgram",
+   "name": "Deepgram",
+   "source": "https://ai.engineer/orgs/deepgram",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "deepset",
+   "name": "deepset",
+   "source": "https://ai.engineer/orgs/deepset",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "digitalocean",
+   "name": "DigitalOcean",
+   "source": "https://ai.engineer/orgs/digitalocean",
+   "speakers": 4,
+   "talks": 2
+  },
+  {
+   "id": "doordash",
+   "name": "DoorDash",
+   "source": "https://ai.engineer/orgs/doordash",
+   "speakers": 3,
+   "talks": 2
+  },
+  {
+   "id": "duolingo",
+   "name": "Duolingo",
+   "source": "https://ai.engineer/orgs/duolingo",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "dx",
+   "name": "DX",
+   "source": "https://ai.engineer/orgs/dx",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "e2b",
+   "name": "E2B",
+   "source": "https://ai.engineer/orgs/e2b",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "ebay",
+   "name": "eBay",
+   "source": "https://ai.engineer/orgs/ebay",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "epicproduct-engineer",
+   "name": "EpicProduct.engineer",
+   "source": "https://ai.engineer/orgs/epicproduct-engineer",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "exo-labs",
+   "name": "EXO Labs",
+   "source": "https://ai.engineer/orgs/exo-labs",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "factset",
+   "name": "FactSet",
+   "source": "https://ai.engineer/orgs/factset",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "figma",
+   "name": "Figma",
+   "source": "https://ai.engineer/orgs/figma",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "freeplay",
+   "name": "Freeplay",
+   "source": "https://ai.engineer/orgs/freeplay",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "friendliai",
+   "name": "FriendliAI",
+   "source": "https://ai.engineer/orgs/friendliai",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "g2i",
+   "name": "G2i",
+   "source": "https://ai.engineer/orgs/g2i",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "google-labs",
+   "name": "Google Labs",
+   "source": "https://ai.engineer/orgs/google-labs",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "gradium-ai",
+   "name": "Gradium AI",
+   "source": "https://ai.engineer/orgs/gradium-ai",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "graphite",
+   "name": "Graphite",
+   "source": "https://ai.engineer/orgs/graphite",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "gravitee",
+   "name": "Gravitee",
+   "source": "https://ai.engineer/orgs/gravitee",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "greptile",
+   "name": "Greptile",
+   "source": "https://ai.engineer/orgs/greptile",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "harvey",
+   "name": "Harvey",
+   "source": "https://ai.engineer/orgs/harvey",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "hasura",
+   "name": "Hasura",
+   "source": "https://ai.engineer/orgs/hasura",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "heygen",
+   "name": "HeyGen",
+   "source": "https://ai.engineer/orgs/heygen",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "intercom",
+   "name": "Intercom",
+   "source": "https://ai.engineer/orgs/intercom",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "intuit",
+   "name": "Intuit",
+   "source": "https://ai.engineer/orgs/intuit",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "jpmorgan-chase",
+   "name": "JPMorgan Chase",
+   "source": "https://ai.engineer/orgs/jpmorgan-chase",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "lancedb",
+   "name": "LanceDB",
+   "source": "https://ai.engineer/orgs/lancedb",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "langbase",
+   "name": "Langbase",
+   "source": "https://ai.engineer/orgs/langbase",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "legora",
+   "name": "Legora",
+   "source": "https://ai.engineer/orgs/legora",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "liquid-ai",
+   "name": "Liquid AI",
+   "source": "https://ai.engineer/orgs/liquid-ai",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "log10",
+   "name": "Log10",
+   "source": "https://ai.engineer/orgs/log10",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "long-lake",
+   "name": "Long Lake",
+   "source": "https://ai.engineer/orgs/long-lake",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "maersk",
+   "name": "Maersk",
+   "source": "https://ai.engineer/orgs/maersk",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "mastra",
+   "name": "Mastra",
+   "source": "https://ai.engineer/orgs/mastra",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "mckinsey-company",
+   "name": "McKinsey & Company",
+   "source": "https://ai.engineer/orgs/mckinsey-company",
+   "speakers": 3,
+   "talks": 2
+  },
+  {
+   "id": "mcp-apps",
+   "name": "MCP Apps",
+   "source": "https://ai.engineer/orgs/mcp-apps",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "metr",
+   "name": "METR",
+   "source": "https://ai.engineer/orgs/metr",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "mistral-ai",
+   "name": "Mistral AI",
+   "source": "https://ai.engineer/orgs/mistral-ai",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "mit-media-lab",
+   "name": "MIT Media Lab",
+   "source": "https://ai.engineer/orgs/mit-media-lab",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "modular",
+   "name": "Modular",
+   "source": "https://ai.engineer/orgs/modular",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "monzo",
+   "name": "Monzo",
+   "source": "https://ai.engineer/orgs/monzo",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "morph-labs",
+   "name": "Morph Labs",
+   "source": "https://ai.engineer/orgs/morph-labs",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "nebius",
+   "name": "Nebius",
+   "source": "https://ai.engineer/orgs/nebius",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "nori",
+   "name": "Nori",
+   "source": "https://ai.engineer/orgs/nori",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "novartis",
+   "name": "Novartis",
+   "source": "https://ai.engineer/orgs/novartis",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "nubank",
+   "name": "Nubank",
+   "source": "https://ai.engineer/orgs/nubank",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "oleve",
+   "name": "Oleve",
+   "source": "https://ai.engineer/orgs/oleve",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "ona",
+   "name": "Ona",
+   "source": "https://ai.engineer/orgs/ona",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "osmantic",
+   "name": "Osmantic",
+   "source": "https://ai.engineer/orgs/osmantic",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "oxylabs",
+   "name": "Oxylabs",
+   "source": "https://ai.engineer/orgs/oxylabs",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "paperclip",
+   "name": "Paperclip",
+   "source": "https://ai.engineer/orgs/paperclip",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "perpetual",
+   "name": "Perpetual",
+   "source": "https://ai.engineer/orgs/perpetual",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "pi-labs",
+   "name": "Pi Labs",
+   "source": "https://ai.engineer/orgs/pi-labs",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "pinterest",
+   "name": "Pinterest",
+   "source": "https://ai.engineer/orgs/pinterest",
+   "speakers": 3,
+   "talks": 2
+  },
+  {
+   "id": "postman",
+   "name": "Postman",
+   "source": "https://ai.engineer/orgs/postman",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "prompthub",
+   "name": "PromptHub",
+   "source": "https://ai.engineer/orgs/prompthub",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "promptql",
+   "name": "PromptQL",
+   "source": "https://ai.engineer/orgs/promptql",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "qdrant",
+   "name": "Qdrant",
+   "source": "https://ai.engineer/orgs/qdrant",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "quotient",
+   "name": "Quotient",
+   "source": "https://ai.engineer/orgs/quotient",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "railway",
+   "name": "Railway",
+   "source": "https://ai.engineer/orgs/railway",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "range",
+   "name": "Range",
+   "source": "https://ai.engineer/orgs/range",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "reflection-ai",
+   "name": "Reflection AI",
+   "source": "https://ai.engineer/orgs/reflection-ai",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "renaissance-geek-inc",
+   "name": "Renaissance Geek, Inc.",
+   "source": "https://ai.engineer/orgs/renaissance-geek-inc",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "replit",
+   "name": "Replit",
+   "source": "https://ai.engineer/orgs/replit",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "resolve-ai",
+   "name": "Resolve AI",
+   "source": "https://ai.engineer/orgs/resolve-ai",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "root-signals",
+   "name": "Root Signals",
+   "source": "https://ai.engineer/orgs/root-signals",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "runlayer",
+   "name": "Runlayer",
+   "source": "https://ai.engineer/orgs/runlayer",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "safe-intelligence",
+   "name": "Safe Intelligence",
+   "source": "https://ai.engineer/orgs/safe-intelligence",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "sambanova-systems",
+   "name": "SambaNova Systems",
+   "source": "https://ai.engineer/orgs/sambanova-systems",
+   "speakers": 3,
+   "talks": 2
+  },
+  {
+   "id": "san-francisco-compute",
+   "name": "San Francisco Compute",
+   "source": "https://ai.engineer/orgs/san-francisco-compute",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "sarvam-ai",
+   "name": "Sarvam AI",
+   "source": "https://ai.engineer/orgs/sarvam-ai",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "sizzy",
+   "name": "Sizzy",
+   "source": "https://ai.engineer/orgs/sizzy",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "spotify",
+   "name": "Spotify",
+   "source": "https://ai.engineer/orgs/spotify",
+   "speakers": 3,
+   "talks": 2
+  },
+  {
+   "id": "standard-agents",
+   "name": "Standard Agents",
+   "source": "https://ai.engineer/orgs/standard-agents",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "tailscale",
+   "name": "Tailscale",
+   "source": "https://ai.engineer/orgs/tailscale",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "taste-labs",
+   "name": "Taste Labs",
+   "source": "https://ai.engineer/orgs/taste-labs",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "the-browser-company",
+   "name": "The Browser Company",
+   "source": "https://ai.engineer/orgs/the-browser-company",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "thomson-reuters",
+   "name": "Thomson Reuters",
+   "source": "https://ai.engineer/orgs/thomson-reuters",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "traceloop",
+   "name": "Traceloop",
+   "source": "https://ai.engineer/orgs/traceloop",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "traversal",
+   "name": "Traversal",
+   "source": "https://ai.engineer/orgs/traversal",
+   "speakers": 3,
+   "talks": 2
+  },
+  {
+   "id": "trelis-research",
+   "name": "Trelis Research",
+   "source": "https://ai.engineer/orgs/trelis-research",
+   "speakers": 1,
+   "talks": 2
+  },
+  {
+   "id": "two-sigma",
+   "name": "Two Sigma",
+   "source": "https://ai.engineer/orgs/two-sigma",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "upside",
+   "name": "Upside",
+   "source": "https://ai.engineer/orgs/upside",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "viktor",
+   "name": "Viktor",
+   "source": "https://ai.engineer/orgs/viktor",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "weco-ai",
+   "name": "Weco AI",
+   "source": "https://ai.engineer/orgs/weco-ai",
+   "speakers": 4,
+   "talks": 2
+  },
+  {
+   "id": "wordware",
+   "name": "Wordware",
+   "source": "https://ai.engineer/orgs/wordware",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "writer",
+   "name": "Writer",
+   "source": "https://ai.engineer/orgs/writer",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "y-combinator",
+   "name": "Y Combinator",
+   "source": "https://ai.engineer/orgs/y-combinator",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "z-ai",
+   "name": "Z.ai",
+   "source": "https://ai.engineer/orgs/z-ai",
+   "speakers": 2,
+   "talks": 2
+  },
+  {
+   "id": "10-downing-street",
+   "name": "10 Downing Street",
+   "source": "https://ai.engineer/orgs/10-downing-street",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "11x",
+   "name": "11X",
+   "source": "https://ai.engineer/orgs/11x",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "14-ai",
+   "name": "14.ai",
+   "source": "https://ai.engineer/orgs/14-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "8th-light",
+   "name": "8th Light",
+   "source": "https://ai.engineer/orgs/8th-light",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "aauth",
+   "name": "AAuth",
+   "source": "https://ai.engineer/orgs/aauth",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ably",
+   "name": "Ably",
+   "source": "https://ai.engineer/orgs/ably",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "abridge",
+   "name": "Abridge",
+   "source": "https://ai.engineer/orgs/abridge",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "acrew-capital",
+   "name": "Acrew Capital",
+   "source": "https://ai.engineer/orgs/acrew-capital",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "adaption",
+   "name": "Adaption",
+   "source": "https://ai.engineer/orgs/adaption",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "adaptive-ml",
+   "name": "Adaptive ML",
+   "source": "https://ai.engineer/orgs/adaptive-ml",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "adept",
+   "name": "Adept",
+   "source": "https://ai.engineer/orgs/adept",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "aech-ai",
+   "name": "Aech AI",
+   "source": "https://ai.engineer/orgs/aech-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "agenta",
+   "name": "Agenta",
+   "source": "https://ai.engineer/orgs/agenta",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "agentcraft",
+   "name": "AgentCraft",
+   "source": "https://ai.engineer/orgs/agentcraft",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "agentmail",
+   "name": "AgentMail",
+   "source": "https://ai.engineer/orgs/agentmail",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "agnostiq-covalent",
+   "name": "Agnostiq (Covalent)",
+   "source": "https://ai.engineer/orgs/agnostiq-covalent",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ai-snake-oil",
+   "name": "AI Snake Oil",
+   "source": "https://ai.engineer/orgs/ai-snake-oil",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "aidachip",
+   "name": "AIDAChip",
+   "source": "https://ai.engineer/orgs/aidachip",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "air-canada",
+   "name": "Air Canada",
+   "source": "https://ai.engineer/orgs/air-canada",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "airbyte",
+   "name": "Airbyte",
+   "source": "https://ai.engineer/orgs/airbyte",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "aius-technologies",
+   "name": "AIUS Technologies",
+   "source": "https://ai.engineer/orgs/aius-technologies",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "alibaba-group-qwen",
+   "name": "Alibaba Group / Qwen",
+   "source": "https://ai.engineer/orgs/alibaba-group-qwen",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "allen-institute-for-ai-ai2-interconnects-ai",
+   "name": "Allen Institute for AI (Ai2); Interconnects.ai",
+   "source": "https://ai.engineer/orgs/allen-institute-for-ai-ai2-interconnects-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "alleycorp",
+   "name": "AlleyCorp",
+   "source": "https://ai.engineer/orgs/alleycorp",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "alma",
+   "name": "Alma",
+   "source": "https://ai.engineer/orgs/alma",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "alpic",
+   "name": "Alpic",
+   "source": "https://ai.engineer/orgs/alpic",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "altos-labs",
+   "name": "Altos Labs",
+   "source": "https://ai.engineer/orgs/altos-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ambient",
+   "name": "Ambient",
+   "source": "https://ai.engineer/orgs/ambient",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "amplifon",
+   "name": "Amplifon",
+   "source": "https://ai.engineer/orgs/amplifon",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "andon-labs",
+   "name": "Andon Labs",
+   "source": "https://ai.engineer/orgs/andon-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "annicha-labs",
+   "name": "Annicha Labs",
+   "source": "https://ai.engineer/orgs/annicha-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "apollo-global-management",
+   "name": "Apollo Global Management",
+   "source": "https://ai.engineer/orgs/apollo-global-management",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "apollo-global-management-redding-ridge",
+   "name": "Apollo Global Management / Redding Ridge",
+   "source": "https://ai.engineer/orgs/apollo-global-management-redding-ridge",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "applied-ai-engineers",
+   "name": "Applied AI Engineers",
+   "source": "https://ai.engineer/orgs/applied-ai-engineers",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "arc-prize-foundation",
+   "name": "ARC Prize Foundation",
+   "source": "https://ai.engineer/orgs/arc-prize-foundation",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "arca",
+   "name": "Arca",
+   "source": "https://ai.engineer/orgs/arca",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "arcjet",
+   "name": "Arcjet",
+   "source": "https://ai.engineer/orgs/arcjet",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "arena-ai",
+   "name": "Arena.ai",
+   "source": "https://ai.engineer/orgs/arena-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ario",
+   "name": "Ario",
+   "source": "https://ai.engineer/orgs/ario",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "arista-networks",
+   "name": "Arista Networks",
+   "source": "https://ai.engineer/orgs/arista-networks",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "arithmetic",
+   "name": "Arithmetic",
+   "source": "https://ai.engineer/orgs/arithmetic",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "arklex-ai-columbia-university",
+   "name": "Arklex AI; Columbia University",
+   "source": "https://ai.engineer/orgs/arklex-ai-columbia-university",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "arrakis",
+   "name": "Arrakis",
+   "source": "https://ai.engineer/orgs/arrakis",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "assemblyai",
+   "name": "AssemblyAI",
+   "source": "https://ai.engineer/orgs/assemblyai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "atlan",
+   "name": "Atlan",
+   "source": "https://ai.engineer/orgs/atlan",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "atlassian",
+   "name": "Atlassian",
+   "source": "https://ai.engineer/orgs/atlassian",
+   "speakers": 4,
+   "talks": 1
+  },
+  {
+   "id": "auditoria-ai",
+   "name": "Auditoria AI",
+   "source": "https://ai.engineer/orgs/auditoria-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "auth0",
+   "name": "Auth0",
+   "source": "https://ai.engineer/orgs/auth0",
+   "speakers": 3,
+   "talks": 1
+  },
+  {
+   "id": "autogpt",
+   "name": "AutoGPT",
+   "source": "https://ai.engineer/orgs/autogpt",
+   "speakers": 3,
+   "talks": 1
+  },
+  {
+   "id": "aviator",
+   "name": "Aviator",
+   "source": "https://ai.engineer/orgs/aviator",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "axa",
+   "name": "AXA",
+   "source": "https://ai.engineer/orgs/axa",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "axim-intelligence",
+   "name": "Axim Intelligence",
+   "source": "https://ai.engineer/orgs/axim-intelligence",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "banking-circle",
+   "name": "Banking Circle",
+   "source": "https://ai.engineer/orgs/banking-circle",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "basis",
+   "name": "Basis",
+   "source": "https://ai.engineer/orgs/basis",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "baz",
+   "name": "Baz",
+   "source": "https://ai.engineer/orgs/baz",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "bbd-software",
+   "name": "BBD Software",
+   "source": "https://ai.engineer/orgs/bbd-software",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "bee-amazon",
+   "name": "Bee, Amazon",
+   "source": "https://ai.engineer/orgs/bee-amazon",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "bench-computing",
+   "name": "Bench Computing",
+   "source": "https://ai.engineer/orgs/bench-computing",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "better-auth",
+   "name": "Better Auth",
+   "source": "https://ai.engineer/orgs/better-auth",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "betterup",
+   "name": "BetterUp",
+   "source": "https://ai.engineer/orgs/betterup",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "bitly",
+   "name": "Bitly",
+   "source": "https://ai.engineer/orgs/bitly",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "black-forest-labs",
+   "name": "Black Forest Labs",
+   "source": "https://ai.engineer/orgs/black-forest-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "blackrock",
+   "name": "BlackRock",
+   "source": "https://ai.engineer/orgs/blackrock",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "blackstone",
+   "name": "Blackstone",
+   "source": "https://ai.engineer/orgs/blackstone",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "blitzy",
+   "name": "Blitzy",
+   "source": "https://ai.engineer/orgs/blitzy",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "bolbeck",
+   "name": "Bolbeck",
+   "source": "https://ai.engineer/orgs/bolbeck",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "bolt-new-stackblitz",
+   "name": "Bolt.new / StackBlitz",
+   "source": "https://ai.engineer/orgs/bolt-new-stackblitz",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "booking-com",
+   "name": "booking.com",
+   "source": "https://ai.engineer/orgs/booking-com",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "botdojo",
+   "name": "BotDojo",
+   "source": "https://ai.engineer/orgs/botdojo",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "boundary",
+   "name": "Boundary",
+   "source": "https://ai.engineer/orgs/boundary",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "brainbase-labs",
+   "name": "Brainbase Labs",
+   "source": "https://ai.engineer/orgs/brainbase-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "brightwave",
+   "name": "Brightwave",
+   "source": "https://ai.engineer/orgs/brightwave",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "bugcrowd",
+   "name": "Bugcrowd",
+   "source": "https://ai.engineer/orgs/bugcrowd",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "bumble",
+   "name": "Bumble",
+   "source": "https://ai.engineer/orgs/bumble",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "callosum",
+   "name": "Callosum",
+   "source": "https://ai.engineer/orgs/callosum",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "callstack",
+   "name": "Callstack",
+   "source": "https://ai.engineer/orgs/callstack",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "candlestick-capital-management",
+   "name": "Candlestick Capital Management",
+   "source": "https://ai.engineer/orgs/candlestick-capital-management",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "casco",
+   "name": "Casco",
+   "source": "https://ai.engineer/orgs/casco",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "cast-ai",
+   "name": "Cast AI",
+   "source": "https://ai.engineer/orgs/cast-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "caylent",
+   "name": "Caylent",
+   "source": "https://ai.engineer/orgs/caylent",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "centralagent-ai",
+   "name": "CentralAgent AI",
+   "source": "https://ai.engineer/orgs/centralagent-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "chainguard",
+   "name": "Chainguard",
+   "source": "https://ai.engineer/orgs/chainguard",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "checkout-com",
+   "name": "Checkout.com",
+   "source": "https://ai.engineer/orgs/checkout-com",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "cherrypick",
+   "name": "Cherrypick",
+   "source": "https://ai.engineer/orgs/cherrypick",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "chime",
+   "name": "Chime",
+   "source": "https://ai.engineer/orgs/chime",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "china-resources-holdings",
+   "name": "China Resources Holdings",
+   "source": "https://ai.engineer/orgs/china-resources-holdings",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "cisco-outshift-by-cisco",
+   "name": "Cisco / Outshift by Cisco",
+   "source": "https://ai.engineer/orgs/cisco-outshift-by-cisco",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "citadel-securities",
+   "name": "Citadel Securities",
+   "source": "https://ai.engineer/orgs/citadel-securities",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "clay",
+   "name": "Clay",
+   "source": "https://ai.engineer/orgs/clay",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "clickhouse",
+   "name": "ClickHouse",
+   "source": "https://ai.engineer/orgs/clickhouse",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "cloudchef",
+   "name": "CloudChef",
+   "source": "https://ai.engineer/orgs/cloudchef",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "cmpnd",
+   "name": "cmpnd",
+   "source": "https://ai.engineer/orgs/cmpnd",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "coatue",
+   "name": "Coatue",
+   "source": "https://ai.engineer/orgs/coatue",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "cognee",
+   "name": "Cognee",
+   "source": "https://ai.engineer/orgs/cognee",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "collibra",
+   "name": "Collibra",
+   "source": "https://ai.engineer/orgs/collibra",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "comfy-org",
+   "name": "Comfy Org",
+   "source": "https://ai.engineer/orgs/comfy-org",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "commercetools",
+   "name": "commercetools",
+   "source": "https://ai.engineer/orgs/commercetools",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "composo",
+   "name": "Composo",
+   "source": "https://ai.engineer/orgs/composo",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "compound-ai",
+   "name": "Compound AI",
+   "source": "https://ai.engineer/orgs/compound-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "compute-exchange-silicon-data",
+   "name": "Compute Exchange; Silicon Data",
+   "source": "https://ai.engineer/orgs/compute-exchange-silicon-data",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "confident-security",
+   "name": "Confident Security",
+   "source": "https://ai.engineer/orgs/confident-security",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "contour-asset-management",
+   "name": "Contour Asset Management",
+   "source": "https://ai.engineer/orgs/contour-asset-management",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "conviction",
+   "name": "Conviction",
+   "source": "https://ai.engineer/orgs/conviction",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "coreweave",
+   "name": "CoreWeave",
+   "source": "https://ai.engineer/orgs/coreweave",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "corridor",
+   "name": "Corridor",
+   "source": "https://ai.engineer/orgs/corridor",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "couplework-ai",
+   "name": "CoupleWork AI",
+   "source": "https://ai.engineer/orgs/couplework-ai",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "credit-karma",
+   "name": "Credit Karma",
+   "source": "https://ai.engineer/orgs/credit-karma",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "crewai",
+   "name": "crewAI",
+   "source": "https://ai.engineer/orgs/crewai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "crv",
+   "name": "CRV",
+   "source": "https://ai.engineer/orgs/crv",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "cua",
+   "name": "Cua",
+   "source": "https://ai.engineer/orgs/cua",
+   "speakers": 3,
+   "talks": 1
+  },
+  {
+   "id": "datachain",
+   "name": "DataChain",
+   "source": "https://ai.engineer/orgs/datachain",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "datacurve",
+   "name": "Datacurve",
+   "source": "https://ai.engineer/orgs/datacurve",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "datalab",
+   "name": "Datalab",
+   "source": "https://ai.engineer/orgs/datalab",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "datarobot",
+   "name": "DataRobot",
+   "source": "https://ai.engineer/orgs/datarobot",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "datasette",
+   "name": "Datasette",
+   "source": "https://ai.engineer/orgs/datasette",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "datasite",
+   "name": "Datasite",
+   "source": "https://ai.engineer/orgs/datasite",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "dbt-labs",
+   "name": "dbt Labs",
+   "source": "https://ai.engineer/orgs/dbt-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "decagon",
+   "name": "Decagon",
+   "source": "https://ai.engineer/orgs/decagon",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "decawork",
+   "name": "Decawork",
+   "source": "https://ai.engineer/orgs/decawork",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "deno",
+   "name": "Deno",
+   "source": "https://ai.engineer/orgs/deno",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "devday",
+   "name": "DevDay",
+   "source": "https://ai.engineer/orgs/devday",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "dioxus-labs",
+   "name": "Dioxus Labs",
+   "source": "https://ai.engineer/orgs/dioxus-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "discord",
+   "name": "Discord",
+   "source": "https://ai.engineer/orgs/discord",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "docusign",
+   "name": "Docusign",
+   "source": "https://ai.engineer/orgs/docusign",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "druid-ai",
+   "name": "Druid AI",
+   "source": "https://ai.engineer/orgs/druid-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "dspy",
+   "name": "DSPy",
+   "source": "https://ai.engineer/orgs/dspy",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "dylibso",
+   "name": "Dylibso",
+   "source": "https://ai.engineer/orgs/dylibso",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "dyna-robotics",
+   "name": "Dyna Robotics",
+   "source": "https://ai.engineer/orgs/dyna-robotics",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "dynatrace",
+   "name": "Dynatrace",
+   "source": "https://ai.engineer/orgs/dynatrace",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "earendil",
+   "name": "Earendil",
+   "source": "https://ai.engineer/orgs/earendil",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "echo-ai",
+   "name": "Echo AI",
+   "source": "https://ai.engineer/orgs/echo-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "edge-node",
+   "name": "Edge & Node",
+   "source": "https://ai.engineer/orgs/edge-node",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "effectful-technologies-inc",
+   "name": "Effectful Technologies Inc",
+   "source": "https://ai.engineer/orgs/effectful-technologies-inc",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "eliseai",
+   "name": "EliseAI",
+   "source": "https://ai.engineer/orgs/eliseai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "elorian",
+   "name": "Elorian",
+   "source": "https://ai.engineer/orgs/elorian",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "emergence",
+   "name": "Emergence",
+   "source": "https://ai.engineer/orgs/emergence",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "emulated",
+   "name": "Emulated",
+   "source": "https://ai.engineer/orgs/emulated",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "engram",
+   "name": "Engram",
+   "source": "https://ai.engineer/orgs/engram",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ensemble-health-partners",
+   "name": "Ensemble Health Partners",
+   "source": "https://ai.engineer/orgs/ensemble-health-partners",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "entry-point-ai",
+   "name": "Entry Point AI",
+   "source": "https://ai.engineer/orgs/entry-point-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "epicai-pro",
+   "name": "EpicAI.pro",
+   "source": "https://ai.engineer/orgs/epicai-pro",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "erel-labs",
+   "name": "Erel Labs",
+   "source": "https://ai.engineer/orgs/erel-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "eslams",
+   "name": "eSlams",
+   "source": "https://ai.engineer/orgs/eslams",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "etsy",
+   "name": "Etsy",
+   "source": "https://ai.engineer/orgs/etsy",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "exl",
+   "name": "EXL",
+   "source": "https://ai.engineer/orgs/exl",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "eyelevel-ai",
+   "name": "EyeLevel.ai",
+   "source": "https://ai.engineer/orgs/eyelevel-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "fair-meta",
+   "name": "FAIR, Meta",
+   "source": "https://ai.engineer/orgs/fair-meta",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "fal",
+   "name": "Fal",
+   "source": "https://ai.engineer/orgs/fal",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "fidelity-investments",
+   "name": "Fidelity Investments",
+   "source": "https://ai.engineer/orgs/fidelity-investments",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "fieldguide",
+   "name": "Fieldguide",
+   "source": "https://ai.engineer/orgs/fieldguide",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "filed",
+   "name": "Filed",
+   "source": "https://ai.engineer/orgs/filed",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "firecrawl",
+   "name": "Firecrawl",
+   "source": "https://ai.engineer/orgs/firecrawl",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "fixie-ai",
+   "name": "Fixie.ai",
+   "source": "https://ai.engineer/orgs/fixie-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "flatfile",
+   "name": "Flatfile",
+   "source": "https://ai.engineer/orgs/flatfile",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "flinn-ai",
+   "name": "Flinn AI",
+   "source": "https://ai.engineer/orgs/flinn-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "flyerssoft",
+   "name": "FlyersSoft",
+   "source": "https://ai.engineer/orgs/flyerssoft",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "flywire",
+   "name": "Flywire",
+   "source": "https://ai.engineer/orgs/flywire",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "forestwalk-labs",
+   "name": "Forestwalk Labs",
+   "source": "https://ai.engineer/orgs/forestwalk-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "form3",
+   "name": "Form3",
+   "source": "https://ai.engineer/orgs/form3",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "forward-future",
+   "name": "Forward Future",
+   "source": "https://ai.engineer/orgs/forward-future",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "fractional-ai",
+   "name": "Fractional AI",
+   "source": "https://ai.engineer/orgs/fractional-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "freeman-forrest",
+   "name": "Freeman & Forrest",
+   "source": "https://ai.engineer/orgs/freeman-forrest",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "fujitsu-north-america",
+   "name": "Fujitsu North America",
+   "source": "https://ai.engineer/orgs/fujitsu-north-america",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "funstage-gmbh",
+   "name": "Funstage GmbH",
+   "source": "https://ai.engineer/orgs/funstage-gmbh",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "gabber",
+   "name": "Gabber",
+   "source": "https://ai.engineer/orgs/gabber",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "galileo",
+   "name": "Galileo",
+   "source": "https://ai.engineer/orgs/galileo",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "gamma",
+   "name": "Gamma",
+   "source": "https://ai.engineer/orgs/gamma",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "gas-town",
+   "name": "Gas Town",
+   "source": "https://ai.engineer/orgs/gas-town",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "gates-foundation",
+   "name": "Gates Foundation",
+   "source": "https://ai.engineer/orgs/gates-foundation",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "geico",
+   "name": "GEICO",
+   "source": "https://ai.engineer/orgs/geico",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "genai-israel",
+   "name": "GenAI Israel",
+   "source": "https://ai.engineer/orgs/genai-israel",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "general-intuition",
+   "name": "General Intuition",
+   "source": "https://ai.engineer/orgs/general-intuition",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "general-reasoning",
+   "name": "General Reasoning",
+   "source": "https://ai.engineer/orgs/general-reasoning",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "gensx",
+   "name": "GenSX",
+   "source": "https://ai.engineer/orgs/gensx",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "gepa",
+   "name": "GEPA",
+   "source": "https://ai.engineer/orgs/gepa",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "gimlet-labs",
+   "name": "Gimlet Labs",
+   "source": "https://ai.engineer/orgs/gimlet-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "glean",
+   "name": "Glean",
+   "source": "https://ai.engineer/orgs/glean",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "glow",
+   "name": "Glow",
+   "source": "https://ai.engineer/orgs/glow",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "good-collective",
+   "name": "Good Collective",
+   "source": "https://ai.engineer/orgs/good-collective",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "goodfire",
+   "name": "Goodfire",
+   "source": "https://ai.engineer/orgs/goodfire",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "google-youtube",
+   "name": "Google / YouTube",
+   "source": "https://ai.engineer/orgs/google-youtube",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "google-youtube-ads",
+   "name": "Google / YouTube Ads",
+   "source": "https://ai.engineer/orgs/google-youtube-ads",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "google-photos",
+   "name": "Google Photos",
+   "source": "https://ai.engineer/orgs/google-photos",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "gradient",
+   "name": "Gradient",
+   "source": "https://ai.engineer/orgs/gradient",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "granola",
+   "name": "Granola",
+   "source": "https://ai.engineer/orgs/granola",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "grit",
+   "name": "Grit",
+   "source": "https://ai.engineer/orgs/grit",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "groq",
+   "name": "Groq",
+   "source": "https://ai.engineer/orgs/groq",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "growth-cyber",
+   "name": "Growth Cyber",
+   "source": "https://ai.engineer/orgs/growth-cyber",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "gru-ai",
+   "name": "Gru.ai",
+   "source": "https://ai.engineer/orgs/gru-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "guardrails-ai",
+   "name": "Guardrails AI",
+   "source": "https://ai.engineer/orgs/guardrails-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "gumloop",
+   "name": "Gumloop",
+   "source": "https://ai.engineer/orgs/gumloop",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "haize-labs",
+   "name": "Haize Labs",
+   "source": "https://ai.engineer/orgs/haize-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "halluminate",
+   "name": "Halluminate",
+   "source": "https://ai.engineer/orgs/halluminate",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "hamming-ai",
+   "name": "Hamming AI",
+   "source": "https://ai.engineer/orgs/hamming-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "heroku",
+   "name": "Heroku",
+   "source": "https://ai.engineer/orgs/heroku",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "hey-ai",
+   "name": "Hey AI",
+   "source": "https://ai.engineer/orgs/hey-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "hiddenlayer",
+   "name": "HiddenLayer",
+   "source": "https://ai.engineer/orgs/hiddenlayer",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "higharc",
+   "name": "Higharc",
+   "source": "https://ai.engineer/orgs/higharc",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "hinge-health",
+   "name": "Hinge Health",
+   "source": "https://ai.engineer/orgs/hinge-health",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "hippocratic-ai",
+   "name": "Hippocratic AI",
+   "source": "https://ai.engineer/orgs/hippocratic-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "honeyhive",
+   "name": "HoneyHive",
+   "source": "https://ai.engineer/orgs/honeyhive",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "hornet-dev",
+   "name": "Hornet.dev",
+   "source": "https://ai.engineer/orgs/hornet-dev",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "hud",
+   "name": "Hud",
+   "source": "https://ai.engineer/orgs/hud",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "huge",
+   "name": "Huge",
+   "source": "https://ai.engineer/orgs/huge",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "humanloop",
+   "name": "Humanloop",
+   "source": "https://ai.engineer/orgs/humanloop",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "huxe",
+   "name": "Huxe",
+   "source": "https://ai.engineer/orgs/huxe",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "hyperagent",
+   "name": "HyperAgent",
+   "source": "https://ai.engineer/orgs/hyperagent",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "hyperbolic",
+   "name": "Hyperbolic",
+   "source": "https://ai.engineer/orgs/hyperbolic",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "hyperspace",
+   "name": "Hyperspace",
+   "source": "https://ai.engineer/orgs/hyperspace",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ikea",
+   "name": "IKEA",
+   "source": "https://ai.engineer/orgs/ikea",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "imbue",
+   "name": "Imbue",
+   "source": "https://ai.engineer/orgs/imbue",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "imec",
+   "name": "imec",
+   "source": "https://ai.engineer/orgs/imec",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "in-the-pocket",
+   "name": "In The Pocket",
+   "source": "https://ai.engineer/orgs/in-the-pocket",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "incident-io",
+   "name": "incident.io",
+   "source": "https://ai.engineer/orgs/incident-io",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "incubator-for-artificial-intelligence-i-ai",
+   "name": "Incubator for Artificial Intelligence (i.AI)",
+   "source": "https://ai.engineer/orgs/incubator-for-artificial-intelligence-i-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "indeed",
+   "name": "Indeed",
+   "source": "https://ai.engineer/orgs/indeed",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "independent-state-of-data",
+   "name": "Independent / State of Data",
+   "source": "https://ai.engineer/orgs/independent-state-of-data",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "inngest",
+   "name": "Inngest",
+   "source": "https://ai.engineer/orgs/inngest",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "insight-sciences",
+   "name": "Insight Sciences",
+   "source": "https://ai.engineer/orgs/insight-sciences",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "instacart",
+   "name": "Instacart",
+   "source": "https://ai.engineer/orgs/instacart",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "intel",
+   "name": "Intel",
+   "source": "https://ai.engineer/orgs/intel",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "inth",
+   "name": "Inth",
+   "source": "https://ai.engineer/orgs/inth",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "intrinsec-ai",
+   "name": "Intrinsec AI",
+   "source": "https://ai.engineer/orgs/intrinsec-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "introspection",
+   "name": "Introspection",
+   "source": "https://ai.engineer/orgs/introspection",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ionic-commerce",
+   "name": "Ionic Commerce",
+   "source": "https://ai.engineer/orgs/ionic-commerce",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ironclad",
+   "name": "Ironclad",
+   "source": "https://ai.engineer/orgs/ironclad",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "isadora-co-the-bloom-house-ai",
+   "name": "Isadora & Co | The Bloom House AI",
+   "source": "https://ai.engineer/orgs/isadora-co-the-bloom-house-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "it-revolution",
+   "name": "IT Revolution",
+   "source": "https://ai.engineer/orgs/it-revolution",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "iterate",
+   "name": "Iterate",
+   "source": "https://ai.engineer/orgs/iterate",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "jam",
+   "name": "Jam",
+   "source": "https://ai.engineer/orgs/jam",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "jane-street",
+   "name": "Jane Street",
+   "source": "https://ai.engineer/orgs/jane-street",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "jedi",
+   "name": "Jedi",
+   "source": "https://ai.engineer/orgs/jedi",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "joinin-ai",
+   "name": "JoinIn AI",
+   "source": "https://ai.engineer/orgs/joinin-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "jointly",
+   "name": "Jointly",
+   "source": "https://ai.engineer/orgs/jointly",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "jump-trading",
+   "name": "Jump Trading",
+   "source": "https://ai.engineer/orgs/jump-trading",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "k-scale-labs",
+   "name": "K-Scale Labs",
+   "source": "https://ai.engineer/orgs/k-scale-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "kalmantic-labs",
+   "name": "Kalmantic Labs",
+   "source": "https://ai.engineer/orgs/kalmantic-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "khan-academy",
+   "name": "Khan Academy",
+   "source": "https://ai.engineer/orgs/khan-academy",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "kiduna-club",
+   "name": "Kiduna Club",
+   "source": "https://ai.engineer/orgs/kiduna-club",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "kilo-code",
+   "name": "Kilo Code",
+   "source": "https://ai.engineer/orgs/kilo-code",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "klarity",
+   "name": "Klarity",
+   "source": "https://ai.engineer/orgs/klarity",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "krafton",
+   "name": "KRAFTON",
+   "source": "https://ai.engineer/orgs/krafton",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "lastmile-ai",
+   "name": "LastMile AI",
+   "source": "https://ai.engineer/orgs/lastmile-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "latchbio",
+   "name": "LatchBio",
+   "source": "https://ai.engineer/orgs/latchbio",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "latent-space-university",
+   "name": "Latent Space University",
+   "source": "https://ai.engineer/orgs/latent-space-university",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "laude-institute",
+   "name": "Laude Institute",
+   "source": "https://ai.engineer/orgs/laude-institute",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "leading-at-scale",
+   "name": "Leading at Scale",
+   "source": "https://ai.engineer/orgs/leading-at-scale",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "lease-end",
+   "name": "Lease End",
+   "source": "https://ai.engineer/orgs/lease-end",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "leibniz-labs",
+   "name": "Leibniz Labs",
+   "source": "https://ai.engineer/orgs/leibniz-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "lemonslice",
+   "name": "LemonSlice",
+   "source": "https://ai.engineer/orgs/lemonslice",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "lenses-io",
+   "name": "Lenses.io",
+   "source": "https://ai.engineer/orgs/lenses-io",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "lexica",
+   "name": "Lexica",
+   "source": "https://ai.engineer/orgs/lexica",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "lexisnexis",
+   "name": "LexisNexis",
+   "source": "https://ai.engineer/orgs/lexisnexis",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "lindy",
+   "name": "Lindy",
+   "source": "https://ai.engineer/orgs/lindy",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "linqalpha",
+   "name": "LinqAlpha",
+   "source": "https://ai.engineer/orgs/linqalpha",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "locally-ai",
+   "name": "Locally AI",
+   "source": "https://ai.engineer/orgs/locally-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "los-alamos-national-laboratory",
+   "name": "Los Alamos National Laboratory",
+   "source": "https://ai.engineer/orgs/los-alamos-national-laboratory",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "lovable",
+   "name": "Lovable",
+   "source": "https://ai.engineer/orgs/lovable",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "luma-ai",
+   "name": "Luma AI",
+   "source": "https://ai.engineer/orgs/luma-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "luminal",
+   "name": "Luminal",
+   "source": "https://ai.engineer/orgs/luminal",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "lux-capital",
+   "name": "Lux Capital",
+   "source": "https://ai.engineer/orgs/lux-capital",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "lyft",
+   "name": "Lyft",
+   "source": "https://ai.engineer/orgs/lyft",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "m87-labs",
+   "name": "M87 Labs",
+   "source": "https://ai.engineer/orgs/m87-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "machinecraft",
+   "name": "Machinecraft",
+   "source": "https://ai.engineer/orgs/machinecraft",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "manufact-inc",
+   "name": "Manufact, Inc",
+   "source": "https://ai.engineer/orgs/manufact-inc",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "manufactured",
+   "name": "Manufactured",
+   "source": "https://ai.engineer/orgs/manufactured",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "manus",
+   "name": "Manus",
+   "source": "https://ai.engineer/orgs/manus",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "mastercard",
+   "name": "Mastercard",
+   "source": "https://ai.engineer/orgs/mastercard",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "maven-clinic",
+   "name": "Maven Clinic",
+   "source": "https://ai.engineer/orgs/maven-clinic",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "merge",
+   "name": "Merge",
+   "source": "https://ai.engineer/orgs/merge",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "meta-pytorch",
+   "name": "Meta PyTorch",
+   "source": "https://ai.engineer/orgs/meta-pytorch",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "method-financial",
+   "name": "Method Financial",
+   "source": "https://ai.engineer/orgs/method-financial",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "meticulous",
+   "name": "Meticulous",
+   "source": "https://ai.engineer/orgs/meticulous",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "midjourney",
+   "name": "Midjourney",
+   "source": "https://ai.engineer/orgs/midjourney",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "millennium",
+   "name": "Millennium",
+   "source": "https://ai.engineer/orgs/millennium",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "mindmakers",
+   "name": "Mindmakers",
+   "source": "https://ai.engineer/orgs/mindmakers",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "mintlify",
+   "name": "Mintlify",
+   "source": "https://ai.engineer/orgs/mintlify",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "monday-com",
+   "name": "monday.com",
+   "source": "https://ai.engineer/orgs/monday-com",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "mongodb-voyage-ai",
+   "name": "MongoDB / Voyage AI",
+   "source": "https://ai.engineer/orgs/mongodb-voyage-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "moonlake-ai",
+   "name": "Moonlake AI",
+   "source": "https://ai.engineer/orgs/moonlake-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "morph",
+   "name": "Morph",
+   "source": "https://ai.engineer/orgs/morph",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "moshi",
+   "name": "Moshi",
+   "source": "https://ai.engineer/orgs/moshi",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "mozilla",
+   "name": "Mozilla",
+   "source": "https://ai.engineer/orgs/mozilla",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "mozilla-ai",
+   "name": "Mozilla.ai",
+   "source": "https://ai.engineer/orgs/mozilla-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "multinear",
+   "name": "Multinear",
+   "source": "https://ai.engineer/orgs/multinear",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "muna",
+   "name": "Muna",
+   "source": "https://ai.engineer/orgs/muna",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "mutagent",
+   "name": "Mutagent",
+   "source": "https://ai.engineer/orgs/mutagent",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "n8n",
+   "name": "n8n",
+   "source": "https://ai.engineer/orgs/n8n",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "namespace",
+   "name": "Namespace",
+   "source": "https://ai.engineer/orgs/namespace",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "natwest",
+   "name": "NatWest",
+   "source": "https://ai.engineer/orgs/natwest",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "navan",
+   "name": "Navan",
+   "source": "https://ai.engineer/orgs/navan",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "nearform",
+   "name": "Nearform",
+   "source": "https://ai.engineer/orgs/nearform",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "neocognition",
+   "name": "NeoCognition",
+   "source": "https://ai.engineer/orgs/neocognition",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "nereu",
+   "name": "Nereu",
+   "source": "https://ai.engineer/orgs/nereu",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "new-computer",
+   "name": "New Computer",
+   "source": "https://ai.engineer/orgs/new-computer",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "new-enterprise-associates-nea",
+   "name": "New Enterprise Associates (NEA)",
+   "source": "https://ai.engineer/orgs/new-enterprise-associates-nea",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "new-generation-new-gen",
+   "name": "New Generation (New Gen)",
+   "source": "https://ai.engineer/orgs/new-generation-new-gen",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "new-york-life",
+   "name": "New York Life",
+   "source": "https://ai.engineer/orgs/new-york-life",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "news-corp",
+   "name": "News Corp",
+   "source": "https://ai.engineer/orgs/news-corp",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "norm-ai",
+   "name": "Norm AI",
+   "source": "https://ai.engineer/orgs/norm-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "normal-computing",
+   "name": "Normal Computing",
+   "source": "https://ai.engineer/orgs/normal-computing",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "northwestern-mutual",
+   "name": "Northwestern Mutual",
+   "source": "https://ai.engineer/orgs/northwestern-mutual",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "notable-capital",
+   "name": "Notable Capital",
+   "source": "https://ai.engineer/orgs/notable-capital",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "notius-labs",
+   "name": "Notius Labs",
+   "source": "https://ai.engineer/orgs/notius-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "nous-research",
+   "name": "Nous Research",
+   "source": "https://ai.engineer/orgs/nous-research",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "nx",
+   "name": "Nx",
+   "source": "https://ai.engineer/orgs/nx",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "octoai",
+   "name": "OctoAI",
+   "source": "https://ai.engineer/orgs/octoai",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "ogilvy",
+   "name": "Ogilvy",
+   "source": "https://ai.engineer/orgs/ogilvy",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "oliver",
+   "name": "OLIVER",
+   "source": "https://ai.engineer/orgs/oliver",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ollama",
+   "name": "Ollama",
+   "source": "https://ai.engineer/orgs/ollama",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "omnara",
+   "name": "Omnara",
+   "source": "https://ai.engineer/orgs/omnara",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "omni-analytics",
+   "name": "Omni Analytics",
+   "source": "https://ai.engineer/orgs/omni-analytics",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "onlay",
+   "name": "Onlay",
+   "source": "https://ai.engineer/orgs/onlay",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "openaudio-fish-audio",
+   "name": "OpenAudio / Fish Audio",
+   "source": "https://ai.engineer/orgs/openaudio-fish-audio",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "openclaw",
+   "name": "OpenClaw",
+   "source": "https://ai.engineer/orgs/openclaw",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "openclaw-textcortex-at-the-time-of-recording",
+   "name": "OpenClaw; TextCortex at the time of recording",
+   "source": "https://ai.engineer/orgs/openclaw-textcortex-at-the-time-of-recording",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "opencode",
+   "name": "OpenCode",
+   "source": "https://ai.engineer/orgs/opencode",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "opengov",
+   "name": "OpenGov",
+   "source": "https://ai.engineer/orgs/opengov",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "optiver",
+   "name": "Optiver",
+   "source": "https://ai.engineer/orgs/optiver",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "orbis-operations",
+   "name": "Orbis Operations",
+   "source": "https://ai.engineer/orgs/orbis-operations",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "orbital",
+   "name": "Orbital",
+   "source": "https://ai.engineer/orgs/orbital",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "orkes",
+   "name": "Orkes",
+   "source": "https://ai.engineer/orgs/orkes",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "outrival",
+   "name": "OutRival",
+   "source": "https://ai.engineer/orgs/outrival",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "palo-alto-networks",
+   "name": "Palo Alto Networks",
+   "source": "https://ai.engineer/orgs/palo-alto-networks",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "paper-compute",
+   "name": "Paper Compute",
+   "source": "https://ai.engineer/orgs/paper-compute",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "patho-ai",
+   "name": "Patho.ai",
+   "source": "https://ai.engineer/orgs/patho-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "perceptron-ai",
+   "name": "Perceptron AI",
+   "source": "https://ai.engineer/orgs/perceptron-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "pff",
+   "name": "PFF",
+   "source": "https://ai.engineer/orgs/pff",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "pfizer",
+   "name": "Pfizer",
+   "source": "https://ai.engineer/orgs/pfizer",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "phaidra",
+   "name": "Phaidra",
+   "source": "https://ai.engineer/orgs/phaidra",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "philo-ventures",
+   "name": "Philo Ventures",
+   "source": "https://ai.engineer/orgs/philo-ventures",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "physical-intelligence",
+   "name": "Physical Intelligence",
+   "source": "https://ai.engineer/orgs/physical-intelligence",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "pi",
+   "name": "PI",
+   "source": "https://ai.engineer/orgs/pi",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "pieces",
+   "name": "Pieces",
+   "source": "https://ai.engineer/orgs/pieces",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "pinecone",
+   "name": "Pinecone",
+   "source": "https://ai.engineer/orgs/pinecone",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ping-labs",
+   "name": "Ping Labs",
+   "source": "https://ai.engineer/orgs/ping-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "planetscale",
+   "name": "PlanetScale",
+   "source": "https://ai.engineer/orgs/planetscale",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "plivo",
+   "name": "Plivo",
+   "source": "https://ai.engineer/orgs/plivo",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "polar-signals",
+   "name": "Polar Signals",
+   "source": "https://ai.engineer/orgs/polar-signals",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "pomerium",
+   "name": "Pomerium",
+   "source": "https://ai.engineer/orgs/pomerium",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "portia-ai",
+   "name": "Portia AI",
+   "source": "https://ai.engineer/orgs/portia-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "position2",
+   "name": "Position²",
+   "source": "https://ai.engineer/orgs/position2",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "prediction-guard",
+   "name": "Prediction Guard",
+   "source": "https://ai.engineer/orgs/prediction-guard",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "privacera",
+   "name": "Privacera",
+   "source": "https://ai.engineer/orgs/privacera",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "programma-labs",
+   "name": "Programma Labs",
+   "source": "https://ai.engineer/orgs/programma-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "progress-software",
+   "name": "Progress Software",
+   "source": "https://ai.engineer/orgs/progress-software",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "project-nanda",
+   "name": "Project NANDA",
+   "source": "https://ai.engineer/orgs/project-nanda",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "promptlayer",
+   "name": "PromptLayer",
+   "source": "https://ai.engineer/orgs/promptlayer",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "prosodica",
+   "name": "Prosodica",
+   "source": "https://ai.engineer/orgs/prosodica",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "pruna-ai",
+   "name": "Pruna AI",
+   "source": "https://ai.engineer/orgs/pruna-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "pulley",
+   "name": "Pulley",
+   "source": "https://ai.engineer/orgs/pulley",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "pyannoteai",
+   "name": "pyannoteAI",
+   "source": "https://ai.engineer/orgs/pyannoteai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "quantumblack",
+   "name": "QuantumBlack",
+   "source": "https://ai.engineer/orgs/quantumblack",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "quantyca",
+   "name": "Quantyca",
+   "source": "https://ai.engineer/orgs/quantyca",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "radicait",
+   "name": "RADiCAIT",
+   "source": "https://ai.engineer/orgs/radicait",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "rasgo",
+   "name": "Rasgo",
+   "source": "https://ai.engineer/orgs/rasgo",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ratel",
+   "name": "Ratel",
+   "source": "https://ai.engineer/orgs/ratel",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "re-skill",
+   "name": "Re-skill",
+   "source": "https://ai.engineer/orgs/re-skill",
+   "speakers": 0,
+   "talks": 1
+  },
+  {
+   "id": "re-ma-ai",
+   "name": "re:ma AI",
+   "source": "https://ai.engineer/orgs/re-ma-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "reactor",
+   "name": "Reactor",
+   "source": "https://ai.engineer/orgs/reactor",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "rechat",
+   "name": "Rechat",
+   "source": "https://ai.engineer/orgs/rechat",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "reddit",
+   "name": "Reddit",
+   "source": "https://ai.engineer/orgs/reddit",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "reelful",
+   "name": "Reelful",
+   "source": "https://ai.engineer/orgs/reelful",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ref",
+   "name": "Ref.",
+   "source": "https://ai.engineer/orgs/ref",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "reforge",
+   "name": "Reforge",
+   "source": "https://ai.engineer/orgs/reforge",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "relai",
+   "name": "RELAI",
+   "source": "https://ai.engineer/orgs/relai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "replicate",
+   "name": "Replicate",
+   "source": "https://ai.engineer/orgs/replicate",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "resonate-hq-inc",
+   "name": "Resonate HQ, Inc",
+   "source": "https://ai.engineer/orgs/resonate-hq-inc",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "restate",
+   "name": "Restate",
+   "source": "https://ai.engineer/orgs/restate",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "results-generation",
+   "name": "Results Generation",
+   "source": "https://ai.engineer/orgs/results-generation",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "retool",
+   "name": "Retool",
+   "source": "https://ai.engineer/orgs/retool",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "revolut",
+   "name": "Revolut",
+   "source": "https://ai.engineer/orgs/revolut",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "reweaver-ai",
+   "name": "ReWeaver AI",
+   "source": "https://ai.engineer/orgs/reweaver-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "risa-labs",
+   "name": "RISA Labs",
+   "source": "https://ai.engineer/orgs/risa-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "robinhood",
+   "name": "Robinhood",
+   "source": "https://ai.engineer/orgs/robinhood",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "roku",
+   "name": "Roku",
+   "source": "https://ai.engineer/orgs/roku",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "rowspace",
+   "name": "Rowspace",
+   "source": "https://ai.engineer/orgs/rowspace",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "rtrvr-ai",
+   "name": "rtrvr.ai",
+   "source": "https://ai.engineer/orgs/rtrvr-ai",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "runway",
+   "name": "Runway",
+   "source": "https://ai.engineer/orgs/runway",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "sakana-ai",
+   "name": "Sakana AI",
+   "source": "https://ai.engineer/orgs/sakana-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "salesforce",
+   "name": "Salesforce",
+   "source": "https://ai.engineer/orgs/salesforce",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "samaya-ai",
+   "name": "Samaya AI",
+   "source": "https://ai.engineer/orgs/samaya-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "sap",
+   "name": "SAP",
+   "source": "https://ai.engineer/orgs/sap",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "scalekit",
+   "name": "Scalekit",
+   "source": "https://ai.engineer/orgs/scalekit",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "scorecard",
+   "name": "Scorecard",
+   "source": "https://ai.engineer/orgs/scorecard",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "sematic",
+   "name": "Sematic",
+   "source": "https://ai.engineer/orgs/sematic",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "servicenow",
+   "name": "ServiceNow",
+   "source": "https://ai.engineer/orgs/servicenow",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "sid-ai",
+   "name": "SID.ai",
+   "source": "https://ai.engineer/orgs/sid-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "signalfire",
+   "name": "SignalFire",
+   "source": "https://ai.engineer/orgs/signalfire",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "simular",
+   "name": "Simular",
+   "source": "https://ai.engineer/orgs/simular",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "skild-ai",
+   "name": "Skild AI",
+   "source": "https://ai.engineer/orgs/skild-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "sky-valley-ambient-computing",
+   "name": "Sky Valley Ambient Computing",
+   "source": "https://ai.engineer/orgs/sky-valley-ambient-computing",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "skydio",
+   "name": "Skydio",
+   "source": "https://ai.engineer/orgs/skydio",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "smithery",
+   "name": "Smithery",
+   "source": "https://ai.engineer/orgs/smithery",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "snapchat",
+   "name": "Snapchat",
+   "source": "https://ai.engineer/orgs/snapchat",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "snaplogic-university-of-san-francisco",
+   "name": "SnapLogic; University of San Francisco",
+   "source": "https://ai.engineer/orgs/snaplogic-university-of-san-francisco",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "snowflake",
+   "name": "Snowflake",
+   "source": "https://ai.engineer/orgs/snowflake",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "snowglobe",
+   "name": "Snowglobe",
+   "source": "https://ai.engineer/orgs/snowglobe",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "sofi",
+   "name": "SoFi",
+   "source": "https://ai.engineer/orgs/sofi",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "software-3-0-llc",
+   "name": "Software 3.0, LLC",
+   "source": "https://ai.engineer/orgs/software-3-0-llc",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "sondermind",
+   "name": "SonderMind",
+   "source": "https://ai.engineer/orgs/sondermind",
+   "speakers": 3,
+   "talks": 1
+  },
+  {
+   "id": "southbridge-ai",
+   "name": "Southbridge AI",
+   "source": "https://ai.engineer/orgs/southbridge-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "speakeasy",
+   "name": "Speakeasy",
+   "source": "https://ai.engineer/orgs/speakeasy",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "specstory",
+   "name": "SpecStory",
+   "source": "https://ai.engineer/orgs/specstory",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "spranic",
+   "name": "Spranic",
+   "source": "https://ai.engineer/orgs/spranic",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "sprout-social",
+   "name": "Sprout Social",
+   "source": "https://ai.engineer/orgs/sprout-social",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "standard-cybernetics",
+   "name": "Standard Cybernetics",
+   "source": "https://ai.engineer/orgs/standard-cybernetics",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "starlightsearch-inc",
+   "name": "StarlightSearch Inc",
+   "source": "https://ai.engineer/orgs/starlightsearch-inc",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "stealthium",
+   "name": "Stealthium",
+   "source": "https://ai.engineer/orgs/stealthium",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "stigg",
+   "name": "Stigg",
+   "source": "https://ai.engineer/orgs/stigg",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "stride",
+   "name": "Stride",
+   "source": "https://ai.engineer/orgs/stride",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "substrate",
+   "name": "Substrate",
+   "source": "https://ai.engineer/orgs/substrate",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "super-protocol",
+   "name": "Super Protocol",
+   "source": "https://ai.engineer/orgs/super-protocol",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "superagentic-ai",
+   "name": "Superagentic AI",
+   "source": "https://ai.engineer/orgs/superagentic-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "supercell",
+   "name": "Supercell",
+   "source": "https://ai.engineer/orgs/supercell",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "superconductor",
+   "name": "Superconductor",
+   "source": "https://ai.engineer/orgs/superconductor",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "superdial",
+   "name": "SuperDial",
+   "source": "https://ai.engineer/orgs/superdial",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "superintelligent",
+   "name": "Superintelligent",
+   "source": "https://ai.engineer/orgs/superintelligent",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "surge-ai",
+   "name": "Surge AI",
+   "source": "https://ai.engineer/orgs/surge-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "synth",
+   "name": "Synth",
+   "source": "https://ai.engineer/orgs/synth",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "take-take-take",
+   "name": "Take Take Take",
+   "source": "https://ai.engineer/orgs/take-take-take",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "tata-consultancy-services",
+   "name": "Tata Consultancy Services",
+   "source": "https://ai.engineer/orgs/tata-consultancy-services",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tavily",
+   "name": "Tavily",
+   "source": "https://ai.engineer/orgs/tavily",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tavon-ai",
+   "name": "TAVON.ai",
+   "source": "https://ai.engineer/orgs/tavon-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tavus",
+   "name": "Tavus",
+   "source": "https://ai.engineer/orgs/tavus",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "teammates",
+   "name": "Teammates",
+   "source": "https://ai.engineer/orgs/teammates",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "telemetrak",
+   "name": "Telemetrak",
+   "source": "https://ai.engineer/orgs/telemetrak",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "tenex",
+   "name": "Tenex",
+   "source": "https://ai.engineer/orgs/tenex",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tesco",
+   "name": "Tesco",
+   "source": "https://ai.engineer/orgs/tesco",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tesla",
+   "name": "Tesla",
+   "source": "https://ai.engineer/orgs/tesla",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tesla-optimus",
+   "name": "Tesla Optimus",
+   "source": "https://ai.engineer/orgs/tesla-optimus",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "the-new-york-times",
+   "name": "The New York Times",
+   "source": "https://ai.engineer/orgs/the-new-york-times",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "the-new-york-times-games",
+   "name": "The New York Times Games",
+   "source": "https://ai.engineer/orgs/the-new-york-times-games",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "the-tree-center",
+   "name": "The Tree Center",
+   "source": "https://ai.engineer/orgs/the-tree-center",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "thebrain-pro",
+   "name": "TheBrain.pro",
+   "source": "https://ai.engineer/orgs/thebrain-pro",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "theory-ventures",
+   "name": "Theory Ventures",
+   "source": "https://ai.engineer/orgs/theory-ventures",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "theta-software",
+   "name": "Theta Software",
+   "source": "https://ai.engineer/orgs/theta-software",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "thinking-machines",
+   "name": "Thinking Machines",
+   "source": "https://ai.engineer/orgs/thinking-machines",
+   "speakers": 0,
+   "talks": 1
+  },
+  {
+   "id": "thryv-com",
+   "name": "thryv.com",
+   "source": "https://ai.engineer/orgs/thryv-com",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tiktok",
+   "name": "TikTok",
+   "source": "https://ai.engineer/orgs/tiktok",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tinder",
+   "name": "Tinder",
+   "source": "https://ai.engineer/orgs/tinder",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tng-technology-consulting",
+   "name": "TNG Technology Consulting",
+   "source": "https://ai.engineer/orgs/tng-technology-consulting",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tola-capital",
+   "name": "Tola Capital",
+   "source": "https://ai.engineer/orgs/tola-capital",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tolan",
+   "name": "Tolan",
+   "source": "https://ai.engineer/orgs/tolan",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "town",
+   "name": "Town",
+   "source": "https://ai.engineer/orgs/town",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "trainline",
+   "name": "Trainline",
+   "source": "https://ai.engineer/orgs/trainline",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "trajectory",
+   "name": "Trajectory",
+   "source": "https://ai.engineer/orgs/trajectory",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "trigger-dev",
+   "name": "Trigger.dev",
+   "source": "https://ai.engineer/orgs/trigger-dev",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "trunk-tools",
+   "name": "Trunk Tools",
+   "source": "https://ai.engineer/orgs/trunk-tools",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "turing-post",
+   "name": "Turing Post",
+   "source": "https://ai.engineer/orgs/turing-post",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "tusk",
+   "name": "Tusk",
+   "source": "https://ai.engineer/orgs/tusk",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "twelvelabs",
+   "name": "TwelveLabs",
+   "source": "https://ai.engineer/orgs/twelvelabs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "typedef",
+   "name": "Typedef",
+   "source": "https://ai.engineer/orgs/typedef",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "typesafe-ai",
+   "name": "TypeSafe AI",
+   "source": "https://ai.engineer/orgs/typesafe-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "ufonia",
+   "name": "Ufonia",
+   "source": "https://ai.engineer/orgs/ufonia",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "untangle",
+   "name": "Untangle",
+   "source": "https://ai.engineer/orgs/untangle",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "untapped-capital",
+   "name": "Untapped Capital",
+   "source": "https://ai.engineer/orgs/untapped-capital",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "upstart",
+   "name": "Upstart",
+   "source": "https://ai.engineer/orgs/upstart",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "urun",
+   "name": "uRun",
+   "source": "https://ai.engineer/orgs/urun",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "vals-ai",
+   "name": "Vals AI",
+   "source": "https://ai.engineer/orgs/vals-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "vanguard",
+   "name": "Vanguard",
+   "source": "https://ai.engineer/orgs/vanguard",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "varick-agents",
+   "name": "Varick Agents",
+   "source": "https://ai.engineer/orgs/varick-agents",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "vellum",
+   "name": "Vellum",
+   "source": "https://ai.engineer/orgs/vellum",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "venice-ai",
+   "name": "Venice AI",
+   "source": "https://ai.engineer/orgs/venice-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "vibe-kanban",
+   "name": "Vibe Kanban",
+   "source": "https://ai.engineer/orgs/vibe-kanban",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "visuallabs",
+   "name": "VisualLabs",
+   "source": "https://ai.engineer/orgs/visuallabs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "vorflux",
+   "name": "Vorflux",
+   "source": "https://ai.engineer/orgs/vorflux",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "wandero-ai",
+   "name": "Wandero AI",
+   "source": "https://ai.engineer/orgs/wandero-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "wasp",
+   "name": "Wasp",
+   "source": "https://ai.engineer/orgs/wasp",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "watershed-technology-inc",
+   "name": "Watershed Technology Inc.",
+   "source": "https://ai.engineer/orgs/watershed-technology-inc",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "waymo",
+   "name": "Waymo",
+   "source": "https://ai.engineer/orgs/waymo",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "waypoint-ai",
+   "name": "Waypoint AI",
+   "source": "https://ai.engineer/orgs/waypoint-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "weka",
+   "name": "WEKA",
+   "source": "https://ai.engineer/orgs/weka",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "wells-fargo",
+   "name": "Wells Fargo",
+   "source": "https://ai.engineer/orgs/wells-fargo",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "whyhow-ai",
+   "name": "WhyHow.AI",
+   "source": "https://ai.engineer/orgs/whyhow-ai",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "wise",
+   "name": "Wise",
+   "source": "https://ai.engineer/orgs/wise",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "witan-labs",
+   "name": "Witan Labs",
+   "source": "https://ai.engineer/orgs/witan-labs",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "workday",
+   "name": "Workday",
+   "source": "https://ai.engineer/orgs/workday",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "wso2",
+   "name": "WSO2",
+   "source": "https://ai.engineer/orgs/wso2",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "you-com-recursive-superintelligence",
+   "name": "You.com / Recursive Superintelligence",
+   "source": "https://ai.engineer/orgs/you-com-recursive-superintelligence",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "yugabyte",
+   "name": "Yugabyte",
+   "source": "https://ai.engineer/orgs/yugabyte",
+   "speakers": 2,
+   "talks": 1
+  },
+  {
+   "id": "zenity",
+   "name": "Zenity",
+   "source": "https://ai.engineer/orgs/zenity",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "zenml",
+   "name": "ZenML",
+   "source": "https://ai.engineer/orgs/zenml",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "zo-computer",
+   "name": "Zo Computer",
+   "source": "https://ai.engineer/orgs/zo-computer",
+   "speakers": 1,
+   "talks": 1
+  },
+  {
+   "id": "zs",
+   "name": "ZS",
+   "source": "https://ai.engineer/orgs/zs",
+   "speakers": 2,
+   "talks": 1
+  }
+ ]
+}
