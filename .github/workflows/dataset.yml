@@ -1,0 +1,78 @@
+name: Publish the dataset
+
+# On the 1st of each month, after the day's market run: builds the open dataset from the store
+# (dataset/, one row per ad, derived fields only), publishes it to Zenodo for a DOI and to Hugging
+# Face when their tokens are set, commits it, and attaches it to a GitHub release "data-YYYY-MM".
+# On a branch push it only builds and checks the files.
+on:
+  schedule:
+    - cron: "43 6 1 * *"
+  workflow_dispatch:
+    inputs:
+      through:
+        description: "Last day to include (YYYY-MM-DD); empty means the last day of last month"
+        required: false
+  push:
+    branches-ignore: [main]
+    paths: ["pipeline/dataset.ts", "pipeline/zenodo.ts", ".github/workflows/dataset.yml"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market
+  cancel-in-progress: false
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6  # v2
+        with:
+          bun-version: 1.4.4
+      - name: Build the dataset
+        env:
+          THROUGH: ${{ github.event.inputs.through }}
+        run: bun pipeline/dataset.ts ${THROUGH:+--through "$THROUGH"}
+      - name: Check the files
+        run: |
+          test -s dataset/applied-ai-job-ads.csv
+          head -1 dataset/applied-ai-job-ads.csv
+          # the published rows must never carry a title, company, link or ad text
+          if head -1 dataset/applied-ai-job-ads.csv | grep -qiE 'title|company|url|link|text'; then echo "Forbidden column"; exit 1; fi
+          if grep -qE 'https?://' dataset/applied-ai-job-ads.csv; then echo "A link slipped into the rows"; exit 1; fi
+      - name: Publish to Zenodo (DOI)
+        if: github.ref == 'refs/heads/main'
+        env:
+          ZENODO_TOKEN: ${{ secrets.ZENODO_TOKEN }}
+        run: |
+          bun pipeline/zenodo.ts
+          bun pipeline/dataset.ts ${{ github.event.inputs.through && format('--through {0}', github.event.inputs.through) || '' }}
+      - name: Publish to Hugging Face
+        if: github.ref == 'refs/heads/main'
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+          HF_DATASET: ${{ vars.HF_DATASET || 'vfaraji89/applied-ai-job-ads' }}
+        run: |
+          if [ -z "$HF_TOKEN" ]; then echo "No HF_TOKEN: skipping Hugging Face"; exit 0; fi
+          pip install --quiet "huggingface_hub>=0.25"
+          python -c "import os; from huggingface_hub import HfApi; a=HfApi(token=os.environ['HF_TOKEN']); r=os.environ['HF_DATASET']; a.create_repo(r, repo_type='dataset', exist_ok=True); a.upload_folder(repo_id=r, repo_type='dataset', folder_path='dataset', commit_message='Dataset '+__import__('json').load(open('dataset/meta.json'))['version'])"
+      - name: Commit and release
+        if: github.ref == 'refs/heads/main'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          v=$(bun -e 'console.log(require("./dataset/meta.json").version)')
+          git config user.name "dataset"
+          git config user.email "dataset@users.noreply.github.com"
+          git add dataset CITATION.cff web/src/data/dataset-meta.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Dataset: version $v"
+            git pull --rebase origin main
+            git push
+          fi
+          if gh release view "data-$v" >/dev/null 2>&1; then echo "Release data-$v exists"; exit 0; fi
+          gh release create "data-$v" dataset/applied-ai-job-ads.csv dataset/applied-ai-job-ads.json dataset/monthly-totals.csv \
+            --title "Dataset $v" --notes-file dataset/README.md --target main

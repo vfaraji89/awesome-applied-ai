@@ -1,0 +1,68 @@
+name: Eval sample
+
+# Draws the ads to check by hand (eval/sample-YYYY-MM.json): ads the rules kept, spread across roles,
+# plus tech ads the AI rule left out, each with its link and what the rules decided. Run it by hand
+# for the first 200; on the 2nd of each month it draws 50 more. When labels land on main, it scores
+# them into web/src/data/eval.json, which the method page shows. See eval/README.md.
+on:
+  workflow_dispatch:
+    inputs:
+      n:
+        description: "How many ads to sample"
+        required: false
+        default: "200"
+  schedule:
+    - cron: "29 7 2 * *"
+  push:
+    branches: [main]
+    paths: ["eval/labels-*.json"]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: market
+  cancel-in-progress: false
+
+jobs:
+  sample:
+    if: github.event_name != 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6  # v2
+        with:
+          bun-version: 1.4.4
+      - name: Read the boards and draw the sample (writes nothing else)
+        env:
+          EVAL_SAMPLE: ${{ github.event.inputs.n || '50' }}
+        run: bun pipeline/run.ts --dry
+      - name: Commit the sample
+        run: |
+          git config user.name "eval"
+          git config user.email "eval@users.noreply.github.com"
+          git add eval/sample-*.json
+          if git diff --cached --quiet; then echo "No sample"; exit 0; fi
+          git commit -m "Eval: sample for $(date -u +%Y-%m)"
+          git pull --rebase origin "$GITHUB_REF_NAME"
+          git push origin HEAD:"$GITHUB_REF_NAME"
+  score:
+    if: github.event_name == 'push'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - uses: oven-sh/setup-bun@0c5077e51419868618aeaa5fe8019c62421857d6  # v2
+        with:
+          bun-version: 1.4.4
+      - run: bun pipeline/eval-score.ts
+      - name: Commit the scores
+        run: |
+          git config user.name "eval"
+          git config user.email "eval@users.noreply.github.com"
+          git add web/src/data/eval.json
+          if git diff --cached --quiet; then echo "No change"; exit 0; fi
+          git commit -m "Eval: scores updated"
+          git pull --rebase origin main
+          git push

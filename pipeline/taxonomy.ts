@@ -7,6 +7,8 @@ const AI_TITLE = /\b(a\.?i\.?|ml|llm|llms|gen ?ai|generative|machine learning|de
     recruiting, legal, finance, product and program management, and support titles are left out. */
 const NOT_TECH = /account (executive|manager)|\bsales\b|seller|marketing|recruit|talent|counsel|legal|attorney|paralegal|finance|financial analyst|accountant|payroll|people partner|human resources|\bhr\b|business development|partnerships?|partner manager|customer success|outcomes manager|deployment manager|program manager|product manager|product marketing|community|communications|\bpolicy\b|operations manager|executive assistant|support (specialist|engineer)|\bdesigner\b|writer|editor/i;
 const TECH_WORD = /engineer|engineering|architect|scientist|research|developer|technical staff|\b(head of|lead) (applied )?(ai|ml)\b|fellow/i;
+/** A "Who is hiring" comment from a person looking for work rather than a company hiring. */
+export const SEEKER = /^\s*(i'?m|i am|hi\b|hello|hey\b|seeking (work|a role|a job|employment)|looking for (work|a role|a job|my next)|available for|my name is|freelancer)/i;
 export const isAI = (title: string) => AI_TITLE.test(title) && !NOT_TECH.test(title) && TECH_WORD.test(title);
 
 /** Role families, matched on the title in this order. Ids match the site's framework. */

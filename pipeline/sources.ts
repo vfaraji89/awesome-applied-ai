@@ -1,11 +1,11 @@
 import type { RawJob } from "./types";
-import { isAI } from "./taxonomy";
+import { isAI, SEEKER } from "./taxonomy";
 
 const UA = { "User-Agent": "awesome-applied-ai job-market collector (+https://github.com/vfaraji89/awesome-applied-ai)" };
 
 export const strip = (html: string) =>
   (html || "")
-    .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#39;|&#x27;/g, "'").replace(/&amp;/g, "&")
+    .replace(/&lt;/g, "<").replace(/&gt;/g, ">").replace(/&quot;/g, '"').replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16))).replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(+d)).replace(/&amp;/g, "&")
     .replace(/<[^>]+>/g, " ").replace(/&nbsp;/g, " ").replace(/\s+/g, " ").trim();
 
 const day = (d: string | number | undefined) => {
@@ -75,7 +75,8 @@ export async function hackerNews(): Promise<RawJob[]> {
   const story = (s.hits ?? []).find((h: any) => /who is hiring/i.test(h.title ?? ""));
   if (!story) return [];
   const t = await getJSON(`https://hn.algolia.com/api/v1/items/${story.objectID}`);
-  return (t.children ?? []).filter((c: any) => c.text).map((c: any) => {
+  // top-level comments are companies hiring; people who post asking to be hired are left out
+  return (t.children ?? []).filter((c: any) => c.text && !SEEKER.test(strip(c.text))).map((c: any) => {
     const text = strip(c.text);
     const head = text.split(/\s{2,}|\n/)[0].slice(0, 220);
     const parts = head.split("|").map((x: string) => x.trim());

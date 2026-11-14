@@ -50,7 +50,7 @@ export default function Market() {
           <Crumb id="market" page="Market pulse" />
           <h1 style={{ marginTop: 12 }}><TH k="market.h1">What the market asks for</TH><span className="dot">.</span></h1>
           <p className="lead" style={{ marginTop: 16 }}><TH k="market.p1b"><b>What AI job ads ask for</b>: every ad published since 1 October 2026 on the career pages and boards I read, <b>updated daily</b>.</TH></p>
-          <More label="How it is collected"><p className="lead" style={{ marginTop: 12 }}><TH k="market.p2b">Only AI job ads are kept. Each ad is reduced to its <b>role, level, skills, tasks and tools</b>; no ad or its link is republished. <Link href="/market/sources/">Every site read</Link> is listed.</TH></p></More>
+          <More label="How it is collected"><p className="lead" style={{ marginTop: 12 }}><TH k="market.p2b">Only AI job ads are kept. Each ad is reduced to its <b>role, level, skills, tasks and tools</b>; no ad or its link is republished. <Link href="/market/sources/">Every site read</Link> is listed, and <Link href="/market/method/">the method</Link> says how each ad is read and how often that reading is wrong.</TH></p></More>
           {ready ? (
             <div className="mk-totals">
               {[["mk.processed", "AI job ads processed", m.totals.processed.toLocaleString("en-US"), <><span key="q" className="mk-q">{m.sinceQuarter ?? "2026 Q4"}</span> <T key="s" k="mk.since" vars={{ d: SINCE_EN }}>{"since {d}"}</T></>],

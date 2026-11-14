@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use the job-ads dataset, please cite it as below."
+title: "Applied AI job ads: what employers ask for"
+type: dataset
+authors:
+  - family-names: Faraji
+    given-names: Vahid
+license: CC-BY-4.0
+repository-code: "https://github.com/vfaraji89/awesome-applied-ai"
+url: "https://vfaraji89.github.io/awesome-applied-ai/market/method/"
+abstract: >-
+  One row per AI job ad read from public company career pages, with the role, level, skills,
+  tasks, tools, stack and years of experience each ad asks for. Derived fields only: no title,
+  company, link or ad text. Updated monthly.
+keywords: [applied AI, job market, skills, AI engineering, labour market data]
+version: "2026-11-13"
+date-released: "2026-11-14"
