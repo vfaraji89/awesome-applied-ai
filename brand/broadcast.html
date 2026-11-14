@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Broadcast motion</title>
+<!-- Applied AI, Simplified: broadcast motion, three concepts to decide between. Our own language
+     (wood, beads, rust, ink), held to the craft of live sports graphics: choreography, one easing
+     family, masks not fades, numbers that land, one light sweep, a bug that stays. No shadows. -->
+<style>
+@font-face{font-family:"Vahid Sora";src:url("../web/src/app/fonts/VahidSora-Regular.woff2");font-weight:400}
+@font-face{font-family:"Vahid Sora";src:url("../web/src/app/fonts/VahidSora-Bold.woff2");font-weight:700}
+@font-face{font-family:"Vahid Sora";src:url("../web/src/app/fonts/VahidSora-ExtraBold.woff2");font-weight:800}
+@font-face{font-family:"Geist Mono";src:url("../web/src/app/fonts/GeistMono-Variable.woff2");font-weight:100 900}
+:root{
+  --ink:#1c1c1e;--ink2:#141312;--sec:#55555a;--muted:#8a8a90;--rust:#e0301e;--rust-deep:#b4200f;--paper:#fff6f4;--line:rgba(28,28,30,.12);
+  --dowel:linear-gradient(90deg,#b48a5c 0%,#d8bb94 24%,#f1e3cc 48%,#dcc29e 70%,#ad8455 100%);
+  --rod:linear-gradient(180deg,#e9d8bd 0%,#f4eadb 35%,#d2b48d 75%,#b8946a 100%);
+  --bead-red:radial-gradient(circle at 34% 30%,#ffb3a8 0%,#ff8f80 12%,#e0301e 48%,#9e1a0c 100%);
+  --bead-white:radial-gradient(circle at 34% 30%,#fff 0%,#f6f2ee 40%,#ddd5cd 100%);
+  --bead-ink:radial-gradient(circle at 34% 30%,#8a8a90 0%,#4a4a50 18%,#1c1c1e 55%,#000 100%);
+  /* one easing family: in fast and landing soft; out quicker than in */
+  --in:cubic-bezier(.16,1,.3,1);--wipe:cubic-bezier(.77,0,.18,1);--out:cubic-bezier(.7,0,.84,0);
+  --sans:"Vahid Sora",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#fff;color:var(--ink);font:15px/1.55 var(--sans);-webkit-font-smoothing:antialiased}
+.wrap{max-width:1120px;margin:0 auto;padding:48px 24px 90px}
+h1{font-size:clamp(2rem,4.5vw,3rem);font-weight:800;letter-spacing:-.045em;line-height:1.04;margin:12px 0 10px}
+h2{font-size:1.5rem;font-weight:800;letter-spacing:-.035em;margin:0}
+.dot{color:var(--rust)}
+.lead{color:var(--sec);max-width:66ch;margin:0}
+.kicker{display:inline-flex;align-items:center;gap:7px;padding:4px 11px 4px 9px;border-radius:999px;font:.72rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--rust-deep);
+  background:color-mix(in srgb,var(--rust) 7%,#fff);border:1px solid color-mix(in srgb,var(--rust) 22%,transparent)}
+.kicker::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--bead-red)}
+section{margin-top:64px}
+.sh{display:flex;align-items:baseline;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.sh .n{font:600 .8rem var(--mono);color:var(--rust-deep);margin-right:10px}
+.note{color:var(--sec);max-width:72ch;margin:6px 0 18px;font-size:.95rem}
+.replay{font:600 .8rem var(--sans);color:#fff;border:0;border-radius:999px;padding:7px 16px;cursor:pointer;
+  background:radial-gradient(120% 140% at 30% 0%,#8a8a90 0%,#3a3a40 30%,#1c1c1e 60%,#000 100%)}
+.stage{position:relative;border-radius:14px;background:var(--paper);padding:40px 34px;min-height:250px;overflow:hidden}
+.stage.dark{background:#f3efe9}
+.cap{font:.72rem var(--mono);color:var(--muted);margin-top:10px}
+
+/* ============ A · ODOMETER: digits roll on reels like beads on rods ============ */
+.odo{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}
+.otile{position:relative}
+.otile .post{position:absolute;top:-6px;bottom:-6px;width:7px;border-radius:4px;background:var(--dowel);left:calc(50% - 3.5px);transition:left .8s var(--wipe)}
+.otile .face{position:relative;background:#fff;border-radius:4px;padding:22px 24px 20px;clip-path:inset(0 50% 0 50%);transition:clip-path .8s var(--wipe);
+  background-image:var(--rod),var(--rod);background-size:100% 3px,100% 3px;background-position:top,bottom;background-repeat:no-repeat}
+.otile .lab{display:block;font:.68rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:var(--muted);overflow:hidden}
+.otile .lab span{display:inline-block;transform:translateY(110%);transition:transform .6s var(--in)}
+.reels{display:flex;align-items:flex-end;height:58px;margin-top:8px;font-size:3.2rem;font-weight:800;letter-spacing:-.04em;line-height:58px;font-variant-numeric:tabular-nums}
+.reel{height:58px;overflow:hidden}
+.reel i{display:block;font-style:normal;transform:translateY(0);transition:transform 1.1s var(--in)}
+.reel b{display:block;height:58px}
+.reels .sym{display:inline-block;height:58px}
+.otile.hot .reels{color:var(--rust)}
+.otile .sub{display:block;font-weight:700;font-size:.92rem;margin-top:2px;opacity:0;transform:translateY(6px);transition:opacity .4s ease,transform .5s var(--in)}
+.odo.on .otile .post.l{left:-4px}.odo.on .otile .post.r{left:calc(100% - 3px)}
+.odo.on .otile .face{clip-path:inset(0 0 0 0)}
+.odo.on .otile .lab span{transform:none}
+.odo.on .otile .sub{opacity:1;transform:none}
+
+/* ============ B · LOWER THIRD: an ink bar wipes in behind a post, the bead leads ============ */
+.lt{position:absolute;left:34px;bottom:38px;display:flex;align-items:stretch;height:84px}
+.lt-post{position:relative;z-index:3;width:9px;border-radius:5px;margin:-8px 0;background:var(--dowel);transform:scaleY(0);transform-origin:center;transition:transform .45s var(--in)}
+.lt-main{position:relative;overflow:hidden;display:flex;align-items:center;gap:18px;padding:0 26px 0 22px;background:var(--ink2);color:#fff;
+  clip-path:inset(0 100% 0 0);transition:clip-path .7s var(--wipe) .25s}
+.lt-bead{width:18px;height:18px;border-radius:50%;background:var(--bead-red);flex:none;transform:translateX(-40px);opacity:0;transition:transform .7s var(--in) .55s,opacity .2s .55s}
+.lt-num{font-size:2.6rem;font-weight:800;letter-spacing:-.04em;line-height:1;color:#fff;font-variant-numeric:tabular-nums}
+.lt-txt{display:grid;gap:2px}
+.lt-txt b,.lt-txt span{display:block;overflow:hidden}
+.lt-txt b i,.lt-txt span i{display:block;font-style:normal;transform:translateY(110%);transition:transform .6s var(--in)}
+.lt-txt b{font-size:1.02rem}.lt-txt b i{transition-delay:.7s}
+.lt-txt span{font:.7rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#bdb6ae}.lt-txt span i{transition-delay:.8s}
+.lt-glint{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 30%,rgba(255,255,255,.16) 46%,rgba(255,255,255,.04) 54%,transparent 70%);transform:translateX(-120%)}
+.lt-tab{position:relative;display:flex;align-items:center;padding:0 16px;background:#fff;color:var(--rust-deep);font:600 .72rem var(--mono);letter-spacing:.12em;text-transform:uppercase;
+  clip-path:inset(0 100% 0 0);transition:clip-path .55s var(--wipe) .9s;background-image:var(--rod),var(--rod);background-size:100% 3px,100% 3px;background-position:top,bottom;background-repeat:no-repeat}
+.lt-rod{position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--rod)}
+.b-on .lt-post{transform:none}.b-on .lt-main{clip-path:inset(0 0 0 0)}.b-on .lt-bead{transform:none;opacity:1}
+.b-on .lt-txt b i,.b-on .lt-txt span i{transform:none}.b-on .lt-tab{clip-path:inset(0 0 0 0)}
+.b-on .lt-glint{animation:glint 1.1s var(--in) 1.3s both}
+@keyframes glint{to{transform:translateX(120%)}}
+/* the bug: after the lower third leaves, a compact one stays in the corner */
+.bug{position:absolute;right:28px;top:26px;display:flex;align-items:center;gap:10px;padding:7px 14px 7px 10px;background:var(--ink2);color:#fff;border-radius:999px;font:600 .78rem var(--sans);
+  opacity:0;transform:translateY(-8px);transition:opacity .4s ease,transform .5s var(--in)}
+.bug i{width:10px;height:10px;border-radius:50%;background:var(--bead-red)}
+.bug b{font-variant-numeric:tabular-nums}
+.bug small{font:.66rem var(--mono);color:#bdb6ae;letter-spacing:.08em;text-transform:uppercase}
+.b-bug .bug{opacity:1;transform:none}
+.b-out .lt-main,.b-out .lt-tab{clip-path:inset(0 0 0 100%);transition:clip-path .45s var(--out)}
+.b-out .lt-post{transform:scaleY(0);transition:transform .3s var(--out) .35s}
+
+/* ============ C · BEAD COUNT: beads slide along the rod to the value, the number lands ============ */
+.bc{display:grid;gap:22px}
+.bc-row{display:grid;grid-template-columns:150px minmax(0,1fr) 90px;gap:18px;align-items:center}
+.bc-lab{font-weight:700;font-size:.95rem;overflow:hidden}.bc-lab i{display:block;font-style:normal;transform:translateY(110%);transition:transform .6s var(--in)}
+.bc-rod{position:relative;height:22px}
+.bc-rod::before{content:"";position:absolute;left:0;right:0;top:50%;height:3px;margin-top:-1.5px;border-radius:2px;background:var(--rod);transform:scaleX(0);transform-origin:left;transition:transform .7s var(--wipe)}
+.bc-rod span{position:absolute;top:50%;width:16px;height:16px;margin:-8px 0 0 -8px;border-radius:50%;background:var(--bead-ink);left:0;opacity:0;
+  transition:left 1s var(--in),opacity .2s}
+.bc-row.hot .bc-rod span{background:var(--bead-red)}
+.bc-num{text-align:right;font-size:1.9rem;font-weight:800;letter-spacing:-.04em;font-variant-numeric:tabular-nums;opacity:0;transform:translateY(10px);transition:opacity .3s,transform .5s var(--in)}
+.bc-row.hot .bc-num{color:var(--rust)}
+.c-on .bc-lab i{transform:none}.c-on .bc-rod::before{transform:none}.c-on .bc-rod span{opacity:1}.c-on .bc-num{opacity:1;transform:none}
+
+
+/* ============ D · MATCH CENTRE: the labs against everyone else, as a full stats panel ============ */
+.mc-wrap{position:relative;padding:8px 6px}
+.mc-wrap .post{position:absolute;top:0;bottom:0;width:9px;border-radius:5px;background:var(--dowel);z-index:3;left:calc(50% - 4.5px);transition:left .9s var(--wipe)}
+.mc{position:relative;overflow:hidden;border-radius:6px;background:#141312;color:#f2efe9;padding:26px 30px 28px;clip-path:inset(0 50% 0 50%);transition:clip-path .9s var(--wipe);
+  background-image:linear-gradient(180deg,#1d1a19 0%,#141312 60%),var(--rod),var(--rod);background-size:100% 100%,100% 3px,100% 3px;background-position:0 0,top,bottom;background-repeat:no-repeat}
+.mc .fade{opacity:0;transform:translateY(8px);transition:opacity .45s ease,transform .6s var(--in)}
+.mc-top{display:flex;justify-content:space-between;align-items:center;gap:12px;font:.68rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#a8a19a}
+.mc-top .live{display:inline-flex;align-items:center;gap:7px;color:#fff}.mc-top .live i{width:9px;height:9px;border-radius:50%;background:var(--bead-red)}
+/* scoreboard */
+.mc-score{display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);align-items:center;gap:22px;margin:18px 0 6px}
+.mc-team{display:flex;align-items:center;gap:14px}.mc-team.r{justify-content:flex-end;text-align:right}
+.mc-crest{width:46px;height:46px;border-radius:50%;flex:none;display:grid;place-items:center}
+.mc-crest.lab{background:var(--bead-red)}.mc-crest.rest{background:radial-gradient(circle at 34% 30%,#fff 0%,#e8e2db 40%,#a59c92 100%)}
+.mc-team b{display:block;font-size:1.15rem;font-weight:800;letter-spacing:-.02em}.mc-team small{font:.66rem var(--mono);color:#a8a19a;letter-spacing:.08em;text-transform:uppercase}
+.mc-board{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:-.04em;font-variant-numeric:tabular-nums}
+.mc-board .reels{height:52px;margin:0;font-size:2.9rem;line-height:52px;color:#fff}.mc-board .reel,.mc-board .reels .sym{height:52px}.mc-board .reel b{height:52px}
+.mc-board .sep{width:14px;height:3px;border-radius:2px;background:var(--rod)}
+/* possession-style split */
+.mc-split{margin:20px 0 6px}
+.mc-split .lbl{display:flex;justify-content:space-between;font:.68rem var(--mono);letter-spacing:.1em;text-transform:uppercase;color:#a8a19a;margin-bottom:8px}
+.mc-split .lbl b{font:800 1.05rem var(--sans);letter-spacing:-.02em;color:#fff}
+.mc-bar{position:relative;display:flex;height:10px;border-radius:6px;overflow:hidden;background:#2a2624}
+.mc-bar .a{background:linear-gradient(90deg,#9e1a0c,#e0301e);width:0;transition:width 1s var(--in)}
+.mc-bar .b{margin-left:auto;background:linear-gradient(90deg,#d8d1c9,#f2efe9);width:0;transition:width 1s var(--in)}
+/* mirrored stat rows */
+.mc-rows{display:grid;gap:12px;margin-top:22px}
+.mc-row{display:grid;grid-template-columns:52px minmax(0,1fr) 52px;gap:12px;align-items:center}
+.mc-row .t{grid-column:1/-1;text-align:center;font-size:.8rem;color:#cfc8c0;margin-bottom:-4px}
+.mc-row .v{font-weight:800;font-size:1.05rem;font-variant-numeric:tabular-nums;color:#8a837c}.mc-row .v.r{text-align:right}
+.mc-row .v.win{color:#fff}
+.mc-row .bars{display:grid;grid-template-columns:1fr 1fr;gap:4px;height:7px}
+.mc-row .bars span{position:relative;background:#2a2624;border-radius:4px;overflow:hidden}
+.mc-row .bars i{position:absolute;top:0;bottom:0;width:0;border-radius:4px;transition:width .9s var(--in)}
+.mc-row .bars span:first-child i{right:0;background:#6e2a22}.mc-row .bars span:last-child i{left:0;background:#5d5853}
+.mc-row .bars span:first-child i.win{background:linear-gradient(270deg,#e0301e,#ff7a66)}.mc-row .bars span:last-child i.win{background:linear-gradient(90deg,#d8d1c9,#fff)}
+/* momentum and key moments */
+.mc-low{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(0,1fr);gap:28px;margin-top:26px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08)}
+.mc-h{font:.68rem var(--mono);letter-spacing:.12em;text-transform:uppercase;color:#a8a19a;margin-bottom:12px}
+.mc-mom{display:flex;align-items:flex-end;gap:10px;height:120px}
+.mc-mom div{flex:1;display:flex;flex-direction:column;align-items:center;gap:6px;height:100%;justify-content:flex-end}
+.mc-mom .col{position:relative;width:100%;max-width:26px;height:0;border-radius:4px 4px 2px 2px;background:linear-gradient(180deg,#5d5853,#3a3633);transition:height .8s var(--in)}
+.mc-mom .col::after{content:"";position:absolute;left:50%;top:-6px;width:12px;height:12px;margin-left:-6px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#fff 0%,#e8e2db 40%,#a59c92 100%)}
+.mc-mom .peak .col{background:linear-gradient(180deg,#e0301e,#7a1a10)}.mc-mom .peak .col::after{background:var(--bead-red)}
+.mc-mom .part .col{background:repeating-linear-gradient(180deg,#4a4542 0 4px,transparent 4px 7px)}
+.mc-mom small{font:.6rem var(--mono);color:#8a837c}
+.mc-mom em{font:normal 700 .74rem var(--sans);color:#fff;font-variant-numeric:tabular-nums}
+.mc-tl{position:relative;padding-left:22px;display:grid;gap:14px}
+.mc-tl::before{content:"";position:absolute;left:6px;top:4px;bottom:4px;width:3px;border-radius:2px;background:var(--rod)}
+.mc-tl div{position:relative}
+.mc-tl div::before{content:"";position:absolute;left:-22px;top:3px;width:15px;height:15px;border-radius:50%;background:radial-gradient(circle at 34% 30%,#fff 0%,#e8e2db 40%,#a59c92 100%)}
+.mc-tl div.hot::before{background:var(--bead-red)}
+.mc-tl b{display:block;font-size:.9rem}.mc-tl small{font:.66rem var(--mono);color:#a8a19a;letter-spacing:.06em}
+/* the player card: the biggest gap */
+.mc-card{display:flex;align-items:center;gap:16px;margin-top:22px;padding:14px 18px;border-radius:6px;background:linear-gradient(90deg,rgba(224,48,30,.22),rgba(224,48,30,.04));
+  transform:translateX(-24px);opacity:0;transition:transform .7s var(--in),opacity .4s}
+.mc-card .big{font-size:2.2rem;font-weight:800;letter-spacing:-.04em;color:#ff7a66;font-variant-numeric:tabular-nums}
+.mc-card b{display:block}.mc-card small{font:.66rem var(--mono);color:#cfc8c0;letter-spacing:.08em;text-transform:uppercase}
+.mc-glint{position:absolute;inset:0;pointer-events:none;background:linear-gradient(105deg,transparent 35%,rgba(255,255,255,.07) 48%,transparent 62%);transform:translateX(-120%)}
+.d-on .post.l{left:-2px}.d-on .post.r{left:calc(100% - 7px)}.d-on .mc{clip-path:inset(0 0 0 0)}.d-on .mc .fade{opacity:1;transform:none}
+.d-on .mc-card{transform:none;opacity:1}.d-on .mc-glint{animation:glint 1.4s var(--in) 3s both}
+@media (max-width:760px){.mc{padding:20px 16px}.mc-score{grid-template-columns:1fr;justify-items:center;text-align:center}.mc-team,.mc-team.r{justify-content:center;text-align:center}.mc-low{grid-template-columns:1fr}}
+
+.rules{margin:16px 0 0;padding-left:18px;color:var(--sec);columns:2 300px;gap:28px;font-size:.92rem}.rules li{margin-bottom:6px}
+.pick{margin-top:56px;padding:22px 24px;border-radius:4px;position:relative;background:#fff;background-image:var(--rod),var(--rod);background-size:100% 3px,100% 3px;background-position:top,bottom;background-repeat:no-repeat}
+.pick::before{content:"";position:absolute;top:-5px;bottom:-5px;left:-4px;right:-4px;pointer-events:none;background:var(--dowel) left/7px 100% no-repeat,var(--dowel) right/7px 100% no-repeat;border-radius:4px}
+@media (max-width:760px){.odo{grid-template-columns:1fr}.bc-row{grid-template-columns:100px minmax(0,1fr) 70px}.lt{left:16px;right:16px}.lt-tab{display:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <span class="kicker">Broadcast motion · to decide</span>
+  <h1>Numbers that <span style="color:var(--rust)">land</span><span class="dot">.</span></h1>
+  <p class="lead">Three ways to show the main data, held to the craft of live sports graphics in our own language: wood, beads, rust and ink. Each plays on load; press Replay to watch it again.</p>
+
+  <section>
+    <div class="sh"><div><span class="n">A</span><h2 style="display:inline">Odometer<span class="dot">.</span></h2></div><button class="replay" data-k="a">Replay</button></div>
+    <p class="note">The frame opens from the centre, posts first. Each digit rolls on its own reel and the last one settles last, like a mechanical counter. Best for the headline numbers on home and Market.</p>
+    <div class="stage"><div class="odo" id="a">
+      <div class="otile hot"><span class="post l"></span><span class="post r"></span><div class="face"><span class="lab"><span>Job ads read</span></span><div class="reels" data-v="1,630"></div><span class="sub">AI roles since 1 Oct</span></div></div>
+      <div class="otile"><span class="post l"></span><span class="post r"></span><div class="face"><span class="lab"><span>Builders</span></span><div class="reels" data-v="66"></div><span class="sub">30 of them quiet</span></div></div>
+      <div class="otile"><span class="post l"></span><span class="post r"></span><div class="face"><span class="lab"><span>Remote</span></span><div class="reels" data-v="20%"></div><span class="sub">of active AI roles</span></div></div>
+    </div></div>
+  </section>
+
+  <section>
+    <div class="sh"><div><span class="n">B</span><h2 style="display:inline">Lower third and bug<span class="dot">.</span></h2></div><button class="replay" data-k="b">Replay</button></div>
+    <p class="note">A wooden post stands up, an ink bar wipes out from it, the red bead runs in, and the words rise out of masks. One light sweep crosses the bar as it settles. When it leaves, a small bug stays in the corner. Best for one headline insight at a time: "Worth knowing", the next event.</p>
+    <div class="stage dark" id="b" style="min-height:240px">
+      <div class="bug"><i></i><b>1,630</b><small>ads · live</small></div>
+      <div class="lt"><span class="lt-post"></span><div class="lt-main"><span class="lt-bead"></span><span class="lt-num">63%</span><div class="lt-txt"><b><i>of AI job ads ask for agents and tool use</i></b><span><i>The market · this week</i></span></div><span class="lt-glint"></span><span class="lt-rod"></span></div><div class="lt-tab">Live</div></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sh"><div><span class="n">C</span><h2 style="display:inline">Bead count<span class="dot">.</span></h2></div><button class="replay" data-k="c">Replay</button></div>
+    <p class="note">The rod draws itself, the bead slides along it to the value, and the number lands as the bead stops. The abacus is the chart. Best for rankings: roles, skills, tools.</p>
+    <div class="stage"><div class="bc" id="c">
+      <div class="bc-row hot" data-p="63"><span class="bc-lab"><i>Agents and tool use</i></span><span class="bc-rod"><span></span></span><span class="bc-num" data-v="63%">0%</span></div>
+      <div class="bc-row" data-p="44"><span class="bc-lab"><i>Evals</i></span><span class="bc-rod"><span></span></span><span class="bc-num" data-v="44%">0%</span></div>
+      <div class="bc-row" data-p="34"><span class="bc-lab"><i>Retrieval and RAG</i></span><span class="bc-rod"><span></span></span><span class="bc-num" data-v="34%">0%</span></div>
+      <div class="bc-row" data-p="19"><span class="bc-lab"><i>Context and cost</i></span><span class="bc-rod"><span></span></span><span class="bc-num" data-v="19%">0%</span></div>
+    </div></div>
+  </section>
+
+
+  <section>
+    <div class="sh"><div><span class="n">D</span><h2 style="display:inline">Match centre<span class="dot">.</span></h2></div><button class="replay" data-k="d">Replay</button></div>
+    <p class="note">The full stats panel, for the market's big comparisons. Here the AI labs face everyone else, with real numbers from the tracker (snapshot of 14 Nov 2026): a scoreline, a possession-style split, head-to-head skill rows growing from the centre, the weekly momentum, the key moments, and a "player card" for the biggest gap.</p>
+    <div class="mc-wrap" id="d"><span class="post l"></span><span class="post r"></span>
+      <div class="mc">
+        <div class="mc-top fade"><span>AI job ads · since 1 Oct 2026</span><span class="live"><i></i>Live</span></div>
+        <div class="mc-score fade">
+          <div class="mc-team"><span class="mc-crest lab"></span><div><b>AI labs</b><small>OpenAI, Anthropic, DeepMind and more</small></div></div>
+          <div class="mc-board"><div class="reels" data-v="115"></div><span class="sep"></span><div class="reels" data-v="1,506"></div></div>
+          <div class="mc-team r"><div><b>Everyone else</b><small>career pages and boards</small></div><span class="mc-crest rest"></span></div>
+        </div>
+        <div class="mc-split fade"><div class="lbl"><b>7%</b><span>Share of AI job ads</span><b>93%</b></div><div class="mc-bar"><span class="a" data-w="7"></span><span class="b" data-w="93"></span></div></div>
+        <div class="mc-rows">
+          <div class="mc-row fade" data-a="75" data-b="48"><span class="t">Customers and adoption</span><span class="v">75%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">48%</span></div>
+          <div class="mc-row fade" data-a="60" data-b="44"><span class="t">Evals and observability</span><span class="v">60%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">44%</span></div>
+          <div class="mc-row fade" data-a="53" data-b="64"><span class="t">Agents and tool use</span><span class="v">53%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">64%</span></div>
+          <div class="mc-row fade" data-a="50" data-b="31"><span class="t">Product judgement</span><span class="v">50%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">31%</span></div>
+          <div class="mc-row fade" data-a="43" data-b="19"><span class="t">Security and governance</span><span class="v">43%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">19%</span></div>
+          <div class="mc-row fade" data-a="12" data-b="26"><span class="t">Data and SQL</span><span class="v">12%</span><span class="bars"><span><i></i></span><span><i></i></span></span><span class="v r">26%</span></div>
+        </div>
+        <div class="mc-low">
+          <div class="fade"><div class="mc-h">Momentum · new AI ads a week</div>
+            <div class="mc-mom" id="mom">
+              <div data-n="35"><em>35</em><span class="col"></span><small>1 Oct</small></div>
+              <div data-n="97"><em>97</em><span class="col"></span><small>5 Oct</small></div>
+              <div data-n="140"><em>140</em><span class="col"></span><small>12 Oct</small></div>
+              <div data-n="144"><em>144</em><span class="col"></span><small>19 Oct</small></div>
+              <div data-n="324"><em>324</em><span class="col"></span><small>26 Oct</small></div>
+              <div data-n="431" class="peak"><em>431</em><span class="col"></span><small>2 Nov</small></div>
+              <div data-n="450" class="part"><em>450</em><span class="col"></span><small>9 Nov*</small></div>
+            </div></div>
+          <div class="fade"><div class="mc-h">Key moments</div>
+            <div class="mc-tl">
+              <div><b>Tracking starts</b><small>1 OCT · 35 ADS THAT WEEK</small></div>
+              <div class="hot"><b>Biggest jump, +125%</b><small>WEEK OF 26 OCT · 144 TO 324</small></div>
+              <div><b>Busiest full week</b><small>WEEK OF 2 NOV · 431 ADS</small></div>
+              <div><b>This week, still counting</b><small>9 NOV · 450 SO FAR</small></div>
+            </div></div>
+        </div>
+        <div class="mc-card"><span class="big">+27</span><div><b>Customers and adoption</b><small>the labs' biggest lead · 75% against 48%</small></div></div>
+        <span class="mc-glint"></span>
+      </div>
+    </div>
+    <p class="cap">* the current week is partial. Shares are of each side's own ads.</p>
+  </section>
+
+  <section>
+    <h2>The rules all four keep<span class="dot">.</span></h2>
+    <ul class="rules">
+      <li>Choreography: posts, then frame, then label, then number, then the note; 80 to 120ms apart.</li>
+      <li>One easing family: in fast and landing soft; out quicker than in. No bounce.</li>
+      <li>Masks, not fades: edges wipe and words rise out of their line.</li>
+      <li>Numbers land: digits roll or the bead stops, and only then the figure is still.</li>
+      <li>One light sweep at most, once, as the graphic settles.</li>
+      <li>Red means "this one": one headline per group.</li>
+      <li>Plays once when it comes into view; reduced motion shows it at rest.</li>
+      <li>No shadows; depth comes from the wood and the beads.</li>
+    </ul>
+  </section>
+
+  <div class="pick">
+    <span class="kicker">Your call</span>
+    <h2 style="margin-top:12px">Pick one, or a mix<span class="dot">.</span></h2>
+    <p class="lead" style="margin-top:8px">My pick: <b>A for the headline numbers</b>, <b>B for the one insight</b> (Worth knowing, the next event), <b>C for the ranked charts</b>, and <b>D for the big comparisons</b> (the labs page, Market, a role against the market in Role fit). All four share the same easing family and choreography, so together they read as one broadcast package.</p>
+  </div>
+</div>
+<script>
+/* A: build reels. Each digit is a column 0 to 9 repeated; it rolls down to its digit, later digits land later */
+function buildReels(el){
+  const v=el.dataset.v;el.innerHTML="";
+  [...v].forEach((ch,i)=>{
+    if(!/\d/.test(ch)){const s=document.createElement("span");s.className="sym";s.textContent=ch;el.appendChild(s);return}
+    const r=document.createElement("span");r.className="reel";const col=document.createElement("i");
+    for(let k=0;k<20;k++){const b=document.createElement("b");b.textContent=k%10;col.appendChild(b)}
+    r.appendChild(col);el.appendChild(r);col.dataset.to=10+Number(ch);col.dataset.i=i;
+  });
+}
+function playA(){
+  const a=document.getElementById("a");a.classList.remove("on");
+  a.querySelectorAll(".reels").forEach(buildReels);
+  a.querySelectorAll(".otile").forEach((t,ti)=>{
+    t.querySelectorAll(".post").forEach(p=>p.style.transitionDelay=ti*110+"ms");
+    t.querySelector(".face").style.transitionDelay=ti*110+"ms";
+    t.querySelector(".lab span").style.transitionDelay=ti*110+420+"ms";
+    t.querySelector(".sub").style.transitionDelay=ti*110+1300+"ms";
+    t.querySelectorAll(".reel i").forEach((c,k)=>{c.style.transitionDelay=ti*110+520+k*90+"ms";c.style.transitionDuration=(1000+k*120)+"ms"});
+  });
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{a.classList.add("on");a.querySelectorAll(".reel i").forEach(c=>c.style.transform=`translateY(-${c.dataset.to*58}px)`)}));
+}
+/* B: in, settle, out; the bug stays */
+let bt=[];
+function playB(){
+  const b=document.getElementById("b");bt.forEach(clearTimeout);bt=[];b.className="stage dark";
+  requestAnimationFrame(()=>requestAnimationFrame(()=>b.classList.add("b-on")));
+  bt.push(setTimeout(()=>b.classList.add("b-out"),4200));
+  bt.push(setTimeout(()=>b.classList.add("b-bug"),4600));
+}
+/* C: beads slide to their value; the number counts with the bead and lands with it */
+function playC(){
+  const c=document.getElementById("c");c.classList.remove("c-on");
+  const rows=[...c.querySelectorAll(".bc-row")];
+  rows.forEach((r,i)=>{const s=r.querySelector(".bc-rod span");s.style.transition="none";s.style.left="0";r.querySelector(".bc-num").textContent="0%"});
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    c.classList.add("c-on");
+    rows.forEach((r,i)=>{
+      const s=r.querySelector(".bc-rod span"),n=r.querySelector(".bc-num"),p=+r.dataset.p,d=300+i*110;
+      r.querySelector(".bc-lab i").style.transitionDelay=i*110+"ms";
+      s.style.transition=`left 1s cubic-bezier(.16,1,.3,1) ${d}ms, opacity .2s ${d}ms`;s.style.left=p+"%";
+      n.style.transitionDelay=d+"ms";
+      const t0=performance.now()+d;const step=t=>{const k=Math.max(0,Math.min(1,(t-t0)/1000));const e=1-Math.pow(1-k,4);n.textContent=Math.round(p*e)+"%";if(k<1)requestAnimationFrame(step)};requestAnimationFrame(step);
+    });
+  }));
+}
+const play={a:playA,b:playB,c:playC};
+/* D: the match centre, in broadcast order */
+function playD(){
+  const d=document.getElementById("d");d.classList.remove("d-on");
+  d.querySelectorAll(".reels").forEach(buildReels);
+  const f=[...d.querySelectorAll(".fade")];f.forEach((el,i)=>el.style.transitionDelay=(450+i*90)+"ms");
+  d.querySelectorAll(".mc-bar span").forEach(x=>{x.style.transition="none";x.style.width=0});
+  d.querySelectorAll(".mc-row i").forEach(x=>{x.style.transition="none";x.style.width=0});
+  d.querySelectorAll(".mc-mom .col").forEach(x=>{x.style.transition="none";x.style.height=0});
+  requestAnimationFrame(()=>requestAnimationFrame(()=>{
+    d.classList.add("d-on");
+    d.querySelectorAll(".reels").forEach((r,ri)=>r.querySelectorAll(".reel i").forEach((c,k)=>{c.style.transitionDelay=(700+ri*150+k*90)+"ms";c.style.transform=`translateY(-${c.dataset.to*52}px)`}));
+    d.querySelectorAll(".mc-bar span").forEach(x=>{x.style.transition="width 1s cubic-bezier(.16,1,.3,1) 1100ms";x.style.width=x.dataset.w+"%"});
+    d.querySelectorAll(".mc-row").forEach((r,i)=>{const a=+r.dataset.a,b=+r.dataset.b,[ia,ib]=r.querySelectorAll("i"),[va,vb]=r.querySelectorAll(".v");
+      ia.classList.toggle("win",a>b);ib.classList.toggle("win",b>a);va.classList.toggle("win",a>b);vb.classList.toggle("win",b>a);
+      [ia,ib].forEach(x=>x.style.transition=`width .9s cubic-bezier(.16,1,.3,1) ${1400+i*90}ms`);ia.style.width=a+"%";ib.style.width=b+"%"});
+    const mx=Math.max(...[...d.querySelectorAll("#mom > div")].map(x=>+x.dataset.n));
+    d.querySelectorAll("#mom > div").forEach((x,i)=>{const c=x.querySelector(".col");c.style.transition=`height .8s cubic-bezier(.16,1,.3,1) ${2100+i*70}ms`;c.style.height=(+x.dataset.n/mx*78)+"%"});
+    d.querySelector(".mc-card").style.transitionDelay="2700ms";
+  }));
+}
+play.d=playD;
+addEventListener("load",()=>playD());
+
+document.querySelectorAll(".replay").forEach(b=>b.addEventListener("click",()=>play[b.dataset.k]()));
+addEventListener("load",()=>{playA();playB();playC()});
+</script>
+</body>
+</html>
