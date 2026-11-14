@@ -62,9 +62,10 @@ export const structure: Section[] = [
     ],
   },
   {
-    n: "07", id: "docs", label: "Learn", title: "Learn it plainly", href: "/docs/", match: ["/docs/", "/jargon/", "/learn/", "/certificates/"],
+    n: "07", id: "docs", label: "Learn", title: "Learn it plainly", href: "/docs/", match: ["/docs/", "/jargon/", "/learn/", "/certificates/", "/applied-ai/"],
     line: "The docs people skip, the words people coin and the certificates people ask for, said plainly.",
     pages: [
+      { label: "What is applied AI?", href: "/applied-ai/", note: "The plain answer, and what the jobs ask for" },
       { label: "Claude Platform", href: "/docs/claude-platform/", note: "How your app talks to Claude" },
       { label: "Vercel AI SDK", href: "/docs/#vercel-ai-sdk", note: "AI in a TypeScript app", soon: true },
       { label: "LangChain & Deep Agents", href: "/docs/#langchain", note: "Agents from building blocks", soon: true },

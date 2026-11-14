@@ -3,6 +3,8 @@ import Link from "next/link";
 import { Crumb } from "@/components/section-intro";
 import { T, TH } from "@/i18n/lang";
 import { share } from "@/lib/share";
+import { JsonLd } from "@/components/json-ld";
+import { eventsLd } from "@/lib/seo";
 import { EventsCalendar, type Ev } from "@/components/events-calendar";
 import data from "@/data/events.json";
 import conf from "@/data/conferences.json";
@@ -18,6 +20,7 @@ export default function Events() {
   const events = [...(data.events as Ev[]), ...aie].sort((a, b) => a.start.localeCompare(b.start));
   return (
     <section className="section">
+      <JsonLd data={eventsLd()} />
       <div className="wrap">
         <Crumb id="events" page="Events calendar" />
         <h1 style={{ marginTop: 12 }}><TH k="ev.h1">The year in <mark>applied AI events</mark></TH><span className="dot">.</span></h1>

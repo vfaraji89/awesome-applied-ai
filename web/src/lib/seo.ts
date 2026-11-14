@@ -10,6 +10,7 @@ import { fRoles } from "@/data/framework";
 import { problems } from "@/data/problems";
 import jargon from "@/data/content/jargon.json";
 import { statsDate } from "@/lib/tool-signals";
+import eventsData from "@/data/events.json";
 
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://vfaraji89.github.io/applied-ai-simplified").replace(/\/$/, "");
 export const abs = (path: string) => SITE_URL + (path.startsWith("/") ? path : "/" + path);
@@ -101,5 +102,28 @@ export const problemLd = (id: string) => {
     "@type": "TechArticle", "@id": `${SITE_URL}/problems/${p.id}/#article`, url: abs(`/problems/${p.id}/`), isPartOf,
     headline: p.title, description: p.asked, author, publisher: author, inLanguage: "en",
     about: "Applied AI system design", position: p.n,
+  };
+};
+
+/* The events still to come, each as a schema.org Event with its official dates and link. */
+type EvRow = { name: string; start: string; end: string; city?: string; url: string; note?: string };
+export const eventsLd = () => {
+  const today = new Date().toISOString().slice(0, 10);
+  const up = (eventsData.events as EvRow[]).filter((e) => e.end >= today);
+  return {
+    "@context": "https://schema.org",
+    "@type": "ItemList", "@id": `${SITE_URL}/events/#list`, url: abs("/events/"), isPartOf, name: "Applied AI events, official dates only", numberOfItems: up.length,
+    itemListElement: up.map((e, i) => {
+      const online = !e.city || /online|virtual/i.test(e.city);
+      return {
+        "@type": "ListItem", position: i + 1,
+        item: {
+          "@type": "Event", name: e.name, startDate: e.start, endDate: e.end, url: e.url, ...(e.note ? { description: e.note } : {}),
+          eventStatus: "https://schema.org/EventScheduled",
+          eventAttendanceMode: online ? "https://schema.org/OnlineEventAttendanceMode" : "https://schema.org/OfflineEventAttendanceMode",
+          location: online ? { "@type": "VirtualLocation", url: e.url } : { "@type": "Place", name: e.city, address: (e.city ?? "").split(",")[0] },
+        },
+      };
+    }),
   };
 };

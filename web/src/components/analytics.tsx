@@ -28,6 +28,22 @@ export function clean(p: Record<string, unknown>) {
   return o;
 }
 const redactUrl = (u: string) => u.replace(/([?&])(q|email|name|jd|cv)=[^&#]*/g, "$1$2=redacted");
+/* Visits that arrive from an AI assistant (a cited link in ChatGPT, Perplexity, Claude, Gemini,
+   Copilot and the like) are counted as their own event, so the "AI answers" channel can be read in
+   Google Analytics. Detected from the referrer or the utm_source the assistant adds; nothing else. */
+const AI_SOURCES: [RegExp, string][] = [
+  [/(^|\.)chatgpt\.com$|(^|\.)chat\.openai\.com$|^openai$/, "ChatGPT"], [/(^|\.)perplexity\.ai$/, "Perplexity"], [/(^|\.)claude\.ai$/, "Claude"],
+  [/(^|\.)gemini\.google\.com$|(^|\.)bard\.google\.com$/, "Gemini"], [/(^|\.)copilot\.microsoft\.com$|(^|\.)copilot\.cloud\.microsoft$/, "Copilot"],
+  [/(^|\.)you\.com$/, "You.com"], [/(^|\.)phind\.com$/, "Phind"], [/(^|\.)meta\.ai$/, "Meta AI"], [/(^|\.)chat\.deepseek\.com$|(^|\.)deepseek\.com$/, "DeepSeek"],
+  [/(^|\.)grok\.com$/, "Grok"], [/(^|\.)chat\.mistral\.ai$/, "Le Chat"], [/(^|\.)kagi\.com$/, "Kagi"], [/(^|\.)poe\.com$/, "Poe"],
+];
+function aiSource(): string | null {
+  const utm = new URLSearchParams(location.search).get("utm_source")?.toLowerCase() ?? "";
+  let host = "";
+  try { host = document.referrer ? new URL(document.referrer).hostname.toLowerCase() : ""; } catch { /* no referrer */ }
+  for (const [re, name] of AI_SOURCES) if ((host && re.test(host)) || (utm && re.test(utm.replace(/^https?:\/\//, "").split("/")[0]))) return name;
+  return null;
+}
 type W = Window & { dataLayer?: unknown[]; gtag?: (...a: unknown[]) => void; vfGA?: boolean };
 function loadGA() {
   const w = window as W;
@@ -67,6 +83,8 @@ export function Analytics() {
     const section = location.pathname.split("/").filter(Boolean).find((p) => p !== "applied-ai-simplified" && p !== "awesome-applied-ai") ?? "home";
     w.dataLayer.push({ event: "vf_context", site: "applied-ai-simplified", page_group: section, consent_state: saved === "yes" ? "granted" : "denied" });
     w.gtag("config", GA_ID, { content_group: "applied-ai-simplified", page_location: redactUrl(location.href), site_section: section, ...(debug ? { debug_mode: true } : {}) });
+    const ai = aiSource();
+    if (ai) w.gtag("event", "ai_referral", { ai_source: ai, landing_section: section });
     // Google is contacted only after a yes: until then the script is not even loaded
     if (saved === "yes") loadGA();
     const reset = () => setAsk(true);

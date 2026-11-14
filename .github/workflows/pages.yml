@@ -54,3 +54,23 @@ jobs:
         uses: actions/deploy-pages@v5
         with:
           timeout: 600000
+
+  # Tell IndexNow engines (Bing, which feeds Copilot and ChatGPT search, plus Yandex, Seznam, Naver)
+  # which pages changed, right after each deploy instead of waiting for the portfolio's weekly ping.
+  # The key is public by design: the portfolio serves it at the host root, which proves the host is ours.
+  indexnow:
+    needs: deploy
+    runs-on: ubuntu-latest
+    steps:
+      - name: Ping IndexNow with this site's sitemap
+        env:
+          KEY: "499c30459ae68ddbeabb51eca981bf84"
+        run: |
+          set -euo pipefail
+          sleep 30
+          urls=$(curl -fsS "https://vfaraji89.github.io/${{ github.event.repository.name }}/sitemap.xml" | grep -o '<loc>[^<]*</loc>' | sed 's/<[^>]*>//g' | sort -u)
+          n=$(printf '%s\n' "$urls" | grep -c . || true)
+          body=$(printf '%s\n' "$urls" | jq -R . | jq -s --arg k "$KEY" '{host: "vfaraji89.github.io", key: $k, keyLocation: ("https://vfaraji89.github.io/" + $k + ".txt"), urlList: .}')
+          code=$(curl -sS -o /dev/null -w '%{http_code}' -X POST https://api.indexnow.org/indexnow -H 'Content-Type: application/json; charset=utf-8' -d "$body")
+          echo "IndexNow: $n URLs, HTTP $code" | tee -a "$GITHUB_STEP_SUMMARY"
+          case "$code" in 200|202) ;; *) echo "::warning::IndexNow answered $code" ;; esac
