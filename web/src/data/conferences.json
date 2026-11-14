@@ -3511,6 +3511,12 @@
    "url": "https://ai.engineer/miami/2027"
   }
  ],
+ "aieYears": {
+  "2023": 41,
+  "2024": 112,
+  "2025": 446,
+  "2026": 666
+ },
  "aieTopics": [
   {
    "id": "coding-agents",
