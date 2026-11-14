@@ -43,7 +43,7 @@ export default function Sources() {
         <div className="wrap">
           <Crumb id="market" page="Sources" />
           <h1 style={{ marginTop: 12 }}><TH k="src.h1">Every site the tracker <mark>reads</mark></TH><span className="dot">.</span></h1>
-          <p style={{ marginTop: 14 }}><span className="src-tag"><T k="src.from" vars={{ q }}>{"from {q}"}</T></span> <span className="count"><T k="src.from_p">Counting starts on 1 October 2026, the first day of Q4.</T></span></p>
+          <p style={{ marginTop: 14 }}><span className="soon"><T k="src.from" vars={{ q }}>{"from {q}"}</T></span> <span className="count"><T k="src.from_p">Counting starts on 1 October 2026, the first day of Q4.</T></span></p>
           <p className="lead" style={{ marginTop: 16 }}>
             <TH k="src.lead" vars={{ n: m.totals.processed.toLocaleString("en-US"), c: pages, p: ats.length, b: boards.length }}>
               <b>{m.totals.processed.toLocaleString("en-US")} AI job ads</b> since 1 October 2026, from <b>{pages} company career pages</b> on {ats.length} hiring platforms and {boards.length} public job boards. Each ad is reduced to what it asks for.

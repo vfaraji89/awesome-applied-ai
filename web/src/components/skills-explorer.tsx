@@ -77,7 +77,7 @@ export function SkillsExplorer({ roles, stack, layerNames }: { roles: FRole[]; s
       <style>{`
         .se-pick { display: grid; gap: 14px; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); }
         .se-fam { display: flex; flex-direction: column; gap: 8px; }
-        .se-pick .chip { cursor: pointer; font: inherit; font-size: .85rem; }
+        .se-pick .chip { cursor: pointer; }
         .se-card { margin-top: 24px; } .se-left { animation: rise .5s var(--ease) both; }
         .se-top { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 36px; }
         @media (max-width: 860px) { .se-top { grid-template-columns: 1fr; } }

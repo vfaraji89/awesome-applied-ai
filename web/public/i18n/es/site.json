@@ -1454,6 +1454,10 @@
  "tp.next": "Vista siguiente",
  "tp.views": "Vistas",
  "tp.aria": "Tokalator en VS Code, una sesión de ejemplo: medidor de contexto, análisis de turnos, uso de agentes de hoy y relevancia de archivos",
+ "home.g_people2": "constructores",
+ "mk.processed_s": "ofertas de IA",
+ "mk.read_s": "sitios leídos",
+ "mk.new_s": "nuevas hoy",
  "_review": {
   "_how": "Vahid: judgment calls to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'inferencia'; alternative: keep 'serving'.",

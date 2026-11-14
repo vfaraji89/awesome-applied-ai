@@ -146,7 +146,7 @@ export function TechRadar() {
         .tr-rings .muted { grid-column: 2; font-size: 0.8rem; }
         .tr-key { width: 12px; height: 12px; border-radius: 50%; grid-row: span 2; }
         .tr-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px; }
-        .tr-chips .chip { cursor: pointer; font: inherit; font-size: 0.8rem; }
+        .tr-chips .chip { cursor: pointer; }
         .tr-index { list-style: none; padding: 0; margin: 18px 0 0; columns: 2; column-gap: 16px; font-size: 0.85rem; }
         .tr-index li { break-inside: avoid; }
         .tr-index li.dim { opacity: 0.35; }

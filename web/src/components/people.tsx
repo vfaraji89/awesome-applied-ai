@@ -104,7 +104,7 @@ export function PeopleBrowser({ people, span }: { people: Person[]; span: string
         .pb-rod i { position: absolute; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -2px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); animation: pb-in .5s var(--spring) both; animation-delay: calc(var(--k) * 18ms); }
         .pb-abacus button.on .pb-rod i { background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
         @keyframes pb-in { from { transform: translateX(-12px); opacity: 0; } to { transform: none; opacity: 1; } }
-        .pb-groups { margin-top: 26px; } .pb-groups .chip { cursor: pointer; font: inherit; font-size: .84rem; }
+        .pb-groups { margin-top: 26px; } .pb-groups .chip { cursor: pointer; }
         .pb-gline { margin: 10px 0 0; font-size: .9rem; max-width: 70ch; }
         .pb-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin: 18px 0 14px; }
         .pb-bar input { flex: 1 1 260px; max-width: 420px; padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--card); font: inherit; color: var(--ink); }
@@ -114,7 +114,7 @@ export function PeopleBrowser({ people, span }: { people: Person[]; span: string
         .pb-card:hover b { color: var(--rust-deep); }
         .pb-top { display: flex; gap: 14px; align-items: center; } .pb-who { display: grid; gap: 2px; min-width: 0; } .pb-who b { font-size: 1.05rem; } .pb-who .muted { font-size: .84rem; }
         .pb-idea { margin: 0; font-size: .95rem; line-height: 1.4; color: var(--ink); font-weight: 600; }
-        .pb-sk { display: flex; flex-wrap: wrap; gap: 6px; } .pb-sk .chip { font-size: .72rem; }
+        .pb-sk { display: flex; flex-wrap: wrap; gap: 6px; } .pb-sk .chip { }
         .pb-foot { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
         @media (prefers-reduced-motion: reduce) { .pb-rod i { animation: none; } }
       `}</style>

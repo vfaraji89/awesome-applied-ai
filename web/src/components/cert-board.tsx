@@ -64,7 +64,6 @@ export function CertBoard() {
         .cb-status.changing { color: #a5650a; }
         .cb-link { margin-top: auto; padding-top: 6px; font-weight: 700; font-size: .88rem; color: var(--rust-deep); text-decoration: none; }
         .cb-link:hover { text-decoration: underline; text-underline-offset: 3px; }
-        @media (prefers-color-scheme: dark) { .cb-status.changing { color: #f0b04a; } }
       `}</style>
     </div>
   );

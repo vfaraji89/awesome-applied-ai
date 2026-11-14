@@ -105,7 +105,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ id: st
         .cs-rods { list-style: none; margin: 0; padding: 0; display: grid; gap: 9px; }
         .cs-rods li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) 44px; gap: 12px; align-items: center; font-size: .9rem; } .cs-rods a { text-decoration: none; } .cs-rods .count { text-align: right; }
         .cs-side { display: grid; gap: 14px; }
-        .cs-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; } .cs-chips .chip { font-size: .78rem; }
+        .cs-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; } .cs-chips .chip { }
         .cs-team { display: grid; gap: 10px; margin-top: 12px; } .cs-person { display: flex; gap: 10px; align-items: center; text-decoration: none; color: inherit; } .cs-person span { display: grid; } .cs-person .muted { font-size: .8rem; } .cs-person:hover b { color: var(--rust-deep); }
       `}</style>
     </>

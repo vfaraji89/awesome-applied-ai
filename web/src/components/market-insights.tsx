@@ -254,7 +254,7 @@ export const insightCss = `
   .mi-prof-name { text-decoration: none; } .mi-prof-name:hover { color: var(--rust-deep); }
   .mi-prof-go { margin-top: 4px; font-size: .86rem; font-weight: 600; color: var(--rust-deep); text-decoration: none; } .mi-prof-go:hover { text-decoration: underline; }
   .mi-chips { display: flex; flex-wrap: wrap; gap: 5px; }
-  .mi-chips .chip, .mi-aff-terms .chip, .mi-rising .chip { padding: 2px 9px; font-size: .76rem; }
+  .mi-chips .chip, .mi-aff-terms .chip, .mi-rising .chip { }
   .chip i.mono { font-style: normal; font-size: .68rem; color: var(--rust-deep); } .mi-prof dd i { font-style: normal; color: var(--muted); font-size: .74rem; }
   @media (max-width: 640px) { .mi-pairs li, .mi-dumb li, .mi-years li { grid-template-columns: minmax(0, 1fr) 90px 44px; } .mi-tip { white-space: normal; width: max-content; max-width: min(240px, 80vw); left: 0; transform: translate(0, 4px); } :is(td, li):is(:hover, :focus-visible) > .mi-tip, .mi-wk:is(:hover, :focus-visible) > .mi-tip { transform: none; } }
   @media (prefers-reduced-motion: reduce) { .mi-card, .mi-card > *, .mi-pairs li, .mi-prof, .mi-pair-t > span, .mi-prof-bar span { animation: none; } }
@@ -309,7 +309,7 @@ export function TechStack({ tech }: { tech: { read: number; cats: TechCat[] } })
               <ul>
                 {c.items.slice(0, c.id === "lang" ? 40 : 10).map((x) => (
                   <li key={x.name} tabIndex={0}>
-                    <span className="mi-cat-l">{x.name}{x.isNew ? <em className="mi-new"><T k="mi.new">new</T></em> : null}</span>
+                    <span className="mi-cat-l">{x.name}{x.isNew ? <em className="soon mi-new"><T k="mi.new">new</T></em> : null}</span>
                     <span className="mi-cat-t"><span style={{ width: `${(x.share / top) * 100}%` }} /></span>
                     <span className="mono mi-cat-n">{x.share}%</span>
                     <span className="mi-tip"><T k="mi.tech_tip" vars={{ n: x.n, s: x.share }}>{"{n} ads, {s}% of those read"}</T>{x.change !== undefined ? ` · ${x.change > 0 ? "+" : ""}${x.change} pts / 30d` : ""}</span>
@@ -371,7 +371,7 @@ export const insightCss2 = `
   .mi-cat ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 6px; }
   .mi-cat li { position: relative; display: grid; grid-template-columns: minmax(0, 120px) 1fr 44px; gap: 10px; align-items: center; font-size: .86rem; outline: none; }
   .mi-cat-l { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .mi-new { font-style: normal; font-family: var(--font-mono), monospace; font-size: .58rem; letter-spacing: .1em; text-transform: uppercase; color: var(--rust-deep); border: 1px dashed var(--rust); border-radius: 999px; padding: 1px 6px; margin-left: 6px; vertical-align: 1px; }
+  .mi-new { margin-left: 6px; font-style: normal; vertical-align: 1px; }
   .mi-cat-n { font-size: .74rem; color: var(--muted); text-align: right; }
   .mi-aff { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 12px; }
   .mi-aff li { position: relative; display: grid; grid-template-columns: minmax(0, 220px) 64px minmax(0, 1fr) minmax(0, 260px); gap: 14px; align-items: center; padding-bottom: 12px; border-bottom: 1px solid var(--line); outline: none; animation: rise .5s var(--ease) both; animation-delay: calc(var(--i) * 50ms); }

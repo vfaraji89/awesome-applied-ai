@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
+import { Icon } from "./icons";
 import { T, useT } from "@/i18n/lang";
 
 /* The events calendar, in the abacus language:
@@ -83,7 +84,7 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
             <span className="muted">{range(next)} · {next.city}</span>
           </div>
           <div className="ec-acts">
-            <button type="button" className="btn" onClick={() => ics(next)}><T k="ec.add">Add to calendar</T></button>
+            <button type="button" className="btn ec-addbtn" onClick={() => ics(next)}><Icon name="addcal" size={18} /><T k="ec.add">Add to calendar</T></button>
             <a className="chip" href={next.url} target="_blank" rel="noreferrer"><T k="ec.site">Official site</T> ↗</a>
           </div>
         </div>
@@ -176,22 +177,14 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
       </div>
 
       <style>{`
-        .ec { --t-aieng: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); --c-aieng: #e0301e;
-          --t-dev: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); --c-dev: #1c1c1e;
-          --t-platform: radial-gradient(circle at 34% 30%, #9db7dc, #3f66a3 50%, #1f3a66); --c-platform: #3f66a3;
-          --t-data: radial-gradient(circle at 34% 30%, #f6d79a, #d39a3a 50%, #8f5f14); --c-data: #d39a3a;
-          --t-infra: radial-gradient(circle at 34% 30%, #a9d1b5, #4f8a63 50%, #2b5539); --c-infra: #4f8a63;
-          --t-research: radial-gradient(circle at 34% 30%, #fff, #f1ede8 45%, #cfc6bb); --c-research: #b9ad9f;
-          --t-acm: radial-gradient(circle at 34% 30%, #c3b4e6, #6b4fa3 50%, #3e2a6b); --c-acm: #6b4fa3; }
-        .t-aieng { --b: var(--t-aieng); --c: var(--c-aieng); } .t-dev { --b: var(--t-dev); --c: var(--c-dev); } .t-platform { --b: var(--t-platform); --c: var(--c-platform); }
         .t-data { --b: var(--t-data); --c: var(--c-data); } .t-infra { --b: var(--t-infra); --c: var(--c-infra); } .t-research { --b: var(--t-research); --c: var(--c-research); } .t-acm { --b: var(--t-acm); --c: var(--c-acm); }
         .ec-dot { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: var(--b); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; flex: none; } .ec-dot.sm { width: 10px; height: 10px; }
         .ec-next { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 20px 24px; }
         .ec-next > div:nth-child(2) { display: grid; gap: 2px; } .ec-next-name { font-size: 1.4rem; font-weight: 800; letter-spacing: -.01em; }
         @media (max-width: 680px) { .ec-next { grid-template-columns: auto 1fr; } .ec-next .ec-acts { grid-column: 1 / -1; } }
-        .ec-acts { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ec-acts .chip { cursor: pointer; font: inherit; font-size: .78rem; } .ec-acts .btn { border: 0; cursor: pointer; font: inherit; }
+        .ec-acts { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ec-acts .chip { cursor: pointer; } .ec-acts .btn { border: 0; cursor: pointer; font: inherit; }
         .ec-filters { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin: 22px 0 14px; }
-        .ec-fl { display: flex; flex-wrap: wrap; gap: 6px; } .ec-fl .chip { cursor: pointer; font: inherit; font-size: .8rem; } .ec-sep { width: 1px; background: var(--line); margin: 2px 4px; }
+        .ec-fl { display: flex; flex-wrap: wrap; gap: 6px; } .ec-fl .chip { cursor: pointer; } .ec-sep { width: 1px; background: var(--line); margin: 2px 4px; }
         .ec-year { padding: 30px 28px 26px; }
         .ec-rod { position: relative; height: 74px; margin: 0 8px; }
         .ec-rod::before { content: ""; position: absolute; left: 0; right: 0; top: 30px; height: 4px; border-radius: 2px; background: var(--rod); }
@@ -242,6 +235,7 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
         .ec-body { display: grid; gap: 4px; min-width: 0; } .ec-body > b { font-size: 1.05rem; } .ec-body .muted { font-size: .86rem; }
         .ec-type { display: inline-flex; gap: 6px; align-items: center; font-size: .76rem; color: var(--sec); }
         .ec-tracks { gap: 6px; }
+        .ec-addbtn { display: inline-flex; align-items: center; gap: 8px; } .ec-addbtn .ic { color: #fff; }
         .ec-note { font-size: .86rem; color: var(--sec); margin: 2px 0 4px; }
         .ec-none { margin-top: 14px; }
       `}</style>

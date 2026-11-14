@@ -1454,6 +1454,10 @@
  "tp.next": "Volgende weergave",
  "tp.views": "Weergaven",
  "tp.aria": "Tokalator in VS Code, een voorbeeldsessie: contextmeter, beurtanalyse, agentgebruik van vandaag en bestandsrelevantie",
+ "home.g_people2": "bouwers",
+ "mk.processed_s": "AI-vacatures",
+ "mk.read_s": "gelezen sites",
+ "mk.new_s": "nieuw vandaag",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Dutch reader). Delete a line once agreed, or change the value above it.",
   "area.serving": "'Serving', 'evals', 'retrieval', 'harness' kept in English, as Dutch tech teams say them.",

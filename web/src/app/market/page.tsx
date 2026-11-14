@@ -1,3 +1,4 @@
+import { StatBroadcast } from "@/components/stat-broadcast";
 import { Crumb } from "@/components/section-intro";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -52,14 +53,12 @@ export default function Market() {
           <p className="lead" style={{ marginTop: 16 }}><TH k="market.p1b"><b>What AI job ads ask for</b>: every ad published since 1 October 2026 on the career pages and boards I read, <b>updated daily</b>.</TH></p>
           <More label="How it is collected"><p className="lead" style={{ marginTop: 12 }}><TH k="market.p2b">Only AI job ads are kept. Each ad is reduced to its <b>role, level, skills, tasks and tools</b>; no ad or its link is republished. <Link href="/market/sources/">Every site read</Link> is listed, and <Link href="/market/method/">the method</Link> says how each ad is read and how often that reading is wrong.</TH></p></More>
           {ready ? (
-            <div className="mk-totals">
-              {[["mk.processed", "AI job ads processed", m.totals.processed.toLocaleString("en-US"), <><span key="q" className="mk-q">{m.sinceQuarter ?? "2026 Q4"}</span> <T key="s" k="mk.since" vars={{ d: SINCE_EN }}>{"since {d}"}</T></>],
-                ["mk.read", "Career pages and boards read", String(read), <Link key="s" href="/market/sources/"><T k="mk.see_sources">see the list</T></Link>],
-                ["mk.new", "New since yesterday", m.totals.newToday.toLocaleString("en-US"), null],
-                ["mk.remote", "Remote", `${m.totals.remoteShare}%`, null]].map(([k, en, v, sub]) => (
-                <div key={k as string} className="frame"><span className="count"><T k={k as string}>{en as string}</T></span><b className="mk-big">{v as string}</b>{sub && <span className="count mk-sub">{sub}</span>}</div>
-              ))}
-            </div>
+            <div className="mk-totals"><StatBroadcast items={[
+              { n: m.totals.processed.toLocaleString("en-US"), label: <T k="mk.processed_s">AI job ads</T>, note: `Since ${SINCE_EN}` },
+              { n: String(read), label: <T k="mk.read_s">sites read</T>, note: "Career pages and job boards; see the sources page", href: "/market/sources/" },
+              { n: m.totals.newToday.toLocaleString("en-US"), label: <T k="mk.new_s">new today</T>, note: "New since yesterday" },
+              { n: `${m.totals.remoteShare}%`, label: <T k="mk.remote">Remote</T> },
+            ]} /></div>
           ) : (
             <div className="frame" style={{ marginTop: 28 }}>
               <span className="soon"><T k="mk.pending">First collection pending</T></span>
@@ -264,7 +263,7 @@ export default function Market() {
       <style>{insightCss}</style>
       <style>{insightCss2}</style>
       <style>{`
-        .mk-totals { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 210px), 1fr)); gap: 16px; margin-top: 30px; }
+        .mk-totals { margin-top: 30px; }
         .mk-q { display: inline-block; font-size: .66rem; letter-spacing: .1em; text-transform: uppercase; padding: 1px 8px; border-radius: 999px; border: 1px dashed var(--rust); color: var(--rust-deep); margin-right: 4px; }
         .mk-pref { font-size: .72rem; }
         .mk-sub { display: block; margin-top: 4px; } .mk-sub a { color: inherit; }
@@ -274,11 +273,11 @@ export default function Market() {
         .mk-bars { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 9px; }
         .mk-bars li { display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr) 46px; gap: 12px; align-items: center; font-size: .92rem; animation: rise .5s var(--ease) both; animation-delay: calc(var(--i) * 40ms); }
         .mk-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } .mk-label a { text-decoration: none; } .mk-label a:hover { color: var(--rust-deep); }
-        .mk-track { height: 6px; border-radius: 3px; background: var(--rod); }
-        .mk-fill { position: relative; display: block; height: 100%; border-radius: 3px; background: var(--ink); transform-origin: left; animation: mk-grow .9s var(--ease) both; }
-        .mk-fill::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #6a6a70 0%, #1c1c1e 50%, #000 100%);  }
+        .mk-track { position: relative; height: 12px; } .mk-track::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 3px; margin-top: -1.5px; border-radius: 2px; background: var(--rod); }
+        .mk-fill { position: relative; display: block; height: 5px; top: 3.5px; border-radius: 3px; background: var(--ink); transform-origin: left; animation: mk-grow .9s var(--ease) both; }
+        .mk-fill::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: var(--bead-ink); }
         .mk-fill.mine { background: var(--rust); }
-        .mk-fill.mine::after { background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); }
+        .mk-fill.mine::after { background: var(--bead-red); }
         @keyframes mk-grow { from { transform: scaleX(0); } to { transform: none; } }
         .mk-n { font-size: .78rem; color: var(--muted); text-align: right; }
         .mk-key { display: inline-block; width: 12px; height: 12px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #ff9d8f 0%, #e0301e 45%, #9e1a0c 100%); vertical-align: -1px; margin-right: 4px; }

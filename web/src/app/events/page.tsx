@@ -41,8 +41,6 @@ export default function Events() {
         .ev-wait { margin-top: 34px; } .ev-wait ul { list-style: none; margin: 12px 0 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr)); gap: 12px; }
         .ev-wait li { display: flex; gap: 12px; align-items: center; padding: 14px 18px; } .ev-wait li div { display: grid; gap: 2px; } .ev-wait a { text-decoration: none; } .ev-wait a:hover b { color: var(--rust-deep); }
         .ev-dot { width: 12px; height: 12px; border-radius: 50%; flex: none; background: var(--b, var(--rust)); }
-        .ev-dot.t-aieng { --b: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); } .ev-dot.t-dev { --b: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); }
-        .ev-dot.t-acm { --b: radial-gradient(circle at 34% 30%, #c3b4e6, #6b4fa3 50%, #3e2a6b); } .ev-dot.t-platform { --b: radial-gradient(circle at 34% 30%, #9db7dc, #3f66a3 50%, #1f3a66); } .ev-dot.t-data { --b: radial-gradient(circle at 34% 30%, #f6d79a, #d39a3a 50%, #8f5f14); }
       `}</style>
     </section>
   );

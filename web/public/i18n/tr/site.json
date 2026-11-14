@@ -1454,6 +1454,10 @@
  "tp.next": "Sonraki görünüm",
  "tp.views": "Görünümler",
  "tp.aria": "VS Code'da Tokalator, örnek bir oturum: bağlam ölçer, tur analizi, bugünkü ajan kullanımı ve dosya ilgisi",
+ "home.g_people2": "yapıcı",
+ "mk.processed_s": "YZ iş ilanı",
+ "mk.read_s": "okunan site",
+ "mk.new_s": "bugün yeni",
  "_review": {
   "_how": "Vahid: these are judgment calls for you to confirm. Delete a line once you agree, or change the value above it.",
   "area.serving": "'serving' as 'servisleme'; alternatives: 'model servisi', or keep 'serving'.",

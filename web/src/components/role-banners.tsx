@@ -186,7 +186,7 @@ function Tasks({ size }: { size: "card" | "hero" }) {
           <li key={x.id}>
             <button type="button" className={k === i ? "on" : ""} onClick={() => pick(k)} onMouseEnter={() => pick(k)} aria-pressed={k === i}>
               <span className="rb-lab"><T k={`task.${x.id}`}>{x.name ?? ""}</T></span>
-              <span className={`rodbar${k === i ? "" : " ink"}`}><i style={{ width: `${((x.share ?? 0) / max) * 100}%` }} /></span>
+              <span className={`rodbar${k === i ? " red" : " ink"}`}><i style={{ width: `${((x.share ?? 0) / max) * 100}%` }} /></span>
               <span className="count">{x.share}%</span>
             </button>
           </li>

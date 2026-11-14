@@ -11,6 +11,10 @@ import events from "@/data/events.json";
 import tok from "@/data/tokalator.json";
 import gh from "@/data/github-stats.json";
 import { TokalatorPanel } from "@/components/tokalator-panel";
+import { StatBroadcast } from "@/components/stat-broadcast";
+import { IconFrame, type IconName } from "@/components/icons";
+
+const SECTION_ICON: Record<string, IconName> = { market: "market", roles: "roles", people: "people", events: "events", architect: "architect", tools: "tools", docs: "learn", contribute: "jargon" };
 
 export const metadata: Metadata = { ...share("") };
 
@@ -20,7 +24,7 @@ function Card({ s, wide }: { s: Section; wide?: boolean }) {
   return (
     <section id={s.id} className={`frame hc${wide ? " hc-wide" : ""}`}>
       <Link href={s.href} className="hc-head">
-        <span className="hc-n mono">{s.n}</span>
+        <IconFrame name={SECTION_ICON[s.id] ?? "docs"} size={24} />
         <h2><T k={`sec.${s.id}.title`}>{s.title}</T><span className="dot">.</span></h2>
       </Link>
       <p className="muted hc-line"><T k={`sec.${s.id}.line`}>{s.line}</T></p>
@@ -67,10 +71,10 @@ export default function Home() {
   const upcoming = events.events.filter((e) => e.end >= today).length;
   const sections = structure.filter((s) => !s.footerOnly);
   const glance = [
-    { k: "home.g_ads", en: "AI job ads read", n: M.totals.processed.toLocaleString("en"), sub: <T k="mk.since" vars={{ d: "1 Oct 2026" }}>{"since {d}"}</T>, href: "/market/" },
-    { k: "home.g_people", en: "builders, not famous names", n: String(people.people.length), sub: <T k="home.g_people_sub" vars={{ n: people.people.filter((p) => p.group === "quiet").length }}>{"{n} quiet builders among them"}</T>, href: "/people/" },
-    { k: "home.g_events", en: "events coming up", n: String(upcoming), sub: <T k="home.g_events_sub">official dates only</T>, href: "/events/" },
-    { k: "home.g_tools", en: "tools on the map", n: String(tools.length), sub: <T k="home.g_tools_sub2">in eleven areas</T>, href: "/tools/" },
+    { n: M.totals.processed.toLocaleString("en"), label: <T k="home.g_ads">AI job ads read</T>, note: "Every AI job ad since 1 Oct 2026", href: "/market/" },
+    { n: String(people.people.length), label: <T k="home.g_people2">builders</T>, note: `${people.people.filter((p) => p.group === "quiet").length} of them quiet builders`, href: "/people/" },
+    { n: String(upcoming), label: <T k="home.g_events">events coming up</T>, note: "Official dates only", href: "/events/" },
+    { n: String(tools.length), label: <T k="home.g_tools">tools on the map</T>, note: "In eleven areas", href: "/tools/" },
   ];
   return (
     <>
@@ -90,13 +94,7 @@ export default function Home() {
           </div>
           <Tokalator />
           </div>
-          <div className="home-glance">
-            {glance.map((g, i) => (
-              <Link key={g.k} href={g.href} className="frame home-g rise" style={{ ["--i" as string]: 4 + i }}>
-                <b>{g.n}</b><span className="home-g-l"><T k={g.k}>{g.en}</T></span><span className="count">{g.sub}</span>
-              </Link>
-            ))}
-          </div>
+          <div className="home-glance"><StatBroadcast items={glance} /></div>
         </div>
       </section>
 
@@ -115,23 +113,18 @@ export default function Home() {
         .tok { display: flex; flex-direction: column; gap: 12px; padding: 20px 22px; }
         .tok-what { font-weight: 700; font-size: 1.02rem; line-height: 1.35; color: var(--ink); margin-top: 4px; }
         .tok-line { margin: 0; font-size: .9rem; }
-        .tok-chips { gap: 6px; } .tok-chips a.chip:hover { border-color: var(--rust); color: var(--rust-deep); }
+        .tok-chips { gap: 6px; } .tok-chips a.chip:hover { }
         .tok-foot { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; }
         .tok-go { flex: none; }
         .home-cta { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 26px; }
-        .home-glance { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 14px; margin-top: 40px; }
-        @media (max-width: 900px) { .home-glance { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-        @media (max-width: 420px) { .home-glance { grid-template-columns: 1fr; } }
-        .home-g { display: flex; flex-direction: column; gap: 2px; padding: 20px 24px 22px; }
-        .home-g b { font-size: clamp(1.8rem, 3.4vw, 2.5rem); font-weight: 800; letter-spacing: -.04em; line-height: 1.05; color: var(--rust); }
-        .home-g-l { font-weight: 700; } .home-g .count { font-size: .74rem; }
+        .home-glance { margin-top: 44px; }
         .hc-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin-top: 18px; }
         @media (max-width: 860px) { .hc-grid { grid-template-columns: minmax(0, 1fr); } }
         .hc { display: flex; flex-direction: column; padding: 26px 30px 18px; }
         .hc-wide { grid-column: 1 / -1; }
         .hc-wide .hc-pages { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 28px; }
         @media (max-width: 860px) { .hc-wide .hc-pages { grid-template-columns: minmax(0, 1fr); } }
-        .hc-head { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--ink); }
+        .hc-head { display: flex; align-items: center; gap: 16px; text-decoration: none; color: var(--ink); }
         .hc-head h2 { margin: 0; font-size: clamp(1.25rem, 2.2vw, 1.6rem); }
         .hc-head:hover h2 { color: var(--rust-deep); }
         .hc-n { display: inline-grid; place-items: center; min-width: 30px; height: 24px; padding: 0 6px; border-radius: 6px; background: var(--rust); color: #fff; font-size: .78rem; }

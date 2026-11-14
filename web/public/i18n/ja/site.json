@@ -1456,6 +1456,10 @@
  "tp.next": "次の画面",
  "tp.views": "画面",
  "tp.aria": "VS CodeのTokalator（例のセッション）：コンテキストメーター、ターン分析、今日のエージェント使用量、ファイルの関連度",
+ "home.g_people2": "人のビルダー",
+ "mk.processed_s": "件のAI求人",
+ "mk.read_s": "サイトを読み込み",
+ "mk.new_s": "件が本日新着",
  "_review": {
   "_how": "Vahid: judgment calls to confirm (ideally with a native Japanese reader). Delete a line once agreed, or change the value above it.",
   "fit.h1": "'採用市場に、どこまで届いているか' is a free rendering of 'How ready are you for the market'.",

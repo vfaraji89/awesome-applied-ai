@@ -90,7 +90,7 @@ export function SkillsMatrix() {
       <style>{`
         .smx-bar { display: grid; gap: 16px; }
         .smx-bar .chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
-        .smx-bar button.chip { cursor: pointer; font: inherit; font-size: .8rem; }
+        .smx-bar button.chip { cursor: pointer; }
         .smx-sum { margin-top: 18px; color: var(--sec); animation: rise .5s var(--ease) both; }
         .smx-d { font-family: var(--font-mono), monospace; font-size: .8rem; white-space: nowrap; }
         .smx-d.up { color: var(--rust-deep); } .smx-d.down { color: var(--ink); }

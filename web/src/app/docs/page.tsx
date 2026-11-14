@@ -20,7 +20,7 @@ export default function Docs() {
                 <DocCover course={d} index={i} />
                 <div className="dcat-body">
                   <div className="dcat-top">
-                    {d.status === "live" ? <span className="chip on"><T k="dc.live">Live</T></span> : <span className="soon"><T k="dc.soon">Coming soon</T></span>}
+                    {d.status === "live" ? <span className="chip ink"><T k="dc.live">Live</T></span> : <span className="soon"><T k="dc.soon">Coming soon</T></span>}
                     {d.pages.length > 0 && <span className="count"><T k="dc.pages" vars={{ n: d.pages.length }}>{"{n} pages"}</T></span>}
                   </div>
                   <p className="muted" style={{ marginTop: 10 }}><T k={`dc.${d.id}`}>{d.oneLine}</T></p>

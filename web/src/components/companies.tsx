@@ -46,7 +46,7 @@ export function CompaniesBrowser({ companies, skillNames, roleNames }: { compani
               <li key={c.id}>
                 <button type="button" className={k === pick ? "on" : ""} onClick={() => setPick(k)} onMouseEnter={() => setPick(k)}>
                   <span className="cpb-lab">{c.name}</span>
-                  <span className={`rodbar${k === pick ? "" : " ink"}`}><i style={{ width: `${(c.hiring!.open / max) * 100}%` }} /></span>
+                  <span className={`rodbar${k === pick ? " red" : " ink"}`}><i style={{ width: `${(c.hiring!.open / max) * 100}%` }} /></span>
                   <span className="count">{c.hiring!.open}</span>
                 </button>
               </li>
@@ -91,7 +91,7 @@ export function CompaniesBrowser({ companies, skillNames, roleNames }: { compani
         .cpb-line { margin-top: 8px; color: var(--sec); }
         .cpb-go { display: inline-block; margin-top: 12px; font-weight: 700; color: var(--rust-deep); text-decoration: none; }
         .cpb-bar { display: flex; flex-wrap: wrap; gap: 12px; justify-content: space-between; align-items: center; margin: 24px 0 14px; }
-        .cpb-f { display: flex; flex-wrap: wrap; gap: 6px; } .cpb-f .chip { cursor: pointer; font: inherit; font-size: .8rem; }
+        .cpb-f { display: flex; flex-wrap: wrap; gap: 6px; } .cpb-f .chip { cursor: pointer; }
         .cpb-bar input { flex: 0 1 300px; padding: 9px 14px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--card); font: inherit; color: var(--ink); }
         .cpb-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 14px; }
         .cpb-card { display: grid; gap: 14px; height: 100%; padding: 18px 20px; } .cpb-card:hover b { color: var(--rust-deep); }
