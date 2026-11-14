@@ -1,4 +1,4 @@
-# Maintaining awesome-applied-ai
+# Maintaining Applied AI, Simplified
 
 ## How it fits together
 
@@ -10,7 +10,7 @@ public job boards ──► pipeline/ (Bun, no dependencies) ──► market/jo
 web/ (Next.js static export) ◄──────────────────────────────────────┘
         │  bun run build
         ▼
-GitHub Pages  https://vfaraji89.github.io/awesome-applied-ai/
+GitHub Pages  https://vfaraji89.github.io/applied-ai-simplified/
 ```
 
 Three workflows in `.github/workflows/` (plus the content sync, see CONTENT.md):

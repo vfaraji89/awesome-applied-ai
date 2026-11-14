@@ -11,7 +11,7 @@ import { fRoles, skills } from "../web/src/data/framework";
 import type { Job } from "./types";
 
 const root = path.resolve(import.meta.dir, "..");
-const SITE = "https://vfaraji89.github.io/awesome-applied-ai";
+const SITE = "https://vfaraji89.github.io/applied-ai-simplified";
 const prevMonth = (m: string) => { const [y, mo] = m.split("-").map(Number); return mo === 1 ? `${y - 1}-12` : `${y}-${String(mo - 1).padStart(2, "0")}`; };
 const lastMonth = prevMonth(new Date().toISOString().slice(0, 7));
 const month = process.argv[2] ?? lastMonth;

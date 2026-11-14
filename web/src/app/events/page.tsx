@@ -19,7 +19,7 @@ export default function Events() {
   return (
     <section className="section">
       <div className="wrap">
-        <Crumb id="market" page="Events calendar" />
+        <Crumb id="events" page="Events calendar" />
         <h1 style={{ marginTop: 12 }}><TH k="ev.h1">The year in <mark>applied AI events</mark></TH><span className="dot">.</span></h1>
         <p className="lead" style={{ marginTop: 16 }}><T k="ev.lead">The major AI engineering, AI software and AI platform events coming up, and the top ACM conferences with their demo and workshop tracks. Official dates only: if an organiser has not published them, the event waits below until it does.</T></p>
         <div style={{ marginTop: 30 }}><EventsCalendar events={events} recent={data.recent as Ev[]} types={data.types} today={today} /></div>

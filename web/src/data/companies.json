@@ -645,7 +645,9 @@
     "talks": 8,
     "source": "https://ai.engineer/orgs/cloudflare"
    },
-   "people": [],
+   "people": [
+    "kenton-varda"
+   ],
    "initials": "C"
   },
   {
@@ -808,7 +810,9 @@
     "talks": 34,
     "source": "https://ai.engineer/orgs/microsoft"
    },
-   "people": [],
+   "people": [
+    "pablo-castro"
+   ],
    "initials": "M"
   },
   {
@@ -987,9 +991,7 @@
     "talks": 8,
     "source": "https://ai.engineer/orgs/together-ai"
    },
-   "people": [
-    "hassan-el-mghari"
-   ],
+   "people": [],
    "initials": "TA"
   },
   {
@@ -1020,9 +1022,7 @@
     "source": "https://ai.engineer/orgs/arize"
    },
    "people": [
-    "aparna-dhinakaran",
-    "laurie-voss",
-    "fuad-ali"
+    "dat-ngo"
    ],
    "initials": "A"
   },
@@ -1089,8 +1089,7 @@
     "source": "https://ai.engineer/orgs/openai"
    },
    "people": [
-    "jason-liu",
-    "dominik-kundel"
+    "abhishek-bhardwaj"
    ],
    "initials": "O"
   },
@@ -1157,9 +1156,7 @@
     "source": "https://ai.engineer/orgs/neo4j"
    },
    "people": [
-    "stephen-chin",
-    "zach-blumenfeld",
-    "emil-eifrem"
+    "zach-blumenfeld"
    ],
    "initials": "N"
   },
@@ -2008,7 +2005,9 @@
     "talks": 16,
     "source": "https://ai.engineer/orgs/nvidia"
    },
-   "people": [],
+   "people": [
+    "chris-alexiuk"
+   ],
    "initials": "N"
   },
   {
@@ -2426,7 +2425,9 @@
     "talks": 9,
     "source": "https://ai.engineer/orgs/hugging-face"
    },
-   "people": [],
+   "people": [
+    "niels-rogge"
+   ],
    "initials": "HF"
   },
   {
@@ -3012,9 +3013,7 @@
     "talks": 7,
     "source": "https://ai.engineer/orgs/llamaindex"
    },
-   "people": [
-    "jerry-liu"
-   ],
+   "people": [],
    "initials": "L"
   },
   {
@@ -3039,7 +3038,9 @@
     "talks": 7,
     "source": "https://ai.engineer/orgs/meta"
    },
-   "people": [],
+   "people": [
+    "nishant-gupta"
+   ],
    "initials": "M"
   },
   {
@@ -3059,9 +3060,7 @@
     "talks": 7,
     "source": "https://ai.engineer/orgs/weights-biases"
    },
-   "people": [
-    "alex-volkov"
-   ],
+   "people": [],
    "initials": "W&"
   },
   {
@@ -3191,9 +3190,7 @@
     "talks": 6,
     "source": "https://ai.engineer/orgs/browserbase"
    },
-   "people": [
-    "paul-klein-iv"
-   ],
+   "people": [],
    "initials": "B"
   },
   {
@@ -3213,9 +3210,7 @@
     "talks": 6,
     "source": "https://ai.engineer/orgs/exa"
    },
-   "people": [
-    "will-bryk"
-   ],
+   "people": [],
    "initials": "E"
   },
   {
@@ -3319,9 +3314,7 @@
     "talks": 5,
     "source": "https://ai.engineer/orgs/baseten"
    },
-   "people": [
-    "philip-kiely"
-   ],
+   "people": [],
    "initials": "B"
   },
   {
@@ -3371,7 +3364,9 @@
     "talks": 5,
     "source": "https://ai.engineer/orgs/langchain"
    },
-   "people": [],
+   "people": [
+    "vivek-trivedy"
+   ],
    "initials": "L"
   },
   {
@@ -3473,7 +3468,9 @@
     "talks": 4,
     "source": "https://ai.engineer/orgs/ibm"
    },
-   "people": [],
+   "people": [
+    "tejas-kumar"
+   ],
    "initials": "I"
   },
   {
@@ -3498,9 +3495,7 @@
     "talks": 4,
     "source": "https://ai.engineer/orgs/pydantic"
    },
-   "people": [
-    "samuel-colvin"
-   ],
+   "people": [],
    "initials": "P"
   },
   {
@@ -3520,9 +3515,7 @@
     "talks": 4,
     "source": "https://ai.engineer/orgs/raindrop"
    },
-   "people": [
-    "ben-hylak"
-   ],
+   "people": [],
    "initials": "R"
   },
   {
@@ -3647,9 +3640,7 @@
     "talks": 3,
     "source": "https://ai.engineer/orgs/openrouter"
    },
-   "people": [
-    "alex-atallah"
-   ],
+   "people": [],
    "initials": "O"
   },
   {
@@ -3769,9 +3760,7 @@
     "talks": 3,
     "source": "https://ai.engineer/orgs/zep"
    },
-   "people": [
-    "daniel-chalef"
-   ],
+   "people": [],
    "initials": "Z"
   }
  ]

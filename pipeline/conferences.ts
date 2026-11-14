@@ -15,7 +15,7 @@ import path from "node:path";
 import { skillsOf, tasksOf, toolsOf } from "./taxonomy";
 
 const root = path.resolve(import.meta.dir, "..");
-const UA = { "User-Agent": "awesome-applied-ai conference tracker (+https://github.com/vfaraji89/awesome-applied-ai)" };
+const UA = { "User-Agent": "applied-ai-simplified conference tracker (+https://github.com/vfaraji89/applied-ai-simplified)" };
 const AIE = "https://ai.engineer";
 const get = async (url: string, accept = "application/json") => {
   const r = await fetch(url, { headers: { ...UA, Accept: accept }, redirect: "follow" });

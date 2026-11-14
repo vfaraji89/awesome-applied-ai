@@ -28,8 +28,8 @@ const days = (a: string, b: string) => Math.round((d0(b).getTime() - d0(a).getTi
 function ics(e: Ev) {
   const z = (s: string) => s.replace(/-/g, "");
   const esc = (s: string) => s.replace(/([,;\\])/g, "\\$1");
-  const body = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//awesome-applied-ai//events//EN", "BEGIN:VEVENT",
-    `UID:${z(e.start)}-${e.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}@awesome-applied-ai`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").slice(0, 15)}Z`,
+  const body = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//applied-ai-simplified//events//EN", "BEGIN:VEVENT",
+    `UID:${z(e.start)}-${e.name.toLowerCase().replace(/[^a-z0-9]+/g, "-")}@applied-ai-simplified`, `DTSTAMP:${new Date().toISOString().replace(/[-:]/g, "").slice(0, 15)}Z`,
     `DTSTART;VALUE=DATE:${z(e.start)}`, `DTEND;VALUE=DATE:${z(addDays(e.end, 1))}`, `SUMMARY:${esc(e.name)}`, `LOCATION:${esc(e.city)}`, `URL:${e.url}`,
     `DESCRIPTION:${esc(`${e.note ? `${e.note} ` : ""}Official page: ${e.url}`)}`, "END:VEVENT", "END:VCALENDAR"].join("\r\n");
   const a = document.createElement("a");
@@ -157,7 +157,7 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
                     <b>{e.name}</b>
                     <span className="muted">{range(e)} · {e.city}</span>
                     <span className="ec-type"><span className={`ec-dot sm t-${e.type}`} /><T k={`ec.t_${e.type}`}>{types[e.type] ?? e.type}</T></span>
-                    {e.tracks && <span className="ec-tracks">{e.tracks.map((x) => <i key={x}>{x}</i>)}</span>}
+                    {e.tracks && <span className="chips ec-tracks">{e.tracks.map((x) => <span key={x} className="chip">{x}</span>)}</span>}
                     {e.note && <p className="ec-note">{e.note}</p>}
                     <div className="ec-acts">
                       <a className="chip" href={e.url} target="_blank" rel="noreferrer"><T k="ec.site">Official site</T> ↗</a>
@@ -233,7 +233,7 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
         .ec-tile span { font: .66rem var(--font-mono), monospace; text-transform: uppercase; color: var(--muted); } .ec-tile b { font-size: 1.05rem; font-weight: 800; }
         .ec-body { display: grid; gap: 4px; min-width: 0; } .ec-body > b { font-size: 1.05rem; } .ec-body .muted { font-size: .86rem; }
         .ec-type { display: inline-flex; gap: 6px; align-items: center; font-size: .76rem; color: var(--sec); }
-        .ec-tracks { display: flex; flex-wrap: wrap; gap: 4px; } .ec-tracks i { font: .66rem var(--font-mono), monospace; font-style: normal; text-transform: uppercase; letter-spacing: .06em; padding: 2px 7px; border-radius: 999px; border: 1px solid color-mix(in srgb, var(--c) 45%, var(--line)); color: var(--sec); }
+        .ec-tracks { gap: 6px; }
         .ec-note { font-size: .86rem; color: var(--sec); margin: 2px 0 4px; }
         .ec-none { margin-top: 14px; }
       `}</style>

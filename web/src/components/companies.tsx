@@ -69,7 +69,7 @@ export function CompaniesBrowser({ companies, skillNames, roleNames }: { compani
         {list.map((c) => (
           <li key={c.id}>
             <Link href={`/companies/${c.id}/`} className="frame cpb-card">
-              <div className="cpb-top"><Badge c={c} /><div><b>{c.name}</b>{c.lab && <span className="cpb-tag"><T k="cp.lab">AI lab</T></span>}</div></div>
+              <div className="cpb-top"><Badge c={c} /><div><b>{c.name}</b>{c.lab && <span className="kicker cpb-tag"><T k="cp.lab">AI lab</T></span>}</div></div>
               <dl className="cpb-stats">
                 <div><dt className="count"><T k="cp.s_open">active AI roles</T></dt><dd>{c.hiring?.open ?? "–"}</dd></div>
                 <div><dt className="count"><T k="cp.s_talks">talks on stage</T></dt><dd>{c.stage?.talks ?? "–"}</dd></div>
@@ -96,7 +96,7 @@ export function CompaniesBrowser({ companies, skillNames, roleNames }: { compani
         .cpb-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr)); gap: 14px; }
         .cpb-card { display: grid; gap: 14px; height: 100%; padding: 18px 20px; } .cpb-card:hover b { color: var(--rust-deep); }
         .cpb-top { display: flex; gap: 14px; align-items: center; } .cpb-top b { display: block; font-size: 1.05rem; }
-        .cpb-tag { display: inline-block; margin-top: 3px; font: .66rem var(--font-mono), monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--rust-deep); }
+        .cpb-tag { display: block; margin-top: 3px; font-size: .66rem; }
         .cpb-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 0; } .cpb-stats div { display: grid; gap: 2px; } .cpb-stats dt { font-size: .64rem; } .cpb-stats dd { margin: 0; font-weight: 800; font-size: 1.15rem; }
       `}</style>
     </div>

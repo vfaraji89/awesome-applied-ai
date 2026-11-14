@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { T } from "@/i18n/lang";
-import { SectionIntro } from "@/components/section-intro";
+import { Crumb } from "@/components/section-intro";
 import { CertBoard } from "@/components/cert-board";
 import { education } from "@/data/framework";
 import { CHECKED, courses, changes } from "@/data/certificates";
@@ -23,7 +23,9 @@ export default function Certificates() {
       <JsonLd data={certificatesLd()} />
       <section className="section">
         <div className="wrap">
-          <SectionIntro id="certificates" lead="The certificates applied AI hiring asks for, by track and level. Each one links to the provider's official page." />
+          <Crumb id="docs" page="Certificates" />
+          <h1 style={{ marginTop: 12 }}><T k="sec.certificates.title">Industry certificates</T><span className="dot">.</span></h1>
+          <p className="lead" style={{ marginTop: 16 }}><T k="lead.certificates">The certificates applied AI hiring asks for, by track and level. Each one links to the provider&apos;s official page.</T></p>
           <div className="grid grid-3 ce-tips">
             {TIPS.map((t, i) => (
               <div key={t.k} className="ce-tip"><span className="ce-n mono">0{i + 1}</span><b><T k={`${t.k}.h`}>{t.h}</T></b><span className="muted"><T k={`${t.k}.p`}>{t.p}</T></span></div>

@@ -61,7 +61,7 @@ const meta = {
   rowPlatforms: ROW_SOURCES.filter((s) => rows.some((r) => r.platform === s)),
   span, generatedAt: new Date().toISOString(), licence: "CC-BY-4.0",
   doi: prev.doi ?? null, conceptDoi: prev.conceptDoi ?? null, ...(prev.zenodoId ? { zenodoId: prev.zenodoId } : {}),
-  site: "https://vfaraji89.github.io/awesome-applied-ai/market/method/",
+  site: "https://vfaraji89.github.io/applied-ai-simplified/market/method/",
 };
 writeFileSync(path.join(OUT, "applied-ai-job-ads.csv"), csv);
 writeFileSync(path.join(OUT, "applied-ai-job-ads.json"), JSON.stringify(rows));
@@ -71,7 +71,7 @@ writeFileSync(metaPath, JSON.stringify(meta, null, 1) + "\n");
 writeFileSync(path.join(root, "web/src/data/dataset-meta.json"), JSON.stringify(meta, null, 1) + "\n");
 
 const count = (f: (r: (typeof rows)[number]) => string) => { const m = new Map<string, number>(); for (const r of rows) m.set(f(r), (m.get(f(r)) ?? 0) + 1); return [...m.entries()].sort((a, b) => b[1] - a[1]); };
-const cite = `Faraji, V. (${through.slice(0, 4)}). Applied AI job ads: what employers ask for (version ${version}) [Data set].${meta.conceptDoi ? ` https://doi.org/${meta.conceptDoi}` : " https://github.com/vfaraji89/awesome-applied-ai/tree/main/dataset"}`;
+const cite = `Faraji, V. (${through.slice(0, 4)}). Applied AI job ads: what employers ask for (version ${version}) [Data set].${meta.conceptDoi ? ` https://doi.org/${meta.conceptDoi}` : " https://github.com/vfaraji89/applied-ai-simplified/tree/main/dataset"}`;
 const size = rows.length < 1e4 ? "1K<n<10K" : rows.length < 1e5 ? "10K<n<100K" : "100K<n<1M";
 // the front matter is for Hugging Face, which reads the licence and the data files from it
 writeFileSync(path.join(OUT, "README.md"), `---
@@ -89,7 +89,7 @@ configs:
 
 One row per AI job ad, with what the ad asks for: the role, the level, the skills, the tasks, the
 tools, the general stack and the years of experience, read from public company career pages every
-day by the tracker behind [awesome-applied-ai](https://vfaraji89.github.io/awesome-applied-ai/market/).
+day by the tracker behind [Applied AI, Simplified](https://vfaraji89.github.io/applied-ai-simplified/market/).
 
 **Version ${version}** · ${rows.length.toLocaleString("en-US")} ads published row by row, ${inRange.length.toLocaleString("en-US")} ads in the monthly totals · seen up to ${through}
 ${meta.doi ? `\nDOI: https://doi.org/${meta.doi}\n` : ""}

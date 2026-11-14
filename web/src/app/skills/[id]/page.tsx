@@ -48,7 +48,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   const desc = `${s.name} in applied AI job ads${p ? `: asked for in ${p.share}% of ${M.totals.processed.toLocaleString("en-US")} ads since 1 October 2026` : ""}. Who asks for it, what comes with it, the tools that stand out, and where to learn and prove it.`;
   const img = { url: "/og/pages/skills.png", width: 1200, height: 630, alt: `${s.name}: the skill in applied AI job ads` };
   return { title: `${s.name}: the skill`, description: desc, alternates: { canonical: abs(`/skills/${s.id}/`) },
-    openGraph: { type: "article", url: "./", siteName: "awesome-applied-ai", title: `${s.name}, in the ads`, description: desc, images: [img] },
+    openGraph: { type: "article", url: "./", siteName: "Applied AI, Simplified", title: `${s.name}, in the ads`, description: desc, images: [img] },
     twitter: { card: "summary_large_image", creator: "@vfaraji89", title: `${s.name}, in the ads`, description: desc, images: [img] } };
 }
 

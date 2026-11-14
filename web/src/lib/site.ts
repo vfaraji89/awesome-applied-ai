@@ -1,8 +1,8 @@
 import { structure } from "./structure";
 export const site = {
-  name: "awesome-applied-ai",
-  title: "Applied AI, mapped",
-  url: "https://vfaraji89.github.io/awesome-applied-ai",
+  name: "applied-ai-simplified",
+  title: "Applied AI, Simplified",
+  url: "https://vfaraji89.github.io/applied-ai-simplified",
   author: {
     name: "Vahid Faraji",
     site: "https://vfaraji89.github.io/",
@@ -13,4 +13,4 @@ export const site = {
   },
 } as const;
 
-export const nav = structure.map((s) => ({ id: s.id, href: s.href, label: s.label, match: s.match }));
+export const nav = structure.filter((s) => !s.footerOnly).map((s) => ({ id: s.id, href: s.href, label: s.label, match: s.match }));

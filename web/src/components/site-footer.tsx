@@ -13,21 +13,22 @@ import type { HarnessCounts } from "@/lib/harness-counts";
 gsap.registerPlugin(useGSAP);
 
 /* The footer is the logo, drawn large. The box is the harness, the red bead inside is the model,
-   and each of the seven sections is a tool it can call. Every few seconds the model calls the next
+   and each of the eight sections is a tool it can call. Every few seconds the model calls the next
    one: the bead lines up with it, a call runs out along the wire, the section lights up and the
    readout shows the call: the question that tool answers and what it returns, with live numbers.
    Point at a section to call it yourself. */
 
 /* For each section: the function name the model would call, the question it answers, and what
    comes back. {n} and friends are filled from HarnessCounts. */
-const UNITS: Record<string, string> = { market: "ads", roles: "roles", architect: "layers", tools: "tools", certificates: "certs", docs: "live" };
+const UNITS: Record<string, string> = { market: "ads", roles: "roles", people: "people", events: "events", architect: "layers", tools: "tools", docs: "live" };
 const CALLS: Record<string, { fn: string; ask: string; ret: string }> = {
   market: { fn: "market.pulse()", ask: "What are applied AI jobs asking for right now?", ret: "{n} AI job ads since 1 Oct 2026, by skill, task, tool and level" },
   roles: { fn: "roles.compare()", ask: "Who does the work, and what does each role take?", ret: "{n} roles across {s} skills, with daily tasks and how each one grows" },
+  people: { fn: "people.find()", ask: "Who actually builds this, and where?", ret: "{n} builders, {q} of them quiet, across {c} companies" },
+  events: { fn: "events.next()", ask: "Where does applied AI meet next?", ret: "{n} upcoming events on official dates, and what the stages talk about" },
   architect: { fn: "architect.design()", ask: "How do you design AI into a real system?", ret: "{n} layers, {p} problems with fixes, and the agent harness" },
   tools: { fn: "tools.search()", ask: "What should I build with?", ret: "{n} tools in eleven areas, filterable by use case; {e} emerging" },
-  certificates: { fn: "certs.match()", ask: "Which certificate proves which stack?", ret: "{n} certificates by track and level, plus {c} courses" },
-  docs: { fn: "docs.explain()", ask: "How does this actually work?", ret: "Animated docs ({n} live so far) and {j} terms in plain words" },
+  docs: { fn: "docs.explain()", ask: "How does this actually work, in plain words?", ret: "Animated docs ({n} live), {j} terms, {w} coined words decoded and {c} certificates" },
   contribute: { fn: "feedback.send()", ask: "Is something wrong, missing or out of date?", ret: "A correction that goes into the next update" },
 };
 const LI = <svg viewBox="0 0 16 16" fill="currentColor" width="14" height="14" aria-hidden="true"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z"/></svg>;
@@ -69,8 +70,8 @@ export function SiteFooter({ counts }: { counts: HarnessCounts }) {
       <div className="wrap fh">
         <div className="fh-say">
           <span className="kicker"><T k="ft.kicker">How this site is built</T></span>
-          <h2 className="fh-title"><T k="ft.title">One harness, seven tools</T><span className="dot">.</span></h2>
-          <p className="muted"><T k="ft.text">An AI agent is a model working in a loop inside a harness, calling tools to get what it needs. This site is built the same way: seven sections, each a tool that answers one question. Watch the model call them in turn, or point at one to call it yourself.</T></p>
+          <h2 className="fh-title"><T k="ft.title2">One harness, eight tools</T><span className="dot">.</span></h2>
+          <p className="muted"><T k="ft.text2">An AI agent is a model working in a loop inside a harness, calling tools to get what it needs. This site is built the same way: eight sections, each a tool that answers one question. Watch the model call them in turn, or point at one to call it yourself.</T></p>
           {(() => { const s = structure[on]; const c = CALLS[s.id]; return c && (
             <Link href={s.href} className="fh-read" aria-live="polite">
               <span className="fh-read-row"><span className="mono fh-read-k">call</span><code className="fh-fn">{c.fn}</code></span>
@@ -118,10 +119,10 @@ export function SiteFooter({ counts }: { counts: HarnessCounts }) {
       </section>
 
       <div className="wrap ft-inner">
-        <Link href="/" className="ft-brand" aria-label="Applied AI, home">
+        <Link href="/" className="ft-brand" aria-label="Applied AI, Simplified, home">
           <Mark size={30} spin />
           <span className="ft-name">Applied AI<b>.</b></span>
-          <span className="ft-role">awesome-applied-ai</span>
+          <span className="ft-role">Simplified</span>
         </Link>
         <nav className="ft-nav" aria-label="Footer">
           {structure.flatMap((s) => s.pages.filter((p) => !p.soon && !p.href.includes("#"))).filter((p, i, a) => a.findIndex((q) => q.href === p.href) === i).map((p) => <Link key={p.href} href={p.href}><T k={`page.${slug(p.label)}`}>{p.label}</T></Link>)}

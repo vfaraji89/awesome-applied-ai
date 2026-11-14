@@ -1,10 +1,10 @@
-# awesome-applied-ai
+# Applied AI, Simplified
 
-**Applied AI, mapped.** Learn how AI systems really work, one animation at a time.
+**Applied AI is made to sound harder than it is.** This site says it plainly: the job market, the roles, the people who build it, the events, the tools and the docs.
 
 The companion site to the book *Applied AI, Simplified* (in progress). This repository is private and all rights are reserved: see [LICENSE](LICENSE).
 
-→ https://vfaraji89.github.io/awesome-applied-ai/
+→ https://vfaraji89.github.io/applied-ai-simplified/
 
 | Section | What is in it |
 |---|---|

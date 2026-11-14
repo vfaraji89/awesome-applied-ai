@@ -35,7 +35,7 @@ export default function CoinedPage() {
                 </div>
                 <span className="cd-by"><T k={`cd.how_${c.how}`}>{c.how}</T> <T k="cd.by">by</T> {c.by}</span>
                 <p className="cd-plain">{c.plain}</p>
-                <p className="cd-was"><span><T k="cd.was">Plainly</T></span> {c.was}</p>
+                <p className="cd-was"><span className="kicker"><T k="cd.was">Plainly</T></span> {c.was}</p>
                 {c.note && <p className="cd-note">{c.note}</p>}
                 <div className="cd-links">
                   <a href={c.source.url} target="_blank" rel="noreferrer" className="chip">{c.source.label} ↗</a>
@@ -57,7 +57,7 @@ export default function CoinedPage() {
         .cd-top { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; } .cd-term { font-size: 1.2rem; font-weight: 800; letter-spacing: -.01em; }
         .cd-by { font-size: .84rem; color: var(--sec); }
         .cd-plain { font-size: 1rem; color: var(--ink); margin-top: 4px; }
-        .cd-was { color: var(--sec); font-size: .92rem; } .cd-was span { font: .66rem var(--font-mono), monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--rust-deep); margin-right: 6px; }
+        .cd-was { color: var(--sec); font-size: .92rem; } .cd-was span { margin-right: 6px; }
         .cd-note { font-size: .8rem; color: var(--muted); }
         .cd-links { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 6px; } .cd-links .chip { font-size: .74rem; }
       `}</style>

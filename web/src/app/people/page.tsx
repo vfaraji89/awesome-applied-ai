@@ -6,7 +6,7 @@ import { share } from "@/lib/share";
 import { PeopleBrowser, type Person } from "@/components/people";
 import data from "@/data/people.json";
 
-export const metadata: Metadata = { ...share("people"), title: "People", description: "The people building applied AI who keep showing up on its main stages: their role, where they work, what they build and what they talk about, each fact linked to its source." };
+export const metadata: Metadata = { ...share("people"), title: "People", description: "The people who build applied AI, not the famous names: engineers, researchers and quiet builders, with their role, where they work, what they build and what they talk about, each fact linked to its source." };
 
 export default function People() {
   const people = data.people as unknown as Person[];
@@ -14,12 +14,12 @@ export default function People() {
   return (
     <section className="section">
       <div className="wrap">
-        <Crumb id="roles" page="People" />
+        <Crumb id="people" page="People" />
         <h1 style={{ marginTop: 12 }}><TH k="pp.h1">The people <mark>building applied AI</mark></TH><span className="dot">.</span></h1>
-        <p className="lead" style={{ marginTop: 16 }}><T k="pp.lead" vars={{ n: people.length }}>{"{n} builders who keep showing up on the main stages: who they are, where they work, what they build and what they talk about."}</T></p>
+        <p className="lead" style={{ marginTop: 16 }}><T k="pp.lead2" vars={{ n: people.length }}>{"{n} people who build applied AI, not the famous names: engineers and researchers who keep showing up on the main stages, and quiet builders you may not know yet. Who they are, where they work, what they build and what they talk about."}</T></p>
         <div style={{ marginTop: 30 }}><PeopleBrowser people={people} span={span} /></div>
         <p className="muted" style={{ marginTop: 30, maxWidth: "78ch", fontSize: ".9rem" }}>
-          <T k="pp.how">Chosen from everyone who has spoken at AI Engineer: two or more editions or three or more talks, a talk since 2025, at most three people per company, then checked by hand. Role and company are as their AI Engineer speaker page states them; skills come from their talk titles, read with the same rules as the job ads.</T>{" "}
+          <T k="pp.how2">Chosen from everyone who has spoken at AI Engineer, then checked by hand. Everyone has a technical role, a GitHub link and a talk since 2025. Builders: two or more editions or three or more talks, at most two per company. Quiet builders: one edition, one or two talks, one per company. Role and company are as their AI Engineer speaker page states them; skills come from their talk titles, read with the same rules as the job ads.</T>{" "}
           <Link href="/contribute/"><T k="pp.fix">Something wrong, or want a profile removed?</T></Link>
         </p>
       </div>

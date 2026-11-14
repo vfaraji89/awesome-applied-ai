@@ -38,7 +38,7 @@ export default function Conferences() {
     <>
       <section className="section">
         <div className="wrap">
-          <Crumb id="market" page="Conferences" />
+          <Crumb id="events" page="Conferences" />
           <h1 style={{ marginTop: 12 }}><TH k="cf.h1">On stage, and <mark>in the job</mark></TH><span className="dot">.</span></h1>
           <p className="lead" style={{ marginTop: 16 }}><T k="cf.lead">What applied AI conferences talk about, set against what AI job ads ask for. Talks are read from official schedules and archives with the same rules as the ads.</T></p>
           {ready ? (

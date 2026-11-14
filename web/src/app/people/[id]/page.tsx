@@ -9,7 +9,7 @@ import { skills } from "@/data/framework";
 import data from "@/data/people.json";
 import cos from "@/data/companies.json";
 
-type P = { id: string; name: string; role: string | null; org: string | null; source: string; links: Record<string, string>; talks: { title: string; url: string; event: string | null; year: string | null }[]; talkCount: number; editions: string[]; years: string[]; topics: string[]; skills: string[]; products: { id: string; name: string; area: string }[]; initials: string };
+type P = { id: string; group?: string; name: string; role: string | null; org: string | null; source: string; links: Record<string, string>; talks: { title: string; url: string; event: string | null; year: string | null }[]; talkCount: number; editions: string[]; years: string[]; topics: string[]; skills: string[]; products: { id: string; name: string; area: string }[]; initials: string };
 const people = data.people as unknown as P[];
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
 const LINKS: [string, string][] = [["website", "Website"], ["github", "GitHub"], ["linkedin", "LinkedIn"], ["x", "X"]];
@@ -34,10 +34,11 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
     <>
       <section className="section">
         <div className="wrap">
-          <Crumb id="roles" page="People" />
+          <Crumb id="people" page="People" />
           <div className="ps-hero">
             <Monogram p={p} size={112} />
             <div>
+              <span className="kicker">{p.group === "quiet" ? <T k="pb.g.quiet">Quiet builders</T> : <T k="pb.g.builders">Builders</T>}</span>
               <h1>{p.name}<span className="dot">.</span></h1>
               <p className="lead" style={{ marginTop: 8 }}>{p.role}{p.role && p.org ? " · " : ""}{p.org && (co ? <Link href={`/companies/${co.id}/`}>{p.org}</Link> : p.org)}</p>
               <div className="ps-links">{LINKS.filter(([k]) => p.links[k]).map(([k, label]) => <a key={k} className="chip" href={p.links[k]} target="_blank" rel="noreferrer me">{label} ↗</a>)}</div>

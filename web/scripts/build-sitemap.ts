@@ -5,7 +5,7 @@ import { readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { join } from "node:path";
 
 const OUT = new URL("../out/", import.meta.url).pathname;
-const SITE = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://vfaraji89.github.io/awesome-applied-ai").replace(/\/$/, "");
+const SITE = (process.env.NEXT_PUBLIC_SITE_URL ?? "https://vfaraji89.github.io/applied-ai-simplified").replace(/\/$/, "");
 const today = new Date().toISOString().slice(0, 10);
 const pages: string[] = [];
 (function walk(dir: string, rel: string) {

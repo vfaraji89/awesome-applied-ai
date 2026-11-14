@@ -3,304 +3,95 @@
  "source": "https://ai.engineer/speakers",
  "people": [
   {
-   "id": "swyx",
-   "name": "swyx",
-   "role": "Curator",
-   "org": "AI Engineer",
-   "source": "https://ai.engineer/speakers/swyx",
+   "id": "philipp-schmid",
+   "group": "builders",
+   "name": "Philipp Schmid",
+   "role": "Staff Engineer",
+   "org": "Google DeepMind",
+   "source": "https://ai.engineer/speakers/philipp-schmid",
    "links": {
-    "website": "https://www.swyx.io",
-    "github": "https://github.com/swyxio",
-    "linkedin": "https://www.linkedin.com/in/shawnswyxwang",
-    "x": "https://x.com/swyx"
+    "website": "https://www.philschmid.de",
+    "github": "https://github.com/philschmid",
+    "linkedin": "https://www.linkedin.com/in/philipp-schmid-a6a2bb196",
+    "x": "https://x.com/_philschmid"
    },
    "talks": [
     {
-     "title": "6 Things to Know about AIE World's Fair 2026",
-     "url": "https://ai.engineer/talks/0S8xe9ftGTM-6-things-know-about-aie-worlds-fair",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Agents for Everything Else — swyx",
-     "url": "https://ai.engineer/talks/zepu8Kk6FBQ-agents-everything-else-swyx",
+     "title": "Building Conversational Agents",
+     "url": "https://ai.engineer/talks/cVzf49yg0D8-building-conversational-agents",
      "event": "AI Engineer Europe 2026",
      "year": "2026"
     },
     {
-     "title": "Software Engineering + AI = ?",
-     "url": "https://ai.engineer/talks/CS5Cmz5FssI-software-engineering-ai",
+     "title": "Don't Ship Skills Without Evals",
+     "url": "https://ai.engineer/talks/0vphxNt4wyk-dont-ship-skills-without-evals",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Why (Senior) Engineers Struggle to Build AI Agents",
+     "url": "https://ai.engineer/talks/3_gYbhABcAE-why-senior-engineers-struggle-build-ai-agents",
      "event": "AI Engineer Europe 2026",
      "year": "2026"
     },
     {
-     "title": "Hiring Employable Agents + Startup Battlefield Finals — Howie Liu, HyperAgent",
-     "url": "https://ai.engineer/talks/EEt3ZSG4a1s-hiring-employable-agents-startup-battlefield",
+     "title": "Why AI Agents Should Have Their Own Sandbox — Philipp Schmid, Google DeepMind",
+     "url": "https://ai.engineer/talks/oWTEiYpxl80-why-ai-agents-should-have-their-own",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     },
     {
-     "title": "The Highest Loop — swyx",
-     "url": "https://ai.engineer/talks/Fva8hFosqyQ-highest-loop-swyx",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "#define AI Engineer",
-     "url": "https://ai.engineer/talks/avWhreBUYF0-define-ai-engineer",
+     "title": "AI Engineering with the Google Gemini 2.5 Model Family",
+     "url": "https://ai.engineer/talks/zK9lYrLbjSg-ai-engineering-google-gemini-2-5-model",
      "event": "AI Engineer World's Fair 2025",
      "year": "2025"
     },
     {
-     "title": "Designing AI-Intensive Applications",
-     "url": "https://ai.engineer/talks/IHkyFhU6JEY-designing-ai-intensive-applications",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
+     "title": "Agents Without Code: Skills, YAML, and Filesystems Replaced Python — Philipp Schmid, Google DeepMind",
+     "url": "https://ai.engineer/talks/fjF8EKnxKCU-agents-without-code-skills-yaml-filesystems",
+     "event": null,
+     "year": null
     },
     {
-     "title": "No More Slop – swyx",
-     "url": "https://ai.engineer/talks/IoiHI7p12Ao-no-more-slop-swyx",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Why Agent Engineering",
-     "url": "https://ai.engineer/talks/5N33E9tC400-why-agent-engineering",
-     "event": "AI Engineer Summit 2025",
-     "year": "2025"
-    },
-    {
-     "title": "AI Engineering Without Borders",
-     "url": "https://ai.engineer/talks/eDr0m6R7fI4-ai-engineering-without-borders",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    },
-    {
-     "title": "The 1,000x AI Engineer: Swyx",
-     "url": "https://ai.engineer/talks/qaJXBMwUkoE-1-000x-ai-engineer",
-     "event": "AI Engineer Summit 2023",
-     "year": "2023"
-    },
-    {
-     "title": "AI Engineer NYC 2026 Closing Remarks - Ksenia Se, Turing Post & swyx, AI Engineer",
-     "url": "https://ai.engineer/talks/Gs4Ho0ub3a4-ai-engineer-nyc-2026-closing-remarks",
+     "title": "7 Things Your AI Coworker Needs - Philipp Schmid, Google DeepMind",
+     "url": "https://ai.engineer/talks/EtZwTYahfek-7-things-your-ai-coworker-needs",
      "event": null,
      "year": null
     }
    ],
-   "talkCount": 14,
+   "talkCount": 7,
    "editions": [
-    "AI Engineer World's Fair 2026",
-    "AI Engineer Europe 2026",
-    "AI Engineer World's Fair 2024",
     "AI Engineer World's Fair 2025",
-    "AI Engineer Code 2025",
-    "AI Engineer Summit 2023",
-    "AI Engineer Summit 2025"
+    "AI Engineer Europe 2026",
+    "AI Engineer World's Fair 2026"
    ],
    "years": [
-    "2023",
-    "2024",
     "2025",
     "2026"
    ],
    "topics": [
     "Agent engineering",
-    "Agent memory",
     "Agent orchestration",
-    "AI engineering leadership",
-    "AI in finance",
-    "AI platform engineering",
-    "AI startups & small teams",
-    "Coding agents"
+    "Agent skills",
+    "AI security",
+    "Code review & verification",
+    "Coding agents",
+    "Context engineering",
+    "Developer workflows & testing"
    ],
    "skills": [
     "agents",
+    "evals",
+    "software",
+    "context",
     "ai-dev"
    ],
    "products": [],
-   "initials": "S"
-  },
-  {
-   "id": "stephen-chin",
-   "name": "Stephen Chin",
-   "role": "VP of Developer Relations",
-   "org": "Neo4j",
-   "source": "https://ai.engineer/speakers/stephen-chin",
-   "links": {
-    "github": "https://github.com/steveonjava",
-    "linkedin": "https://www.linkedin.com/in/steveonjava",
-    "x": "https://x.com/steveonjava"
-   },
-   "talks": [
-    {
-     "title": "Connecting the Dots with Context Graphs",
-     "url": "https://ai.engineer/talks/eW_vxrjvERk-connecting-dots-context-graphs",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "CrabRAG: Why Automated Assistants Need Graph Memory, Not More Tokens",
-     "url": "https://ai.engineer/talks/Q0VkgCyNVUg-crabrag-why-automated-assistants-need-graph-memory",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Agentic GraphRAG: AI’s Logical Edge",
-     "url": "https://ai.engineer/talks/AvVoJBxgSQk-agentic-graphrag-ais-logical-edge",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Anchoring Enterprise GenAI with Knowledge Graphs",
-     "url": "https://ai.engineer/talks/OpVkWc3YnFc-anchoring-enterprise-genai-knowledge-graphs",
-     "event": "AI Engineer Summit 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Context Engineering: Connecting the Dots with Graphs — Stephen Chin, Neo4j",
-     "url": "https://ai.engineer/talks/LLuKshphGOE-context-engineering-connecting-dots-graphs",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Practical GraphRAG: Making LLMs Smarter with Knowledge Graphs",
-     "url": "https://ai.engineer/talks/XNneh6-eyPg-practical-graphrag-making-llms-smarter-knowledge",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "How We Mapped a 35-Million-Line Mainframe in 4 Days - Stephen Chin, Neo4j & Neeraj Deshmukh, Blitzy",
-     "url": "https://ai.engineer/talks/oWqsBuhRRZ4-we-mapped-35-million-line-mainframe",
-     "event": null,
-     "year": null
-    },
-    {
-     "title": "Your PR Says the Tests Passed. Prove It. - Stephen Chin & Cassandra Chin",
-     "url": "https://ai.engineer/talks/gbeuC0ud1p4-your-pr-says-tests-passed-prove-it",
-     "event": null,
-     "year": null
-    }
-   ],
-   "talkCount": 8,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer Summit 2025",
-    "AI Engineer Europe 2026",
-    "AI Engineer Code 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Agent memory",
-    "AI engineering leadership",
-    "AI in finance",
-    "AI in healthcare",
-    "Context engineering",
-    "Document understanding & OCR",
-    "Forward-deployed engineering"
-   ],
-   "skills": [
-    "agents",
-    "context"
-   ],
-   "products": [
-    {
-     "id": "neo4j",
-     "name": "Neo4j",
-     "area": "retrieval"
-    }
-   ],
-   "initials": "SC"
-  },
-  {
-   "id": "jerry-liu",
-   "name": "Jerry Liu",
-   "role": "CEO",
-   "org": "LlamaIndex",
-   "source": "https://ai.engineer/speakers/jerry-liu",
-   "links": {
-    "website": "https://jerryjliu.github.io/",
-    "github": "https://github.com/jerryjliu",
-    "linkedin": "https://www.linkedin.com/in/jerry-liu-64390071/",
-    "x": "https://x.com/jerryjliu0"
-   },
-   "talks": [
-    {
-     "title": "Building the Document Context Layer for AI Agents — Jerry Liu, LlamaIndex",
-     "url": "https://ai.engineer/talks/RQi7x-navxU-building-document-context-layer-ai-agents",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Building AI Agents that actually automate Knowledge Work",
-     "url": "https://ai.engineer/talks/jVGCulhBRZI-building-ai-agents-that-actually-automate",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "The Future of Knowledge Assistants: Jerry Liu",
-     "url": "https://ai.engineer/talks/zeAyuLc_f3Q-future-of-knowledge-assistants",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    },
-    {
-     "title": "RAG for VPs of AI",
-     "url": "https://ai.engineer/talks/KJsUHnwSvTY-rag-vps-ai",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    },
-    {
-     "title": "Production-Ready RAG: Retrieval, Evaluation, and Failure Analysis",
-     "url": "https://ai.engineer/talks/TRjq7t2Ms5I-production-ready-rag",
-     "event": "AI Engineer Summit 2023",
-     "year": "2023"
-    }
-   ],
-   "talkCount": 5,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2024",
-    "AI Engineer Summit 2023",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2023",
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI engineering leadership",
-    "AI interface design",
-    "AI security",
-    "Benchmarks",
-    "Context engineering",
-    "Data quality & curation",
-    "Document understanding & OCR"
-   ],
-   "skills": [
-    "agents",
-    "retrieval",
-    "context",
-    "evals"
-   ],
-   "products": [
-    {
-     "id": "llamaindex",
-     "name": "LlamaIndex",
-     "area": "agents"
-    }
-   ],
-   "initials": "JL"
+   "initials": "PS"
   },
   {
    "id": "charles-frye",
+   "group": "builders",
    "name": "Charles Frye",
    "role": "Member of Technical Staff",
    "org": "Modal",
@@ -387,7 +178,170 @@
    "initials": "CF"
   },
   {
+   "id": "patrick-debois",
+   "group": "builders",
+   "name": "Patrick Debois",
+   "role": "Member Technical Staff",
+   "org": "Tessl",
+   "source": "https://ai.engineer/speakers/patrick-debois",
+   "links": {
+    "website": "https://jedi.be",
+    "github": "https://github.com/jedi4ever",
+    "linkedin": "https://www.linkedin.com/in/patrickdebois",
+    "x": "https://x.com/patrickdebois"
+   },
+   "talks": [
+    {
+     "title": "Context Is the New Code",
+     "url": "https://ai.engineer/talks/bSG9wUYaHWU-context-is-new-code",
+     "event": "AI Engineer Europe 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl",
+     "url": "https://ai.engineer/talks/zCJtYuqwm7E-coding-agents-dont-scale-themselves-neither-do",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Reverse Conway's law and GenAI: How agents will take over the organisation",
+     "url": "https://ai.engineer/talks/FpJ9dPe1qYQ-reverse-conways-law-genai-agents-will-take",
+     "event": "AI Engineer Summit 2025",
+     "year": "2025"
+    },
+    {
+     "title": "The 4 Patterns of AI Native Development",
+     "url": "https://ai.engineer/talks/9u6xvcNJaxc-4-patterns-ai-native-development",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    },
+    {
+     "title": "AI Platform Engineering",
+     "url": "https://ai.engineer/talks/5qNXdLbEdew-ai-platform-engineering",
+     "event": "AI Engineer World's Fair 2024",
+     "year": "2024"
+    },
+    {
+     "title": "Your Team's Agents Are All Shipping to the Same Code at Once - Patrick Debois, Tessl",
+     "url": "https://ai.engineer/talks/fTUinMqA1XQ-your-teams-agents-are-all-shipping-same",
+     "event": null,
+     "year": null
+    }
+   ],
+   "talkCount": 6,
+   "editions": [
+    "AI Engineer World's Fair 2024",
+    "AI Engineer Europe 2026",
+    "AI Engineer Summit 2025",
+    "AI Engineer World's Fair 2025",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "AI engineering leadership",
+    "AI platform engineering",
+    "Coding agents",
+    "Developer productivity",
+    "Developer workflows & testing",
+    "Forward-deployed engineering",
+    "Infrastructure & deployment",
+    "MCP"
+   ],
+   "skills": [
+    "agents",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "PD"
+  },
+  {
+   "id": "will-brown",
+   "group": "builders",
+   "name": "Will Brown",
+   "role": "Researcher",
+   "org": "Prime Intellect",
+   "source": "https://ai.engineer/speakers/will-brown",
+   "links": {
+    "website": "https://willcb.com",
+    "github": "https://github.com/willccbb",
+    "linkedin": "https://www.linkedin.com/in/willcb",
+    "x": "https://x.com/willccbb"
+   },
+   "talks": [
+    {
+     "title": "Modern Post-Training: A Deep Dive — Will Brown, Prime Intellect",
+     "url": "https://ai.engineer/talks/V-EDrhIhHzQ-modern-post-training-deep-dive",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Reinforcement Learning without Verifiable Rewards — Will Brown, Prime Intellect",
+     "url": "https://ai.engineer/talks/AQv3qRCG6Gw-reinforcement-learning-without-verifiable-rewards",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "RL Environments at Scale",
+     "url": "https://ai.engineer/talks/_IzZWeuTx7I-rl-environments-at-scale",
+     "event": "AI Engineer Code 2025",
+     "year": "2025"
+    },
+    {
+     "title": "Training Agentic Reasoners",
+     "url": "https://ai.engineer/talks/PbHm2qKnu10-training-agentic-reasoners",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    },
+    {
+     "title": "What RL Means for Agents",
+     "url": "https://ai.engineer/talks/JIsgyk0Paic-what-rl-means-agents",
+     "event": "AI Engineer Summit 2025",
+     "year": "2025"
+    },
+    {
+     "title": "Your Company Should Train Its Own AI Models - Will Brown, Prime Intellect",
+     "url": "https://ai.engineer/talks/5SRjPT2Eo7A-your-company-should-train-its-own-ai",
+     "event": null,
+     "year": null
+    }
+   ],
+   "talkCount": 6,
+   "editions": [
+    "AI Engineer World's Fair 2026",
+    "AI Engineer Code 2025",
+    "AI Engineer World's Fair 2025",
+    "AI Engineer Summit 2025"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Computer use",
+    "Continual learning",
+    "Distillation",
+    "Evals",
+    "Fine-tuning",
+    "Harness engineering"
+   ],
+   "skills": [
+    "agents",
+    "models",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "WB"
+  },
+  {
    "id": "zach-blumenfeld",
+   "group": "builders",
    "name": "Zach Blumenfeld",
    "role": "AI Research Engineer",
    "org": "Neo4j",
@@ -472,49 +426,52 @@
    "initials": "ZB"
   },
   {
-   "id": "aparna-dhinakaran",
-   "name": "Aparna Dhinakaran",
-   "role": "CPO",
-   "org": "Arize",
-   "source": "https://ai.engineer/speakers/aparna-dhinakaran",
+   "id": "zack-proser",
+   "group": "builders",
+   "name": "Zack Proser",
+   "role": "AI Engineer, Applied AI",
+   "org": "WorkOS",
+   "source": "https://ai.engineer/speakers/zack-proser",
    "links": {
-    "linkedin": "https://www.linkedin.com/in/aparnadhinakaran",
-    "x": "https://x.com/aparnadhinak"
+    "website": "https://zackproser.com",
+    "github": "https://github.com/zackproser",
+    "linkedin": "https://www.linkedin.com/in/zackproser",
+    "x": "https://x.com/zackproser"
    },
    "talks": [
     {
-     "title": "The Future of Evals: From LLM as a Judge to Agent as a Judge — Aparna Dhinakaran, Arize AI",
-     "url": "https://ai.engineer/talks/q2JrUKBMf0w-future-evals-from-llm-as-judge-agent",
-     "event": "AI Engineer World's Fair 2026",
+     "title": "Skills at Scale",
+     "url": "https://ai.engineer/talks/pFsfax19yOM-skills-at-scale",
+     "event": "AI Engineer Europe 2026",
      "year": "2026"
     },
     {
-     "title": "Break It 'Til You Make It: Building the Self-Improving Stack for AI Agents",
-     "url": "https://ai.engineer/talks/Qvp9vw4jJQ8-break-it-til-you-make-it-building",
+     "title": "Your Attention Is the Bottleneck, Not Your Agents — Zack Proser, WorkOS",
+     "url": "https://ai.engineer/talks/so9l_MwS2yg-your-attention-is-bottleneck-not-your-agents",
+     "event": "AI Engineer Europe 2026",
+     "year": "2026"
+    },
+    {
+     "title": "AI Pipelines and Agents in Pure TypeScript with Mastra.ai",
+     "url": "https://ai.engineer/talks/FWlRHPZWyHE-ai-pipelines-agents-in-pure-typescript-mastra",
      "event": "AI Engineer World's Fair 2025",
      "year": "2025"
     },
     {
-     "title": "Ensure AI Agents Work: Evaluation Frameworks for Scaling Success",
-     "url": "https://ai.engineer/talks/OC04sP_QgTI-ensure-ai-agents-work-evaluation-frameworks",
-     "event": "AI Engineer Summit 2025",
-     "year": "2025"
+     "title": "Lifestyles of the AI-Native — Nick Nisi & Zack Proser, WorkOS",
+     "url": "https://ai.engineer/talks/AgBAOXVxt4A-lifestyles-ai-native",
+     "event": null,
+     "year": null
     },
     {
-     "title": "The Unreasonable Effectiveness of Prompt Learning",
-     "url": "https://ai.engineer/talks/pP_dSNz_EdQ-unreasonable-effectiveness-prompt-learning",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
+     "title": "I Don't Fear AI Slop. I Fear Untold Stories - Zack Proser, WorkOS",
+     "url": "https://ai.engineer/talks/1et3Lb_KLQo-i-dont-fear-ai-slop-i-fear",
+     "event": null,
+     "year": null
     },
     {
-     "title": "LLM Evals That Work IRL",
-     "url": "https://ai.engineer/talks/nbZzSC5A6hs-llm-evals-that-work-irl",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    },
-    {
-     "title": "What Does an AI Engineer Do Now? - Aparna Dhinakaran, Arize AI",
-     "url": "https://ai.engineer/talks/ImnZ7s68jw8-what-does-ai-engineer-do-now",
+     "title": "Teach Your Agent to Prove It's Done — Nick Nisi & Zack Proser, WorkOS",
+     "url": "https://ai.engineer/talks/q4WC4TowkBo-teach-your-agent-prove-its-done",
      "event": null,
      "year": null
     }
@@ -522,190 +479,34 @@
    "talkCount": 6,
    "editions": [
     "AI Engineer World's Fair 2025",
-    "AI Engineer Summit 2025",
-    "AI Engineer World's Fair 2024",
-    "AI Engineer World's Fair 2026",
-    "AI Engineer Code 2025"
+    "AI Engineer Europe 2026"
    ],
    "years": [
-    "2024",
     "2025",
     "2026"
    ],
    "topics": [
     "Agent engineering",
     "Agent memory",
+    "Agent orchestration",
+    "Code review & verification",
     "Coding agents",
-    "Computer use",
-    "Context engineering",
     "Developer workflows & testing",
     "Enterprise AI",
     "Evals"
    ],
    "skills": [
     "agents",
-    "evals",
-    "context",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "AD"
-  },
-  {
-   "id": "patrick-debois",
-   "name": "Patrick Debois",
-   "role": "Member Technical Staff",
-   "org": "Tessl",
-   "source": "https://ai.engineer/speakers/patrick-debois",
-   "links": {
-    "website": "https://jedi.be",
-    "github": "https://github.com/jedi4ever",
-    "linkedin": "https://www.linkedin.com/in/patrickdebois",
-    "x": "https://x.com/patrickdebois"
-   },
-   "talks": [
-    {
-     "title": "Context Is the New Code",
-     "url": "https://ai.engineer/talks/bSG9wUYaHWU-context-is-new-code",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Coding Agents Don't Scale Themselves. Neither Do Your Teams. — Patrick Debois, Tessl",
-     "url": "https://ai.engineer/talks/zCJtYuqwm7E-coding-agents-dont-scale-themselves-neither-do",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Reverse Conway's law and GenAI: How agents will take over the organisation",
-     "url": "https://ai.engineer/talks/FpJ9dPe1qYQ-reverse-conways-law-genai-agents-will-take",
-     "event": "AI Engineer Summit 2025",
-     "year": "2025"
-    },
-    {
-     "title": "The 4 Patterns of AI Native Development",
-     "url": "https://ai.engineer/talks/9u6xvcNJaxc-4-patterns-ai-native-development",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "AI Platform Engineering",
-     "url": "https://ai.engineer/talks/5qNXdLbEdew-ai-platform-engineering",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    },
-    {
-     "title": "Your Team's Agents Are All Shipping to the Same Code at Once - Patrick Debois, Tessl",
-     "url": "https://ai.engineer/talks/fTUinMqA1XQ-your-teams-agents-are-all-shipping-same",
-     "event": null,
-     "year": null
-    }
-   ],
-   "talkCount": 6,
-   "editions": [
-    "AI Engineer World's Fair 2024",
-    "AI Engineer Europe 2026",
-    "AI Engineer Summit 2025",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "AI engineering leadership",
-    "AI platform engineering",
-    "Coding agents",
-    "Developer productivity",
-    "Developer workflows & testing",
-    "Forward-deployed engineering",
-    "Infrastructure & deployment",
-    "MCP"
-   ],
-   "skills": [
-    "agents",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "PD"
-  },
-  {
-   "id": "ben-hylak",
-   "name": "Ben Hylak",
-   "role": "CTO",
-   "org": "Raindrop",
-   "source": "https://ai.engineer/speakers/ben-hylak",
-   "links": {
-    "website": "https://www.benhylak.com/",
-    "linkedin": "https://www.linkedin.com/in/benhylak",
-    "x": "https://x.com/benhylak"
-   },
-   "talks": [
-    {
-     "title": "Designing Agents (The Floor Is the Frontier)",
-     "url": "https://ai.engineer/talks/jHMiYtjoJfA-designing-agents-floor-is-frontier",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Everything You Need To Know About Agent Observability",
-     "url": "https://ai.engineer/talks/-aM2EDTiaMs-everything-you-need-know-about-agent-observability",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Building AI Products That Actually Work",
-     "url": "https://ai.engineer/talks/eSvXbb2EBYc-building-ai-products-that-actually-work",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "The era of unbounded products: Designing for Multimodal I/O",
-     "url": "https://ai.engineer/talks/5nOLb27hQ5w-era-unbounded-products-designing-multimodal-i-o",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    }
-   ],
-   "talkCount": 4,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026",
-    "AI Engineer Europe 2026",
-    "AI Engineer World's Fair 2024"
-   ],
-   "years": [
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI engineering leadership",
-    "AI interface design",
-    "AI security",
-    "Autoresearch",
-    "Coding agents",
-    "Developer workflows & testing",
-    "Enterprise AI"
-   ],
-   "skills": [
-    "agents",
+    "software",
     "evals",
     "ai-dev"
    ],
-   "products": [
-    {
-     "id": "raindrop",
-     "name": "Raindrop",
-     "area": "evaluation"
-    }
-   ],
-   "initials": "BH"
+   "products": [],
+   "initials": "ZP"
   },
   {
    "id": "daniel-han",
+   "group": "builders",
    "name": "Daniel Han",
    "role": "Co-founder",
    "org": "Unsloth",
@@ -786,178 +587,8 @@
    "initials": "DH"
   },
   {
-   "id": "laurie-voss",
-   "name": "Laurie Voss",
-   "role": "Head of Developer Relations",
-   "org": "Arize",
-   "source": "https://ai.engineer/speakers/laurie-voss",
-   "links": {
-    "website": "https://seldo.com",
-    "github": "https://github.com/seldo",
-    "linkedin": "https://www.linkedin.com/in/seldo",
-    "x": "https://x.com/seldo"
-   },
-   "talks": [
-    {
-     "title": "Ship Real Agents: Hands-On Evals for Agentic Applications",
-     "url": "https://ai.engineer/talks/Xfl50508LZM-ship-real-agents-hands-on-evals-agentic",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "From Vibes to Production: Evaluating and Shipping AI Agents That Work 101 — Laurie Voss, Arize AI",
-     "url": "https://ai.engineer/talks/qZj7sqmidqA-from-vibes-production-evaluating-shipping-ai",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "The Death of the Code Review: What the Data Actually Says — Laurie Voss, Arize AI",
-     "url": "https://ai.engineer/talks/_mi3alkqy4s-death-code-review-what-data-actually-says",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "From Vibes to Production: Evaluating and Shipping AI Agents That Work 201 — Laurie Voss, Arize AI",
-     "url": "https://ai.engineer/talks/F0TNSmbo5hE-from-vibes-production-evaluating-shipping-ai",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Effective agent design patterns in production",
-     "url": "https://ai.engineer/talks/72XxWkd8Jrk-effective-agent-design-patterns-in-production",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "AI Writes the Code. So What's Left for Engineers? - Laurie Voss, Arize AI",
-     "url": "https://ai.engineer/talks/kspZP5BgkEU-ai-writes-code-so-whats-left-engineers",
-     "event": null,
-     "year": null
-    },
-    {
-     "title": "How long can your skills be before your agent forgets what you told it? — Laurie Voss, Arize AI",
-     "url": "https://ai.engineer/talks/XzJD1bvXKjs-long-your-skills-be-before-your-agent",
-     "event": null,
-     "year": null
-    },
-    {
-     "title": "How to Know If Your AI Agent Is Any Good: Evals With Phoenix & Claude — Laurie Voss, Arize AI",
-     "url": "https://ai.engineer/talks/SHMCGrNJJGc-know-if-your-ai-agent-is-any",
-     "event": null,
-     "year": null
-    }
-   ],
-   "talkCount": 8,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer Europe 2026",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI engineering leadership",
-    "AI in finance",
-    "Benchmarks",
-    "Code review & verification",
-    "Coding agents",
-    "Context engineering",
-    "Developer productivity"
-   ],
-   "skills": [
-    "agents",
-    "evals",
-    "context",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "LV"
-  },
-  {
-   "id": "will-brown",
-   "name": "Will Brown",
-   "role": "Researcher",
-   "org": "Prime Intellect",
-   "source": "https://ai.engineer/speakers/will-brown",
-   "links": {
-    "website": "https://willcb.com",
-    "github": "https://github.com/willccbb",
-    "linkedin": "https://www.linkedin.com/in/willcb",
-    "x": "https://x.com/willccbb"
-   },
-   "talks": [
-    {
-     "title": "Modern Post-Training: A Deep Dive — Will Brown, Prime Intellect",
-     "url": "https://ai.engineer/talks/V-EDrhIhHzQ-modern-post-training-deep-dive",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Reinforcement Learning without Verifiable Rewards — Will Brown, Prime Intellect",
-     "url": "https://ai.engineer/talks/AQv3qRCG6Gw-reinforcement-learning-without-verifiable-rewards",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "RL Environments at Scale",
-     "url": "https://ai.engineer/talks/_IzZWeuTx7I-rl-environments-at-scale",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Training Agentic Reasoners",
-     "url": "https://ai.engineer/talks/PbHm2qKnu10-training-agentic-reasoners",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "What RL Means for Agents",
-     "url": "https://ai.engineer/talks/JIsgyk0Paic-what-rl-means-agents",
-     "event": "AI Engineer Summit 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Your Company Should Train Its Own AI Models - Will Brown, Prime Intellect",
-     "url": "https://ai.engineer/talks/5SRjPT2Eo7A-your-company-should-train-its-own-ai",
-     "event": null,
-     "year": null
-    }
-   ],
-   "talkCount": 6,
-   "editions": [
-    "AI Engineer World's Fair 2026",
-    "AI Engineer Code 2025",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer Summit 2025"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Coding agents",
-    "Computer use",
-    "Continual learning",
-    "Distillation",
-    "Evals",
-    "Fine-tuning",
-    "Harness engineering"
-   ],
-   "skills": [
-    "agents",
-    "models",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "WB"
-  },
-  {
    "id": "eugene-yan",
+   "group": "builders",
    "name": "Eugene Yan",
    "role": "Member of Technical Staff",
    "org": "Anthropic",
@@ -1033,455 +664,8 @@
    "initials": "EY"
   },
   {
-   "id": "hassan-el-mghari",
-   "name": "Hassan El Mghari",
-   "role": "Director of Developer Experience",
-   "org": "Together AI",
-   "source": "https://ai.engineer/speakers/hassan-el-mghari",
-   "links": {
-    "website": "https://www.nutlope.com/",
-    "github": "https://github.com/nutlope",
-    "linkedin": "https://www.linkedin.com/in/nutlope",
-    "x": "https://x.com/nutlope"
-   },
-   "talks": [
-    {
-     "title": "The Missing Layer: Design Taste in AI Agents",
-     "url": "https://ai.engineer/talks/7GMKdpLsxwU-missing-layer-design-taste-in-ai-agents",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Using OSS models to build AI apps with millions of users",
-     "url": "https://ai.engineer/talks/gcseUQJ6Gbg-using-oss-models-build-ai-apps-millions",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "The Weekend AI Engineer",
-     "url": "https://ai.engineer/talks/MarPORTD8vo-weekend-ai-engineer",
-     "event": "AI Engineer Summit 2023",
-     "year": "2023"
-    },
-    {
-     "title": "Right Answer, Wrong Reasons: AI Forecasts Costco - Hassan El Mghari & Omar El Mghari, Together AI",
-     "url": "https://ai.engineer/talks/dznCt8xPW7o-right-answer-wrong-reasons-ai-forecasts-costco",
-     "event": null,
-     "year": null
-    }
-   ],
-   "talkCount": 4,
-   "editions": [
-    "AI Engineer World's Fair 2026",
-    "AI Engineer Summit 2023",
-    "AI Engineer World's Fair 2025"
-   ],
-   "years": [
-    "2023",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "AI startups & small teams",
-    "Coding agents",
-    "Developer workflows & testing",
-    "Enterprise AI",
-    "Fine-tuning",
-    "Generative media",
-    "Infrastructure & deployment",
-    "MCP"
-   ],
-   "skills": [
-    "agents",
-    "models",
-    "ai-dev"
-   ],
-   "products": [
-    {
-     "id": "together-ai",
-     "name": "Together AI",
-     "area": "inference"
-    }
-   ],
-   "initials": "HE"
-  },
-  {
-   "id": "jason-liu",
-   "name": "Jason Liu",
-   "role": "Developer Experience",
-   "org": "OpenAI",
-   "source": "https://ai.engineer/speakers/jason-liu",
-   "links": {
-    "website": "https://jxnl.co/",
-    "github": "https://github.com/jxnl",
-    "linkedin": "https://www.linkedin.com/in/jxnlco",
-    "x": "https://x.com/jxnlco"
-   },
-   "talks": [
-    {
-     "title": "Full Workshop: Setting Yourself Up for Success — Jason Liu, OpenAI Codex",
-     "url": "https://ai.engineer/talks/il1c1a2FufU-full-workshop-setting-yourself-up-success",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "How to look at your data; what to look for, how to measure",
-     "url": "https://ai.engineer/talks/jryZvCuA0Uc-look-at-your-data-what-look-measure",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Pydantic is STILL all you need",
-     "url": "https://ai.engineer/talks/pZ4DIH2BVqg-pydantic-is-still-all-you-need",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    },
-    {
-     "title": "What We Learned From A Year of Building With LLMs",
-     "url": "https://ai.engineer/talks/qBHfQT3YtyY-what-we-learned-from-year-building-llms",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    },
-    {
-     "title": "Pydantic is all you need: Jason Liu",
-     "url": "https://ai.engineer/talks/yj-wSRJwrrc-structured-llm-outputs-with-pydantic",
-     "event": "AI Engineer Summit 2023",
-     "year": "2023"
-    }
-   ],
-   "talkCount": 5,
-   "editions": [
-    "AI Engineer World's Fair 2026",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2024",
-    "AI Engineer Summit 2023"
-   ],
-   "years": [
-    "2023",
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI engineering leadership",
-    "Coding agents",
-    "Context engineering",
-    "Developer workflows & testing",
-    "Embeddings",
-    "Enterprise AI",
-    "Evals"
-   ],
-   "skills": [
-    "ai-dev",
-    "customer",
-    "retrieval",
-    "agents",
-    "context"
-   ],
-   "products": [],
-   "initials": "JL"
-  },
-  {
-   "id": "paige-bailey",
-   "name": "Paige Bailey",
-   "role": "AI Developer Relations Engineering Lead",
-   "org": "Google DeepMind",
-   "source": "https://ai.engineer/speakers/paige-bailey",
-   "links": {
-    "website": "https://webpaige.dev/",
-    "github": "https://github.com/dynamicwebpaige",
-    "linkedin": "https://www.linkedin.com/in/dynamicwebpaige",
-    "x": "https://x.com/dynamicwebpaige"
-   },
-   "talks": [
-    {
-     "title": "Build & deploy AI-powered apps",
-     "url": "https://ai.engineer/talks/G_bHFmEAarM-build-deploy-ai-powered-apps",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Build & deploy AI-powered apps",
-     "url": "https://ai.engineer/talks/ns9f1fjLD7Y-build-deploy-ai-powered-apps",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Research to Reality with Google DeepMind — Paige Bailey, Google DeepMind",
-     "url": "https://ai.engineer/talks/zQZiHOpkq_s-research-reality-google-deepmind",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Frontier Feud",
-     "url": "https://ai.engineer/talks/BWqB6aatreE-frontier-feud",
-     "event": "AI Engineer Summit 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Veo 3 for developers",
-     "url": "https://ai.engineer/talks/hlcAZ2lX_ZI-veo-3-developers",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 5,
-   "editions": [
-    "AI Engineer Europe 2026",
-    "AI Engineer Summit 2025",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI for science",
-    "Coding agents",
-    "Enterprise AI",
-    "Generative media",
-    "Infrastructure & deployment",
-    "Local inference",
-    "MCP"
-   ],
-   "skills": [
-    "agents",
-    "models",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "PB"
-  },
-  {
-   "id": "philip-kiely",
-   "name": "Philip Kiely",
-   "role": "Developer Relations",
-   "org": "Baseten",
-   "source": "https://ai.engineer/speakers/philip-kiely",
-   "links": {
-    "website": "https://baseten.co",
-    "github": "https://github.com/philipkiely",
-    "linkedin": "https://www.linkedin.com/in/philipkiely",
-    "x": "https://x.com/philip_kiely"
-   },
-   "talks": [
-    {
-     "title": "What's New in Inference Engineering — Philip Kiely, Baseten",
-     "url": "https://ai.engineer/talks/75ckHC2LU_0-whats-new-in-inference-engineering",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Introduction to LLM serving with SGLang",
-     "url": "https://ai.engineer/talks/Ahtaha9fEM0-introduction-llm-serving-sglang",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Optimizing inference for voice models in production",
-     "url": "https://ai.engineer/talks/gmTHs5T_YAE-optimizing-inference-voice-models-in-production",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "From model weights to API endpoint with TensorRT-LLM",
-     "url": "https://ai.engineer/talks/Lko9lTGD_9U-from-model-weights-api-endpoint-tensorrt-llm",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    }
-   ],
-   "talkCount": 4,
-   "editions": [
-    "AI Engineer World's Fair 2024",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "AI cost & performance",
-    "Developer workflows & testing",
-    "Distributed training & inference",
-    "Evals",
-    "Generative media",
-    "GPU programming & kernels",
-    "Inference",
-    "Infrastructure & deployment"
-   ],
-   "skills": [
-    "models",
-    "evals"
-   ],
-   "products": [
-    {
-     "id": "baseten",
-     "name": "Baseten",
-     "area": "inference"
-    }
-   ],
-   "initials": "PK"
-  },
-  {
-   "id": "philipp-schmid",
-   "name": "Philipp Schmid",
-   "role": "Staff Engineer",
-   "org": "Google DeepMind",
-   "source": "https://ai.engineer/speakers/philipp-schmid",
-   "links": {
-    "website": "https://www.philschmid.de",
-    "github": "https://github.com/philschmid",
-    "linkedin": "https://www.linkedin.com/in/philipp-schmid-a6a2bb196",
-    "x": "https://x.com/_philschmid"
-   },
-   "talks": [
-    {
-     "title": "Building Conversational Agents",
-     "url": "https://ai.engineer/talks/cVzf49yg0D8-building-conversational-agents",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Don't Ship Skills Without Evals",
-     "url": "https://ai.engineer/talks/0vphxNt4wyk-dont-ship-skills-without-evals",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Why (Senior) Engineers Struggle to Build AI Agents",
-     "url": "https://ai.engineer/talks/3_gYbhABcAE-why-senior-engineers-struggle-build-ai-agents",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Why AI Agents Should Have Their Own Sandbox — Philipp Schmid, Google DeepMind",
-     "url": "https://ai.engineer/talks/oWTEiYpxl80-why-ai-agents-should-have-their-own",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "AI Engineering with the Google Gemini 2.5 Model Family",
-     "url": "https://ai.engineer/talks/zK9lYrLbjSg-ai-engineering-google-gemini-2-5-model",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Agents Without Code: Skills, YAML, and Filesystems Replaced Python — Philipp Schmid, Google DeepMind",
-     "url": "https://ai.engineer/talks/fjF8EKnxKCU-agents-without-code-skills-yaml-filesystems",
-     "event": null,
-     "year": null
-    },
-    {
-     "title": "7 Things Your AI Coworker Needs - Philipp Schmid, Google DeepMind",
-     "url": "https://ai.engineer/talks/EtZwTYahfek-7-things-your-ai-coworker-needs",
-     "event": null,
-     "year": null
-    }
-   ],
-   "talkCount": 7,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer Europe 2026",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Agent orchestration",
-    "Agent skills",
-    "AI security",
-    "Code review & verification",
-    "Coding agents",
-    "Context engineering",
-    "Developer workflows & testing"
-   ],
-   "skills": [
-    "agents",
-    "evals",
-    "software",
-    "context",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "PS"
-  },
-  {
-   "id": "alex-volkov",
-   "name": "Alex Volkov",
-   "role": "AI Evangelist & Host of ThursdAI",
-   "org": "Weights & Biases",
-   "source": "https://ai.engineer/speakers/alex-volkov",
-   "links": {
-    "website": "https://thursdai.news",
-    "github": "https://github.com/altryne",
-    "linkedin": "https://www.linkedin.com/in/alex-volkov-",
-    "x": "https://x.com/altryne"
-   },
-   "talks": [
-    {
-     "title": "The Z/L Continuum: Should AI Engineers Still Read Code?",
-     "url": "https://ai.engineer/talks/ZpK5PWX2YRM-z-l-continuum-should-ai-engineers-still",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "The State of MCP Observability: Observable.tools — Alex Volkov and Benjamin Eckel, Weights & Biases and Dylibso",
-     "url": "https://ai.engineer/talks/Lcqat4iP_lE-state-mcp-observability-observable-tools",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Judging LLMs",
-     "url": "https://ai.engineer/talks/IIL2tE4n1Q0-judging-llms",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    }
-   ],
-   "talkCount": 3,
-   "editions": [
-    "AI Engineer World's Fair 2024",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI engineering leadership",
-    "Coding agents",
-    "Evals",
-    "Infrastructure & deployment",
-    "MCP",
-    "ML fundamentals",
-    "Observability & reliability"
-   ],
-   "skills": [
-    "agents",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [
-    {
-     "id": "wandb",
-     "name": "Weights & Biases",
-     "area": "training"
-    }
-   ],
-   "initials": "AV"
-  },
-  {
    "id": "christopher-lovejoy",
+   "group": "builders",
    "name": "Christopher Lovejoy",
    "role": "Member of Technical Staff",
    "org": "Anthropic",
@@ -1547,131 +731,62 @@
    "initials": "CL"
   },
   {
-   "id": "eno-reyes",
-   "name": "Eno Reyes",
-   "role": "CTO & Co-Founder",
-   "org": "Factory",
-   "source": "https://ai.engineer/speakers/eno-reyes",
+   "id": "dex-horthy",
+   "group": "builders",
+   "name": "Dex Horthy",
+   "role": "Co-Founder",
+   "org": "HumanLayer",
+   "source": "https://ai.engineer/speakers/dex-horthy",
    "links": {
-    "website": "https://enoreyes.com",
-    "github": "https://github.com/enoreyes",
-    "linkedin": "https://www.linkedin.com/in/enoreyes",
-    "x": "https://x.com/enoreyes"
+    "github": "https://github.com/dexhorthy",
+    "linkedin": "https://linkedin.com/in/dexterihorthy",
+    "x": "https://x.com/dexhorthy"
    },
    "talks": [
     {
-     "title": "How Forward Deployed Engineering is done at Factory",
-     "url": "https://ai.engineer/talks/wpOA-UXynoM-forward-deployed-engineering-is-done-at-factory",
+     "title": "Why Software Factories Fail",
+     "url": "https://ai.engineer/talks/Ib5GBkD555M-why-software-factories-fail",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     },
     {
-     "title": "Making Codebases \"Agent-Ready\"",
-     "url": "https://ai.engineer/talks/ShuJ_CN6zr4-making-codebases-agent-ready",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
+     "title": "The Great Loops Debate — Dex Horthy, Geoff Huntley, Ian Livingstone, Greg Pstrucha, moderated by Allie Howe",
+     "url": "https://ai.engineer/talks/c35YoMdnI78-great-loops-debate",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
     },
     {
-     "title": "Ship Production Software in Minutes, Not Months",
-     "url": "https://ai.engineer/talks/iheWKg2Tkrk-ship-production-software-in-minutes-not-months",
+     "title": "12-Factor Agents: Patterns of reliable LLM applications — Dex Horthy, HumanLayer",
+     "url": "https://ai.engineer/talks/8kMaTybvDUw-12-factor-agents",
      "event": "AI Engineer World's Fair 2025",
      "year": "2025"
     },
     {
-     "title": "Building Reliable Agentic Systems",
-     "url": "https://ai.engineer/talks/bjNYEc908oQ-building-reliable-agentic-systems",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
+     "title": "Context Engineering for Complex Codebases: Research, Plan, Implement",
+     "url": "https://ai.engineer/talks/rmvDxxNubIg-context-engineering-for-complex-codebases",
+     "event": "AI Engineer Code 2025",
+     "year": "2025"
     }
    ],
    "talkCount": 4,
    "editions": [
-    "AI Engineer World's Fair 2024",
-    "AI Engineer World's Fair 2026",
+    "AI Engineer World's Fair 2025",
     "AI Engineer Code 2025",
-    "AI Engineer World's Fair 2025"
+    "AI Engineer World's Fair 2026"
    ],
    "years": [
-    "2024",
     "2025",
     "2026"
    ],
    "topics": [
     "Agent engineering",
-    "AI engineering leadership",
-    "AI interface design",
+    "Agent memory",
     "Coding agents",
-    "Developer workflows & testing",
-    "Forward-deployed engineering",
-    "Infrastructure & deployment",
-    "MCP"
-   ],
-   "skills": [
-    "agents",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "ER"
-  },
-  {
-   "id": "simon-willison",
-   "name": "Simon Willison",
-   "role": "Independent",
-   "org": "Datasette",
-   "source": "https://ai.engineer/speakers/simon-willison",
-   "links": {
-    "website": "https://simonwillison.net",
-    "github": "https://github.com/simonw",
-    "x": "https://x.com/simonw"
-   },
-   "talks": [
-    {
-     "title": "Claude Fable, Claude Tag, and Anthropic's Culture — Cat Wu & Thariq Shihipar ft Simon Willison",
-     "url": "https://ai.engineer/talks/uU5Gv2h8-9g-claude-fable-claude-tag-anthropics-culture",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "2025 in LLMs so far, illustrated by Pelicans on Bicycles — Simon Willison",
-     "url": "https://ai.engineer/talks/YpY83-kA7Bo-llm-pelican-benchmark",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Open Challenges for AI Engineering",
-     "url": "https://ai.engineer/talks/eTTMUWP5B0s-open-challenges-ai-engineering",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    },
-    {
-     "title": "Open Questions for AI Engineering",
-     "url": "https://ai.engineer/talks/AjLVoAu-u-Q-open-questions-ai-engineering",
-     "event": "AI Engineer Summit 2023",
-     "year": "2023"
-    }
-   ],
-   "talkCount": 4,
-   "editions": [
-    "AI Engineer World's Fair 2026",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2024",
-    "AI Engineer Summit 2023"
-   ],
-   "years": [
-    "2023",
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agentic commerce",
-    "AI engineering leadership",
-    "AI security",
-    "Coding agents",
-    "Computer use",
     "Context engineering",
     "Developer workflows & testing",
-    "Enterprise AI"
+    "Enterprise AI",
+    "Harness engineering",
+    "Infrastructure & deployment"
    ],
    "skills": [
     "agents",
@@ -1679,79 +794,11 @@
     "ai-dev"
    ],
    "products": [],
-   "initials": "SW"
-  },
-  {
-   "id": "stefania-druga",
-   "name": "Stefania Druga",
-   "role": "Research Scientist",
-   "org": "Sakana AI",
-   "source": "https://ai.engineer/speakers/stefania-druga",
-   "links": {
-    "website": "https://stefania11.github.io",
-    "github": "https://github.com/stefania11",
-    "linkedin": "https://www.linkedin.com/in/drugastefania",
-    "x": "https://x.com/stefania_druga"
-   },
-   "talks": [
-    {
-     "title": "Memory Harnesses for Long-Running Research Agents",
-     "url": "https://ai.engineer/talks/R3-anFK1YM8-memory-harnesses-long-running-research-agents",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Real-time Experiments with an AI Co-Scientist",
-     "url": "https://ai.engineer/talks/wNH3q9pqn0U-real-time-experiments-ai-co-scientist",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Tools for the Next Generation of AI Engineers",
-     "url": "https://ai.engineer/talks/ySYLsoAhXmg-tools-next-generation-ai-engineers",
-     "event": "AI Engineer Summit 2025",
-     "year": "2025"
-    },
-    {
-     "title": "The Multimodal Future of Education",
-     "url": "https://ai.engineer/talks/qpmZID27t98-multimodal-future-education",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    }
-   ],
-   "talkCount": 4,
-   "editions": [
-    "AI Engineer World's Fair 2026",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2024",
-    "AI Engineer Summit 2025"
-   ],
-   "years": [
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent memory",
-    "Autoresearch",
-    "Coding agents",
-    "Document understanding & OCR",
-    "Evals",
-    "Generative media",
-    "Infrastructure & deployment",
-    "Retrieval-augmented generation"
-   ],
-   "skills": [
-    "agents",
-    "retrieval",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "SD"
+   "initials": "DH"
   },
   {
    "id": "doug-guthrie",
+   "group": "builders",
    "name": "Doug Guthrie",
    "role": "Solutions Engineer",
    "org": "Braintrust",
@@ -1821,1452 +868,76 @@
    "initials": "DG"
   },
   {
-   "id": "nick-nisi",
-   "name": "Nick Nisi",
-   "role": "Developer Experience Engineer",
-   "org": "WorkOS",
-   "source": "https://ai.engineer/speakers/nick-nisi",
+   "id": "eno-reyes",
+   "group": "builders",
+   "name": "Eno Reyes",
+   "role": "CTO & Co-Founder",
+   "org": "Factory",
+   "source": "https://ai.engineer/speakers/eno-reyes",
    "links": {
-    "website": "https://nicknisi.com",
-    "github": "https://github.com/nicknisi",
-    "linkedin": "https://www.linkedin.com/in/nicknisi",
-    "x": "https://x.com/nicknisi"
+    "website": "https://enoreyes.com",
+    "github": "https://github.com/enoreyes",
+    "linkedin": "https://www.linkedin.com/in/enoreyes",
+    "x": "https://x.com/enoreyes"
    },
    "talks": [
     {
-     "title": "How I deleted 95% of my agent skills and got better results — Nick Nisi, WorkOS",
-     "url": "https://ai.engineer/talks/vy7o1g2iHY8-pruning-agent-skills",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Skills at Scale",
-     "url": "https://ai.engineer/talks/pFsfax19yOM-skills-at-scale",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Agents Access and the Future of Machine Identity",
-     "url": "https://ai.engineer/talks/px2e2OOS2Sk-agents-access-future-machine-identity",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "AI Pipelines and Agents in Pure TypeScript with Mastra.ai",
-     "url": "https://ai.engineer/talks/FWlRHPZWyHE-ai-pipelines-agents-in-pure-typescript-mastra",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Lifestyles of the AI-Native — Nick Nisi & Zack Proser, WorkOS",
-     "url": "https://ai.engineer/talks/AgBAOXVxt4A-lifestyles-ai-native",
-     "event": null,
-     "year": null
-    },
-    {
-     "title": "Teach Your Agent to Prove It's Done — Nick Nisi & Zack Proser, WorkOS",
-     "url": "https://ai.engineer/talks/q4WC4TowkBo-teach-your-agent-prove-its-done",
-     "event": null,
-     "year": null
-    },
-    {
-     "title": "I Made a Fruit Fly Review My Code - Nick Nisi, WorkOS",
-     "url": "https://ai.engineer/talks/geMAe-PLJF4-i-made-fruit-fly-review-my-code",
-     "event": null,
-     "year": null
-    }
-   ],
-   "talkCount": 7,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer Europe 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent auth",
-    "Agent engineering",
-    "Agent memory",
-    "Agent orchestration",
-    "Code review & verification",
-    "Coding agents",
-    "Context engineering",
-    "Developer workflows & testing"
-   ],
-   "skills": [
-    "agents",
-    "software",
-    "context",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "NN"
-  },
-  {
-   "id": "alex-atallah",
-   "name": "Alex Atallah",
-   "role": "Co-founder & CEO",
-   "org": "OpenRouter",
-   "source": "https://ai.engineer/speakers/alex-atallah",
-   "links": {
-    "website": "https://openrouter.ai",
-    "github": "https://github.com/alexanderatallah",
-    "linkedin": "https://www.linkedin.com/in/alexatallah",
-    "x": "https://x.com/alexatallah"
-   },
-   "talks": [
-    {
-     "title": "The State of Model Routing — NVIDIA, Cognition, OpenRouter",
-     "url": "https://ai.engineer/talks/QHBjufYK8TA-state-model-routing-nvidia-cognition-openrouter",
+     "title": "How Forward Deployed Engineering is done at Factory",
+     "url": "https://ai.engineer/talks/wpOA-UXynoM-forward-deployed-engineering-is-done-at-factory",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     },
     {
-     "title": "fun stories from building OpenRouter and where all this is going",
-     "url": "https://ai.engineer/talks/84Vtz2IL1Ug-fun-stories-from-building-openrouter-where-all",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "The Next Unicorns: 7 Top AI startups from the HF0 Residency",
-     "url": "https://ai.engineer/talks/L8-5ezsoI5A-next-unicorns-7-top-ai-startups",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 3,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "AI cost & performance",
-    "AI engineering leadership",
-    "Context engineering",
-    "Distributed training & inference",
-    "Enterprise AI",
-    "Inference",
-    "Infrastructure & deployment",
-    "Local inference"
-   ],
-   "skills": [
-    "context",
-    "models"
-   ],
-   "products": [
-    {
-     "id": "openrouter",
-     "name": "OpenRouter",
-     "area": "inference"
-    }
-   ],
-   "initials": "AA"
-  },
-  {
-   "id": "daniel-chalef",
-   "name": "Daniel Chalef",
-   "role": "Founder and CEO",
-   "org": "Zep",
-   "source": "https://ai.engineer/speakers/daniel-chalef",
-   "links": {
-    "website": "https://blog.getzep.com",
-    "github": "https://github.com/danielchalef",
-    "linkedin": "https://www.linkedin.com/in/danielchalef",
-    "x": "https://x.com/danielchalef"
-   },
-   "talks": [
-    {
-     "title": "Citation Needed: Provenance for LLM-Built Knowledge Graphs",
-     "url": "https://ai.engineer/talks/H7puB0RwJMM-citation-needed-provenance-llm-built-knowledge",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Memory Masterclass: Make Your AI Agents Remember What They Do! — Mark Bain, AIUS",
-     "url": "https://ai.engineer/talks/gsedOXz8FX4-memory-masterclass-make-your-ai-agents-remember",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Stop Using RAG as Memory",
-     "url": "https://ai.engineer/talks/T5IMo5ntyhA-stop-using-rag-as-memory",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 3,
-   "editions": [
-    "AI Engineer World's Fair 2026",
-    "AI Engineer World's Fair 2025"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent memory",
-    "AI in finance",
-    "AI in healthcare",
-    "AI interface design",
-    "AI security",
-    "Coding agents",
-    "Context engineering",
-    "Continual learning"
-   ],
-   "skills": [
-    "agents",
-    "retrieval",
-    "context",
-    "ai-dev"
-   ],
-   "products": [
-    {
-     "id": "zep",
-     "name": "Zep",
-     "area": "agents"
-    }
-   ],
-   "initials": "DC"
-  },
-  {
-   "id": "dex-horthy",
-   "name": "Dex Horthy",
-   "role": "Co-Founder",
-   "org": "HumanLayer",
-   "source": "https://ai.engineer/speakers/dex-horthy",
-   "links": {
-    "github": "https://github.com/dexhorthy",
-    "linkedin": "https://linkedin.com/in/dexterihorthy",
-    "x": "https://x.com/dexhorthy"
-   },
-   "talks": [
-    {
-     "title": "Why Software Factories Fail",
-     "url": "https://ai.engineer/talks/Ib5GBkD555M-why-software-factories-fail",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "The Great Loops Debate — Dex Horthy, Geoff Huntley, Ian Livingstone, Greg Pstrucha, moderated by Allie Howe",
-     "url": "https://ai.engineer/talks/c35YoMdnI78-great-loops-debate",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "12-Factor Agents: Patterns of reliable LLM applications — Dex Horthy, HumanLayer",
-     "url": "https://ai.engineer/talks/8kMaTybvDUw-12-factor-agents",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Context Engineering for Complex Codebases: Research, Plan, Implement",
-     "url": "https://ai.engineer/talks/rmvDxxNubIg-context-engineering-for-complex-codebases",
+     "title": "Making Codebases \"Agent-Ready\"",
+     "url": "https://ai.engineer/talks/ShuJ_CN6zr4-making-codebases-agent-ready",
      "event": "AI Engineer Code 2025",
      "year": "2025"
-    }
-   ],
-   "talkCount": 4,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer Code 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Agent memory",
-    "Coding agents",
-    "Context engineering",
-    "Developer workflows & testing",
-    "Enterprise AI",
-    "Harness engineering",
-    "Infrastructure & deployment"
-   ],
-   "skills": [
-    "agents",
-    "context",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "DH"
-  },
-  {
-   "id": "dominik-kundel",
-   "name": "Dominik Kundel",
-   "role": "Developer Experience Lead",
-   "org": "OpenAI",
-   "source": "https://ai.engineer/speakers/dominik-kundel",
-   "links": {
-    "website": "https://dkundel.com",
-    "github": "https://github.com/dkundel",
-    "linkedin": "https://www.linkedin.com/in/dkundel",
-    "x": "https://x.com/dkundel"
-   },
-   "talks": [
-    {
-     "title": "Codex, Behind the Harness",
-     "url": "https://ai.engineer/talks/shRR1e2HXMk-codex-behind-harness",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
     },
     {
-     "title": "Building on the Codex Harness — Dominik Kundel, OpenAI",
-     "url": "https://ai.engineer/talks/9WiBJRO84yY-building-on-codex-harness",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Building voice agents with OpenAI",
-     "url": "https://ai.engineer/talks/iXhba366fQc-building-voice-agents-openai",
+     "title": "Ship Production Software in Minutes, Not Months",
+     "url": "https://ai.engineer/talks/iheWKg2Tkrk-ship-production-software-in-minutes-not-months",
      "event": "AI Engineer World's Fair 2025",
      "year": "2025"
     },
     {
-     "title": "Cooking with fire without burning down the kitchen",
-     "url": "https://ai.engineer/talks/AVjrkXGnF2M-cooking-fire-without-burning-down-kitchen",
+     "title": "Building Reliable Agentic Systems",
+     "url": "https://ai.engineer/talks/bjNYEc908oQ-building-reliable-agentic-systems",
      "event": "AI Engineer World's Fair 2024",
      "year": "2024"
     }
    ],
    "talkCount": 4,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026",
-    "AI Engineer World's Fair 2024"
-   ],
-   "years": [
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent auth",
-    "Agent engineering",
-    "Agent orchestration",
-    "Agent skills",
-    "AI engineering leadership",
-    "AI interface design",
-    "Coding agents",
-    "Context engineering"
-   ],
-   "skills": [
-    "ai-dev",
-    "agents",
-    "context"
-   ],
-   "products": [],
-   "initials": "DK"
-  },
-  {
-   "id": "matt-pocock",
-   "name": "Matt Pocock",
-   "role": "Director",
-   "org": "AI Hero",
-   "source": "https://ai.engineer/speakers/matt-pocock",
-   "links": {
-    "website": "https://aihero.dev",
-    "github": "https://github.com/mattpocock",
-    "linkedin": "https://www.linkedin.com/in/mapocock/",
-    "x": "https://x.com/mattpocockuk"
-   },
-   "talks": [
-    {
-     "title": "AI Coding Workflow: From Product Idea to Tested Implementation",
-     "url": "https://ai.engineer/talks/-QFHIoCo-Ko-ai-coding-workflow",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Building Great Agent Skills: The Missing Manual",
-     "url": "https://ai.engineer/talks/UNzCG3lw6O0-building-great-agent-skills",
-     "event": "worldsfair-2026-online-track",
-     "year": "2026"
-    },
-    {
-     "title": "\"Software Fundamentals Matter More Than Ever\" — Matt Pocock",
-     "url": "https://ai.engineer/talks/v4F1gFy-hqg-software-fundamentals-for-ai-coding",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Fixing the PR Bottleneck — Matt Pocock, AIHero",
-     "url": "https://ai.engineer/talks/LlgiOCmFG_w-fixing-pr-bottleneck",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 4,
-   "editions": [
-    "AI Engineer Europe 2026",
-    "worldsfair-2026-online-track",
-    "AI Engineer Code 2025"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI engineering leadership",
-    "AI interface design",
-    "Code review & verification",
-    "Coding agents",
-    "Context engineering",
-    "Continual learning",
-    "Developer workflows & testing"
-   ],
-   "skills": [
-    "agents",
-    "context",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "MP"
-  },
-  {
-   "id": "samuel-colvin",
-   "name": "Samuel Colvin",
-   "role": "Founder & CEO",
-   "org": "Pydantic",
-   "source": "https://ai.engineer/speakers/samuel-colvin",
-   "links": {
-    "website": "https://scolvin.com",
-    "github": "https://github.com/samuelcolvin",
-    "linkedin": "https://www.linkedin.com/in/samuel-colvin",
-    "x": "https://x.com/samuelcolvin"
-   },
-   "talks": [
-    {
-     "title": "Playground in Prod - Optimising Agents in Production Environments",
-     "url": "https://ai.engineer/talks/A48uhxfxbsM-playground-in-prod-optimising-agents-in-production",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "From Stateless Nightmares to Durable Agents",
-     "url": "https://ai.engineer/talks/flf_IKnFYnE-from-stateless-nightmares-durable-agents",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Human seeded Evals — Samuel Colvin, Pydantic",
-     "url": "https://ai.engineer/talks/o_LRtAomJCs-human-seeded-evals",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "MCP is all you need",
-     "url": "https://ai.engineer/talks/bmWZk9vTze0-mcp-is-all-you-need",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 4,
-   "editions": [
-    "AI Engineer Code 2025",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer Europe 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI cost & performance",
-    "AI security",
-    "Coding agents",
-    "Developer workflows & testing",
-    "Document understanding & OCR",
-    "Enterprise AI",
-    "Evals"
-   ],
-   "skills": [
-    "agents",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "SC"
-  },
-  {
-   "id": "zack-proser",
-   "name": "Zack Proser",
-   "role": "AI Engineer, Applied AI",
-   "org": "WorkOS",
-   "source": "https://ai.engineer/speakers/zack-proser",
-   "links": {
-    "website": "https://zackproser.com",
-    "github": "https://github.com/zackproser",
-    "linkedin": "https://www.linkedin.com/in/zackproser",
-    "x": "https://x.com/zackproser"
-   },
-   "talks": [
-    {
-     "title": "Skills at Scale",
-     "url": "https://ai.engineer/talks/pFsfax19yOM-skills-at-scale",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Your Attention Is the Bottleneck, Not Your Agents — Zack Proser, WorkOS",
-     "url": "https://ai.engineer/talks/so9l_MwS2yg-your-attention-is-bottleneck-not-your-agents",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "AI Pipelines and Agents in Pure TypeScript with Mastra.ai",
-     "url": "https://ai.engineer/talks/FWlRHPZWyHE-ai-pipelines-agents-in-pure-typescript-mastra",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Lifestyles of the AI-Native — Nick Nisi & Zack Proser, WorkOS",
-     "url": "https://ai.engineer/talks/AgBAOXVxt4A-lifestyles-ai-native",
-     "event": null,
-     "year": null
-    },
-    {
-     "title": "I Don't Fear AI Slop. I Fear Untold Stories - Zack Proser, WorkOS",
-     "url": "https://ai.engineer/talks/1et3Lb_KLQo-i-dont-fear-ai-slop-i-fear",
-     "event": null,
-     "year": null
-    },
-    {
-     "title": "Teach Your Agent to Prove It's Done — Nick Nisi & Zack Proser, WorkOS",
-     "url": "https://ai.engineer/talks/q4WC4TowkBo-teach-your-agent-prove-its-done",
-     "event": null,
-     "year": null
-    }
-   ],
-   "talkCount": 6,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer Europe 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Agent memory",
-    "Agent orchestration",
-    "Code review & verification",
-    "Coding agents",
-    "Developer workflows & testing",
-    "Enterprise AI",
-    "Evals"
-   ],
-   "skills": [
-    "agents",
-    "software",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "ZP"
-  },
-  {
-   "id": "antje-barth",
-   "name": "Antje Barth",
-   "role": "Member of Technical Staff",
-   "org": "Amazon AGI Lab",
-   "source": "https://ai.engineer/speakers/antje-barth",
-   "links": {
-    "website": "https://antje.dev/",
-    "github": "https://github.com/antje",
-    "linkedin": "https://www.linkedin.com/in/antje-barth",
-    "x": "https://x.com/anbarth"
-   },
-   "talks": [
-    {
-     "title": "Perception Agents — Antje Barth, Amazon AGI Lab",
-     "url": "https://ai.engineer/talks/2JX6JYyQG4Y-perception-agents",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Building Agents at Cloud Scale — Antje Barth, AWS",
-     "url": "https://ai.engineer/talks/WJjInLeaJjo-building-agents-at-cloud-scale",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "From Software Developer to AI Engineer",
-     "url": "https://ai.engineer/talks/90Ir4TMMbS0-from-software-developer-ai-engineer",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    }
-   ],
-   "talkCount": 3,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2024",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Coding agents",
-    "Computer use",
-    "Infrastructure & deployment",
-    "MCP",
-    "ML fundamentals",
-    "Retrieval-augmented generation",
-    "Safety & governance"
-   ],
-   "skills": [
-    "agents",
-    "retrieval",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "AB"
-  },
-  {
-   "id": "barr-yaron",
-   "name": "Barr Yaron",
-   "role": "Partner",
-   "org": "Amplify Partners",
-   "source": "https://ai.engineer/speakers/barr-yaron",
-   "links": {
-    "website": "https://www.amplifypartners.com/team/barr-yaron",
-    "linkedin": "https://www.linkedin.com/in/barryaron",
-    "x": "https://x.com/barrnanas"
-   },
-   "talks": [
-    {
-     "title": "The 2026 State of AI Engineering — Barr Yaron, Amplify Partners",
-     "url": "https://ai.engineer/talks/RGe6EjucbzI-2026-state-ai-engineering",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Frontier Feud",
-     "url": "https://ai.engineer/talks/BWqB6aatreE-frontier-feud",
-     "event": "AI Engineer Summit 2025",
-     "year": "2025"
-    },
-    {
-     "title": "The 2025 AI Engineering Report — Barr Yaron, Amplify Partners",
-     "url": "https://ai.engineer/talks/mQ7_Zje7WKE-2025-ai-engineering-report",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 3,
-   "editions": [
-    "AI Engineer Summit 2025",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "AI engineering leadership",
-    "Coding agents",
-    "Enterprise AI",
-    "Infrastructure & deployment",
-    "ML fundamentals",
-    "Observability & reliability",
-    "Retrieval-augmented generation",
-    "Safety & governance"
-   ],
-   "skills": [
-    "retrieval",
-    "agents",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "BY"
-  },
-  {
-   "id": "corey-gallon",
-   "name": "Corey Gallon",
-   "role": "Managing Director",
-   "org": "Rexmore",
-   "source": "https://ai.engineer/speakers/corey-gallon",
-   "links": {
-    "website": "https://gallon.me",
-    "github": "https://github.com/captivus",
-    "linkedin": "https://www.linkedin.com/in/coreygallon",
-    "x": "https://x.com/coreygallon"
-   },
-   "talks": [
-    {
-     "title": "The Dark Arts of Web Automation: Teaching Agents to Use Websites Like Humans",
-     "url": "https://ai.engineer/talks/26RtyAm9y_Q-dark-arts-web-automation-teaching-agents-use",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "I Believe Everything My Agents Tell Me: Three Levels of Review — Corey Gallon, Rexmore",
-     "url": "https://ai.engineer/talks/dYh7TQkuYFE-i-believe-everything-my-agents-tell-me",
-     "event": "AI Engineer NYC 2026 Online Talks",
-     "year": "2026"
-    },
-    {
-     "title": "The Cure for the Vibe Coding Hangover",
-     "url": "https://ai.engineer/talks/JsKTQbT58BY-cure-vibe-coding-hangover",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 3,
-   "editions": [
-    "AI Engineer Code 2025",
-    "AI Engineer World's Fair 2026",
-    "AI Engineer NYC 2026 Online Talks"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Agent orchestration",
-    "Agent skills",
-    "AI in finance",
-    "Code review & verification",
-    "Coding agents",
-    "Computer use",
-    "Context engineering"
-   ],
-   "skills": [
-    "agents",
-    "context",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "CG"
-  },
-  {
-   "id": "cornelia-davis",
-   "name": "Cornelia Davis",
-   "role": "Principal Technologist",
-   "org": "Temporal",
-   "source": "https://ai.engineer/speakers/cornelia-davis",
-   "links": {
-    "website": "https://www.corneliadavis.com/",
-    "github": "https://github.com/cdavisafc",
-    "linkedin": "https://www.linkedin.com/in/corneliadavis",
-    "x": "https://x.com/cdavisafc"
-   },
-   "talks": [
-    {
-     "title": "MCP Tasks (async)/ Why the heck aren't any agents supporting MCP tasks/async?",
-     "url": "https://ai.engineer/talks/s4r6nk5WsZw-mcp-tasks-async-why-heck-arent-any",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Building Durable, Production-Ready Agents with OpenAI SDK and Temporal",
-     "url": "https://ai.engineer/talks/k8cnVCMYmNc-building-durable-production-ready-agents-openai",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 2,
-   "editions": [
-    "AI Engineer Code 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI startups & small teams",
-    "Context engineering",
-    "Enterprise AI",
-    "Harness engineering",
-    "Infrastructure & deployment",
-    "MCP",
-    "Observability & reliability"
-   ],
-   "skills": [
-    "agents",
-    "context",
-    "evals"
-   ],
-   "products": [
-    {
-     "id": "temporal",
-     "name": "Temporal",
-     "area": "agents"
-    }
-   ],
-   "initials": "CD"
-  },
-  {
-   "id": "emil-eifrem",
-   "name": "Emil Eifrem",
-   "role": "CEO",
-   "org": "Neo4j",
-   "source": "https://ai.engineer/speakers/emil-eifrem",
-   "links": {
-    "website": "https://neo4j.com/emil",
-    "linkedin": "https://www.linkedin.com/in/emileifrem",
-    "x": "https://x.com/emileifrem"
-   },
-   "talks": [
-    {
-     "title": "Thinner Agents on a Smarter Substrate: The Ontology-based Semantic Layer",
-     "url": "https://ai.engineer/talks/VGN22pPpb-8-thinner-agents-on-smarter-substrate-ontology-based",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "GraphRAG: The Marriage of Knowledge Graphs and RAG: Emil Eifrem",
-     "url": "https://ai.engineer/talks/knDDGYHnnSI-graphrag",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    }
-   ],
-   "talkCount": 2,
    "editions": [
     "AI Engineer World's Fair 2024",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2024",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI in finance",
-    "Infrastructure & deployment",
-    "Knowledge graphs",
-    "Retrieval-augmented generation",
-    "Safety & governance",
-    "Search & retrieval"
-   ],
-   "skills": [
-    "agents",
-    "retrieval"
-   ],
-   "products": [
-    {
-     "id": "neo4j",
-     "name": "Neo4j",
-     "area": "retrieval"
-    }
-   ],
-   "initials": "EE"
-  },
-  {
-   "id": "fuad-ali",
-   "name": "Fuad Ali",
-   "role": "Senior Product Manager",
-   "org": "Arize",
-   "source": "https://ai.engineer/speakers/fuad-ali",
-   "links": {
-    "x": "https://x.com/tofuadmiral"
-   },
-   "talks": [
-    {
-     "title": "Building Self-Learning Loops for Your Agent — Fuad Ali, Arize AI",
-     "url": "https://ai.engineer/talks/fnuNVFgLjHA-building-self-learning-loops-your-agent",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Build a Prompt Learning Loop",
-     "url": "https://ai.engineer/talks/SbcQYbrvAfI-build-prompt-learning-loop",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Agents That Self Improve While You Sleep - Fuad Ali, Arize AI",
-     "url": "https://ai.engineer/talks/UGuNt2_Oz8s-agents-that-self-improve-while-you-sleep",
-     "event": null,
-     "year": null
-    },
-    {
-     "title": "The Transcript Looked Fine. The Call Wasn't. — Debugging Voice Agents, Arize",
-     "url": "https://ai.engineer/talks/42Bz0TUfeOQ-transcript-looked-fine-call-wasnt-debugging-voice",
-     "event": null,
-     "year": null
-    },
-    {
-     "title": "We Kept Rebuilding Our AI Agent. Here's What Survived - Fuad Ali, Arize AI",
-     "url": "https://ai.engineer/talks/YIhvrvHtonk-we-kept-rebuilding-our-ai-agent-heres",
-     "event": null,
-     "year": null
-    }
-   ],
-   "talkCount": 5,
-   "editions": [
-    "AI Engineer Code 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Agent memory",
-    "Agent skills",
-    "AI cost & performance",
-    "Coding agents",
-    "Context engineering",
-    "Data quality & curation",
-    "Developer workflows & testing"
-   ],
-   "skills": [
-    "agents",
-    "context",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "FA"
-  },
-  {
-   "id": "ishan-anand",
-   "name": "Ishan Anand",
-   "role": "Chief AI Officer (CAIO)",
-   "org": "Insight Sciences",
-   "source": "https://ai.engineer/speakers/ishan-anand",
-   "links": {
-    "website": "https://ishananand.com",
-    "github": "https://github.com/ianand",
-    "linkedin": "https://www.linkedin.com/in/ishananand",
-    "x": "https://x.com/ianand"
-   },
-   "talks": [
-    {
-     "title": "Persona Engineering: A Field Guide to AI Synthetic Personas — Ishan Anand, InsightSciences.ai",
-     "url": "https://ai.engineer/talks/YnNF55QV0zs-persona-engineering-field-guide-ai-synthetic",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "How LLMs work for Web Devs: GPT in 600 lines of Vanilla JS",
-     "url": "https://ai.engineer/talks/ZuiJjkbX0Og-llms-work-web-devs-gpt-in-600",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Spreadsheets-are-all-you-need: Decoding the Decoder LLM without de code",
-     "url": "https://ai.engineer/talks/NamKkerrlnQ-spreadsheets-are-all-you-need-decoding-decoder",
-     "event": "AI Engineer World's Fair 2024",
-     "year": "2024"
-    }
-   ],
-   "talkCount": 3,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026",
-    "AI Engineer World's Fair 2024"
-   ],
-   "years": [
-    "2024",
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Coding agents",
-    "Context engineering",
-    "Distillation",
-    "Embeddings",
-    "Evals",
-    "Fine-tuning",
-    "GPU programming & kernels",
-    "Inference"
-   ],
-   "skills": [
-    "retrieval",
-    "agents",
-    "context",
-    "evals",
-    "models"
-   ],
-   "products": [],
-   "initials": "IA"
-  },
-  {
-   "id": "itamar-friedman",
-   "name": "Itamar Friedman",
-   "role": "Co-Founder & CEO",
-   "org": "Qodo",
-   "source": "https://ai.engineer/speakers/itamar-friedman",
-   "links": {
-    "github": "https://github.com/coditamar",
-    "linkedin": "https://www.linkedin.com/in/itamarf",
-    "x": "https://x.com/itamar_mar"
-   },
-   "talks": [
-    {
-     "title": "The Last Human Code Review: Building Trust in AI-Generated Code",
-     "url": "https://ai.engineer/talks/s-aixZYJG4c-last-human-code-review-building-trust",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "The State of AI Code Quality: Hype vs. Reality",
-     "url": "https://ai.engineer/talks/rgjF5o2Qjsc-state-ai-code-quality-hype-vs-reality",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Vibe Coding, with Confidence",
-     "url": "https://ai.engineer/talks/n991Yxo1aOI-vibe-coding-confidence",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 3,
-   "editions": [
     "AI Engineer World's Fair 2026",
     "AI Engineer Code 2025",
     "AI Engineer World's Fair 2025"
    ],
    "years": [
+    "2024",
     "2025",
     "2026"
    ],
    "topics": [
+    "Agent engineering",
     "AI engineering leadership",
+    "AI interface design",
     "Coding agents",
     "Developer workflows & testing",
-    "Enterprise AI",
-    "MCP",
-    "Safety & governance",
-    "Software factories"
-   ],
-   "skills": [
-    "agents",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "IF"
-  },
-  {
-   "id": "lee-robinson",
-   "name": "Lee Robinson",
-   "role": "ML, Model Behavior",
-   "org": "Cursor",
-   "source": "https://ai.engineer/speakers/lee-robinson",
-   "links": {
-    "website": "https://leerob.com",
-    "github": "https://github.com/leerob",
-    "linkedin": "https://www.linkedin.com/in/leeerob",
-    "x": "https://x.com/leerob"
-   },
-   "talks": [
-    {
-     "title": "Recursive Model Improvement",
-     "url": "https://ai.engineer/talks/q4Tr-DknG2M-recursive-model-improvement",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Building Cursor Composer",
-     "url": "https://ai.engineer/talks/fL1iJHtl51Q-building-cursor-composer",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 2,
-   "editions": [
-    "AI Engineer Code 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Coding agents",
-    "Fine-tuning",
-    "Infrastructure & deployment",
-    "ML fundamentals",
-    "Post-training",
-    "Safety & governance"
-   ],
-   "skills": [
-    "ai-dev",
-    "agents",
-    "models"
-   ],
-   "products": [
-    {
-     "id": "cursor",
-     "name": "Cursor",
-     "area": "builders"
-    }
-   ],
-   "initials": "LR"
-  },
-  {
-   "id": "marc-klingen",
-   "name": "Marc Klingen",
-   "role": "Co-founder",
-   "org": "Langfuse",
-   "source": "https://ai.engineer/speakers/marc-klingen",
-   "links": {
-    "website": "https://marcklingen.com/",
-    "github": "https://github.com/marcklingen",
-    "linkedin": "https://www.linkedin.com/in/marcklingen",
-    "x": "https://x.com/marcklingen"
-   },
-   "talks": [
-    {
-     "title": "Skill issue: Lessons from skilling up coding agents to use Langfuse",
-     "url": "https://ai.engineer/talks/vNCY9kXXyDQ-skill-issue-lessons-from-skilling-up-coding",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "The Self-Improving OSS Agent Stack — Marc Klingen, Langfuse",
-     "url": "https://ai.engineer/talks/TeErpYBUIeM-self-improving-oss-agent-stack",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 2,
-   "editions": [
-    "AI Engineer Europe 2026",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Coding agents",
-    "Continual learning",
-    "Evals",
-    "Human-in-the-loop validation",
-    "MCP",
-    "Observability & reliability",
-    "Privacy & data governance"
-   ],
-   "skills": [
-    "agents",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [
-    {
-     "id": "langfuse",
-     "name": "Langfuse",
-     "area": "evaluation"
-    }
-   ],
-   "initials": "MK"
-  },
-  {
-   "id": "paul-klein-iv",
-   "name": "Paul Klein IV",
-   "role": "Founder & CEO",
-   "org": "Browserbase",
-   "source": "https://ai.engineer/speakers/paul-klein-iv",
-   "links": {
-    "website": "https://klein.dev/",
-    "github": "https://github.com/pkiv",
-    "linkedin": "https://www.linkedin.com/in/paulkleiniv",
-    "x": "https://x.com/pk_iv"
-   },
-   "talks": [
-    {
-     "title": "Bringing agents onto the world wide web",
-     "url": "https://ai.engineer/talks/GqoNrUz8hEU-bringing-agents-onto-world-wide-web",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "The Web Browser Is All You Need",
-     "url": "https://ai.engineer/talks/YRGjll7uu5w-web-browser-is-all-you-need",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 2,
-   "editions": [
-    "AI Engineer World's Fair 2026",
-    "AI Engineer World's Fair 2025"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Coding agents",
-    "Computer use",
-    "Developer workflows & testing",
-    "Enterprise AI",
-    "Evals",
+    "Forward-deployed engineering",
     "Infrastructure & deployment",
     "MCP"
    ],
    "skills": [
     "agents",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [
-    {
-     "id": "browserbase",
-     "name": "Browserbase",
-     "area": "agents"
-    }
-   ],
-   "initials": "PK"
-  },
-  {
-   "id": "robert-brennan",
-   "name": "Robert Brennan",
-   "role": "CEO",
-   "org": "All Hands AI",
-   "source": "https://ai.engineer/speakers/robert-brennan",
-   "links": {
-    "website": "https://rbren.io",
-    "github": "https://github.com/rbren",
-    "linkedin": "https://www.linkedin.com/in/robert-a-brennan",
-    "x": "https://x.com/rbren_dev"
-   },
-   "talks": [
-    {
-     "title": "Sandboxes Aren't Optional: 4 Ways to Isolate Coding Agents — Robert Brennan, OpenHands",
-     "url": "https://ai.engineer/talks/iH_wV8BbS24-sandboxes-arent-optional-4-ways-isolate-coding",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Automating Large-Scale Refactors with Parallel Agents",
-     "url": "https://ai.engineer/talks/rcsliSIy_YU-automating-large-scale-refactors-parallel-agents",
-     "event": "AI Engineer Code 2025",
-     "year": "2025"
-    },
-    {
-     "title": "Software Development Agents: What Works and What Doesn't",
-     "url": "https://ai.engineer/talks/o_hhkJtlbSs-software-development-agents-what-works-what-doesnt",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 3,
-   "editions": [
-    "AI Engineer Code 2025",
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent auth",
-    "Agent orchestration",
-    "Coding agents",
-    "Developer workflows & testing",
-    "Infrastructure & deployment",
-    "MCP",
-    "Model routing & gateways",
-    "Safety & governance"
-   ],
-   "skills": [
-    "agents",
     "ai-dev"
    ],
    "products": [],
-   "initials": "RB"
-  },
-  {
-   "id": "sam-bhagwat",
-   "name": "Sam Bhagwat",
-   "role": "Founder/CEO",
-   "org": "Mastra",
-   "source": "https://ai.engineer/speakers/sam-bhagwat",
-   "links": {
-    "github": "https://github.com/calcsam",
-    "linkedin": "https://www.linkedin.com/in/sambhagwat",
-    "x": "https://x.com/calcsam"
-   },
-   "talks": [
-    {
-     "title": "Every Harness Will Become A Claw",
-     "url": "https://ai.engineer/talks/8qWIPUia2O8-every-harness-will-become-claw",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Agents vs Workflows: Why Not Both?",
-     "url": "https://ai.engineer/talks/8SUJEqQNClw-agents-vs-workflows-why-not-both",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 2,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Enterprise AI",
-    "Infrastructure & deployment",
-    "MCP",
-    "Retrieval-augmented generation",
-    "Safety & governance"
-   ],
-   "skills": [
-    "agents",
-    "retrieval"
-   ],
-   "products": [
-    {
-     "id": "mastra",
-     "name": "Mastra",
-     "area": "agents"
-    }
-   ],
-   "initials": "SB"
-  },
-  {
-   "id": "will-bryk",
-   "name": "Will Bryk",
-   "role": "CEO",
-   "org": "exa",
-   "source": "https://ai.engineer/speakers/will-bryk",
-   "links": {
-    "website": "https://exa.ai/blog",
-    "linkedin": "https://www.linkedin.com/in/william-bryk",
-    "x": "https://x.com/williambryk"
-   },
-   "talks": [
-    {
-     "title": "The Search Engine for the Agentic Web — Will Bryk, Exa",
-     "url": "https://ai.engineer/talks/59AA5kIoqjA-search-engine-agentic-web",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Building a Smarter AI Agent with Neural RAG",
-     "url": "https://ai.engineer/talks/xnXqpUW_Kp8-building-smarter-ai-agent-neural-rag",
-     "event": "AI Engineer World's Fair 2025",
-     "year": "2025"
-    }
-   ],
-   "talkCount": 2,
-   "editions": [
-    "AI Engineer World's Fair 2025",
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2025",
-    "2026"
-   ],
-   "topics": [
-    "Infrastructure & deployment",
-    "Multi-agent systems",
-    "Retrieval-augmented generation",
-    "Search & retrieval"
-   ],
-   "skills": [
-    "agents",
-    "retrieval"
-   ],
-   "products": [
-    {
-     "id": "exa",
-     "name": "Exa",
-     "area": "retrieval"
-    }
-   ],
-   "initials": "WB"
-  },
-  {
-   "id": "ara-khan",
-   "name": "Ara Khan",
-   "role": "AI Engineer",
-   "org": "Cline",
-   "source": "https://ai.engineer/speakers/ara-khan",
-   "links": {
-    "website": "https://arafatkatze.github.io",
-    "github": "https://github.com/arafatkatze",
-    "linkedin": "https://www.linkedin.com/in/arafatkatze",
-    "x": "https://x.com/arafatkatze"
-   },
-   "talks": [
-    {
-     "title": "Don't Build Slop (4 Levels of AI Agent Maturity)",
-     "url": "https://ai.engineer/talks/yUmS-F9IX90-dont-build-slop-4-levels-ai-agent",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Evals Are Broken, Use Them Anyway",
-     "url": "https://ai.engineer/talks/QuuIywMG4s8-evals-are-broken-use-them-anyway",
-     "event": "AI Engineer Europe 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Pick Problems That Survive When AI Solves Coding - Ara Khan, Cline",
-     "url": "https://ai.engineer/talks/iK9gmxXyBR0-pick-problems-that-survive-when-ai-solves",
-     "event": null,
-     "year": null
-    }
-   ],
-   "talkCount": 3,
-   "editions": [
-    "AI Engineer Europe 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Coding agents",
-    "Infrastructure & deployment",
-    "MCP",
-    "ML fundamentals",
-    "Retrieval-augmented generation",
-    "Sandboxes & isolation"
-   ],
-   "skills": [
-    "agents",
-    "evals",
-    "retrieval",
-    "ai-dev"
-   ],
-   "products": [
-    {
-     "id": "cline",
-     "name": "Cline",
-     "area": "builders"
-    }
-   ],
-   "initials": "AK"
+   "initials": "ER"
   },
   {
    "id": "ido-salomon",
+   "group": "builders",
    "name": "Ido Salomon",
    "role": "Co-Creator",
    "org": "AgentCraft",
@@ -3330,6 +1001,7 @@
   },
   {
    "id": "louis-francois-bouchard",
+   "group": "builders",
    "name": "Louis-François Bouchard",
    "role": "CTO & Co-Founder",
    "org": "Towards AI",
@@ -3395,6 +1067,7 @@
   },
   {
    "id": "olive-song",
+   "group": "builders",
    "name": "Olive Song",
    "role": "RL Lead",
    "org": "MiniMax",
@@ -3459,39 +1132,801 @@
    "initials": "OS"
   },
   {
-   "id": "peter-werry",
-   "name": "Peter Werry",
-   "role": "Founding Engineer",
-   "org": "Unblocked",
-   "source": "https://ai.engineer/speakers/peter-werry",
-   "links": {},
+   "id": "simon-willison",
+   "group": "builders",
+   "name": "Simon Willison",
+   "role": "Independent",
+   "org": "Datasette",
+   "source": "https://ai.engineer/speakers/simon-willison",
+   "links": {
+    "website": "https://simonwillison.net",
+    "github": "https://github.com/simonw",
+    "x": "https://x.com/simonw"
+   },
    "talks": [
     {
-     "title": "Mergeable by default: Building the context engine to save time and tokens",
-     "url": "https://ai.engineer/talks/5ID22ACI7IM-mergeable-by-default-building-context-engine-save",
+     "title": "Claude Fable, Claude Tag, and Anthropic's Culture — Cat Wu & Thariq Shihipar ft Simon Willison",
+     "url": "https://ai.engineer/talks/uU5Gv2h8-9g-claude-fable-claude-tag-anthropics-culture",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "2025 in LLMs so far, illustrated by Pelicans on Bicycles — Simon Willison",
+     "url": "https://ai.engineer/talks/YpY83-kA7Bo-llm-pelican-benchmark",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    },
+    {
+     "title": "Open Challenges for AI Engineering",
+     "url": "https://ai.engineer/talks/eTTMUWP5B0s-open-challenges-ai-engineering",
+     "event": "AI Engineer World's Fair 2024",
+     "year": "2024"
+    },
+    {
+     "title": "Open Questions for AI Engineering",
+     "url": "https://ai.engineer/talks/AjLVoAu-u-Q-open-questions-ai-engineering",
+     "event": "AI Engineer Summit 2023",
+     "year": "2023"
+    }
+   ],
+   "talkCount": 4,
+   "editions": [
+    "AI Engineer World's Fair 2026",
+    "AI Engineer World's Fair 2025",
+    "AI Engineer World's Fair 2024",
+    "AI Engineer Summit 2023"
+   ],
+   "years": [
+    "2023",
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agentic commerce",
+    "AI engineering leadership",
+    "AI security",
+    "Coding agents",
+    "Computer use",
+    "Context engineering",
+    "Developer workflows & testing",
+    "Enterprise AI"
+   ],
+   "skills": [
+    "agents",
+    "context",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "SW"
+  },
+  {
+   "id": "stefania-druga",
+   "group": "builders",
+   "name": "Stefania Druga",
+   "role": "Research Scientist",
+   "org": "Sakana AI",
+   "source": "https://ai.engineer/speakers/stefania-druga",
+   "links": {
+    "website": "https://stefania11.github.io",
+    "github": "https://github.com/stefania11",
+    "linkedin": "https://www.linkedin.com/in/drugastefania",
+    "x": "https://x.com/stefania_druga"
+   },
+   "talks": [
+    {
+     "title": "Memory Harnesses for Long-Running Research Agents",
+     "url": "https://ai.engineer/talks/R3-anFK1YM8-memory-harnesses-long-running-research-agents",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Real-time Experiments with an AI Co-Scientist",
+     "url": "https://ai.engineer/talks/wNH3q9pqn0U-real-time-experiments-ai-co-scientist",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    },
+    {
+     "title": "Tools for the Next Generation of AI Engineers",
+     "url": "https://ai.engineer/talks/ySYLsoAhXmg-tools-next-generation-ai-engineers",
+     "event": "AI Engineer Summit 2025",
+     "year": "2025"
+    },
+    {
+     "title": "The Multimodal Future of Education",
+     "url": "https://ai.engineer/talks/qpmZID27t98-multimodal-future-education",
+     "event": "AI Engineer World's Fair 2024",
+     "year": "2024"
+    }
+   ],
+   "talkCount": 4,
+   "editions": [
+    "AI Engineer World's Fair 2026",
+    "AI Engineer World's Fair 2025",
+    "AI Engineer World's Fair 2024",
+    "AI Engineer Summit 2025"
+   ],
+   "years": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agent memory",
+    "Autoresearch",
+    "Coding agents",
+    "Document understanding & OCR",
+    "Evals",
+    "Generative media",
+    "Infrastructure & deployment",
+    "Retrieval-augmented generation"
+   ],
+   "skills": [
+    "agents",
+    "retrieval",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "SD"
+  },
+  {
+   "id": "antje-barth",
+   "group": "builders",
+   "name": "Antje Barth",
+   "role": "Member of Technical Staff",
+   "org": "Amazon AGI Lab",
+   "source": "https://ai.engineer/speakers/antje-barth",
+   "links": {
+    "website": "https://antje.dev/",
+    "github": "https://github.com/antje",
+    "linkedin": "https://www.linkedin.com/in/antje-barth",
+    "x": "https://x.com/anbarth"
+   },
+   "talks": [
+    {
+     "title": "Perception Agents — Antje Barth, Amazon AGI Lab",
+     "url": "https://ai.engineer/talks/2JX6JYyQG4Y-perception-agents",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Building Agents at Cloud Scale — Antje Barth, AWS",
+     "url": "https://ai.engineer/talks/WJjInLeaJjo-building-agents-at-cloud-scale",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    },
+    {
+     "title": "From Software Developer to AI Engineer",
+     "url": "https://ai.engineer/talks/90Ir4TMMbS0-from-software-developer-ai-engineer",
+     "event": "AI Engineer World's Fair 2024",
+     "year": "2024"
+    }
+   ],
+   "talkCount": 3,
+   "editions": [
+    "AI Engineer World's Fair 2025",
+    "AI Engineer World's Fair 2024",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2024",
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Computer use",
+    "Infrastructure & deployment",
+    "MCP",
+    "ML fundamentals",
+    "Retrieval-augmented generation",
+    "Safety & governance"
+   ],
+   "skills": [
+    "agents",
+    "retrieval",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "AB"
+  },
+  {
+   "id": "ara-khan",
+   "group": "builders",
+   "name": "Ara Khan",
+   "role": "AI Engineer",
+   "org": "Cline",
+   "source": "https://ai.engineer/speakers/ara-khan",
+   "links": {
+    "website": "https://arafatkatze.github.io",
+    "github": "https://github.com/arafatkatze",
+    "linkedin": "https://www.linkedin.com/in/arafatkatze",
+    "x": "https://x.com/arafatkatze"
+   },
+   "talks": [
+    {
+     "title": "Don't Build Slop (4 Levels of AI Agent Maturity)",
+     "url": "https://ai.engineer/talks/yUmS-F9IX90-dont-build-slop-4-levels-ai-agent",
      "event": "AI Engineer Europe 2026",
      "year": "2026"
     },
     {
-     "title": "Beyond RAG: Build a Relational Context Engine from Scratch — Peter Werry, Unblocked",
-     "url": "https://ai.engineer/talks/spxoDAfh5ig-beyond-rag-build-relational-context-engine",
+     "title": "Evals Are Broken, Use Them Anyway",
+     "url": "https://ai.engineer/talks/QuuIywMG4s8-evals-are-broken-use-them-anyway",
+     "event": "AI Engineer Europe 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Pick Problems That Survive When AI Solves Coding - Ara Khan, Cline",
+     "url": "https://ai.engineer/talks/iK9gmxXyBR0-pick-problems-that-survive-when-ai-solves",
+     "event": null,
+     "year": null
+    }
+   ],
+   "talkCount": 3,
+   "editions": [
+    "AI Engineer Europe 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Infrastructure & deployment",
+    "MCP",
+    "ML fundamentals",
+    "Retrieval-augmented generation",
+    "Sandboxes & isolation"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "retrieval",
+    "ai-dev"
+   ],
+   "products": [
+    {
+     "id": "cline",
+     "name": "Cline",
+     "area": "builders"
+    }
+   ],
+   "initials": "AK"
+  },
+  {
+   "id": "filip-makraduli",
+   "group": "builders",
+   "name": "Filip Makraduli",
+   "role": "Founding Member of Technical Staff",
+   "org": "Superlinked",
+   "source": "https://ai.engineer/speakers/filip-makraduli",
+   "links": {
+    "website": "https://filipmakraduli.substack.com",
+    "github": "https://github.com/fm1320",
+    "linkedin": "https://www.linkedin.com/in/filipmakraduli",
+    "x": "https://x.com/f_makraduli"
+   },
+   "talks": [
+    {
+     "title": "Weight Folding, CUDA Streams, and the Bug That Made My Model Speak Backwards — Filip Makraduli",
+     "url": "https://ai.engineer/talks/c1hGBoWw20A-weight-folding-cuda-streams-bug-that-made",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     },
     {
-     "title": "How to Generate Mergeable Code with a Context Engine — Peter Werry, Unblocked",
-     "url": "https://ai.engineer/talks/qdAkxLoYNI8-generate-mergeable-code-context-engine",
+     "title": "Turning My Obsidian Vault Into a Local AI Engineer — Filip Makraduli, Superlinked",
+     "url": "https://ai.engineer/talks/Ndp5VaqFrl0-turning-my-obsidian-vault-into-local-ai",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     },
     {
-     "title": "Beyond RAG: A Relational Context Engine That Cuts Token Burn — Unblocked",
-     "url": "https://ai.engineer/talks/ORVh4GivEU0-beyond-rag-relational-context-engine-that-cuts",
+     "title": "The Small Model Infrastructure Nobody Built (So We Did) — Filip Makraduli, Superlinked",
+     "url": "https://ai.engineer/talks/qdh_x-uRs9g-small-model-infrastructure-nobody-built-so",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    }
+   ],
+   "talkCount": 3,
+   "editions": [
+    "AI Engineer World's Fair 2025",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "AI cost & performance",
+    "Document understanding & OCR",
+    "Fine-tuning",
+    "GPU programming & kernels",
+    "Inference",
+    "Infrastructure & deployment",
+    "KV caching & prefix reuse",
+    "MCP"
+   ],
+   "skills": [
+    "models",
+    "agents"
+   ],
+   "products": [],
+   "initials": "FM"
+  },
+  {
+   "id": "liad-yosef",
+   "group": "builders",
+   "name": "Liad Yosef",
+   "role": "Co-creator",
+   "org": "Erel Labs",
+   "source": "https://ai.engineer/speakers/liad-yosef",
+   "links": {
+    "website": "https://ora.ai",
+    "github": "https://github.com/liady",
+    "linkedin": "https://www.linkedin.com/in/liadyosef",
+    "x": "https://x.com/liadyosef"
+   },
+   "talks": [
+    {
+     "title": "MCP Apps: Extending the Frontier — Ido Salomon & Liad Yosef",
+     "url": "https://ai.engineer/talks/-jY2T2PiJBE-mcp-apps-extending-frontier",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "MCP-UI: Extending the Frontier — Liad Yosef and Ido Salomon, MCP Apps",
+     "url": "https://ai.engineer/talks/o-zkvb0iFDQ-mcp-ui-extending-frontier",
+     "event": "AI Engineer Europe 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Rebuilding the web for agents — Liad Yosef, MCP Apps",
+     "url": "https://ai.engineer/talks/waI44NP1abk-rebuilding-web-agents",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     }
    ],
-   "talkCount": 4,
+   "talkCount": 3,
+   "editions": [
+    "AI Engineer World's Fair 2026",
+    "AI Engineer Europe 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI engineering leadership",
+    "AI interface design",
+    "Browser agents & WebMCP",
+    "Enterprise AI",
+    "Human & agent accessibility",
+    "MCP",
+    "Personal agents"
+   ],
+   "skills": [
+    "agents"
+   ],
+   "products": [],
+   "initials": "LY"
+  },
+  {
+   "id": "nishant-gupta",
+   "group": "builders",
+   "name": "Nishant Gupta",
+   "role": "Software Engineer, Tech Lead",
+   "org": "Meta",
+   "source": "https://ai.engineer/speakers/nishant-gupta",
+   "links": {
+    "github": "https://github.com/nishantgpt-lab",
+    "linkedin": "https://www.linkedin.com/in/nishantgupta-ai"
+   },
+   "talks": [
+    {
+     "title": "Building Deterministic Infrastructure for Non-Deterministic AI Agents",
+     "url": "https://ai.engineer/talks/APh1Vx0oLmQ-building-deterministic-infrastructure-non",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Production Evals For Agentic AI Systems",
+     "url": "https://ai.engineer/talks/vljxQZfJ9wY-production-evals-agentic-ai-systems",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Operating Distributed Inference Systems at Scale — Nishant Gupta & Naman Ahuja, Meta",
+     "url": "https://ai.engineer/talks/7c9FSUVcXR0-operating-distributed-inference-systems-at-scale",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 3,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI cost & performance",
+    "AI in finance",
+    "AI interface design",
+    "AI platform engineering",
+    "Developer workflows & testing",
+    "Distributed training & inference",
+    "Enterprise AI"
+   ],
+   "skills": [
+    "agents",
+    "models",
+    "evals"
+   ],
+   "products": [],
+   "initials": "NG"
+  },
+  {
+   "id": "abhishek-bhardwaj",
+   "group": "builders",
+   "name": "Abhishek Bhardwaj",
+   "role": "Member of Technical Staff, RL & Agent Infrastructure",
+   "org": "OpenAI",
+   "source": "https://ai.engineer/speakers/abhishek-bhardwaj",
+   "links": {
+    "website": "https://abshkbh.com/",
+    "github": "https://github.com/abshkbh",
+    "linkedin": "https://www.linkedin.com/in/abshkbh",
+    "x": "https://x.com/abshkbh"
+   },
+   "talks": [
+    {
+     "title": "From fork() to Fleet: Designing an Agent Sandbox Cloud — Abhishek Bhardwaj, OpenAI",
+     "url": "https://ai.engineer/talks/OqM67QG_Ikk-from-fork-fleet-designing-agent-sandbox-cloud",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Arrakis: How To Build An AI Sandbox From Scratch",
+     "url": "https://ai.engineer/talks/wsFd22SL1s8-arrakis-build-ai-sandbox-from-scratch",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2025",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI security",
+    "Coding agents",
+    "Harness engineering",
+    "Infrastructure & deployment",
+    "MCP",
+    "Safety & governance",
+    "Sandboxes & isolation"
+   ],
+   "skills": [
+    "agents",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "AB"
+  },
+  {
+   "id": "cornelia-davis",
+   "group": "builders",
+   "name": "Cornelia Davis",
+   "role": "Principal Technologist",
+   "org": "Temporal",
+   "source": "https://ai.engineer/speakers/cornelia-davis",
+   "links": {
+    "website": "https://www.corneliadavis.com/",
+    "github": "https://github.com/cdavisafc",
+    "linkedin": "https://www.linkedin.com/in/corneliadavis",
+    "x": "https://x.com/cdavisafc"
+   },
+   "talks": [
+    {
+     "title": "MCP Tasks (async)/ Why the heck aren't any agents supporting MCP tasks/async?",
+     "url": "https://ai.engineer/talks/s4r6nk5WsZw-mcp-tasks-async-why-heck-arent-any",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Building Durable, Production-Ready Agents with OpenAI SDK and Temporal",
+     "url": "https://ai.engineer/talks/k8cnVCMYmNc-building-durable-production-ready-agents-openai",
+     "event": "AI Engineer Code 2025",
+     "year": "2025"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer Code 2025",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI startups & small teams",
+    "Context engineering",
+    "Enterprise AI",
+    "Harness engineering",
+    "Infrastructure & deployment",
+    "MCP",
+    "Observability & reliability"
+   ],
+   "skills": [
+    "agents",
+    "context",
+    "evals"
+   ],
+   "products": [
+    {
+     "id": "temporal",
+     "name": "Temporal",
+     "area": "agents"
+    }
+   ],
+   "initials": "CD"
+  },
+  {
+   "id": "dat-ngo",
+   "group": "builders",
+   "name": "Dat Ngo",
+   "role": "AI Architect",
+   "org": "Arize",
+   "source": "https://ai.engineer/speakers/dat-ngo",
+   "links": {
+    "website": "https://arize.com/author/dat-ngo",
+    "github": "https://github.com/arizedatngo",
+    "x": "https://x.com/dat_attacked"
+   },
+   "talks": [
+    {
+     "title": "LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize AI",
+     "url": "https://ai.engineer/talks/JsCCrBF7F1g-llm-observability-evaluation-experimentation",
+     "event": "AI Engineer Europe 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Engineering Better Evals: Scalable LLM Evaluation Pipelines That Work",
+     "url": "https://ai.engineer/talks/spvXj9tnWAQ-engineering-better-evals-scalable-llm-evaluation",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2025",
+    "AI Engineer Europe 2026"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Enterprise AI",
+    "Evals",
+    "Fine-tuning",
+    "Harness engineering",
+    "Observability & reliability",
+    "Post-training"
+   ],
+   "skills": [
+    "evals",
+    "agents",
+    "models",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "DN"
+  },
+  {
+   "id": "jack-morris",
+   "group": "builders",
+   "name": "Jack Morris",
+   "role": "Cofounder",
+   "org": "Engram",
+   "source": "https://ai.engineer/speakers/jack-morris",
+   "links": {
+    "website": "https://jxmo.io",
+    "github": "https://github.com/jxmorris12",
+    "x": "https://x.com/jxmnop"
+   },
+   "talks": [
+    {
+     "title": "Scaling Compute on Context",
+     "url": "https://ai.engineer/talks/WiqDvX6isc4-scaling-compute-on-context",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Stuffing Context is not Memory, Updating Weights is",
+     "url": "https://ai.engineer/talks/Jty4s9-Jb78-stuffing-context-is-not-memory-updating-weights",
+     "event": "AI Engineer Code 2025",
+     "year": "2025"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2026",
+    "AI Engineer Code 2025"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Continual learning",
+    "Distillation",
+    "Embeddings",
+    "Enterprise AI",
+    "Fine-tuning",
+    "Infrastructure & deployment",
+    "ML fundamentals"
+   ],
+   "skills": [
+    "retrieval",
+    "agents",
+    "models"
+   ],
+   "products": [],
+   "initials": "JM"
+  },
+  {
+   "id": "keegan-mccallum",
+   "group": "builders",
+   "name": "Keegan McCallum",
+   "role": "Founder",
+   "org": "uRun",
+   "source": "https://ai.engineer/speakers/keegan-mccallum",
+   "links": {
+    "github": "https://github.com/keeganmccallum",
+    "linkedin": "https://www.linkedin.com/in/keeganmccallum3",
+    "x": "https://x.com/keeganmccallum3"
+   },
+   "talks": [
+    {
+     "title": "Generative Video at the Speed of Light",
+     "url": "https://ai.engineer/talks/Xln-On3syJk-generative-video-at-speed-light",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Dream Machine: Scaling to 1m users in 4 days — Keegan McCallum, Luma AI",
+     "url": "https://ai.engineer/talks/EY4O9M6AsWI-dream-machine-scaling-1m-users-in-4",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2025",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "AI cost & performance",
+    "Generative media",
+    "Harness engineering",
+    "Inference",
+    "Infrastructure & deployment",
+    "Local inference",
+    "MCP",
+    "Model routing & gateways"
+   ],
+   "skills": [
+    "agents",
+    "models"
+   ],
+   "products": [],
+   "initials": "KM"
+  },
+  {
+   "id": "lee-robinson",
+   "group": "builders",
+   "name": "Lee Robinson",
+   "role": "ML, Model Behavior",
+   "org": "Cursor",
+   "source": "https://ai.engineer/speakers/lee-robinson",
+   "links": {
+    "website": "https://leerob.com",
+    "github": "https://github.com/leerob",
+    "linkedin": "https://www.linkedin.com/in/leeerob",
+    "x": "https://x.com/leerob"
+   },
+   "talks": [
+    {
+     "title": "Recursive Model Improvement",
+     "url": "https://ai.engineer/talks/q4Tr-DknG2M-recursive-model-improvement",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Building Cursor Composer",
+     "url": "https://ai.engineer/talks/fL1iJHtl51Q-building-cursor-composer",
+     "event": "AI Engineer Code 2025",
+     "year": "2025"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer Code 2025",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Fine-tuning",
+    "Infrastructure & deployment",
+    "ML fundamentals",
+    "Post-training",
+    "Safety & governance"
+   ],
+   "skills": [
+    "ai-dev",
+    "agents",
+    "models"
+   ],
+   "products": [
+    {
+     "id": "cursor",
+     "name": "Cursor",
+     "area": "builders"
+    }
+   ],
+   "initials": "LR"
+  },
+  {
+   "id": "marc-klingen",
+   "group": "builders",
+   "name": "Marc Klingen",
+   "role": "Co-founder",
+   "org": "Langfuse",
+   "source": "https://ai.engineer/speakers/marc-klingen",
+   "links": {
+    "website": "https://marcklingen.com/",
+    "github": "https://github.com/marcklingen",
+    "linkedin": "https://www.linkedin.com/in/marcklingen",
+    "x": "https://x.com/marcklingen"
+   },
+   "talks": [
+    {
+     "title": "Skill issue: Lessons from skilling up coding agents to use Langfuse",
+     "url": "https://ai.engineer/talks/vNCY9kXXyDQ-skill-issue-lessons-from-skilling-up-coding",
+     "event": "AI Engineer Europe 2026",
+     "year": "2026"
+    },
+    {
+     "title": "The Self-Improving OSS Agent Stack — Marc Klingen, Langfuse",
+     "url": "https://ai.engineer/talks/TeErpYBUIeM-self-improving-oss-agent-stack",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 2,
    "editions": [
     "AI Engineer Europe 2026",
     "AI Engineer World's Fair 2026"
@@ -3501,13 +1936,73 @@
    ],
    "topics": [
     "Agent engineering",
-    "AI engineering leadership",
-    "Code review & verification",
+    "Coding agents",
+    "Continual learning",
+    "Evals",
+    "Human-in-the-loop validation",
+    "MCP",
+    "Observability & reliability",
+    "Privacy & data governance"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [
+    {
+     "id": "langfuse",
+     "name": "Langfuse",
+     "area": "evaluation"
+    }
+   ],
+   "initials": "MK"
+  },
+  {
+   "id": "pablo-castro",
+   "group": "builders",
+   "name": "Pablo Castro",
+   "role": "Distinguished Engineer and CVP",
+   "org": "Microsoft",
+   "source": "https://ai.engineer/speakers/pablo-castro",
+   "links": {
+    "website": "https://devblogs.microsoft.com/foundry/author/pablocas",
+    "github": "https://github.com/pablocastro",
+    "linkedin": "https://www.linkedin.com/in/pabloc",
+    "x": "https://x.com/pmc"
+   },
+   "talks": [
+    {
+     "title": "On AI and Knowledge",
+     "url": "https://ai.engineer/talks/RGSFUqzqErE-on-ai-knowledge",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "RAG at scale: production-ready GenAI apps with Azure AI Search",
+     "url": "https://ai.engineer/talks/_2tZaDs-w5s-rag-at-scale-production-ready-genai-apps",
+     "event": "AI Engineer World's Fair 2024",
+     "year": "2024"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2026",
+    "AI Engineer World's Fair 2024"
+   ],
+   "years": [
+    "2024",
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
     "Coding agents",
     "Context engineering",
-    "Data quality & curation",
-    "Developer workflows & testing",
-    "Evals"
+    "Enterprise AI",
+    "Infrastructure & deployment",
+    "Observability & reliability",
+    "Recommendation systems",
+    "Retrieval-augmented generation"
    ],
    "skills": [
     "retrieval",
@@ -3517,7 +2012,1407 @@
     "ai-dev"
    ],
    "products": [],
-   "initials": "PW"
+   "initials": "PC"
+  },
+  {
+   "id": "paul-iusztin",
+   "group": "builders",
+   "name": "Paul Iusztin",
+   "role": "Technical Staff & Educator",
+   "org": "Decoding AI",
+   "source": "https://ai.engineer/speakers/paul-iusztin",
+   "links": {
+    "website": "https://decodingai.com",
+    "github": "https://github.com/iusztinpaul",
+    "linkedin": "https://www.linkedin.com/in/pauliusztin",
+    "x": "https://x.com/pauliusztin_"
+   },
+   "talks": [
+    {
+     "title": "Build Your Own Deep Research Agent + Technical Writer",
+     "url": "https://ai.engineer/talks/mYSRn6PC1mc-build-your-own-deep-research-agent-technical",
+     "event": "AI Engineer Europe 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Turn 10,994 Notes Into Your Agents' Memory",
+     "url": "https://ai.engineer/talks/ZRM_TfEZcIo-turn-10-994-notes-into-your-agents",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer Europe 2026",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Agent memory",
+    "Coding agents",
+    "Data quality & curation",
+    "Evals",
+    "Generative media",
+    "MCP",
+    "ML fundamentals"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "PI"
+  },
+  {
+   "id": "rafal-wilinski",
+   "group": "builders",
+   "name": "Rafal Wilinski",
+   "role": "Founding Engineer",
+   "org": "Runlayer",
+   "source": "https://ai.engineer/speakers/rafal-wilinski",
+   "links": {
+    "website": "https://rwilinski.ai",
+    "github": "https://github.com/rafalwilinski",
+    "linkedin": "https://www.linkedin.com/in/rafwilinski",
+    "x": "https://x.com/rafalwilinski"
+   },
+   "talks": [
+    {
+     "title": "From 36% to 100%: How Self-Improving Agents Write Their Own Skills — Rafal Wilinski, Runlayer",
+     "url": "https://ai.engineer/talks/u-o0sW9nwmk-from-36-100-self-improving-agents-write",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Turning Fails into Features: Zapier’s Hard-Won Eval Lessons",
+     "url": "https://ai.engineer/talks/blrovBxxN9o-turning-fails-into-features-zapiers-hard-won",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2025",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI interface design",
+    "AI startups & small teams",
+    "Coding agents",
+    "Context engineering",
+    "Continual learning",
+    "Data quality & curation",
+    "Enterprise AI"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "context",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "RW"
+  },
+  {
+   "id": "ryan-marten",
+   "group": "builders",
+   "name": "Ryan Marten",
+   "role": "Member of Technical Staff",
+   "org": "Laude Institute",
+   "source": "https://ai.engineer/speakers/ryan-marten",
+   "links": {
+    "website": "https://ryanmarten.com/",
+    "github": "https://github.com/ryanmarten",
+    "linkedin": "https://www.linkedin.com/in/ryan-marten",
+    "x": "https://x.com/ryanmart3n"
+   },
+   "talks": [
+    {
+     "title": "Everything Is a Rollout — Alex Shaw + Ryan Marten, Terminal-Bench, Harbor, Laude Institute",
+     "url": "https://ai.engineer/talks/jRCpXUjz4CI-everything-is-rollout",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "OpenThoughts: Data Recipes for Reasoning Models",
+     "url": "https://ai.engineer/talks/liG97YXaTSA-openthoughts-data-recipes-reasoning-models",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2026",
+    "AI Engineer World's Fair 2025"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Computer use",
+    "Distillation",
+    "Evals",
+    "Fine-tuning",
+    "ML fundamentals",
+    "Observability & reliability"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "models",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "RM"
+  },
+  {
+   "id": "samridhi-vaid",
+   "group": "builders",
+   "name": "Samridhi Vaid",
+   "role": "Senior Machine Learning Engineer",
+   "org": "Towards AI",
+   "source": "https://ai.engineer/speakers/samridhi-vaid",
+   "links": {
+    "website": "https://samridhivaid.com",
+    "github": "https://github.com/samridhivaid",
+    "linkedin": "https://www.linkedin.com/in/samridhivaid",
+    "x": "https://x.com/samridhivaid"
+   },
+   "talks": [
+    {
+     "title": "Build Your Own Deep Research Agent + Technical Writer",
+     "url": "https://ai.engineer/talks/mYSRn6PC1mc-build-your-own-deep-research-agent-technical",
+     "event": "AI Engineer Europe 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Context Engineering in 2026: Compaction, Memory & Cost",
+     "url": "https://ai.engineer/talks/WP3hjUXd918-context-engineering-in-2026-compaction-memory-cost",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer Europe 2026",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Agent memory",
+    "Coding agents",
+    "Context engineering",
+    "Data quality & curation",
+    "Evals",
+    "Generative media",
+    "Harness engineering"
+   ],
+   "skills": [
+    "agents",
+    "context",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "SV"
+  },
+  {
+   "id": "shafik-quoraishee",
+   "group": "builders",
+   "name": "Shafik Quoraishee",
+   "role": "Staff Engineer",
+   "org": "The New York Times",
+   "source": "https://ai.engineer/speakers/shafik-quoraishee",
+   "links": {
+    "website": "https://www.shafikquoraishee.com",
+    "github": "https://github.com/squoraishee",
+    "linkedin": "https://www.linkedin.com/in/shafik-quoraishee",
+    "x": "https://x.com/squoraishee"
+   },
+   "talks": [
+    {
+     "title": "Local Agentic Theory For Mobile Games — Shafik Quoraishee & Joanne Song, The New York Times",
+     "url": "https://ai.engineer/talks/418t26CVz-w-local-agentic-theory-mobile-games",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "New York Times' Connections: A Case Study on NLP in Word Games",
+     "url": "https://ai.engineer/talks/P_uhFGH4J9Y-new-york-times-connections-case-study-on",
+     "event": "AI Engineer World's Fair 2025",
+     "year": "2025"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2026",
+    "AI Engineer World's Fair 2025"
+   ],
+   "years": [
+    "2025",
+    "2026"
+   ],
+   "topics": [
+    "AI interface design",
+    "Embeddings",
+    "Enterprise AI",
+    "Evals",
+    "Generative media",
+    "ML fundamentals",
+    "Retrieval-augmented generation",
+    "Vision & video"
+   ],
+   "skills": [
+    "agents",
+    "retrieval",
+    "evals"
+   ],
+   "products": [],
+   "initials": "SQ"
+  },
+  {
+   "id": "tejas-kumar",
+   "group": "builders",
+   "name": "Tejas Kumar",
+   "role": "AI Engineer",
+   "org": "IBM",
+   "source": "https://ai.engineer/speakers/tejas-kumar",
+   "links": {
+    "website": "https://tej.as",
+    "github": "https://github.com/tejasq",
+    "linkedin": "https://linkedin.com/in/tejasq",
+    "x": "https://x.com/tejaskumar_"
+   },
+   "talks": [
+    {
+     "title": "Harnesses in AI: A Deep Dive — Tejas Kumar, IBM",
+     "url": "https://ai.engineer/talks/C_GG5g38vLU-ai-agent-harnesses",
+     "event": "AI Engineer Europe 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Evals in AI: A Deep Dive — Tejas Kumar, IBM",
+     "url": "https://ai.engineer/talks/NdrSPm6NCdk-evals-in-ai-deep-dive",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer Europe 2026",
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Data quality & curation",
+    "Developer workflows & testing",
+    "Evals",
+    "Harness engineering",
+    "Human-in-the-loop validation",
+    "Infrastructure & deployment",
+    "ML fundamentals"
+   ],
+   "skills": [
+    "evals",
+    "agents"
+   ],
+   "products": [],
+   "initials": "TK"
+  },
+  {
+   "id": "uday-kiran-medisetty",
+   "group": "quiet",
+   "name": "Uday Kiran Medisetty",
+   "role": "Distinguished Engineer",
+   "org": "Uber",
+   "source": "https://ai.engineer/speakers/uday-kiran-medisetty",
+   "links": {
+    "github": "https://github.com/udaykiranm",
+    "linkedin": "https://www.linkedin.com/in/udaykiran",
+    "x": "https://x.com/udaykiran"
+   },
+   "talks": [
+    {
+     "title": "Agentic SDLC at Uber - Building Blocks for Uber’s Software Factory",
+     "url": "https://ai.engineer/talks/17-YSUHo6Lk-agentic-sdlc-at-uber-building-blocks-ubers",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI engineering leadership",
+    "AI platform engineering",
+    "Coding agents",
+    "Evals",
+    "MCP",
+    "Observability & reliability",
+    "Privacy & data governance",
+    "Safety & governance"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "UK"
+  },
+  {
+   "id": "sarthak-aggarwal",
+   "group": "quiet",
+   "name": "Sarthak Aggarwal",
+   "role": "Co-founder",
+   "org": "Decawork",
+   "source": "https://ai.engineer/speakers/sarthak-aggarwal",
+   "links": {
+    "website": "https://sarthak.site",
+    "github": "https://github.com/codesarthak",
+    "linkedin": "https://www.linkedin.com/in/sarthak-agg",
+    "x": "https://x.com/_sarthak4"
+   },
+   "talks": [
+    {
+     "title": "IT Admin for the AI Workforce — Sarthak Aggarwal, Decawork",
+     "url": "https://ai.engineer/talks/q-WOjZhOMCA-it-admin-ai-workforce",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Agentic commerce",
+    "AI engineering leadership",
+    "AI in finance",
+    "AI interface design",
+    "AI security",
+    "Coding agents",
+    "Computer use"
+   ],
+   "skills": [
+    "agents",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "SA"
+  },
+  {
+   "id": "pierluca-d-oro",
+   "group": "quiet",
+   "name": "Pierluca D'Oro",
+   "role": "Founder",
+   "org": "Programma Labs",
+   "source": "https://ai.engineer/speakers/pierluca-d-oro",
+   "links": {
+    "website": "https://proceduralia.com/",
+    "github": "https://github.com/proceduralia",
+    "linkedin": "https://www.linkedin.com/in/pierluca-doro",
+    "x": "https://x.com/proceduralia"
+   },
+   "talks": [
+    {
+     "title": "Computer Use at the Edge of the Statistical Precipice",
+     "url": "https://ai.engineer/talks/CTLa_p6iOiY-computer-use-at-edge-statistical-precipice",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Computer use",
+    "Data quality & curation",
+    "Evals",
+    "Observability & reliability",
+    "Reasoning & test-time compute",
+    "RL environments & simulators"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "PD"
+  },
+  {
+   "id": "jia-wu",
+   "group": "quiet",
+   "name": "Jia Wu",
+   "role": "Deployed Engineering Lead",
+   "org": "Cognition",
+   "source": "https://ai.engineer/speakers/jia-wu",
+   "links": {
+    "website": "https://www.jiarongwu.com/",
+    "github": "https://github.com/JRWu",
+    "linkedin": "https://www.linkedin.com/in/jia-rong-wu",
+    "x": "https://twitter.com/j_wu8"
+   },
+   "talks": [
+    {
+     "title": "How Forward Deployed Engineering is done at Cognition",
+     "url": "https://ai.engineer/talks/RVxym6mmIns-forward-deployed-engineering-is-done-at-cognition",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agentic commerce",
+    "AI engineering leadership",
+    "AI platform engineering",
+    "Coding agents",
+    "Enterprise AI",
+    "Forward-deployed engineering",
+    "Infrastructure & deployment",
+    "Observability & reliability"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "JW"
+  },
+  {
+   "id": "jared-joselowitz",
+   "group": "quiet",
+   "name": "Jared Joselowitz",
+   "role": "AI Research Engineer",
+   "org": "Ufonia",
+   "source": "https://ai.engineer/speakers/jared-joselowitz",
+   "links": {
+    "website": "https://jossy.co.za",
+    "github": "https://github.com/jaredjoss",
+    "linkedin": "https://www.linkedin.com/in/jaredjoselowitz",
+    "x": "https://x.com/jaredjoselowitz"
+   },
+   "talks": [
+    {
+     "title": "Shipping AI to a Million Patients Without an A/B Test",
+     "url": "https://ai.engineer/talks/McknwOzbmyg-shipping-ai-million-patients-without-b-test",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI in healthcare",
+    "AI interface design",
+    "AI platform engineering",
+    "Developer workflows & testing",
+    "Enterprise AI",
+    "Evals",
+    "Forward-deployed engineering",
+    "Model routing & gateways"
+   ],
+   "skills": [
+    "evals"
+   ],
+   "products": [],
+   "initials": "JJ"
+  },
+  {
+   "id": "isaac-miller",
+   "group": "quiet",
+   "name": "Isaac Miller",
+   "role": "Lead Maintainer of DSPy; Co-Founder",
+   "org": "cmpnd",
+   "source": "https://ai.engineer/speakers/isaac-miller",
+   "links": {
+    "website": "https://blog.isaacmiller.dev/posts/discord-mod",
+    "github": "https://github.com/isaacbmiller",
+    "linkedin": "https://www.linkedin.com/in/miller-isaac",
+    "x": "https://x.com/isaacbmiller1"
+   },
+   "talks": [
+    {
+     "title": "The Unreasonable Effectiveness of Separating the Task from the Model",
+     "url": "https://ai.engineer/talks/GgLQ02aO-hs-unreasonable-effectiveness-separating-task",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Developer workflows & testing",
+    "Evals",
+    "Infrastructure & deployment",
+    "Multi-agent systems",
+    "Prompt optimization",
+    "Retrieval-augmented generation"
+   ],
+   "skills": [
+    "retrieval",
+    "agents",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "IM"
+  },
+  {
+   "id": "gabriel-jorge-menezes",
+   "group": "quiet",
+   "name": "Gabriel Jorge Menezes",
+   "role": "Core Infrastructure Engineer",
+   "org": "Krea",
+   "source": "https://ai.engineer/speakers/gabriel-jorge-menezes",
+   "links": {
+    "website": "https://gab-menezes.github.io",
+    "github": "https://github.com/gab-menezes",
+    "linkedin": "https://www.linkedin.com/in/gabriel-jorge-menezes"
+   },
+   "talks": [
+    {
+     "title": "Infra behind Krea 2 - How to train and serve at scale",
+     "url": "https://ai.engineer/talks/byn9PURoBNY-infra-behind-krea-2-train-serve",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI cost & performance",
+    "AI platform engineering",
+    "Distributed training & inference",
+    "Evals",
+    "Generative media",
+    "Infrastructure & deployment",
+    "Local inference",
+    "Observability & reliability"
+   ],
+   "skills": [
+    "evals",
+    "models"
+   ],
+   "products": [],
+   "initials": "GJ"
+  },
+  {
+   "id": "frank-coyle",
+   "group": "quiet",
+   "name": "Frank Coyle",
+   "role": "Lecturer, UCALBerkeley / Founder AI/Edge",
+   "org": "UC Berkeley",
+   "source": "https://ai.engineer/speakers/frank-coyle",
+   "links": {
+    "website": "https://www.frank-coyle.ai/",
+    "github": "https://github.com/frankc",
+    "linkedin": "https://www.linkedin.com/in/frank-coyle/",
+    "x": "https://x.com/coyle_frankp"
+   },
+   "talks": [
+    {
+     "title": "Anthropic's CCA Exam as a Field-Guide for Agentic Engineering",
+     "url": "https://ai.engineer/talks/Z-c11pV_uvU-anthropics-cca-exam-as-field-guide-agentic",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Why Agentic Systems Need Ontologies — Frank Coyle, UC Berkeley",
+     "url": "https://ai.engineer/talks/Sir59K8ZDPU-ontologies-for-agentic-systems",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI in finance",
+    "AI in healthcare",
+    "Coding agents",
+    "Infrastructure & deployment",
+    "Knowledge graphs",
+    "MCP",
+    "ML fundamentals"
+   ],
+   "skills": [
+    "agents",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "FC"
+  },
+  {
+   "id": "doug-keller",
+   "group": "quiet",
+   "name": "Doug Keller",
+   "role": "Senior Staff AI Engineer",
+   "org": "SonderMind",
+   "source": "https://ai.engineer/speakers/doug-keller",
+   "links": {
+    "github": "https://github.com/dkeller-sondermind",
+    "linkedin": "https://www.linkedin.com/in/doug-keller"
+   },
+   "talks": [
+    {
+     "title": "Evals Driven-Development: Engineering a Mental Health AI Coach Ethically & Safely",
+     "url": "https://ai.engineer/talks/O72p-rBb2bA-evals-driven-development-engineering-mental-health",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI in healthcare",
+    "AI interface design",
+    "AI security",
+    "Evals",
+    "Forward-deployed engineering",
+    "Infrastructure & deployment",
+    "ML fundamentals",
+    "Model routing & gateways"
+   ],
+   "skills": [
+    "evals"
+   ],
+   "products": [],
+   "initials": "DK"
+  },
+  {
+   "id": "chris-alexiuk",
+   "group": "quiet",
+   "name": "Chris Alexiuk",
+   "role": "Sr. Product Research Engineer",
+   "org": "NVIDIA",
+   "source": "https://ai.engineer/speakers/chris-alexiuk",
+   "links": {
+    "website": "https://www.alexi.uk",
+    "github": "https://github.com/chrisalexiuk-nvidia",
+    "linkedin": "https://www.linkedin.com/in/csalexiuk",
+    "x": "https://x.com/llm_wizard"
+   },
+   "talks": [
+    {
+     "title": "Compression at the Edge",
+     "url": "https://ai.engineer/talks/J4_jCrTxMkk-compression-at-edge",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Local Models: Trust, Control, Optimization",
+     "url": "https://ai.engineer/talks/FWMJQDH3iK0-local-models-trust-control-optimization",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI platform engineering",
+    "Evals",
+    "Inference",
+    "Infrastructure & deployment",
+    "Local inference",
+    "MCP",
+    "ML fundamentals",
+    "Privacy & data governance"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "models"
+   ],
+   "products": [],
+   "initials": "CA"
+  },
+  {
+   "id": "brendan-rappazzo",
+   "group": "quiet",
+   "name": "Brendan Rappazzo",
+   "role": "Machine Learning Scientist",
+   "org": "Morgan Stanley",
+   "source": "https://ai.engineer/speakers/brendan-rappazzo",
+   "links": {
+    "website": "https://www.bhogan.net",
+    "github": "https://github.com/brendanhogan",
+    "linkedin": "https://www.linkedin.com/in/brendan-rappazzo-hogan-763734115",
+    "x": "https://x.com/brendanh0gan"
+   },
+   "talks": [
+    {
+     "title": "ALPHALAB: Autonomous Multi-Agent Research Across Optimization Domains with Frontier LLMs — Brendan Rappazzo",
+     "url": "https://ai.engineer/talks/kiqubc5b5Yo-alphalab-autonomous-multi-agent-research-across",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Loophole: Adversarial Agents To Stress Test Your Morality — Brendan Rappazzo, Morgan Stanley",
+     "url": "https://ai.engineer/talks/hOWU0KPUp1k-loophole-adversarial-agents-stress-test",
+     "event": null,
+     "year": null
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Agent red teaming",
+    "AI in finance",
+    "Autoresearch",
+    "Evals",
+    "Harness engineering",
+    "Infrastructure & deployment",
+    "ML fundamentals"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "security"
+   ],
+   "products": [],
+   "initials": "BR"
+  },
+  {
+   "id": "divakar-kumar",
+   "group": "quiet",
+   "name": "Divakar Kumar",
+   "role": "Technical Architect",
+   "org": "FlyersSoft",
+   "source": "https://ai.engineer/speakers/divakar-kumar",
+   "links": {
+    "website": "https://iamdivakarkumar.com",
+    "github": "https://github.com/divakar-kumar",
+    "linkedin": "https://www.linkedin.com/in/divakar-kumar"
+   },
+   "talks": [
+    {
+     "title": "Let's integrate AI Agents in Event-Sourced Systems",
+     "url": "https://ai.engineer/talks/o6U_2vd967Y-lets-integrate-ai-agents-in-event-sourced",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Agent memory",
+    "AI in finance",
+    "Context engineering",
+    "Infrastructure & deployment",
+    "ML fundamentals",
+    "Retrieval-augmented generation"
+   ],
+   "skills": [
+    "agents",
+    "retrieval",
+    "context"
+   ],
+   "products": [],
+   "initials": "DK"
+  },
+  {
+   "id": "dillon-dupont",
+   "group": "quiet",
+   "name": "Dillon DuPont",
+   "role": "CTO",
+   "org": "Cua",
+   "source": "https://ai.engineer/speakers/dillon-dupont",
+   "links": {
+    "github": "https://github.com/ddupont808"
+   },
+   "talks": [
+    {
+     "title": "Computer-Use 2.0: Agents Just Got Multi-Cursor",
+     "url": "https://ai.engineer/talks/ZSQb5fzRFPw-computer-use-2-0-agents-just-got",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI cost & performance",
+    "Computer use",
+    "Evals",
+    "Fine-tuning",
+    "Infrastructure & deployment",
+    "RL environments & simulators"
+   ],
+   "skills": [
+    "agents",
+    "ai-dev",
+    "evals",
+    "models"
+   ],
+   "products": [
+    {
+     "id": "cua",
+     "name": "Cua",
+     "area": "agents"
+    }
+   ],
+   "initials": "DD"
+  },
+  {
+   "id": "aman-gupta",
+   "group": "quiet",
+   "name": "Aman Gupta",
+   "role": "Principal Machine Learning Engineer",
+   "org": "Nubank",
+   "source": "https://ai.engineer/speakers/aman-gupta",
+   "links": {
+    "website": "https://amangupta.dev/",
+    "github": "https://github.com/agupta2304",
+    "linkedin": "https://www.linkedin.com/in/aman-gupta1",
+    "x": "https://x.com/aman2304"
+   },
+   "talks": [
+    {
+     "title": "Simulation-Maxxing: How Nubank ships agents 20× faster with simulations",
+     "url": "https://ai.engineer/talks/KMR_RBoCa4M-simulation-maxxing-nubank-ships-agents-20-faster",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI in finance",
+    "Evals",
+    "Infrastructure & deployment",
+    "MCP",
+    "Prompt optimization",
+    "Retrieval-augmented generation"
+   ],
+   "skills": [
+    "agents",
+    "retrieval",
+    "evals"
+   ],
+   "products": [],
+   "initials": "AG"
+  },
+  {
+   "id": "vivek-trivedy",
+   "group": "quiet",
+   "name": "Vivek Trivedy",
+   "role": "Head of Applied Research",
+   "org": "LangChain",
+   "source": "https://ai.engineer/speakers/vivek-trivedy",
+   "links": {
+    "website": "https://www.vtrivedy.com",
+    "github": "https://github.com/vtrivedy",
+    "linkedin": "https://www.linkedin.com/in/vivek-trivedy-433509134",
+    "x": "https://x.com/vtrivedy10"
+   },
+   "talks": [
+    {
+     "title": "Improving Agents is a Data Mining Problem",
+     "url": "https://ai.engineer/talks/CvRngaQZQ3Y-improving-agents-is-data-mining-problem",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Context engineering",
+    "Evals",
+    "Fine-tuning",
+    "Observability & reliability",
+    "Retrieval-augmented generation"
+   ],
+   "skills": [
+    "agents",
+    "retrieval",
+    "context",
+    "evals",
+    "models"
+   ],
+   "products": [],
+   "initials": "VT"
+  },
+  {
+   "id": "lukas-petersson",
+   "group": "quiet",
+   "name": "Lukas Petersson",
+   "role": "Co-Founder",
+   "org": "Andon Labs",
+   "source": "https://ai.engineer/speakers/lukas-petersson",
+   "links": {
+    "website": "https://lukaspet.substack.com",
+    "github": "https://github.com/lukaspetersson",
+    "linkedin": "https://www.linkedin.com/in/lukas-petersson-181a83172",
+    "x": "https://x.com/lukaspet"
+   },
+   "talks": [
+    {
+     "title": "Vending-Bench: Long-Horizon Agent Evals — Lukas Petersson, Andon Labs",
+     "url": "https://ai.engineer/talks/cO8qC6HBuBg-vending-bench-long-horizon-agent-evals",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI engineering leadership",
+    "Developer workflows & testing",
+    "Evals",
+    "Observability & reliability",
+    "Safety & governance"
+   ],
+   "skills": [
+    "agents",
+    "evals"
+   ],
+   "products": [],
+   "initials": "LP"
+  },
+  {
+   "id": "kenton-varda",
+   "group": "quiet",
+   "name": "Kenton Varda",
+   "role": "Principal Engineer",
+   "org": "Cloudflare",
+   "source": "https://ai.engineer/speakers/kenton-varda",
+   "links": {
+    "website": "https://lanparty.house",
+    "github": "https://github.com/kentonv",
+    "x": "https://x.com/kentonvarda"
+   },
+   "talks": [
+    {
+     "title": "Gadgets: Personal app vibe coding that is actually safe",
+     "url": "https://ai.engineer/talks/RmS5s6Wbin4-gadgets-personal-app-vibe-coding-that-is",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI security",
+    "Coding agents",
+    "Developer workflows & testing",
+    "Infrastructure & deployment",
+    "Safety & governance"
+   ],
+   "skills": [
+    "agents",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "KV"
+  },
+  {
+   "id": "dhruv-batra",
+   "group": "quiet",
+   "name": "Dhruv Batra",
+   "role": "Co-founder & Chief Scientist",
+   "org": "Yutori",
+   "source": "https://ai.engineer/speakers/dhruv-batra",
+   "links": {
+    "website": "https://dhruvbatra.com",
+    "github": "https://github.com/dhruvbatra",
+    "linkedin": "https://www.linkedin.com/in/dhruv-batra-dbatra",
+    "x": "https://x.com/dhruvbatra_"
+   },
+   "talks": [
+    {
+     "title": "Computer-use models will agentify the web, not APIs",
+     "url": "https://ai.engineer/talks/Ki980nV0__0-computer-use-models-will-agentify-web-not",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Computer use",
+    "Evals",
+    "MCP",
+    "Vision & video"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "DB"
+  },
+  {
+   "id": "chaitanya-asawa",
+   "group": "quiet",
+   "name": "Chaitanya Asawa",
+   "role": "Head of Engineering for Clinical Decision Support",
+   "org": "Abridge",
+   "source": "https://ai.engineer/speakers/chaitanya-asawa",
+   "links": {
+    "github": "https://github.com/casawa",
+    "linkedin": "https://www.linkedin.com/in/casawa",
+    "x": "https://x.com/c_asawa"
+   },
+   "talks": [
+    {
+     "title": "From Ambient Documentation to Clinical Intelligence",
+     "url": "https://ai.engineer/talks/u6q-byPWUuo-from-ambient-documentation-clinical-intelligence",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI in finance",
+    "AI in healthcare",
+    "Evals",
+    "Reasoning & test-time compute",
+    "Robotics",
+    "Workflow automation"
+   ],
+   "skills": [
+    "evals"
+   ],
+   "products": [],
+   "initials": "CA"
+  },
+  {
+   "id": "natalie-meurer",
+   "group": "quiet",
+   "name": "Natalie Meurer",
+   "role": "Head of Agent Engineering",
+   "org": "Sierra",
+   "source": "https://ai.engineer/speakers/natalie-meurer",
+   "links": {
+    "website": "https://sierra.ai/author/natalie-meurer",
+    "github": "https://github.com/nataliemeurer",
+    "linkedin": "https://www.linkedin.com/in/nataliemeurer",
+    "x": "https://x.com/natalie_meurer"
+   },
+   "talks": [
+    {
+     "title": "The Dirty Secret of Forward Deployed Engineering",
+     "url": "https://ai.engineer/talks/Byv311hdoHE-dirty-secret-forward-deployed-engineering",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Coding agents",
+    "Enterprise AI",
+    "Forward-deployed engineering",
+    "Infrastructure & deployment",
+    "Retrieval-augmented generation"
+   ],
+   "skills": [
+    "retrieval",
+    "agents",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "NM"
+  },
+  {
+   "id": "moritz-johner",
+   "group": "quiet",
+   "name": "Moritz Johner",
+   "role": "Staff Engineer",
+   "org": "Form3",
+   "source": "https://ai.engineer/speakers/moritz-johner",
+   "links": {
+    "website": "https://www.form3.tech",
+    "github": "https://github.com/moolen",
+    "linkedin": "https://www.linkedin.com/in/moritz-johner"
+   },
+   "talks": [
+    {
+     "title": "We Gave an Agent Production Code Access and Then Tried to Sleep at Night",
+     "url": "https://ai.engineer/talks/LqLoYksJ6do-we-gave-agent-production-code-access-then",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI security",
+    "Coding agents",
+    "Developer workflows & testing",
+    "Sandboxes & isolation"
+   ],
+   "skills": [
+    "agents",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "MJ"
+  },
+  {
+   "id": "alex-bauer",
+   "group": "quiet",
+   "name": "Alex Bauer",
+   "role": "Co-founder",
+   "org": "Upside",
+   "source": "https://ai.engineer/speakers/alex-bauer",
+   "links": {
+    "website": "https://alexbauer.net",
+    "github": "https://github.com/aeromusek",
+    "linkedin": "https://www.linkedin.com/in/alexdbauer",
+    "x": "https://x.com/alexdbauer"
+   },
+   "talks": [
+    {
+     "title": "How Juries and Librarians Can Solve GTM's AI Trust Problem",
+     "url": "https://ai.engineer/talks/YZQsWVeN3rE-juries-librarians-solve-gtms-ai-trust-problem",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "AI engineering leadership",
+    "AI in sales & marketing",
+    "Enterprise AI",
+    "Retrieval-augmented generation"
+   ],
+   "skills": [
+    "retrieval",
+    "agents"
+   ],
+   "products": [],
+   "initials": "AB"
+  },
+  {
+   "id": "ramana-siddanth-emani",
+   "group": "quiet",
+   "name": "Ramana Siddanth Emani",
+   "role": "Data Scientist",
+   "org": "Auditoria AI",
+   "source": "https://ai.engineer/speakers/ramana-siddanth-emani",
+   "links": {
+    "website": "https://www.auditoria.ai",
+    "github": "https://github.com/siddanthemani",
+    "linkedin": "https://www.linkedin.com/in/siddanth-emani",
+    "x": "https://x.com/siddanth2486"
+   },
+   "talks": [
+    {
+     "title": "Your Finance Agent's Bottleneck Is You",
+     "url": "https://ai.engineer/talks/z0sh8HyTrDo-your-finance-agents-bottleneck-is-you",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI in finance",
+    "Coding agents",
+    "Developer workflows & testing",
+    "MCP"
+   ],
+   "skills": [
+    "agents",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "RS"
+  },
+  {
+   "id": "niels-rogge",
+   "group": "quiet",
+   "name": "Niels Rogge",
+   "role": "Machine Learning Engineer",
+   "org": "Hugging Face",
+   "source": "https://ai.engineer/speakers/niels-rogge",
+   "links": {
+    "website": "https://nielsrogge.github.io",
+    "github": "https://github.com/nielsrogge",
+    "linkedin": "https://www.linkedin.com/in/niels-rogge-a3b7a3127",
+    "x": "https://x.com/nielsrogge"
+   },
+   "talks": [
+    {
+     "title": "How I automate my own job at Hugging Face using agents",
+     "url": "https://ai.engineer/talks/FLUoowDJg4I-i-automate-my-own-job-at-hugging",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI engineering leadership",
+    "Coding agents",
+    "Infrastructure & deployment",
+    "Retrieval-augmented generation"
+   ],
+   "skills": [
+    "agents",
+    "retrieval",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "NR"
   }
  ]
 }

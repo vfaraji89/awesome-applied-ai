@@ -37,7 +37,8 @@ export function StackRows({ groups }: { groups: StackGroup[] }) {
         <a href={tool.url} target="_blank" rel="noreferrer" className="count">{tool.url.replace(/^https?:\/\//, "").replace(/\/$/, "")} ↗</a>
       </div>
       <style>{`
-        .sr-frame { position: relative; padding: 8px 26px; border-radius: 14px; border: 1px solid var(--line); }
+        .sr-frame { position: relative; padding: 8px 26px; border-radius: 14px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+          background-image: var(--dowel), var(--dowel); background-size: 7px 100%, 7px 100%; background-position: left center, right center; background-repeat: no-repeat; }
         .sr-row { position: relative; display: grid; grid-template-columns: 170px 1fr; gap: 12px; padding: 14px 0; }
         .sr-row + .sr-row { border-top: 1px dashed var(--line); }
         .sr-row::before { content: ""; position: absolute; left: -19px; right: -19px; top: calc(14px + 20px); height: 4px; margin-top: -2px; border-radius: 4px; background: var(--rod); }

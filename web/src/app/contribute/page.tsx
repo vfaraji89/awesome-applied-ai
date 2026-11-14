@@ -4,7 +4,7 @@ import { SectionIntro } from "@/components/section-intro";
 import { site } from "@/lib/site";
 import { share } from "@/lib/share";
 
-export const metadata: Metadata = { ...share("contribute"), title: "Feedback", description: "Spot something wrong, missing or out of date on awesome-applied-ai? Send a correction." };
+export const metadata: Metadata = { ...share("contribute"), title: "Feedback", description: "Spot something wrong, missing or out of date on Applied AI, Simplified? Send a correction." };
 
 const ASKS = [
   { what: "A wrong or outdated fact", how: "The page, what is wrong, and a source for the fix." },
@@ -13,7 +13,7 @@ const ASKS = [
 ];
 
 export default function Feedback() {
-  const mail = `mailto:${site.author.email}?subject=${encodeURIComponent("awesome-applied-ai: a correction")}`;
+  const mail = `mailto:${site.author.email}?subject=${encodeURIComponent("Applied AI, Simplified: a correction")}`;
   return (
     <section className="section">
       <div className="wrap">

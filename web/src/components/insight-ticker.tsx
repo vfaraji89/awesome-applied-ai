@@ -71,7 +71,7 @@ const css = `
     clip-path: inset(0 50% 0 50% round var(--radius)); transition: clip-path ${OPEN}ms cubic-bezier(.77,0,.18,1); }
   .itk.open::before, .itk.hold::before { clip-path: inset(0 0 0 0 round var(--radius)); }
   .itk.close::before { clip-path: inset(0 50% 0 50% round var(--radius)); transition-duration: ${CLOSE}ms; }
-  .itk-post { display: none; position: absolute; top: -6px; bottom: -6px; width: 8px; border-radius: 4px; background: var(--dowel); 
+  .itk-post { position: absolute; top: -6px; bottom: -6px; width: 8px; border-radius: 4px; background: var(--dowel); 
     left: calc(50% - 4px); transition: left ${OPEN}ms cubic-bezier(.77,0,.18,1); }
   .itk.open .itk-post.l, .itk.hold .itk-post.l { left: -4px; }
   .itk.open .itk-post.r, .itk.hold .itk-post.r { left: calc(100% - 4px); }

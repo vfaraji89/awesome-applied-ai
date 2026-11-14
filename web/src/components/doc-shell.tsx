@@ -126,7 +126,8 @@ const css = `
   .ds-bead:hover .ds-tip, .ds-bead:focus-visible .ds-tip { opacity: 1; transform: translate(-50%, 0); }
 
   .ds-stage { position: relative; display: flex; flex-direction: column; padding: 30px 34px 34px; border-radius: var(--radius); background: var(--card);
-    border: 1px solid var(--line);
+    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+    background-image: var(--dowel), var(--dowel); background-size: 8px 100%, 8px 100%; background-position: left center, right center; background-repeat: no-repeat;
     animation: ds-open .8s cubic-bezier(.77,0,.18,1) both; }
   @keyframes ds-open { from { clip-path: inset(0 50% 0 50% round var(--radius)); } to { clip-path: inset(0 0 0 0 round var(--radius)); } }
   .ds-stage > * { animation: ds-in .55s var(--ease) both; }

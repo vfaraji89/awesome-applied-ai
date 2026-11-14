@@ -14,7 +14,7 @@ type Rate = { pct: number | null; low: number | null; high: number | null; k: nu
 type Multi = { precision: Rate; recall: Rate; per: { id: string; precision: Rate; recall: Rate; asked: number }[] };
 type Month = { month: string; sampled: number; labelled: number; gone: number; scored: boolean; kept?: Rate; missed?: Rate; role?: Rate & { confusions: { said: string; was: string; n: number }[] }; seniority?: Rate; skills?: Multi; tasks?: Multi };
 
-const REPO = "https://github.com/vfaraji89/awesome-applied-ai";
+const REPO = "https://github.com/vfaraji89/applied-ai-simplified";
 const roleName = (id: string) => fRoles.find((r) => r.id === id)?.name ?? (id === "other-ai" ? "Other AI role" : id);
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
 

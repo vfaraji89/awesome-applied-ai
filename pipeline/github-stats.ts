@@ -26,7 +26,7 @@ const repoOf = (t: { github?: string; url: string }) =>
   (t.github || t.url.match(/github\.com\/(?!(?:features|marketplace|orgs|topics|sponsors|apps|enterprise|solutions|about|pricing|security|collections|trending)\/)([^/]+\/[^/#?]+)/i)?.[1] || "").replace(/\.git$/, "").toLowerCase();
 const repos = [...new Set(tools.map(repoOf).filter((r) => /^[a-z0-9_.-]+\/[a-z0-9_.-]+$/.test(r)))];
 
-const H: Record<string, string> = { accept: "application/vnd.github+json", "user-agent": "awesome-applied-ai-stats" };
+const H: Record<string, string> = { accept: "application/vnd.github+json", "user-agent": "applied-ai-simplified-stats" };
 if (process.env.GITHUB_TOKEN) H.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 const GAP = process.env.GITHUB_TOKEN ? 2200 : 6500;

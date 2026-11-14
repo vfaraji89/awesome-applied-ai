@@ -13,7 +13,7 @@ configs:
 
 One row per AI job ad, with what the ad asks for: the role, the level, the skills, the tasks, the
 tools, the general stack and the years of experience, read from public company career pages every
-day by the tracker behind [awesome-applied-ai](https://vfaraji89.github.io/awesome-applied-ai/market/).
+day by the tracker behind [Applied AI, Simplified](https://vfaraji89.github.io/applied-ai-simplified/market/).
 
 **Version 2026-11-13** · 2,488 ads published row by row, 2,862 ads in the monthly totals · seen up to 2026-11-13
 
@@ -45,7 +45,7 @@ day by the tracker behind [awesome-applied-ai](https://vfaraji89.github.io/aweso
 | `tools_preferred` | the tools named only as nice to have |
 | `stack` | the general stack, as `category:name` (`lang:Python`, `front:React`...) |
 
-Roles, skills and tasks are defined on the [method page](https://vfaraji89.github.io/awesome-applied-ai/market/method/), with how each is read and how
+Roles, skills and tasks are defined on the [method page](https://vfaraji89.github.io/applied-ai-simplified/market/method/), with how each is read and how
 often the reading is wrong, measured by hand on a sample every month.
 
 ## What is not here, and why
@@ -78,6 +78,6 @@ often the reading is wrong, measured by hand on a sample every month.
 
 [CC BY 4.0](LICENSE): use it for anything, including commercial work, with credit. Please cite:
 
-> Faraji, V. (2026). Applied AI job ads: what employers ask for (version 2026-11-13) [Data set]. https://github.com/vfaraji89/awesome-applied-ai/tree/main/dataset
+> Faraji, V. (2026). Applied AI job ads: what employers ask for (version 2026-11-13) [Data set]. https://github.com/vfaraji89/applied-ai-simplified/tree/main/dataset
 
 The website, its text and its code are not covered by this licence.

@@ -33,12 +33,12 @@ export default async function CompanyPage({ params }: { params: Promise<{ id: st
     <>
       <section className="section">
         <div className="wrap">
-          <Crumb id="roles" page="Companies" />
+          <Crumb id="people" page="Companies" />
           <div className="cs-hero">
             <Badge c={c} size={104} />
             <div>
               <h1>{c.name}<span className="dot">.</span></h1>
-              {c.lab && <span className="cs-tag"><T k="cp.lab">AI lab</T></span>}
+              {c.lab && <span className="soon cs-tag"><T k="cp.lab">AI lab</T></span>}
             </div>
           </div>
           <div className="cs-stats">
@@ -96,7 +96,7 @@ export default async function CompanyPage({ params }: { params: Promise<{ id: st
       </section>
       <style>{`
         .cs-hero { display: flex; gap: 26px; align-items: center; margin-top: 22px; flex-wrap: wrap; }
-        .cs-tag { display: inline-block; margin-top: 8px; font: .72rem var(--font-mono), monospace; text-transform: uppercase; letter-spacing: .1em; color: var(--rust-deep); border: 1px dashed var(--rust); border-radius: 999px; padding: 3px 10px; }
+        .cs-tag { display: inline-block; margin-top: 8px; }
         .cs-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 200px), 1fr)); gap: 14px; margin-top: 30px; max-width: 820px; }
         .cs-stats .frame { display: grid; gap: 6px; } .cs-stats b { font-size: 2rem; font-weight: 800; color: var(--rust); line-height: 1; }
         .cs-grid { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 24px; align-items: start; }

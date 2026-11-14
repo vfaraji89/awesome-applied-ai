@@ -1,12 +1,12 @@
 "use client";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import Link from "next/link";
 import { T, useT } from "@/i18n/lang";
 import { skills } from "@/data/framework";
 
 /* The people directory: an abacus of skills on top (a rod per skill, a bead per person whose talks
    name it; touch a rod to filter), a search, and a card per person with their monogram bead. */
-export type Person = { id: string; name: string; role: string | null; org: string | null; initials: string; talkCount: number; years: string[]; skills: string[]; topics: string[]; products: { id: string; name: string }[] };
+export type Person = { id: string; group?: "builders" | "quiet"; name: string; role: string | null; org: string | null; initials: string; talkCount: number; years: string[]; skills: string[]; topics: string[]; products: { id: string; name: string }[] };
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
 
 export function Monogram({ p, size = 56 }: { p: Pick<Person, "initials" | "talkCount" | "name">; size?: number }) {
@@ -39,9 +39,13 @@ export function PeopleBrowser({ people, span }: { people: Person[]; span: string
   const t = useT();
   const [skill, setSkill] = useState<string | null>(null);
   const [q, setQ] = useState("");
-  const counts = useMemo(() => skills.map((s) => ({ id: s.id, n: people.filter((p) => p.skills.includes(s.id)).length })).filter((x) => x.n).sort((a, b) => b.n - a.n), [people]);
+  const [group, setGroup] = useState<"all" | "builders" | "quiet">("all");
+  // the nav links Quiet builders as /people/?g=quiet; a static page reads it on the client
+  useEffect(() => { const g = new URLSearchParams(location.search).get("g"); if (g === "quiet" || g === "builders") setGroup(g); }, []);
+  const pool = useMemo(() => people.filter((p) => group === "all" || p.group === group), [people, group]);
+  const counts = useMemo(() => skills.map((s) => ({ id: s.id, n: pool.filter((p) => p.skills.includes(s.id)).length })).filter((x) => x.n).sort((a, b) => b.n - a.n), [pool]);
   const max = Math.max(1, ...counts.map((c) => c.n));
-  const list = people.filter((p) => (!skill || p.skills.includes(skill)) && (!q || `${p.name} ${p.org ?? ""} ${p.role ?? ""} ${p.topics.join(" ")}`.toLowerCase().includes(q.toLowerCase())));
+  const list = pool.filter((p) => (!skill || p.skills.includes(skill)) && (!q || `${p.name} ${p.org ?? ""} ${p.role ?? ""} ${p.topics.join(" ")}`.toLowerCase().includes(q.toLowerCase())));
   return (
     <div className="pb">
       <div className="frame pb-abacus">
@@ -59,9 +63,19 @@ export function PeopleBrowser({ people, span }: { people: Person[]; span: string
         </ul>
         <p className="count"><T k="pb.hint">A bead per person whose talks name the skill. Touch a rod to see them.</T></p>
       </div>
+      <div className="chips pb-groups" role="group" aria-label={t("pb.groups", "Group")}>
+        {([["all", "All", people.length], ["builders", "Builders", people.filter((p) => p.group === "builders").length], ["quiet", "Quiet builders", people.filter((p) => p.group === "quiet").length]] as const).map(([g, label, n]) => (
+          <button key={g} type="button" className={`chip${group === g ? " on" : ""}`} aria-pressed={group === g} onClick={() => setGroup(g)}><T k={`pb.g.${g}`}>{label}</T> <span className="count">{n}</span></button>
+        ))}
+      </div>
+      <p className="muted pb-gline">
+        {group === "quiet" ? <T k="pb.g.quiet.line">People who build more than they speak: one conference, one or two talks, real work behind it. You may not know them yet.</T>
+          : group === "builders" ? <T k="pb.g.builders.line">Engineers, researchers and technical founders who have taken the stage again and again to show what they built.</T>
+          : <T k="pb.g.all.line">Engineers, researchers and technical founders. No developer relations, investors or curators: only people who build.</T>}
+      </p>
       <div className="pb-bar">
         <input type="search" value={q} onChange={(e) => setQ(e.target.value)} placeholder={t("pb.search", "Search a name, company or topic")} aria-label={t("pb.search", "Search a name, company or topic")} />
-        <span className="count"><T k="pb.n" vars={{ n: list.length, of: people.length }}>{"{n} of {of}"}</T>{skill && <> · <button type="button" className="pb-clear" onClick={() => setSkill(null)}><T k={`skill.${skill}`}>{skillName(skill)}</T> ×</button></>}</span>
+        <span className="count"><T k="pb.n" vars={{ n: list.length, of: pool.length }}>{"{n} of {of}"}</T>{skill && <> · <button type="button" className="pb-clear" onClick={() => setSkill(null)}><T k={`skill.${skill}`}>{skillName(skill)}</T> ×</button></>}</span>
       </div>
       <ul className="pb-grid">
         {list.map((p) => (
@@ -89,7 +103,9 @@ export function PeopleBrowser({ people, span }: { people: Person[]; span: string
         .pb-rod i { position: absolute; top: 50%; width: 10px; height: 10px; margin: -5px 0 0 -2px; border-radius: 50%; background: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); animation: pb-in .5s var(--spring) both; animation-delay: calc(var(--k) * 18ms); }
         .pb-abacus button.on .pb-rod i { background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); }
         @keyframes pb-in { from { transform: translateX(-12px); opacity: 0; } to { transform: none; opacity: 1; } }
-        .pb-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin: 24px 0 14px; }
+        .pb-groups { margin-top: 26px; } .pb-groups .chip { cursor: pointer; font: inherit; font-size: .84rem; }
+        .pb-gline { margin: 10px 0 0; font-size: .9rem; max-width: 70ch; }
+        .pb-bar { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; justify-content: space-between; margin: 18px 0 14px; }
         .pb-bar input { flex: 1 1 260px; max-width: 420px; padding: 10px 14px; border-radius: 999px; border: 1px solid var(--line-strong); background: var(--card); font: inherit; color: var(--ink); }
         .pb-clear { border: 0; background: var(--paper); border-radius: 999px; padding: 2px 8px; font: inherit; cursor: pointer; color: var(--rust-deep); }
         .pb-grid { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 290px), 1fr)); gap: 14px; }

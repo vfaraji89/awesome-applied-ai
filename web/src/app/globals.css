@@ -1,4 +1,4 @@
-/* awesome-applied-ai: the same design system as vfaraji89.github.io.
+/* applied-ai-simplified: the same design system as vfaraji89.github.io.
    Paper, ink and one rust red; Vahid Sora for words, Geist Mono for data;
    cards sit in minimal wooden abacus frames. */
 :root {
@@ -13,7 +13,7 @@
   --card: #ffffff;
   --line: rgba(28, 28, 30, 0.12);
   --line-strong: rgba(28, 28, 30, 0.22);
-  --dowel: var(--rod); /* abacus uprights: flat, no shading */
+  --dowel: linear-gradient(90deg, #b48a5c 0%, #d8bb94 24%, #f1e3cc 48%, #dcc29e 70%, #ad8455 100%);
   --rod: linear-gradient(180deg, #e9d8bd 0%, #f4eadb 35%, #d2b48d 75%, #b8946a 100%);
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
   --spring: cubic-bezier(0.22, 1, 0.36, 1);
@@ -75,13 +75,15 @@ p { margin: 0; }
   .brand small { display: none; }
 }
 
-/* ---- the card: one hairline, no edges, no shadow; the border warms to rust on hover ---- */
+/* ---- the abacus card: wooden dowels at the sides, hairlines top and bottom, never a shadow ---- */
 .frame {
   position: relative; display: block; background: var(--card); border-radius: var(--radius);
-  border: 1px solid var(--line); padding: 22px 26px; text-decoration: none; color: inherit;
+  border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
+  padding: 22px 26px; text-decoration: none; color: inherit;
+  background-image: var(--dowel), var(--dowel); background-size: 6px 100%, 6px 100%; background-position: left center, right center; background-repeat: no-repeat;
   transition: border-color 0.25s var(--ease);
 }
-a.frame:hover { border-color: color-mix(in srgb, var(--rust) 50%, var(--line)); }
+a.frame:hover { border-color: color-mix(in srgb, var(--rust) 45%, var(--line)); }
 .frame .rod { position: absolute; left: 6px; right: 6px; bottom: 14px; height: 3px; border-radius: 3px; background: var(--rod); opacity: 0.6; overflow: hidden; }
 .frame .rod::after { content: ""; position: absolute; inset: 0; background: var(--rust); transform: scaleX(0); transform-origin: left; transition: transform 0.6s var(--ease); }
 a.frame:hover .rod::after { transform: scaleX(1); }

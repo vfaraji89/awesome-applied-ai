@@ -16,7 +16,7 @@ export default function Companies() {
   return (
     <section className="section">
       <div className="wrap">
-        <Crumb id="roles" page="Companies" />
+        <Crumb id="people" page="Companies" />
         <h1 style={{ marginTop: 12 }}><TH k="cp.h1">The companies <mark>behind applied AI</mark></TH><span className="dot">.</span></h1>
         <p className="lead" style={{ marginTop: 16 }}><T k="cp.lead" vars={{ n: companies.length }}>{"{n} companies seen three ways: who they are hiring, what they build, and what they bring to the stage."}</T></p>
         <div style={{ marginTop: 30 }}><CompaniesBrowser companies={companies} skillNames={skillNames} roleNames={roleNames} /></div>

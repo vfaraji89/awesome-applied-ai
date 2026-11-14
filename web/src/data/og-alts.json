@@ -1,5 +1,5 @@
 {
- "": "Applied AI, mapped: From what the market asks for to the docs you need to build it: seven steps, free, in five languages.",
+ "": "Applied AI, simplified: Applied AI is made to sound harder than it is. The job ads, the tools, the people and the docs, said plainly. Free, in five languages.",
  "market": "What applied AI jobs ask for: Roles, levels, skills, tasks and tools from every AI job ad since 1 Oct 2026, read daily from public career pages.",
  "market/note": "This week in applied AI hiring: New roles, the skills they ask for and the tools they name, ready to share.",
  "fit": "How ready are you for applied AI?: Paste your CV or a job description. Scored against real postings, with what to learn next.",
@@ -14,7 +14,7 @@
  "roles/matrix": "Twelve skills, eight roles: Every skill scored aware to expert for every role. Compare two roles and see what changes.",
  "roles/tasks": "What the work actually is: The tasks AI job ads ask you to do, which role does each most, and every role's daily work.",
  "companies": "The companies behind applied AI: Who is hiring AI roles now, what they build and what they bring to the stage.",
- "people": "The people building applied AI: Builders who keep showing up on applied AI's main stages: where they work, what they build and what they talk about.",
+ "people": "The people building applied AI: Engineers, researchers and quiet builders, not the famous names: where they work, what they build and what they talk about.",
  "skills": "Which skills travel together: The skills applied AI postings ask for, how often they appear together, and which opens the most doors.",
  "architect": "The role that designs AI into systems: The layers, the stack and the problems an AI-native architect owns.",
  "architecture": "Six layers of an AI system: From guardrails to retrieval: one request animated through every layer, and the agent harness on top.",

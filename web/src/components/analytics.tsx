@@ -64,9 +64,9 @@ export function Analytics() {
     w.gtag("consent", "default", { ad_storage: "denied", ad_user_data: "denied", ad_personalization: "denied", analytics_storage: saved === "yes" ? "granted" : "denied", wait_for_update: 500 });
     w.gtag("js", new Date());
     const debug = new URLSearchParams(location.search).has("ga_debug");
-    const section = location.pathname.split("/").filter(Boolean).find((p) => p !== "awesome-applied-ai") ?? "home";
-    w.dataLayer.push({ event: "vf_context", site: "awesome-applied-ai", page_group: section, consent_state: saved === "yes" ? "granted" : "denied" });
-    w.gtag("config", GA_ID, { content_group: "awesome-applied-ai", page_location: redactUrl(location.href), site_section: section, ...(debug ? { debug_mode: true } : {}) });
+    const section = location.pathname.split("/").filter(Boolean).find((p) => p !== "applied-ai-simplified" && p !== "awesome-applied-ai") ?? "home";
+    w.dataLayer.push({ event: "vf_context", site: "applied-ai-simplified", page_group: section, consent_state: saved === "yes" ? "granted" : "denied" });
+    w.gtag("config", GA_ID, { content_group: "applied-ai-simplified", page_location: redactUrl(location.href), site_section: section, ...(debug ? { debug_mode: true } : {}) });
     // Google is contacted only after a yes: until then the script is not even loaded
     if (saved === "yes") loadGA();
     const reset = () => setAsk(true);
@@ -82,7 +82,7 @@ export function Analytics() {
       const g = (window as W).gtag;
       if (!a || !g) return;
       const href = a.getAttribute("href") ?? "";
-      const name = /github\.com\/vfaraji89\/awesome-applied-ai/.test(href) ? "github_repo"
+      const name = /github\.com\/vfaraji89\/(applied-ai-simplified|awesome-applied-ai)/.test(href) ? "github_repo"
         : /vfaraji89\.github\.io\/?(#.*|index\.html)?$/.test(href) || /vfaraji89\.github\.io\/(fit|updates)/.test(href) ? "portfolio_click"
         : /vahid-faraji-cv\.pdf/.test(href) ? "cv_download"
         : /calendar\.app\.google/.test(href) ? "book_call" : null;

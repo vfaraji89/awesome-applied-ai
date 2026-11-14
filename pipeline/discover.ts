@@ -64,7 +64,7 @@ const state: { seen: Record<string, string>; weeks: { week: string; candidates: 
   existsSync(STATE) ? JSON.parse(readFileSync(STATE, "utf8")) : { seen: {}, weeks: [] };
 const clean = (s = "") => s.replace(/[–—]/g, ",").replace(/\s+/g, " ").replace(/[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/gu, "").trim();
 
-const H: Record<string, string> = { accept: "application/vnd.github+json", "user-agent": "awesome-applied-ai-discover" };
+const H: Record<string, string> = { accept: "application/vnd.github+json", "user-agent": "applied-ai-simplified-discover" };
 if (process.env.GITHUB_TOKEN) H.authorization = `Bearer ${process.env.GITHUB_TOKEN}`;
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 const GAP = process.env.GITHUB_TOKEN ? 2200 : 6500; // search API: 30 a minute with a token, 10 without

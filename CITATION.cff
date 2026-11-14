@@ -6,8 +6,8 @@ authors:
   - family-names: Faraji
     given-names: Vahid
 license: CC-BY-4.0
-repository-code: "https://github.com/vfaraji89/awesome-applied-ai"
-url: "https://vfaraji89.github.io/awesome-applied-ai/market/method/"
+repository-code: "https://github.com/vfaraji89/applied-ai-simplified"
+url: "https://vfaraji89.github.io/applied-ai-simplified/market/method/"
 abstract: >-
   One row per AI job ad read from public company career pages, with the role, level, skills,
   tasks, tools, stack and years of experience each ad asks for. Derived fields only: no title,

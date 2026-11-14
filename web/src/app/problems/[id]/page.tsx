@@ -17,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   if (!p) return {};
   const img = { url: `/og/problems/${p.id}.png`, width: 1200, height: 630, alt: `Problem ${p.n}: ${p.title}` };
   return { title: p.title, description: p.asked,
-    openGraph: { type: "article", url: "./", siteName: "awesome-applied-ai", locale: "en_US", title: p.title, description: p.asked, images: [img] },
+    openGraph: { type: "article", url: "./", siteName: "Applied AI, Simplified", locale: "en_US", title: p.title, description: p.asked, images: [img] },
     twitter: { card: "summary_large_image", creator: "@vfaraji89", title: p.title, description: p.asked, images: [img] } };
 }
 

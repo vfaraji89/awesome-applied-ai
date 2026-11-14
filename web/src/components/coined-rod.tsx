@@ -26,7 +26,7 @@ export function CoinedRod({ items }: { items: Coined[] }) {
         <span className="count"><T k={`cd.how_${c.how}`}>{c.how}</T> · {c.by} · {c.label}</span>
         <b className="cr-term">{c.term}</b>
         <p className="cr-plain">{c.plain}</p>
-        <p className="cr-was"><span><T k="cd.was">Plainly</T></span> {c.was}</p>
+        <p className="cr-was"><span className="kicker"><T k="cd.was">Plainly</T></span> {c.was}</p>
       </div>
       <style>{`
         .cr { display: grid; gap: 34px; }
@@ -40,7 +40,7 @@ export function CoinedRod({ items }: { items: Coined[] }) {
         .cr-read { animation: rise .5s var(--ease) both; min-height: 170px; max-width: 760px; }
         .cr-term { display: block; font-size: clamp(1.7rem, 3.4vw, 2.5rem); font-weight: 800; letter-spacing: -.02em; line-height: 1.1; margin-top: 8px; }
         .cr-plain { font-size: 1.15rem; margin-top: 12px; color: var(--ink); }
-        .cr-was { margin-top: 10px; color: var(--sec); } .cr-was span { font: .7rem var(--font-mono), monospace; text-transform: uppercase; letter-spacing: .08em; color: var(--rust-deep); margin-right: 6px; }
+        .cr-was { margin-top: 10px; color: var(--sec); } .cr-was span { margin-right: 6px; }
         @media (max-width: 640px) { .cr-yr { display: none; } .cr-bead { width: 18px; height: 18px; margin-left: -9px; top: 7px; } }
         @media (prefers-reduced-motion: reduce) { .cr-read { animation: none; } }
       `}</style>

@@ -1,7 +1,7 @@
 # Analytics, data layer and secrets
 
 This guide shares one GA4 property with vfaraji89.github.io (same domain, one journey).
-`content_group: awesome-applied-ai` separates it in reports. The setup lives in
+`content_group: applied-ai-simplified` separates it in reports. The setup lives in
 `web/src/components/analytics.tsx`; events are sent with `track()` from `web/src/lib/track.ts`.
 
 ## Consent and privacy

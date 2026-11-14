@@ -51,7 +51,7 @@ export default function Note() {
       `Most common: ${roles.map(([r, n]) => `${roleEn(r)} (${n})`).join(", ")}.\n` +
       `Skills asked for most: ${sk.map(([s, n]) => `${skillName(s)} ${pct(n)}%`).join(", ")}.\n` +
       `Tools named most: ${tl.map(([t]) => t).join(", ")}.\n\n` +
-      `Updated weekly from public job boards: vfaraji89.github.io/awesome-applied-ai/market/`
+      `Updated weekly from public job boards: vfaraji89.github.io/applied-ai-simplified/market/`
     : "";
   return (
     <section className="section">
@@ -73,7 +73,7 @@ export default function Note() {
                 <div><span className="kicker"><T k="wn.skills">Skills asked for</T></span><ul>{sk.map(([s, n]) => <li key={s}><span className="bead ink" /><T k={`skill.${s}`}>{skillName(s)}</T><i>{pct(n)}%</i></li>)}</ul></div>
                 <div><span className="kicker"><T k="wn.tools">Tools named</T></span><ul>{tl.map(([t, n]) => <li key={t}><span className="bead white" />{t}<i>{n}</i></li>)}</ul></div>
               </div>
-              <div className="wn-foot mono">vfaraji89.github.io/awesome-applied-ai/market</div>
+              <div className="wn-foot mono">vfaraji89.github.io/applied-ai-simplified/market</div>
             </div>
             <h2 style={{ marginTop: 44 }}><T k="wn.post">As a post, in English</T><span className="dot">.</span></h2>
             <pre className="wn-text">{post}</pre>
