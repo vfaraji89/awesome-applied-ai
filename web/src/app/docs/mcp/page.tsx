@@ -40,7 +40,7 @@ function Wired() {
         ))}
       </div>
       <style>{`
-        .wd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 14px; margin-top: 20px; }
+        .wd-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 22px 18px; margin-top: 20px; }
         .wd-card { display: flex; flex-direction: column; gap: 4px; padding: 20px 24px 30px; }
         .wd-card b { font-size: 2.2rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; color: var(--rust); }
         .wd-l { font-weight: 700; } .wd-l span { color: var(--rust); } .wd-card .count { font-size: .74rem; }

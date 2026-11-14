@@ -125,10 +125,10 @@ const css = `
   .ds-tip { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translate(-50%, 4px); white-space: nowrap; padding: 5px 10px; border-radius: 8px; background: var(--ink); color: var(--bg); font-size: .76rem; opacity: 0; pointer-events: none; transition: opacity .15s, transform .15s; z-index: 3; }
   .ds-bead:hover .ds-tip, .ds-bead:focus-visible .ds-tip { opacity: 1; transform: translate(-50%, 0); }
 
-  .ds-stage { position: relative; display: flex; flex-direction: column; padding: 30px 34px 34px; border-radius: var(--radius); background: var(--card);
-    border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);
-    background-image: var(--dowel), var(--dowel); background-size: 8px 100%, 8px 100%; background-position: left center, right center; background-repeat: no-repeat;
+  .ds-stage { position: relative; display: flex; flex-direction: column; padding: 30px 34px 34px; border-radius: 4px; background: var(--card);
+    background-image: var(--rod), var(--rod); background-size: 100% 3px, 100% 3px; background-position: center top, center bottom; background-repeat: no-repeat;
     animation: ds-open .8s cubic-bezier(.77,0,.18,1) both; }
+        .ds-stage::before, .ds-stage::after { content: ""; position: absolute; top: -5px; bottom: -5px; width: 7px; border-radius: 4px; background: var(--dowel); pointer-events: none; } .ds-stage::before { left: -4px; } .ds-stage::after { right: -4px; }
   @keyframes ds-open { from { clip-path: inset(0 50% 0 50% round var(--radius)); } to { clip-path: inset(0 0 0 0 round var(--radius)); } }
   .ds-stage > * { animation: ds-in .55s var(--ease) both; }
   .ds-head { animation-delay: .35s; } .ds-anim { animation-delay: .5s; } .ds-cap { animation-delay: .7s; } .ds-lines { animation-delay: .85s; } .ds-more { animation-delay: .95s; }

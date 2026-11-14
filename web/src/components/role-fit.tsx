@@ -304,8 +304,8 @@ export function RoleFit() {
         .rf-tray { display: flex; flex-wrap: wrap; gap: 6px; min-height: 44px; padding: 9px 16px 12px; border-top: 1px dashed var(--line-strong); align-content: flex-start; }
         .rf-tray:empty::before { content: attr(data-empty); font-family: var(--font-mono), monospace; font-size: .7rem; letter-spacing: .04em; color: var(--muted); align-self: center; }
         .rf-chip { display: inline-flex; align-items: center; gap: 6px; height: 27px; padding: 0 10px 0 7px; border-radius: 999px; font-size: .76rem; font-weight: 600; color: var(--ink); border: 1px solid var(--line); background: var(--bg); animation: rf-pop .5s var(--rf-spring) both; }
-        .rf-chip i { width: 9px; height: 9px; border-radius: 50%; background: var(--muted); }
-        .rf-chip.on { background: var(--paper); border-color: color-mix(in srgb, var(--rust) 30%, transparent); } .rf-chip.on i { background: var(--rust); }
+        .rf-chip i { width: 10px; height: 10px; border-radius: 50%; background: var(--bead-ink); }
+        .rf-chip.on { background: var(--paper); border-color: color-mix(in srgb, var(--rust) 30%, transparent); } .rf-chip.on i { background: var(--bead-red); }
         .rf-samples { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 12px; }
         .rf-samples button { padding: 8px 14px; border-radius: 12px; border: 1px solid var(--line); background: var(--card); color: var(--ink); font: inherit; font-size: .82rem; font-weight: 600; cursor: pointer; transition: border-color .25s, transform .5s var(--rf-spring); }
         .rf-samples button:hover { border-color: var(--rust); transform: translateY(-2px);  }
@@ -342,10 +342,10 @@ export function RoleFit() {
         .rf-legend { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px; }
         .rf-legend span { display: inline-flex; align-items: center; gap: 6px; height: 30px; padding: 0 12px 0 9px; border-radius: 999px; border: 1px solid var(--line); background: var(--card); font-size: .78rem; font-weight: 600; color: var(--ink); }
         .rf-legend i { width: 10px; height: 10px; border-radius: 50%; }
-        .rf-legend .s-have i, .rf-legend .s-standard i { background: var(--rust); }
-        .rf-legend .s-common i { background: var(--ink); opacity: .55; }
-        .rf-legend .s-gap i, .rf-legend .s-rare i { border: 1.5px dashed var(--muted); }
-        .rf-legend .s-forgot i { border: 1.5px dashed var(--rust); }
+        .rf-legend .s-have i, .rf-legend .s-standard i { background: var(--bead-red); }
+        .rf-legend .s-common i { background: var(--bead-ink); }
+        .rf-legend .s-gap i, .rf-legend .s-rare i { background: var(--bead-white); outline: 1.5px dashed var(--muted); outline-offset: -1.5px; }
+        .rf-legend .s-forgot i { background: var(--bead-white); outline: 1.5px dashed var(--rust); outline-offset: -1.5px; }
 
         .rf-none { margin-top: 22px; padding: 16px 20px; border-radius: 14px; background: var(--paper); color: var(--sec); }
         .rf-out { margin-top: 26px; }
@@ -360,9 +360,9 @@ export function RoleFit() {
         .rf-pct { text-align: right; font-family: var(--font-mono), monospace; font-variant-numeric: tabular-nums; }
         .rf-rod { position: relative; display: flex; align-items: center; gap: 4px; padding: 0 2px; height: 18px; }
         .rf-rod::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 2px; margin-top: -1px; background: var(--rod); border-radius: 2px; }
-        .rf-rod i { position: relative; width: 13px; height: 13px; border-radius: 50%; background: var(--card); border: 1.5px solid var(--line-strong); opacity: 0; transform: translateX(18px); animation: rf-slide .5s var(--rf-spring) forwards; }
-        .rf-rod i.on { border: 0; background: var(--ink);  }
-        .rf-rod.hot i.on { background: var(--rust); }
+        .rf-rod i { position: relative; width: 13px; height: 13px; border-radius: 50%; background: var(--bead-white); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; opacity: 0; transform: translateX(18px); animation: rf-slide .5s var(--rf-spring) forwards; }
+        .rf-rod i.on { background: var(--bead-ink); outline: 0; }
+        .rf-rod.hot i.on { background: var(--bead-red); }
         .rf-next { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: baseline; margin: 10px 4px 4px; font-size: .85rem; }
         .rf-gap { padding: 3px 10px; border-radius: 999px; border: 1.5px dashed var(--line-strong); color: var(--ink); text-decoration: none; white-space: normal; animation: rf-pop .5s var(--rf-spring) both; }
         .rf-gap span { font-family: var(--font-mono), monospace; color: var(--muted); font-size: .76rem; }

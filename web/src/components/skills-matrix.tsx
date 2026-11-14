@@ -107,7 +107,7 @@ export function SkillsMatrix() {
         .mx tbody tr:hover th, .mx tbody tr:hover td { background: color-mix(in srgb, var(--ink) 3%, transparent); }
         .mx tr.dif th b { color: var(--rust-deep); }
         .mx tbody th { display: flex; flex-direction: column; gap: 2px; font-weight: 400; min-width: 220px; } .mx tbody th a { text-decoration: none; color: inherit; } .mx tbody th .muted { font-size: .78rem; }
-        .mx-beads { display: inline-flex; gap: 3px; } .mx-beads i { width: 10px; height: 10px; border-radius: 50%; background: var(--line-strong); transition: background .35s calc(var(--k) * 60ms), transform .35s var(--spring) calc(var(--k) * 60ms); }
+        .mx-beads { display: inline-flex; gap: 3px; } .mx-beads i { width: 10px; height: 10px; border-radius: 50%; background: var(--bead-white); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; transition: background .35s calc(var(--k) * 60ms), transform .35s var(--spring) calc(var(--k) * 60ms); }
         .mx-beads i.on { background: radial-gradient(circle at 34% 30%, #6a6a70, #1c1c1e 50%, #000); }
         td.a .mx-beads i.on { background: radial-gradient(circle at 34% 30%, #ff9d8f, #e0301e 45%, #9e1a0c); transform: scale(1.15); }
       `}</style>

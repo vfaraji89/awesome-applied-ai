@@ -313,7 +313,7 @@ export function ToolIndex({ tools }: { tools: Tool[] }) {
         .ta-top .ta-new { margin-top: 2px; }
         .ta-ic { width: 40px; height: 40px; border-radius: 11px; display: grid; place-items: center; border: 1px solid var(--line); flex: none; }
         .ta-mono { position: relative; background: var(--paper); font-weight: 800; font-size: .86rem; letter-spacing: -.02em; color: var(--ink); }
-        .ta-mono i { position: absolute; right: 4px; bottom: 4px; width: 6px; height: 6px; border-radius: 50%; background: var(--rust); }
+        .ta-mono i { position: absolute; right: 3px; bottom: 3px; width: 9px; height: 9px; border-radius: 50%; background: var(--bead-red); }
         .ta-head { min-width: 0; display: flex; flex-direction: column; }
         .ta-name { font-weight: 750; line-height: 1.25; text-decoration: none; color: var(--ink); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; overflow-wrap: anywhere; }
         .ta-name:hover { color: var(--rust-deep); } .ta-ext { font-size: .75em; margin-left: 4px; color: var(--muted); }
