@@ -11,6 +11,7 @@
  "roles/families": "Eight roles, five families: Each applied AI role: the titles it is posted under, its tasks, its stack, twelve skills scored and how it grows.",
  "roles/matrix": "Twelve skills, eight roles: Every skill scored aware to expert for every role. Compare two roles and see what changes.",
  "roles/tasks": "What the work actually is: The tasks AI job ads ask you to do, which role does each most, and every role's daily work.",
+ "people": "The people building applied AI: Builders who keep showing up on applied AI's main stages: where they work, what they build and what they talk about.",
  "skills": "Which skills travel together: The skills applied AI postings ask for, how often they appear together, and which opens the most doors.",
  "architect": "The role that designs AI into systems: The layers, the stack and the problems an AI-native architect owns.",
  "architecture": "Six layers of an AI system: From guardrails to retrieval: one request animated through every layer, and the agent harness on top.",

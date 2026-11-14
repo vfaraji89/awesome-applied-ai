@@ -17,13 +17,14 @@ export const structure: Section[] = [
     ],
   },
   {
-    n: "02", id: "roles", label: "Roles & skills", title: "Roles, skills and tasks", href: "/roles/", match: ["/roles/", "/skills/"],
+    n: "02", id: "roles", label: "Roles & skills", title: "Roles, skills and tasks", href: "/roles/", match: ["/roles/", "/skills/", "/people/"],
     line: "Who does the work, what they do all day, and the skills it takes.",
     pages: [
       { label: "Role families", href: "/roles/families/", note: "Titles, tasks, stack and growth path" },
       { label: "Skills matrix", href: "/roles/matrix/", note: "Twelve skills, scored aware to expert" },
       { label: "Skill map", href: "/skills/", note: "Which skills travel together, and which one opens the most doors" },
       { label: "Tasks", href: "/roles/tasks/", note: "What each role does day to day" },
+      { label: "People", href: "/people/", note: "The builders on applied AI's main stages, what they build and talk about" },
     ],
   },
   {

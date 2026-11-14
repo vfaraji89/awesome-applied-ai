@@ -69,7 +69,7 @@ export function linkOk(href: string): boolean {
   const terms = new Set(dictionary.map((t) => t.id));
   const probs = new Set(problems.map((p) => p.id));
   const lays = new Set<string>(layers.map((l) => l.id));
-  const pages = new Set(["/tools/", "/roles/", "/market/method/", "/market/conferences/", "/roles/families/", "/roles/matrix/", "/roles/tasks/", "/docs/mcp/", "/labs/", "/architecture/", "/problems/", "/docs/claude-platform/", "/fit/", "/market/", "/certificates/", "/radar/", "/skills/"]);
+  const pages = new Set(["/tools/", "/roles/", "/market/method/", "/market/conferences/", "/people/", "/roles/families/", "/roles/matrix/", "/roles/tasks/", "/docs/mcp/", "/labs/", "/architecture/", "/problems/", "/docs/claude-platform/", "/fit/", "/market/", "/certificates/", "/radar/", "/skills/"]);
   const [path, hash] = href.split("#");
   return path === "/jargon/" ? terms.has(hash) :
     path === "/architecture/" && hash ? lays.has(hash) :

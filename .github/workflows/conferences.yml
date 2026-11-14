@@ -30,11 +30,13 @@ jobs:
         with:
           bun-version: 1.4.4
       - run: bun pipeline/conferences.ts
+      # refresh the curated people's profiles from the new candidates (web/src/data/people-curated.json picks who)
+      - run: bun pipeline/people.ts
       - name: Commit
         run: |
           git config user.name "conference-tracker"
           git config user.email "conference-tracker@users.noreply.github.com"
-          git add web/src/data/conferences.json conferences
+          git add web/src/data/conferences.json web/src/data/people.json conferences
           if git diff --cached --quiet; then echo "No change"; exit 0; fi
           git commit -m "Conferences: $(date -u +%Y-%m-%d) update"
           git pull --rebase origin "$GITHUB_REF_NAME" || { git rebase --abort; echo "Branch moved; skipping"; exit 0; }

@@ -56,6 +56,8 @@ const cards: Card[] = [
     [[String(skills.length), "skills"], [String(fRoles.length), "roles"], ["4", "levels"]], ["rrkkw", "rkkww", "kwwww"]),
   R("roles/tasks", "02 · Roles and skills · tasks", "What the work <mark>actually is</mark>", "The tasks AI job ads ask you to do, which role does each most, and every role's daily work.",
     [[ads, "AI job ads"], ["12", "tasks"], [String(fRoles.length), "roles"]], ["rrrrw", "wkkkw", "wwrww"]),
+  R("people", "02 · Roles and skills · people", "The people <mark>building applied AI</mark>", "Builders who keep showing up on applied AI's main stages: where they work, what they build and what they talk about.",
+    [["50", "people"], ["2023–2026", "on stage"], ["Linked", "sources"]], ["rwrwr", "wrwrw", "rwrwr"]),
   R("skills", "02 · Roles and skills · skill map", "Which skills <mark>travel together</mark>", "The skills applied AI postings ask for, how often they appear together, and which opens the most doors.",
     [[String(skills.length), "skills"], [ads, "job ads"], [String(fRoles.length), "roles"]]),
   R("architect", "03 · The AI-native architect", "The role that designs <mark>AI into systems</mark>", "The layers, the stack and the problems an AI-native architect owns.",
