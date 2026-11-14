@@ -2,6 +2,118 @@
  "updated": "2026-11-14",
  "companies": [
   {
+   "id": "openai",
+   "name": "OpenAI",
+   "lab": true,
+   "hiring": {
+    "open": 173,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/openai",
+      "platform": "Ashby",
+      "open": 173
+     }
+    ],
+    "roles": [
+     {
+      "id": "applied-ai-engineer",
+      "share": 27
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 20
+     },
+     {
+      "id": "rd-researcher",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "customer",
+      "share": 71
+     },
+     {
+      "id": "software",
+      "share": 66
+     },
+     {
+      "id": "product",
+      "share": 55
+     },
+     {
+      "id": "agents",
+      "share": 54
+     },
+     {
+      "id": "evals",
+      "share": 54
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "openai-responses-state",
+     "name": "OpenAI Responses API state",
+     "area": "agents"
+    },
+    {
+     "id": "openai-prompt-caching",
+     "name": "OpenAI automatic caching",
+     "area": "inference"
+    },
+    {
+     "id": "openai-api",
+     "name": "OpenAI API",
+     "area": "models"
+    },
+    {
+     "id": "gpt-oss",
+     "name": "gpt-oss",
+     "area": "models"
+    },
+    {
+     "id": "openai-agentkit",
+     "name": "OpenAI AgentKit",
+     "area": "builders"
+    },
+    {
+     "id": "openai-apps-sdk",
+     "name": "OpenAI Apps SDK",
+     "area": "builders"
+    },
+    {
+     "id": "openai-sites",
+     "name": "OpenAI Sites",
+     "area": "builders"
+    },
+    {
+     "id": "openai-agents-api",
+     "name": "OpenAI Agents API",
+     "area": "agents"
+    },
+    {
+     "id": "openai-realtime-api",
+     "name": "OpenAI Realtime API",
+     "area": "modalities"
+    },
+    {
+     "id": "openai-computer-use",
+     "name": "OpenAI computer use tool",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 33,
+    "talks": 29,
+    "source": "https://ai.engineer/orgs/openai"
+   },
+   "people": [
+    "abhishek-bhardwaj"
+   ],
+   "initials": "O"
+  },
+  {
    "id": "anthropic",
    "name": "Anthropic",
    "lab": true,
@@ -238,18 +350,18 @@
    "name": "Salesforce",
    "lab": false,
    "hiring": {
-    "open": 91,
+    "open": 90,
     "boards": [
      {
       "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",
       "platform": "Workday",
-      "open": 91
+      "open": 90
      }
     ],
     "roles": [
      {
       "id": "forward-deployed-engineer",
-      "share": 57
+      "share": 58
      },
      {
       "id": "rd-researcher",
@@ -275,11 +387,11 @@
      },
      {
       "id": "context",
-      "share": 71
+      "share": 72
      },
      {
       "id": "data",
-      "share": 67
+      "share": 68
      }
     ]
    },
@@ -577,6 +689,61 @@
    "stage": null,
    "people": [],
    "initials": "B"
+  },
+  {
+   "id": "sierra",
+   "name": "Sierra",
+   "lab": false,
+   "hiring": {
+    "open": 36,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/sierra",
+      "platform": "Ashby",
+      "open": 36
+     }
+    ],
+    "roles": [
+     {
+      "id": "agentic-ai-engineer",
+      "share": 97
+     },
+     {
+      "id": "rd-researcher",
+      "share": 3
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 94
+     },
+     {
+      "id": "retrieval",
+      "share": 92
+     },
+     {
+      "id": "evals",
+      "share": 92
+     },
+     {
+      "id": "context",
+      "share": 89
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 3,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/sierra"
+   },
+   "people": [],
+   "initials": "S"
   },
   {
    "id": "cloudflare",
@@ -1027,73 +1194,6 @@
    "initials": "A"
   },
   {
-   "id": "openai",
-   "name": "OpenAI",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "openai-responses-state",
-     "name": "OpenAI Responses API state",
-     "area": "agents"
-    },
-    {
-     "id": "openai-prompt-caching",
-     "name": "OpenAI automatic caching",
-     "area": "inference"
-    },
-    {
-     "id": "openai-api",
-     "name": "OpenAI API",
-     "area": "models"
-    },
-    {
-     "id": "gpt-oss",
-     "name": "gpt-oss",
-     "area": "models"
-    },
-    {
-     "id": "openai-agentkit",
-     "name": "OpenAI AgentKit",
-     "area": "builders"
-    },
-    {
-     "id": "openai-apps-sdk",
-     "name": "OpenAI Apps SDK",
-     "area": "builders"
-    },
-    {
-     "id": "openai-sites",
-     "name": "OpenAI Sites",
-     "area": "builders"
-    },
-    {
-     "id": "openai-agents-api",
-     "name": "OpenAI Agents API",
-     "area": "agents"
-    },
-    {
-     "id": "openai-realtime-api",
-     "name": "OpenAI Realtime API",
-     "area": "modalities"
-    },
-    {
-     "id": "openai-computer-use",
-     "name": "OpenAI computer use tool",
-     "area": "agents"
-    }
-   ],
-   "stage": {
-    "speakers": 33,
-    "talks": 29,
-    "source": "https://ai.engineer/orgs/openai"
-   },
-   "people": [
-    "abhishek-bhardwaj"
-   ],
-   "initials": "O"
-  },
-  {
    "id": "neo4j",
    "name": "Neo4j",
    "lab": false,
@@ -1159,6 +1259,195 @@
     "zach-blumenfeld"
    ],
    "initials": "N"
+  },
+  {
+   "id": "cerebras",
+   "name": "Cerebras",
+   "lab": true,
+   "hiring": {
+    "open": 24,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/cerebras",
+      "platform": "Ashby",
+      "open": 24
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 42
+     },
+     {
+      "id": "other-ai",
+      "share": 33
+     },
+     {
+      "id": "rd-researcher",
+      "share": 8
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 100
+     },
+     {
+      "id": "product",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 96
+     },
+     {
+      "id": "evals",
+      "share": 58
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "cerebras-inference",
+     "name": "Cerebras Inference",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/cerebras"
+   },
+   "people": [],
+   "initials": "C"
+  },
+  {
+   "id": "cohere",
+   "name": "Cohere",
+   "lab": true,
+   "hiring": {
+    "open": 23,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/cohere",
+      "platform": "Ashby",
+      "open": 23
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 43
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 26
+     },
+     {
+      "id": "other-ai",
+      "share": 13
+     }
+    ],
+    "skills": [
+     {
+      "id": "customer",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 96
+     },
+     {
+      "id": "agents",
+      "share": 83
+     },
+     {
+      "id": "models",
+      "share": 57
+     },
+     {
+      "id": "evals",
+      "share": 52
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "cohere",
+     "name": "Cohere Embed v4 / Rerank 4",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/cohere"
+   },
+   "people": [],
+   "initials": "C"
+  },
+  {
+   "id": "cognition",
+   "name": "Cognition",
+   "lab": false,
+   "hiring": {
+    "open": 18,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/cognition",
+      "platform": "Ashby",
+      "open": 18
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 61
+     },
+     {
+      "id": "rd-researcher",
+      "share": 17
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "ai-dev",
+      "share": 100
+     },
+     {
+      "id": "customer",
+      "share": 78
+     },
+     {
+      "id": "software",
+      "share": 72
+     },
+     {
+      "id": "product",
+      "share": 56
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 9,
+    "talks": 9,
+    "source": "https://ai.engineer/orgs/cognition"
+   },
+   "people": [],
+   "initials": "C"
   },
   {
    "id": "coinbase",
@@ -1405,6 +1694,124 @@
    "initials": "E"
   },
   {
+   "id": "harvey",
+   "name": "Harvey",
+   "lab": false,
+   "hiring": {
+    "open": 21,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/harvey",
+      "platform": "Ashby",
+      "open": 21
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 43
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 38
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 95
+     },
+     {
+      "id": "models",
+      "share": 67
+     },
+     {
+      "id": "context",
+      "share": 52
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 2,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/harvey"
+   },
+   "people": [],
+   "initials": "H"
+  },
+  {
+   "id": "decagon",
+   "name": "Decagon",
+   "lab": false,
+   "hiring": {
+    "open": 22,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/decagon",
+      "platform": "Ashby",
+      "open": 22
+     }
+    ],
+    "roles": [
+     {
+      "id": "agentic-ai-engineer",
+      "share": 68
+     },
+     {
+      "id": "rd-researcher",
+      "share": 27
+     },
+     {
+      "id": "other-ai",
+      "share": 5
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "product",
+      "share": 73
+     },
+     {
+      "id": "customer",
+      "share": 64
+     },
+     {
+      "id": "software",
+      "share": 59
+     },
+     {
+      "id": "security",
+      "share": 45
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 1,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/decagon"
+   },
+   "people": [],
+   "initials": "D"
+  },
+  {
    "id": "experian",
    "name": "Experian",
    "lab": false,
@@ -1517,6 +1924,122 @@
    },
    "people": [],
    "initials": "I"
+  },
+  {
+   "id": "spotify",
+   "name": "Spotify",
+   "lab": false,
+   "hiring": {
+    "open": 19,
+    "boards": [
+     {
+      "url": "https://jobs.lever.co/spotify",
+      "platform": "Lever",
+      "open": 19
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 47
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 47
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 5
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 74
+     },
+     {
+      "id": "models",
+      "share": 68
+     },
+     {
+      "id": "customer",
+      "share": 42
+     },
+     {
+      "id": "retrieval",
+      "share": 32
+     },
+     {
+      "id": "data",
+      "share": 26
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 3,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/spotify"
+   },
+   "people": [
+    "jacqueline-wood"
+   ],
+   "initials": "S"
+  },
+  {
+   "id": "mercor",
+   "name": "Mercor",
+   "lab": false,
+   "hiring": {
+    "open": 21,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/mercor",
+      "platform": "Ashby",
+      "open": 21
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 43
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 24
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 71
+     },
+     {
+      "id": "agents",
+      "share": 71
+     },
+     {
+      "id": "data",
+      "share": 29
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "M"
   },
   {
    "id": "lyft",
@@ -1633,65 +2156,194 @@
    "initials": "N"
   },
   {
-   "id": "spotify",
-   "name": "Spotify",
-   "lab": false,
+   "id": "perplexity",
+   "name": "Perplexity",
+   "lab": true,
    "hiring": {
-    "open": 17,
+    "open": 19,
     "boards": [
      {
-      "url": "https://jobs.lever.co/spotify",
-      "platform": "Lever",
-      "open": 17
+      "url": "https://jobs.ashbyhq.com/perplexity",
+      "platform": "Ashby",
+      "open": 19
      }
     ],
     "roles": [
      {
       "id": "ai-platform-engineer",
-      "share": 53
+      "share": 42
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 26
      },
      {
       "id": "rd-researcher",
-      "share": 41
-     },
-     {
-      "id": "ai-native-developer",
-      "share": 6
+      "share": 11
      }
     ],
     "skills": [
      {
       "id": "software",
-      "share": 71
+      "share": 74
+     },
+     {
+      "id": "agents",
+      "share": 74
      },
      {
       "id": "models",
-      "share": 71
-     },
-     {
-      "id": "customer",
-      "share": 41
-     },
-     {
-      "id": "retrieval",
-      "share": 35
+      "share": 68
      },
      {
       "id": "evals",
-      "share": 24
+      "share": 58
+     },
+     {
+      "id": "retrieval",
+      "share": 53
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "perplexity-search-api",
+     "name": "Perplexity Search API",
+     "area": "retrieval"
+    }
+   ],
+   "stage": null,
+   "people": [],
+   "initials": "P"
+  },
+  {
+   "id": "notion",
+   "name": "Notion",
+   "lab": false,
+   "hiring": {
+    "open": 14,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/notion",
+      "platform": "Ashby",
+      "open": 14
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 71
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 14
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 7
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "product",
+      "share": 79
+     },
+     {
+      "id": "customer",
+      "share": 79
+     },
+     {
+      "id": "ai-dev",
+      "share": 57
+     },
+     {
+      "id": "software",
+      "share": 43
      }
     ]
    },
    "products": [],
    "stage": {
-    "speakers": 3,
-    "talks": 2,
-    "source": "https://ai.engineer/orgs/spotify"
+    "speakers": 4,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/notion"
    },
-   "people": [
-    "jacqueline-wood"
+   "people": [],
+   "initials": "N"
+  },
+  {
+   "id": "deepgram",
+   "name": "Deepgram",
+   "lab": false,
+   "hiring": {
+    "open": 17,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/deepgram",
+      "platform": "Ashby",
+      "open": 17
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 53
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 18
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 12
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "context",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 82
+     },
+     {
+      "id": "software",
+      "share": 71
+     },
+     {
+      "id": "evals",
+      "share": 59
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "deepgram",
+     "name": "Deepgram",
+     "area": "modalities"
+    },
+    {
+     "id": "deepgram-voice-agent-api",
+     "name": "Deepgram Voice Agent API",
+     "area": "modalities"
+    }
    ],
-   "initials": "S"
+   "stage": {
+    "speakers": 2,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/deepgram"
+   },
+   "people": [],
+   "initials": "D"
   },
   {
    "id": "airbnb",
@@ -1944,6 +2596,271 @@
    "initials": "C"
   },
   {
+   "id": "cursor",
+   "name": "Cursor",
+   "lab": false,
+   "hiring": {
+    "open": 10,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/cursor",
+      "platform": "Ashby",
+      "open": 10
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 80
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "product",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 80
+     },
+     {
+      "id": "customer",
+      "share": 80
+     },
+     {
+      "id": "agents",
+      "share": 70
+     },
+     {
+      "id": "evals",
+      "share": 70
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "cursor",
+     "name": "Cursor",
+     "area": "builders"
+    },
+    {
+     "id": "cursor-agent-sdk",
+     "name": "Cursor Agent SDK",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 7,
+    "source": "https://ai.engineer/orgs/cursor"
+   },
+   "people": [
+    "lee-robinson"
+   ],
+   "initials": "C"
+  },
+  {
+   "id": "elevenlabs",
+   "name": "ElevenLabs",
+   "lab": false,
+   "hiring": {
+    "open": 11,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/elevenlabs",
+      "platform": "Ashby",
+      "open": 11
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 36
+     },
+     {
+      "id": "rd-researcher",
+      "share": 18
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 18
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 82
+     },
+     {
+      "id": "customer",
+      "share": 55
+     },
+     {
+      "id": "architecture",
+      "share": 45
+     },
+     {
+      "id": "models",
+      "share": 27
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "elevenlabs",
+     "name": "ElevenLabs",
+     "area": "modalities"
+    },
+    {
+     "id": "elevenlabs-agents",
+     "name": "ElevenLabs Agents",
+     "area": "modalities"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/elevenlabs"
+   },
+   "people": [],
+   "initials": "E"
+  },
+  {
+   "id": "langchain",
+   "name": "LangChain",
+   "lab": false,
+   "hiring": {
+    "open": 11,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/langchain",
+      "platform": "Ashby",
+      "open": 11
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 100
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "customer",
+      "share": 82
+     },
+     {
+      "id": "product",
+      "share": 36
+     },
+     {
+      "id": "architecture",
+      "share": 18
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "langsmith",
+     "name": "LangSmith",
+     "area": "evaluation"
+    },
+    {
+     "id": "langsmith-annotation-queues",
+     "name": "LangSmith Annotation Queues",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/langchain"
+   },
+   "people": [],
+   "initials": "L"
+  },
+  {
+   "id": "baseten",
+   "name": "Baseten",
+   "lab": false,
+   "hiring": {
+    "open": 11,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/baseten",
+      "platform": "Ashby",
+      "open": 11
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 27
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 18
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 18
+     }
+    ],
+    "skills": [
+     {
+      "id": "data",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 100
+     },
+     {
+      "id": "ai-dev",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 73
+     },
+     {
+      "id": "agents",
+      "share": 73
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "baseten",
+     "name": "Baseten",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/baseten"
+   },
+   "people": [],
+   "initials": "B"
+  },
+  {
    "id": "braintrust",
    "name": "Braintrust",
    "lab": false,
@@ -2011,6 +2928,130 @@
     "lovina-dmello"
    ],
    "initials": "N"
+  },
+  {
+   "id": "ramp",
+   "name": "Ramp",
+   "lab": false,
+   "hiring": {
+    "open": 10,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/ramp",
+      "platform": "Ashby",
+      "open": 10
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 30
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 20
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 80
+     },
+     {
+      "id": "software",
+      "share": 70
+     },
+     {
+      "id": "customer",
+      "share": 70
+     },
+     {
+      "id": "models",
+      "share": 50
+     },
+     {
+      "id": "data",
+      "share": 40
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 6,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/ramp"
+   },
+   "people": [],
+   "initials": "R"
+  },
+  {
+   "id": "fireworks-ai",
+   "name": "Fireworks AI",
+   "lab": true,
+   "hiring": {
+    "open": 12,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/fireworks",
+      "platform": "Ashby",
+      "open": 12
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 50
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 42
+     },
+     {
+      "id": "rd-researcher",
+      "share": 8
+     }
+    ],
+    "skills": [
+     {
+      "id": "context",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 75
+     },
+     {
+      "id": "customer",
+      "share": 67
+     },
+     {
+      "id": "agents",
+      "share": 58
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "fireworks-ai",
+     "name": "Fireworks AI",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/fireworks-ai"
+   },
+   "people": [],
+   "initials": "FA"
   },
   {
    "id": "figma",
@@ -2292,6 +3333,67 @@
    "initials": "A"
   },
   {
+   "id": "exa",
+   "name": "exa",
+   "lab": false,
+   "hiring": {
+    "open": 8,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/exa",
+      "platform": "Ashby",
+      "open": 8
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 50
+     },
+     {
+      "id": "rd-researcher",
+      "share": 50
+     }
+    ],
+    "skills": [
+     {
+      "id": "retrieval",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 50
+     },
+     {
+      "id": "customer",
+      "share": 50
+     },
+     {
+      "id": "models",
+      "share": 50
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "exa",
+     "name": "Exa",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 6,
+    "source": "https://ai.engineer/orgs/exa"
+   },
+   "people": [],
+   "initials": "E"
+  },
+  {
    "id": "wise",
    "name": "Wise",
    "lab": false,
@@ -2431,6 +3533,132 @@
    "initials": "HF"
   },
   {
+   "id": "modal",
+   "name": "Modal",
+   "lab": false,
+   "hiring": {
+    "open": 5,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/modal",
+      "platform": "Ashby",
+      "open": 5
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 60
+     },
+     {
+      "id": "other-ai",
+      "share": 20
+     },
+     {
+      "id": "rd-researcher",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "models",
+      "share": 80
+     },
+     {
+      "id": "customer",
+      "share": 60
+     },
+     {
+      "id": "context",
+      "share": 20
+     },
+     {
+      "id": "software",
+      "share": 20
+     },
+     {
+      "id": "agents",
+      "share": 20
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "modal",
+     "name": "Modal",
+     "area": "inference"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 8,
+    "source": "https://ai.engineer/orgs/modal"
+   },
+   "people": [
+    "charles-frye"
+   ],
+   "initials": "M"
+  },
+  {
+   "id": "crusoe",
+   "name": "Crusoe",
+   "lab": false,
+   "hiring": {
+    "open": 11,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/crusoe",
+      "platform": "Ashby",
+      "open": 11
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 45
+     },
+     {
+      "id": "rd-researcher",
+      "share": 36
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 9
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 91
+     },
+     {
+      "id": "customer",
+      "share": 82
+     },
+     {
+      "id": "models",
+      "share": 73
+     },
+     {
+      "id": "context",
+      "share": 45
+     },
+     {
+      "id": "data",
+      "share": 36
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 4,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/crusoe"
+   },
+   "people": [],
+   "initials": "C"
+  },
+  {
    "id": "okta",
    "name": "Okta",
    "lab": false,
@@ -2484,6 +3712,126 @@
    "stage": null,
    "people": [],
    "initials": "O"
+  },
+  {
+   "id": "suno",
+   "name": "Suno",
+   "lab": false,
+   "hiring": {
+    "open": 12,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/suno",
+      "platform": "Ashby",
+      "open": 12
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 42
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 42
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 67
+     },
+     {
+      "id": "agents",
+      "share": 67
+     },
+     {
+      "id": "customer",
+      "share": 58
+     },
+     {
+      "id": "data",
+      "share": 50
+     },
+     {
+      "id": "evals",
+      "share": 42
+     }
+    ]
+   },
+   "products": [],
+   "stage": null,
+   "people": [],
+   "initials": "S"
+  },
+  {
+   "id": "lovable",
+   "name": "Lovable",
+   "lab": false,
+   "hiring": {
+    "open": 11,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/lovable",
+      "platform": "Ashby",
+      "open": 11
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 45
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 45
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 9
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 91
+     },
+     {
+      "id": "agents",
+      "share": 82
+     },
+     {
+      "id": "product",
+      "share": 64
+     },
+     {
+      "id": "customer",
+      "share": 55
+     },
+     {
+      "id": "data",
+      "share": 45
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "lovable",
+     "name": "Lovable",
+     "area": "builders"
+    }
+   ],
+   "stage": {
+    "speakers": 2,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/lovable"
+   },
+   "people": [],
+   "initials": "L"
   },
   {
    "id": "gitlab",
@@ -2720,6 +4068,252 @@
    "initials": "T"
   },
   {
+   "id": "temporal",
+   "name": "Temporal",
+   "lab": false,
+   "hiring": {
+    "open": 2,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/temporal",
+      "platform": "Ashby",
+      "open": 2
+     }
+    ],
+    "roles": [
+     {
+      "id": "agentic-ai-engineer",
+      "share": 50
+     },
+     {
+      "id": "rd-researcher",
+      "share": 50
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "customer",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 50
+     },
+     {
+      "id": "models",
+      "share": 50
+     },
+     {
+      "id": "ai-dev",
+      "share": 50
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "temporal",
+     "name": "Temporal",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 6,
+    "talks": 8,
+    "source": "https://ai.engineer/orgs/temporal"
+   },
+   "people": [
+    "cornelia-davis"
+   ],
+   "initials": "T"
+  },
+  {
+   "id": "character-ai",
+   "name": "Character.AI",
+   "lab": true,
+   "hiring": {
+    "open": 7,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/character",
+      "platform": "Ashby",
+      "open": 7
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 57
+     },
+     {
+      "id": "other-ai",
+      "share": 29
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 86
+     },
+     {
+      "id": "models",
+      "share": 71
+     },
+     {
+      "id": "agents",
+      "share": 57
+     },
+     {
+      "id": "evals",
+      "share": 57
+     },
+     {
+      "id": "data",
+      "share": 29
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 2,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/character-ai"
+   },
+   "people": [],
+   "initials": "CA"
+  },
+  {
+   "id": "livekit",
+   "name": "Livekit",
+   "lab": false,
+   "hiring": {
+    "open": 6,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/livekit",
+      "platform": "Ashby",
+      "open": 6
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 67
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 17
+     },
+     {
+      "id": "rd-researcher",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "product",
+      "share": 83
+     },
+     {
+      "id": "customer",
+      "share": 67
+     },
+     {
+      "id": "architecture",
+      "share": 67
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 2,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/livekit"
+   },
+   "people": [],
+   "initials": "L"
+  },
+  {
+   "id": "reducto",
+   "name": "Reducto",
+   "lab": false,
+   "hiring": {
+    "open": 5,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/reducto",
+      "platform": "Ashby",
+      "open": 5
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 40
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 40
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "retrieval",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 80
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "reducto",
+     "name": "Reducto",
+     "area": "retrieval"
+    }
+   ],
+   "stage": {
+    "speakers": 4,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/reducto"
+   },
+   "people": [],
+   "initials": "R"
+  },
+  {
    "id": "twilio",
    "name": "Twilio",
    "lab": false,
@@ -2846,48 +4440,437 @@
    "initials": "A"
   },
   {
-   "id": "modal",
-   "name": "Modal",
+   "id": "supabase",
+   "name": "Supabase",
    "lab": false,
-   "hiring": null,
+   "hiring": {
+    "open": 5,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/supabase",
+      "platform": "Ashby",
+      "open": 5
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 40
+     },
+     {
+      "id": "ai-solutions-architect",
+      "share": 20
+     },
+     {
+      "id": "ai-native-architect",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "retrieval",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "customer",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 80
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 2,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/supabase"
+   },
+   "people": [],
+   "initials": "S"
+  },
+  {
+   "id": "thinking-machines-lab",
+   "name": "Thinking Machines Lab",
+   "lab": true,
+   "hiring": {
+    "open": 7,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/thinkingmachines",
+      "platform": "Ashby",
+      "open": 7
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 57
+     },
+     {
+      "id": "agentic-ai-engineer",
+      "share": 29
+     },
+     {
+      "id": "rd-researcher",
+      "share": 14
+     }
+    ],
+    "skills": [
+     {
+      "id": "models",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 71
+     },
+     {
+      "id": "agents",
+      "share": 71
+     },
+     {
+      "id": "evals",
+      "share": 71
+     },
+     {
+      "id": "product",
+      "share": 29
+     }
+    ]
+   },
    "products": [
     {
-     "id": "modal",
-     "name": "Modal",
-     "area": "inference"
+     "id": "tinker",
+     "name": "Tinker",
+     "area": "training"
+    }
+   ],
+   "stage": {
+    "speakers": 0,
+    "talks": 1,
+    "source": "https://ai.engineer/orgs/thinking-machines"
+   },
+   "people": [],
+   "initials": "TM"
+  },
+  {
+   "id": "composio",
+   "name": "Composio",
+   "lab": false,
+   "hiring": {
+    "open": 6,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/composio",
+      "platform": "Ashby",
+      "open": 6
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 50
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 33
+     },
+     {
+      "id": "rd-researcher",
+      "share": 17
+     }
+    ],
+    "skills": [
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "software",
+      "share": 67
+     },
+     {
+      "id": "evals",
+      "share": 50
+     },
+     {
+      "id": "security",
+      "share": 50
+     },
+     {
+      "id": "product",
+      "share": 33
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "composio",
+     "name": "Composio",
+     "area": "agents"
+    }
+   ],
+   "stage": {
+    "speakers": 2,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/composio"
+   },
+   "people": [],
+   "initials": "C"
+  },
+  {
+   "id": "roboflow",
+   "name": "Roboflow",
+   "lab": false,
+   "hiring": {
+    "open": 5,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/roboflow",
+      "platform": "Ashby",
+      "open": 5
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 40
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 40
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "models",
+      "share": 60
+     },
+     {
+      "id": "customer",
+      "share": 60
+     },
+     {
+      "id": "software",
+      "share": 60
+     },
+     {
+      "id": "data",
+      "share": 40
+     },
+     {
+      "id": "context",
+      "share": 40
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "roboflow",
+     "name": "Roboflow",
+     "area": "modalities"
+    }
+   ],
+   "stage": {
+    "speakers": 3,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/roboflow"
+   },
+   "people": [],
+   "initials": "R"
+  },
+  {
+   "id": "sentry-ai-agent-monitoring",
+   "name": "Sentry AI Agent Monitoring",
+   "lab": false,
+   "hiring": {
+    "open": 3,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/sentry",
+      "platform": "Ashby",
+      "open": 3
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 67
+     },
+     {
+      "id": "forward-deployed-engineer",
+      "share": 33
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 67
+     },
+     {
+      "id": "models",
+      "share": 67
+     },
+     {
+      "id": "architecture",
+      "share": 33
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "sentry-ai-agent-monitoring",
+     "name": "Sentry AI Agent Monitoring",
+     "area": "evaluation"
     }
    ],
    "stage": {
     "speakers": 5,
-    "talks": 8,
-    "source": "https://ai.engineer/orgs/modal"
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/sentry"
    },
-   "people": [
-    "charles-frye"
-   ],
-   "initials": "M"
+   "people": [],
+   "initials": "SA"
   },
   {
-   "id": "temporal",
-   "name": "Temporal",
+   "id": "browserbase",
+   "name": "Browserbase",
    "lab": false,
-   "hiring": null,
+   "hiring": {
+    "open": 1,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/browserbase",
+      "platform": "Ashby",
+      "open": 1
+     }
+    ],
+    "roles": [
+     {
+      "id": "agentic-ai-engineer",
+      "share": 100
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "architecture",
+      "share": 100
+     }
+    ]
+   },
    "products": [
     {
-     "id": "temporal",
-     "name": "Temporal",
+     "id": "browserbase",
+     "name": "Browserbase",
      "area": "agents"
     }
    ],
    "stage": {
     "speakers": 6,
-    "talks": 8,
-    "source": "https://ai.engineer/orgs/temporal"
+    "talks": 6,
+    "source": "https://ai.engineer/orgs/browserbase"
    },
-   "people": [
-    "cornelia-davis"
+   "people": [],
+   "initials": "B"
+  },
+  {
+   "id": "artificial-analysis",
+   "name": "Artificial Analysis",
+   "lab": false,
+   "hiring": {
+    "open": 5,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/artificialanalysis",
+      "platform": "Ashby",
+      "open": 5
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 40
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 40
+     },
+     {
+      "id": "rd-researcher",
+      "share": 20
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "customer",
+      "share": 60
+     },
+     {
+      "id": "models",
+      "share": 60
+     },
+     {
+      "id": "agents",
+      "share": 40
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "artificial-analysis",
+     "name": "Artificial Analysis",
+     "area": "landscape"
+    }
    ],
-   "initials": "T"
+   "stage": {
+    "speakers": 2,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/artificial-analysis"
+   },
+   "people": [],
+   "initials": "AA"
   },
   {
    "id": "amazon",
@@ -2943,33 +4926,6 @@
    },
    "people": [],
    "initials": "A"
-  },
-  {
-   "id": "cursor",
-   "name": "Cursor",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "cursor",
-     "name": "Cursor",
-     "area": "builders"
-    },
-    {
-     "id": "cursor-agent-sdk",
-     "name": "Cursor Agent SDK",
-     "area": "agents"
-    }
-   ],
-   "stage": {
-    "speakers": 5,
-    "talks": 7,
-    "source": "https://ai.engineer/orgs/cursor"
-   },
-   "people": [
-    "lee-robinson"
-   ],
-   "initials": "C"
   },
   {
    "id": "daily",
@@ -3176,46 +5132,6 @@
    "initials": "C"
   },
   {
-   "id": "browserbase",
-   "name": "Browserbase",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "browserbase",
-     "name": "Browserbase",
-     "area": "agents"
-    }
-   ],
-   "stage": {
-    "speakers": 6,
-    "talks": 6,
-    "source": "https://ai.engineer/orgs/browserbase"
-   },
-   "people": [],
-   "initials": "B"
-  },
-  {
-   "id": "exa",
-   "name": "exa",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "exa",
-     "name": "Exa",
-     "area": "retrieval"
-    }
-   ],
-   "stage": {
-    "speakers": 6,
-    "talks": 6,
-    "source": "https://ai.engineer/orgs/exa"
-   },
-   "people": [],
-   "initials": "E"
-  },
-  {
    "id": "langfuse",
    "name": "Langfuse",
    "lab": false,
@@ -3300,94 +5216,61 @@
    "initials": "L"
   },
   {
-   "id": "baseten",
-   "name": "Baseten",
+   "id": "runpod",
+   "name": "RunPod",
    "lab": false,
-   "hiring": null,
+   "hiring": {
+    "open": 1,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/runpod",
+      "platform": "Ashby",
+      "open": 1
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 100
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "data",
+      "share": 100
+     },
+     {
+      "id": "retrieval",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 100
+     }
+    ]
+   },
    "products": [
     {
-     "id": "baseten",
-     "name": "Baseten",
+     "id": "runpod",
+     "name": "RunPod",
      "area": "inference"
     }
    ],
    "stage": {
-    "speakers": 5,
-    "talks": 5,
-    "source": "https://ai.engineer/orgs/baseten"
+    "speakers": 3,
+    "talks": 4,
+    "source": "https://ai.engineer/orgs/runpod"
    },
    "people": [],
-   "initials": "B"
-  },
-  {
-   "id": "elevenlabs",
-   "name": "ElevenLabs",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "elevenlabs",
-     "name": "ElevenLabs",
-     "area": "modalities"
-    },
-    {
-     "id": "elevenlabs-agents",
-     "name": "ElevenLabs Agents",
-     "area": "modalities"
-    }
-   ],
-   "stage": {
-    "speakers": 6,
-    "talks": 5,
-    "source": "https://ai.engineer/orgs/elevenlabs"
-   },
-   "people": [],
-   "initials": "E"
-  },
-  {
-   "id": "langchain",
-   "name": "LangChain",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "langsmith",
-     "name": "LangSmith",
-     "area": "evaluation"
-    },
-    {
-     "id": "langsmith-annotation-queues",
-     "name": "LangSmith Annotation Queues",
-     "area": "evaluation"
-    }
-   ],
-   "stage": {
-    "speakers": 5,
-    "talks": 5,
-    "source": "https://ai.engineer/orgs/langchain"
-   },
-   "people": [],
-   "initials": "L"
-  },
-  {
-   "id": "sentry",
-   "name": "Sentry",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "sentry-ai-agent-monitoring",
-     "name": "Sentry AI Agent Monitoring",
-     "area": "evaluation"
-    }
-   ],
-   "stage": {
-    "speakers": 5,
-    "talks": 5,
-    "source": "https://ai.engineer/orgs/sentry"
-   },
-   "people": [],
-   "initials": "S"
+   "initials": "R"
   },
   {
    "id": "unsloth",
@@ -3412,44 +5295,180 @@
    "initials": "U"
   },
   {
-   "id": "cerebras",
-   "name": "Cerebras",
+   "id": "posthog",
+   "name": "PostHog",
    "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "cerebras-inference",
-     "name": "Cerebras Inference",
-     "area": "inference"
-    }
-   ],
-   "stage": {
-    "speakers": 3,
-    "talks": 4,
-    "source": "https://ai.engineer/orgs/cerebras"
+   "hiring": {
+    "open": 1,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/posthog",
+      "platform": "Ashby",
+      "open": 1
+     }
+    ],
+    "roles": [
+     {
+      "id": "rd-researcher",
+      "share": 100
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "data",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 100
+     }
+    ]
    },
-   "people": [],
-   "initials": "C"
-  },
-  {
-   "id": "cohere",
-   "name": "Cohere",
-   "lab": false,
-   "hiring": null,
    "products": [
     {
-     "id": "cohere",
-     "name": "Cohere Embed v4 / Rerank 4",
-     "area": "retrieval"
+     "id": "posthog-llm-analytics",
+     "name": "PostHog LLM Analytics",
+     "area": "evaluation"
     }
    ],
    "stage": {
     "speakers": 4,
-    "talks": 4,
-    "source": "https://ai.engineer/orgs/cohere"
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/posthog"
    },
    "people": [],
-   "initials": "C"
+   "initials": "P"
+  },
+  {
+   "id": "reflection-ai",
+   "name": "Reflection AI",
+   "lab": true,
+   "hiring": {
+    "open": 2,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/reflectionai",
+      "platform": "Ashby",
+      "open": 2
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 100
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "context",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "security",
+      "share": 100
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "reflection-beam",
+     "name": "Reflection Beam",
+     "area": "models"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/reflection-ai"
+   },
+   "people": [],
+   "initials": "RA"
+  },
+  {
+   "id": "openrouter",
+   "name": "OpenRouter",
+   "lab": false,
+   "hiring": {
+    "open": 1,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/openrouter",
+      "platform": "Ashby",
+      "open": 1
+     }
+    ],
+    "roles": [
+     {
+      "id": "forward-deployed-engineer",
+      "share": 100
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 100
+     },
+     {
+      "id": "agents",
+      "share": 100
+     },
+     {
+      "id": "context",
+      "share": 100
+     },
+     {
+      "id": "evals",
+      "share": 100
+     },
+     {
+      "id": "models",
+      "share": 100
+     }
+    ]
+   },
+   "products": [
+    {
+     "id": "openrouter",
+     "name": "OpenRouter",
+     "area": "inference"
+    },
+    {
+     "id": "openrouter-rankings",
+     "name": "OpenRouter Rankings",
+     "area": "landscape"
+    }
+   ],
+   "stage": {
+    "speakers": 1,
+    "talks": 3,
+    "source": "https://ai.engineer/orgs/openrouter"
+   },
+   "people": [],
+   "initials": "O"
   },
   {
    "id": "ibm",
@@ -3519,42 +5538,57 @@
    "initials": "R"
   },
   {
-   "id": "reducto",
-   "name": "Reducto",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "reducto",
-     "name": "Reducto",
-     "area": "retrieval"
-    }
-   ],
-   "stage": {
-    "speakers": 4,
-    "talks": 4,
-    "source": "https://ai.engineer/orgs/reducto"
+   "id": "reka",
+   "name": "Reka",
+   "lab": true,
+   "hiring": {
+    "open": 3,
+    "boards": [
+     {
+      "url": "https://jobs.ashbyhq.com/reka",
+      "platform": "Ashby",
+      "open": 3
+     }
+    ],
+    "roles": [
+     {
+      "id": "other-ai",
+      "share": 33
+     },
+     {
+      "id": "applied-ai-engineer",
+      "share": 33
+     },
+     {
+      "id": "ai-platform-engineer",
+      "share": 33
+     }
+    ],
+    "skills": [
+     {
+      "id": "models",
+      "share": 67
+     },
+     {
+      "id": "software",
+      "share": 33
+     },
+     {
+      "id": "data",
+      "share": 33
+     },
+     {
+      "id": "context",
+      "share": 33
+     },
+     {
+      "id": "product",
+      "share": 33
+     }
+    ]
    },
-   "people": [],
-   "initials": "R"
-  },
-  {
-   "id": "runpod",
-   "name": "RunPod",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "runpod",
-     "name": "RunPod",
-     "area": "inference"
-    }
-   ],
-   "stage": {
-    "speakers": 3,
-    "talks": 4,
-    "source": "https://ai.engineer/orgs/runpod"
-   },
+   "products": [],
+   "stage": null,
    "people": [],
    "initials": "R"
   },
@@ -3579,26 +5613,6 @@
    "initials": "A"
   },
   {
-   "id": "fireworks-ai",
-   "name": "Fireworks AI",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "fireworks-ai",
-     "name": "Fireworks AI",
-     "area": "inference"
-    }
-   ],
-   "stage": {
-    "speakers": 3,
-    "talks": 3,
-    "source": "https://ai.engineer/orgs/fireworks-ai"
-   },
-   "people": [],
-   "initials": "FA"
-  },
-  {
    "id": "mixedbread",
    "name": "Mixedbread",
    "lab": false,
@@ -3617,71 +5631,6 @@
    },
    "people": [],
    "initials": "M"
-  },
-  {
-   "id": "openrouter",
-   "name": "OpenRouter",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "openrouter",
-     "name": "OpenRouter",
-     "area": "inference"
-    },
-    {
-     "id": "openrouter-rankings",
-     "name": "OpenRouter Rankings",
-     "area": "landscape"
-    }
-   ],
-   "stage": {
-    "speakers": 1,
-    "talks": 3,
-    "source": "https://ai.engineer/orgs/openrouter"
-   },
-   "people": [],
-   "initials": "O"
-  },
-  {
-   "id": "posthog",
-   "name": "PostHog",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "posthog-llm-analytics",
-     "name": "PostHog LLM Analytics",
-     "area": "evaluation"
-    }
-   ],
-   "stage": {
-    "speakers": 4,
-    "talks": 3,
-    "source": "https://ai.engineer/orgs/posthog"
-   },
-   "people": [],
-   "initials": "P"
-  },
-  {
-   "id": "roboflow",
-   "name": "Roboflow",
-   "lab": false,
-   "hiring": null,
-   "products": [
-    {
-     "id": "roboflow",
-     "name": "Roboflow",
-     "area": "modalities"
-    }
-   ],
-   "stage": {
-    "speakers": 3,
-    "talks": 3,
-    "source": "https://ai.engineer/orgs/roboflow"
-   },
-   "people": [],
-   "initials": "R"
   },
   {
    "id": "turbopuffer",
