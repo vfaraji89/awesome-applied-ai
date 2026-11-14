@@ -49,7 +49,7 @@ export function SiteFooter() {
   const keepOpen = (e: React.MouseEvent) => { if (!matchMedia("(max-width: 720px)").matches) e.preventDefault(); };
 
   const stats: Stat[] = [
-    { n: "8+4", label: <T k="ab.s_years">years, industry + research</T>, note: "8 years in industry, 4 in research", href: site.author.site, hot: true },
+    { n: "8+4", label: <T k="ab.s_years">years, data products + R&amp;D</T>, note: "8 years in data products, 4 in an R&D team", href: site.author.site, hot: true },
     { n: "95%", label: <T k="ab.s_acc">agent accuracy</T>, note: "An MCP multi-agent system over 14K+ positions", href: `${site.author.site}#work` },
     { n: "60%", label: <T k="ab.s_work">less manual work</T>, note: "Kariyer.net, for 200+ colleagues", href: `${site.author.site}#work` },
     { n: "3+1", label: <T k="ab.s_pubs">papers + patent</T>, note: "ACM and arXiv papers; one patent pending", href: `${site.author.site}#research` },
