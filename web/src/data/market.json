@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-14T03:15:52.316Z",
+ "generatedAt": "2026-11-14T03:19:55.731Z",
  "since": "2026-10-01",
  "sinceQuarter": "2026 Q4",
  "totals": {
@@ -38,24 +38,24 @@
    "ai": 0
   },
   {
-   "id": "jobicy",
-   "boards": 1,
-   "ai": 2
-  },
-  {
    "id": "workable",
    "boards": 1,
    "ai": 5
   },
   {
-   "id": "hackernews",
+   "id": "jobicy",
    "boards": 1,
-   "ai": 42
+   "ai": 2
   },
   {
    "id": "remotive",
    "boards": 1,
    "ai": 3
+  },
+  {
+   "id": "hackernews",
+   "boards": 1,
+   "ai": 42
   },
   {
    "id": "arbeitnow",
@@ -5394,8 +5394,8 @@
     "use": 28,
     "terms": [
      "Agents",
-     "LLMs",
-     "AI tools"
+     "AI tools",
+     "LLMs"
     ]
    },
    {
