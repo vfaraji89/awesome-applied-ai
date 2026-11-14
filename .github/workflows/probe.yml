@@ -29,5 +29,5 @@ jobs:
             https://ai.engineer/api/data/organizations?format=json
             https://ai.engineer/terms
             https://pytorchconference.sched.com/all.ics
-            https://pytorchconferencena2026.sched.com/all.ics
+            https://pytorchconferenceeu2026.sched.com/all.ics
         run: bun pipeline/probe/conferences.ts

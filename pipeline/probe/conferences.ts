@@ -13,6 +13,13 @@ for (const url of URLS) {
     const body = await r.text();
     console.log(`\n=== ${url}\nstatus ${r.status} · ${r.headers.get("content-type")} · ${body.length} chars · final ${r.url}`);
     if (!r.ok) continue;
+    if (/BEGIN:VCALENDAR/.test(body.slice(0, 200))) {
+      const cats = new Map<string, number>();
+      for (const m of body.matchAll(/^CATEGORIES:(.*)$/gm)) cats.set(m[1].trim(), (cats.get(m[1].trim()) ?? 0) + 1);
+      console.log(`calendar: ${(body.match(/BEGIN:VEVENT/g) ?? []).length} events; categories: ${[...cats].map(([k, n]) => `${k} ${n}`).join(", ")}`);
+      continue;
+    }
+    if (/<html/i.test(body.slice(0, 500))) { console.log("html page, skipped"); continue; }
     if (/json/.test(r.headers.get("content-type") ?? "") || /^\s*[\[{]/.test(body)) {
       const j = JSON.parse(body);
       console.log("shape:", shape(j));
