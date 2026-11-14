@@ -1,8 +1,14 @@
 {
  "_note": "Written by pipeline/boards.ts. Career pages found for the map's tools and the AI labs. Do not edit; add boards by hand in companies.json.",
- "generatedAt": "2026-11-14T03:43:15.388Z",
+ "generatedAt": "2026-11-14T04:00:58.096Z",
  "probed": 2781,
  "boards": [
+  {
+   "provider": "ashby",
+   "slug": "anam",
+   "name": "Anam",
+   "tool": "anam"
+  },
   {
    "provider": "ashby",
    "slug": "arena",
@@ -74,6 +80,12 @@
    "slug": "fireworks",
    "name": "Fireworks AI",
    "kind": "lab"
+  },
+  {
+   "provider": "ashby",
+   "slug": "hedra",
+   "name": "Hedra Live Avatars",
+   "tool": "hedra-live-avatars"
   },
   {
    "provider": "ashby",
@@ -158,6 +170,12 @@
    "slug": "runpod",
    "name": "RunPod",
    "tool": "runpod"
+  },
+  {
+   "provider": "ashby",
+   "slug": "tavus",
+   "name": "Tavus CVI",
+   "tool": "tavus-cvi"
   },
   {
    "provider": "ashby",
