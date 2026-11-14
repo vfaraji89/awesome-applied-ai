@@ -25,8 +25,10 @@ export default function Conferences() {
   const adShare = (id: string) => M.skills.find((s) => s.id === id)?.share ?? 0;
   const talkShare = (id: string) => C.recent?.skills.find((s) => s.id === id)?.share ?? 0;
   const pairs = skills.map((s) => ({ id: s.id, talks: talkShare(s.id), ads: adShare(s.id) })).sort((a, b) => b.talks + b.ads - (a.talks + a.ads));
-  const gaps = pairs.filter((p) => p.ads >= 5 || p.talks >= 5).map((p) => ({ ...p, d: p.talks - p.ads })).sort((a, b) => b.d - a.d);
-  const stage = gaps.filter((g) => g.d >= 5).slice(0, 4), job = gaps.filter((g) => g.d <= -5).reverse().slice(0, 4);
+  // ads list many requirements, talks focus on one or two: compare each skill's share of all the skills named (attention)
+  const tSum = pairs.reduce((a, p) => a + p.talks, 0) || 1, aSum = pairs.reduce((a, p) => a + p.ads, 0) || 1;
+  const gaps = pairs.map((p) => ({ ...p, tm: (100 * p.talks) / tSum, am: (100 * p.ads) / aSum })).map((p) => ({ ...p, d: p.tm - p.am })).sort((a, b) => b.d - a.d);
+  const stage = gaps.filter((g) => g.d >= 2).slice(0, 4), job = gaps.filter((g) => g.d <= -2).reverse().slice(0, 4);
   const adTool = (n: string) => { const t = M.tools.find((x) => x.name === n); return t ? Math.round((t.n / Math.max(1, M.totals.processed)) * 1000) / 10 : 0; };
   const years = Object.keys(C.aieYears ?? {}).filter((y) => (C.aieYears?.[y] ?? 0) >= 30);
   const topicRows = C.aieTopics.slice(0, 10).map((t) => ({ ...t, shares: years.map((y) => ({ y, s: C.aieYears?.[y] ? Math.round(((t.byYear[y] ?? 0) / C.aieYears[y]) * 100) : 0 })) }));
@@ -41,7 +43,7 @@ export default function Conferences() {
           <p className="lead" style={{ marginTop: 16 }}><T k="cf.lead">What applied AI conferences talk about, set against what AI job ads ask for. Talks are read from official schedules and archives with the same rules as the ads.</T></p>
           {ready ? (
             <div className="frame" style={{ marginTop: 30, padding: "28px 30px" }}>
-              <ConfBanner rows={pairs} talks={C.recent.talks} ads={M.totals.processed} />
+              <ConfBanner rows={pairs} tSum={tSum} aSum={aSum} talks={C.recent.talks} ads={M.totals.processed} />
             </div>
           ) : <div className="frame" style={{ marginTop: 30 }}><p className="muted"><T k="cf.wait">The first reading of the conference schedules is under way.</T></p></div>}
           {ready && <p className="count" style={{ marginTop: 12 }}><T k="cf.basis" vars={{ e: C.recent.editions, t: C.recent.talks.toLocaleString("en-US"), d: "June 2025" }}>{"Talks: {t} sessions at {e} conferences since {d}. Ads: AI job ads since 1 October 2026. A talk or an ad counts for every skill it names."}</T></p>}
@@ -58,17 +60,17 @@ export default function Conferences() {
                 <div className="frame">
                   <b><T k="cf.stage">More on stage than in the job</T></b>
                   <p className="muted" style={{ fontSize: ".88rem" }}><T k="cf.stage_p">What conferences are excited about before employers ask for it, or what is easier to talk about than to hire for.</T></p>
-                  <ul className="cf-gap">{stage.map((g) => <li key={g.id}><Link href={`/skills/${g.id}/`}><T k={`skill.${g.id}`}>{skillName(g.id)}</T></Link><span className="count">{Math.round(g.talks)}% · {Math.round(g.ads)}%</span><b>+{Math.round(g.d)}</b></li>)}</ul>
-                  {!stage.length && <p className="count"><T k="cf.none">No gap of 5 points or more.</T></p>}
+                  <ul className="cf-gap">{stage.map((g) => <li key={g.id}><Link href={`/skills/${g.id}/`}><T k={`skill.${g.id}`}>{skillName(g.id)}</T></Link><span className="count">{Math.round(g.tm)}% · {Math.round(g.am)}%</span><b>+{Math.round(g.d)}</b></li>)}</ul>
+                  {!stage.length && <p className="count"><T k="cf.none">No gap of 2 points or more.</T></p>}
                 </div>
                 <div className="frame">
                   <b><T k="cf.job">More in the job than on stage</T></b>
                   <p className="muted" style={{ fontSize: ".88rem" }}><T k="cf.job_p">What employers ask for that conferences rarely cover: the quiet, everyday work.</T></p>
-                  <ul className="cf-gap job">{job.map((g) => <li key={g.id}><Link href={`/skills/${g.id}/`}><T k={`skill.${g.id}`}>{skillName(g.id)}</T></Link><span className="count">{Math.round(g.talks)}% · {Math.round(g.ads)}%</span><b>{Math.round(g.d)}</b></li>)}</ul>
-                  {!job.length && <p className="count"><T k="cf.none">No gap of 5 points or more.</T></p>}
+                  <ul className="cf-gap job">{job.map((g) => <li key={g.id}><Link href={`/skills/${g.id}/`}><T k={`skill.${g.id}`}>{skillName(g.id)}</T></Link><span className="count">{Math.round(g.tm)}% · {Math.round(g.am)}%</span><b>{Math.round(g.d)}</b></li>)}</ul>
+                  {!job.length && <p className="count"><T k="cf.none">No gap of 2 points or more.</T></p>}
                 </div>
               </div>
-              <p className="count" style={{ marginTop: 12 }}><T k="cf.gap_n">Talks share · ads share, and the difference in points.</T></p>
+              <p className="count" style={{ marginTop: 12 }}><T k="cf.gap_n">Share of attention: each skill's part of all the skills named in talks · in ads, and the difference in points. Long ads and short talks compare fairly this way.</T></p>
             </div>
           </section>
 
@@ -132,8 +134,8 @@ export default function Conferences() {
         .cf-gap li { display: grid; grid-template-columns: 1fr auto 46px; gap: 12px; align-items: baseline; border-bottom: 1px solid var(--line); padding-bottom: 8px; }
         .cf-gap a { text-decoration: none; font-weight: 600; } .cf-gap b { text-align: right; color: var(--ink); } .cf-gap.job b { color: var(--rust-deep); }
         .cf-tools { list-style: none; margin: 22px 0 0; padding: 0; display: grid; gap: 10px; max-width: 900px; }
-        .cf-tools li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 190px; gap: 14px; align-items: center; }
-        .cf-tools .count { text-align: right; }
+        .cf-tools li { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr) 230px; gap: 14px; align-items: center; }
+        .cf-tools .count { text-align: right; white-space: nowrap; font-size: .74rem; }
         @media (max-width: 640px) { .cf-tools li { grid-template-columns: 1fr auto; } .cf-tools .rodbar { grid-column: 1 / -1; grid-row: 2; } }
         .cf-topics { margin-top: 20px; overflow-x: auto; }
         .cf-th, .cf-tr { display: grid; grid-template-columns: minmax(170px, 1.4fr) repeat(${Math.max(1, years.length)}, minmax(64px, 1fr)); gap: 8px; align-items: center; min-width: ${170 + years.length * 72}px; }

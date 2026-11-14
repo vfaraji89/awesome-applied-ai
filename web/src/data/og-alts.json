@@ -4,6 +4,7 @@
  "market/note": "This week in applied AI hiring: New roles, the skills they ask for and the tools they name, ready to share.",
  "fit": "How ready are you for applied AI?: Paste your CV or a job description. Scored against real postings, with what to learn next.",
  "market/sources": "Every site the tracker reads: Company career pages and public job boards, the hiring platform behind each, and what the ads ask for.",
+ "market/conferences": "On stage, and in the job: What applied AI conferences talk about, set against what AI job ads ask for: AI Engineer, PyTorch Conference and Microsoft Build.",
  "market/method": "How the numbers are made, and how wrong they are: How AI job ads are read and classified, error rates checked by hand every month, and an open dataset under CC BY 4.0.",
  "labs": "What the labs ask for: Applied AI roles at Anthropic, OpenAI and Google, side by side, from their public postings.",
  "roles": "Who does the work, and what it takes: Eight applied AI roles: their titles, daily tasks, stack and how each one grows.",

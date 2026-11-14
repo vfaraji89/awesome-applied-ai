@@ -10,7 +10,7 @@ import { skills } from "@/data/framework";
 export type Pair = { id: string; talks: number; ads: number };
 const name = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
 
-export function ConfBanner({ rows, talks, ads }: { rows: Pair[]; talks: number; ads: number }) {
+export function ConfBanner({ rows, talks, ads, tSum, aSum }: { rows: Pair[]; talks: number; ads: number; tSum: number; aSum: number }) {
   const [i, setI] = useState(0);
   const [held, setHeld] = useState(false);
   const [vis, setVis] = useState(false);
@@ -28,7 +28,8 @@ export function ConfBanner({ rows, talks, ads }: { rows: Pair[]; talks: number; 
   const pick = (k: number) => { setHeld(true); setI(k); };
   const max = Math.max(...rows.flatMap((r) => [r.talks, r.ads]), 1);
   const r = rows[i];
-  const ratio = r.ads ? r.talks / r.ads : 0;
+  // compared as share of attention, since ads name many more skills than talks do
+  const ratio = r.ads ? (r.talks / tSum) / (r.ads / aSum) : 0;
   return (
     <div ref={ref} className="cb">
       <div className="cb-key count"><span><i className="cb-sw talk" /><T k="cb.talks" vars={{ n: talks.toLocaleString("en-US") }}>{"{n} conference talks"}</T></span><span><i className="cb-sw ad" /><T k="cb.ads" vars={{ n: ads.toLocaleString("en-US") }}>{"{n} AI job ads"}</T></span></div>
@@ -51,9 +52,9 @@ export function ConfBanner({ rows, talks, ads }: { rows: Pair[]; talks: number; 
         <b className="cb-big"><T k={`skill.${r.id}`}>{name(r.id)}</T></b>
         <p className="cb-line">
           <T k="cb.line" vars={{ t: Math.round(r.talks), a: Math.round(r.ads) }}>{"{t}% of talks, {a}% of AI job ads."}</T>{" "}
-          {ratio >= 1.25 ? <T k="cb.more" vars={{ x: ratio.toFixed(1) }}>{"Talked about {x}× more than it is hired for."}</T>
-            : ratio && ratio <= 0.8 ? <T k="cb.less" vars={{ x: (1 / ratio).toFixed(1) }}>{"Hired for {x}× more than it is talked about."}</T>
-            : <T k="cb.even">Stage and job roughly agree.</T>}
+          {ratio >= 1.25 ? <T k="cb.more" vars={{ x: ratio.toFixed(1) }}>{"On stage it gets {x}× the attention it gets in job ads."}</T>
+            : ratio && ratio <= 0.8 ? <T k="cb.less" vars={{ x: (1 / ratio).toFixed(1) }}>{"Job ads give it {x}× the attention it gets on stage."}</T>
+            : <T k="cb.even">Stage and job give it about the same attention.</T>}
         </p>
         <Link href={`/skills/${r.id}/`} className="cb-go"><T k="rb.s_open">Open the skill</T> →</Link>
       </div>
