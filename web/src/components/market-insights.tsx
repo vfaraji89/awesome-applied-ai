@@ -92,7 +92,7 @@ export function Heatmap({ g, col, colLabel }: { g: Grid; col: "skill" | "task"; 
         <tbody>
           {g.rows.map((r, i) => (
             <tr key={r}>
-              <th scope="row"><Link href="/roles/">{roleName(r)}</Link><i className="mono">{g.n[i]}</i></th>
+              <th scope="row"><Link href={`/roles/families/?role=${r}`}>{roleName(r)}</Link><i className="mono">{g.n[i]}</i></th>
               {g.cells[i].map((v, k) => (
                 <td key={k} style={{ ["--v" as string]: v }} className={v >= 60 ? "hi" : ""} tabIndex={0} aria-label={`${roleName(r)}: ${v}%`}>
                   <span className="mi-v">{v >= 50 ? v : ""}</span>

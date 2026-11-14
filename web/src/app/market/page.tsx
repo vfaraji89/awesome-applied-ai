@@ -83,7 +83,7 @@ export default function Market() {
               <div>
                 <span className="kicker"><T k="mk.k_roles">Roles</T></span>
                 <h2 style={{ marginTop: 10 }}><T k="mk.h_roles2">Which roles they hire for</T><span className="dot">.</span></h2>
-                <Bars rows={m.roles} label={(r) => <Link href="/roles/">{roleName(r.id!) || <T k="mk.other">Other AI roles</T>}</Link>} />
+                <Bars rows={m.roles} label={(r) => <Link href={roleName(r.id!) ? `/roles/families/?role=${r.id}` : "/roles/"}>{roleName(r.id!) || <T k="mk.other">Other AI roles</T>}</Link>} />
               </div>
               <div>
                 <span className="kicker"><T k="mk.k_levels">Levels</T></span>

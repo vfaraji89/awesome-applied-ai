@@ -132,7 +132,7 @@ export default async function SkillPage({ params }: { params: Promise<{ id: stri
             <ul className="sd-roles">
               {roleRows.map((r) => (
                 <li key={r.id}>
-                  <Link href="/roles/" className="sd-role">{roleName(r.id)}</Link>
+                  <Link href={`/roles/families/?role=${r.id}`} className="sd-role">{roleName(r.id)}</Link>
                   <span className="rodbar">{r.share !== null && <i style={{ width: `${r.share}%` }} />}</span>
                   <span className="mono sd-n">{r.share !== null ? `${r.share}%` : "–"}</span>
                   <span className="sd-level" title={SKILL_LEVELS[r.level]}>

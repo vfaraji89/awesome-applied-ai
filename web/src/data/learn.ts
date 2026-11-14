@@ -52,10 +52,10 @@ export const learn: Record<string, LearnLink[]> = {
   ],
   product: [
     problem("when-multi-agent-is-wrong", "Deciding what not to build"), term("human-in-the-loop", "Human in the loop"),
-    { kind: "Page", label: "What each role does all day", href: "/roles/#tasks" },
+    { kind: "Page", label: "What each role does all day", href: "/roles/tasks/" },
   ],
   customer: [
-    { kind: "Page", label: "What the labs ask for", href: "/labs/" }, { kind: "Page", label: "Forward deployed tasks", href: "/roles/#tasks" },
+    { kind: "Page", label: "What the labs ask for", href: "/labs/" }, { kind: "Page", label: "Forward deployed tasks", href: "/roles/tasks/" },
     term("cost-per-request", "Cost per request, for ROI"),
   ],
   architecture: [
@@ -69,7 +69,7 @@ export function linkOk(href: string): boolean {
   const terms = new Set(dictionary.map((t) => t.id));
   const probs = new Set(problems.map((p) => p.id));
   const lays = new Set<string>(layers.map((l) => l.id));
-  const pages = new Set(["/tools/", "/roles/", "/labs/", "/architecture/", "/problems/", "/docs/claude-platform/", "/fit/", "/market/", "/certificates/", "/radar/", "/skills/"]);
+  const pages = new Set(["/tools/", "/roles/", "/roles/families/", "/roles/matrix/", "/roles/tasks/", "/docs/mcp/", "/labs/", "/architecture/", "/problems/", "/docs/claude-platform/", "/fit/", "/market/", "/certificates/", "/radar/", "/skills/"]);
   const [path, hash] = href.split("#");
   return path === "/jargon/" ? terms.has(hash) :
     path === "/architecture/" && hash ? lays.has(hash) :

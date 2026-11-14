@@ -238,7 +238,7 @@ export function RoleFit() {
                 </button>
                 {sel.r.id === r.id && missing.length > 0 && (
                   <p className="rf-next"><span className="kicker">{t("rf.learn_next", "Learn next")}</span>{" "}
-                    {missing.map(([id, w]) => <Link key={id} href={learn[id]?.[0]?.href ?? "/roles/#matrix"} className="rf-gap">{sn(id)} <span>{w}%</span></Link>)}
+                    {missing.map(([id, w]) => <Link key={id} href={learn[id]?.[0]?.href ?? "/roles/matrix/"} className="rf-gap">{sn(id)} <span>{w}%</span></Link>)}
                   </p>
                 )}
               </li>
