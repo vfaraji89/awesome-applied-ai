@@ -1,33 +1,13 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
+import { Odometer } from "./odometer";
 
 /* The main numbers, played like a broadcast score graphic: two wooden posts start together at the
    centre and slide out to the edges, the panel opens between them, then the number counts up and a
    short label rises. Few words on the tile; the longer note is the tile's hover title. Plays once
    when the strip scrolls into view; reduced motion shows it at rest. */
 export type Stat = { n: string; label: React.ReactNode; note?: string; href?: string; hot?: boolean };
-
-function Count({ n, run }: { n: string; run: boolean }) {
-  // count the digits in "1,630", "63%", "08" or "$9.84", keeping the text around them
-  const m = n.match(/^([^\d]*)([\d,]*\.?\d+)(.*)$/);
-  const target = m ? Number(m[2].replace(/,/g, "")) : NaN;
-  const [v, setV] = useState<number | null>(null);
-  useEffect(() => {
-    if (!run || !m || Number.isNaN(target)) return;
-    if (matchMedia("(prefers-reduced-motion: reduce)").matches) { setV(target); return; }
-    let raf = 0; const t0 = performance.now() + 420;
-    const step = (t: number) => { const p = Math.max(0, Math.min(1, (t - t0) / 1000)); setV(target * (1 - Math.pow(1 - p, 3))); if (p < 1) raf = requestAnimationFrame(step); };
-    raf = requestAnimationFrame(step);
-    return () => cancelAnimationFrame(raf);
-  }, [run]); // eslint-disable-line react-hooks/exhaustive-deps
-  if (!m || v === null) return <>{n}</>;
-  const dec = (m[2].split(".")[1] ?? "").length, pad = /^0\d/.test(m[2]) ? m[2].length : 0;
-  let s = v.toFixed(dec);
-  if (m[2].includes(",")) s = Number(s).toLocaleString("en-US", { minimumFractionDigits: dec, maximumFractionDigits: dec });
-  if (pad) s = s.padStart(pad, "0");
-  return <>{m[1]}{s}{m[3]}</>;
-}
 
 export function StatBroadcast({ items, cols = 4 }: { items: Stat[]; cols?: number }) {
   const ref = useRef<HTMLDivElement>(null);
@@ -45,7 +25,7 @@ export function StatBroadcast({ items, cols = 4 }: { items: Stat[]; cols?: numbe
           <>
             <span className="sb-post l" aria-hidden="true" /><span className="sb-post r" aria-hidden="true" />
             <span className="sb-face">
-              <b className={x.hot || i === 0 ? "hot" : ""}><Count n={x.n} run={on} /></b>
+              <b className={x.hot || i === 0 ? "hot" : ""}><Odometer value={x.n} run={on} delay={i * 110 + 520} /></b>
               <span className="sb-l">{x.label}</span>
             </span>
           </>

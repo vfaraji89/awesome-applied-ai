@@ -1,6 +1,7 @@
 "use client";
 import { useEffect, useMemo, useState } from "react";
 import { Icon } from "./icons";
+import { Odometer, useInView } from "./odometer";
 import { T, useT } from "@/i18n/lang";
 
 /* The events calendar, in the abacus language:
@@ -72,16 +73,28 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
   const agenda = (day ? onDay(day) : shown.filter((e) => inMonth(e, month)));
   const pickEvent = (e: Ev) => { setSel(e.name); setMonth(mKey(e.start)); setDay(null); };
   const mi = months.indexOf(month);
+  const [ltRef, ltOn] = useInView<HTMLDivElement>(0.4);
 
   return (
     <div className="ec">
       {next && (
-        <div className="ec-next frame">
-          <span className={`ec-dot t-${next.type}`} />
-          <div>
-            <span className="count">{next.start <= today ? <T k="ec.now">On now</T> : <T k="ec.next_in" vars={{ n: days(today, next.start) }}>{"Next up, in {n} days"}</T>}</span>
-            <b className="ec-next-name">{next.name}</b>
-            <span className="muted">{range(next)} · {next.city}</span>
+        <div ref={ltRef} className={`ec-next${ltOn ? " on" : ""}`}>
+          {/* the lower third (brand/broadcast.html, B): a post stands, the ink bar wipes out of it,
+              the type bead runs in, the days roll, the words rise; one light sweep as it settles */}
+          <div className="lt">
+            <span className="lt-post" aria-hidden="true" />
+            <div className="lt-main">
+              <span className={`lt-bead t-${next.type}`} aria-hidden="true" />
+              {next.start <= today
+                ? <span className="lt-num lt-now"><T k="ec.now">On now</T></span>
+                : <span className="lt-num"><Odometer value={String(days(today, next.start))} run={ltOn} delay={650} /><small><T k="ec.days">days</T></small></span>}
+              <div className="lt-txt">
+                <b><i>{next.name}</i></b>
+                <span><i>{range(next)} · {next.city}</i></span>
+              </div>
+              <span className="lt-glint" aria-hidden="true" />
+            </div>
+            <span className="lt-tab"><T k="ec.next">Next up</T></span>
           </div>
           <div className="ec-acts">
             <button type="button" className="btn ec-addbtn" onClick={() => ics(next)}><Icon name="addcal" size={18} /><T k="ec.add">Add to calendar</T></button>
@@ -179,9 +192,30 @@ export function EventsCalendar({ events: all, recent, types, today: built }: Pro
       <style>{`
         .t-data { --b: var(--t-data); --c: var(--c-data); } .t-infra { --b: var(--t-infra); --c: var(--c-infra); } .t-research { --b: var(--t-research); --c: var(--c-research); } .t-acm { --b: var(--t-acm); --c: var(--c-acm); }
         .ec-dot { display: inline-block; width: 18px; height: 18px; border-radius: 50%; background: var(--b); outline: 1px solid rgba(0,0,0,.08); outline-offset: -1px; flex: none; } .ec-dot.sm { width: 10px; height: 10px; }
-        .ec-next { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; gap: 18px; align-items: center; padding: 20px 24px; }
-        .ec-next > div:nth-child(2) { display: grid; gap: 2px; } .ec-next-name { font-size: 1.4rem; font-weight: 800; letter-spacing: -.01em; }
-        @media (max-width: 680px) { .ec-next { grid-template-columns: auto 1fr; } .ec-next .ec-acts { grid-column: 1 / -1; } }
+        .ec-next { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 18px 24px; padding: 8px 0; }
+        .lt { display: flex; align-items: stretch; min-height: 86px; max-width: 100%; }
+        .lt-post { position: relative; z-index: 2; flex: none; width: 9px; margin: -8px 0; border-radius: 5px; background: var(--dowel); transform: scaleY(0); transition: transform .45s cubic-bezier(.16,1,.3,1); }
+        .lt-main { position: relative; overflow: hidden; display: flex; align-items: center; gap: 18px; min-width: 0; padding: 12px 26px 12px 20px; color: #fff;
+          background-color: #141312; background-image: linear-gradient(180deg, #1d1a19, #141312), var(--rod); background-size: 100% 100%, 100% 3px; background-position: 0 0, bottom; background-repeat: no-repeat;
+          clip-path: inset(0 100% 0 0); transition: clip-path .7s cubic-bezier(.77,0,.18,1) .25s; }
+        .lt-bead { flex: none; width: 18px; height: 18px; border-radius: 50%; background: var(--b); transform: translateX(-40px); opacity: 0; transition: transform .7s cubic-bezier(.16,1,.3,1) .55s, opacity .2s .55s; }
+        .lt-num { display: inline-flex; align-items: baseline; gap: 6px; font-size: 2.6rem; font-weight: 800; letter-spacing: -.04em; line-height: 1; }
+        .lt-num small { font: 600 .7rem var(--font-mono), monospace; letter-spacing: .1em; text-transform: uppercase; color: #bdb6ae; }
+        .lt-now { font-size: 1.4rem; }
+        .lt-txt { display: grid; gap: 3px; min-width: 0; }
+        .lt-txt b, .lt-txt span { display: block; overflow: hidden; }
+        .lt-txt i { display: block; font-style: normal; transform: translateY(110%); transition: transform .6s cubic-bezier(.16,1,.3,1); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .lt-txt b { font-size: 1.15rem; } .lt-txt b i { transition-delay: .7s; }
+        .lt-txt span { font: .74rem var(--font-mono), monospace; color: #bdb6ae; } .lt-txt span i { transition-delay: .8s; }
+        .lt-glint { position: absolute; inset: 0; pointer-events: none; background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,.14) 46%, rgba(255,255,255,.03) 54%, transparent 70%); transform: translateX(-120%); }
+        .lt-tab { display: flex; align-items: center; flex: none; padding: 0 16px; background: #fff; color: var(--rust-deep); font: 600 .72rem var(--font-mono), monospace; letter-spacing: .12em; text-transform: uppercase;
+          background-image: var(--rod), var(--rod); background-size: 100% 3px, 100% 3px; background-position: top, bottom; background-repeat: no-repeat; clip-path: inset(0 100% 0 0); transition: clip-path .55s cubic-bezier(.77,0,.18,1) .9s; }
+        .ec-next.on .lt-post { transform: none; } .ec-next.on .lt-main, .ec-next.on .lt-tab { clip-path: inset(0 0 0 0); }
+        .ec-next.on .lt-bead { transform: none; opacity: 1; } .ec-next.on .lt-txt i { transform: none; }
+        .ec-next.on .lt-glint { animation: lt-glint 1.1s cubic-bezier(.16,1,.3,1) 1.3s both; }
+        @keyframes lt-glint { to { transform: translateX(120%); } }
+        @media (max-width: 680px) { .lt-tab { display: none; } .lt-num { font-size: 2rem; } .lt-main { gap: 12px; padding: 12px 16px; } }
+        @media (prefers-reduced-motion: reduce) { .lt-post, .lt-main, .lt-bead, .lt-txt i, .lt-tab { transition: none; transform: none; opacity: 1; clip-path: none; } .ec-next .lt-glint { animation: none; } }
         .ec-acts { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; } .ec-acts .chip { cursor: pointer; } .ec-acts .btn { border: 0; cursor: pointer; font: inherit; }
         .ec-filters { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 10px; margin: 22px 0 14px; }
         .ec-fl { display: flex; flex-wrap: wrap; gap: 6px; } .ec-fl .chip { cursor: pointer; } .ec-sep { width: 1px; background: var(--line); margin: 2px 4px; }

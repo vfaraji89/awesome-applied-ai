@@ -1,4 +1,5 @@
 import { StatBroadcast } from "@/components/stat-broadcast";
+import { BeadCount, CountIn } from "@/components/bead-count";
 import { Crumb } from "@/components/section-intro";
 import type { Metadata } from "next";
 import Link from "next/link";
@@ -22,15 +23,15 @@ const SINCE_EN = "1 Oct 2026";
 function Bars({ rows, label, max }: { rows: Row[]; label: (r: Row) => React.ReactNode; max?: number }) {
   const top = max ?? Math.max(1, ...rows.map((r) => r.n));
   return (
-    <ul className="mk-bars">
+    <BeadCount className="mk-bars">
       {rows.map((r, i) => (
         <li key={i} style={{ ["--i" as string]: i }}>
           <span className="mk-label">{label(r)}</span>
-          <span className="mk-track"><span className={`mk-fill${r.inStack ? " mine" : ""}`} style={{ width: `${Math.min(100, ((max !== undefined && r.share !== undefined ? r.share : r.n) / top) * 100)}%` }} /></span>
-          <span className="mono mk-n">{r.share !== undefined ? `${r.share}%` : r.n}</span>
+          <span className="mk-track"><span className={`mk-fill${r.inStack ? " mine" : ""}`} style={{ ["--w" as string]: `${Math.min(100, ((max !== undefined && r.share !== undefined ? r.share : r.n) / top) * 100)}%` }} /></span>
+          <span className="mono mk-n"><CountIn value={r.share !== undefined ? `${r.share}%` : String(r.n)} i={i} /></span>
         </li>
       ))}
-    </ul>
+    </BeadCount>
   );
 }
 
@@ -274,7 +275,9 @@ export default function Market() {
         .mk-bars li { display: grid; grid-template-columns: minmax(0, 240px) minmax(0, 1fr) 46px; gap: 12px; align-items: center; font-size: .92rem; animation: rise .5s var(--ease) both; animation-delay: calc(var(--i) * 40ms); }
         .mk-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } .mk-label a { text-decoration: none; } .mk-label a:hover { color: var(--rust-deep); }
         .mk-track { position: relative; height: 12px; } .mk-track::before { content: ""; position: absolute; left: 0; right: 0; top: 50%; height: 3px; margin-top: -1.5px; border-radius: 2px; background: var(--rod); }
-        .mk-fill { position: relative; display: block; height: 5px; top: 3.5px; border-radius: 3px; background: var(--ink); transform-origin: left; animation: mk-grow .9s var(--ease) both; }
+        .mk-fill { position: relative; display: block; height: 5px; top: 3.5px; width: 0; border-radius: 3px; background: var(--ink); transition: width 1s cubic-bezier(.16,1,.3,1); transition-delay: calc(var(--i) * 90ms + 300ms); }
+        .mk-bars.on .mk-fill { width: var(--w); }
+        @media (prefers-reduced-motion: reduce) { .mk-fill { transition: none; width: var(--w); } }
         .mk-fill::after { content: ""; position: absolute; right: -6px; top: 50%; width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: var(--bead-ink); }
         .mk-fill.mine { background: var(--rust); }
         .mk-fill.mine::after { background: var(--bead-red); }

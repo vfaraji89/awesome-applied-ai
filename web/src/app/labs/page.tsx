@@ -7,12 +7,17 @@ import fit from "@/data/role-fit.json";
 import { More } from "@/components/more";
 import { T, TH } from "@/i18n/lang";
 import { share } from "@/lib/share";
+import marketData from "@/data/market.json";
+import { MatchCentre, type MatchData } from "@/components/match-centre";
 
 export const metadata: Metadata = { ...share("labs"), title: "What the labs ask for", description: "What Anthropic, OpenAI and Google Cloud ask for in their own applied AI and forward deployed engineering roles, from their public postings." };
 
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
 
 export default function Labs() {
+  const mk = marketData as unknown as { byWeek: MatchData["weeks"]; insights?: { labs?: { n: number; rest: number; skills: { id: string; lab: number; rest: number }[] } } };
+  const lb = mk.insights?.labs;
+  const match: MatchData | null = lb ? { lab: lb.n, rest: lb.rest, skills: lb.skills.map((x) => ({ ...x, name: skillName(x.id) })), weeks: mk.byWeek } : null;
   const ap = (fit as unknown as { roles: { id: string; skills: Record<string, number> }[] }).roles;
   const market = (id: string) => {
     const rows = ap.filter((r) => r.id === "applied-ai-engineer" || r.id === "forward-deployed-engineer");
@@ -30,7 +35,15 @@ export default function Labs() {
             <p className="count" style={{ marginTop: 14 }}><T k="lb.read" vars={{ d: checked }}>{"Read from public postings on {d}. Postings change; each card links to the provider’s careers page and to the postings used."}</T></p>
           </More>
 
-          <span className="kicker" style={{ display: "block", marginTop: 34 }}><T k="lb.shared">What all three ask for</T></span>
+          {match && (
+            <>
+              <span className="kicker" style={{ display: "block", marginTop: 34 }}><T k="mc.kicker">Match centre</T></span>
+              <h2 style={{ marginTop: 10 }}><T k="mc.h2">The labs against everyone else</T><span className="dot">.</span></h2>
+              <div style={{ marginTop: 18 }}><MatchCentre data={match} /></div>
+            </>
+          )}
+
+          <span className="kicker" style={{ display: "block", marginTop: 44 }}><T k="lb.shared">What all three ask for</T></span>
           <ul className="lb-shared">
             {shared.map((s) => (
               <li key={s.id} className="frame">
