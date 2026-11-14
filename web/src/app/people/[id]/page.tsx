@@ -22,6 +22,15 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
   return { ...share("people"), title: p.name, description: `${p.name}${p.role ? `, ${p.role}` : ""}${p.org ? ` at ${p.org}` : ""}: ${p.talkCount} talks at AI Engineer, the topics, the skills and what they build.` };
 }
 
+/* Talk titles come from the event's video titles, written "Title — Speaker, Company". On the
+   speaker's own page the tail says nothing new, so it goes; any other dash becomes a colon. */
+function talkTitle(title: string, name: string) {
+  const m = title.match(/^(.*?)\s+[\u2014\u2013]\s+([^\u2014\u2013]+)$/);
+  const parts = name.toLowerCase().split(/\s+/).filter((w) => w.length > 2);
+  if (m && parts.some((w) => m[2].toLowerCase().includes(w))) return m[1].trim();
+  return title.replace(/\s+[\u2014\u2013]\s+/g, ": ");
+}
+
 export default async function PersonPage({ params }: { params: Promise<{ id: string }> }) {
   const id = (await params).id;
   const p = people.find((x) => x.id === id);
@@ -57,7 +66,7 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
           <div>
             <span className="kicker"><T k="ps.k_talks">Talks</T></span>
             <ol className="ps-talks">
-              {p.talks.map((t) => <li key={t.url}><a href={t.url} target="_blank" rel="noreferrer"><b>{t.title}</b> ↗</a><span className="count">{t.event ?? ""}{t.year && !t.event?.includes(t.year) ? ` · ${t.year}` : ""}</span></li>)}
+              {p.talks.map((t) => <li key={t.url}><a href={t.url} target="_blank" rel="noreferrer"><b>{talkTitle(t.title, p.name)}</b> ↗</a><span className="count">{t.event ?? ""}{t.year && !t.event?.includes(t.year) ? ` · ${t.year}` : ""}</span></li>)}
             </ol>
           </div>
           <div className="ps-side">
