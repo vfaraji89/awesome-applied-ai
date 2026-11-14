@@ -350,18 +350,18 @@
    "name": "Salesforce",
    "lab": false,
    "hiring": {
-    "open": 90,
+    "open": 91,
     "boards": [
      {
       "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",
       "platform": "Workday",
-      "open": 90
+      "open": 91
      }
     ],
     "roles": [
      {
       "id": "forward-deployed-engineer",
-      "share": 58
+      "share": 57
      },
      {
       "id": "rd-researcher",
@@ -387,11 +387,11 @@
      },
      {
       "id": "context",
-      "share": 72
+      "share": 71
      },
      {
       "id": "data",
-      "share": 68
+      "share": 67
      }
     ]
    },
@@ -1926,67 +1926,6 @@
    "initials": "I"
   },
   {
-   "id": "spotify",
-   "name": "Spotify",
-   "lab": false,
-   "hiring": {
-    "open": 19,
-    "boards": [
-     {
-      "url": "https://jobs.lever.co/spotify",
-      "platform": "Lever",
-      "open": 19
-     }
-    ],
-    "roles": [
-     {
-      "id": "rd-researcher",
-      "share": 47
-     },
-     {
-      "id": "ai-platform-engineer",
-      "share": 47
-     },
-     {
-      "id": "ai-native-developer",
-      "share": 5
-     }
-    ],
-    "skills": [
-     {
-      "id": "software",
-      "share": 74
-     },
-     {
-      "id": "models",
-      "share": 68
-     },
-     {
-      "id": "customer",
-      "share": 42
-     },
-     {
-      "id": "retrieval",
-      "share": 32
-     },
-     {
-      "id": "data",
-      "share": 26
-     }
-    ]
-   },
-   "products": [],
-   "stage": {
-    "speakers": 3,
-    "talks": 2,
-    "source": "https://ai.engineer/orgs/spotify"
-   },
-   "people": [
-    "jacqueline-wood"
-   ],
-   "initials": "S"
-  },
-  {
    "id": "mercor",
    "name": "Mercor",
    "lab": false,
@@ -2154,6 +2093,67 @@
    "stage": null,
    "people": [],
    "initials": "N"
+  },
+  {
+   "id": "spotify",
+   "name": "Spotify",
+   "lab": false,
+   "hiring": {
+    "open": 17,
+    "boards": [
+     {
+      "url": "https://jobs.lever.co/spotify",
+      "platform": "Lever",
+      "open": 17
+     }
+    ],
+    "roles": [
+     {
+      "id": "ai-platform-engineer",
+      "share": 53
+     },
+     {
+      "id": "rd-researcher",
+      "share": 41
+     },
+     {
+      "id": "ai-native-developer",
+      "share": 6
+     }
+    ],
+    "skills": [
+     {
+      "id": "software",
+      "share": 71
+     },
+     {
+      "id": "models",
+      "share": 71
+     },
+     {
+      "id": "customer",
+      "share": 41
+     },
+     {
+      "id": "retrieval",
+      "share": 35
+     },
+     {
+      "id": "evals",
+      "share": 24
+     }
+    ]
+   },
+   "products": [],
+   "stage": {
+    "speakers": 3,
+    "talks": 2,
+    "source": "https://ai.engineer/orgs/spotify"
+   },
+   "people": [
+    "jacqueline-wood"
+   ],
+   "initials": "S"
   },
   {
    "id": "perplexity",
@@ -4694,67 +4694,6 @@
    "initials": "R"
   },
   {
-   "id": "sentry-ai-agent-monitoring",
-   "name": "Sentry AI Agent Monitoring",
-   "lab": false,
-   "hiring": {
-    "open": 3,
-    "boards": [
-     {
-      "url": "https://jobs.ashbyhq.com/sentry",
-      "platform": "Ashby",
-      "open": 3
-     }
-    ],
-    "roles": [
-     {
-      "id": "ai-platform-engineer",
-      "share": 67
-     },
-     {
-      "id": "forward-deployed-engineer",
-      "share": 33
-     }
-    ],
-    "skills": [
-     {
-      "id": "software",
-      "share": 100
-     },
-     {
-      "id": "evals",
-      "share": 100
-     },
-     {
-      "id": "agents",
-      "share": 67
-     },
-     {
-      "id": "models",
-      "share": 67
-     },
-     {
-      "id": "architecture",
-      "share": 33
-     }
-    ]
-   },
-   "products": [
-    {
-     "id": "sentry-ai-agent-monitoring",
-     "name": "Sentry AI Agent Monitoring",
-     "area": "evaluation"
-    }
-   ],
-   "stage": {
-    "speakers": 5,
-    "talks": 5,
-    "source": "https://ai.engineer/orgs/sentry"
-   },
-   "people": [],
-   "initials": "SA"
-  },
-  {
    "id": "browserbase",
    "name": "Browserbase",
    "lab": false,
@@ -5271,6 +5210,26 @@
    },
    "people": [],
    "initials": "R"
+  },
+  {
+   "id": "sentry",
+   "name": "Sentry",
+   "lab": false,
+   "hiring": null,
+   "products": [
+    {
+     "id": "sentry-ai-agent-monitoring",
+     "name": "Sentry AI Agent Monitoring",
+     "area": "evaluation"
+    }
+   ],
+   "stage": {
+    "speakers": 5,
+    "talks": 5,
+    "source": "https://ai.engineer/orgs/sentry"
+   },
+   "people": [],
+   "initials": "S"
   },
   {
    "id": "unsloth",
