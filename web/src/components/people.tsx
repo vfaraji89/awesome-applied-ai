@@ -6,7 +6,7 @@ import { skills } from "@/data/framework";
 
 /* The people directory: an abacus of skills on top (a rod per skill, a bead per person whose talks
    name it; touch a rod to filter), a search, and a card per person with their monogram bead. */
-export type Person = { id: string; group?: "builders" | "quiet"; name: string; role: string | null; org: string | null; initials: string; talkCount: number; years: string[]; skills: string[]; topics: string[]; products: { id: string; name: string }[] };
+export type Person = { id: string; group?: "builders" | "quiet"; idea?: string | null; name: string; role: string | null; org: string | null; initials: string; talkCount: number; years: string[]; skills: string[]; topics: string[]; products: { id: string; name: string }[] };
 const skillName = (id: string) => skills.find((s) => s.id === id)?.name ?? id;
 
 export function Monogram({ p, size = 56 }: { p: Pick<Person, "initials" | "talkCount" | "name">; size?: number }) {
@@ -69,7 +69,7 @@ export function PeopleBrowser({ people, span }: { people: Person[]; span: string
         ))}
       </div>
       <p className="muted pb-gline">
-        {group === "quiet" ? <T k="pb.g.quiet.line">People who build more than they speak: one conference, one or two talks, real work behind it. You may not know them yet.</T>
+        {group === "quiet" ? <T k="pb.g.quiet.line">People with a good idea and little stage time: one conference, one or two talks, no follower count needed. Ranked by how rare their idea is on stage, not by how often they speak.</T>
           : group === "builders" ? <T k="pb.g.builders.line">Engineers, researchers and technical founders who have taken the stage again and again to show what they built.</T>
           : <T k="pb.g.all.line">Engineers, researchers and technical founders. No developer relations, investors or curators: only people who build.</T>}
       </p>
@@ -88,8 +88,9 @@ export function PeopleBrowser({ people, span }: { people: Person[]; span: string
                   <span className="muted">{[p.role, p.org].filter(Boolean).join(" · ")}</span>
                 </div>
               </div>
+              {p.idea && <p className="pb-idea">&ldquo;{p.idea}&rdquo;</p>}
               <div className="pb-sk">{p.skills.slice(0, 3).map((s) => <span key={s} className="chip"><T k={`skill.${s}`}>{skillName(s)}</T></span>)}</div>
-              <div className="pb-foot"><YearRod years={p.years} span={span} /><span className="count"><T k="pb.talks" vars={{ n: p.talkCount }}>{"{n} talks"}</T></span></div>
+              <div className="pb-foot"><YearRod years={p.years} span={span} /><span className="count">{p.talkCount === 1 ? <T k="pb.talk1">1 talk</T> : <T k="pb.talks" vars={{ n: p.talkCount }}>{"{n} talks"}</T>}</span></div>
             </Link>
           </li>
         ))}
@@ -112,6 +113,7 @@ export function PeopleBrowser({ people, span }: { people: Person[]; span: string
         .pb-card { display: grid; gap: 12px; height: 100%; padding: 18px 20px; }
         .pb-card:hover b { color: var(--rust-deep); }
         .pb-top { display: flex; gap: 14px; align-items: center; } .pb-who { display: grid; gap: 2px; min-width: 0; } .pb-who b { font-size: 1.05rem; } .pb-who .muted { font-size: .84rem; }
+        .pb-idea { margin: 0; font-size: .95rem; line-height: 1.4; color: var(--ink); font-weight: 600; }
         .pb-sk { display: flex; flex-wrap: wrap; gap: 6px; } .pb-sk .chip { font-size: .72rem; }
         .pb-foot { display: flex; justify-content: space-between; align-items: center; margin-top: auto; }
         @media (prefers-reduced-motion: reduce) { .pb-rod i { animation: none; } }

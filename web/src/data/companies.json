@@ -645,9 +645,7 @@
     "talks": 8,
     "source": "https://ai.engineer/orgs/cloudflare"
    },
-   "people": [
-    "kenton-varda"
-   ],
+   "people": [],
    "initials": "C"
   },
   {
@@ -765,7 +763,9 @@
     "talks": 1,
     "source": "https://ai.engineer/orgs/reddit"
    },
-   "people": [],
+   "people": [
+    "andrew-orobator"
+   ],
    "initials": "R"
   },
   {
@@ -1688,7 +1688,9 @@
     "talks": 2,
     "source": "https://ai.engineer/orgs/spotify"
    },
-   "people": [],
+   "people": [
+    "jacqueline-wood"
+   ],
    "initials": "S"
   },
   {
@@ -2006,7 +2008,7 @@
     "source": "https://ai.engineer/orgs/nvidia"
    },
    "people": [
-    "chris-alexiuk"
+    "lovina-dmello"
    ],
    "initials": "N"
   },
@@ -2425,9 +2427,7 @@
     "talks": 9,
     "source": "https://ai.engineer/orgs/hugging-face"
    },
-   "people": [
-    "niels-rogge"
-   ],
+   "people": [],
    "initials": "HF"
   },
   {
@@ -3060,7 +3060,9 @@
     "talks": 7,
     "source": "https://ai.engineer/orgs/weights-biases"
    },
-   "people": [],
+   "people": [
+    "tim-sweeney"
+   ],
    "initials": "W&"
   },
   {
@@ -3364,9 +3366,7 @@
     "talks": 5,
     "source": "https://ai.engineer/orgs/langchain"
    },
-   "people": [
-    "vivek-trivedy"
-   ],
+   "people": [],
    "initials": "L"
   },
   {

@@ -15,6 +15,7 @@
     "linkedin": "https://www.linkedin.com/in/philipp-schmid-a6a2bb196",
     "x": "https://x.com/_philschmid"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Building Conversational Agents",
@@ -102,6 +103,7 @@
     "linkedin": "https://www.linkedin.com/in/charles-frye-38654abb",
     "x": "https://x.com/charles_irl"
    },
+   "idea": null,
    "talks": [
     {
      "title": "What Is an Inference Engine, Anyway? — Charles Frye, Modal",
@@ -190,6 +192,7 @@
     "linkedin": "https://www.linkedin.com/in/patrickdebois",
     "x": "https://x.com/patrickdebois"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Context Is the New Code",
@@ -271,6 +274,7 @@
     "linkedin": "https://www.linkedin.com/in/willcb",
     "x": "https://x.com/willccbb"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Modern Post-Training: A Deep Dive — Will Brown, Prime Intellect",
@@ -350,6 +354,7 @@
     "github": "https://github.com/zach-blumenfeld",
     "linkedin": "https://www.linkedin.com/in/zachblumenfeld"
    },
+   "idea": null,
    "talks": [
     {
      "title": "AI on Your Lakehouse: Context Comes in Shapes, Not Queries",
@@ -438,6 +443,7 @@
     "linkedin": "https://www.linkedin.com/in/zackproser",
     "x": "https://x.com/zackproser"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Skills at Scale",
@@ -517,6 +523,7 @@
     "linkedin": "https://www.linkedin.com/in/danielhanchen",
     "x": "https://x.com/danielhanchen"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Compression at the Edge",
@@ -599,6 +606,7 @@
     "linkedin": "https://www.linkedin.com/in/eugeneyan",
     "x": "https://x.com/eugeneyan"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Using LLMs to Secure Source Code",
@@ -676,6 +684,7 @@
     "linkedin": "https://www.linkedin.com/in/dr-christopher-lovejoy",
     "x": "https://x.com/chrislovejoy_"
    },
+   "idea": null,
    "talks": [
     {
      "title": "How to Leverage Domain Expertise — Chris Lovejoy, Notius Labs",
@@ -742,6 +751,7 @@
     "linkedin": "https://linkedin.com/in/dexterihorthy",
     "x": "https://x.com/dexhorthy"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Why Software Factories Fail",
@@ -807,6 +817,7 @@
     "github": "https://github.com/dpguthrie",
     "linkedin": "https://www.linkedin.com/in/doug-guthrie-07994a48"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Advanced Workshop: Mastering AI Observability — Doug Guthrie, Braintrust",
@@ -880,6 +891,7 @@
     "linkedin": "https://www.linkedin.com/in/enoreyes",
     "x": "https://x.com/enoreyes"
    },
+   "idea": null,
    "talks": [
     {
      "title": "How Forward Deployed Engineering is done at Factory",
@@ -948,6 +960,7 @@
     "linkedin": "https://www.linkedin.com/in/ido-salomon",
     "x": "https://x.com/idosal1"
    },
+   "idea": null,
    "talks": [
     {
      "title": "AgentCraft: Putting the Orc in Agent Orchestration",
@@ -1012,6 +1025,7 @@
     "linkedin": "https://www.linkedin.com/in/whats-ai",
     "x": "https://x.com/whats_ai"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Build Your Own Deep Research Agent + Technical Writer",
@@ -1076,6 +1090,7 @@
     "github": "https://github.com/olive-jy-song",
     "x": "https://x.com/olive_jy_song"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Agents at Scale: Inside MiniMax's Model and the Infrastructure Behind It",
@@ -1143,6 +1158,7 @@
     "github": "https://github.com/simonw",
     "x": "https://x.com/simonw"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Claude Fable, Claude Tag, and Anthropic's Culture — Cat Wu & Thariq Shihipar ft Simon Willison",
@@ -1213,6 +1229,7 @@
     "linkedin": "https://www.linkedin.com/in/drugastefania",
     "x": "https://x.com/stefania_druga"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Memory Harnesses for Long-Running Research Agents",
@@ -1283,6 +1300,7 @@
     "linkedin": "https://www.linkedin.com/in/antje-barth",
     "x": "https://x.com/anbarth"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Perception Agents — Antje Barth, Amazon AGI Lab",
@@ -1345,6 +1363,7 @@
     "linkedin": "https://www.linkedin.com/in/arafatkatze",
     "x": "https://x.com/arafatkatze"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Don't Build Slop (4 Levels of AI Agent Maturity)",
@@ -1409,6 +1428,7 @@
     "linkedin": "https://www.linkedin.com/in/filipmakraduli",
     "x": "https://x.com/f_makraduli"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Weight Folding, CUDA Streams, and the Bug That Made My Model Speak Backwards — Filip Makraduli",
@@ -1468,6 +1488,7 @@
     "linkedin": "https://www.linkedin.com/in/liadyosef",
     "x": "https://x.com/liadyosef"
    },
+   "idea": null,
    "talks": [
     {
      "title": "MCP Apps: Extending the Frontier — Ido Salomon & Liad Yosef",
@@ -1523,6 +1544,7 @@
     "github": "https://github.com/nishantgpt-lab",
     "linkedin": "https://www.linkedin.com/in/nishantgupta-ai"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Building Deterministic Infrastructure for Non-Deterministic AI Agents",
@@ -1581,6 +1603,7 @@
     "linkedin": "https://www.linkedin.com/in/abshkbh",
     "x": "https://x.com/abshkbh"
    },
+   "idea": null,
    "talks": [
     {
      "title": "From fork() to Fleet: Designing an Agent Sandbox Cloud — Abhishek Bhardwaj, OpenAI",
@@ -1634,6 +1657,7 @@
     "linkedin": "https://www.linkedin.com/in/corneliadavis",
     "x": "https://x.com/cdavisafc"
    },
+   "idea": null,
    "talks": [
     {
      "title": "MCP Tasks (async)/ Why the heck aren't any agents supporting MCP tasks/async?",
@@ -1693,6 +1717,7 @@
     "github": "https://github.com/arizedatngo",
     "x": "https://x.com/dat_attacked"
    },
+   "idea": null,
    "talks": [
     {
      "title": "LLM Observability, Evaluation, Experimentation Platform — Dat Ngo, Arize AI",
@@ -1747,6 +1772,7 @@
     "github": "https://github.com/jxmorris12",
     "x": "https://x.com/jxmnop"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Scaling Compute on Context",
@@ -1800,6 +1826,7 @@
     "linkedin": "https://www.linkedin.com/in/keeganmccallum3",
     "x": "https://x.com/keeganmccallum3"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Generative Video at the Speed of Light",
@@ -1853,6 +1880,7 @@
     "linkedin": "https://www.linkedin.com/in/leeerob",
     "x": "https://x.com/leerob"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Recursive Model Improvement",
@@ -1912,6 +1940,7 @@
     "linkedin": "https://www.linkedin.com/in/marcklingen",
     "x": "https://x.com/marcklingen"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Skill issue: Lessons from skilling up coding agents to use Langfuse",
@@ -1971,6 +2000,7 @@
     "linkedin": "https://www.linkedin.com/in/pabloc",
     "x": "https://x.com/pmc"
    },
+   "idea": null,
    "talks": [
     {
      "title": "On AI and Knowledge",
@@ -2027,6 +2057,7 @@
     "linkedin": "https://www.linkedin.com/in/pauliusztin",
     "x": "https://x.com/pauliusztin_"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Build Your Own Deep Research Agent + Technical Writer",
@@ -2080,6 +2111,7 @@
     "linkedin": "https://www.linkedin.com/in/rafwilinski",
     "x": "https://x.com/rafalwilinski"
    },
+   "idea": null,
    "talks": [
     {
      "title": "From 36% to 100%: How Self-Improving Agents Write Their Own Skills — Rafal Wilinski, Runlayer",
@@ -2135,6 +2167,7 @@
     "linkedin": "https://www.linkedin.com/in/ryan-marten",
     "x": "https://x.com/ryanmart3n"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Everything Is a Rollout — Alex Shaw + Ryan Marten, Terminal-Bench, Harbor, Laude Institute",
@@ -2190,6 +2223,7 @@
     "linkedin": "https://www.linkedin.com/in/samridhivaid",
     "x": "https://x.com/samridhivaid"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Build Your Own Deep Research Agent + Technical Writer",
@@ -2244,6 +2278,7 @@
     "linkedin": "https://www.linkedin.com/in/shafik-quoraishee",
     "x": "https://x.com/squoraishee"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Local Agentic Theory For Mobile Games — Shafik Quoraishee & Joanne Song, The New York Times",
@@ -2298,6 +2333,7 @@
     "linkedin": "https://linkedin.com/in/tejasq",
     "x": "https://x.com/tejaskumar_"
    },
+   "idea": null,
    "talks": [
     {
      "title": "Harnesses in AI: A Deep Dive — Tejas Kumar, IBM",
@@ -2338,21 +2374,22 @@
    "initials": "TK"
   },
   {
-   "id": "uday-kiran-medisetty",
+   "id": "lakshya-agrawal",
    "group": "quiet",
-   "name": "Uday Kiran Medisetty",
-   "role": "Distinguished Engineer",
-   "org": "Uber",
-   "source": "https://ai.engineer/speakers/uday-kiran-medisetty",
+   "name": "Lakshya Agrawal",
+   "role": "Creator and maintainer of",
+   "org": "GEPA",
+   "source": "https://ai.engineer/speakers/lakshya-agrawal",
    "links": {
-    "github": "https://github.com/udaykiranm",
-    "linkedin": "https://www.linkedin.com/in/udaykiran",
-    "x": "https://x.com/udaykiran"
+    "website": "https://lakshyaaagrawal.github.io/",
+    "github": "https://github.com/LakshyAAAgrawal",
+    "linkedin": "https://www.linkedin.com/in/lakshyaaagrawal/"
    },
+   "idea": "Beating RL With Reflection: GEPA and Optimize Anything",
    "talks": [
     {
-     "title": "Agentic SDLC at Uber - Building Blocks for Uber’s Software Factory",
-     "url": "https://ai.engineer/talks/17-YSUHo6Lk-agentic-sdlc-at-uber-building-blocks-ubers",
+     "title": "Beating RL With Reflection: GEPA and Optimize Anything — Lakshya A. Agrawal, GEPA",
+     "url": "https://ai.engineer/talks/OA-Mc60Rboo-beating-rl-reflection-gepa-optimize-anything",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     }
@@ -2365,40 +2402,35 @@
     "2026"
    ],
    "topics": [
-    "AI engineering leadership",
-    "AI platform engineering",
-    "Coding agents",
-    "Evals",
-    "MCP",
-    "Observability & reliability",
-    "Privacy & data governance",
-    "Safety & governance"
+    "Autoresearch",
+    "Prompt optimization"
    ],
-   "skills": [
-    "agents",
-    "evals",
-    "ai-dev"
+   "skills": [],
+   "products": [
+    {
+     "id": "gepa",
+     "name": "GEPA",
+     "area": "agents"
+    }
    ],
-   "products": [],
-   "initials": "UK"
+   "initials": "LA"
   },
   {
-   "id": "sarthak-aggarwal",
+   "id": "raghav-saboo",
    "group": "quiet",
-   "name": "Sarthak Aggarwal",
-   "role": "Co-founder",
-   "org": "Decawork",
-   "source": "https://ai.engineer/speakers/sarthak-aggarwal",
+   "name": "Raghav Saboo",
+   "role": "Staff Machine Learning Engineer, Tech Lead Search & Personalization",
+   "org": "DoorDash",
+   "source": "https://ai.engineer/speakers/raghav-saboo",
    "links": {
-    "website": "https://sarthak.site",
-    "github": "https://github.com/codesarthak",
-    "linkedin": "https://www.linkedin.com/in/sarthak-agg",
-    "x": "https://x.com/_sarthak4"
+    "website": "https://buildshipai.substack.com/",
+    "linkedin": "https://www.linkedin.com/in/raghavsaboo/"
    },
+   "idea": "Distill the LLM, Don't Serve It: Search & Personalization at DoorDash",
    "talks": [
     {
-     "title": "IT Admin for the AI Workforce — Sarthak Aggarwal, Decawork",
-     "url": "https://ai.engineer/talks/q-WOjZhOMCA-it-admin-ai-workforce",
+     "title": "Distill the LLM, Don't Serve It: Search & Personalization at DoorDash — Raghav Saboo, DoorDash",
+     "url": "https://ai.engineer/talks/ACPEpji5NV4-distill-llm-dont-serve-it-search-personalization",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     }
@@ -2411,315 +2443,30 @@
     "2026"
    ],
    "topics": [
-    "Agent engineering",
-    "Agentic commerce",
-    "AI engineering leadership",
-    "AI in finance",
-    "AI interface design",
-    "AI security",
-    "Coding agents",
-    "Computer use"
-   ],
-   "skills": [
-    "agents",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "SA"
-  },
-  {
-   "id": "pierluca-d-oro",
-   "group": "quiet",
-   "name": "Pierluca D'Oro",
-   "role": "Founder",
-   "org": "Programma Labs",
-   "source": "https://ai.engineer/speakers/pierluca-d-oro",
-   "links": {
-    "website": "https://proceduralia.com/",
-    "github": "https://github.com/proceduralia",
-    "linkedin": "https://www.linkedin.com/in/pierluca-doro",
-    "x": "https://x.com/proceduralia"
-   },
-   "talks": [
-    {
-     "title": "Computer Use at the Edge of the Statistical Precipice",
-     "url": "https://ai.engineer/talks/CTLa_p6iOiY-computer-use-at-edge-statistical-precipice",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Coding agents",
-    "Computer use",
-    "Data quality & curation",
-    "Evals",
-    "Observability & reliability",
-    "Reasoning & test-time compute",
-    "RL environments & simulators"
-   ],
-   "skills": [
-    "agents",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "PD"
-  },
-  {
-   "id": "jia-wu",
-   "group": "quiet",
-   "name": "Jia Wu",
-   "role": "Deployed Engineering Lead",
-   "org": "Cognition",
-   "source": "https://ai.engineer/speakers/jia-wu",
-   "links": {
-    "website": "https://www.jiarongwu.com/",
-    "github": "https://github.com/JRWu",
-    "linkedin": "https://www.linkedin.com/in/jia-rong-wu",
-    "x": "https://twitter.com/j_wu8"
-   },
-   "talks": [
-    {
-     "title": "How Forward Deployed Engineering is done at Cognition",
-     "url": "https://ai.engineer/talks/RVxym6mmIns-forward-deployed-engineering-is-done-at-cognition",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agentic commerce",
-    "AI engineering leadership",
-    "AI platform engineering",
-    "Coding agents",
-    "Enterprise AI",
-    "Forward-deployed engineering",
-    "Infrastructure & deployment",
-    "Observability & reliability"
-   ],
-   "skills": [
-    "agents",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "JW"
-  },
-  {
-   "id": "jared-joselowitz",
-   "group": "quiet",
-   "name": "Jared Joselowitz",
-   "role": "AI Research Engineer",
-   "org": "Ufonia",
-   "source": "https://ai.engineer/speakers/jared-joselowitz",
-   "links": {
-    "website": "https://jossy.co.za",
-    "github": "https://github.com/jaredjoss",
-    "linkedin": "https://www.linkedin.com/in/jaredjoselowitz",
-    "x": "https://x.com/jaredjoselowitz"
-   },
-   "talks": [
-    {
-     "title": "Shipping AI to a Million Patients Without an A/B Test",
-     "url": "https://ai.engineer/talks/McknwOzbmyg-shipping-ai-million-patients-without-b-test",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "AI in healthcare",
-    "AI interface design",
-    "AI platform engineering",
-    "Developer workflows & testing",
-    "Enterprise AI",
-    "Evals",
-    "Forward-deployed engineering",
-    "Model routing & gateways"
-   ],
-   "skills": [
-    "evals"
-   ],
-   "products": [],
-   "initials": "JJ"
-  },
-  {
-   "id": "isaac-miller",
-   "group": "quiet",
-   "name": "Isaac Miller",
-   "role": "Lead Maintainer of DSPy; Co-Founder",
-   "org": "cmpnd",
-   "source": "https://ai.engineer/speakers/isaac-miller",
-   "links": {
-    "website": "https://blog.isaacmiller.dev/posts/discord-mod",
-    "github": "https://github.com/isaacbmiller",
-    "linkedin": "https://www.linkedin.com/in/miller-isaac",
-    "x": "https://x.com/isaacbmiller1"
-   },
-   "talks": [
-    {
-     "title": "The Unreasonable Effectiveness of Separating the Task from the Model",
-     "url": "https://ai.engineer/talks/GgLQ02aO-hs-unreasonable-effectiveness-separating-task",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Coding agents",
-    "Developer workflows & testing",
-    "Evals",
-    "Infrastructure & deployment",
-    "Multi-agent systems",
-    "Prompt optimization",
-    "Retrieval-augmented generation"
+    "Distillation",
+    "Recommendation systems",
+    "Search & retrieval"
    ],
    "skills": [
     "retrieval",
-    "agents",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "IM"
-  },
-  {
-   "id": "gabriel-jorge-menezes",
-   "group": "quiet",
-   "name": "Gabriel Jorge Menezes",
-   "role": "Core Infrastructure Engineer",
-   "org": "Krea",
-   "source": "https://ai.engineer/speakers/gabriel-jorge-menezes",
-   "links": {
-    "website": "https://gab-menezes.github.io",
-    "github": "https://github.com/gab-menezes",
-    "linkedin": "https://www.linkedin.com/in/gabriel-jorge-menezes"
-   },
-   "talks": [
-    {
-     "title": "Infra behind Krea 2 - How to train and serve at scale",
-     "url": "https://ai.engineer/talks/byn9PURoBNY-infra-behind-krea-2-train-serve",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "AI cost & performance",
-    "AI platform engineering",
-    "Distributed training & inference",
-    "Evals",
-    "Generative media",
-    "Infrastructure & deployment",
-    "Local inference",
-    "Observability & reliability"
-   ],
-   "skills": [
-    "evals",
     "models"
    ],
    "products": [],
-   "initials": "GJ"
+   "initials": "RS"
   },
   {
-   "id": "frank-coyle",
+   "id": "ashok-chandrasekar",
    "group": "quiet",
-   "name": "Frank Coyle",
-   "role": "Lecturer, UCALBerkeley / Founder AI/Edge",
-   "org": "UC Berkeley",
-   "source": "https://ai.engineer/speakers/frank-coyle",
-   "links": {
-    "website": "https://www.frank-coyle.ai/",
-    "github": "https://github.com/frankc",
-    "linkedin": "https://www.linkedin.com/in/frank-coyle/",
-    "x": "https://x.com/coyle_frankp"
-   },
+   "name": "Ashok Chandrasekar",
+   "role": "Staff Software Engineer",
+   "org": "Google",
+   "source": "https://ai.engineer/speakers/ashok-chandrasekar",
+   "links": {},
+   "idea": "Are LLM Performance Benchmarks Reliable?",
    "talks": [
     {
-     "title": "Anthropic's CCA Exam as a Field-Guide for Agentic Engineering",
-     "url": "https://ai.engineer/talks/Z-c11pV_uvU-anthropics-cca-exam-as-field-guide-agentic",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Why Agentic Systems Need Ontologies — Frank Coyle, UC Berkeley",
-     "url": "https://ai.engineer/talks/Sir59K8ZDPU-ontologies-for-agentic-systems",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 2,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI in finance",
-    "AI in healthcare",
-    "Coding agents",
-    "Infrastructure & deployment",
-    "Knowledge graphs",
-    "MCP",
-    "ML fundamentals"
-   ],
-   "skills": [
-    "agents",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "FC"
-  },
-  {
-   "id": "doug-keller",
-   "group": "quiet",
-   "name": "Doug Keller",
-   "role": "Senior Staff AI Engineer",
-   "org": "SonderMind",
-   "source": "https://ai.engineer/speakers/doug-keller",
-   "links": {
-    "github": "https://github.com/dkeller-sondermind",
-    "linkedin": "https://www.linkedin.com/in/doug-keller"
-   },
-   "talks": [
-    {
-     "title": "Evals Driven-Development: Engineering a Mental Health AI Coach Ethically & Safely",
-     "url": "https://ai.engineer/talks/O72p-rBb2bA-evals-driven-development-engineering-mental-health",
+     "title": "Are LLM Performance Benchmarks Reliable? — Ashok Chandrasekar & Jason Kramberger, Google",
+     "url": "https://ai.engineer/talks/l1-D89bAuOA-are-llm-performance-benchmarks-reliable",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     }
@@ -2732,49 +2479,36 @@
     "2026"
    ],
    "topics": [
-    "AI in healthcare",
-    "AI interface design",
-    "AI security",
-    "Evals",
-    "Forward-deployed engineering",
-    "Infrastructure & deployment",
-    "ML fundamentals",
-    "Model routing & gateways"
+    "Benchmarks"
    ],
    "skills": [
     "evals"
    ],
    "products": [],
-   "initials": "DK"
+   "initials": "AC"
   },
   {
-   "id": "chris-alexiuk",
+   "id": "chengxi-taylor",
    "group": "quiet",
-   "name": "Chris Alexiuk",
-   "role": "Sr. Product Research Engineer",
-   "org": "NVIDIA",
-   "source": "https://ai.engineer/speakers/chris-alexiuk",
+   "name": "Chengxi Taylor",
+   "role": "Co-founder & President",
+   "org": "General Reasoning",
+   "source": "https://ai.engineer/speakers/chengxi-taylor",
    "links": {
-    "website": "https://www.alexi.uk",
-    "github": "https://github.com/chrisalexiuk-nvidia",
-    "linkedin": "https://www.linkedin.com/in/csalexiuk",
-    "x": "https://x.com/llm_wizard"
+    "website": "https://www.chengxitaylor.com",
+    "linkedin": "https://www.linkedin.com/in/chengxi-taylor",
+    "x": "https://x.com/chengxitaylor"
    },
+   "idea": "Scaling to Long Horizons",
    "talks": [
     {
-     "title": "Compression at the Edge",
-     "url": "https://ai.engineer/talks/J4_jCrTxMkk-compression-at-edge",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    },
-    {
-     "title": "Local Models: Trust, Control, Optimization",
-     "url": "https://ai.engineer/talks/FWMJQDH3iK0-local-models-trust-control-optimization",
+     "title": "Scaling to Long Horizons",
+     "url": "https://ai.engineer/talks/2bvtay8wGYI-scaling-long-horizons",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     }
    ],
-   "talkCount": 2,
+   "talkCount": 1,
    "editions": [
     "AI Engineer World's Fair 2026"
    ],
@@ -2782,22 +2516,19 @@
     "2026"
    ],
    "topics": [
-    "AI platform engineering",
-    "Evals",
-    "Inference",
+    "Coding agents",
+    "Fine-tuning",
     "Infrastructure & deployment",
-    "Local inference",
-    "MCP",
-    "ML fundamentals",
-    "Privacy & data governance"
+    "Post-training",
+    "World models"
    ],
    "skills": [
     "agents",
-    "evals",
-    "models"
+    "models",
+    "ai-dev"
    ],
    "products": [],
-   "initials": "CA"
+   "initials": "CT"
   },
   {
    "id": "brendan-rappazzo",
@@ -2812,6 +2543,7 @@
     "linkedin": "https://www.linkedin.com/in/brendan-rappazzo-hogan-763734115",
     "x": "https://x.com/brendanh0gan"
    },
+   "idea": "ALPHALAB: Autonomous Multi-Agent Research Across Optimization Domains with Frontier LLMs",
    "talks": [
     {
      "title": "ALPHALAB: Autonomous Multi-Agent Research Across Optimization Domains with Frontier LLMs — Brendan Rappazzo",
@@ -2852,21 +2584,97 @@
    "initials": "BR"
   },
   {
-   "id": "divakar-kumar",
+   "id": "jacqueline-wood",
    "group": "quiet",
-   "name": "Divakar Kumar",
-   "role": "Technical Architect",
-   "org": "FlyersSoft",
-   "source": "https://ai.engineer/speakers/divakar-kumar",
+   "name": "Jacqueline Wood",
+   "role": "Staff Machine Learning Engineer",
+   "org": "Spotify",
+   "source": "https://ai.engineer/speakers/jacqueline-wood",
    "links": {
-    "website": "https://iamdivakarkumar.com",
-    "github": "https://github.com/divakar-kumar",
-    "linkedin": "https://www.linkedin.com/in/divakar-kumar"
+    "linkedin": "https://www.linkedin.com/in/jacquelinewood"
    },
+   "idea": "Teaching LLMs to Speak Spotify",
    "talks": [
     {
-     "title": "Let's integrate AI Agents in Event-Sourced Systems",
-     "url": "https://ai.engineer/talks/o6U_2vd967Y-lets-integrate-ai-agents-in-event-sourced",
+     "title": "Teaching LLMs to Speak Spotify — Yves Raimond & Jacqueline Wood, Spotify",
+     "url": "https://ai.engineer/talks/2LRIAfng7eA-teaching-llms-speak-spotify",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Evals",
+    "Post-training",
+    "Recommendation systems"
+   ],
+   "skills": [
+    "evals",
+    "models"
+   ],
+   "products": [],
+   "initials": "JW"
+  },
+  {
+   "id": "suraj-gupta",
+   "group": "quiet",
+   "name": "Suraj Gupta",
+   "role": "Software Engineer",
+   "org": "Warp",
+   "source": "https://ai.engineer/speakers/suraj-gupta",
+   "links": {},
+   "idea": "How Software Factories Improve Themselves",
+   "talks": [
+    {
+     "title": "How Software Factories Improve Themselves — Suraj Gupta, Warp",
+     "url": "https://ai.engineer/talks/TN3mj92oZ8I-software-factories-improve-themselves",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent memory",
+    "Agent skills",
+    "Model routing & gateways",
+    "Software factories"
+   ],
+   "skills": [
+    "agents"
+   ],
+   "products": [],
+   "initials": "SG"
+  },
+  {
+   "id": "aman-gupta",
+   "group": "quiet",
+   "name": "Aman Gupta",
+   "role": "Principal Machine Learning Engineer",
+   "org": "Nubank",
+   "source": "https://ai.engineer/speakers/aman-gupta",
+   "links": {
+    "website": "https://amangupta.dev/",
+    "github": "https://github.com/agupta2304",
+    "linkedin": "https://www.linkedin.com/in/aman-gupta1",
+    "x": "https://x.com/aman2304"
+   },
+   "idea": "Simulation-Maxxing: How Nubank ships agents 20× faster with simulations",
+   "talks": [
+    {
+     "title": "Simulation-Maxxing: How Nubank ships agents 20× faster with simulations",
+     "url": "https://ai.engineer/talks/KMR_RBoCa4M-simulation-maxxing-nubank-ships-agents-20-faster",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     }
@@ -2880,20 +2688,798 @@
    ],
    "topics": [
     "Agent engineering",
-    "Agent memory",
     "AI in finance",
-    "Context engineering",
+    "Evals",
     "Infrastructure & deployment",
-    "ML fundamentals",
+    "MCP",
+    "Prompt optimization",
     "Retrieval-augmented generation"
    ],
    "skills": [
     "agents",
     "retrieval",
-    "context"
+    "evals"
    ],
    "products": [],
-   "initials": "DK"
+   "initials": "AG"
+  },
+  {
+   "id": "chaitanya-asawa",
+   "group": "quiet",
+   "name": "Chaitanya Asawa",
+   "role": "Head of Engineering for Clinical Decision Support",
+   "org": "Abridge",
+   "source": "https://ai.engineer/speakers/chaitanya-asawa",
+   "links": {
+    "github": "https://github.com/casawa",
+    "linkedin": "https://www.linkedin.com/in/casawa",
+    "x": "https://x.com/c_asawa"
+   },
+   "idea": "From Ambient Documentation to Clinical Intelligence",
+   "talks": [
+    {
+     "title": "From Ambient Documentation to Clinical Intelligence",
+     "url": "https://ai.engineer/talks/u6q-byPWUuo-from-ambient-documentation-clinical-intelligence",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI in finance",
+    "AI in healthcare",
+    "Evals",
+    "Reasoning & test-time compute",
+    "Robotics",
+    "Workflow automation"
+   ],
+   "skills": [
+    "evals"
+   ],
+   "products": [],
+   "initials": "CA"
+  },
+  {
+   "id": "isaac-miller",
+   "group": "quiet",
+   "name": "Isaac Miller",
+   "role": "Lead Maintainer of DSPy; Co-Founder",
+   "org": "cmpnd",
+   "source": "https://ai.engineer/speakers/isaac-miller",
+   "links": {
+    "website": "https://blog.isaacmiller.dev/posts/discord-mod",
+    "github": "https://github.com/isaacbmiller",
+    "linkedin": "https://www.linkedin.com/in/miller-isaac",
+    "x": "https://x.com/isaacbmiller1"
+   },
+   "idea": "The Unreasonable Effectiveness of Separating the Task from the Model",
+   "talks": [
+    {
+     "title": "The Unreasonable Effectiveness of Separating the Task from the Model",
+     "url": "https://ai.engineer/talks/GgLQ02aO-hs-unreasonable-effectiveness-separating-task",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Developer workflows & testing",
+    "Evals",
+    "Infrastructure & deployment",
+    "Multi-agent systems",
+    "Prompt optimization",
+    "Retrieval-augmented generation"
+   ],
+   "skills": [
+    "retrieval",
+    "agents",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "IM"
+  },
+  {
+   "id": "thais-castello-branco",
+   "group": "quiet",
+   "name": "Thais Castello Branco",
+   "role": "Founder",
+   "org": "Taste Labs",
+   "source": "https://ai.engineer/speakers/thais-castello-branco",
+   "links": {
+    "linkedin": "https://www.linkedin.com/in/thais-castello-branco",
+    "x": "https://x.com/thaiscbranco_"
+   },
+   "idea": "Ending AI Slop",
+   "talks": [
+    {
+     "title": "Ending AI Slop",
+     "url": "https://ai.engineer/talks/lCBf9slCanI-ending-ai-slop",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    },
+    {
+     "title": "Training Taste — Thais Castello Branco, Taste Labs",
+     "url": "https://ai.engineer/talks/sDMGWK4wZ_w-training-taste",
+     "event": null,
+     "year": null
+    }
+   ],
+   "talkCount": 2,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI interface design",
+    "Enterprise AI",
+    "Evals",
+    "Fine-tuning",
+    "Generative media",
+    "Observability & reliability",
+    "Post-training",
+    "Reward hacking"
+   ],
+   "skills": [
+    "evals",
+    "models"
+   ],
+   "products": [],
+   "initials": "TC"
+  },
+  {
+   "id": "daniel-bump",
+   "group": "quiet",
+   "name": "Daniel Bump",
+   "role": "Engineer",
+   "org": "Google / YouTube Ads",
+   "source": "https://ai.engineer/speakers/daniel-bump",
+   "links": {
+    "website": "https://www.danielbump.com/",
+    "linkedin": "https://www.linkedin.com/in/danielbump",
+    "x": "https://x.com/danieljbump"
+   },
+   "idea": "How Evals and Prompts Shape Agent Behavior",
+   "talks": [
+    {
+     "title": "How Evals and Prompts Shape Agent Behavior — Preetika Bhateja & Daniel Bump, YouTube Ads",
+     "url": "https://ai.engineer/talks/xyL2Ltkh-SA-evals-prompts-shape-agent-behavior",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Evals",
+    "Fine-tuning",
+    "Generative media",
+    "ML fundamentals",
+    "Multimodal AI",
+    "Prompting & in-context learning"
+   ],
+   "skills": [
+    "evals",
+    "agents",
+    "models"
+   ],
+   "products": [],
+   "initials": "DB"
+  },
+  {
+   "id": "samuel-denton",
+   "group": "quiet",
+   "name": "Samuel Denton",
+   "role": "Platform Research Lead",
+   "org": "Applied Compute",
+   "source": "https://ai.engineer/speakers/samuel-denton",
+   "links": {
+    "linkedin": "https://www.linkedin.com/in/sam-denton-161b50126",
+    "x": "https://x.com/samueldenton"
+   },
+   "idea": "Bringing Continual Learning into Enterprises",
+   "talks": [
+    {
+     "title": "Bringing Continual Learning into Enterprises",
+     "url": "https://ai.engineer/talks/ZTA0GwpAUak-bringing-continual-learning-into-enterprises",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Continual learning",
+    "Distillation",
+    "Enterprise AI",
+    "Evals",
+    "Fine-tuning",
+    "Infrastructure & deployment",
+    "Pretraining & midtraining",
+    "Safety & governance"
+   ],
+   "skills": [
+    "evals",
+    "models"
+   ],
+   "products": [],
+   "initials": "SD"
+  },
+  {
+   "id": "ali-khial",
+   "group": "quiet",
+   "name": "Ali Khial",
+   "role": "Head of AI/ML",
+   "org": "G2i",
+   "source": "https://ai.engineer/speakers/ali-khial",
+   "links": {
+    "website": "https://alikhial.com/",
+    "linkedin": "https://www.linkedin.com/in/ali-khial"
+   },
+   "idea": "Benchmarks: The Good, the Bad, and the Ugly",
+   "talks": [
+    {
+     "title": "Benchmarks: The Good, the Bad, and the Ugly",
+     "url": "https://ai.engineer/talks/jWq-aZIU0kM-benchmarks-good-bad-ugly",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Benchmarks",
+    "Coding agents",
+    "Evals",
+    "Post-training",
+    "Reasoning & test-time compute",
+    "Retrieval-augmented generation"
+   ],
+   "skills": [
+    "evals",
+    "retrieval",
+    "agents",
+    "models",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "AK"
+  },
+  {
+   "id": "kenny-workman",
+   "group": "quiet",
+   "name": "Kenny Workman",
+   "role": "CTO",
+   "org": "LatchBio",
+   "source": "https://ai.engineer/speakers/kenny-workman",
+   "links": {
+    "website": "https://kenbw.com",
+    "github": "https://github.com/kennyworkman",
+    "linkedin": "https://www.linkedin.com/in/kennyworkman",
+    "x": "https://x.com/kenbwork"
+   },
+   "idea": "Verifiable Environments for AI in Biology",
+   "talks": [
+    {
+     "title": "Verifiable Environments for AI in Biology — Kenny Workman, LatchBio",
+     "url": "https://ai.engineer/talks/3ZMUiFaQ3qg-verifiable-environments-ai-in-biology",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Autoresearch",
+    "Evals",
+    "RL environments & simulators"
+   ],
+   "skills": [
+    "agents",
+    "evals"
+   ],
+   "products": [],
+   "initials": "KW"
+  },
+  {
+   "id": "pierluca-d-oro",
+   "group": "quiet",
+   "name": "Pierluca D'Oro",
+   "role": "Founder",
+   "org": "Programma Labs",
+   "source": "https://ai.engineer/speakers/pierluca-d-oro",
+   "links": {
+    "website": "https://proceduralia.com/",
+    "github": "https://github.com/proceduralia",
+    "linkedin": "https://www.linkedin.com/in/pierluca-doro",
+    "x": "https://x.com/proceduralia"
+   },
+   "idea": "Computer Use at the Edge of the Statistical Precipice",
+   "talks": [
+    {
+     "title": "Computer Use at the Edge of the Statistical Precipice",
+     "url": "https://ai.engineer/talks/CTLa_p6iOiY-computer-use-at-edge-statistical-precipice",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent engineering",
+    "Coding agents",
+    "Computer use",
+    "Data quality & curation",
+    "Evals",
+    "Observability & reliability",
+    "Reasoning & test-time compute",
+    "RL environments & simulators"
+   ],
+   "skills": [
+    "agents",
+    "evals",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "PD"
+  },
+  {
+   "id": "arturo-nunez",
+   "group": "quiet",
+   "name": "Arturo Nunez",
+   "role": "Founder",
+   "org": "Nereu",
+   "source": "https://ai.engineer/speakers/arturo-nunez",
+   "links": {
+    "website": "https://www.arturonereu.com",
+    "github": "https://github.com/arturonereu",
+    "linkedin": "https://www.linkedin.com/in/arturonereu",
+    "x": "https://x.com/arturonereu"
+   },
+   "idea": "The Next Game Engine Won't Have a Manual",
+   "talks": [
+    {
+     "title": "The Next Game Engine Won't Have a Manual",
+     "url": "https://ai.engineer/talks/VBCDhRrvlYo-next-game-engine-wont-have-manual",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Coding agents",
+    "Generative media",
+    "Robotics"
+   ],
+   "skills": [
+    "agents",
+    "ai-dev"
+   ],
+   "products": [],
+   "initials": "AN"
+  },
+  {
+   "id": "jason-ma",
+   "group": "quiet",
+   "name": "Jason Ma",
+   "role": "CTO and co-founder",
+   "org": "Dyna Robotics",
+   "source": "https://ai.engineer/speakers/jason-ma",
+   "links": {
+    "website": "https://jasonma2016.github.io/",
+    "linkedin": "https://www.linkedin.com/in/jason-ma-742224a2"
+   },
+   "idea": "Robot Demos Are Easy. Reliability Is Hard",
+   "talks": [
+    {
+     "title": "Robot Demos Are Easy. Reliability Is Hard — Jason Ma, Dyna Robotics",
+     "url": "https://ai.engineer/talks/Sjfz1TqxzEs-robot-demos-are-easy-reliability-is-hard",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Fine-tuning",
+    "Observability & reliability",
+    "Robotics"
+   ],
+   "skills": [
+    "evals",
+    "models"
+   ],
+   "products": [],
+   "initials": "JM"
+  },
+  {
+   "id": "jared-joselowitz",
+   "group": "quiet",
+   "name": "Jared Joselowitz",
+   "role": "AI Research Engineer",
+   "org": "Ufonia",
+   "source": "https://ai.engineer/speakers/jared-joselowitz",
+   "links": {
+    "website": "https://jossy.co.za",
+    "github": "https://github.com/jaredjoss",
+    "linkedin": "https://www.linkedin.com/in/jaredjoselowitz",
+    "x": "https://x.com/jaredjoselowitz"
+   },
+   "idea": "Shipping AI to a Million Patients Without an A/B Test",
+   "talks": [
+    {
+     "title": "Shipping AI to a Million Patients Without an A/B Test",
+     "url": "https://ai.engineer/talks/McknwOzbmyg-shipping-ai-million-patients-without-b-test",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI in healthcare",
+    "AI interface design",
+    "AI platform engineering",
+    "Developer workflows & testing",
+    "Enterprise AI",
+    "Evals",
+    "Forward-deployed engineering",
+    "Model routing & gateways"
+   ],
+   "skills": [
+    "evals"
+   ],
+   "products": [],
+   "initials": "JJ"
+  },
+  {
+   "id": "lovina-dmello",
+   "group": "quiet",
+   "name": "Lovina Dmello",
+   "role": "Senior Software Developer",
+   "org": "NVIDIA",
+   "source": "https://ai.engineer/speakers/lovina-dmello",
+   "links": {
+    "website": "https://developer.nvidia.com/blog/author/ldmello",
+    "linkedin": "https://www.linkedin.com/in/lovina25"
+   },
+   "idea": "Your LLM Stack Is a 2008 Database With Better Marketing",
+   "talks": [
+    {
+     "title": "Your LLM Stack Is a 2008 Database With Better Marketing",
+     "url": "https://ai.engineer/talks/XjI-AR4pt7Y-your-llm-stack-is-2008-database-better",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Agent memory",
+    "AI engineering leadership",
+    "AI platform engineering",
+    "AI security",
+    "Enterprise AI",
+    "MCP",
+    "Model routing & gateways",
+    "Privacy & data governance"
+   ],
+   "skills": [
+    "agents"
+   ],
+   "products": [],
+   "initials": "LD"
+  },
+  {
+   "id": "todd-fisher",
+   "group": "quiet",
+   "name": "Todd Fisher",
+   "role": "Head of Engineering Launching 0-1 startups",
+   "org": "Philo Ventures",
+   "source": "https://ai.engineer/speakers/todd-fisher",
+   "links": {
+    "website": "https://www.linkedin.com/in/todd-b-fisher",
+    "linkedin": "https://www.linkedin.com/in/todd-b-fisher"
+   },
+   "idea": "While my guitar gently speaks",
+   "talks": [
+    {
+     "title": "While my guitar gently speaks",
+     "url": "https://ai.engineer/talks/E_Txocq-Lrw-while-my-guitar-gently-speaks",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Generative media",
+    "Voice AI"
+   ],
+   "skills": [],
+   "products": [],
+   "initials": "TF"
+  },
+  {
+   "id": "samuel-humeau",
+   "group": "quiet",
+   "name": "Samuel Humeau",
+   "role": "AI Scientist",
+   "org": "Mistral AI",
+   "source": "https://ai.engineer/speakers/samuel-humeau",
+   "links": {
+    "linkedin": "https://www.linkedin.com/in/samuelhumeau",
+    "x": "https://x.com/drsamuelbhume"
+   },
+   "idea": "Why TTS Models Now Look Like LLMs",
+   "talks": [
+    {
+     "title": "Why TTS Models Now Look Like LLMs — Samuel Humeau, Mistral",
+     "url": "https://ai.engineer/talks/3jGAU2sbAyY-why-tts-models-now-look-like-llms",
+     "event": "AI Engineer Europe 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer Europe 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Generative media",
+    "Inference",
+    "Voice AI"
+   ],
+   "skills": [
+    "models"
+   ],
+   "products": [
+    {
+     "id": "mistral-ai",
+     "name": "Mistral AI",
+     "area": "models"
+    }
+   ],
+   "initials": "SH"
+  },
+  {
+   "id": "akele-reed",
+   "group": "quiet",
+   "name": "Akele Reed",
+   "role": "Principal AI Engineer",
+   "org": "SonderMind",
+   "source": "https://ai.engineer/speakers/akele-reed",
+   "links": {
+    "linkedin": "https://www.linkedin.com/in/akele-reed"
+   },
+   "idea": "Evals Driven-Development: Engineering a Mental Health AI Coach Ethically & Safely",
+   "talks": [
+    {
+     "title": "Evals Driven-Development: Engineering a Mental Health AI Coach Ethically & Safely",
+     "url": "https://ai.engineer/talks/O72p-rBb2bA-evals-driven-development-engineering-mental-health",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI in healthcare",
+    "AI interface design",
+    "AI security",
+    "Evals",
+    "Forward-deployed engineering",
+    "Infrastructure & deployment",
+    "ML fundamentals",
+    "Model routing & gateways"
+   ],
+   "skills": [
+    "evals"
+   ],
+   "products": [],
+   "initials": "AR"
+  },
+  {
+   "id": "clay-cockrell",
+   "group": "quiet",
+   "name": "Clay Cockrell",
+   "role": "Co-Founder",
+   "org": "CoupleWork AI",
+   "source": "https://ai.engineer/speakers/clay-cockrell",
+   "links": {
+    "website": "https://www.walkandtalk.com",
+    "linkedin": "https://www.linkedin.com/in/clay-cockrell-906b0b4",
+    "x": "https://x.com/CoupleworkAI"
+   },
+   "idea": "AI is the World’s largest Relationship Therapist",
+   "talks": [
+    {
+     "title": "AI is the World’s largest Relationship Therapist — Clay Cockrell & Tony Fabrikant, CoupleWork AI",
+     "url": "https://ai.engineer/talks/yoONZwV2smc-ai-is-worlds-largest-relationship-therapist",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI in healthcare",
+    "Enterprise AI",
+    "Post-training",
+    "Safety & governance"
+   ],
+   "skills": [
+    "models"
+   ],
+   "products": [],
+   "initials": "CC"
+  },
+  {
+   "id": "soumya-gupta",
+   "group": "quiet",
+   "name": "Soumya Gupta",
+   "role": "ML Engineer",
+   "org": "Uber",
+   "source": "https://ai.engineer/speakers/soumya-gupta",
+   "links": {
+    "linkedin": "https://www.linkedin.com/in/guptasoumya12",
+    "x": "https://x.com/guptasoumya12"
+   },
+   "idea": "Building Closed-Loop Evals for a Multimodal Agent at Uber Scale",
+   "talks": [
+    {
+     "title": "Building Closed-Loop Evals for a Multimodal Agent at Uber Scale",
+     "url": "https://ai.engineer/talks/31GUkCBD-Uc-building-closed-loop-evals-multimodal-agent",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "Evals",
+    "Generative media",
+    "Model routing & gateways",
+    "Observability & reliability",
+    "Safety & governance",
+    "Vision & video"
+   ],
+   "skills": [
+    "evals",
+    "agents"
+   ],
+   "products": [],
+   "initials": "SG"
+  },
+  {
+   "id": "gabriel-jorge-menezes",
+   "group": "quiet",
+   "name": "Gabriel Jorge Menezes",
+   "role": "Core Infrastructure Engineer",
+   "org": "Krea",
+   "source": "https://ai.engineer/speakers/gabriel-jorge-menezes",
+   "links": {
+    "website": "https://gab-menezes.github.io",
+    "github": "https://github.com/gab-menezes",
+    "linkedin": "https://www.linkedin.com/in/gabriel-jorge-menezes"
+   },
+   "idea": "Infra behind Krea 2",
+   "talks": [
+    {
+     "title": "Infra behind Krea 2 - How to train and serve at scale",
+     "url": "https://ai.engineer/talks/byn9PURoBNY-infra-behind-krea-2-train-serve",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI cost & performance",
+    "AI platform engineering",
+    "Distributed training & inference",
+    "Evals",
+    "Generative media",
+    "Infrastructure & deployment",
+    "Local inference",
+    "Observability & reliability"
+   ],
+   "skills": [
+    "evals",
+    "models"
+   ],
+   "products": [],
+   "initials": "GJ"
   },
   {
    "id": "dillon-dupont",
@@ -2905,6 +3491,7 @@
    "links": {
     "github": "https://github.com/ddupont808"
    },
+   "idea": "Computer-Use 2.0: Agents Just Got Multi-Cursor",
    "talks": [
     {
      "title": "Computer-Use 2.0: Agents Just Got Multi-Cursor",
@@ -2945,22 +3532,22 @@
    "initials": "DD"
   },
   {
-   "id": "aman-gupta",
+   "id": "andrew-orobator",
    "group": "quiet",
-   "name": "Aman Gupta",
-   "role": "Principal Machine Learning Engineer",
-   "org": "Nubank",
-   "source": "https://ai.engineer/speakers/aman-gupta",
+   "name": "Andrew Orobator",
+   "role": "Senior Software Engineer",
+   "org": "Reddit",
+   "source": "https://ai.engineer/speakers/andrew-orobator",
    "links": {
-    "website": "https://amangupta.dev/",
-    "github": "https://github.com/agupta2304",
-    "linkedin": "https://www.linkedin.com/in/aman-gupta1",
-    "x": "https://x.com/aman2304"
+    "website": "https://medium.com/@andreworobator",
+    "github": "https://github.com/AOrobator",
+    "linkedin": "https://www.linkedin.com/in/andrew-orobator/"
    },
+   "idea": "Scale the Judgment, Not the Model",
    "talks": [
     {
-     "title": "Simulation-Maxxing: How Nubank ships agents 20× faster with simulations",
-     "url": "https://ai.engineer/talks/KMR_RBoCa4M-simulation-maxxing-nubank-ships-agents-20-faster",
+     "title": "Scale the Judgment, Not the Model — Andrew Orobator, Reddit",
+     "url": "https://ai.engineer/talks/6MudaeKdBSk-scale-judgment-not-model",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     }
@@ -2973,127 +3560,32 @@
     "2026"
    ],
    "topics": [
-    "Agent engineering",
-    "AI in finance",
-    "Evals",
-    "Infrastructure & deployment",
-    "MCP",
-    "Prompt optimization",
-    "Retrieval-augmented generation"
+    "Agent skills",
+    "Coding agents",
+    "Human-in-the-loop validation"
    ],
    "skills": [
     "agents",
-    "retrieval",
-    "evals"
+    "ai-dev"
    ],
    "products": [],
-   "initials": "AG"
+   "initials": "AO"
   },
   {
-   "id": "vivek-trivedy",
+   "id": "tim-sweeney",
    "group": "quiet",
-   "name": "Vivek Trivedy",
-   "role": "Head of Applied Research",
-   "org": "LangChain",
-   "source": "https://ai.engineer/speakers/vivek-trivedy",
-   "links": {
-    "website": "https://www.vtrivedy.com",
-    "github": "https://github.com/vtrivedy",
-    "linkedin": "https://www.linkedin.com/in/vivek-trivedy-433509134",
-    "x": "https://x.com/vtrivedy10"
-   },
-   "talks": [
-    {
-     "title": "Improving Agents is a Data Mining Problem",
-     "url": "https://ai.engineer/talks/CvRngaQZQ3Y-improving-agents-is-data-mining-problem",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Context engineering",
-    "Evals",
-    "Fine-tuning",
-    "Observability & reliability",
-    "Retrieval-augmented generation"
-   ],
-   "skills": [
-    "agents",
-    "retrieval",
-    "context",
-    "evals",
-    "models"
-   ],
-   "products": [],
-   "initials": "VT"
-  },
-  {
-   "id": "lukas-petersson",
-   "group": "quiet",
-   "name": "Lukas Petersson",
-   "role": "Co-Founder",
-   "org": "Andon Labs",
-   "source": "https://ai.engineer/speakers/lukas-petersson",
-   "links": {
-    "website": "https://lukaspet.substack.com",
-    "github": "https://github.com/lukaspetersson",
-    "linkedin": "https://www.linkedin.com/in/lukas-petersson-181a83172",
-    "x": "https://x.com/lukaspet"
-   },
-   "talks": [
-    {
-     "title": "Vending-Bench: Long-Horizon Agent Evals — Lukas Petersson, Andon Labs",
-     "url": "https://ai.engineer/talks/cO8qC6HBuBg-vending-bench-long-horizon-agent-evals",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI engineering leadership",
-    "Developer workflows & testing",
-    "Evals",
-    "Observability & reliability",
-    "Safety & governance"
-   ],
-   "skills": [
-    "agents",
-    "evals"
-   ],
-   "products": [],
-   "initials": "LP"
-  },
-  {
-   "id": "kenton-varda",
-   "group": "quiet",
-   "name": "Kenton Varda",
+   "name": "Tim Sweeney",
    "role": "Principal Engineer",
-   "org": "Cloudflare",
-   "source": "https://ai.engineer/speakers/kenton-varda",
+   "org": "Weights & Biases",
+   "source": "https://ai.engineer/speakers/tim-sweeney",
    "links": {
-    "website": "https://lanparty.house",
-    "github": "https://github.com/kentonv",
-    "x": "https://x.com/kentonvarda"
+    "linkedin": "https://www.linkedin.com/in/tssweeney"
    },
+   "idea": "An AI Research Agent That Runs Your Experiments",
    "talks": [
     {
-     "title": "Gadgets: Personal app vibe coding that is actually safe",
-     "url": "https://ai.engineer/talks/RmS5s6Wbin4-gadgets-personal-app-vibe-coding-that-is",
+     "title": "An AI Research Agent That Runs Your Experiments — Tim Sweeney, Weights & Biases",
+     "url": "https://ai.engineer/talks/hd7TOvmyAxU-ai-research-agent-that-runs-your-experiments",
      "event": "AI Engineer World's Fair 2026",
      "year": "2026"
     }
@@ -3106,313 +3598,62 @@
     "2026"
    ],
    "topics": [
-    "Agent engineering",
-    "AI security",
-    "Coding agents",
-    "Developer workflows & testing",
+    "Autoresearch",
+    "Evals",
+    "Observability & reliability"
+   ],
+   "skills": [
+    "agents",
+    "evals"
+   ],
+   "products": [
+    {
+     "id": "wandb",
+     "name": "Weights & Biases",
+     "area": "training"
+    }
+   ],
+   "initials": "TS"
+  },
+  {
+   "id": "mike-phipps",
+   "group": "quiet",
+   "name": "Mike Phipps",
+   "role": "Lead AI Engineer",
+   "org": "Gates Foundation",
+   "source": "https://ai.engineer/speakers/mike-phipps",
+   "links": {
+    "linkedin": "https://www.linkedin.com/in/mike-phipps-79339a38"
+   },
+   "idea": "Your Moat Is Your Data Model",
+   "talks": [
+    {
+     "title": "Your Moat Is Your Data Model",
+     "url": "https://ai.engineer/talks/jt1Pbr_n6oU-your-moat-is-your-data-model",
+     "event": "AI Engineer World's Fair 2026",
+     "year": "2026"
+    }
+   ],
+   "talkCount": 1,
+   "editions": [
+    "AI Engineer World's Fair 2026"
+   ],
+   "years": [
+    "2026"
+   ],
+   "topics": [
+    "AI engineering leadership",
     "Infrastructure & deployment",
+    "Knowledge graphs",
+    "Retrieval-augmented generation",
     "Safety & governance"
    ],
    "skills": [
-    "agents",
-    "ai-dev"
+    "data",
+    "retrieval"
    ],
    "products": [],
-   "initials": "KV"
-  },
-  {
-   "id": "dhruv-batra",
-   "group": "quiet",
-   "name": "Dhruv Batra",
-   "role": "Co-founder & Chief Scientist",
-   "org": "Yutori",
-   "source": "https://ai.engineer/speakers/dhruv-batra",
-   "links": {
-    "website": "https://dhruvbatra.com",
-    "github": "https://github.com/dhruvbatra",
-    "linkedin": "https://www.linkedin.com/in/dhruv-batra-dbatra",
-    "x": "https://x.com/dhruvbatra_"
-   },
-   "talks": [
-    {
-     "title": "Computer-use models will agentify the web, not APIs",
-     "url": "https://ai.engineer/talks/Ki980nV0__0-computer-use-models-will-agentify-web-not",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "Coding agents",
-    "Computer use",
-    "Evals",
-    "MCP",
-    "Vision & video"
-   ],
-   "skills": [
-    "agents",
-    "evals",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "DB"
-  },
-  {
-   "id": "chaitanya-asawa",
-   "group": "quiet",
-   "name": "Chaitanya Asawa",
-   "role": "Head of Engineering for Clinical Decision Support",
-   "org": "Abridge",
-   "source": "https://ai.engineer/speakers/chaitanya-asawa",
-   "links": {
-    "github": "https://github.com/casawa",
-    "linkedin": "https://www.linkedin.com/in/casawa",
-    "x": "https://x.com/c_asawa"
-   },
-   "talks": [
-    {
-     "title": "From Ambient Documentation to Clinical Intelligence",
-     "url": "https://ai.engineer/talks/u6q-byPWUuo-from-ambient-documentation-clinical-intelligence",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "AI in finance",
-    "AI in healthcare",
-    "Evals",
-    "Reasoning & test-time compute",
-    "Robotics",
-    "Workflow automation"
-   ],
-   "skills": [
-    "evals"
-   ],
-   "products": [],
-   "initials": "CA"
-  },
-  {
-   "id": "natalie-meurer",
-   "group": "quiet",
-   "name": "Natalie Meurer",
-   "role": "Head of Agent Engineering",
-   "org": "Sierra",
-   "source": "https://ai.engineer/speakers/natalie-meurer",
-   "links": {
-    "website": "https://sierra.ai/author/natalie-meurer",
-    "github": "https://github.com/nataliemeurer",
-    "linkedin": "https://www.linkedin.com/in/nataliemeurer",
-    "x": "https://x.com/natalie_meurer"
-   },
-   "talks": [
-    {
-     "title": "The Dirty Secret of Forward Deployed Engineering",
-     "url": "https://ai.engineer/talks/Byv311hdoHE-dirty-secret-forward-deployed-engineering",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Coding agents",
-    "Enterprise AI",
-    "Forward-deployed engineering",
-    "Infrastructure & deployment",
-    "Retrieval-augmented generation"
-   ],
-   "skills": [
-    "retrieval",
-    "agents",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "NM"
-  },
-  {
-   "id": "moritz-johner",
-   "group": "quiet",
-   "name": "Moritz Johner",
-   "role": "Staff Engineer",
-   "org": "Form3",
-   "source": "https://ai.engineer/speakers/moritz-johner",
-   "links": {
-    "website": "https://www.form3.tech",
-    "github": "https://github.com/moolen",
-    "linkedin": "https://www.linkedin.com/in/moritz-johner"
-   },
-   "talks": [
-    {
-     "title": "We Gave an Agent Production Code Access and Then Tried to Sleep at Night",
-     "url": "https://ai.engineer/talks/LqLoYksJ6do-we-gave-agent-production-code-access-then",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI security",
-    "Coding agents",
-    "Developer workflows & testing",
-    "Sandboxes & isolation"
-   ],
-   "skills": [
-    "agents",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "MJ"
-  },
-  {
-   "id": "alex-bauer",
-   "group": "quiet",
-   "name": "Alex Bauer",
-   "role": "Co-founder",
-   "org": "Upside",
-   "source": "https://ai.engineer/speakers/alex-bauer",
-   "links": {
-    "website": "https://alexbauer.net",
-    "github": "https://github.com/aeromusek",
-    "linkedin": "https://www.linkedin.com/in/alexdbauer",
-    "x": "https://x.com/alexdbauer"
-   },
-   "talks": [
-    {
-     "title": "How Juries and Librarians Can Solve GTM's AI Trust Problem",
-     "url": "https://ai.engineer/talks/YZQsWVeN3rE-juries-librarians-solve-gtms-ai-trust-problem",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "Agent engineering",
-    "AI engineering leadership",
-    "AI in sales & marketing",
-    "Enterprise AI",
-    "Retrieval-augmented generation"
-   ],
-   "skills": [
-    "retrieval",
-    "agents"
-   ],
-   "products": [],
-   "initials": "AB"
-  },
-  {
-   "id": "ramana-siddanth-emani",
-   "group": "quiet",
-   "name": "Ramana Siddanth Emani",
-   "role": "Data Scientist",
-   "org": "Auditoria AI",
-   "source": "https://ai.engineer/speakers/ramana-siddanth-emani",
-   "links": {
-    "website": "https://www.auditoria.ai",
-    "github": "https://github.com/siddanthemani",
-    "linkedin": "https://www.linkedin.com/in/siddanth-emani",
-    "x": "https://x.com/siddanth2486"
-   },
-   "talks": [
-    {
-     "title": "Your Finance Agent's Bottleneck Is You",
-     "url": "https://ai.engineer/talks/z0sh8HyTrDo-your-finance-agents-bottleneck-is-you",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "AI in finance",
-    "Coding agents",
-    "Developer workflows & testing",
-    "MCP"
-   ],
-   "skills": [
-    "agents",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "RS"
-  },
-  {
-   "id": "niels-rogge",
-   "group": "quiet",
-   "name": "Niels Rogge",
-   "role": "Machine Learning Engineer",
-   "org": "Hugging Face",
-   "source": "https://ai.engineer/speakers/niels-rogge",
-   "links": {
-    "website": "https://nielsrogge.github.io",
-    "github": "https://github.com/nielsrogge",
-    "linkedin": "https://www.linkedin.com/in/niels-rogge-a3b7a3127",
-    "x": "https://x.com/nielsrogge"
-   },
-   "talks": [
-    {
-     "title": "How I automate my own job at Hugging Face using agents",
-     "url": "https://ai.engineer/talks/FLUoowDJg4I-i-automate-my-own-job-at-hugging",
-     "event": "AI Engineer World's Fair 2026",
-     "year": "2026"
-    }
-   ],
-   "talkCount": 1,
-   "editions": [
-    "AI Engineer World's Fair 2026"
-   ],
-   "years": [
-    "2026"
-   ],
-   "topics": [
-    "AI engineering leadership",
-    "Coding agents",
-    "Infrastructure & deployment",
-    "Retrieval-augmented generation"
-   ],
-   "skills": [
-    "agents",
-    "retrieval",
-    "ai-dev"
-   ],
-   "products": [],
-   "initials": "NR"
+   "initials": "MP"
   }
  ]
 }

@@ -30,7 +30,7 @@ export const structure: Section[] = [
     line: "Who builds applied AI and where they work: engineers and researchers, not the famous names.",
     pages: [
       { label: "People", href: "/people/", note: "Engineers, researchers and technical founders, with what they build and talk about" },
-      { label: "Quiet builders", href: "/people/?g=quiet", note: "People who build more than they speak. You may not know them yet" },
+      { label: "Quiet builders", href: "/people/?g=quiet", note: "Good ideas with little stage time, ranked by the idea, not the fame" },
       { label: "Companies", href: "/companies/", note: "Who is hiring, what they build and what they bring to the stage" },
     ],
   },

@@ -39,6 +39,8 @@ const people = picks.filter(({ id }) => byId.has(id)).map(({ id, group }) => {
   return {
     // "Developer Experience, OpenAI" at OpenAI: keep the role without the company repeated
     id, group, name: p.name, role: p.role && p.org ? p.role.replace(new RegExp(`[,@]?\\s*(at\\s+)?${p.org.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}\\s*$`, "i"), "").trim() || null : p.role, org: p.org, source: p.source, links: p.links,
+    // a quiet builder is shown by their idea: the title of their talk, without the "— Name, Company" tail
+    idea: group === "quiet" && talks[0] ? talks[0].title.replace(/\s+[—–-]\s+[^—–-]*$/, "").trim() : null,
     talks, talkCount: p.talks, editions: [...new Set(p.editions.map((e) => eventName(e) ?? e))], years, topics: p.topics,
     skills: [...skillCount.entries()].sort((a, b) => b[1] - a[1]).map(([s]) => s).slice(0, 5),
     products: toolsByOrg.get(norm(p.org)) ?? [],
