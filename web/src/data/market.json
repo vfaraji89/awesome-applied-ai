@@ -1,17 +1,22 @@
 {
- "generatedAt": "2026-11-14T03:12:37.283Z",
+ "generatedAt": "2026-11-14T03:15:52.316Z",
  "since": "2026-10-01",
  "sinceQuarter": "2026 Q4",
  "totals": {
-  "processed": 1619,
-  "listedNow": 1563,
-  "newToday": 92,
-  "allTime": 2954,
-  "openNow": 1563,
+  "processed": 1621,
+  "listedNow": 2218,
+  "newToday": 95,
+  "allTime": 2957,
+  "openNow": 2218,
   "remoteShare": 20,
   "dated": 84
  },
  "sources": [
+  {
+   "id": "ashby",
+   "boards": 103,
+   "ai": 658
+  },
   {
    "id": "greenhouse",
    "boards": 77,
@@ -33,14 +38,14 @@
    "ai": 0
   },
   {
-   "id": "workable",
-   "boards": 1,
-   "ai": 5
-  },
-  {
    "id": "jobicy",
    "boards": 1,
    "ai": 2
+  },
+  {
+   "id": "workable",
+   "boards": 1,
+   "ai": 5
   },
   {
    "id": "hackernews",
@@ -68,7 +73,7 @@
    "ai": 91
   }
  ],
- "failed": 99,
+ "failed": 2,
  "roles": [
   {
    "id": "rd-researcher",
@@ -76,7 +81,7 @@
   },
   {
    "id": "ai-platform-engineer",
-   "n": 291
+   "n": 292
   },
   {
    "id": "other-ai",
@@ -84,15 +89,15 @@
   },
   {
    "id": "forward-deployed-engineer",
-   "n": 219
+   "n": 220
   },
   {
    "id": "agentic-ai-engineer",
-   "n": 178
+   "n": 179
   },
   {
    "id": "applied-ai-engineer",
-   "n": 145
+   "n": 144
   },
   {
    "id": "ai-native-developer",
@@ -110,7 +115,7 @@
  "seniority": [
   {
    "id": "Mid",
-   "n": 627
+   "n": 628
   },
   {
    "id": "Senior",
@@ -122,7 +127,7 @@
   },
   {
    "id": "Lead",
-   "n": 139
+   "n": 140
   },
   {
    "id": "Intern",
@@ -164,7 +169,7 @@
   },
   {
    "title": "Machine Learning Engineer",
-   "n": 16
+   "n": 17
   },
   {
    "title": "Senior Data Scientist",
@@ -271,7 +276,7 @@
   },
   {
    "id": "agents",
-   "n": 1016,
+   "n": 1018,
    "share": 63
   },
   {
@@ -281,13 +286,13 @@
   },
   {
    "id": "models",
-   "n": 791,
+   "n": 792,
    "share": 49
   },
   {
    "id": "evals",
-   "n": 737,
-   "share": 46
+   "n": 736,
+   "share": 45
   },
   {
    "id": "product",
@@ -296,7 +301,7 @@
   },
   {
    "id": "context",
-   "n": 470,
+   "n": 469,
    "share": 29
   },
   {
@@ -316,13 +321,13 @@
   },
   {
    "id": "security",
-   "n": 328,
+   "n": 329,
    "share": 20
   },
   {
    "id": "ai-dev",
-   "n": 316,
-   "share": 20
+   "n": 315,
+   "share": 19
   }
  ],
  "tasks": [
@@ -335,32 +340,32 @@
   {
    "id": "agents",
    "name": "Build agents and tool use",
-   "n": 285,
+   "n": 284,
    "share": 21
   },
   {
    "id": "prototype",
    "name": "Prototype and iterate fast",
-   "n": 275,
+   "n": 274,
    "share": 20
   },
   {
    "id": "ship",
    "name": "Ship AI features to production",
-   "n": 263,
+   "n": 261,
    "share": 19
   },
   {
    "id": "train",
    "name": "Train and fine-tune models",
-   "n": 212,
+   "n": 213,
    "share": 16
   },
   {
    "id": "integrate",
    "name": "Integrate with existing systems",
-   "n": 209,
-   "share": 15
+   "n": 212,
+   "share": 16
   },
   {
    "id": "evaluate",
@@ -371,7 +376,7 @@
   {
    "id": "data",
    "name": "Build data pipelines and datasets",
-   "n": 160,
+   "n": 161,
    "share": 12
   },
   {
@@ -408,7 +413,7 @@
   },
   {
    "name": "TypeScript",
-   "n": 270,
+   "n": 268,
    "inStack": true,
    "preferred": 39
   },
@@ -432,9 +437,9 @@
   },
   {
    "name": "Google Cloud",
-   "n": 193,
+   "n": 194,
    "inStack": true,
-   "preferred": 18
+   "preferred": 19
   },
   {
    "name": "MCP",
@@ -533,6 +538,12 @@
    "preferred": 1
   },
   {
+   "name": "ElevenLabs",
+   "n": 18,
+   "inStack": true,
+   "preferred": 0
+  },
+  {
    "name": "LangSmith",
    "n": 18,
    "inStack": false,
@@ -543,12 +554,6 @@
    "n": 17,
    "inStack": false,
    "preferred": 5
-  },
-  {
-   "name": "ElevenLabs",
-   "n": 17,
-   "inStack": true,
-   "preferred": 0
   },
   {
    "name": "Redis",
@@ -651,11 +656,11 @@
    },
    {
     "id": "3-4",
-    "n": 82
+    "n": 83
    },
    {
     "id": "5-7",
-    "n": 118
+    "n": 119
    },
    {
     "id": "8+",
@@ -666,10 +671,10 @@
  "byQuarter": [
   {
    "quarter": "2026 Q4",
-   "n": 1619
+   "n": 1621
   }
  ],
- "reposts": 1,
+ "reposts": 4,
  "insights": {
   "perAd": {
    "skills": 4.6,
@@ -712,10 +717,10 @@
    ],
    "n": [
     310,
-    291,
-    219,
-    178,
-    145,
+    292,
+    220,
+    179,
+    144,
     128,
     75,
     52
@@ -738,7 +743,7 @@
     [
      83,
      52,
-     41,
+     40,
      67,
      53,
      24,
@@ -750,12 +755,12 @@
      15
     ],
     [
-     79,
+     78,
      70,
      88,
      14,
      34,
-     54,
+     55,
      32,
      29,
      40,
@@ -774,22 +779,22 @@
      39,
      12,
      38,
-     24,
+     25,
      29
     ],
     [
      78,
      74,
-     52,
+     51,
      40,
-     63,
+     62,
      37,
-     43,
+     42,
      11,
      24,
      43,
      28,
-     26
+     24
     ],
     [
      84,
@@ -862,10 +867,10 @@
    ],
    "n": [
     310,
-    291,
-    219,
-    178,
-    145,
+    292,
+    220,
+    179,
+    144,
     128,
     75,
     52
@@ -890,7 +895,7 @@
      11,
      10,
      13,
-     13,
+     14,
      9,
      10,
      10,
@@ -903,7 +908,7 @@
      20,
      21,
      20,
-     26,
+     25,
      4,
      23,
      3,
@@ -919,7 +924,7 @@
      11,
      19,
      13,
-     13,
+     14,
      15,
      7,
      11,
@@ -931,9 +936,9 @@
      14,
      21,
      28,
-     23,
+     22,
      15,
-     9,
+     10,
      23,
      7,
      0,
@@ -996,7 +1001,7 @@
    {
     "a": "evals",
     "b": "context",
-    "n": 318,
+    "n": 317,
     "share": 20,
     "lift": 1.49
    },
@@ -1005,14 +1010,7 @@
     "b": "ai-dev",
     "n": 95,
     "share": 6,
-    "lift": 1.48
-   },
-   {
-    "a": "context",
-    "b": "ai-dev",
-    "n": 133,
-    "share": 8,
-    "lift": 1.45
+    "lift": 1.49
    },
    {
     "a": "retrieval",
@@ -1022,18 +1020,25 @@
     "lift": 1.45
    },
    {
-    "a": "product",
-    "b": "retrieval",
-    "n": 183,
-    "share": 11,
-    "lift": 1.41
+    "a": "context",
+    "b": "ai-dev",
+    "n": 131,
+    "share": 8,
+    "lift": 1.44
    },
    {
     "a": "evals",
     "b": "retrieval",
     "n": 257,
     "share": 16,
-    "lift": 1.4
+    "lift": 1.41
+   },
+   {
+    "a": "product",
+    "b": "retrieval",
+    "n": 183,
+    "share": 11,
+    "lift": 1.41
    },
    {
     "a": "evals",
@@ -1046,8 +1051,13 @@
   "remoteByRole": [
    {
     "id": "ai-platform-engineer",
-    "n": 291,
+    "n": 292,
     "share": 25
+   },
+   {
+    "id": "applied-ai-engineer",
+    "n": 144,
+    "share": 24
    },
    {
     "id": "ai-native-developer",
@@ -1055,19 +1065,9 @@
     "share": 24
    },
    {
-    "id": "applied-ai-engineer",
-    "n": 145,
-    "share": 23
-   },
-   {
     "id": "ai-solutions-architect",
     "n": 75,
     "share": 23
-   },
-   {
-    "id": "forward-deployed-engineer",
-    "n": 219,
-    "share": 21
    },
    {
     "id": "ai-native-architect",
@@ -1075,8 +1075,13 @@
     "share": 21
    },
    {
+    "id": "forward-deployed-engineer",
+    "n": 220,
+    "share": 20
+   },
+   {
     "id": "agentic-ai-engineer",
-    "n": 178,
+    "n": 179,
     "share": 18
    },
    {
@@ -1088,8 +1093,8 @@
   "yearsByLevel": [
    {
     "id": "Mid",
-    "n": 117,
-    "median": 4,
+    "n": 118,
+    "median": 5,
     "low": 3,
     "high": 5
    },
@@ -1106,11 +1111,18 @@
     "median": 6,
     "low": 4,
     "high": 8
+   },
+   {
+    "id": "Lead",
+    "n": 20,
+    "median": 3,
+    "low": 2,
+    "high": 7
    }
   ],
   "labs": {
    "n": 115,
-   "rest": 1504,
+   "rest": 1506,
    "skills": [
     {
      "id": "software",
@@ -1120,7 +1132,7 @@
     {
      "id": "agents",
      "lab": 53,
-     "rest": 63
+     "rest": 64
     },
     {
      "id": "customer",
@@ -1346,7 +1358,7 @@
       },
       {
        "id": "ship",
-       "share": 22,
+       "share": 21,
        "lift": 1.1
       },
       {
@@ -1429,7 +1441,7 @@
       },
       {
        "id": "forward-deployed-engineer",
-       "share": 79
+       "share": 78
       },
       {
        "id": "applied-ai-engineer",
@@ -1452,7 +1464,7 @@
    },
    {
     "id": "agents",
-    "n": 1016,
+    "n": 1018,
     "share": 63,
     "topRole": {
      "id": "agentic-ai-engineer",
@@ -1537,12 +1549,12 @@
       },
       {
        "id": "product",
-       "share": 35,
+       "share": 34,
        "lift": 1.1
       },
       {
        "id": "architecture",
-       "share": 30,
+       "share": 29,
        "lift": 1.1
       },
       {
@@ -1632,11 +1644,11 @@
       {
        "id": "integrate",
        "share": 18,
-       "lift": 1.1
+       "lift": 1.2
       },
       {
        "id": "train",
-       "share": 17,
+       "share": 18,
        "lift": 1.1
       },
       {
@@ -1646,7 +1658,7 @@
       },
       {
        "id": "data",
-       "share": 13,
+       "share": 14,
        "lift": 1.1
       }
      ],
@@ -1787,7 +1799,7 @@
       },
       {
        "id": "ai-dev",
-       "share": 25,
+       "share": 24,
        "lift": 1.3
       },
       {
@@ -1891,7 +1903,7 @@
       },
       {
        "id": "ship",
-       "share": 25,
+       "share": 24,
        "lift": 1.3
       },
       {
@@ -1979,19 +1991,19 @@
       },
       {
        "id": "applied-ai-engineer",
-       "share": 52
+       "share": 51
       },
       {
        "id": "ai-native-developer",
        "share": 48
       },
       {
-       "id": "ai-platform-engineer",
+       "id": "agentic-ai-engineer",
        "share": 41
       },
       {
-       "id": "agentic-ai-engineer",
-       "share": 41
+       "id": "ai-platform-engineer",
+       "share": 40
       },
       {
        "id": "rd-researcher",
@@ -2002,7 +2014,7 @@
    },
    {
     "id": "models",
-    "n": 791,
+    "n": 792,
     "share": 49,
     "topRole": {
      "id": "ai-solutions-architect",
@@ -2143,17 +2155,17 @@
        "lift": 2
       },
       {
-       "name": "Deepgram",
-       "share": 1,
-       "lift": 2
-      },
-      {
        "name": "Ollama",
        "share": 1,
        "lift": 2
       },
       {
        "name": "NVIDIA Dynamo",
+       "share": 1,
+       "lift": 2
+      },
+      {
+       "name": "Hugging Face Transformers",
        "share": 1,
        "lift": 2
       }
@@ -2277,8 +2289,8 @@
    },
    {
     "id": "evals",
-    "n": 737,
-    "share": 46,
+    "n": 736,
+    "share": 45,
     "topRole": {
      "id": "agentic-ai-engineer",
      "share": 71
@@ -2352,7 +2364,7 @@
       },
       {
        "id": "ai-dev",
-       "share": 23,
+       "share": 22,
        "lift": 1.2
       },
       {
@@ -2377,7 +2389,7 @@
       },
       {
        "id": "data",
-       "share": 23,
+       "share": 24,
        "lift": 0.9
       }
      ],
@@ -2446,7 +2458,7 @@
       },
       {
        "id": "ship",
-       "share": 25,
+       "share": 24,
        "lift": 1.3
       },
       {
@@ -2521,7 +2533,7 @@
       },
       {
        "id": "applied-ai-engineer",
-       "share": 63
+       "share": 62
       },
       {
        "id": "ai-native-architect",
@@ -2556,7 +2568,7 @@
     "share": 32,
     "topRole": {
      "id": "forward-deployed-engineer",
-     "share": 54
+     "share": 55
     },
     "with": [
      {
@@ -2637,7 +2649,7 @@
       },
       {
        "id": "evals",
-       "share": 47,
+       "share": 46,
        "lift": 1
       },
       {
@@ -2792,7 +2804,7 @@
      "byRole": [
       {
        "id": "forward-deployed-engineer",
-       "share": 54
+       "share": 55
       },
       {
        "id": "ai-native-architect",
@@ -2827,7 +2839,7 @@
    },
    {
     "id": "context",
-    "n": 470,
+    "n": 469,
     "share": 29,
     "topRole": {
      "id": "agentic-ai-engineer",
@@ -2855,12 +2867,12 @@
      {
       "name": "Vapi",
       "share": 2,
-      "lift": 3.4
+      "lift": 3.5
      },
      {
       "name": "Deepgram",
-      "share": 2,
-      "lift": 3.4
+      "share": 1,
+      "lift": 3.5
      },
      {
       "name": "Weights & Biases",
@@ -2935,12 +2947,12 @@
       {
        "name": "Vapi",
        "share": 2,
-       "lift": 3.4
+       "lift": 3.5
       },
       {
        "name": "Deepgram",
-       "share": 2,
-       "lift": 3.4
+       "share": 1,
+       "lift": 3.5
       },
       {
        "name": "Weights & Biases",
@@ -2986,7 +2998,7 @@
      "tasks": [
       {
        "id": "ship",
-       "share": 28,
+       "share": 27,
        "lift": 1.4
       },
       {
@@ -3016,7 +3028,7 @@
       },
       {
        "id": "train",
-       "share": 15,
+       "share": 16,
        "lift": 1
       },
       {
@@ -3071,7 +3083,7 @@
       },
       {
        "id": "applied-ai-engineer",
-       "share": 43
+       "share": 42
       },
       {
        "id": "ai-platform-engineer",
@@ -3811,7 +3823,7 @@
      "tasks": [
       {
        "id": "agents",
-       "share": 33,
+       "share": 34,
        "lift": 1.6
       },
       {
@@ -3837,7 +3849,7 @@
       {
        "id": "retrieval",
        "share": 18,
-       "lift": 3.9
+       "lift": 4
       },
       {
        "id": "evaluate",
@@ -3927,7 +3939,7 @@
    },
    {
     "id": "security",
-    "n": 328,
+    "n": 329,
     "share": 20,
     "topRole": {
      "id": "ai-native-architect",
@@ -4007,12 +4019,12 @@
       },
       {
        "id": "data",
-       "share": 27,
+       "share": 26,
        "lift": 1.1
       },
       {
        "id": "software",
-       "share": 77,
+       "share": 78,
        "lift": 1
       },
       {
@@ -4112,7 +4124,7 @@
       {
        "id": "prototype",
        "share": 21,
-       "lift": 1
+       "lift": 1.1
       },
       {
        "id": "customers",
@@ -4171,7 +4183,7 @@
       },
       {
        "id": "agentic-ai-engineer",
-       "share": 24
+       "share": 25
       },
       {
        "id": "ai-solutions-architect",
@@ -4198,8 +4210,8 @@
    },
    {
     "id": "ai-dev",
-    "n": 316,
-    "share": 20,
+    "n": 315,
+    "share": 19,
     "topRole": {
      "id": "ai-native-architect",
      "share": 40
@@ -4278,7 +4290,7 @@
       },
       {
        "id": "evals",
-       "share": 53,
+       "share": 52,
        "lift": 1.2
       },
       {
@@ -4293,7 +4305,7 @@
       },
       {
        "id": "product",
-       "share": 34,
+       "share": 33,
        "lift": 1
       },
       {
@@ -4349,16 +4361,16 @@
        "lift": 4.4
       },
       {
-       "name": "Amazon Bedrock",
-       "share": 2,
+       "name": "Claude Agent SDK",
+       "share": 3,
        "lift": 4
       }
      ],
      "tasks": [
       {
        "id": "agents",
-       "share": 37,
-       "lift": 1.8
+       "share": 36,
+       "lift": 1.7
       },
       {
        "id": "lead",
@@ -4372,12 +4384,12 @@
       },
       {
        "id": "prototype",
-       "share": 19,
+       "share": 18,
        "lift": 0.9
       },
       {
        "id": "customers",
-       "share": 16,
+       "share": 17,
        "lift": 1.4
       },
       {
@@ -4449,11 +4461,11 @@
        "share": 29
       },
       {
-       "id": "applied-ai-engineer",
-       "share": 26
+       "id": "forward-deployed-engineer",
+       "share": 24
       },
       {
-       "id": "forward-deployed-engineer",
+       "id": "applied-ai-engineer",
        "share": 24
       },
       {
@@ -4496,16 +4508,16 @@
   },
   {
    "week": "2026-11-02",
-   "n": 432
+   "n": 431
   },
   {
    "week": "2026-11-09",
-   "n": 447,
+   "n": 450,
    "partial": true
   }
  ],
  "tech": {
-  "read": 1354,
+  "read": 1355,
   "cats": [
    {
     "id": "lang",
@@ -4520,10 +4532,10 @@
      },
      {
       "name": "TypeScript",
-      "n": 215,
-      "share": 15.9,
+      "n": 213,
+      "share": 15.7,
       "first": "2026-10-01",
-      "change": -1.9
+      "change": -2.1
      },
      {
       "name": "Java",
@@ -4541,10 +4553,17 @@
      },
      {
       "name": "JavaScript",
-      "n": 151,
-      "share": 11.2,
+      "n": 149,
+      "share": 11,
       "first": "2026-10-01",
-      "change": -1.7
+      "change": -1.9
+     },
+     {
+      "name": "Go",
+      "n": 137,
+      "share": 10.1,
+      "first": "2026-10-01",
+      "change": -2.9
      },
      {
       "name": "CUDA",
@@ -4552,13 +4571,6 @@
       "share": 10,
       "first": "2026-10-02",
       "change": 6.7
-     },
-     {
-      "name": "Go",
-      "n": 135,
-      "share": 10,
-      "first": "2026-10-01",
-      "change": -3.1
      },
      {
       "name": "C++",
@@ -4655,8 +4667,8 @@
     "items": [
      {
       "name": "React",
-      "n": 94,
-      "share": 6.9,
+      "n": 95,
+      "share": 7,
       "first": "2026-10-02",
       "change": 0.8
      },
@@ -4755,10 +4767,10 @@
      },
      {
       "name": "Node.js",
-      "n": 34,
-      "share": 2.5,
+      "n": 35,
+      "share": 2.6,
       "first": "2026-10-07",
-      "change": 0.7
+      "change": 0.8
      },
      {
       "name": "FastAPI",
@@ -5035,17 +5047,17 @@
     "items": [
      {
       "name": "Kubernetes",
-      "n": 212,
+      "n": 213,
       "share": 15.7,
       "first": "2026-10-02",
-      "change": 1.8
+      "change": 1.9
      },
      {
       "name": "AWS",
-      "n": 209,
-      "share": 15.4,
+      "n": 210,
+      "share": 15.5,
       "first": "2026-10-01",
-      "change": 1
+      "change": 1.1
      },
      {
       "name": "Azure",
@@ -5056,31 +5068,31 @@
      },
      {
       "name": "GCP",
-      "n": 141,
-      "share": 10.4,
+      "n": 142,
+      "share": 10.5,
       "first": "2026-10-01",
       "change": 0.3
      },
      {
       "name": "Linux",
-      "n": 102,
-      "share": 7.5,
+      "n": 103,
+      "share": 7.6,
       "first": "2026-10-02",
-      "change": 3.1
+      "change": 3.2
      },
      {
       "name": "Docker",
       "n": 96,
       "share": 7.1,
       "first": "2026-10-06",
-      "change": 4.4
+      "change": 4.3
      },
      {
       "name": "Terraform",
-      "n": 44,
-      "share": 3.2,
+      "n": 45,
+      "share": 3.3,
       "first": "2026-10-06",
-      "change": 0.4
+      "change": 0.5
      },
      {
       "name": "Slurm",
@@ -5206,10 +5218,10 @@
      },
      {
       "name": "Triton",
-      "n": 62,
-      "share": 4.6,
+      "n": 61,
+      "share": 4.5,
       "first": "2026-10-02",
-      "change": 1.4
+      "change": 1.3
      },
      {
       "name": "JAX",
@@ -5357,41 +5369,41 @@
  },
  "affected": {
   "since": "2026-10-01",
-  "ads": 1507,
-  "any": 38,
+  "ads": 2010,
+  "any": 43,
   "rows": [
+   {
+    "id": "design",
+    "name": "Design",
+    "n": 122,
+    "any": 56,
+    "build": 38,
+    "use": 36,
+    "terms": [
+     "AI tools",
+     "AI features",
+     "OpenAI or Claude"
+    ]
+   },
    {
     "id": "data-eng",
     "name": "Data engineering",
-    "n": 38,
-    "any": 53,
+    "n": 60,
+    "any": 55,
     "build": 50,
-    "use": 34,
+    "use": 28,
     "terms": [
-     "AI coding tools",
+     "Agents",
      "LLMs",
      "AI tools"
     ]
    },
    {
-    "id": "design",
-    "name": "Design",
-    "n": 81,
-    "any": 52,
-    "build": 32,
-    "use": 36,
-    "terms": [
-     "AI tools",
-     "AI features",
-     "Generative AI"
-    ]
-   },
-   {
     "id": "security",
     "name": "Security",
-    "n": 210,
-    "any": 46,
-    "build": 42,
+    "n": 284,
+    "any": 50,
+    "build": 47,
     "use": 15,
     "terms": [
      "Agents",
@@ -5402,36 +5414,36 @@
    {
     "id": "fullstack",
     "name": "Full-stack",
-    "n": 86,
-    "any": 40,
-    "build": 20,
-    "use": 28,
+    "n": 111,
+    "any": 44,
+    "build": 29,
+    "use": 24,
     "terms": [
      "AI coding tools",
      "AI features",
-     "LLMs"
+     "OpenAI or Claude"
     ]
    },
    {
     "id": "pm",
     "name": "Product management",
-    "n": 214,
-    "any": 39,
-    "build": 30,
-    "use": 15,
+    "n": 271,
+    "any": 44,
+    "build": 37,
+    "use": 17,
     "terms": [
      "Agents",
-     "LLMs",
-     "AI features"
+     "AI features",
+     "LLMs"
     ]
    },
    {
     "id": "software",
     "name": "Software engineering (general)",
-    "n": 520,
-    "any": 37,
-    "build": 31,
-    "use": 20,
+    "n": 714,
+    "any": 44,
+    "build": 36,
+    "use": 21,
     "terms": [
      "Agents",
      "LLMs",
@@ -5439,68 +5451,68 @@
     ]
    },
    {
+    "id": "frontend",
+    "name": "Frontend",
+    "n": 33,
+    "any": 39,
+    "build": 33,
+    "use": 21,
+    "terms": [
+     "AI coding tools",
+     "AI features",
+     "Agents"
+    ]
+   },
+   {
     "id": "backend",
     "name": "Backend",
-    "n": 82,
-    "any": 35,
-    "build": 28,
+    "n": 103,
+    "any": 39,
+    "build": 31,
     "use": 15,
     "terms": [
      "AI coding tools",
      "Agents",
-     "Generative AI"
+     "LLMs"
     ]
    },
    {
     "id": "devops",
     "name": "DevOps and SRE",
-    "n": 63,
-    "any": 35,
+    "n": 92,
+    "any": 39,
     "build": 29,
-    "use": 16,
+    "use": 21,
     "terms": [
-     "AI features",
+     "LLMs",
      "Agents",
-     "LLMs"
-    ]
-   },
-   {
-    "id": "frontend",
-    "name": "Frontend",
-    "n": 22,
-    "any": 23,
-    "build": 18,
-    "use": 14,
-    "terms": [
-     "Agents",
-     "AI coding tools",
-     "Cursor"
+     "AI features"
     ]
    },
    {
     "id": "mobile",
     "name": "Mobile",
-    "n": 44,
-    "any": 20,
-    "build": 18,
-    "use": 11,
+    "n": 60,
+    "any": 35,
+    "build": 32,
+    "use": 15,
     "terms": [
-     "AI coding tools",
+     "AI features",
      "Agents",
-     "AI tools"
+     "AI coding tools"
     ]
    },
    {
     "id": "qa",
     "name": "QA and testing",
-    "n": 115,
-    "any": 10,
-    "build": 3,
-    "use": 10,
+    "n": 124,
+    "any": 14,
+    "build": 6,
+    "use": 11,
     "terms": [
      "AI tools",
      "AI coding tools",
-     "LLMs"
+     "Claude Code"
     ]
    }
   ]
@@ -5512,7 +5524,7 @@
   },
   {
    "month": "2026-11",
-   "n": 880
+   "n": 882
   }
  ]
 }
