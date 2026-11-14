@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-13T15:06:58.447Z",
+ "generatedAt": "2026-11-14T03:04:20.847Z",
  "providers": [
   {
    "id": "greenhouse",
@@ -12,7 +12,7 @@
      "slug": "anthropic",
      "url": "https://job-boards.greenhouse.io/anthropic",
      "ok": true,
-     "ai": 115,
+     "ai": 111,
      "name": "Anthropic",
      "kind": "lab"
     },
@@ -26,7 +26,7 @@
      "slug": "databricks",
      "url": "https://job-boards.greenhouse.io/databricks",
      "ok": true,
-     "ai": 139
+     "ai": 126
     },
     {
      "slug": "figma",
@@ -56,7 +56,7 @@
      "slug": "cloudflare",
      "url": "https://job-boards.greenhouse.io/cloudflare",
      "ok": true,
-     "ai": 29
+     "ai": 28
     },
     {
      "slug": "elastic",
@@ -74,7 +74,7 @@
      "slug": "stripe",
      "url": "https://job-boards.greenhouse.io/stripe",
      "ok": true,
-     "ai": 32
+     "ai": 31
     },
     {
      "slug": "coinbase",
@@ -92,7 +92,7 @@
      "slug": "brex",
      "url": "https://job-boards.greenhouse.io/brex",
      "ok": true,
-     "ai": 4
+     "ai": 5
     },
     {
      "slug": "gusto",
@@ -104,7 +104,7 @@
      "slug": "mongodb",
      "url": "https://job-boards.greenhouse.io/mongodb",
      "ok": true,
-     "ai": 19
+     "ai": 20
     },
     {
      "slug": "twilio",
@@ -146,7 +146,7 @@
      "slug": "lyft",
      "url": "https://job-boards.greenhouse.io/lyft",
      "ok": true,
-     "ai": 21
+     "ai": 19
     },
     {
      "slug": "instacart",
@@ -216,7 +216,7 @@
      "slug": "waymo",
      "url": "https://job-boards.greenhouse.io/waymo",
      "ok": true,
-     "ai": 67
+     "ai": 66
     },
     {
      "slug": "affirm",
@@ -228,7 +228,7 @@
      "slug": "chime",
      "url": "https://job-boards.greenhouse.io/chime",
      "ok": true,
-     "ai": 9
+     "ai": 10
     },
     {
      "slug": "mixpanel",
@@ -282,13 +282,13 @@
      "slug": "labelbox",
      "url": "https://job-boards.greenhouse.io/labelbox",
      "ok": true,
-     "ai": 4
+     "ai": 5
     },
     {
      "slug": "snorkelai",
      "url": "https://job-boards.greenhouse.io/snorkelai",
      "ok": true,
-     "ai": 11
+     "ai": 12
     },
     {
      "slug": "abnormalsecurity",
@@ -318,13 +318,13 @@
      "slug": "block",
      "url": "https://job-boards.greenhouse.io/block",
      "ok": true,
-     "ai": 3
+     "ai": 4
     },
     {
      "slug": "doordashusa",
      "url": "https://job-boards.greenhouse.io/doordashusa",
      "ok": true,
-     "ai": 24
+     "ai": 25
     },
     {
      "slug": "lattice",
@@ -348,13 +348,13 @@
      "slug": "coreweave",
      "url": "https://job-boards.greenhouse.io/coreweave",
      "ok": true,
-     "ai": 15
+     "ai": 16
     },
     {
      "slug": "andurilindustries",
      "url": "https://job-boards.greenhouse.io/andurilindustries",
      "ok": true,
-     "ai": 58
+     "ai": 57
     },
     {
      "slug": "figureai",
@@ -422,7 +422,7 @@
      "slug": "hiddenlayer",
      "url": "https://job-boards.greenhouse.io/hiddenlayer",
      "ok": true,
-     "ai": 1,
+     "ai": 0,
      "name": "HiddenLayer",
      "tool": "hiddenlayer"
     },
@@ -516,8 +516,8 @@
     }
    ],
    "ok": true,
-   "ai": 1006,
-   "processed": 348
+   "ai": 990,
+   "processed": 359
   },
   {
    "id": "lever",
@@ -530,7 +530,7 @@
      "slug": "palantir",
      "url": "https://jobs.lever.co/palantir",
      "ok": true,
-     "ai": 70
+     "ai": 71
     },
     {
      "slug": "spotify",
@@ -548,7 +548,7 @@
      "slug": "shieldai",
      "url": "https://jobs.lever.co/shieldai",
      "ok": true,
-     "ai": 15
+     "ai": 0
     },
     {
      "slug": "outreach",
@@ -586,7 +586,7 @@
     }
    ],
    "ok": true,
-   "ai": 138,
+   "ai": 124,
    "processed": 37
   },
   {
@@ -600,7 +600,7 @@
      "slug": "openai",
      "url": "https://jobs.ashbyhq.com/openai",
      "ok": true,
-     "ai": 174,
+     "ai": 173,
      "name": "OpenAI",
      "kind": "lab"
     },
@@ -608,7 +608,7 @@
      "slug": "cohere",
      "url": "https://jobs.ashbyhq.com/cohere",
      "ok": true,
-     "ai": 24,
+     "ai": 23,
      "name": "Cohere",
      "kind": "lab"
     },
@@ -616,7 +616,7 @@
      "slug": "elevenlabs",
      "url": "https://jobs.ashbyhq.com/elevenlabs",
      "ok": true,
-     "ai": 10
+     "ai": 11
     },
     {
      "slug": "langchain",
@@ -628,7 +628,7 @@
      "slug": "perplexity",
      "url": "https://jobs.ashbyhq.com/perplexity",
      "ok": true,
-     "ai": 20,
+     "ai": 19,
      "name": "Perplexity",
      "kind": "lab"
     },
@@ -636,7 +636,7 @@
      "slug": "notion",
      "url": "https://jobs.ashbyhq.com/notion",
      "ok": true,
-     "ai": 13
+     "ai": 14
     },
     {
      "slug": "replit",
@@ -660,13 +660,13 @@
      "slug": "harvey",
      "url": "https://jobs.ashbyhq.com/harvey",
      "ok": true,
-     "ai": 20
+     "ai": 21
     },
     {
      "slug": "cursor",
      "url": "https://jobs.ashbyhq.com/cursor",
      "ok": true,
-     "ai": 11
+     "ai": 10
     },
     {
      "slug": "ramp",
@@ -726,7 +726,7 @@
      "slug": "decagon",
      "url": "https://jobs.ashbyhq.com/decagon",
      "ok": true,
-     "ai": 24
+     "ai": 22
     },
     {
      "slug": "cognition",
@@ -756,7 +756,7 @@
      "slug": "mercor",
      "url": "https://jobs.ashbyhq.com/mercor",
      "ok": true,
-     "ai": 21
+     "ai": 22
     },
     {
      "slug": "runway",
@@ -882,7 +882,7 @@
      "slug": "1password",
      "url": "https://jobs.ashbyhq.com/1password",
      "ok": true,
-     "ai": 1
+     "ai": 0
     },
     {
      "slug": "zapier",
@@ -1028,7 +1028,7 @@
      "slug": "arena",
      "url": "https://jobs.ashbyhq.com/arena",
      "ok": true,
-     "ai": 3,
+     "ai": 4,
      "name": "LMArena (Arena)",
      "tool": "lmarena"
     },
@@ -1052,7 +1052,7 @@
      "slug": "black-forest-labs",
      "url": "https://jobs.ashbyhq.com/black-forest-labs",
      "ok": true,
-     "ai": 2,
+     "ai": 1,
      "name": "FLUX (Black Forest Labs)",
      "tool": "flux"
     },
@@ -1306,8 +1306,8 @@
     }
    ],
    "ok": true,
-   "ai": 662,
-   "processed": 216
+   "ai": 659,
+   "processed": 220
   },
   {
    "id": "workday",
@@ -1319,25 +1319,25 @@
     {
      "slug": "nvidia",
      "url": "https://nvidia.wd5.myworkdayjobs.com/NVIDIAExternalCareerSite",
-     "ok": true,
-     "ai": 307
+     "ok": false,
+     "ai": 0
     },
     {
      "slug": "salesforce",
      "url": "https://salesforce.wd12.myworkdayjobs.com/External_Career_Site",
      "ok": true,
-     "ai": 92
+     "ai": 91
     },
     {
      "slug": "adobe",
      "url": "https://adobe.wd5.myworkdayjobs.com/external_experienced",
-     "ok": true,
-     "ai": 29
+     "ok": false,
+     "ai": 0
     }
    ],
    "ok": true,
-   "ai": 428,
-   "processed": 392
+   "ai": 91,
+   "processed": 390
   },
   {
    "id": "smartrecruiters",
@@ -1350,19 +1350,19 @@
      "slug": "BoschGroup",
      "url": "https://careers.smartrecruiters.com/BoschGroup",
      "ok": true,
-     "ai": 47
+     "ai": 46
     },
     {
      "slug": "ServiceNow",
      "url": "https://careers.smartrecruiters.com/ServiceNow",
      "ok": true,
-     "ai": 118
+     "ai": 120
     },
     {
      "slug": "Wise",
      "url": "https://careers.smartrecruiters.com/Wise",
      "ok": true,
-     "ai": 14
+     "ai": 13
     },
     {
      "slug": "Canva",
@@ -1374,7 +1374,7 @@
      "slug": "Experian",
      "url": "https://careers.smartrecruiters.com/Experian",
      "ok": true,
-     "ai": 22
+     "ai": 23
     },
     {
      "slug": "Ubisoft2",
@@ -1384,8 +1384,8 @@
     }
    ],
    "ok": true,
-   "ai": 211,
-   "processed": 172
+   "ai": 212,
+   "processed": 184
   },
   {
    "id": "workable",
@@ -1450,8 +1450,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 13,
-   "processed": 31
+   "ai": 12,
+   "processed": 30
   },
   {
    "id": "jobicy",
@@ -1461,8 +1461,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 1,
-   "processed": 3
+   "ai": 2,
+   "processed": 4
   },
   {
    "id": "remotive",
@@ -1483,8 +1483,8 @@
    "how": "public API",
    "boards": [],
    "ok": true,
-   "ai": 83,
-   "processed": 322
+   "ai": 81,
+   "processed": 348
   },
   {
    "id": "hackernews",
@@ -1494,7 +1494,7 @@
    "how": "Algolia HN API",
    "boards": [],
    "ok": true,
-   "ai": 44,
+   "ai": 42,
    "processed": 44
   }
  ],
