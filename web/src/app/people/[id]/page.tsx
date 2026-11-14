@@ -7,6 +7,7 @@ import { share } from "@/lib/share";
 import { Monogram, YearRod } from "@/components/people";
 import { skills } from "@/data/framework";
 import data from "@/data/people.json";
+import cos from "@/data/companies.json";
 
 type P = { id: string; name: string; role: string | null; org: string | null; source: string; links: Record<string, string>; talks: { title: string; url: string; event: string | null; year: string | null }[]; talkCount: number; editions: string[]; years: string[]; topics: string[]; skills: string[]; products: { id: string; name: string; area: string }[]; initials: string };
 const people = data.people as unknown as P[];
@@ -26,6 +27,7 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
   const p = people.find((x) => x.id === id);
   if (!p) notFound();
   const span = [...new Set(people.flatMap((x) => x.years))].sort();
+  const co = (cos.companies as { id: string; name: string; people: string[] }[]).find((c) => c.people.includes(p.id));
   const related = people.filter((x) => x.id !== p.id).map((x) => ({ x, s: (x.org && x.org === p.org ? 3 : 0) + x.skills.filter((s) => p.skills.includes(s)).length + x.topics.filter((t) => p.topics.includes(t)).length * 0.5 }))
     .sort((a, b) => b.s - a.s).slice(0, 3).map((r) => r.x);
   return (
@@ -37,7 +39,7 @@ export default async function PersonPage({ params }: { params: Promise<{ id: str
             <Monogram p={p} size={112} />
             <div>
               <h1>{p.name}<span className="dot">.</span></h1>
-              <p className="lead" style={{ marginTop: 8 }}>{[p.role, p.org].filter(Boolean).join(" · ")}</p>
+              <p className="lead" style={{ marginTop: 8 }}>{p.role}{p.role && p.org ? " · " : ""}{p.org && (co ? <Link href={`/companies/${co.id}/`}>{p.org}</Link> : p.org)}</p>
               <div className="ps-links">{LINKS.filter(([k]) => p.links[k]).map(([k, label]) => <a key={k} className="chip" href={p.links[k]} target="_blank" rel="noreferrer me">{label} ↗</a>)}</div>
             </div>
           </div>
