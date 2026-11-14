@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-14T04:02:02.386Z",
+ "generatedAt": "2026-11-14T04:12:00.413Z",
  "since": "2026-10-01",
  "sinceQuarter": "2026 Q4",
  "totals": {
@@ -33,19 +33,24 @@
    "ai": 0
   },
   {
-   "id": "workable",
-   "boards": 1,
-   "ai": 5
-  },
-  {
    "id": "jobicy",
    "boards": 1,
    "ai": 2
   },
   {
+   "id": "workable",
+   "boards": 1,
+   "ai": 5
+  },
+  {
    "id": "remotive",
    "boards": 1,
    "ai": 3
+  },
+  {
+   "id": "hackernews",
+   "boards": 1,
+   "ai": 42
   },
   {
    "id": "arbeitnow",
@@ -58,17 +63,12 @@
    "ai": 16
   },
   {
-   "id": "hackernews",
-   "boards": 1,
-   "ai": 42
-  },
-  {
    "id": "workday",
    "boards": 1,
    "ai": 91
   }
  ],
- "failed": 102,
+ "failed": 99,
  "roles": [
   {
    "id": "rd-researcher",
@@ -5369,8 +5369,8 @@
     "use": 34,
     "terms": [
      "AI coding tools",
-     "AI tools",
-     "LLMs"
+     "LLMs",
+     "AI tools"
     ]
    },
    {
@@ -5421,8 +5421,8 @@
     "use": 15,
     "terms": [
      "Agents",
-     "AI features",
-     "LLMs"
+     "LLMs",
+     "AI features"
     ]
    },
    {
@@ -5474,7 +5474,7 @@
     "terms": [
      "Agents",
      "AI coding tools",
-     "Generative AI"
+     "Cursor"
     ]
    },
    {
